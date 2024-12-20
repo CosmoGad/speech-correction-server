@@ -61,3 +61,6 @@ async def process_text(request: CorrectionRequest):
         ).dict(),
         media_type="application/json"
     )
+@app.get("/")
+async def root():
+    return {"message": "Speech Correction Server is running!"}
