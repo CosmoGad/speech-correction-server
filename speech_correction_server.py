@@ -1,12 +1,21 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 import openai
 
 import os
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Замените "*" на список допустимых доменов, если нужно
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 class CorrectionRequest(BaseModel):
     text: str
@@ -64,3 +73,6 @@ async def process_text(request: CorrectionRequest):
 @app.get("/")
 async def root():
     return {"message": "Speech Correction Server is running!"}
+@app.get("/")
+def read_root():
+    return {"message": "Server is live"}
