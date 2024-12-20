@@ -3,7 +3,8 @@ from pydantic import BaseModel
 from fastapi.responses import JSONResponse
 import openai
 
-openai.api_key = "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"
+import os
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 app = FastAPI()
 
