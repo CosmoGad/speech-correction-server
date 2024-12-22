@@ -6,8 +6,12 @@ from typing import Dict, List, Optional
 from openai import OpenAI
 from datetime import datetime
 import os
+import logging
 
 app = FastAPI()
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 app.add_middleware(
     CORSMiddleware,
