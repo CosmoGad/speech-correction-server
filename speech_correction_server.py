@@ -3,15 +3,18 @@ from pydantic import BaseModel
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 import openai
-
 import os
+
+# Получение API-ключа из переменных окружения
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+openai.api_key = OPENAI_API_KEY
 
 app = FastAPI()
 
+# Настройка CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Замените "*" на список допустимых доменов, если нужно
+    allow_origins=["*"],  # Здесь можно указать домены, если требуется ограничение
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -45,20 +48,16 @@ async def process_text(request: CorrectionRequest):
         else:
             system_message = f"Ты помощник, который исправляет текст для уровня {level}. Язык {language} не распознан, используй общий стиль."
 
-        # Обращение к GPT для обработки текста
+        # Вызов OpenAI API
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=[
                 {"role": "system", "content": system_message},
                 {"role": "user", "content": f"Исправь текст: {text}"}
-            ],
-            max_tokens=500,
-            temperature=0.7
+            ]
         )
-
-        corrected_text = response['choices'][0]['message']['content'].strip()
+        corrected_text = response.choices[0].message['content'].strip()
         error_analysis = f"Исправления выполнены GPT для {language} языка."
-
     except Exception as e:
         corrected_text = text
         error_analysis = f"Ошибка обработки: {str(e)}"
@@ -70,9 +69,7 @@ async def process_text(request: CorrectionRequest):
         ).dict(),
         media_type="application/json"
     )
+
 @app.get("/")
 async def root():
     return {"message": "Speech Correction Server is running!"}
-@app.get("/")
-def read_root():
-    return {"message": "Server is live"}
