@@ -56,7 +56,7 @@ async def process_text(request: CorrectionRequest):
             temperature=0.7
         )
 
-        corrected_text = response.choices[0].message['content'].strip()
+        corrected_text = response['choices'][0]['message']['content'].strip()
         error_analysis = f"Исправления выполнены GPT для {language} языка."
 
     except Exception as e:
