@@ -287,10 +287,9 @@ def parse_correction_response(response: str) -> dict:
     return sections
 
 # Добавляем эндпоинт для проверки здоровья сервера
-@app.get("/health")
-async def health_check():
-    """Проверка здоровья сервера"""
-    return {"status": "healthy", "timestamp": datetime.now().isoformat()}
+@app.get("/")
+async def root():
+    return JSONResponse(content={"message": "API is running. Use /process-text/ for requests."})
 
 if __name__ == "__main__":
     import uvicorn
