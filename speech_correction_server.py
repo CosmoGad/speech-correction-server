@@ -2,11 +2,11 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
-import openai
+from openai import OpenAI
 import os
 
-# Установка API-ключа OpenAI из переменных окружения
-openai.api_key = os.getenv("OPENAI_API_KEY")
+# Инициализация клиента OpenAI
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # Инициализация FastAPI
 app = FastAPI()
@@ -49,8 +49,8 @@ async def process_text(request: CorrectionRequest):
         else:
             system_message = f"Ты помощник, который исправляет текст для уровня {level}. Язык {language} не распознан, используй общий стиль."
 
-        # Вызов OpenAI API
-        response = openai.ChatCompletion.create(
+        # Вызов OpenAI API с новым синтаксисом
+        response = client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[
                 {"role": "system", "content": system_message},
@@ -60,7 +60,7 @@ async def process_text(request: CorrectionRequest):
             temperature=0.7
         )
 
-        corrected_text = response.choices[0].message['content'].strip()
+        corrected_text = response.choices[0].message.content.strip()
         error_analysis = f"The corrections were made for {language} text at level {level}."
 
     except Exception as e:
