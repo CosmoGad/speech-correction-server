@@ -5,21 +5,22 @@ from fastapi.middleware.cors import CORSMiddleware
 import openai
 import os
 
-# Получение API-ключа из переменных окружения
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-openai.api_key = OPENAI_API_KEY
+# Установка API-ключа OpenAI из переменных окружения
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
+# Инициализация FastAPI
 app = FastAPI()
 
-# Настройка CORS
+# Разрешение CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Здесь можно указать домены, если требуется ограничение
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
+# Модели данных
 class CorrectionRequest(BaseModel):
     text: str
     language: str
@@ -36,7 +37,7 @@ async def process_text(request: CorrectionRequest):
     level = request.level
 
     try:
-        # Определение системного сообщения для языка и уровня
+        # Определение системного сообщения на основе языка и уровня
         if language == "Русский":
             system_message = f"Ты помощник, который исправляет текст на русском языке для уровня {level}."
         elif language == "Немецкий":
@@ -54,13 +55,18 @@ async def process_text(request: CorrectionRequest):
             messages=[
                 {"role": "system", "content": system_message},
                 {"role": "user", "content": f"Исправь текст: {text}"}
-            ]
+            ],
+            max_tokens=500,
+            temperature=0.7
         )
+
         corrected_text = response.choices[0].message['content'].strip()
-        error_analysis = f"Исправления выполнены GPT для {language} языка."
+        error_analysis = f"The corrections were made for {language} text at level {level}."
+
     except Exception as e:
+        # В случае ошибки, вернуть исходный текст и сообщение об ошибке
         corrected_text = text
-        error_analysis = f"Ошибка обработки: {str(e)}"
+        error_analysis = f"Error during processing: {str(e)}"
 
     return JSONResponse(
         content=CorrectionResult(
@@ -69,7 +75,3 @@ async def process_text(request: CorrectionRequest):
         ).dict(),
         media_type="application/json"
     )
-
-@app.get("/")
-async def root():
-    return {"message": "Speech Correction Server is running!"}
