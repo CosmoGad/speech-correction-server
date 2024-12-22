@@ -5,17 +5,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from openai import OpenAI
 import os
 
-# Проверка наличия API ключа
-api_key = os.getenv("OPENAI_API_KEY")
-if not api_key:
-    raise RuntimeError(
-        "OPENAI_API_KEY environment variable is not set. "
-        "Please set it in your environment variables."
-    )
-
-# Инициализация клиента OpenAI
-client = OpenAI(api_key=api_key)
-
 # Инициализация FastAPI
 app = FastAPI()
 
@@ -40,15 +29,32 @@ class CorrectionResult(BaseModel):
 
 @app.get("/")
 async def root():
-    """Простой эндпоинт для проверки работоспособности сервера"""
-    return {"status": "ok", "message": "Speech correction server is running"}
+    """Эндпоинт для проверки работоспособности сервера и переменных окружения"""
+    api_key = os.getenv("OPENAI_API_KEY")
+    return {
+        "status": "ok",
+        "message": "Speech correction server is running",
+        "api_key_status": "present" if api_key else "missing",
+        "api_key_length": len(api_key) if api_key else 0
+    }
 
 @app.post("/process-text/")
 async def process_text(request: CorrectionRequest):
-    if not request.text:
-        raise HTTPException(status_code=400, detail="Text field cannot be empty")
+    # Проверка API ключа при каждом запросе
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        return JSONResponse(
+            status_code=500,
+            content=CorrectionResult(
+                corrected_text=request.text,
+                error_analysis="OpenAI API key is missing. Please check server environment variables."
+            ).dict()
+        )
 
     try:
+        # Инициализация клиента OpenAI для каждого запроса
+        client = OpenAI(api_key=api_key)
+
         # Определение системного сообщения на основе языка и уровня
         if language := request.language.lower():
             system_messages = {
@@ -77,8 +83,9 @@ async def process_text(request: CorrectionRequest):
         error_analysis = f"The corrections were made for {request.language} text at level {request.level}."
 
     except Exception as e:
-        # Более детальная обработка ошибок
         error_msg = str(e)
+        print(f"Error details: {error_msg}")  # Добавляем вывод ошибки в логи
+
         if "api_key" in error_msg.lower():
             error_msg = "OpenAI API key error. Please check server configuration."
         elif "rate limit" in error_msg.lower():
@@ -98,15 +105,4 @@ async def process_text(request: CorrectionRequest):
             error_analysis=error_analysis
         ).dict(),
         media_type="application/json"
-    )
-
-# Обработчик ошибок для некорректных запросов
-@app.exception_handler(HTTPException)
-async def http_exception_handler(request, exc):
-    return JSONResponse(
-        status_code=exc.status_code,
-        content=CorrectionResult(
-            corrected_text="",
-            error_analysis=str(exc.detail)
-        ).dict()
     )
