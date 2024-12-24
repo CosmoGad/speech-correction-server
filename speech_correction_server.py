@@ -196,6 +196,9 @@ async def process_text(request: CorrectionRequest):
         prompt = generate_teacher_prompt(request)
 
         try:
+            # Add logging for debugging
+            logger.info(f"Sending request to OpenAI with text: {request.text}")
+
             response = await asyncio.to_thread(
                 lambda: client.chat.completions.create(
                     model="gpt-3.5-turbo",
@@ -207,66 +210,104 @@ async def process_text(request: CorrectionRequest):
                     max_tokens=1500
                 )
             )
-            logger.info(f"Request processed in {(datetime.now() - start_time).total_seconds()}s")
+
+            # Log the raw response
+            logger.info(f"Raw OpenAI response: {response.choices[0].message.content}")
+
+            response_time = (datetime.now() - start_time).total_seconds()
+            logger.info(f"Request processed in {response_time}s")
+
+            # Parse the response
+            sections = parse_correction_response(response.choices[0].message.content)
+
+            # Create the response object
+            correction_response = CorrectionResponse(
+                corrected_text=sections["corrected_text"],
+                explanation=sections["explanation"],
+                grammar_notes=sections["grammar_notes"],
+                pronunciation_tips=sections["pronunciation_tips"],
+                level_appropriate_suggestions=sections.get("level_appropriate_suggestions", ""),
+                original_text=request.text
+            )
+
+            # Log the final response
+            logger.info(f"Final response: {correction_response}")
+
+            return correction_response
+
         except Exception as e:
             logger.error(f"OpenAI API error: {str(e)}")
             raise HTTPException(status_code=502, detail=str(e))
-
-        sections = parse_correction_response(response.choices[0].message.content)
-        return CorrectionResponse(**sections, original_text=request.text)
 
     except HTTPException:
         raise
     except Exception as e:
         logger.error(f"Error: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
-
 def parse_correction_response(response: str) -> dict:
     sections = {
         "corrected_text": "",
         "explanation": "",
         "grammar_notes": "",
         "pronunciation_tips": "",
-        "level_appropriate_suggestions": ""  # Убедись, что поле есть
+        "level_appropriate_suggestions": ""
     }
 
     current_section = None
     lines = []
 
-    for line in response.split('\\n'):
-        if "ИСПРАВЛЕНО:" in line:
+    # Split by actual newlines
+    for line in response.split('\n'):
+        line = line.strip()
+        if not line:
+            continue
+
+        # Check for section headers
+        if "1. ИСПРАВЛЕНО:" in line or "ИСПРАВЛЕНО:" in line:
+            if current_section and lines:
+                sections[current_section] = '\n'.join(lines).strip()
             current_section = "corrected_text"
             lines = []
-        elif "ОБЪЯСНЕНИЕ:" in line:
-            if current_section:
-                sections[current_section] = '\\n'.join(lines).strip()
+        elif "2. ОБЪЯСНЕНИЕ:" in line or "ОБЪЯСНЕНИЕ:" in line:
+            if current_section and lines:
+                sections[current_section] = '\n'.join(lines).strip()
             current_section = "explanation"
             lines = []
-        elif "ГРАММАТИКА:" in line:
-            if current_section:
-                sections[current_section] = '\\n'.join(lines).strip()
+        elif "3. ГРАММАТИКА:" in line or "ГРАММАТИКА:" in line:
+            if current_section and lines:
+                sections[current_section] = '\n'.join(lines).strip()
             current_section = "grammar_notes"
             lines = []
-        elif "ПРОИЗНОШЕНИЕ:" in line:
-            if current_section:
-                sections[current_section] = '\\n'.join(lines).strip()
+        elif "4. ПРОИЗНОШЕНИЕ:" in line or "ПРОИЗНОШЕНИЕ:" in line:
+            if current_section and lines:
+                sections[current_section] = '\n'.join(lines).strip()
             current_section = "pronunciation_tips"
             lines = []
-        elif "РЕКОМЕНДАЦИИ ПО УРОВНЮ:" in line:
-            if current_section:
-                sections[current_section] = '\\n'.join(lines).strip()
+        elif "5. РЕКОМЕНДАЦИИ ПО УРОВНЮ:" in line or "РЕКОМЕНДАЦИИ ПО УРОВНЮ:" in line:
+            if current_section and lines:
+                sections[current_section] = '\n'.join(lines).strip()
             current_section = "level_appropriate_suggestions"
             lines = []
-        elif current_section and line.strip():
-            lines.append(line.strip())
+        elif current_section:  # Add line to current section if we're in one
+            lines.append(line)
 
+    # Don't forget to add the last section
     if current_section and lines:
-        sections[current_section] = '\\n'.join(lines).strip()
+        sections[current_section] = '\n'.join(lines).strip()
 
-    # Проверка отсутствующих полей
+    # Clean up the sections - remove numbering and extra whitespace
     for key in sections:
-        if not sections[key]:
-            sections[key] = f"Поле {key} отсутствует в ответе."
+        if sections[key]:
+            # Remove potential numbered bullets and clean up
+            sections[key] = '\n'.join(
+                line.strip()
+                for line in sections[key].split('\n')
+                if line.strip()
+            )
+
+    # Log the response and parsed sections for debugging
+    logger.info(f"Original response: {response}")
+    logger.info(f"Parsed sections: {sections}")
 
     return sections
 
