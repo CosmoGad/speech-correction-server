@@ -12,7 +12,6 @@ app = FastAPI()
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
-logger.info(f"GPT response: {response.choices[0].message.content}")
 
 app.add_middleware(
     CORSMiddleware,
@@ -187,10 +186,8 @@ async def process_text(request: CorrectionRequest):
         raise HTTPException(status_code=500, detail="API key not configured")
 
     try:
-        # Логируем входящий запрос
         logger.info(f"Processing request for language: {request.language}, level: {request.level}")
 
-        # Проверяем корректность входных данных
         if request.text.strip() == "":
             raise HTTPException(status_code=400, detail="Empty text provided")
 
@@ -200,7 +197,6 @@ async def process_text(request: CorrectionRequest):
         client = OpenAI(api_key=api_key)
         prompt = generate_teacher_prompt(request)
 
-        # Отправляем запрос к GPT с контролем ошибок
         try:
             response = client.chat.completions.create(
                 model="gpt-3.5-turbo",
@@ -211,17 +207,14 @@ async def process_text(request: CorrectionRequest):
                 temperature=0.7,
                 max_tokens=1000
             )
+            logger.info(f"GPT response: {response.choices[0].message.content}")  # Moved here
         except Exception as e:
             logger.error(f"OpenAI API error: {str(e)}")
             raise HTTPException(status_code=502, detail=f"OpenAI API error: {str(e)}")
 
-        # Разбираем ответ
         sections = parse_correction_response(response.choices[0].message.content)
-
-        # Вычисляем время обработки
         processing_time = (datetime.now() - start_time).total_seconds()
 
-        # Формируем и возвращаем ответ
         return JSONResponse(
             content=CorrectionResponse(
                 corrected_text=sections["corrected_text"],
@@ -229,9 +222,7 @@ async def process_text(request: CorrectionRequest):
                 grammar_notes=sections["grammar_notes"],
                 pronunciation_tips=sections["pronunciation_tips"],
                 level_appropriate_suggestions=sections["level_suggestions"],
-                original_text=request.text,
-                confidence_score=request.recognition_confidence,
-                processing_time=processing_time
+                original_text=request.text
             ).dict()
         )
 
