@@ -35,7 +35,7 @@ class CorrectionResponse(BaseModel):
     explanation: str
     grammar_notes: str
     pronunciation_tips: str
-    level_appropriate_suggestions: str
+    level_appropriate_suggestions: Optional[str] = None  # Сделать поле необязательным
     original_text: str
 
 # Детальная конфигурация уровней языка
@@ -164,7 +164,7 @@ def generate_teacher_prompt(request: CorrectionRequest) -> str:
 - Типичные ошибки произношения для носителей {request.interface_language}
 
 5. РЕКОМЕНДАЦИИ ПО УРОВНЮ:
-- Оценка соответствия уровню {request.level}
+- Предоставь советы, соответствующие уровню {request.level}.
 - Конкретные упражнения для практики
 - Следующие шаги в обучении
 
@@ -227,41 +227,46 @@ def parse_correction_response(response: str) -> dict:
         "explanation": "",
         "grammar_notes": "",
         "pronunciation_tips": "",
-        "level_suggestions": ""
+        "level_appropriate_suggestions": ""  # Убедись, что поле есть
     }
 
     current_section = None
     lines = []
 
-    for line in response.split('\n'):
+    for line in response.split('\\n'):
         if "ИСПРАВЛЕНО:" in line:
             current_section = "corrected_text"
             lines = []
         elif "ОБЪЯСНЕНИЕ:" in line:
             if current_section:
-                sections[current_section] = '\n'.join(lines).strip()
+                sections[current_section] = '\\n'.join(lines).strip()
             current_section = "explanation"
             lines = []
         elif "ГРАММАТИКА:" in line:
             if current_section:
-                sections[current_section] = '\n'.join(lines).strip()
+                sections[current_section] = '\\n'.join(lines).strip()
             current_section = "grammar_notes"
             lines = []
         elif "ПРОИЗНОШЕНИЕ:" in line:
             if current_section:
-                sections[current_section] = '\n'.join(lines).strip()
+                sections[current_section] = '\\n'.join(lines).strip()
             current_section = "pronunciation_tips"
             lines = []
         elif "РЕКОМЕНДАЦИИ ПО УРОВНЮ:" in line:
             if current_section:
-                sections[current_section] = '\n'.join(lines).strip()
-            current_section = "level_suggestions"
+                sections[current_section] = '\\n'.join(lines).strip()
+            current_section = "level_appropriate_suggestions"
             lines = []
         elif current_section and line.strip():
             lines.append(line.strip())
 
     if current_section and lines:
-        sections[current_section] = '\n'.join(lines).strip()
+        sections[current_section] = '\\n'.join(lines).strip()
+
+    # Проверка отсутствующих полей
+    for key in sections:
+        if not sections[key]:
+            sections[key] = f"Поле {key} отсутствует в ответе."
 
     return sections
 
