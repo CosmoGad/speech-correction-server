@@ -256,61 +256,60 @@ def parse_correction_response(response: str) -> dict:
     current_section = None
     lines = []
 
-    # Split by actual newlines
-    for line in response.split('\n'):
+    # Extract the corrected text first
+    if "Исправленный текст:" in response:
+        text_start = response.find("Исправленный текст:") + len("Исправленный текст:")
+        text_end = response.find("Объяснение:")
+        if text_end == -1:  # If "Объяснение:" not found, try next section
+            text_end = len(response)
+        sections["corrected_text"] = response[text_start:text_end].strip()
+
+    # Map Russian headers to section keys
+    header_mapping = {
+        "Объяснение:": "explanation",
+        "Грамматика:": "grammar_notes",
+        "Произношение:": "pronunciation_tips",
+        "Рекомендации по уровню:": "level_appropriate_suggestions"
+    }
+
+    # Split the text into lines
+    lines = response.split('\n')
+    current_section = None
+    section_content = []
+
+    for line in lines:
         line = line.strip()
         if not line:
             continue
 
-        # Check for section headers
-        if "1. ИСПРАВЛЕНО:" in line or "ИСПРАВЛЕНО:" in line:
-            if current_section and lines:
-                sections[current_section] = '\n'.join(lines).strip()
-            current_section = "corrected_text"
-            lines = []
-        elif "2. ОБЪЯСНЕНИЕ:" in line or "ОБЪЯСНЕНИЕ:" in line:
-            if current_section and lines:
-                sections[current_section] = '\n'.join(lines).strip()
-            current_section = "explanation"
-            lines = []
-        elif "3. ГРАММАТИКА:" in line or "ГРАММАТИКА:" in line:
-            if current_section and lines:
-                sections[current_section] = '\n'.join(lines).strip()
-            current_section = "grammar_notes"
-            lines = []
-        elif "4. ПРОИЗНОШЕНИЕ:" in line or "ПРОИЗНОШЕНИЕ:" in line:
-            if current_section and lines:
-                sections[current_section] = '\n'.join(lines).strip()
-            current_section = "pronunciation_tips"
-            lines = []
-        elif "5. РЕКОМЕНДАЦИИ ПО УРОВНЮ:" in line or "РЕКОМЕНДАЦИИ ПО УРОВНЮ:" in line:
-            if current_section and lines:
-                sections[current_section] = '\n'.join(lines).strip()
-            current_section = "level_appropriate_suggestions"
-            lines = []
-        elif current_section:  # Add line to current section if we're in one
-            lines.append(line)
+        # Check if this line is a header
+        found_header = False
+        for header, section_key in header_mapping.items():
+            if header in line:
+                if current_section and section_content:
+                    sections[current_section] = '\n'.join(section_content).strip()
+                current_section = section_key
+                section_content = []
+                found_header = True
+                break
+
+        if not found_header and current_section:
+            section_content.append(line)
 
     # Don't forget to add the last section
-    if current_section and lines:
-        sections[current_section] = '\n'.join(lines).strip()
+    if current_section and section_content:
+        sections[current_section] = '\n'.join(section_content).strip()
 
-    # Clean up the sections - remove numbering and extra whitespace
+    # Clean up the sections
     for key in sections:
         if sections[key]:
-            # Remove potential numbered bullets and clean up
-            sections[key] = '\n'.join(
-                line.strip()
-                for line in sections[key].split('\n')
-                if line.strip()
-            )
-
-    # Log the response and parsed sections for debugging
-    logger.info(f"Original response: {response}")
-    logger.info(f"Parsed sections: {sections}")
+            # Remove any remaining header text
+            for header in header_mapping.keys():
+                sections[key] = sections[key].replace(header, "")
+            # Clean up any extra whitespace
+            sections[key] = sections[key].strip()
 
     return sections
-
 # Добавляем эндпоинт для проверки здоровья сервера
 @app.get("/")
 async def root():
