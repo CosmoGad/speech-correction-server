@@ -188,17 +188,55 @@ async def process_text(request: CorrectionRequest):
         if not request.text.strip():
             raise HTTPException(status_code=400, detail="Empty text provided")
 
+        # Validate language
         if request.language not in LANGUAGE_CONFIGS:
-            raise HTTPException(status_code=400, detail=f"Unsupported language: {request.language}")
+            raise HTTPException(
+                status_code=400,
+                detail=f"Unsupported language: {request.language}. Supported languages: {list(LANGUAGE_CONFIGS.keys())}"
+            )
+
+        # Validate level
+        if request.level not in LEVEL_DETAILS:
+            raise HTTPException(
+                status_code=400,
+                detail=f"Unsupported level: {request.level}. Supported levels: {list(LEVEL_DETAILS.keys())}"
+            )
 
         start_time = datetime.now()
         client = OpenAI(api_key=api_key)
-        prompt = generate_teacher_prompt(request)
+
+        # Get language-specific configuration
+        lang_config = LANGUAGE_CONFIGS[request.language]
+
+        # Generate prompt with specific language and level information
+        prompt = f"""Ты - опытный преподаватель {request.language} языка уровня {request.level}.
+
+Проанализируй следующий текст на {request.language} языке:
+"{request.text}"
+
+Учитывай следующие особенности:
+- Уровень студента: {request.level}
+- Типичные ошибки для этого языка: {', '.join(lang_config['common_errors'])}
+- Особенности произношения: {', '.join(lang_config['pronunciation_focus'])}
+
+Предоставь анализ в следующем формате:
+
+ИСПРАВЛЕНО:
+[Исправленная версия текста]
+
+ОБЪЯСНЕНИЕ:
+[Подробное объяснение ошибок]
+
+ГРАММАТИКА:
+[Грамматический разбор]
+
+ПРОИЗНОШЕНИЕ:
+[Советы по произношению]
+
+РЕКОМЕНДАЦИИ ПО УРОВНЮ:
+[Рекомендации для уровня {request.level}]"""
 
         try:
-            # Add logging for debugging
-            logger.info(f"Sending request to OpenAI with text: {request.text}")
-
             response = await asyncio.to_thread(
                 lambda: client.chat.completions.create(
                     model="gpt-3.5-turbo",
@@ -211,14 +249,9 @@ async def process_text(request: CorrectionRequest):
                 )
             )
 
-            # Log the raw response
-            logger.info(f"Raw OpenAI response: {response.choices[0].message.content}")
-
-            response_time = (datetime.now() - start_time).total_seconds()
-            logger.info(f"Request processed in {response_time}s")
-
             # Parse the response
-            sections = parse_correction_response(response.choices[0].message.content)
+            response_text = response.choices[0].message.content
+            sections = parse_correction_response(response_text)
 
             # Create the response object
             correction_response = CorrectionResponse(
@@ -229,9 +262,6 @@ async def process_text(request: CorrectionRequest):
                 level_appropriate_suggestions=sections.get("level_appropriate_suggestions", ""),
                 original_text=request.text
             )
-
-            # Log the final response
-            logger.info(f"Final response: {correction_response}")
 
             return correction_response
 
