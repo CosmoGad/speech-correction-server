@@ -12,6 +12,7 @@ app = FastAPI()
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+logger.info(f"GPT response: {response.choices[0].message.content}")
 
 app.add_middleware(
     CORSMiddleware,
@@ -239,7 +240,6 @@ async def process_text(request: CorrectionRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 def parse_correction_response(response: str) -> dict:
-    """Разбирает ответ GPT на секции с улучшенной обработкой ошибок"""
     sections = {
         "corrected_text": "",
         "explanation": "",
@@ -248,45 +248,38 @@ def parse_correction_response(response: str) -> dict:
         "level_suggestions": ""
     }
 
-    try:
-        current_section = None
-        buffer = []
+    current_section = None
+    lines = []
 
-        for line in response.split('\n'):
-            if any(marker in line for marker in ["ИСПРАВЛЕНО:", "ОБЪЯСНЕНИЕ:", "ГРАММАТИКА:", "ПРОИЗНОШЕНИЕ:", "РЕКОМЕНДАЦИИ ПО УРОВНЮ:"]):
-                # Сохраняем предыдущую секцию
-                if current_section and buffer:
-                    sections[current_section] = '\n'.join(buffer).strip()
-                    buffer = []
+    for line in response.split('\n'):
+        if "ИСПРАВЛЕНО:" in line:
+            current_section = "corrected_text"
+            lines = []
+        elif "ОБЪЯСНЕНИЕ:" in line:
+            if current_section:
+                sections[current_section] = '\n'.join(lines).strip()
+            current_section = "explanation"
+            lines = []
+        elif "ГРАММАТИКА:" in line:
+            if current_section:
+                sections[current_section] = '\n'.join(lines).strip()
+            current_section = "grammar_notes"
+            lines = []
+        elif "ПРОИЗНОШЕНИЕ:" in line:
+            if current_section:
+                sections[current_section] = '\n'.join(lines).strip()
+            current_section = "pronunciation_tips"
+            lines = []
+        elif "РЕКОМЕНДАЦИИ ПО УРОВНЮ:" in line:
+            if current_section:
+                sections[current_section] = '\n'.join(lines).strip()
+            current_section = "level_suggestions"
+            lines = []
+        elif current_section and line.strip():
+            lines.append(line.strip())
 
-                # Определяем новую секцию
-                if "ИСПРАВЛЕНО:" in line:
-                    current_section = "corrected_text"
-                elif "ОБЪЯСНЕНИЕ:" in line:
-                    current_section = "explanation"
-                elif "ГРАММАТИКА:" in line:
-                    current_section = "grammar_notes"
-                elif "ПРОИЗНОШЕНИЕ:" in line:
-                    current_section = "pronunciation_tips"
-                elif "РЕКОМЕНДАЦИИ ПО УРОВНЮ:" in line:
-                    current_section = "level_suggestions"
-            elif current_section and line.strip():
-                buffer.append(line.strip())
-
-        # Сохраняем последнюю секцию
-        if current_section and buffer:
-            sections[current_section] = '\n'.join(buffer).strip()
-
-    except Exception as e:
-        logger.error(f"Error parsing GPT response: {str(e)}")
-        # Возвращаем базовый ответ в случае ошибки
-        return {
-            "corrected_text": "Ошибка обработки ответа",
-            "explanation": "Произошла ошибка при анализе ответа.",
-            "grammar_notes": "Недоступно из-за ошибки обработки.",
-            "pronunciation_tips": "Недоступно из-за ошибки обработки.",
-            "level_suggestions": "Недоступно из-за ошибки обработки."
-        }
+    if current_section and lines:
+        sections[current_section] = '\n'.join(lines).strip()
 
     return sections
 
