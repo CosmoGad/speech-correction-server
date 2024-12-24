@@ -7,6 +7,8 @@ from openai import OpenAI
 from datetime import datetime
 import os
 import logging
+import asyncio
+
 
 app = FastAPI()
 
