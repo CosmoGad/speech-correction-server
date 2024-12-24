@@ -178,56 +178,45 @@ def generate_teacher_prompt(request: CorrectionRequest) -> str:
 
 @app.post("/process-text/")
 async def process_text(request: CorrectionRequest):
-    """Обрабатывает запрос на коррекцию текста с расширенной функциональностью"""
-    start_time = datetime.now()
-
     api_key = os.getenv("OPENAI_API_KEY")
     if not api_key:
         raise HTTPException(status_code=500, detail="API key not configured")
 
     try:
-        logger.info(f"Processing request for language: {request.language}, level: {request.level}")
-
-        if request.text.strip() == "":
+        if not request.text.strip():
             raise HTTPException(status_code=400, detail="Empty text provided")
 
         if request.language not in LANGUAGE_CONFIGS:
             raise HTTPException(status_code=400, detail=f"Unsupported language: {request.language}")
 
+        start_time = datetime.now()
         client = OpenAI(api_key=api_key)
         prompt = generate_teacher_prompt(request)
 
         try:
-            response = client.chat.completions.create(
-                model="gpt-3.5-turbo",
-                messages=[
-                    {"role": "system", "content": prompt},
-                    {"role": "user", "content": request.text}
-                ],
-                temperature=0.7,
-                max_tokens=1000
+            response = await asyncio.to_thread(
+                lambda: client.chat.completions.create(
+                    model="gpt-3.5-turbo",
+                    messages=[
+                        {"role": "system", "content": prompt},
+                        {"role": "user", "content": request.text}
+                    ],
+                    temperature=0.7,
+                    max_tokens=1500
+                )
             )
-            logger.info(f"GPT response: {response.choices[0].message.content}")  # Moved here
+            logger.info(f"Request processed in {(datetime.now() - start_time).total_seconds()}s")
         except Exception as e:
             logger.error(f"OpenAI API error: {str(e)}")
-            raise HTTPException(status_code=502, detail=f"OpenAI API error: {str(e)}")
+            raise HTTPException(status_code=502, detail=str(e))
 
         sections = parse_correction_response(response.choices[0].message.content)
-        processing_time = (datetime.now() - start_time).total_seconds()
+        return CorrectionResponse(**sections, original_text=request.text)
 
-        return JSONResponse(
-            content=CorrectionResponse(
-                corrected_text=sections["corrected_text"],
-                explanation=sections["explanation"],
-                grammar_notes=sections["grammar_notes"],
-                pronunciation_tips=sections["pronunciation_tips"],
-                level_appropriate_suggestions=sections["level_suggestions"],
-                original_text=request.text
-            ).dict()
-        )
-
+    except HTTPException:
+        raise
     except Exception as e:
-        logger.error(f"Error processing request: {str(e)}")
+        logger.error(f"Error: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
 
 def parse_correction_response(response: str) -> dict:
