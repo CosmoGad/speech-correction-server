@@ -1,20 +1,41 @@
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, validator
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
-from typing import Dict, List, Optional
+from typing import Dict, Optional
 from openai import OpenAI
 from datetime import datetime
 import os
 import logging
 import asyncio
+from logging.handlers import RotatingFileHandler
+from dotenv import load_dotenv
 
+# Load environment variables
+load_dotenv()
 
-app = FastAPI()
-
+# Enhanced logging configuration
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+handler = RotatingFileHandler(
+    'app.log',
+    maxBytes=10000000,
+    backupCount=5,
+    encoding='utf-8'
+)
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+handler.setFormatter(formatter)
+logger.addHandler(handler)
 
+app = FastAPI(
+    title="Speech Correction API",
+    description="Advanced API for language learning and speech correction",
+    version="2.1.0",
+    docs_url="/docs",
+    redoc_url="/redoc"
+)
+
+# CORS configuration
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -23,22 +44,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-class CorrectionRequest(BaseModel):
-    text: str
-    language: str
-    level: str
-    interface_language: str = "Русский"
-    recognition_confidence: float = Field(default=1.0, ge=0.0, le=1.0)
-
-class CorrectionResponse(BaseModel):
-    corrected_text: str
-    explanation: str
-    grammar_notes: str
-    pronunciation_tips: str
-    level_appropriate_suggestions: Optional[str] = None  # Сделать поле необязательным
-    original_text: str
-
-# Детальная конфигурация уровней языка
+# Configurations
 LEVEL_DETAILS = {
     "A1": {
         "description": {
@@ -129,112 +135,144 @@ LANGUAGE_CONFIGS = {
     }
 }
 
+class CorrectionRequest(BaseModel):
+    text: str
+    language: str
+    level: str
+    interface_language: str = "Русский"
+    recognition_confidence: float = Field(default=1.0, ge=0.0, le=1.0)
+
+    @validator('language')
+    def validate_language(cls, v):
+        if v not in LANGUAGE_CONFIGS:
+            raise ValueError(f"Unsupported language: {v}")
+        return v
+
+    @validator('level')
+    def validate_level(cls, v):
+        if v not in LEVEL_DETAILS:
+            raise ValueError(f"Unsupported level: {v}")
+        return v
+
+    @validator('text')
+    def validate_text(cls, v):
+        if not v.strip():
+            raise ValueError("Text cannot be empty")
+        return v.strip()
+
+class CorrectionResponse(BaseModel):
+    corrected_text: str
+    explanation: str
+    grammar_notes: str
+    pronunciation_tips: str
+    level_appropriate_suggestions: str
+    original_text: str
+
+    class Config:
+        json_encoders = {
+            str: lambda v: v
+        }
 
 def generate_teacher_prompt(request: CorrectionRequest) -> str:
-    """Генерирует детальный промпт для GPT в стиле преподавателя"""
+    """Generates a structured prompt for GPT based on the request parameters"""
     level_info = LEVEL_DETAILS[request.level]
+    lang_config = LANGUAGE_CONFIGS[request.language]
 
-    return f"""Ты - опытный преподаватель {request.language} языка, специализирующийся на работе со студентами уровня {request.level}.
-Твоя задача - помочь студенту улучшить его языковые навыки через подробный анализ и понятные объяснения.
+    return f"""You are an experienced {request.language} language teacher specializing in {request.level} level.
+Analyze the following text considering:
+- Level: {request.level}
+- Level Description: {level_info['description'][request.interface_language]}
+- Common Errors: {', '.join(lang_config['common_errors'])}
+- Pronunciation Focus: {', '.join(lang_config['pronunciation_focus'])}
+- Grammar Focus: {', '.join(level_info['grammar_focus'])}
 
-Уровень студента: {request.level}
-Описание уровня: {level_info['description'][request.interface_language]}
-Стиль объяснения: {level_info['explanation_style']}
-Фокус на грамматике: {', '.join(level_info['grammar_focus'])}
+Provide the analysis in the following EXACT format (these headers are critical for parsing):
 
-Проанализируй следующий текст и предоставь:
+CORRECTED_TEXT:
+[Corrected version in {request.language}]
 
-1. ИСПРАВЛЕНО:
-Предоставь исправленную версию на {request.language}, сохраняя стиль автора.
+EXPLANATION:
+[Detailed error explanation in {request.interface_language}]
 
-2. ОБЪЯСНЕНИЕ:
-Дай подробное объяснение на {request.interface_language}, учитывая:
-- Основные ошибки и их исправление
-- Почему возникли эти ошибки
-- Как избежать подобных ошибок в будущем
+GRAMMAR_NOTES:
+[Grammar analysis in {request.interface_language}]
 
-3. ГРАММАТИКА:
-- Разбор использованных конструкций
-- Соответствие уровню {request.level}
-- Альтернативные варианты выражения мысли
+PRONUNCIATION_TIPS:
+[Pronunciation advice in {request.interface_language}]
 
-4. ПРОИЗНОШЕНИЕ:
-- Сложные звуки и их артикуляция
-- Ритм и интонация
-- Типичные ошибки произношения для носителей {request.interface_language}
+LEVEL_APPROPRIATE_SUGGESTIONS:
+[Level-specific suggestions in {request.interface_language}]
 
-5. РЕКОМЕНДАЦИИ ПО УРОВНЮ:
-- Предоставь советы, соответствующие уровню {request.level}.
-- Конкретные упражнения для практики
-- Следующие шаги в обучении
+Requirements:
+1. Use exactly these headers
+2. No empty sections
+3. All explanations in {request.interface_language}
+4. Be encouraging and supportive
+5. Provide practical examples
+6. Focus on improvement opportunities"""
 
-Важно:
-- Пиши доброжелательно и поддерживающе
-- Используй примеры из повседневной жизни
-- Объясняй ошибки как возможности для улучшения
-- Отмечай успешные моменты
-- Давай конкретные советы для практики
+def parse_correction_response(response: str) -> Dict[str, str]:
+    """Parses GPT response into structured sections"""
+    sections = {
+        "corrected_text": "",
+        "explanation": "",
+        "grammar_notes": "",
+        "pronunciation_tips": "",
+        "level_appropriate_suggestions": ""
+    }
 
-Все объяснения должны быть на {request.interface_language}, кроме исправленного текста.
-"""
+    headers_mapping = {
+        "CORRECTED_TEXT:": "corrected_text",
+        "EXPLANATION:": "explanation",
+        "GRAMMAR_NOTES:": "grammar_notes",
+        "PRONUNCIATION_TIPS:": "pronunciation_tips",
+        "LEVEL_APPROPRIATE_SUGGESTIONS:": "level_appropriate_suggestions"
+    }
+
+    current_section = None
+    content_lines = []
+
+    for line in response.split('\n'):
+        line = line.strip()
+        if not line:
+            continue
+
+        is_header = False
+        for header, section_key in headers_mapping.items():
+            if line.startswith(header):
+                if current_section and content_lines:
+                    sections[current_section] = '\n'.join(content_lines).strip()
+                current_section = section_key
+                content_lines = []
+                is_header = True
+                break
+
+        if not is_header and current_section:
+            content_lines.append(line)
+
+    if current_section and content_lines:
+        sections[current_section] = '\n'.join(content_lines).strip()
+
+    # Ensure all sections have content
+    for key, value in sections.items():
+        if not value.strip():
+            sections[key] = f"No {key.replace('_', ' ')} available."
+
+    return sections
 
 @app.post("/process-text/")
-async def process_text(request: CorrectionRequest):
-    api_key = os.getenv("OPENAI_API_KEY")
-    if not api_key:
-        raise HTTPException(status_code=500, detail="API key not configured")
+async def process_text(request: CorrectionRequest) -> JSONResponse:
+    """Processes the text correction request"""
+    start_time = datetime.now()
+    logger.info(f"Starting text processing. Language: {request.language}, Level: {request.level}")
 
     try:
-        if not request.text.strip():
-            raise HTTPException(status_code=400, detail="Empty text provided")
+        api_key = os.getenv("OPENAI_API_KEY")
+        if not api_key:
+            raise HTTPException(status_code=500, detail="API key not configured")
 
-        # Validate language
-        if request.language not in LANGUAGE_CONFIGS:
-            raise HTTPException(
-                status_code=400,
-                detail=f"Unsupported language: {request.language}. Supported languages: {list(LANGUAGE_CONFIGS.keys())}"
-            )
-
-        # Validate level
-        if request.level not in LEVEL_DETAILS:
-            raise HTTPException(
-                status_code=400,
-                detail=f"Unsupported level: {request.level}. Supported levels: {list(LEVEL_DETAILS.keys())}"
-            )
-
-        start_time = datetime.now()
         client = OpenAI(api_key=api_key)
-
-        # Get language-specific configuration
-        lang_config = LANGUAGE_CONFIGS[request.language]
-
-        # Generate prompt with specific language and level information
-        prompt = f"""Ты - опытный преподаватель {request.language} языка уровня {request.level}.
-
-Проанализируй следующий текст на {request.language} языке:
-"{request.text}"
-
-Учитывай следующие особенности:
-- Уровень студента: {request.level}
-- Типичные ошибки для этого языка: {', '.join(lang_config['common_errors'])}
-- Особенности произношения: {', '.join(lang_config['pronunciation_focus'])}
-
-Предоставь анализ в следующем формате:
-
-ИСПРАВЛЕНО:
-[Исправленная версия текста]
-
-ОБЪЯСНЕНИЕ:
-[Подробное объяснение ошибок]
-
-ГРАММАТИКА:
-[Грамматический разбор]
-
-ПРОИЗНОШЕНИЕ:
-[Советы по произношению]
-
-РЕКОМЕНДАЦИИ ПО УРОВНЮ:
-[Рекомендации для уровня {request.level}]"""
+        prompt = generate_teacher_prompt(request)
 
         try:
             response = await asyncio.to_thread(
@@ -249,101 +287,58 @@ async def process_text(request: CorrectionRequest):
                 )
             )
 
-            # Parse the response
             response_text = response.choices[0].message.content
             sections = parse_correction_response(response_text)
 
-            # Create the response object
-            correction_response = CorrectionResponse(
-                corrected_text=sections["corrected_text"],
-                explanation=sections["explanation"],
-                grammar_notes=sections["grammar_notes"],
-                pronunciation_tips=sections["pronunciation_tips"],
-                level_appropriate_suggestions=sections.get("level_appropriate_suggestions", ""),
-                original_text=request.text
-            )
+            response_data = {
+                "corrected_text": sections["corrected_text"],
+                "explanation": sections["explanation"],
+                "grammar_notes": sections["grammar_notes"],
+                "pronunciation_tips": sections["pronunciation_tips"],
+                "level_appropriate_suggestions": sections["level_appropriate_suggestions"],
+                "original_text": request.text
+            }
 
-            return correction_response
+            processing_time = (datetime.now() - start_time).total_seconds()
+            logger.info(f"Text processing completed in {processing_time:.2f} seconds")
+
+            return JSONResponse(
+                content=response_data,
+                media_type="application/json; charset=utf-8"
+            )
 
         except Exception as e:
             logger.error(f"OpenAI API error: {str(e)}")
-            raise HTTPException(status_code=502, detail=str(e))
+            raise HTTPException(status_code=502, detail=f"OpenAI API error: {str(e)}")
 
     except HTTPException:
         raise
     except Exception as e:
-        logger.error(f"Error: {str(e)}")
+        logger.error(f"Unexpected error: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
-def parse_correction_response(response: str) -> dict:
-    sections = {
-        "corrected_text": "",
-        "explanation": "",
-        "grammar_notes": "",
-        "pronunciation_tips": "",
-        "level_appropriate_suggestions": ""
-    }
 
-    current_section = None
-    lines = []
+@app.get("/health")
+async def health_check():
+    """Health check endpoint"""
+    return JSONResponse(
+        content={
+            "status": "healthy",
+            "timestamp": datetime.now().isoformat(),
+            "version": "2.1.0"
+        },
+        media_type="application/json; charset=utf-8"
+    )
 
-    # Extract the corrected text first
-    if "Исправленный текст:" in response:
-        text_start = response.find("Исправленный текст:") + len("Исправленный текст:")
-        text_end = response.find("Объяснение:")
-        if text_end == -1:  # If "Объяснение:" not found, try next section
-            text_end = len(response)
-        sections["corrected_text"] = response[text_start:text_end].strip()
-
-    # Map Russian headers to section keys
-    header_mapping = {
-        "Объяснение:": "explanation",
-        "Грамматика:": "grammar_notes",
-        "Произношение:": "pronunciation_tips",
-        "Рекомендации по уровню:": "level_appropriate_suggestions"
-    }
-
-    # Split the text into lines
-    lines = response.split('\n')
-    current_section = None
-    section_content = []
-
-    for line in lines:
-        line = line.strip()
-        if not line:
-            continue
-
-        # Check if this line is a header
-        found_header = False
-        for header, section_key in header_mapping.items():
-            if header in line:
-                if current_section and section_content:
-                    sections[current_section] = '\n'.join(section_content).strip()
-                current_section = section_key
-                section_content = []
-                found_header = True
-                break
-
-        if not found_header and current_section:
-            section_content.append(line)
-
-    # Don't forget to add the last section
-    if current_section and section_content:
-        sections[current_section] = '\n'.join(section_content).strip()
-
-    # Clean up the sections
-    for key in sections:
-        if sections[key]:
-            # Remove any remaining header text
-            for header in header_mapping.keys():
-                sections[key] = sections[key].replace(header, "")
-            # Clean up any extra whitespace
-            sections[key] = sections[key].strip()
-
-    return sections
-# Добавляем эндпоинт для проверки здоровья сервера
 @app.get("/")
 async def root():
-    return JSONResponse(content={"message": "API is running. Use /process-text/ for requests."})
+    """Root endpoint"""
+    return JSONResponse(
+        content={
+            "message": "Speech Correction API is running",
+            "version": "2.1.0",
+            "documentation": "/docs"
+        }
+    )
 
 if __name__ == "__main__":
     import uvicorn
