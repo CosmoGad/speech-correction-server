@@ -10,6 +10,9 @@ import logging
 import asyncio
 from logging.handlers import RotatingFileHandler
 from dotenv import load_dotenv
+from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
+import json
 
 # Load environment variables
 load_dotenv()
@@ -114,32 +117,49 @@ LEVEL_DETAILS = {
     }
 }
 
-LANGUAGE_CONFIGS = {
-    "Русский": {
-        "code": "ru",
-        "script": "cyrillic",
-        "common_errors": ["падежи", "глагольные приставки", "ударения"],
-        "pronunciation_focus": ["ь", "ъ", "щ", "ж", "ш"]
+INTERFACE_LANGUAGES = {
+    "ru": {
+        "name": "Русский",
+        "translations": {
+            "corrected_text": "Исправленный текст",
+            "explanation": "Анализ ошибок",
+            "grammar_notes": "Грамматические заметки",
+            "pronunciation_tips": "Советы по произношению",
+            "level_suggestions": "Рекомендации по уровню"
+        }
     },
-    "Немецкий": {
-        "code": "de",
-        "script": "latin",
-        "common_errors": ["артикли", "порядок слов", "составные глаголы"],
-        "pronunciation_focus": ["ä", "ö", "ü", "ß"]
+    "en": {
+        "name": "English",
+        "translations": {
+            "corrected_text": "Corrected Text",
+            "explanation": "Error Analysis",
+            "grammar_notes": "Grammar Notes",
+            "pronunciation_tips": "Pronunciation Tips",
+            "level_suggestions": "Level Suggestions"
+        }
     },
-    "Английский": {
-        "code": "en",
-        "script": "latin",
-        "common_errors": ["артикли", "времена", "предлоги"],
-        "pronunciation_focus": ["th", "w", "r", "schwa"]
+    "de": {
+        "name": "Deutsch",
+        "translations": {
+            "corrected_text": "Korrigierter Text",
+            "explanation": "Fehleranalyse",
+            "grammar_notes": "Grammatische Hinweise",
+            "pronunciation_tips": "Aussprache-Tipps",
+            "level_suggestions": "Niveau-Empfehlungen"
+        }
     },
-    "Украинский": {
-        "code": "uk",
-        "script": "cyrillic",
-        "common_errors": ["наголос", "чергування", "м'який знак"],
-        "pronunciation_focus": ["ї", "є", "і", "г"]
+    "uk": {
+        "name": "Українська",
+        "translations": {
+            "corrected_text": "Виправлений текст",
+            "explanation": "Аналіз помилок",
+            "grammar_notes": "Граматичні нотатки",
+            "pronunciation_tips": "Поради щодо вимови",
+            "level_suggestions": "Рекомендації щодо рівня"
+        }
     }
 }
+
 
 class CorrectionRequest(BaseModel):
     text: str
@@ -147,6 +167,12 @@ class CorrectionRequest(BaseModel):
     level: str
     interface_language: str
     recognition_confidence: float = Field(default=1.0, ge=0.0, le=1.0)
+
+  @validator('interface_language')
+    def validate_interface_language(cls, v):
+        if v not in INTERFACE_LANGUAGES:
+            raise ValueError(f"Unsupported interface language: {v}")
+        return v
 
     @validator('language')
     def validate_language(cls, v):
