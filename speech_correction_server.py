@@ -192,7 +192,9 @@ Analyze the following text considering:
 - Pronunciation Focus: {', '.join(lang_config['pronunciation_focus'])}
 - Grammar Focus: {', '.join(level_info['grammar_focus'])}
 
-Provide the analysis in the following EXACT format (these headers are critical for parsing):
+IMPORTANT: Provide ALL explanations in {request.interface_language} language, only the corrected text should be in {request.language}.
+
+Use this EXACT format:
 
 CORRECTED_TEXT:
 [Corrected version in {request.language}]
@@ -208,6 +210,8 @@ PRONUNCIATION_TIPS:
 
 LEVEL_APPROPRIATE_SUGGESTIONS:
 [Level-specific suggestions in {request.interface_language}]
+
+logger.info(f"Generated prompt: {prompt}")
 
 Requirements:
 1. Use exactly these headers
