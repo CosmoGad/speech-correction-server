@@ -272,7 +272,36 @@ async def process_text(request: CorrectionRequest) -> JSONResponse:
             raise HTTPException(status_code=500, detail="API key not configured")
 
         client = OpenAI(api_key=api_key)
-        prompt = generate_teacher_prompt(request)
+
+        # Используем язык интерфейса из запроса (язык системы)
+        interface_language = request.interface_language
+
+        prompt = f"""You are an experienced {request.language} language teacher specializing in {request.level} level.
+Analyze the following text considering:
+- Level: {request.level}
+- Level Description: {LEVEL_DETAILS[request.level]['description'][interface_language]}
+- Common Errors: {', '.join(LANGUAGE_CONFIGS[request.language]['common_errors'])}
+- Pronunciation Focus: {', '.join(LANGUAGE_CONFIGS[request.language]['pronunciation_focus'])}
+- Grammar Focus: {', '.join(LEVEL_DETAILS[request.level]['grammar_focus'])}
+
+IMPORTANT: Provide ALL explanations in {interface_language} language, only the corrected text should be in {request.language}.
+
+Use this EXACT format:
+
+CORRECTED_TEXT:
+[Corrected version in {request.language}]
+
+EXPLANATION:
+[Detailed error explanation in {interface_language}]
+
+GRAMMAR_NOTES:
+[Grammar analysis in {interface_language}]
+
+PRONUNCIATION_TIPS:
+[Pronunciation advice in {interface_language}]
+
+LEVEL_APPROPRIATE_SUGGESTIONS:
+[Level-specific suggestions in {interface_language}]"""
 
         try:
             response = await asyncio.to_thread(
@@ -299,9 +328,6 @@ async def process_text(request: CorrectionRequest) -> JSONResponse:
                 "original_text": request.text
             }
 
-            processing_time = (datetime.now() - start_time).total_seconds()
-            logger.info(f"Text processing completed in {processing_time:.2f} seconds")
-
             return JSONResponse(
                 content=response_data,
                 media_type="application/json; charset=utf-8"
@@ -316,6 +342,7 @@ async def process_text(request: CorrectionRequest) -> JSONResponse:
     except Exception as e:
         logger.error(f"Unexpected error: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
+
 
 @app.get("/health")
 async def health_check():
