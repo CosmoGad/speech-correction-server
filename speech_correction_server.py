@@ -184,15 +184,20 @@ def generate_teacher_prompt(request: CorrectionRequest) -> str:
     level_info = LEVEL_DETAILS[request.level]
     lang_config = LANGUAGE_CONFIGS[request.language]
 
+    # Убедимся, что interface_language существует в конфигурации
+    interface_language = request.interface_language
+    if interface_language not in level_info['description']:
+        interface_language = "English"  # Fallback to English if language not found
+
     prompt = f"""You are an experienced {request.language} language teacher specializing in {request.level} level.
 Analyze the following text considering:
 - Level: {request.level}
-- Level Description: {level_info['description'][request.interface_language]}
+- Level Description: {level_info['description'][interface_language]}
 - Common Errors: {', '.join(lang_config['common_errors'])}
 - Pronunciation Focus: {', '.join(lang_config['pronunciation_focus'])}
 - Grammar Focus: {', '.join(level_info['grammar_focus'])}
 
-IMPORTANT: Provide ALL explanations in {request.interface_language} language, only the corrected text should be in {request.language}.
+IMPORTANT: Provide ALL explanations in {interface_language} language, only the corrected text should be in {request.language}.
 
 Use this EXACT format:
 
