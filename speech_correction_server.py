@@ -17,6 +17,66 @@ import json
 # Load environment variables
 load_dotenv()
 
+LANGUAGE_CONFIGS = {
+    "Русский": {
+        "code": "ru",
+        "common_errors": [
+            "падежные окончания",
+            "глагольные приставки",
+            "ударения",
+            "видовые пары глаголов"
+        ],
+        "pronunciation_focus": [
+            "мягкие согласные",
+            "редукция гласных",
+            "ударение"
+        ]
+    },
+    "Немецкий": {
+        "code": "de",
+        "common_errors": [
+            "артикли",
+            "порядок слов",
+            "падежи",
+            "модальные глаголы"
+        ],
+        "pronunciation_focus": [
+            "умляуты",
+            "ch звуки",
+            "ударение в сложных словах"
+        ]
+    },
+    "Английский": {
+        "code": "en",
+        "common_errors": [
+            "артикли",
+            "времена",
+            "предлоги",
+            "условные предложения"
+        ],
+        "pronunciation_focus": [
+            "th звуки",
+            "ударение",
+            "интонация"
+        ]
+    },
+    "Украинский": {
+        "code": "uk",
+        "common_errors": [
+            "чергування голосних",
+            "м'який знак",
+            "наголос",
+            "відмінювання"
+        ],
+        "pronunciation_focus": [
+            "м'які приголосні",
+            "наголос",
+            "дифтонги"
+        ]
+    }
+}
+
+
 # Enhanced logging configuration
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -177,7 +237,7 @@ class CorrectionRequest(BaseModel):
     @validator('language')
     def validate_language(cls, v):
         if v not in LANGUAGE_CONFIGS:
-            raise ValueError(f"Unsupported language: {v}")
+            raise ValueError(f"Unsupported language: {v}. Supported languages: {list(LANGUAGE_CONFIGS.keys())}")
         return v
 
     @validator('level')
