@@ -145,7 +145,7 @@ class CorrectionRequest(BaseModel):
     text: str
     language: str
     level: str
-    interface_language: str = "Русский"
+    interface_language: str
     recognition_confidence: float = Field(default=1.0, ge=0.0, le=1.0)
 
     @validator('language')
@@ -184,54 +184,34 @@ def generate_teacher_prompt(request: CorrectionRequest) -> str:
     level_info = LEVEL_DETAILS[request.level]
     lang_config = LANGUAGE_CONFIGS[request.language]
 
-    # Map interface language to correct language name for prompting
-    interface_lang_map = {
-        "English": "English",
-        "Русский": "Russian",
-        "Deutsch": "German",
-        "Українська": "Ukrainian"
-    }
-
-    interface_language = interface_lang_map.get(request.interface_language, "Russian")
-
-    return f"""You are an experienced {request.language} language teacher specializing in {request.level} level.
-Analyze the following text and provide ALL explanations in {interface_language}.
-
-Consider:
+    prompt = f"""You are an experienced {request.language} language teacher specializing in {request.level} level.
+Analyze the following text considering:
 - Level: {request.level}
 - Level Description: {level_info['description'][request.interface_language]}
 - Common Errors: {', '.join(lang_config['common_errors'])}
 - Pronunciation Focus: {', '.join(lang_config['pronunciation_focus'])}
 - Grammar Focus: {', '.join(level_info['grammar_focus'])}
 
-IMPORTANT: ALL explanations MUST be in {interface_language}, only the corrected text should be in {request.language}.
+IMPORTANT: Provide ALL explanations in {request.interface_language} language, only the corrected text should be in {request.language}.
 
-Use this EXACT format and ensure all explanations are in {interface_language}:
+Use this EXACT format:
 
 CORRECTED_TEXT:
 [Corrected version in {request.language}]
 
 EXPLANATION:
-[Detailed error explanation in {interface_language}]
+[Detailed error explanation in {request.interface_language}]
 
 GRAMMAR_NOTES:
-[Grammar analysis in {interface_language}]
+[Grammar analysis in {request.interface_language}]
 
 PRONUNCIATION_TIPS:
-[Pronunciation advice in {interface_language}]
+[Pronunciation advice in {request.interface_language}]
 
 LEVEL_APPROPRIATE_SUGGESTIONS:
-[Level-specific suggestions in {interface_language}]"""
+[Level-specific suggestions in {request.interface_language}]"""
 
-logger.info(f"Generated prompt: {prompt}")
-
-Requirements:
-1. Use exactly these headers
-2. No empty sections
-3. All explanations in {request.interface_language}
-4. Be encouraging and supportive
-5. Provide practical examples
-6. Focus on improvement opportunities"""
+    return prompt
 
 def parse_correction_response(response: str) -> Dict[str, str]:
     """Parses GPT response into structured sections"""
@@ -243,14 +223,6 @@ def parse_correction_response(response: str) -> Dict[str, str]:
         "level_appropriate_suggestions": ""
     }
 
-    headers_mapping = {
-        "CORRECTED_TEXT:": "corrected_text",
-        "EXPLANATION:": "explanation",
-        "GRAMMAR_NOTES:": "grammar_notes",
-        "PRONUNCIATION_TIPS:": "pronunciation_tips",
-        "LEVEL_APPROPRIATE_SUGGESTIONS:": "level_appropriate_suggestions"
-    }
-
     current_section = None
     content_lines = []
 
@@ -259,26 +231,34 @@ def parse_correction_response(response: str) -> Dict[str, str]:
         if not line:
             continue
 
-        is_header = False
-        for header, section_key in headers_mapping.items():
-            if line.startswith(header):
-                if current_section and content_lines:
-                    sections[current_section] = '\n'.join(content_lines).strip()
-                current_section = section_key
-                content_lines = []
-                is_header = True
-                break
-
-        if not is_header and current_section:
+        if line.startswith("CORRECTED_TEXT:"):
+            current_section = "corrected_text"
+            content_lines = []
+        elif line.startswith("EXPLANATION:"):
+            if current_section:
+                sections[current_section] = '\n'.join(content_lines).strip()
+            current_section = "explanation"
+            content_lines = []
+        elif line.startswith("GRAMMAR_NOTES:"):
+            if current_section:
+                sections[current_section] = '\n'.join(content_lines).strip()
+            current_section = "grammar_notes"
+            content_lines = []
+        elif line.startswith("PRONUNCIATION_TIPS:"):
+            if current_section:
+                sections[current_section] = '\n'.join(content_lines).strip()
+            current_section = "pronunciation_tips"
+            content_lines = []
+        elif line.startswith("LEVEL_APPROPRIATE_SUGGESTIONS:"):
+            if current_section:
+                sections[current_section] = '\n'.join(content_lines).strip()
+            current_section = "level_appropriate_suggestions"
+            content_lines = []
+        else:
             content_lines.append(line)
 
     if current_section and content_lines:
         sections[current_section] = '\n'.join(content_lines).strip()
-
-    # Ensure all sections have content
-    for key, value in sections.items():
-        if not value.strip():
-            sections[key] = f"No {key.replace('_', ' ')} available."
 
     return sections
 
@@ -295,35 +275,8 @@ async def process_text(request: CorrectionRequest) -> JSONResponse:
 
         client = OpenAI(api_key=api_key)
 
-        # Используем язык интерфейса из запроса (язык системы)
-        interface_language = request.interface_language
-
-        prompt = f"""You are an experienced {request.language} language teacher specializing in {request.level} level.
-Analyze the following text considering:
-- Level: {request.level}
-- Level Description: {LEVEL_DETAILS[request.level]['description'][interface_language]}
-- Common Errors: {', '.join(LANGUAGE_CONFIGS[request.language]['common_errors'])}
-- Pronunciation Focus: {', '.join(LANGUAGE_CONFIGS[request.language]['pronunciation_focus'])}
-- Grammar Focus: {', '.join(LEVEL_DETAILS[request.level]['grammar_focus'])}
-
-IMPORTANT: Provide ALL explanations in {interface_language} language, only the corrected text should be in {request.language}.
-
-Use this EXACT format:
-
-CORRECTED_TEXT:
-[Corrected version in {request.language}]
-
-EXPLANATION:
-[Detailed error explanation in {interface_language}]
-
-GRAMMAR_NOTES:
-[Grammar analysis in {interface_language}]
-
-PRONUNCIATION_TIPS:
-[Pronunciation advice in {interface_language}]
-
-LEVEL_APPROPRIATE_SUGGESTIONS:
-[Level-specific suggestions in {interface_language}]"""
+        # Generate the prompt
+        prompt = generate_teacher_prompt(request)
 
         try:
             response = await asyncio.to_thread(
@@ -350,6 +303,9 @@ LEVEL_APPROPRIATE_SUGGESTIONS:
                 "original_text": request.text
             }
 
+            processing_time = (datetime.now() - start_time).total_seconds()
+            logger.info(f"Processing completed in {processing_time:.2f} seconds")
+
             return JSONResponse(
                 content=response_data,
                 media_type="application/json; charset=utf-8"
@@ -364,7 +320,6 @@ LEVEL_APPROPRIATE_SUGGESTIONS:
     except Exception as e:
         logger.error(f"Unexpected error: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
-
 
 @app.get("/health")
 async def health_check():
