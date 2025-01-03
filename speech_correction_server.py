@@ -50,7 +50,8 @@ LEVEL_DETAILS = {
         "description": {
             "Русский": "Начальный уровень. Базовые фразы и простые предложения.",
             "English": "Beginner level. Basic phrases and simple sentences.",
-            "Deutsch": "Anfängerniveau. Grundlegende Phrasen und einfache Sätze."
+            "Deutsch": "Anfängerniveau. Grundlegende Phrasen und einfache Sätze.",
+            "Українська": "Початковий рівень. Базові фрази та прості речення."
         },
         "complexity": "basic",
         "explanation_style": "очень подробный, с примерами",
@@ -60,7 +61,8 @@ LEVEL_DETAILS = {
         "description": {
             "Русский": "Элементарный уровень. Простые диалоги и описания.",
             "English": "Elementary level. Simple dialogues and descriptions.",
-            "Deutsch": "Grundlegendes Niveau. Einfache Dialoge und Beschreibungen."
+            "Deutsch": "Grundlegendes Niveau. Einfache Dialoge und Beschreibungen.",
+            "Українська": "Елементарний рівень. Прості діалоги та описи."
         },
         "complexity": "elementary",
         "explanation_style": "подробный, с аналогиями",
@@ -70,7 +72,8 @@ LEVEL_DETAILS = {
         "description": {
             "Русский": "Средний уровень. Свободное общение на знакомые темы.",
             "English": "Intermediate level. Free communication on familiar topics.",
-            "Deutsch": "Mittelstufe. Freie Kommunikation über vertraute Themen."
+            "Deutsch": "Mittelstufe. Freie Kommunikation über vertraute Themen.",
+            "Українська": "Середній рівень. Вільне спілкування на знайомі теми."
         },
         "complexity": "intermediate",
         "explanation_style": "детальный, с контекстом",
@@ -80,7 +83,8 @@ LEVEL_DETAILS = {
         "description": {
             "Русский": "Средне-продвинутый уровень. Сложные темы и абстрактные понятия.",
             "English": "Upper-intermediate level. Complex topics and abstract concepts.",
-            "Deutsch": "Höhere Mittelstufe. Komplexe Themen und abstrakte Konzepte."
+            "Deutsch": "Höhere Mittelstufe. Komplexe Themen und abstrakte Konzepte.",
+            "Українська": "Вище середнього рівня. Складні теми та абстрактні поняття."
         },
         "complexity": "upper-intermediate",
         "explanation_style": "академический, с примерами из жизни",
@@ -90,7 +94,8 @@ LEVEL_DETAILS = {
         "description": {
             "Русский": "Продвинутый уровень. Свободное владение языком.",
             "English": "Advanced level. Fluent language proficiency.",
-            "Deutsch": "Fortgeschrittenes Niveau. Fließende Sprachkenntnisse."
+            "Deutsch": "Fortgeschrittenes Niveau. Fließende Sprachkenntnisse.",
+            "Українська": "Просунутий рівень. Вільне володіння мовою."
         },
         "complexity": "advanced",
         "explanation_style": "профессиональный, с литературными примерами",
@@ -100,7 +105,8 @@ LEVEL_DETAILS = {
         "description": {
             "Русский": "Уровень носителя языка. Совершенное владение.",
             "English": "Native-like level. Perfect mastery.",
-            "Deutsch": "Muttersprachliches Niveau. Perfekte Beherrschung."
+            "Deutsch": "Muttersprachliches Niveau. Perfekte Beherrschung.",
+            "Українська": "Рівень носія мови. Досконале володіння."
         },
         "complexity": "native-like",
         "explanation_style": "экспертный, с культурным контекстом",
