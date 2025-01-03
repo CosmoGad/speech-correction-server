@@ -168,7 +168,7 @@ class CorrectionRequest(BaseModel):
     interface_language: str
     recognition_confidence: float = Field(default=1.0, ge=0.0, le=1.0)
 
-  @validator('interface_language')
+    @validator('interface_language')
     def validate_interface_language(cls, v):
         if v not in INTERFACE_LANGUAGES:
             raise ValueError(f"Unsupported interface language: {v}")
@@ -191,6 +191,7 @@ class CorrectionRequest(BaseModel):
         if not v.strip():
             raise ValueError("Text cannot be empty")
         return v.strip()
+
 
 class CorrectionResponse(BaseModel):
     corrected_text: str
