@@ -266,25 +266,24 @@ class CorrectionResponse(BaseModel):
             str: lambda v: v
         }
 
+# В speech_correction_server.py обновляем функцию generate_teacher_prompt:
+
 def generate_teacher_prompt(request: CorrectionRequest) -> str:
     """Generates a structured prompt for GPT based on the request parameters"""
     level_info = LEVEL_DETAILS[request.level]
     lang_config = LANGUAGE_CONFIGS[request.language]
-
-    # Убедимся, что interface_language существует в конфигурации
-    interface_language = request.interface_language
-    if interface_language not in level_info['description']:
-        interface_language = "English"  # Fallback to English if language not found
+    interface_lang = INTERFACE_LANGUAGES[request.interface_language]['name']
 
     prompt = f"""You are an experienced {request.language} language teacher specializing in {request.level} level.
 Analyze the following text considering:
 - Level: {request.level}
-- Level Description: {level_info['description'][interface_language]}
+- Level Description: {level_info['description'].get(interface_lang, level_info['description']['English'])}
 - Common Errors: {', '.join(lang_config['common_errors'])}
 - Pronunciation Focus: {', '.join(lang_config['pronunciation_focus'])}
 - Grammar Focus: {', '.join(level_info['grammar_focus'])}
 
-IMPORTANT: Provide ALL explanations in {interface_language} language, only the corrected text should be in {request.language}.
+IMPORTANT: Provide ALL explanations in {interface_lang} language, only the corrected text should be in {request.language}.
+YOU MUST USE {interface_lang} FOR ALL EXPLANATIONS AND ANALYSIS.
 
 Use this EXACT format:
 
@@ -292,16 +291,16 @@ CORRECTED_TEXT:
 [Corrected version in {request.language}]
 
 EXPLANATION:
-[Detailed error explanation in {request.interface_language}]
+[Detailed error explanation in {interface_lang}]
 
 GRAMMAR_NOTES:
-[Grammar analysis in {request.interface_language}]
+[Grammar analysis in {interface_lang}]
 
 PRONUNCIATION_TIPS:
-[Pronunciation advice in {request.interface_language}]
+[Pronunciation advice in {interface_lang}]
 
 LEVEL_APPROPRIATE_SUGGESTIONS:
-[Level-specific suggestions in {request.interface_language}]"""
+[Level-specific suggestions in {interface_lang}]"""
 
     return prompt
 
