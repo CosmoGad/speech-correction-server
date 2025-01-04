@@ -274,22 +274,22 @@ def generate_teacher_prompt(request: CorrectionRequest) -> str:
     """Generates a structured prompt for GPT based on the request parameters"""
     level_info = LEVEL_DETAILS[request.level]
     lang_config = LANGUAGE_CONFIGS[request.language]
-    interface_lang = INTERFACE_LANGUAGES[request.interface_language]['name']
+    interface_language = INTERFACE_LANGUAGES[request.interface_language]['name']
 
     prompt = f"""You are an experienced {request.language} language teacher specializing in {request.level} level.
 Please analyze the provided text according to these rules:
 
 VERY IMPORTANT FORMATTING RULES:
 1. The CORRECTED_TEXT section should ONLY contain the corrected text in {request.language} with no translations or explanations.
-2. For all explanation sections, use {interface_lang} as the main language.
+2. For all explanation sections, use {interface_language} as the main language.
 3. When referring to specific words or phrases from the original or corrected text in the explanations, ALWAYS keep them in {request.language} and put them in quotes.
 4. Do NOT translate the original text's words/phrases when discussing them - keep them in {request.language}.
-5. In the ERROR_STATISTICS section, provide a brief count of errors by category in {interface_lang}.
+5. In the ERROR_STATISTICS section, provide a brief count of errors by category in {interface_language}.
 6. In the ALTERNATIVES section, suggest other ways to express the same meaning at the current level, with explanations in {interface_lang}.
 
 Current context:
 - Level: {request.level}
-- Level Description: {level_info['description'].get(interface_lang, level_info['description']['English'])}
+- Level Description: {level_info['description'].get(interface_language, level_info['description']['English'])}
 - Common Errors: {', '.join(lang_config['common_errors'])}
 - Pronunciation Focus: {', '.join(lang_config['pronunciation_focus'])}
 - Grammar Focus: {', '.join(level_info['grammar_focus'])}
@@ -300,26 +300,26 @@ CORRECTED_TEXT:
 [Only the corrected version in {request.language}]
 
 ERROR_STATISTICS:
-[Statistics in {interface_lang}]
+[Statistics in {interface_language}]
 - Grammar: [number] errors
 - Vocabulary: [number] errors
 - Pronunciation: [number] errors
 - Other: [number] errors
 
 EXPLANATION:
-[Detailed error analysis in {interface_lang}, keeping original {request.language} phrases in quotes]
+[Detailed error analysis in {interface_language}, keeping original {request.language} phrases in quotes]
 
 GRAMMAR_NOTES:
-[Grammar explanations in {interface_lang}, keeping {request.language} examples in quotes]
+[Grammar explanations in {interface_language}, keeping {request.language} examples in quotes]
 
 PRONUNCIATION_TIPS:
-[Pronunciation advice in {interface_lang}, keeping {request.language} examples in quotes]
+[Pronunciation advice in {interface_language}, keeping {request.language} examples in quotes]
 
 ALTERNATIVES:
-[2-3 alternative ways to express the same meaning in {request.language}, with brief explanations in {interface_lang}]
+[2-3 alternative ways to express the same meaning in {request.language}, with brief explanations in {interface_language}]
 
 LEVEL_APPROPRIATE_SUGGESTIONS:
-[Level-specific suggestions in {interface_lang}, keeping {request.language} examples in quotes]"""
+[Level-specific suggestions in {interface_language}, keeping {request.language} examples in quotes]"""
 
     return prompt
 def parse_correction_response(response: str) -> Dict[str, str]:
