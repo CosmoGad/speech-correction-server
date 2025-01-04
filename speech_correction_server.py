@@ -180,6 +180,7 @@ LEVEL_DETAILS = {
 INTERFACE_LANGUAGES = {
     "ru": {
         "name": "Русский",
+         "language_code": "ru",
         "translations": {
             "corrected_text": "Исправленный текст",
             "explanation": "Анализ ошибок",
@@ -190,6 +191,7 @@ INTERFACE_LANGUAGES = {
     },
     "en": {
         "name": "English",
+        "language_code": "en",
         "translations": {
             "corrected_text": "Corrected Text",
             "explanation": "Error Analysis",
@@ -200,6 +202,7 @@ INTERFACE_LANGUAGES = {
     },
     "de": {
         "name": "Deutsch",
+        "language_code": "de",
         "translations": {
             "corrected_text": "Korrigierter Text",
             "explanation": "Fehleranalyse",
@@ -210,6 +213,7 @@ INTERFACE_LANGUAGES = {
     },
     "uk": {
         "name": "Українська",
+        "language_code": "uk",
         "translations": {
             "corrected_text": "Виправлений текст",
             "explanation": "Аналіз помилок",
@@ -269,25 +273,37 @@ class CorrectionResponse(BaseModel):
 
 
 def generate_teacher_prompt(request: CorrectionRequest) -> str:
-    """Generates a structured prompt for GPT based on the request parameters"""
+    """Generates a structured prompt for GPT based on the request parameters with strict language control"""
     level_info = LEVEL_DETAILS[request.level]
     lang_config = LANGUAGE_CONFIGS[request.language]
-    interface_language = INTERFACE_LANGUAGES[request.interface_language]['name']  # Замена interface_lang на interface_language
+    interface_lang_config = INTERFACE_LANGUAGES[request.interface_language]
 
-    prompt = f"""You are an experienced {request.language} language teacher specializing in {request.level} level.
+    # Строгие инструкции по языку для GPT
+    language_instruction = f"""You are an experienced {request.language} language teacher specializing in {request.level} level.
+
+CRITICAL LANGUAGE REQUIREMENTS:
+1. You MUST provide ALL explanations and analysis in {interface_lang_config['name']} (ISO: {interface_lang_config['language_code']})
+2. DO NOT use English or any other language for explanations
+3. Only the original mistakes and corrected examples should be in {request.language}
+4. Even if you see "Deutsch" or any other language name, stick to {interface_lang_config['name']} for explanations
+
+This is a hard requirement - never switch to English or any other language for explanations."""
+
+    prompt = f"""{language_instruction}
+
 Please analyze the provided text according to these rules:
 
 VERY IMPORTANT FORMATTING RULES:
 1. The CORRECTED_TEXT section should ONLY contain the corrected text in {request.language} with no translations or explanations.
-2. For all explanation sections, use {interface_language} as the main language.
+2. For all explanation sections, use STRICTLY {interface_lang_config['name']} as the main language.
 3. When referring to specific words or phrases from the original or corrected text in the explanations, ALWAYS keep them in {request.language} and put them in quotes.
 4. Do NOT translate the original text's words/phrases when discussing them - keep them in {request.language}.
-5. In the ERROR_STATISTICS section, provide a brief count of errors by category in {interface_language}.
-6. In the ALTERNATIVES section, suggest other ways to express the same meaning at the current level, with explanations in {interface_language}.
+5. In the ERROR_STATISTICS section, provide a brief count of errors by category in {interface_lang_config['name']}.
+6. In the ALTERNATIVES section, suggest other ways to express the same meaning at the current level, with explanations in {interface_lang_config['name']}.
 
 Current context:
 - Level: {request.level}
-- Level Description: {level_info['description'].get(interface_language, level_info['description']['English'])}
+- Level Description: {level_info['description'].get(interface_lang_config['language_code'], level_info['description']['English'])}
 - Common Errors: {', '.join(lang_config['common_errors'])}
 - Pronunciation Focus: {', '.join(lang_config['pronunciation_focus'])}
 - Grammar Focus: {', '.join(level_info['grammar_focus'])}
@@ -298,26 +314,26 @@ CORRECTED_TEXT:
 [Only the corrected version in {request.language}]
 
 ERROR_STATISTICS:
-[Statistics in {interface_language}]
+[Statistics in {interface_lang_config['name']}]
 - Grammar: [number] errors
 - Vocabulary: [number] errors
 - Pronunciation: [number] errors
 - Other: [number] errors
 
 EXPLANATION:
-[Detailed error analysis in {interface_language}, keeping original {request.language} phrases in quotes]
+[Detailed error analysis in {interface_lang_config['name']}, keeping original {request.language} phrases in quotes]
 
 GRAMMAR_NOTES:
-[Grammar explanations in {interface_language}, keeping {request.language} examples in quotes]
+[Grammar explanations in {interface_lang_config['name']}, keeping {request.language} examples in quotes]
 
 PRONUNCIATION_TIPS:
-[Pronunciation advice in {interface_language}, keeping {request.language} examples in quotes]
+[Pronunciation advice in {interface_lang_config['name']}, keeping {request.language} examples in quotes]
 
 ALTERNATIVES:
-[2-3 alternative ways to express the same meaning in {request.language}, with brief explanations in {interface_language}]
+[2-3 alternative ways to express the same meaning in {request.language}, with brief explanations in {interface_lang_config['name']}]
 
 LEVEL_APPROPRIATE_SUGGESTIONS:
-[Level-specific suggestions in {interface_language}, keeping {request.language} examples in quotes]"""
+[Level-specific suggestions in {interface_lang_config['name']}, keeping {request.language} examples in quotes]"""
 
     return prompt
 
