@@ -275,26 +275,27 @@ def generate_teacher_prompt(request: CorrectionRequest) -> str:
     interface_lang = INTERFACE_LANGUAGES[request.interface_language]['name']
 
     prompt = f"""You are an experienced {request.language} language teacher specializing in {request.level} level.
-Analyze the following text considering:
+Please analyze the provided text according to these rules:
+
+VERY IMPORTANT FORMATTING RULES:
+1. The CORRECTED_TEXT section should ONLY contain the corrected text in {request.language} with no translations or explanations.
+2. For all explanation sections, use {interface_lang} as the main language.
+3. When referring to specific words or phrases from the original or corrected text in the explanations, ALWAYS keep them in {request.language} and put them in quotes.
+4. Do NOT translate the original text's words/phrases when discussing them - keep them in {request.language}.
+5. In the ERROR_STATISTICS section, provide a brief count of errors by category.
+6. In the ALTERNATIVES section, suggest other ways to express the same meaning at the current level.
+
+Current context:
 - Level: {request.level}
 - Level Description: {level_info['description'].get(interface_lang, level_info['description']['English'])}
 - Common Errors: {', '.join(lang_config['common_errors'])}
 - Pronunciation Focus: {', '.join(lang_config['pronunciation_focus'])}
 - Grammar Focus: {', '.join(level_info['grammar_focus'])}
 
-IMPORTANT FORMATTING RULES:
-1. The CORRECTED_TEXT section should contain ONLY the corrected version in {request.language}, with no translations or explanations.
-
-2. For all other sections, provide explanations in {interface_lang} while keeping original phrases in {request.language} in quotes.
-
-3. In the ERROR_STATISTICS section, provide a brief count of errors by category.
-
-4. In the ALTERNATIVES section, suggest other ways to express the same meaning at the current level.
-
-Use this EXACT format:
+Use this EXACT format in your response:
 
 CORRECTED_TEXT:
-[Only corrected version in {request.language}]
+[Only the corrected version in {request.language}]
 
 ERROR_STATISTICS:
 - Grammar: [number] errors
@@ -303,21 +304,20 @@ ERROR_STATISTICS:
 - Other: [number] errors
 
 EXPLANATION:
-[Error explanation in {interface_lang}, keeping original phrases in {request.language}]
+[Detailed error analysis in {interface_lang}, keeping original {request.language} phrases in quotes]
 
 GRAMMAR_NOTES:
-[Grammar analysis in {interface_lang}, keeping original phrases in {request.language}]
+[Grammar explanations in {interface_lang}, keeping {request.language} examples in quotes]
 
 PRONUNCIATION_TIPS:
-[Pronunciation advice in {interface_lang}, keeping original phrases in {request.language}]
+[Pronunciation advice in {interface_lang}, keeping {request.language} examples in quotes]
 
 ALTERNATIVES:
 [2-3 alternative ways to express the same meaning in {request.language}, with brief explanations in {interface_lang}]
 
 LEVEL_APPROPRIATE_SUGGESTIONS:
-[Level-specific suggestions in {interface_lang}, keeping original phrases in {request.language}]"""
+[Level-specific suggestions in {interface_lang}, keeping {request.language} examples in quotes]"""
 
-    return prompt
     return prompt
 
 def parse_correction_response(response: str) -> Dict[str, str]:
