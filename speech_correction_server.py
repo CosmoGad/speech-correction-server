@@ -282,26 +282,42 @@ Analyze the following text considering:
 - Pronunciation Focus: {', '.join(lang_config['pronunciation_focus'])}
 - Grammar Focus: {', '.join(level_info['grammar_focus'])}
 
-IMPORTANT: Provide ALL explanations in {interface_lang} language, only the corrected text should be in {request.language}.
-YOU MUST USE {interface_lang} FOR ALL EXPLANATIONS AND ANALYSIS.
+IMPORTANT FORMATTING RULES:
+1. The CORRECTED_TEXT section should contain ONLY the corrected version in {request.language}, with no translations or explanations.
+
+2. For all other sections, provide explanations in {interface_lang} while keeping original phrases in {request.language} in quotes.
+
+3. In the ERROR_STATISTICS section, provide a brief count of errors by category.
+
+4. In the ALTERNATIVES section, suggest other ways to express the same meaning at the current level.
 
 Use this EXACT format:
 
 CORRECTED_TEXT:
-[Corrected version in {request.language}]
+[Only corrected version in {request.language}]
+
+ERROR_STATISTICS:
+- Grammar: [number] errors
+- Vocabulary: [number] errors
+- Pronunciation: [number] errors
+- Other: [number] errors
 
 EXPLANATION:
-[Detailed error explanation in {interface_lang}]
+[Error explanation in {interface_lang}, keeping original phrases in {request.language}]
 
 GRAMMAR_NOTES:
-[Grammar analysis in {interface_lang}]
+[Grammar analysis in {interface_lang}, keeping original phrases in {request.language}]
 
 PRONUNCIATION_TIPS:
-[Pronunciation advice in {interface_lang}]
+[Pronunciation advice in {interface_lang}, keeping original phrases in {request.language}]
+
+ALTERNATIVES:
+[2-3 alternative ways to express the same meaning in {request.language}, with brief explanations in {interface_lang}]
 
 LEVEL_APPROPRIATE_SUGGESTIONS:
-[Level-specific suggestions in {interface_lang}]"""
+[Level-specific suggestions in {interface_lang}, keeping original phrases in {request.language}]"""
 
+    return prompt
     return prompt
 
 def parse_correction_response(response: str) -> Dict[str, str]:
