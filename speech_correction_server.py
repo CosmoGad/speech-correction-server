@@ -266,15 +266,13 @@ class CorrectionResponse(BaseModel):
             str: lambda v: v
         }
 
-# В speech_correction_server.py обновляем функцию generate_teacher_prompt:
 
-# В speech_correction_server.py обновляем функцию generate_teacher_prompt:
 
 def generate_teacher_prompt(request: CorrectionRequest) -> str:
     """Generates a structured prompt for GPT based on the request parameters"""
     level_info = LEVEL_DETAILS[request.level]
     lang_config = LANGUAGE_CONFIGS[request.language]
-    interface_language = INTERFACE_LANGUAGES[request.interface_language]['name']
+    interface_language = INTERFACE_LANGUAGES[request.interface_language]['name']  # Замена interface_lang на interface_language
 
     prompt = f"""You are an experienced {request.language} language teacher specializing in {request.level} level.
 Please analyze the provided text according to these rules:
@@ -285,7 +283,7 @@ VERY IMPORTANT FORMATTING RULES:
 3. When referring to specific words or phrases from the original or corrected text in the explanations, ALWAYS keep them in {request.language} and put them in quotes.
 4. Do NOT translate the original text's words/phrases when discussing them - keep them in {request.language}.
 5. In the ERROR_STATISTICS section, provide a brief count of errors by category in {interface_language}.
-6. In the ALTERNATIVES section, suggest other ways to express the same meaning at the current level, with explanations in {interface_lang}.
+6. In the ALTERNATIVES section, suggest other ways to express the same meaning at the current level, with explanations in {interface_language}.
 
 Current context:
 - Level: {request.level}
@@ -322,6 +320,7 @@ LEVEL_APPROPRIATE_SUGGESTIONS:
 [Level-specific suggestions in {interface_language}, keeping {request.language} examples in quotes]"""
 
     return prompt
+
 def parse_correction_response(response: str) -> Dict[str, str]:
     """Parses GPT response into structured sections"""
     sections = {
