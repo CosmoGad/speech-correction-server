@@ -1,0 +1,91 @@
+"A1": {
+    "description": {
+        "Русский": "Начальный уровень. Базовые фразы и простые предложения.",
+        "English": "Beginner level. Basic phrases and simple sentences.",
+        "Deutsch": "Anfängerniveau. Grundlegende Phrasen und einfache Sätze.",
+        "Українська": "Початковий рівень. Базові фрази та прості речення.",
+        "Italiano": "Livello iniziale. Frasi di base e frasi semplici.",
+        "Français": "Niveau débutant. Phrases de base et phrases simples.",
+        "Español": "Nivel inicial. Frases básicas y oraciones simples.",
+        "Polski": "Poziom podstawowy. Podstawowe zwroty i proste zdania."
+    },
+    "complexity": "basic",
+    "explanation_style": "очень подробный, с примерами",
+    "grammar_focus": ["простое настоящее время", "личные местоимения", "базовые предлоги"]
+},
+"A2": {
+    "description": {
+        "Русский": "Элементарный уровень. Простые диалоги и описания.",
+        "English": "Elementary level. Simple dialogues and descriptions.",
+        "Deutsch": "Grundlegendes Niveau. Einfache Dialoge und Beschreibungen.",
+        "Українська": "Елементарний рівень. Прості діалоги та описи.",
+        "Italiano": "Livello elementare. Dialoghi semplici e descrizioni.",
+        "Français": "Niveau élémentaire. Dialogues simples et descriptions.",
+        "Español": "Nivel elemental. Diálogos simples y descripciones.",
+        "Polski": "Poziom podstawowy. Proste dialogi i opisy."
+    },
+    "complexity": "elementary",
+    "explanation_style": "подробный, с аналогиями",
+    "grammar_focus": ["прошедшее время", "простое будущее", "базовые союзы"]
+},
+"B1": {
+    "description": {
+        "Русский": "Средний уровень. Свободное общение на знакомые темы.",
+        "English": "Intermediate level. Free communication on familiar topics.",
+        "Deutsch": "Mittelstufe. Freie Kommunikation über vertraute Themen.",
+        "Українська": "Середній рівень. Вільне спілкування на знайомі теми.",
+        "Italiano": "Livello intermedio. Comunicazione libera su argomenti familiari.",
+        "Français": "Niveau intermédiaire. Communication libre sur des sujets familiers.",
+        "Español": "Nivel intermedio. Comunicación libre sobre temas familiares.",
+        "Polski": "Poziom średni. Swobodna komunikacja na znane tematy."
+    },
+    "complexity": "intermediate",
+    "explanation_style": "детальный, с контекстом",
+    "grammar_focus": ["все времена", "условные предложения", "модальные глаголы"]
+},
+"B2": {
+    "description": {
+        "Русский": "Средне-продвинутый уровень. Сложные темы и абстрактные понятия.",
+        "English": "Upper-intermediate level. Complex topics and abstract concepts.",
+        "Deutsch": "Höhere Mittelstufe. Komplexe Themen und abstrakte Konzepte.",
+        "Українська": "Вище середнього рівня. Складні теми та абстрактні поняття.",
+        "Italiano": "Livello intermedio superiore. Argomenti complessi e concetti astratti.",
+        "Français": "Niveau intermédiaire supérieur. Sujets complexes et concepts abstraits.",
+        "Español": "Nivel intermedio alto. Temas complejos y conceptos abstractos.",
+        "Polski": "Poziom średnio zaawansowany. Złożone tematy i abstrakcyjne pojęcia."
+    },
+    "complexity": "upper-intermediate",
+    "explanation_style": "академический, с примерами из жизни",
+    "grammar_focus": ["сложные времена", "пассивный залог", "косвенная речь"]
+},
+"C1": {
+    "description": {
+        "Русский": "Продвинутый уровень. Свободное владение языком.",
+        "English": "Advanced level. Fluent language proficiency.",
+        "Deutsch": "Fortgeschrittenes Niveau. Fließende Sprachkenntnisse.",
+        "Українська": "Просунутий рівень. Вільне володіння мовою.",
+        "Italiano": "Livello avanzato. Padronanza fluente della lingua.",
+        "Français": "Niveau avancé. Maîtrise fluide de la langue.",
+        "Español": "Nivel avanzado. Dominio fluido del idioma.",
+        "Polski": "Poziom zaawansowany. Biegła znajomość języka."
+    },
+    "complexity": "advanced",
+    "explanation_style": "профессиональный, с литературными примерами",
+    "grammar_focus": ["все аспекты грамматики", "стилистические приемы", "идиомы"]
+},
+"C2": {
+    "description": {
+        "Русский": "Уровень носителя языка. Совершенное владение.",
+        "English": "Native-like level. Perfect mastery.",
+        "Deutsch": "Muttersprachliches Niveau. Perfekte Beherrschung.",
+        "Українська": "Рівень носія мови. Досконале володіння.",
+        "Italiano": "Livello madrelingua. Padronanza perfetta.",
+        "Français": "Niveau natif. Maîtrise parfaite.",
+        "Español": "Nivel nativo. Dominio perfecto.",
+        "Polski": "Poziom rodzimego użytkownika. Doskonałe opanowanie."
+    },
+    "complexity": "native-like",
+    "explanation_style": "экспертный, с культурным контекстом",
+    "grammar_focus": ["все аспекты языка", "диалекты", "профессиональная лексика"]
+}
+}

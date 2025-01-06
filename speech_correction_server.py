@@ -17,64 +17,17 @@ import json
 # Load environment variables
 load_dotenv()
 
-LANGUAGE_CONFIGS = {
-    "Русский": {
-        "code": "ru",
-        "common_errors": [
-            "падежные окончания",
-            "глагольные приставки",
-            "ударения",
-            "видовые пары глаголов"
-        ],
-        "pronunciation_focus": [
-            "мягкие согласные",
-            "редукция гласных",
-            "ударение"
-        ]
-    },
-    "Немецкий": {
-        "code": "de",
-        "common_errors": [
-            "артикли",
-            "порядок слов",
-            "падежи",
-            "модальные глаголы"
-        ],
-        "pronunciation_focus": [
-            "умляуты",
-            "ch звуки",
-            "ударение в сложных словах"
-        ]
-    },
-    "Английский": {
-        "code": "en",
-        "common_errors": [
-            "артикли",
-            "времена",
-            "предлоги",
-            "условные предложения"
-        ],
-        "pronunciation_focus": [
-            "th звуки",
-            "ударение",
-            "интонация"
-        ]
-    },
-    "Украинский": {
-        "code": "uk",
-        "common_errors": [
-            "чергування голосних",
-            "м'який знак",
-            "наголос",
-            "відмінювання"
-        ],
-        "pronunciation_focus": [
-            "м'які приголосні",
-            "наголос",
-            "дифтонги"
-        ]
-    }
-}
+# Загрузка языковых конфигураций
+with open('language_configs.json', 'r', encoding='utf-8') as f:
+    LANGUAGE_CONFIGS = json.load(f)
+
+# Загрузка уровней
+with open('level_details.json', 'r', encoding='utf-8') as f:
+    LEVEL_DETAILS = json.load(f)
+
+with open('interface_languages.json', 'r', encoding='utf-8') as f:
+    LEVEL_DETAILS = json.load(f)
+
 
 
 # Enhanced logging configuration
@@ -106,123 +59,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-# Configurations
-LEVEL_DETAILS = {
-    "A1": {
-        "description": {
-            "Русский": "Начальный уровень. Базовые фразы и простые предложения.",
-            "English": "Beginner level. Basic phrases and simple sentences.",
-            "Deutsch": "Anfängerniveau. Grundlegende Phrasen und einfache Sätze.",
-            "Українська": "Початковий рівень. Базові фрази та прості речення."
-        },
-        "complexity": "basic",
-        "explanation_style": "очень подробный, с примерами",
-        "grammar_focus": ["простое настоящее время", "личные местоимения", "базовые предлоги"]
-    },
-    "A2": {
-        "description": {
-            "Русский": "Элементарный уровень. Простые диалоги и описания.",
-            "English": "Elementary level. Simple dialogues and descriptions.",
-            "Deutsch": "Grundlegendes Niveau. Einfache Dialoge und Beschreibungen.",
-            "Українська": "Елементарний рівень. Прості діалоги та описи."
-        },
-        "complexity": "elementary",
-        "explanation_style": "подробный, с аналогиями",
-        "grammar_focus": ["прошедшее время", "простое будущее", "базовые союзы"]
-    },
-    "B1": {
-        "description": {
-            "Русский": "Средний уровень. Свободное общение на знакомые темы.",
-            "English": "Intermediate level. Free communication on familiar topics.",
-            "Deutsch": "Mittelstufe. Freie Kommunikation über vertraute Themen.",
-            "Українська": "Середній рівень. Вільне спілкування на знайомі теми."
-        },
-        "complexity": "intermediate",
-        "explanation_style": "детальный, с контекстом",
-        "grammar_focus": ["все времена", "условные предложения", "модальные глаголы"]
-    },
-    "B2": {
-        "description": {
-            "Русский": "Средне-продвинутый уровень. Сложные темы и абстрактные понятия.",
-            "English": "Upper-intermediate level. Complex topics and abstract concepts.",
-            "Deutsch": "Höhere Mittelstufe. Komplexe Themen und abstrakte Konzepte.",
-            "Українська": "Вище середнього рівня. Складні теми та абстрактні поняття."
-        },
-        "complexity": "upper-intermediate",
-        "explanation_style": "академический, с примерами из жизни",
-        "grammar_focus": ["сложные времена", "пассивный залог", "косвенная речь"]
-    },
-    "C1": {
-        "description": {
-            "Русский": "Продвинутый уровень. Свободное владение языком.",
-            "English": "Advanced level. Fluent language proficiency.",
-            "Deutsch": "Fortgeschrittenes Niveau. Fließende Sprachkenntnisse.",
-            "Українська": "Просунутий рівень. Вільне володіння мовою."
-        },
-        "complexity": "advanced",
-        "explanation_style": "профессиональный, с литературными примерами",
-        "grammar_focus": ["все аспекты грамматики", "стилистические приемы", "идиомы"]
-    },
-    "C2": {
-        "description": {
-            "Русский": "Уровень носителя языка. Совершенное владение.",
-            "English": "Native-like level. Perfect mastery.",
-            "Deutsch": "Muttersprachliches Niveau. Perfekte Beherrschung.",
-            "Українська": "Рівень носія мови. Досконале володіння."
-        },
-        "complexity": "native-like",
-        "explanation_style": "экспертный, с культурным контекстом",
-        "grammar_focus": ["все аспекты языка", "диалекты", "профессиональная лексика"]
-    }
-}
-
-INTERFACE_LANGUAGES = {
-    "ru": {
-        "name": "Русский",
-         "language_code": "ru",
-        "translations": {
-            "corrected_text": "Исправленный текст",
-            "explanation": "Анализ ошибок",
-            "grammar_notes": "Грамматические заметки",
-            "pronunciation_tips": "Советы по произношению",
-            "level_suggestions": "Рекомендации по уровню"
-        }
-    },
-    "en": {
-        "name": "English",
-        "language_code": "en",
-        "translations": {
-            "corrected_text": "Corrected Text",
-            "explanation": "Error Analysis",
-            "grammar_notes": "Grammar Notes",
-            "pronunciation_tips": "Pronunciation Tips",
-            "level_suggestions": "Level Suggestions"
-        }
-    },
-    "de": {
-        "name": "Deutsch",
-        "language_code": "de",
-        "translations": {
-            "corrected_text": "Korrigierter Text",
-            "explanation": "Fehleranalyse",
-            "grammar_notes": "Grammatische Hinweise",
-            "pronunciation_tips": "Aussprache-Tipps",
-            "level_suggestions": "Niveau-Empfehlungen"
-        }
-    },
-    "uk": {
-        "name": "Українська",
-        "language_code": "uk",
-        "translations": {
-            "corrected_text": "Виправлений текст",
-            "explanation": "Аналіз помилок",
-            "grammar_notes": "Граматичні нотатки",
-            "pronunciation_tips": "Поради щодо вимови",
-            "level_suggestions": "Рекомендації щодо рівня"
-        }
-    }
-}
 
 
 class CorrectionRequest(BaseModel):
