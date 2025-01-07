@@ -340,19 +340,9 @@ async def root():
 if __name__ == "__main__":
     import uvicorn
     logger.info("Starting server...")
-    logger.info("Checking configuration files...")
-    required_files = ['language_configs.json', 'level_details.json', 'interface_languages.json']
-    for file in required_files:
-        if os.path.exists(file):
-            logger.info(f"Found {file}")
-        else:
-            logger.error(f"Missing {file}")
-
     port = int(os.getenv("PORT", 8080))
     logger.info(f"Server will run on port {port}")
-     uvicorn.run(
-        app,
-        host="0.0.0.0",
-        port=port,
-        log_level="debug"
-    )
+    uvicorn.run(app,
+                host="0.0.0.0",
+                port=port,
+                log_level="debug")
