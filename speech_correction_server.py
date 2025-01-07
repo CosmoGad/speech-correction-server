@@ -18,28 +18,23 @@ import json
 load_dotenv()
 
 # Загрузка языковых конфигураций
-with open('language_configs.json', 'r', encoding='utf-8') as f:
+with open("language_configs.json", "r", encoding="utf-8") as f:
     LANGUAGE_CONFIGS = json.load(f)
 
 # Загрузка уровней
-with open('level_details.json', 'r', encoding='utf-8') as f:
+with open("level_details.json", "r", encoding="utf-8") as f:
     LEVEL_DETAILS = json.load(f)
 
-with open('interface_languages.json', 'r', encoding='utf-8') as f:
+with open("interface_languages.json", "r", encoding="utf-8") as f:
     INTERFACE_LANGUAGES = json.load(f)
 
 
-
-# Enhanced logging configuration
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 handler = RotatingFileHandler(
-    'app.log',
-    maxBytes=10000000,
-    backupCount=5,
-    encoding='utf-8'
+    "app.log", maxBytes=10000000, backupCount=5, encoding="utf-8"
 )
-formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 handler.setFormatter(formatter)
 logger.addHandler(handler)
 
@@ -48,7 +43,7 @@ app = FastAPI(
     description="Advanced API for language learning and speech correction",
     version="2.1.0",
     docs_url="/docs",
-    redoc_url="/redoc"
+    redoc_url="/redoc",
 )
 
 # CORS configuration
@@ -68,25 +63,27 @@ class CorrectionRequest(BaseModel):
     interface_language: str
     recognition_confidence: float = Field(default=1.0, ge=0.0, le=1.0)
 
-    @validator('interface_language')
+    @validator("interface_language")
     def validate_interface_language(cls, v):
         if v not in INTERFACE_LANGUAGES:
             raise ValueError(f"Unsupported interface language: {v}")
         return v
 
-    @validator('language')
+    @validator("language")
     def validate_language(cls, v):
         if v not in LANGUAGE_CONFIGS:
-            raise ValueError(f"Unsupported language: {v}. Supported languages: {list(LANGUAGE_CONFIGS.keys())}")
+            raise ValueError(
+                f"Unsupported language: {v}. Supported languages: {list(LANGUAGE_CONFIGS.keys())}"
+            )
         return v
 
-    @validator('level')
+    @validator("level")
     def validate_level(cls, v):
         if v not in LEVEL_DETAILS:
             raise ValueError(f"Unsupported level: {v}")
         return v
 
-    @validator('text')
+    @validator("text")
     def validate_text(cls, v):
         if not v.strip():
             raise ValueError("Text cannot be empty")
@@ -102,10 +99,7 @@ class CorrectionResponse(BaseModel):
     original_text: str
 
     class Config:
-        json_encoders = {
-            str: lambda v: v
-        }
-
+        json_encoders = {str: lambda v: v}
 
 
 def generate_teacher_prompt(request: CorrectionRequest) -> str:
@@ -173,6 +167,7 @@ LEVEL_APPROPRIATE_SUGGESTIONS:
 
     return prompt
 
+
 def parse_correction_response(response: str) -> Dict[str, str]:
     """Parses GPT response into structured sections"""
     sections = {
@@ -180,13 +175,13 @@ def parse_correction_response(response: str) -> Dict[str, str]:
         "explanation": "",
         "grammar_notes": "",
         "pronunciation_tips": "",
-        "level_appropriate_suggestions": ""
+        "level_appropriate_suggestions": "",
     }
 
     current_section = None
     content_lines = []
 
-    for line in response.split('\n'):
+    for line in response.split("\n"):
         line = line.strip()
         if not line:
             continue
@@ -196,37 +191,40 @@ def parse_correction_response(response: str) -> Dict[str, str]:
             content_lines = []
         elif line.startswith("EXPLANATION:"):
             if current_section:
-                sections[current_section] = '\n'.join(content_lines).strip()
+                sections[current_section] = "\n".join(content_lines).strip()
             current_section = "explanation"
             content_lines = []
         elif line.startswith("GRAMMAR_NOTES:"):
             if current_section:
-                sections[current_section] = '\n'.join(content_lines).strip()
+                sections[current_section] = "\n".join(content_lines).strip()
             current_section = "grammar_notes"
             content_lines = []
         elif line.startswith("PRONUNCIATION_TIPS:"):
             if current_section:
-                sections[current_section] = '\n'.join(content_lines).strip()
+                sections[current_section] = "\n".join(content_lines).strip()
             current_section = "pronunciation_tips"
             content_lines = []
         elif line.startswith("LEVEL_APPROPRIATE_SUGGESTIONS:"):
             if current_section:
-                sections[current_section] = '\n'.join(content_lines).strip()
+                sections[current_section] = "\n".join(content_lines).strip()
             current_section = "level_appropriate_suggestions"
             content_lines = []
         else:
             content_lines.append(line)
 
     if current_section and content_lines:
-        sections[current_section] = '\n'.join(content_lines).strip()
+        sections[current_section] = "\n".join(content_lines).strip()
 
     return sections
+
 
 @app.post("/process-text/")
 async def process_text(request: CorrectionRequest) -> JSONResponse:
     """Processes the text correction request"""
     start_time = datetime.now()
-    logger.info(f"Starting text processing. Language: {request.language}, Level: {request.level}")
+    logger.info(
+        f"Starting text processing. Language: {request.language}, Level: {request.level}"
+    )
 
     try:
         api_key = os.getenv("OPENAI_API_KEY")
@@ -244,10 +242,10 @@ async def process_text(request: CorrectionRequest) -> JSONResponse:
                     model="gpt-3.5-turbo",
                     messages=[
                         {"role": "system", "content": prompt},
-                        {"role": "user", "content": request.text}
+                        {"role": "user", "content": request.text},
                     ],
                     temperature=0.7,
-                    max_tokens=1500
+                    max_tokens=1500,
                 )
             )
 
@@ -259,16 +257,17 @@ async def process_text(request: CorrectionRequest) -> JSONResponse:
                 "explanation": sections["explanation"],
                 "grammar_notes": sections["grammar_notes"],
                 "pronunciation_tips": sections["pronunciation_tips"],
-                "level_appropriate_suggestions": sections["level_appropriate_suggestions"],
-                "original_text": request.text
+                "level_appropriate_suggestions": sections[
+                    "level_appropriate_suggestions"
+                ],
+                "original_text": request.text,
             }
 
             processing_time = (datetime.now() - start_time).total_seconds()
             logger.info(f"Processing completed in {processing_time:.2f} seconds")
 
             return JSONResponse(
-                content=response_data,
-                media_type="application/json; charset=utf-8"
+                content=response_data, media_type="application/json; charset=utf-8"
             )
 
         except Exception as e:
@@ -281,6 +280,7 @@ async def process_text(request: CorrectionRequest) -> JSONResponse:
         logger.error(f"Unexpected error: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
 
+
 @app.get("/health")
 async def health_check():
     try:
@@ -292,12 +292,16 @@ async def health_check():
                 content={
                     "status": "unhealthy",
                     "reason": "OpenAI API key not configured",
-                    "timestamp": datetime.now().isoformat()
-                }
+                    "timestamp": datetime.now().isoformat(),
+                },
             )
 
         # Проверяем наличие конфигурационных файлов
-        required_files = ['language_configs.json', 'level_details.json', 'interface_languages.json']
+        required_files = [
+            "language_configs.json",
+            "level_details.json",
+            "interface_languages.json",
+        ]
         for file in required_files:
             if not os.path.exists(file):
                 return JSONResponse(
@@ -305,15 +309,15 @@ async def health_check():
                     content={
                         "status": "unhealthy",
                         "reason": f"Configuration file {file} not found",
-                        "timestamp": datetime.now().isoformat()
-                    }
+                        "timestamp": datetime.now().isoformat(),
+                    },
                 )
 
         return JSONResponse(
             content={
                 "status": "healthy",
                 "timestamp": datetime.now().isoformat(),
-                "version": "2.1.0"
+                "version": "2.1.0",
             }
         )
     except Exception as e:
@@ -322,9 +326,10 @@ async def health_check():
             content={
                 "status": "unhealthy",
                 "reason": str(e),
-                "timestamp": datetime.now().isoformat()
-            }
+                "timestamp": datetime.now().isoformat(),
+            },
         )
+
 
 @app.get("/")
 async def root():
@@ -333,16 +338,15 @@ async def root():
         content={
             "message": "Speech Correction API is running",
             "version": "2.1.0",
-            "documentation": "/docs"
+            "documentation": "/docs",
         }
     )
 
+
 if __name__ == "__main__":
     import uvicorn
+
     logger.info("Starting server...")
     port = int(os.getenv("PORT", 8080))
     logger.info(f"Server will run on port {port}")
-    uvicorn.run(app,
-                host="0.0.0.0",
-                port=port,
-                log_level="debug")
+    uvicorn.run(app, host="0.0.0.0", port=port, log_level="debug")
