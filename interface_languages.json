@@ -1,88 +1,90 @@
-"ru": {
-      "name": "Русский",
-       "language_code": "ru",
-      "translations": {
-          "corrected_text": "Исправленный текст",
-          "explanation": "Анализ ошибок",
-          "grammar_notes": "Грамматические заметки",
-          "pronunciation_tips": "Советы по произношению",
-          "level_suggestions": "Рекомендации по уровню"
-      }
+{
+  "ru": {
+    "name": "Русский",
+    "language_code": "ru",
+    "translations": {
+      "corrected_text": "Исправленный текст",
+      "explanation": "Анализ ошибок",
+      "grammar_notes": "Грамматические заметки",
+      "pronunciation_tips": "Советы по произношению",
+      "level_suggestions": "Рекомендации по уровню"
+    }
   },
   "en": {
-      "name": "English",
-      "language_code": "en",
-      "translations": {
-          "corrected_text": "Corrected Text",
-          "explanation": "Error Analysis",
-          "grammar_notes": "Grammar Notes",
-          "pronunciation_tips": "Pronunciation Tips",
-          "level_suggestions": "Level Suggestions"
-      }
+    "name": "English",
+    "language_code": "en",
+    "translations": {
+      "corrected_text": "Corrected Text",
+      "explanation": "Error Analysis",
+      "grammar_notes": "Grammar Notes",
+      "pronunciation_tips": "Pronunciation Tips",
+      "level_suggestions": "Level Suggestions"
+    }
   },
   "de": {
-      "name": "Deutsch",
-      "language_code": "de",
-      "translations": {
-          "corrected_text": "Korrigierter Text",
-          "explanation": "Fehleranalyse",
-          "grammar_notes": "Grammatische Hinweise",
-          "pronunciation_tips": "Aussprache-Tipps",
-          "level_suggestions": "Niveau-Empfehlungen"
-      }
+    "name": "Deutsch",
+    "language_code": "de",
+    "translations": {
+      "corrected_text": "Korrigierter Text",
+      "explanation": "Fehleranalyse",
+      "grammar_notes": "Grammatische Hinweise",
+      "pronunciation_tips": "Aussprache-Tipps",
+      "level_suggestions": "Niveau-Empfehlungen"
+    }
   },
   "uk": {
-      "name": "Українська",
-      "language_code": "uk",
-      "translations": {
-          "corrected_text": "Виправлений текст",
-          "explanation": "Аналіз помилок",
-          "grammar_notes": "Граматичні нотатки",
-          "pronunciation_tips": "Поради щодо вимови",
-          "level_suggestions": "Рекомендації щодо рівня"
-      }
+    "name": "Українська",
+    "language_code": "uk",
+    "translations": {
+      "corrected_text": "Виправлений текст",
+      "explanation": "Аналіз помилок",
+      "grammar_notes": "Граматичні нотатки",
+      "pronunciation_tips": "Поради щодо вимови",
+      "level_suggestions": "Рекомендації щодо рівня"
+    }
   },
-    "fr": {
-  "name": "Français",
-  "language_code": "fr",
-  "translations": {
-    "corrected_text": "Texte corrigé",
-    "explanation": "Analyse des erreurs",
-    "grammar_notes": "Notes grammaticales",
-    "pronunciation_tips": "Conseils de prononciation",
-    "level_suggestions": "Suggestions de niveau"
-  }
-},
-"es": {
-  "name": "Español",
-  "language_code": "es",
-  "translations": {
-    "corrected_text": "Texto corregido",
-    "explanation": "Análisis de errores",
-    "grammar_notes": "Notas gramaticales",
-    "pronunciation_tips": "Consejos de pronunciación",
-    "level_suggestions": "Sugerencias de nivel"
-  }
-},
-"pl": {
-  "name": "Polski",
-  "language_code": "pl",
-  "translations": {
-    "corrected_text": "Poprawiony tekst",
-    "explanation": "Analiza błędów",
-    "grammar_notes": "Uwagi gramatyczne",
-    "pronunciation_tips": "Wskazówki wymowy",
-    "level_suggestions": "Sugestie poziomu"
-  }
-},
-"it": {
-  "name": "Italiano",
-  "language_code": "it",
-  "translations": {
+  "fr": {
+    "name": "Français",
+    "language_code": "fr",
+    "translations": {
+      "corrected_text": "Texte corrigé",
+      "explanation": "Analyse des erreurs",
+      "grammar_notes": "Notes grammaticales",
+      "pronunciation_tips": "Conseils de prononciation",
+      "level_suggestions": "Suggestions de niveau"
+    }
+  },
+  "es": {
+    "name": "Español",
+    "language_code": "es",
+    "translations": {
+      "corrected_text": "Texto corregido",
+      "explanation": "Análisis de errores",
+      "grammar_notes": "Notas gramaticales",
+      "pronunciation_tips": "Consejos de pronunciación",
+      "level_suggestions": "Sugerencias de nivel"
+    }
+  },
+  "pl": {
+    "name": "Polski",
+    "language_code": "pl",
+    "translations": {
+      "corrected_text": "Poprawiony tekst",
+      "explanation": "Analiza błędów",
+      "grammar_notes": "Uwagi gramatyczne",
+      "pronunciation_tips": "Wskazówki wymowy",
+      "level_suggestions": "Sugestie poziomu"
+    }
+  },
+  "it": {
+    "name": "Italiano",
+    "language_code": "it",
+    "translations": {
       "corrected_text": "Testo corretto",
       "explanation": "Analisi degli errori",
       "grammar_notes": "Note grammaticali",
       "pronunciation_tips": "Suggerimenti di pronuncia",
       "level_suggestions": "Suggerimenti di livello"
+    }
   }
 }

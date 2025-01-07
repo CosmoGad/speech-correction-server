@@ -26,7 +26,7 @@ with open('level_details.json', 'r', encoding='utf-8') as f:
     LEVEL_DETAILS = json.load(f)
 
 with open('interface_languages.json', 'r', encoding='utf-8') as f:
-    LEVEL_DETAILS = json.load(f)
+    INTERFACE_LANGUAGES = json.load(f)
 
 
 
@@ -283,15 +283,48 @@ async def process_text(request: CorrectionRequest) -> JSONResponse:
 
 @app.get("/health")
 async def health_check():
-    """Health check endpoint"""
-    return JSONResponse(
-        content={
-            "status": "healthy",
-            "timestamp": datetime.now().isoformat(),
-            "version": "2.1.0"
-        },
-        media_type="application/json; charset=utf-8"
-    )
+    try:
+        # Проверяем наличие API ключа
+        api_key = os.getenv("OPENAI_API_KEY")
+        if not api_key:
+            return JSONResponse(
+                status_code=503,
+                content={
+                    "status": "unhealthy",
+                    "reason": "OpenAI API key not configured",
+                    "timestamp": datetime.now().isoformat()
+                }
+            )
+
+        # Проверяем наличие конфигурационных файлов
+        required_files = ['language_configs.json', 'level_details.json', 'interface_languages.json']
+        for file in required_files:
+            if not os.path.exists(file):
+                return JSONResponse(
+                    status_code=503,
+                    content={
+                        "status": "unhealthy",
+                        "reason": f"Configuration file {file} not found",
+                        "timestamp": datetime.now().isoformat()
+                    }
+                )
+
+        return JSONResponse(
+            content={
+                "status": "healthy",
+                "timestamp": datetime.now().isoformat(),
+                "version": "2.1.0"
+            }
+        )
+    except Exception as e:
+        return JSONResponse(
+            status_code=503,
+            content={
+                "status": "unhealthy",
+                "reason": str(e),
+                "timestamp": datetime.now().isoformat()
+            }
+        )
 
 @app.get("/")
 async def root():
@@ -306,5 +339,15 @@ async def root():
 
 if __name__ == "__main__":
     import uvicorn
-    port = int(os.getenv("PORT", 8000))
+    logger.info("Starting server...")
+    logger.info("Checking configuration files...")
+    required_files = ['language_configs.json', 'level_details.json', 'interface_languages.json']
+    for file in required_files:
+        if os.path.exists(file):
+            logger.info(f"Found {file}")
+        else:
+            logger.error(f"Missing {file}")
+
+    port = int(os.getenv("PORT", 8080))
+    logger.info(f"Server will run on port {port}")
     uvicorn.run(app, host="0.0.0.0", port=port)

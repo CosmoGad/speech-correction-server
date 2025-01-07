@@ -1,55 +1,47 @@
-# fly.toml app configuration file generated for speech-correction-icy-wind-8734 on 2025-01-06T19:40:18+01:00
-#
-# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
-#
-
-app = 'speech-correction-icy-wind-8734'
-primary_region = 'fra'
-kill_signal = 'SIGINT'
-kill_timeout = '5s'
-
-[experimental]
-  auto_rollback = true
+app = "speech-correction"
+primary_region = "fra"  # Укажите ваш регион (например, "fra", "iad", "lax")
 
 [build]
-  dockerfile = 'Dockerfile'
+  dockerfile = "Dockerfile"  # Укажите путь к Dockerfile, если он находится в корне проекта
 
 [env]
-  PORT = '8080'
+  PORT = "8080"  # Порт, который использует ваше приложение
 
 [http_service]
-  internal_port = 8080
-  force_https = true
-  auto_stop_machines = 'stop'
-  auto_start_machines = true
-  min_machines_running = 0
-  processes = ['app']
+  internal_port = 8080  # Внутренний порт, который слушает ваше приложение
+  force_https = true     # Принудительное использование HTTPS
+  auto_stop_machines = false  # Отключаем автоматическую остановку машин
+  auto_start_machines = true  # Автоматически запускать машины при необходимости
+  min_machines_running = 1    # Всегда держать хотя бы одну машину запущенной
+  processes = ["app"]         # Указываем, что это основное приложение
 
 [[services]]
-  protocol = 'tcp'
-  internal_port = 8080
-  processes = ['app']
+  protocol = "tcp"            # Протокол (TCP для HTTP/HTTPS)
+  internal_port = 8080        # Внутренний порт
+  processes = ["app"]         # Указываем, что это основное приложение
 
   [[services.ports]]
-    port = 80
-    handlers = ['http']
-    force_https = true
+    port = 80                 # Внешний порт для HTTP
+    handlers = ["http"]       # Обработчик для HTTP
+    force_https = true        # Принудительное перенаправление на HTTPS
 
   [[services.ports]]
-    port = 443
-    handlers = ['tls', 'http']
+    port = 443                # Внешний порт для HTTPS
+    handlers = ["tls", "http"]  # Обработчики для HTTPS
 
   [services.concurrency]
-    type = 'connections'
-    hard_limit = 25
-    soft_limit = 20
+    type = "connections"      # Тип ограничения (по количеству соединений)
+    hard_limit = 25           # Максимальное количество соединений
+    soft_limit = 20           # Рекомендуемое количество соединений
 
-  [[services.tcp_checks]]
-    interval = '15s'
-    timeout = '2s'
-    grace_period = '1s'
+  [[services.http_checks]]    # Настройка проверки здоровья
+    interval = "30s"          # Интервал проверки
+    timeout = "5s"            # Время ожидания ответа
+    grace_period = "60s"      # Время ожидания перед первой проверкой
+    method = "get"            # Метод запроса (GET)
+    path = "/health"          # Путь к эндпоинту проверки здоровья
 
 [[vm]]
-  memory = '1gb'
-  cpu_kind = 'shared'
-  cpus = 1
+  memory = "1gb"              # Объем памяти для машины
+  cpu_kind = "shared"         # Тип CPU (shared или performance)
+  cpus = 1                    # Количество CPU
