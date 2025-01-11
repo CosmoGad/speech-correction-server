@@ -13,35 +13,35 @@
       "ударение"
     ]
   },
-  "Немецкий": {
+  "Deutsch": {
     "code": "de",
     "common_errors": [
-      "артикли",
-      "порядок слов",
-      "падежи",
-      "модальные глаголы"
+      "Artikel (артикли)",
+      "Wortstellung (порядок слов)",
+      "Kasus (падежи)",
+      "Modalverben (модальные глаголы)"
     ],
     "pronunciation_focus": [
-      "умляуты",
-      "ch звуки",
-      "ударение в сложных словах"
+      "Umlaute (умляуты)",
+      "ch-Laute (звуки ch)",
+      "Betonung in zusammengesetzten Wörtern (ударение в сложных словах)"
     ]
   },
-  "Английский": {
+  "English": {
     "code": "en",
     "common_errors": [
-      "артикли",
-      "времена",
-      "предлоги",
-      "условные предложения"
+      "Articles (артикли)",
+      "Tenses (времена)",
+      "Prepositions (предлоги)",
+      "Conditional sentences (условные предложения)"
     ],
     "pronunciation_focus": [
-      "th звуки",
-      "ударение",
-      "интонация"
+      "th sounds (звуки th)",
+      "Stress (ударение)",
+      "Intonation (интонация)"
     ]
   },
-  "Украинский": {
+  "Українська": {
     "code": "uk",
     "common_errors": [
       "чергування голосних",
@@ -55,60 +55,60 @@
       "дифтонги"
     ]
   },
-  "Итальянский": {
+  "Italiano": {
     "code": "it",
     "common_errors": [
-      "артикли",
-      "согласование времен",
-      "предлоги",
-      "субъюнктив"
+      "Articoli (артикли)",
+      "Concordanza dei tempi (согласование времен)",
+      "Preposizioni (предлоги)",
+      "Congiuntivo (субъюнктив)"
     ],
     "pronunciation_focus": [
-      "двойные согласные",
-      "ударение",
-      "интонация"
+      "Consonanti doppie (двойные согласные)",
+      "Accento (ударение)",
+      "Intonazione (интонация)"
     ]
   },
-  "Французский": {
+  "Français": {
     "code": "fr",
     "common_errors": [
-      "артикли",
-      "времена",
-      "согласование",
-      "местоимения"
+      "Articles (артикли)",
+      "Temps (времена)",
+      "Accord (согласование)",
+      "Pronoms (местоимения)"
     ],
     "pronunciation_focus": [
-      "носовые гласные",
-      "немые окончания",
-      "liaison"
+      "Voyelles nasales (носовые гласные)",
+      "Liaison (связывание)",
+      "Accent tonique (ударение)"
     ]
   },
-  "Испанский": {
+  "Español": {
     "code": "es",
     "common_errors": [
-      "ser/estar",
-      "субхунтив",
-      "времена",
-      "предлоги"
+      "Ser/Estar (глаголы ser и estar)",
+      "Subjuntivo (субъюнктив)",
+      "Tiempos verbales (времена)",
+      "Preposiciones (предлоги)"
     ],
     "pronunciation_focus": [
-      "r/rr звуки",
-      "ñ произношение",
-      "интонация"
+      "Sonidos r/rr (звуки r/rr)",
+      "Pronunciación de la ñ (произношение ñ)",
+      "Entonación (интонация)"
     ]
   },
-  "Польский": {
+  "Polski": {
     "code": "pl",
     "common_errors": [
-      "падежи",
-      "глагольные виды",
-      "предлоги",
-      "числительные"
+      "Przypadki (падежи)",
+      "Aspekty czasownikowe (глагольные виды)",
+      "Przyimki (предлоги)",
+      "Liczebniki (числительные)"
     ],
     "pronunciation_focus": [
-      "носовые гласные",
-      "шипящие звуки",
-      "ударение"
+      "Samogłoski nosowe (носовые гласные)",
+      "Spółgłoski szumiące (шипящие звуки)",
+      "Akcent (ударение)"
     ]
   }
 }
