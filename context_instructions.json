@@ -78,5 +78,17 @@
   "el": {
     "with_context": "Ο χρήστης σκοπεύει να εκφράσει το εξής στα Ελληνικά: '{context}' (παρέχεται στα {interface_language}). Χρησιμοποιήστε αυτό το πλαίσιο για να κατανοήσετε την πρόθεση του χρήστη και να βελτιώσετε τον εντοπισμό σφαλμάτων και τις εξηγήσεις.\n",
     "no_context": "Δεν παρέχεται πλαίσιο.\n"
+  },
+  "cs": {
+    "with_context": "Uživatel chce vyjádřit následující v češtině: '{context}' (poskytnuto v {interface_language}). Použijte tento kontext k pochopení záměru uživatele a zlepšení detekce chyb a vysvětlení.\n",
+    "no_context": "Žádný kontext nebyl poskytnut.\n"
+  },
+  "ro": {
+    "with_context": "Utilizatorul intenționează să exprime următoarele în română: '{context}' (furnizat în {interface_language}). Folosiți acest context pentru a înțelege intenția utilizatorului și a îmbunătăți detectarea erorilor și explicațiile.\n",
+    "no_context": "Niciun context furnizat.\n"
+  },
+  "hu": {
+    "with_context": "A felhasználó a következőt szeretné kifejezni magyarul: '{context}' ({interface_language} nyelven megadva). Használja ezt a kontextust a felhasználó szándékának megértéséhez és a hibafelismerés és magyarázatok javításához.\n",
+    "no_context": "Nincs megadott kontextus.\n"
   }
 }

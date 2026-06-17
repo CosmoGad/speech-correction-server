@@ -229,5 +229,38 @@
       "pronunciation_tips": "Συμβουλές προφοράς",
       "level_suggestions": "Προτάσεις επιπέδου"
     }
+  },
+  "cs": {
+    "name": "Čeština",
+    "language_code": "cs",
+    "translations": {
+      "corrected_text": "Opravený text",
+      "explanation": "Analýza chyb",
+      "grammar_notes": "Gramatické poznámky",
+      "pronunciation_tips": "Tipy k výslovnosti",
+      "level_suggestions": "Návrhy podle úrovně"
+    }
+  },
+  "ro": {
+    "name": "Română",
+    "language_code": "ro",
+    "translations": {
+      "corrected_text": "Text corectat",
+      "explanation": "Analiza erorilor",
+      "grammar_notes": "Note gramaticale",
+      "pronunciation_tips": "Sfaturi de pronunție",
+      "level_suggestions": "Sugestii de nivel"
+    }
+  },
+  "hu": {
+    "name": "Magyar",
+    "language_code": "hu",
+    "translations": {
+      "corrected_text": "Javított szöveg",
+      "explanation": "Hibaelemzés",
+      "grammar_notes": "Nyelvtani megjegyzések",
+      "pronunciation_tips": "Kiejtési tippek",
+      "level_suggestions": "Szintjavaslatok"
+    }
   }
 }

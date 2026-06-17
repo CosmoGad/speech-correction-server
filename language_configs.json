@@ -278,5 +278,47 @@
       "Vowel sounds",
       "γ/χ consonants"
     ]
+  },
+  "cs": {
+    "code": "cs",
+    "common_errors": [
+      "Cases",
+      "Verb aspect",
+      "Word order",
+      "Diacritics"
+    ],
+    "pronunciation_focus": [
+      "Consonant clusters",
+      "ř sound",
+      "Vowel length"
+    ]
+  },
+  "ro": {
+    "code": "ro",
+    "common_errors": [
+      "Articles",
+      "Gender agreement",
+      "Verb conjugation",
+      "Prepositions"
+    ],
+    "pronunciation_focus": [
+      "Diphthongs",
+      "ă/â sounds",
+      "Stress"
+    ]
+  },
+  "hu": {
+    "code": "hu",
+    "common_errors": [
+      "Cases",
+      "Vowel harmony",
+      "Definite/indefinite conjugation",
+      "Word order"
+    ],
+    "pronunciation_focus": [
+      "Long vowels",
+      "Stress on first syllable",
+      "gy/ty sounds"
+    ]
   }
 }
