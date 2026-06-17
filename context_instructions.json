@@ -1,0 +1,82 @@
+{
+  "de": {
+    "with_context": "Der Benutzer beabsichtigt, Folgendes auf Deutsch auszudrücken: '{context}' (bereitgestellt in {interface_language}). Nutzen Sie diesen Kontext, um die Absicht des Benutzers zu verstehen und die Fehlererkennung sowie die Erklärungen zu verbessern.\n",
+    "no_context": "Kein Kontext bereitgestellt.\n"
+  },
+  "ru": {
+    "with_context": "Пользователь намеревается выразить следующее на русском языке: '{context}' (предоставлено на {interface_language}). Используйте этот контекст для понимания намерения пользователя и улучшения обнаружения ошибок и объяснений.\n",
+    "no_context": "Контекст не предоставлен.\n"
+  },
+  "en": {
+    "with_context": "The user intends to express the following in English: '{context}' (provided in {interface_language}). Use this context to understand the user's intention and improve error detection and explanations.\n",
+    "no_context": "No context provided.\n"
+  },
+  "uk": {
+    "with_context": "Користувач має намір висловити наступне українською мовою: '{context}' (надано на {interface_language}). Використовуйте цей контекст для розуміння наміру користувача та покращення виявлення помилок і пояснень.\n",
+    "no_context": "Контекст не надано.\n"
+  },
+  "it": {
+    "with_context": "L'utente intende esprimere quanto segue in italiano: '{context}' (fornito in {interface_language}). Utilizza questo contesto per comprendere l'intenzione dell'utente e migliorare il rilevamento degli errori e le spiegazioni.\n",
+    "no_context": "Nessun contesto fornito.\n"
+  },
+  "fr": {
+    "with_context": "L'utilisateur a l'intention d'exprimer ce qui suit en français: '{context}' (fourni en {interface_language}). Utilisez ce contexte pour comprendre l'intention de l'utilisateur et améliorer la détection des erreurs et les explications.\n",
+    "no_context": "Aucun contexte fourni.\n"
+  },
+  "es": {
+    "with_context": "El usuario pretende expresar lo siguiente en español: '{context}' (proporcionado en {interface_language}). Utilice este contexto para entender la intención del usuario y mejorar la detección de errores y las explicaciones.\n",
+    "no_context": "No se proporcionó contexto.\n"
+  },
+  "pl": {
+    "with_context": "Użytkownik zamierza wyrazić następującą treść po polsku: '{context}' (dostarczone w {interface_language}). Użyj tego kontekstu, aby zrozumieć intencję użytkownika i poprawić wykrywanie błędów oraz wyjaśnienia.\n",
+    "no_context": "Nie dostarczono kontekstu.\n"
+  },
+  "ar": {
+    "with_context": "ينوي المستخدم التعبير عن ما يلي باللغة العربية: '{context}' (مقدم بـ {interface_language}). استخدم هذا السياق لفهم قصد المستخدم وتحسين اكتشاف الأخطاء والتفسيرات.\n",
+    "no_context": "لم يتم تقديم سياق.\n"
+  },
+  "tr": {
+    "with_context": "Kullanıcı Türkçe olarak şunları ifade etmek istiyor: '{context}' ({interface_language} dilinde sağlanmıştır). Kullanıcının niyetini anlamak ve hata algılama ve açıklamaları geliştirmek için bu bağlamı kullanın.\n",
+    "no_context": "Bağlam sağlanmadı.\n"
+  },
+  "ur": {
+    "with_context": "صارف اردو میں درج ذیل کا اظہار کرنا چاہتا ہے: '{context}' ({interface_language} میں فراہم کیا گیا)۔ صارف کے ارادے کو سمجھنے اور غلطیوں کی شناخت اور وضاحتوں کو بہتر بنانے کے لیے اس سیاق و سباق کا استعمال کریں۔\n",
+    "no_context": "کوئی سیاق و سباق فراہم نہیں کیا گیا۔\n"
+  },
+  "fa": {
+    "with_context": "کاربر قصد دارد موارد زیر را به زبان فارسی بیان کند: '{context}' (ارائه شده به {interface_language}). از این زمینه برای درک قصد کاربر و بهبود تشخیص خطا و توضیحات استفاده کنید.\n",
+    "no_context": "هیچ زمینه‌ای ارائه نشده است.\n"
+  },
+  "pt": {
+    "with_context": "O usuário pretende expressar o seguinte em português: '{context}' (fornecido em {interface_language}). Use este contexto para entender a intenção do usuário e melhorar a detecção de erros e explicações.\n",
+    "no_context": "Nenhum contexto fornecido.\n"
+  },
+  "nl": {
+    "with_context": "De gebruiker wil het volgende in het Nederlands uitdrukken: '{context}' (aangeleverd in {interface_language}). Gebruik deze context om de bedoeling van de gebruiker te begrijpen en de foutdetectie en uitleg te verbeteren.\n",
+    "no_context": "Geen context verstrekt.\n"
+  },
+  "sv": {
+    "with_context": "Användaren avser att uttrycka följande på svenska: '{context}' (tillhandahållet på {interface_language}). Använd denna kontext för att förstå användarens avsikt och förbättra feldetektering och förklaringar.\n",
+    "no_context": "Ingen kontext tillhandahållen.\n"
+  },
+  "no": {
+    "with_context": "Brukeren har til hensikt å uttrykke følgende på norsk: '{context}' (gitt på {interface_language}). Bruk denne konteksten til å forstå brukerens intensjon og forbedre feildeteksjon og forklaringer.\n",
+    "no_context": "Ingen kontekst gitt.\n"
+  },
+  "da": {
+    "with_context": "Brugeren har til hensigt at udtrykke følgende på dansk: '{context}' (angivet på {interface_language}). Brug denne kontekst til at forstå brugerens intention og forbedre fejldetektion og forklaringer.\n",
+    "no_context": "Ingen kontekst angivet.\n"
+  },
+  "sr": {
+    "with_context": "Корисник намерава да изрази следеће на српском: '{context}' (дато на {interface_language}). Користите овај контекст да разумете намеру корисника и побољшате откривање грешака и објашњења.\n",
+    "no_context": "Није дат контекст.\n"
+  },
+  "es_MX": {
+    "with_context": "El usuario pretende expresar lo siguiente en español mexicano: '{context}' (proporcionado en {interface_language}). Utilice este contexto para entender la intención del usuario y mejorar la detección de errores y las explicaciones.\n",
+    "no_context": "No se proporcionó contexto.\n"
+  },
+  "el": {
+    "with_context": "Ο χρήστης σκοπεύει να εκφράσει το εξής στα Ελληνικά: '{context}' (παρέχεται στα {interface_language}). Χρησιμοποιήστε αυτό το πλαίσιο για να κατανοήσετε την πρόθεση του χρήστη και να βελτιώσετε τον εντοπισμό σφαλμάτων και τις εξηγήσεις.\n",
+    "no_context": "Δεν παρέχεται πλαίσιο.\n"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "Русский": {
+  "ru": {
     "code": "ru",
     "common_errors": [
       "падежные окончания",
@@ -13,35 +13,35 @@
       "ударение"
     ]
   },
-  "Deutsch": {
+  "de": {
     "code": "de",
     "common_errors": [
-      "Artikel (артикли)",
-      "Wortstellung (порядок слов)",
-      "Kasus (падежи)",
-      "Modalverben (модальные глаголы)"
+      "Artikel",
+      "Wortstellung",
+      "Kasus",
+      "Modalverben"
     ],
     "pronunciation_focus": [
-      "Umlaute (умляуты)",
-      "ch-Laute (звуки ch)",
-      "Betonung in zusammengesetzten Wörtern (ударение в сложных словах)"
+      "Umlaute",
+      "ch-Laute",
+      "Betonung in zusammengesetzten Wörtern"
     ]
   },
-  "English": {
+  "en": {
     "code": "en",
     "common_errors": [
-      "Articles (артикли)",
-      "Tenses (времена)",
-      "Prepositions (предлоги)",
-      "Conditional sentences (условные предложения)"
+      "Articles",
+      "Tenses",
+      "Prepositions",
+      "Conditional sentences"
     ],
     "pronunciation_focus": [
-      "th sounds (звуки th)",
-      "Stress (ударение)",
-      "Intonation (интонация)"
+      "th sounds",
+      "Stress",
+      "Intonation"
     ]
   },
-  "Українська": {
+  "uk": {
     "code": "uk",
     "common_errors": [
       "чергування голосних",
@@ -55,60 +55,228 @@
       "дифтонги"
     ]
   },
-  "Italiano": {
+  "it": {
     "code": "it",
     "common_errors": [
-      "Articoli (артикли)",
-      "Concordanza dei tempi (согласование времен)",
-      "Preposizioni (предлоги)",
-      "Congiuntivo (субъюнктив)"
+      "Articoli",
+      "Concordanza dei tempi",
+      "Preposizioni",
+      "Congiuntivo"
     ],
     "pronunciation_focus": [
-      "Consonanti doppie (двойные согласные)",
-      "Accento (ударение)",
-      "Intonazione (интонация)"
+      "Consonanti doppie",
+      "Accento",
+      "Intonazione"
     ]
   },
-  "Français": {
+  "fr": {
     "code": "fr",
     "common_errors": [
-      "Articles (артикли)",
-      "Temps (времена)",
-      "Accord (согласование)",
-      "Pronoms (местоимения)"
+      "Articles",
+      "Temps",
+      "Accord",
+      "Pronoms"
     ],
     "pronunciation_focus": [
-      "Voyelles nasales (носовые гласные)",
-      "Liaison (связывание)",
-      "Accent tonique (ударение)"
+      "Voyelles nasales",
+      "Liaison",
+      "Accent tonique"
     ]
   },
-  "Español": {
+  "es": {
     "code": "es",
     "common_errors": [
-      "Ser/Estar (глаголы ser и estar)",
-      "Subjuntivo (субъюнктив)",
-      "Tiempos verbales (времена)",
-      "Preposiciones (предлоги)"
+      "Ser/Estar",
+      "Subjuntivo",
+      "Tiempos verbales",
+      "Preposiciones"
     ],
     "pronunciation_focus": [
       "Sonidos r/rr (звуки r/rr)",
-      "Pronunciación de la ñ (произношение ñ)",
-      "Entonación (интонация)"
+      "Pronunciación de la ñ",
+      "Entonación"
     ]
   },
-  "Polski": {
+  "pl": {
     "code": "pl",
     "common_errors": [
-      "Przypadki (падежи)",
-      "Aspekty czasownikowe (глагольные виды)",
-      "Przyimki (предлоги)",
-      "Liczebniki (числительные)"
+      "Przypadki",
+      "Aspekty czasownikowe",
+      "Przyimki",
+      "Liczebniki"
     ],
     "pronunciation_focus": [
-      "Samogłoski nosowe (носовые гласные)",
-      "Spółgłoski szumiące (шипящие звуки)",
-      "Akcent (ударение)"
+      "Samogłoski nosowe",
+      "Spółgłoski szumiące",
+      "Akcent"
+    ]
+  },
+  "ar": {
+    "code": "ar",
+    "common_errors": [
+      "حروف الجر",
+      "الأزمنة",
+      "الجنس (المذكر والمؤنث)",
+      "الإعراب"
+    ],
+    "pronunciation_focus": [
+      "الحركات (الفتحة، الضمة، الكسرة)",
+      "التنوين",
+      "النبرة"
+    ]
+  },
+  "da": {
+    "code": "da",
+    "common_errors": [
+      "Artikler",
+      "Tider",
+      "Præpositioner",
+      "Udsagnsordets form"
+    ],
+    "pronunciation_focus": [
+      "Stød",
+      "Udtale af vokaler",
+      "Intonation"
+    ]
+  },
+  "fa": {
+    "code": "fa",
+    "common_errors": [
+      "حروف اضافه",
+      "زمان‌های فعل",
+      "جمع بستن",
+      "نقش کلمات در جمله"
+    ],
+    "pronunciation_focus": [
+      "تلفظ حروف صدادار",
+      "تشدید",
+      "آهنگ جمله"
+    ]
+  },
+  "nl": {
+    "code": "nl",
+    "common_errors": [
+      "Lidwoorden",
+      "Werkwoordstijden",
+      "Voorzetsels",
+      "Woordvolgorde"
+    ],
+    "pronunciation_focus": [
+      "Uitspraak van de g",
+      "Klinkers",
+      "Intonatie"
+    ]
+  },
+  "no": {
+    "code": "no",
+    "common_errors": [
+      "Artikler",
+      "Verbformer",
+      "Preposisjoner",
+      "Setningsstruktur"
+    ],
+    "pronunciation_focus": [
+      "Tonem",
+      "Uttale av vokaler",
+      "Intonasjon"
+    ]
+  },
+  "pt": {
+    "code": "pt",
+    "common_errors": [
+      "Artigos",
+      "Tempos verbais",
+      "Preposições",
+      "Conjugação"
+    ],
+    "pronunciation_focus": [
+      "Vogais nasais",
+      "Sotaque",
+      "Entonação"
+    ]
+  },
+  "sv": {
+    "code": "sv",
+    "common_errors": [
+      "Artiklar",
+      "Verbtider",
+      "Prepositioner ",
+      "Ordföljd"
+    ],
+    "pronunciation_focus": [
+      "Svenska vokaler",
+      "Tonaccent",
+      "Intonation"
+    ]
+  },
+  "tr": {
+    "code": "tr",
+    "common_errors": [
+      "Ekler",
+      "Zamanlar",
+      "Edatlar",
+      "Çekim"
+    ],
+    "pronunciation_focus": [
+      "Ünlü uyumu",
+      "Vurgu",
+      "Tonlama"
+    ]
+  },
+  "ur": {
+    "code": "ur",
+    "common_errors": [
+      "حروف جار",
+      "افعال کے زمانے",
+      "جملے کی ساخت",
+      "اسم کی اقسام"
+    ],
+    "pronunciation_focus": [
+      "حرکات کی ادائیگی",
+      "تشدید",
+      "لہجہ"
+    ]
+  },
+  "sr": {
+    "code": "sr",
+    "common_errors": [
+      "падежи",
+      "глаголски видови",
+      "акценат",
+      "придеви"
+    ],
+    "pronunciation_focus": [
+      "меки сугласници",
+      "акценат",
+      "интонација"
+    ]
+  },
+  "es_MX": {
+    "code": "es_MX",
+    "common_errors": [
+      "ser/estar",
+      "subjuntivo",
+      "tiempos verbales",
+      "preposiciones"
+    ],
+    "pronunciation_focus": [
+      "sonidos r/rr",
+      "pronunciación de la ñ",
+      "entonación"
+    ]
+  },
+  "el": {
+    "code": "el",
+    "common_errors": [
+      "Articles",
+      "Noun cases",
+      "Gender agreement",
+      "Verb conjugation"
+    ],
+    "pronunciation_focus": [
+      "Stress placement",
+      "Vowel sounds",
+      "γ/χ consonants"
     ]
   }
 }

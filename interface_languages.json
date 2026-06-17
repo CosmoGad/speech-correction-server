@@ -54,6 +54,116 @@
       "level_suggestions": "Suggestions de niveau"
     }
   },
+  "ar": {
+    "name": "العربية",
+    "language_code": "ar",
+    "translations": {
+      "corrected_text": "النص المصحح",
+      "explanation": "تحليل الأخطاء",
+      "grammar_notes": "ملاحظات قواعدية",
+      "pronunciation_tips": "نصائح النطق",
+      "level_suggestions": "اقتراحات المستوى"
+    }
+  },
+  "da": {
+    "name": "Dansk",
+    "language_code": "da",
+    "translations": {
+      "corrected_text": "Korrigeret tekst",
+      "explanation": "Fejlanalyse",
+      "grammar_notes": "Grammatiknoter",
+      "pronunciation_tips": "Udtale tips",
+      "level_suggestions": "Niveau forslag"
+    }
+  },
+  "fa": {
+    "name": "فارسی",
+    "language_code": "fa",
+    "translations": {
+      "corrected_text": "متن تصحیح شده",
+      "explanation": "تحلیل خطاها",
+      "grammar_notes": "یادداشت‌های دستوری",
+      "pronunciation_tips": "نکات تلفظ",
+      "level_suggestions": "پیشنهادات سطح"
+    }
+  },
+  "ku": {
+    "name": "Kurdî",
+    "language_code": "ku",
+    "translations": {
+      "corrected_text": "Nivîsa rastkirî",
+      "explanation": "Analîza çewtiyan",
+      "grammar_notes": "Notên rêzimanî",
+      "pronunciation_tips": "Pêşniyarên bilêvkirinê",
+      "level_suggestions": "Pêşniyarên astê"
+    }
+  },
+  "nl": {
+    "name": "Nederlands",
+    "language_code": "nl",
+    "translations": {
+      "corrected_text": "Gecorrigeerde tekst",
+      "explanation": "Foutenanalyse",
+      "grammar_notes": "Grammatica notities",
+      "pronunciation_tips": "Uitspraaktips",
+      "level_suggestions": "Niveau suggesties"
+    }
+  },
+  "no": {
+    "name": "Norsk",
+    "language_code": "no",
+    "translations": {
+      "corrected_text": "Korrigert tekst",
+      "explanation": "Feilanalyse",
+      "grammar_notes": "Grammatikknotater",
+      "pronunciation_tips": "Uttalestips",
+      "level_suggestions": "Nivåforslag"
+    }
+  },
+  "pt": {
+    "name": "Português",
+    "language_code": "pt",
+    "translations": {
+      "corrected_text": "Texto corrigido",
+      "explanation": "Análise de erros",
+      "grammar_notes": "Notas gramaticais",
+      "pronunciation_tips": "Dicas de pronúncia",
+      "level_suggestions": "Sugestões de nível"
+    }
+  },
+  "sv": {
+    "name": "Svenska",
+    "language_code": "sv",
+    "translations": {
+      "corrected_text": "Korrigerad text",
+      "explanation": "Felanalys",
+      "grammar_notes": "Grammatikanteckningar",
+      "pronunciation_tips": "Uttalstips",
+      "level_suggestions": "Nivåförslag"
+    }
+  },
+  "tr": {
+    "name": "Türkçe",
+    "language_code": "tr",
+    "translations": {
+      "corrected_text": "Düzeltilmiş metin",
+      "explanation": "Hata analizi",
+      "grammar_notes": "Dil bilgisi notları",
+      "pronunciation_tips": "Telaffuz ipuçları",
+      "level_suggestions": "Seviye önerileri"
+    }
+  },
+  "ur": {
+    "name": "اردو",
+    "language_code": "ur",
+    "translations": {
+      "corrected_text": "درست متن",
+      "explanation": "غلطیوں کا تجزیہ",
+      "grammar_notes": "قواعدی نوٹس",
+      "pronunciation_tips": "تلفظ کے نکات",
+      "level_suggestions": "سطح کے مشورے"
+    }
+  },
   "es": {
     "name": "Español",
     "language_code": "es",
@@ -85,6 +195,39 @@
       "grammar_notes": "Note grammaticali",
       "pronunciation_tips": "Suggerimenti di pronuncia",
       "level_suggestions": "Suggerimenti di livello"
+    }
+  },
+  "sr": {
+    "name": "Српски",
+    "language_code": "sr",
+    "translations": {
+      "corrected_text": "Исправљен текст",
+      "explanation": "Анализа грешака",
+      "grammar_notes": "Граматичке напомене",
+      "pronunciation_tips": "Савети за изговор",
+      "level_suggestions": "Предлози за ниво"
+    }
+  },
+  "es_MX": {
+    "name": "Español Mexicano",
+    "language_code": "es_MX",
+    "translations": {
+      "corrected_text": "Texto corregido",
+      "explanation": "Análisis de errores",
+      "grammar_notes": "Notas gramaticales",
+      "pronunciation_tips": "Consejos de pronunciación",
+      "level_suggestions": "Sugerencias de nivel"
+    }
+  },
+  "el": {
+    "name": "Ελληνικά",
+    "language_code": "el",
+    "translations": {
+      "corrected_text": "Διορθωμένο κείμενο",
+      "explanation": "Ανάλυση σφαλμάτων",
+      "grammar_notes": "Γραμματικές σημειώσεις",
+      "pronunciation_tips": "Συμβουλές προφοράς",
+      "level_suggestions": "Προτάσεις επιπέδου"
     }
   }
 }
