@@ -2,6 +2,8 @@ import os
 import json
 import logging
 import asyncio
+import hashlib
+import sqlite3
 from datetime import datetime, timedelta
 from functools import lru_cache
 import threading
@@ -127,6 +129,64 @@ class RateLimiter:
             return False
 
 
+class ResponseCache:
+    """Content-addressed cache of analysis results in SQLite. Identical
+    requests (same text + language + level + style + interface + context) reuse
+    a stored result instead of calling the model again — saving tokens on the
+    repeated mistakes many users make. Keyed by content only (no user id), with
+    a TTL, so it never builds a per-user profile."""
+
+    def __init__(self, db_path: str = "response_cache.db", ttl_days: int = 30):
+        self.db_path = db_path
+        self.ttl = timedelta(days=ttl_days)
+        self._lock = threading.Lock()
+        with sqlite3.connect(self.db_path) as conn:
+            conn.execute(
+                "CREATE TABLE IF NOT EXISTS cache ("
+                "key TEXT PRIMARY KEY, response TEXT NOT NULL, created_at TEXT NOT NULL)"
+            )
+
+    @staticmethod
+    def make_key(text, language, level, style, interface_language, context) -> str:
+        raw = json.dumps(
+            [text, language, level, style, interface_language, context or ""],
+            ensure_ascii=False,
+        )
+        return hashlib.sha256(raw.encode("utf-8")).hexdigest()
+
+    def get(self, key: str) -> Optional[Dict]:
+        with self._lock, sqlite3.connect(self.db_path) as conn:
+            row = conn.execute(
+                "SELECT response, created_at FROM cache WHERE key = ?", (key,)
+            ).fetchone()
+            if not row:
+                return None
+            response, created_at = row
+            try:
+                fresh = datetime.now() - datetime.fromisoformat(created_at) <= self.ttl
+            except ValueError:
+                fresh = False
+            if not fresh:
+                conn.execute("DELETE FROM cache WHERE key = ?", (key,))
+                return None
+            try:
+                return json.loads(response)
+            except json.JSONDecodeError:
+                return None
+
+    def put(self, key: str, response: Dict) -> None:
+        try:
+            with self._lock, sqlite3.connect(self.db_path) as conn:
+                conn.execute(
+                    "INSERT OR REPLACE INTO cache (key, response, created_at) "
+                    "VALUES (?, ?, ?)",
+                    (key, json.dumps(response, ensure_ascii=False), datetime.now().isoformat()),
+                )
+        except sqlite3.Error as e:
+            # A cache write must never break a successful response.
+            logger.error(f"Cache write failed: {e}")
+
+
 def _get_client_ip(request: Request) -> str:
     # Fly.io sets Fly-Client-IP to the real client IP
     fly_ip = request.headers.get("Fly-Client-IP")
@@ -141,10 +201,14 @@ def _get_client_ip(request: Request) -> str:
 # Register/style instructions appended to the prompt. Language-agnostic: the
 # model honours these meta-instructions regardless of the target language, so
 # the feature works for every language without touching the per-language
-# prompt files. "formal" is empty on purpose — it preserves the original
-# behaviour for older clients that default to it.
+# prompt files.
 STYLE_INSTRUCTIONS = {
-    "formal": "",
+    "formal": (
+        "STYLE: Rewrite the text in a clean, standard formal register. Replace "
+        "slang, colloquialisms and informal interjections with their neutral or "
+        "literary equivalents while preserving the original meaning. The "
+        "corrected_text must read as correct, formal language."
+    ),
     "neutral": (
         "STYLE: Treat the text as everyday neutral speech. Fix clear grammatical "
         "errors and wrong word choices, but accept natural conversational phrasing "
@@ -169,8 +233,8 @@ class CorrectionRequest(BaseModel):
     interface_language: str
     recognition_confidence: float = Field(default=1.0, ge=0.0, le=1.0)
     context: Optional[str] = None
-    # Target register. Defaults to "formal" so older clients that don't send a
-    # style get exactly the previous behaviour.
+    # Target register. Defaults to "formal" (clean standard language) for
+    # clients that don't send a style.
     style: str = "formal"
 
     @field_validator("interface_language")
@@ -271,8 +335,7 @@ def generate_teacher_prompt(request: CorrectionRequest, retry: bool = False) -> 
         logger.error(f"Missing key in prompt formatting: {e}")
         raise HTTPException(status_code=500, detail=f"Error formatting prompt: missing key {e}")
 
-    # Append the register/style instruction (empty for "formal", so the
-    # default path is byte-for-byte the previous behaviour).
+    # Append the register/style instruction for the requested style.
     style_instruction = STYLE_INSTRUCTIONS.get(request.style, "")
     if style_instruction:
         prompt += f"\n\n{style_instruction}"
@@ -413,6 +476,7 @@ async def parse_correction_response(
 
 
 rate_limiter = RateLimiter(max_requests=20, time_frame=timedelta(minutes=1))
+response_cache = ResponseCache()
 
 
 @app.post("/process-text/")
@@ -427,6 +491,20 @@ async def process_text(
         raise HTTPException(status_code=429, detail="Too many requests")
 
     logger.info(f"Request received from {client_ip}, lang={correction_request.language}, level={correction_request.level}, style={correction_request.style}")
+
+    # Reuse a stored result for an identical request — saves a model call.
+    cache_key = ResponseCache.make_key(
+        correction_request.text,
+        correction_request.language,
+        correction_request.level,
+        correction_request.style,
+        correction_request.interface_language,
+        correction_request.context,
+    )
+    cached = response_cache.get(cache_key)
+    if cached is not None:
+        logger.info(f"Cache hit for {client_ip}")
+        return JSONResponse(content=cached, media_type="application/json; charset=utf-8")
 
     if not _deepseek_client:
         raise HTTPException(status_code=500, detail="DeepSeek API key not configured")
@@ -451,19 +529,21 @@ async def process_text(
             logger.error(f"Model returned unparseable JSON after retries: {last_parse_error}")
             raise HTTPException(status_code=502, detail="Language model returned an invalid response, please try again")
 
+        content = {
+            "corrected_text": sections["corrected_text"],
+            "error_analysis": sections["error_analysis"],
+            "error_statistics": sections["error_statistics"],
+            "explanation": sections["explanation"],
+            "grammar_notes": sections["grammar_notes"],
+            "pronunciation_tips": sections["pronunciation_tips"],
+            "alternatives": sections["alternatives"],
+            "level_appropriate_suggestions": sections["level_appropriate_suggestions"],
+            "original_text": correction_request.text,
+            "context": correction_request.context or "",
+        }
+        response_cache.put(cache_key, content)
         return JSONResponse(
-            content={
-                "corrected_text": sections["corrected_text"],
-                "error_analysis": sections["error_analysis"],
-                "error_statistics": sections["error_statistics"],
-                "explanation": sections["explanation"],
-                "grammar_notes": sections["grammar_notes"],
-                "pronunciation_tips": sections["pronunciation_tips"],
-                "alternatives": sections["alternatives"],
-                "level_appropriate_suggestions": sections["level_appropriate_suggestions"],
-                "original_text": correction_request.text,
-                "context": correction_request.context or "",
-            },
+            content=content,
             media_type="application/json; charset=utf-8",
         )
     except HTTPException:

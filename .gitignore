@@ -2,3 +2,6 @@
 __pycache__/
 *.pyc
 .DS_Store
+# Runtime databases (rate limiter, response cache with user texts) — never commit
+*.db
+*.log
