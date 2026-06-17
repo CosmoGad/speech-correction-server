@@ -1,59 +1,165 @@
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel, Field, validator
-from fastapi.responses import JSONResponse
-from fastapi.middleware.cors import CORSMiddleware
-from typing import Dict, Optional
-from openai import OpenAI
-from datetime import datetime
 import os
+import json
 import logging
 import asyncio
-from logging.handlers import RotatingFileHandler
-from dotenv import load_dotenv
-from fastapi.responses import JSONResponse
-from fastapi.middleware.cors import CORSMiddleware
-import json
+from datetime import datetime, timedelta
+from functools import lru_cache
+import threading
 
-# Load environment variables
+import regex as re
+from fastapi import FastAPI, HTTPException, Request, Depends, Security
+from fastapi.responses import JSONResponse
+from fastapi.security import APIKeyHeader
+from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel, Field, field_validator
+from typing import Optional, Dict, List
+from langdetect import detect, DetectorFactory
+
+from openai import AsyncOpenAI, APIError, RateLimitError
+from dotenv import load_dotenv
+from logging.handlers import RotatingFileHandler
+
+DetectorFactory.seed = 0
 load_dotenv()
 
-# Загрузка языковых конфигураций
+APP_VERSION = "2.2.0"
+
+# Output budget for the model. Long texts with many errors produce large JSON
+# payloads (Cyrillic explanations are token-expensive); 1500 used to truncate
+# them mid-document, which surfaced to clients as "Error processing response".
+DEEPSEEK_MAX_TOKENS = 4000
+DEEPSEEK_MODEL = "deepseek-v4-flash"
+
+# Precompile dangerous input patterns once at module load
+_DANGEROUS_PATTERNS = [re.compile(p, re.IGNORECASE) for p in [
+    r"<script\b[^>]*>", r"</script>", r"javascript:", r"eval\(", r"expression\(", r"on\w+\s*=",
+    r"\{\{.*?\}\}", r"\$\{.*?\}", r"\$\(.*\)", r"`.*?`",
+    r"\.\./", r"\.\.\\", r"%2e%2e", r"%252e",
+    r"[‮‎‏‪‫‬‭]",
+]]
+_VALID_TEXT_RE = re.compile(r"^[\p{L}\p{N}\s\.,!?()'\-]+$", re.UNICODE)
+
+# Initialize DeepSeek async client
+_deepseek_api_key = os.getenv("DEEPSEEK_API_KEY") or os.getenv("OPENAI_API_KEY")
+_deepseek_client: Optional[AsyncOpenAI] = None
+if _deepseek_api_key:
+    _deepseek_client = AsyncOpenAI(
+        api_key=_deepseek_api_key,
+        base_url="https://api.deepseek.com/v1",
+        timeout=30.0,
+    )
+
+# Client API key auth
+_api_key_header = APIKeyHeader(name="X-API-Key", auto_error=False)
+_server_api_key = os.getenv("API_KEY")
+
+
+async def verify_api_key(key: str = Security(_api_key_header)) -> None:
+    if not _server_api_key:
+        return  # API_KEY not set — open mode (dev/migration)
+    if key != _server_api_key:
+        raise HTTPException(status_code=401, detail="Invalid or missing API key")
+
+
+# Load static configurations at startup
 with open("language_configs.json", "r", encoding="utf-8") as f:
     LANGUAGE_CONFIGS = json.load(f)
 
-# Загрузка уровней
 with open("level_details.json", "r", encoding="utf-8") as f:
     LEVEL_DETAILS = json.load(f)
 
 with open("interface_languages.json", "r", encoding="utf-8") as f:
     INTERFACE_LANGUAGES = json.load(f)
 
+with open("context_instructions.json", "r", encoding="utf-8") as f:
+    CONTEXT_INSTRUCTIONS = json.load(f)
 
+# Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
-handler = RotatingFileHandler(
-    "app.log", maxBytes=10000000, backupCount=5, encoding="utf-8"
-)
+handler = RotatingFileHandler("app.log", maxBytes=10000000, backupCount=5, encoding="utf-8")
 formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 handler.setFormatter(formatter)
 logger.addHandler(handler)
 
+SERVER_URL = os.getenv("SERVER_URL", "https://speech-correction.fly.dev")
+_is_prod = os.getenv("ENVIRONMENT", "production").lower() == "production"
+
 app = FastAPI(
     title="Speech Correction API",
-    description="Advanced API for language learning and speech correction",
-    version="2.1.0",
-    docs_url="/docs",
-    redoc_url="/redoc",
+    description=f"Advanced API for language learning and speech correction. Base URL: {SERVER_URL}",
+    version=APP_VERSION,
+    docs_url=None if _is_prod else "/docs",
+    redoc_url=None if _is_prod else "/redoc",
 )
 
-# CORS configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "https://speech-correction.fly.dev",
+        "http://localhost:8080",
+        "http://10.0.2.2:8080",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+class RateLimiter:
+    def __init__(self, max_requests: int = 20, time_frame: timedelta = timedelta(minutes=1)):
+        self.requests: Dict = {}
+        self.max_requests = max_requests
+        self.time_frame = time_frame
+        self._lock = threading.Lock()
+
+    def is_allowed(self, client_id: str) -> bool:
+        with self._lock:
+            now = datetime.now()
+            self.requests = {k: v for k, v in self.requests.items() if now - v["first"] < self.time_frame}
+            if client_id not in self.requests:
+                self.requests[client_id] = {"count": 1, "first": now}
+                return True
+            record = self.requests[client_id]
+            if record["count"] < self.max_requests:
+                record["count"] += 1
+                return True
+            return False
+
+
+def _get_client_ip(request: Request) -> str:
+    # Fly.io sets Fly-Client-IP to the real client IP
+    fly_ip = request.headers.get("Fly-Client-IP")
+    if fly_ip:
+        return fly_ip
+    forwarded = request.headers.get("X-Forwarded-For", "")
+    if forwarded:
+        return forwarded.split(",")[0].strip()
+    return request.client.host
+
+
+# Register/style instructions appended to the prompt. Language-agnostic: the
+# model honours these meta-instructions regardless of the target language, so
+# the feature works for every language without touching the per-language
+# prompt files. "formal" is empty on purpose — it preserves the original
+# behaviour for older clients that default to it.
+STYLE_INSTRUCTIONS = {
+    "formal": "",
+    "neutral": (
+        "STYLE: Treat the text as everyday neutral speech. Fix clear grammatical "
+        "errors and wrong word choices, but accept natural conversational phrasing "
+        "— do not rewrite casual-but-correct sentences into bookish or overly "
+        "formal language. Keep corrected_text in the same neutral register."
+    ),
+    "casual": (
+        "STYLE: The user is intentionally speaking in a casual/informal register "
+        "(slang, colloquialisms, contractions). PRESERVE that register: do NOT "
+        "treat slang or colloquial expressions as errors and do NOT convert them "
+        "to formal language. Only correct genuine mistakes that break grammar or "
+        "meaning, and keep corrected_text in the same informal register the user "
+        "used."
+    ),
+}
 
 
 class CorrectionRequest(BaseModel):
@@ -62,291 +168,347 @@ class CorrectionRequest(BaseModel):
     level: str
     interface_language: str
     recognition_confidence: float = Field(default=1.0, ge=0.0, le=1.0)
+    context: Optional[str] = None
+    # Target register. Defaults to "formal" so older clients that don't send a
+    # style get exactly the previous behaviour.
+    style: str = "formal"
 
-    @validator("interface_language")
+    @field_validator("interface_language")
     def validate_interface_language(cls, v):
         if v not in INTERFACE_LANGUAGES:
             raise ValueError(f"Unsupported interface language: {v}")
         return v
 
-    @validator("language")
+    @field_validator("language")
     def validate_language(cls, v):
         if v not in LANGUAGE_CONFIGS:
-            raise ValueError(
-                f"Unsupported language: {v}. Supported languages: {list(LANGUAGE_CONFIGS.keys())}"
-            )
+            raise ValueError(f"Unsupported language: {v}")
         return v
 
-    @validator("level")
+    @field_validator("level")
     def validate_level(cls, v):
         if v not in LEVEL_DETAILS:
             raise ValueError(f"Unsupported level: {v}")
         return v
 
-    @validator("text")
+    @field_validator("style")
+    def validate_style(cls, v):
+        if v not in STYLE_INSTRUCTIONS:
+            raise ValueError(f"Unsupported style: {v}")
+        return v
+
+    @field_validator("text")
     def validate_text(cls, v):
-        if not v.strip():
+        v = v.strip()
+        if not v:
             raise ValueError("Text cannot be empty")
-        return v.strip()
+        if len(v) > 1000:
+            raise ValueError(f"Text is too long ({len(v)} characters). Maximum allowed is 1000.")
+        for pattern in _DANGEROUS_PATTERNS:
+            if pattern.search(v):
+                raise ValueError("Potentially dangerous constructs detected")
+        if not _VALID_TEXT_RE.match(v):
+            raise ValueError("Text contains invalid characters")
+        return v
+
+    @field_validator("context")
+    def validate_context(cls, v):
+        if v is None:
+            return v
+        v = v.strip()
+        if len(v) > 2000:
+            raise ValueError(f"Context is too long ({len(v)} characters). Maximum allowed is 2000.")
+        for pattern in _DANGEROUS_PATTERNS:
+            if pattern.search(v):
+                raise ValueError("Potentially dangerous constructs detected in context")
+        return v
 
 
-class CorrectionResponse(BaseModel):
-    corrected_text: str
-    explanation: str
-    grammar_notes: str
-    pronunciation_tips: str
-    level_appropriate_suggestions: str
-    original_text: str
+@lru_cache(maxsize=32)
+def load_prompt_template(language: str) -> Dict:
+    prompt_file = f"prompts/prompt_{language}.json"
+    try:
+        with open(prompt_file, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        logger.error(f"Prompt file for {language} not found")
+        raise HTTPException(status_code=500, detail=f"Prompt file for {language} not found")
+    except json.JSONDecodeError:
+        logger.error(f"Invalid prompt file for {language}")
+        raise HTTPException(status_code=500, detail=f"Invalid prompt file for {language}")
 
-    class Config:
-        json_encoders = {str: lambda v: v}
 
+def generate_teacher_prompt(request: CorrectionRequest, retry: bool = False) -> str:
+    prompt_data = load_prompt_template(request.language)
+    prompt_template = prompt_data["prompt"]
 
-def generate_teacher_prompt(request: CorrectionRequest) -> str:
-    """Generates a structured prompt for GPT based on the request parameters with strict language control"""
+    interface_lang_config = INTERFACE_LANGUAGES.get(request.interface_language, INTERFACE_LANGUAGES["en"])
     level_info = LEVEL_DETAILS[request.level]
     lang_config = LANGUAGE_CONFIGS[request.language]
-    interface_lang_config = INTERFACE_LANGUAGES[request.interface_language]
 
-    # Строгие инструкции по языку для GPT
-    language_instruction = f"""You are an experienced {request.language} language teacher specializing in {request.level} level.
+    if request.context:
+        context_instruction_template = CONTEXT_INSTRUCTIONS[request.language]["with_context"]
+        context_instruction = context_instruction_template.format(
+            context=request.context,
+            interface_language=interface_lang_config["name"]
+        )
+    else:
+        context_instruction = CONTEXT_INSTRUCTIONS[request.language]["no_context"]
 
-CRITICAL LANGUAGE REQUIREMENTS:
-1. You MUST provide ALL explanations and analysis in {interface_lang_config['name']} (ISO: {interface_lang_config['language_code']})
-2. DO NOT use English or any other language for explanations
-3. Only the original mistakes and corrected examples should be in {request.language}
-4. Even if you see "Deutsch" or any other language name, stick to {interface_lang_config['name']} for explanations
+    try:
+        prompt = prompt_template.format(
+            level=request.level,
+            text=request.text,
+            interface_language=interface_lang_config["name"],
+            interface_language_code=interface_lang_config["language_code"],
+            level_description=level_info["description"].get(interface_lang_config["language_code"], level_info["description"]["English"]),
+            common_errors=", ".join(lang_config["common_errors"]),
+            pronunciation_focus=", ".join(lang_config["pronunciation_focus"]),
+            grammar_focus=", ".join(level_info["grammar_focus"]),
+            context_instruction=context_instruction
+        )
+    except KeyError as e:
+        logger.error(f"Missing key in prompt formatting: {e}")
+        raise HTTPException(status_code=500, detail=f"Error formatting prompt: missing key {e}")
 
-This is a hard requirement - never switch to English or any other language for explanations."""
+    # Append the register/style instruction (empty for "formal", so the
+    # default path is byte-for-byte the previous behaviour).
+    style_instruction = STYLE_INSTRUCTIONS.get(request.style, "")
+    if style_instruction:
+        prompt += f"\n\n{style_instruction}"
 
-    prompt = f"""{language_instruction}
-
-Please analyze the provided text according to these rules:
-
-VERY IMPORTANT FORMATTING RULES:
-1. The CORRECTED_TEXT section should ONLY contain the corrected text in {request.language} with no translations or explanations.
-2. For all explanation sections, use STRICTLY {interface_lang_config['name']} as the main language.
-3. When referring to specific words or phrases from the original or corrected text in the explanations, ALWAYS keep them in {request.language} and put them in quotes.
-4. Do NOT translate the original text's words/phrases when discussing them - keep them in {request.language}.
-5. In the ERROR_STATISTICS section, provide a brief count of errors by category in {interface_lang_config['name']}.
-6. In the ALTERNATIVES section, suggest other ways to express the same meaning at the current level, with explanations in {interface_lang_config['name']}.
-
-Current context:
-- Level: {request.level}
-- Level Description: {level_info['description'].get(interface_lang_config['language_code'], level_info['description']['English'])}
-- Common Errors: {', '.join(lang_config['common_errors'])}
-- Pronunciation Focus: {', '.join(lang_config['pronunciation_focus'])}
-- Grammar Focus: {', '.join(level_info['grammar_focus'])}
-
-Use this EXACT format in your response:
-
-CORRECTED_TEXT:
-[Only the corrected version in {request.language}]
-
-ERROR_STATISTICS:
-[Statistics in {interface_lang_config['name']}]
-- Grammar: [number] errors
-- Vocabulary: [number] errors
-- Pronunciation: [number] errors
-- Other: [number] errors
-
-EXPLANATION:
-[Detailed error analysis in {interface_lang_config['name']}, keeping original {request.language} phrases in quotes]
-
-GRAMMAR_NOTES:
-[Grammar explanations in {interface_lang_config['name']}, keeping {request.language} examples in quotes]
-
-PRONUNCIATION_TIPS:
-[Pronunciation advice in {interface_lang_config['name']}, keeping {request.language} examples in quotes]
-
-ALTERNATIVES:
-[2-3 alternative ways to express the same meaning in {request.language}, with brief explanations in {interface_lang_config['name']}]
-
-LEVEL_APPROPRIATE_SUGGESTIONS:
-[Level-specific suggestions in {interface_lang_config['name']}, keeping {request.language} examples in quotes]"""
+    if retry:
+        prompt += (
+            f"\n\nWARNING: Previous response contained explanations in the wrong language. "
+            f"ALL explanations, grammar_notes, pronunciation_tips, level_appropriate_suggestions, "
+            f"and error_analysis explanations MUST be in {interface_lang_config['name']} "
+            f"(ISO: {interface_lang_config['language_code']})."
+        )
 
     return prompt
 
 
-def parse_correction_response(response: str) -> Dict[str, str]:
-    """Parses GPT response into structured sections"""
-    sections = {
-        "corrected_text": "",
-        "explanation": "",
-        "grammar_notes": "",
-        "pronunciation_tips": "",
-        "level_appropriate_suggestions": "",
-    }
+_CODE_FENCE_RE = re.compile(r"^\s*```(?:json)?\s*|\s*```\s*$")
 
-    current_section = None
-    content_lines = []
 
-    for line in response.split("\n"):
-        line = line.strip()
-        if not line:
+def _extract_json_object(response: str) -> Dict:
+    """Parse the model output as a JSON object, tolerating markdown fences
+    and surrounding prose. Raises ValueError if no valid object is found."""
+    candidates = [response, _CODE_FENCE_RE.sub("", response)]
+    start, end = response.find("{"), response.rfind("}")
+    if start != -1 and end > start:
+        candidates.append(response[start:end + 1])
+    for candidate in candidates:
+        try:
+            result = json.loads(candidate)
+            if isinstance(result, dict):
+                return result
+        except json.JSONDecodeError:
             continue
+    raise ValueError("Model response is not a valid JSON object")
 
-        if line.startswith("CORRECTED_TEXT:"):
-            current_section = "corrected_text"
-            content_lines = []
-        elif line.startswith("EXPLANATION:"):
-            if current_section:
-                sections[current_section] = "\n".join(content_lines).strip()
-            current_section = "explanation"
-            content_lines = []
-        elif line.startswith("GRAMMAR_NOTES:"):
-            if current_section:
-                sections[current_section] = "\n".join(content_lines).strip()
-            current_section = "grammar_notes"
-            content_lines = []
-        elif line.startswith("PRONUNCIATION_TIPS:"):
-            if current_section:
-                sections[current_section] = "\n".join(content_lines).strip()
-            current_section = "pronunciation_tips"
-            content_lines = []
-        elif line.startswith("LEVEL_APPROPRIATE_SUGGESTIONS:"):
-            if current_section:
-                sections[current_section] = "\n".join(content_lines).strip()
-            current_section = "level_appropriate_suggestions"
-            content_lines = []
-        else:
-            content_lines.append(line)
 
-    if current_section and content_lines:
-        sections[current_section] = "\n".join(content_lines).strip()
+async def _call_deepseek(client: AsyncOpenAI, prompt: str, user_text: str) -> str:
+    response = await client.chat.completions.create(
+        model=DEEPSEEK_MODEL,
+        messages=[
+            {"role": "system", "content": prompt},
+            {"role": "user", "content": user_text},
+        ],
+        temperature=0.7,
+        max_tokens=DEEPSEEK_MAX_TOKENS,
+        response_format={"type": "json_object"},
+    )
+    choice = response.choices[0]
+    if choice.finish_reason == "length":
+        logger.warning("DeepSeek response truncated at max_tokens=%s", DEEPSEEK_MAX_TOKENS)
+    return choice.message.content
 
-    return sections
+
+async def parse_correction_response(
+    response: str,
+    interface_language_code: str,
+    request: CorrectionRequest,
+    client: AsyncOpenAI,
+    retry_count: int = 0,
+) -> Dict:
+    result = _extract_json_object(response)
+
+    required_fields = [
+        "corrected_text", "error_analysis", "error_statistics", "explanation",
+        "grammar_notes", "pronunciation_tips", "alternatives", "level_appropriate_suggestions",
+    ]
+    for field in required_fields:
+        if field not in result:
+            result[field] = [] if field == "error_analysis" else ""
+
+    if not isinstance(result["error_analysis"], list):
+        result["error_analysis"] = []
+
+    valid_error_analysis = []
+    required_error_fields = ["type", "original", "corrected", "explanation"]
+    for error in result["error_analysis"]:
+        if all(field in error for field in required_error_fields):
+            valid_error_analysis.append(error)
+    result["error_analysis"] = valid_error_analysis
+
+    explanation_fields = ["explanation", "grammar_notes", "pronunciation_tips", "level_appropriate_suggestions"]
+    language_mismatch = False
+    for field in explanation_fields:
+        text = result.get(field, "")
+        if text:
+            try:
+                if detect(text) != interface_language_code:
+                    language_mismatch = True
+                    result[field] = f"[Language Error: Expected {interface_language_code}] {text}"
+            except Exception as e:
+                logger.error(f"Language detection failed for {field}: {e}")
+
+    for error in result["error_analysis"]:
+        explanation = error.get("explanation", "")
+        if explanation:
+            try:
+                if detect(explanation) != interface_language_code:
+                    language_mismatch = True
+                    error["explanation"] = f"[Language Error: Expected {interface_language_code}] {explanation}"
+            except Exception as e:
+                logger.error(f"Language detection failed for error_analysis explanation: {e}")
+
+    if language_mismatch and retry_count < 1:
+        logger.info(f"Retrying request due to language mismatch (attempt {retry_count + 1}/1)")
+        retry_prompt = generate_teacher_prompt(request, retry=True)
+        retry_text = await _call_deepseek(client, retry_prompt, request.text)
+        return await parse_correction_response(
+            retry_text,
+            interface_language_code,
+            request,
+            client,
+            retry_count=retry_count + 1,
+        )
+    elif language_mismatch:
+        logger.warning("Language mismatch persists after retry, returning response with warnings")
+
+    if isinstance(result["error_statistics"], dict):
+        s = result["error_statistics"]
+        result["error_statistics"] = (
+            f"Grammar: {s.get('grammar', 0)}, Vocabulary: {s.get('vocabulary', 0)}, "
+            f"Pronunciation: {s.get('pronunciation', 0)}, Other: {s.get('other', 0)}"
+        )
+
+    grammar_count = sum(1 for e in result["error_analysis"] if e.get("type") == "grammar")
+    vocab_count = sum(1 for e in result["error_analysis"] if e.get("type") == "vocabulary")
+    pron_count = sum(1 for e in result["error_analysis"] if e.get("type") == "pronunciation")
+    other_count = sum(1 for e in result["error_analysis"] if e.get("type") == "other")
+    result["error_statistics"] = f"Grammar: {grammar_count}, Vocabulary: {vocab_count}, Pronunciation: {pron_count}, Other: {other_count}"
+
+    if isinstance(result["alternatives"], list):
+        result["alternatives"] = "\n".join(
+            f"{alt.get('sentence', '')}: {alt.get('explanation', '')}"
+            for alt in result["alternatives"]
+            if isinstance(alt, dict) and "sentence" in alt and "explanation" in alt
+        )
+
+    logger.info(f"Parsed response: corrected_text_length={len(result.get('corrected_text', ''))}, error_count={len(result.get('error_analysis', []))}")
+    return result
+
+
+rate_limiter = RateLimiter(max_requests=20, time_frame=timedelta(minutes=1))
 
 
 @app.post("/process-text/")
-async def process_text(request: CorrectionRequest) -> JSONResponse:
-    """Processes the text correction request"""
-    start_time = datetime.now()
-    logger.info(
-        f"Starting text processing. Language: {request.language}, Level: {request.level}"
-    )
+async def process_text(
+    request: Request,
+    correction_request: CorrectionRequest,
+    _: None = Depends(verify_api_key),
+):
+    client_ip = _get_client_ip(request)
+
+    if not rate_limiter.is_allowed(client_ip):
+        raise HTTPException(status_code=429, detail="Too many requests")
+
+    logger.info(f"Request received from {client_ip}, lang={correction_request.language}, level={correction_request.level}, style={correction_request.style}")
+
+    if not _deepseek_client:
+        raise HTTPException(status_code=500, detail="DeepSeek API key not configured")
 
     try:
-        api_key = os.getenv("OPENAI_API_KEY")
-        if not api_key:
-            raise HTTPException(status_code=500, detail="API key not configured")
+        prompt = generate_teacher_prompt(correction_request)
+        interface_lang_config = INTERFACE_LANGUAGES.get(correction_request.interface_language, INTERFACE_LANGUAGES["en"])
 
-        client = OpenAI(api_key=api_key)
-
-        # Generate the prompt
-        prompt = generate_teacher_prompt(request)
-
-        try:
-            response = await asyncio.to_thread(
-                lambda: client.chat.completions.create(
-                    model="gpt-3.5-turbo",
-                    messages=[
-                        {"role": "system", "content": prompt},
-                        {"role": "user", "content": request.text},
-                    ],
-                    temperature=0.7,
-                    max_tokens=1500,
+        sections = None
+        last_parse_error: Optional[ValueError] = None
+        for attempt in range(2):
+            response_text = await _call_deepseek(_deepseek_client, prompt, correction_request.text)
+            try:
+                sections = await parse_correction_response(
+                    response_text, interface_lang_config["language_code"], correction_request, _deepseek_client
                 )
-            )
+                break
+            except ValueError as e:
+                last_parse_error = e
+                logger.error(f"Attempt {attempt + 1}/2: invalid JSON from model: {e}")
+        if sections is None:
+            logger.error(f"Model returned unparseable JSON after retries: {last_parse_error}")
+            raise HTTPException(status_code=502, detail="Language model returned an invalid response, please try again")
 
-            response_text = response.choices[0].message.content
-            sections = parse_correction_response(response_text)
-
-            response_data = {
+        return JSONResponse(
+            content={
                 "corrected_text": sections["corrected_text"],
+                "error_analysis": sections["error_analysis"],
+                "error_statistics": sections["error_statistics"],
                 "explanation": sections["explanation"],
                 "grammar_notes": sections["grammar_notes"],
                 "pronunciation_tips": sections["pronunciation_tips"],
-                "level_appropriate_suggestions": sections[
-                    "level_appropriate_suggestions"
-                ],
-                "original_text": request.text,
-            }
-
-            processing_time = (datetime.now() - start_time).total_seconds()
-            logger.info(f"Processing completed in {processing_time:.2f} seconds")
-
-            return JSONResponse(
-                content=response_data, media_type="application/json; charset=utf-8"
-            )
-
-        except Exception as e:
-            logger.error(f"OpenAI API error: {str(e)}")
-            raise HTTPException(status_code=502, detail=f"OpenAI API error: {str(e)}")
-
+                "alternatives": sections["alternatives"],
+                "level_appropriate_suggestions": sections["level_appropriate_suggestions"],
+                "original_text": correction_request.text,
+                "context": correction_request.context or "",
+            },
+            media_type="application/json; charset=utf-8",
+        )
     except HTTPException:
         raise
     except Exception as e:
-        logger.error(f"Unexpected error: {str(e)}")
-        raise HTTPException(status_code=500, detail=str(e))
+        logger.error(f"Processing error for {client_ip}: {type(e).__name__}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Internal server error")
 
 
 @app.get("/health")
 async def health_check():
     try:
-        # Проверяем наличие API ключа
-        api_key = os.getenv("OPENAI_API_KEY")
-        if not api_key:
+        if not _deepseek_client:
             return JSONResponse(
                 status_code=503,
-                content={
-                    "status": "unhealthy",
-                    "reason": "OpenAI API key not configured",
-                    "timestamp": datetime.now().isoformat(),
-                },
+                content={"status": "unhealthy", "reason": "DeepSeek API key not configured", "timestamp": datetime.now().isoformat()},
             )
-
-        # Проверяем наличие конфигурационных файлов
-        required_files = [
-            "language_configs.json",
-            "level_details.json",
-            "interface_languages.json",
-        ]
-        for file in required_files:
-            if not os.path.exists(file):
+        required_files = ["language_configs.json", "level_details.json", "interface_languages.json", "context_instructions.json"]
+        for f in required_files:
+            if not os.path.exists(f):
                 return JSONResponse(
                     status_code=503,
-                    content={
-                        "status": "unhealthy",
-                        "reason": f"Configuration file {file} not found",
-                        "timestamp": datetime.now().isoformat(),
-                    },
+                    content={"status": "unhealthy", "reason": f"Configuration file {f} not found", "timestamp": datetime.now().isoformat()},
                 )
-
-        return JSONResponse(
-            content={
-                "status": "healthy",
-                "timestamp": datetime.now().isoformat(),
-                "version": "2.1.0",
-            }
-        )
-    except Exception as e:
-        return JSONResponse(
-            status_code=503,
-            content={
-                "status": "unhealthy",
-                "reason": str(e),
-                "timestamp": datetime.now().isoformat(),
-            },
-        )
+        return JSONResponse(content={"status": "healthy", "timestamp": datetime.now().isoformat(), "version": APP_VERSION})
+    except Exception:
+        logger.error("Health check error", exc_info=True)
+        return JSONResponse(status_code=503, content={"status": "unhealthy", "timestamp": datetime.now().isoformat()})
 
 
 @app.get("/")
 async def root():
-    """Root endpoint"""
-    return JSONResponse(
-        content={
-            "message": "Speech Correction API is running",
-            "version": "2.1.0",
-            "documentation": "/docs",
-        }
-    )
+    return JSONResponse(content={"message": "Speech Correction API is running", "version": APP_VERSION})
+
+
+@app.middleware("http")
+async def log_requests(request: Request, call_next):
+    start_time = datetime.now()
+    response = await call_next(request)
+    process_time = (datetime.now() - start_time).total_seconds()
+    logger.info(f"{request.method} {request.url.path} - {response.status_code}, Process time: {process_time:.4f}s")
+    return response
 
 
 if __name__ == "__main__":
     import uvicorn
-
-    logger.info("Starting server...")
-    port = int(os.getenv("PORT", 8080))
-    logger.info(f"Server will run on port {port}")
-    uvicorn.run(app, host="0.0.0.0", port=port, log_level="debug")
+    port = int(os.getenv("PORT", 8081))
+    uvicorn.run(app, host="0.0.0.0", port=port)
