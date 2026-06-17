@@ -320,5 +320,117 @@
       "Stress on first syllable",
       "gy/ty sounds"
     ]
+  },
+  "bg": {
+    "code": "bg",
+    "common_errors": [
+      "Definite article",
+      "Verb aspect",
+      "Clitic placement",
+      "Prepositions"
+    ],
+    "pronunciation_focus": [
+      "Stress",
+      "Vowel reduction",
+      "Palatalization"
+    ]
+  },
+  "hr": {
+    "code": "hr",
+    "common_errors": [
+      "Cases",
+      "Verb aspect",
+      "Word order",
+      "Diacritics"
+    ],
+    "pronunciation_focus": [
+      "č/ć distinction",
+      "Vowel length",
+      "Pitch accent"
+    ]
+  },
+  "sk": {
+    "code": "sk",
+    "common_errors": [
+      "Cases",
+      "Verb aspect",
+      "Word order",
+      "Diacritics"
+    ],
+    "pronunciation_focus": [
+      "Vowel length",
+      "ä/ô sounds",
+      "Soft consonants"
+    ]
+  },
+  "sl": {
+    "code": "sl",
+    "common_errors": [
+      "Cases",
+      "Dual number",
+      "Verb aspect",
+      "Word order"
+    ],
+    "pronunciation_focus": [
+      "Pitch accent",
+      "Vowel reduction",
+      "Vowel length"
+    ]
+  },
+  "fi": {
+    "code": "fi",
+    "common_errors": [
+      "Cases",
+      "Consonant gradation",
+      "Vowel harmony",
+      "Postpositions"
+    ],
+    "pronunciation_focus": [
+      "Vowel length",
+      "Double consonants",
+      "Front/back vowels"
+    ]
+  },
+  "lt": {
+    "code": "lt",
+    "common_errors": [
+      "Cases",
+      "Verb conjugation",
+      "Accentuation",
+      "Participles"
+    ],
+    "pronunciation_focus": [
+      "Pitch accent",
+      "Long/short vowels",
+      "Nasal vowels"
+    ]
+  },
+  "lv": {
+    "code": "lv",
+    "common_errors": [
+      "Cases",
+      "Verb conjugation",
+      "Definite/indefinite adjectives",
+      "Word order"
+    ],
+    "pronunciation_focus": [
+      "Long vowels",
+      "Broken tone",
+      "Palatalization"
+    ]
+  },
+  "et": {
+    "code": "et",
+    "common_errors": [
+      "Cases",
+      "Consonant gradation",
+      "Vowel harmony",
+      "Postpositions"
+    ],
+    "pronunciation_focus": [
+      "Three vowel lengths",
+      "Palatalization",
+      "Õ sound"
+    ]
   }
 }

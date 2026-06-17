@@ -262,5 +262,93 @@
       "pronunciation_tips": "Kiejtési tippek",
       "level_suggestions": "Szintjavaslatok"
     }
+  },
+  "bg": {
+    "name": "Български",
+    "language_code": "bg",
+    "translations": {
+      "corrected_text": "Коригиран текст",
+      "explanation": "Анализ на грешките",
+      "grammar_notes": "Граматически бележки",
+      "pronunciation_tips": "Съвети за произношение",
+      "level_suggestions": "Предложения според нивото"
+    }
+  },
+  "hr": {
+    "name": "Hrvatski",
+    "language_code": "hr",
+    "translations": {
+      "corrected_text": "Ispravljeni tekst",
+      "explanation": "Analiza pogrešaka",
+      "grammar_notes": "Gramatičke bilješke",
+      "pronunciation_tips": "Savjeti za izgovor",
+      "level_suggestions": "Prijedlozi prema razini"
+    }
+  },
+  "sk": {
+    "name": "Slovenčina",
+    "language_code": "sk",
+    "translations": {
+      "corrected_text": "Opravený text",
+      "explanation": "Analýza chýb",
+      "grammar_notes": "Gramatické poznámky",
+      "pronunciation_tips": "Tipy na výslovnosť",
+      "level_suggestions": "Návrhy podľa úrovne"
+    }
+  },
+  "sl": {
+    "name": "Slovenščina",
+    "language_code": "sl",
+    "translations": {
+      "corrected_text": "Popravljeno besedilo",
+      "explanation": "Analiza napak",
+      "grammar_notes": "Slovnične opombe",
+      "pronunciation_tips": "Nasveti za izgovorjavo",
+      "level_suggestions": "Predlogi glede na raven"
+    }
+  },
+  "fi": {
+    "name": "Suomi",
+    "language_code": "fi",
+    "translations": {
+      "corrected_text": "Korjattu teksti",
+      "explanation": "Virheanalyysi",
+      "grammar_notes": "Kielioppimuistiinpanot",
+      "pronunciation_tips": "Ääntämisvinkit",
+      "level_suggestions": "Tasoehdotukset"
+    }
+  },
+  "lt": {
+    "name": "Lietuvių",
+    "language_code": "lt",
+    "translations": {
+      "corrected_text": "Pataisytas tekstas",
+      "explanation": "Klaidų analizė",
+      "grammar_notes": "Gramatikos pastabos",
+      "pronunciation_tips": "Tarimo patarimai",
+      "level_suggestions": "Pasiūlymai pagal lygį"
+    }
+  },
+  "lv": {
+    "name": "Latviešu",
+    "language_code": "lv",
+    "translations": {
+      "corrected_text": "Labotais teksts",
+      "explanation": "Kļūdu analīze",
+      "grammar_notes": "Gramatikas piezīmes",
+      "pronunciation_tips": "Izrunas padomi",
+      "level_suggestions": "Ieteikumi pēc līmeņa"
+    }
+  },
+  "et": {
+    "name": "Eesti",
+    "language_code": "et",
+    "translations": {
+      "corrected_text": "Parandatud tekst",
+      "explanation": "Vigade analüüs",
+      "grammar_notes": "Grammatikamärkused",
+      "pronunciation_tips": "Hääldusnõuanded",
+      "level_suggestions": "Taseme soovitused"
+    }
   }
 }

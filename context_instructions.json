@@ -90,5 +90,37 @@
   "hu": {
     "with_context": "A felhasználó a következőt szeretné kifejezni magyarul: '{context}' ({interface_language} nyelven megadva). Használja ezt a kontextust a felhasználó szándékának megértéséhez és a hibafelismerés és magyarázatok javításához.\n",
     "no_context": "Nincs megadott kontextus.\n"
+  },
+  "bg": {
+    "with_context": "Потребителят възнамерява да изрази следното на български: '{context}' (предоставено на {interface_language}). Използвайте този контекст, за да разберете намерението и да подобрите откриването на грешки и обясненията.\n",
+    "no_context": "Не е предоставен контекст.\n"
+  },
+  "hr": {
+    "with_context": "Korisnik želi izraziti sljedeće na hrvatskom: '{context}' (na jeziku {interface_language}). Koristite ovaj kontekst za razumijevanje namjere i poboljšanje otkrivanja pogrešaka i objašnjenja.\n",
+    "no_context": "Nije pružen kontekst.\n"
+  },
+  "sk": {
+    "with_context": "Používateľ chce vyjadriť nasledujúce v slovenčine: '{context}' (poskytnuté v {interface_language}). Použite tento kontext na pochopenie zámeru a zlepšenie detekcie chýb a vysvetlení.\n",
+    "no_context": "Nebol poskytnutý žiadny kontext.\n"
+  },
+  "sl": {
+    "with_context": "Uporabnik želi izraziti naslednje v slovenščini: '{context}' (v jeziku {interface_language}). Uporabite ta kontekst za razumevanje namena in izboljšanje odkrivanja napak in razlag.\n",
+    "no_context": "Kontekst ni bil podan.\n"
+  },
+  "fi": {
+    "with_context": "Käyttäjä haluaa ilmaista seuraavan suomeksi: '{context}' (annettu kielellä {interface_language}). Käytä tätä kontekstia ymmärtääksesi tarkoituksen ja parantaaksesi virheiden havaitsemista ja selityksiä.\n",
+    "no_context": "Kontekstia ei annettu.\n"
+  },
+  "lt": {
+    "with_context": "Vartotojas nori išreikšti tai lietuviškai: '{context}' (pateikta {interface_language} kalba). Naudokite šį kontekstą, kad suprastumėte ketinimą ir pagerintumėte klaidų aptikimą ir paaiškinimus.\n",
+    "no_context": "Kontekstas nepateiktas.\n"
+  },
+  "lv": {
+    "with_context": "Lietotājs vēlas izteikt šo latviski: '{context}' (sniegts {interface_language} valodā). Izmantojiet šo kontekstu, lai saprastu nodomu un uzlabotu kļūdu noteikšanu un skaidrojumus.\n",
+    "no_context": "Konteksts nav sniegts.\n"
+  },
+  "et": {
+    "with_context": "Kasutaja soovib väljendada järgmist eesti keeles: '{context}' (esitatud keeles {interface_language}). Kasutage seda konteksti, et mõista kavatsust ja parandada vigade tuvastamist ja selgitusi.\n",
+    "no_context": "Konteksti ei esitatud.\n"
   }
 }
