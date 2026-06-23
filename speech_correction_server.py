@@ -107,6 +107,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Grammar rule book endpoints (GET /rules, GET /rule) — served from static JSON
+# in rules/ (see rules/README.md). Same X-API-Key auth as the other routes.
+from rules_api import router as rules_router
+
+app.include_router(rules_router, dependencies=[Depends(verify_api_key)])
+
 
 class RateLimiter:
     def __init__(self, max_requests: int = 20, time_frame: timedelta = timedelta(minutes=1)):
