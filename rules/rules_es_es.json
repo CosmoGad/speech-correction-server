@@ -1,0 +1,898 @@
+{
+  "learning": "es",
+  "interface": "es",
+  "generated_at": "2026-06-23T12:48:48.059403+00:00",
+  "model": "deepseek-v4-flash",
+  "translated_from": "en",
+  "rules": [
+    {
+      "rule_id": "serestar",
+      "topic": "Ser/Estar",
+      "title": "Ser vs Estar: Cuándo usar cada uno",
+      "explanation": "En español, tanto 'ser' como 'estar' se traducen como 'to be', pero tienen usos distintos. Usa 'ser' para características permanentes o definitorias (identidad, origen, profesión, tiempo) y 'estar' para estados temporales (ubicación, emociones, condiciones). Un error común es usar 'ser' para ubicación o sentimientos temporales, o 'estar' para rasgos inherentes.",
+      "examples": [
+        {
+          "wrong": "Soy en la biblioteca.",
+          "right": "Estoy en la biblioteca.",
+          "note": "Usa 'estar' para ubicación, no 'ser'."
+        },
+        {
+          "wrong": "Estoy estudiante.",
+          "right": "Soy estudiante.",
+          "note": "Usa 'ser' para profesiones o identidades."
+        },
+        {
+          "wrong": "Él es cansado.",
+          "right": "Él está cansado.",
+          "note": "Usa 'estar' para estados físicos temporales como cansancio; 'ser cansado' significa que él es una persona pesada."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Completa el espacio en blanco: 'Yo ___ (ser/estar) feliz hoy.'",
+          "answer": "estoy"
+        },
+        {
+          "prompt": "Completa el espacio en blanco: 'Ellos ___ (ser/estar) de España.'",
+          "answer": "son"
+        },
+        {
+          "prompt": "Completa el espacio en blanco: 'La mesa ___ (ser/estar) en la cocina.'",
+          "answer": "está"
+        }
+      ]
+    },
+    {
+      "rule_id": "subjuntivo",
+      "topic": "Subjuntivo",
+      "title": "Uso correcto del subjuntivo después de desencadenantes comunes",
+      "explanation": "En español, el modo subjuntivo se usa después de ciertas expresiones que transmiten duda, emoción, necesidad o acciones futuras. Los desencadenantes comunes incluyen 'es importante que', 'espero que', 'es necesario que' y 'cuando' cuando se refiere a un evento futuro. Los principiantes a menudo usan erróneamente el indicativo (tiempo presente normal) en lugar del subjuntivo después de estos desencadenantes.",
+      "examples": [
+        {
+          "wrong": "Es importante que estudias mucho.",
+          "right": "Es importante que estudies mucho.",
+          "note": "Después de 'es importante que' (es importante que), usa el subjuntivo porque expresa necesidad u opinión."
+        },
+        {
+          "wrong": "Cuando termino mi trabajo, voy a casa.",
+          "right": "Cuando termine mi trabajo, voy a casa.",
+          "note": "Cuando 'cuando' se refiere a una acción futura (no a una habitual), usa el subjuntivo."
+        },
+        {
+          "wrong": "Ojalá llueve mañana.",
+          "right": "Ojalá llueva mañana.",
+          "note": "'Ojalá' siempre desencadena el subjuntivo porque expresa un deseo o esperanza."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Completa el espacio en blanco con la forma correcta del subjuntivo: Es necesario que (tú) _______ (hablar) con el profesor.",
+          "answer": "hables"
+        },
+        {
+          "prompt": "Completa el espacio en blanco con la forma correcta del subjuntivo: Espero que (ella) _______ (venir) a la fiesta.",
+          "answer": "venga"
+        },
+        {
+          "prompt": "Completa el espacio en blanco con la forma correcta del subjuntivo: Cuando yo _______ (llegar) a casa, te llamaré.",
+          "answer": "llegue"
+        }
+      ]
+    },
+    {
+      "rule_id": "tiempos-verbales",
+      "topic": "Tiempos verbales",
+      "title": "Pretérito vs. Imperfecto: Cuándo usar cada uno",
+      "explanation": "En español, el pretérito se usa para acciones que están completadas o ocurrieron en un momento específico del pasado, mientras que el imperfecto describe acciones continuas, habituales o de fondo. Muchos hablantes de inglés usan erróneamente el imperfecto para acciones completadas o viceversa. Recuerda: si la acción tiene un inicio y un final claros, usa pretérito; para descripciones o acciones repetidas, usa imperfecto.",
+      "examples": [
+        {
+          "wrong": "Ayer yo comía pizza.",
+          "right": "Ayer yo comí pizza.",
+          "note": "Usa pretérito para una acción completada específica en un momento definido."
+        },
+        {
+          "wrong": "Cuando era niño, yo fui feliz.",
+          "right": "Cuando era niño, yo era feliz.",
+          "note": "Usa imperfecto para descripciones de estados o sentimientos en el pasado."
+        },
+        {
+          "wrong": "Ellos jugaban fútbol ayer a las 3.",
+          "right": "Ellos jugaron fútbol ayer a las 3.",
+          "note": "Con un momento específico, usa pretérito para la acción completada."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Completa con el tiempo pasado correcto: 'Ayer yo _____ (hablar) con mi madre.'",
+          "answer": "hablé"
+        },
+        {
+          "prompt": "Elige el verbo correcto: 'Cuando era niño, yo _____ (vivir) en una casa grande.' (viví / vivía)",
+          "answer": "vivía"
+        },
+        {
+          "prompt": "Completa: 'Ellos _____ (visitar) el museo el lunes pasado.'",
+          "answer": "visitaron"
+        }
+      ]
+    },
+    {
+      "rule_id": "preposiciones",
+      "topic": "Preposiciones",
+      "title": "Por vs. Para: Un error común de preposición",
+      "explanation": "Tanto 'por' como 'para' pueden significar 'for' en inglés, pero tienen usos distintos. Usa 'por' para razones, duraciones e intercambios; usa 'para' para propósitos, destinos y destinatarios. Un error frecuente es mezclarlos en expresiones de gratitud o metas.",
+      "examples": [
+        {
+          "wrong": "Gracias para tu ayuda.",
+          "right": "Gracias por tu ayuda.",
+          "note": "Usa 'por' después de 'gracias' para indicar la razón del agradecimiento."
+        },
+        {
+          "wrong": "Estudio por aprobar el examen.",
+          "right": "Estudio para aprobar el examen.",
+          "note": "Usa 'para' para expresar un propósito o un objetivo."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Completa el espacio en blanco: 'Estudio ___ aprender.' (propósito)",
+          "answer": "para"
+        },
+        {
+          "prompt": "Completa el espacio en blanco: 'Gracias ___ tu ayuda.' (razón)",
+          "answer": "por"
+        }
+      ]
+    },
+    {
+      "rule_id": "sonidos-rrr-звуки-rrr",
+      "topic": "Sonidos r/rr (звуки r/rr)",
+      "title": "Sonidos de la R y RR en español",
+      "explanation": "En español, la 'r' simple es un sonido de golpe rápido (como la 'dd' en 'ladder' en inglés americano), mientras que la 'rr' doble es un sonido vibrante o enrollado que se produce al vibrar la punta de la lengua contra el paladar. La 'r' al inicio de una palabra también es vibrante. Pronunciarlas mal puede cambiar el significado de las palabras.",
+      "examples": [
+        {
+          "wrong": "pero",
+          "right": "perro",
+          "note": "Falta la vibración: 'pero' significa 'pero' (conjunción), 'perro' significa 'perro' (animal)."
+        },
+        {
+          "wrong": "caro",
+          "right": "carro",
+          "note": "Un solo golpe vs. una vibración: 'caro' significa 'caro' (adjetivo), 'carro' significa 'carro' (vehículo)."
+        },
+        {
+          "wrong": "coro",
+          "right": "corro",
+          "note": "Otra vez, 'r' simple vs. 'rr' doble: 'coro' significa 'coro' (grupo vocal), 'corro' significa 'corro' (yo corro)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "¿Cómo se dice 'rice' en español? (pista: tiene una 'r' vibrante al inicio)",
+          "answer": "arroz"
+        },
+        {
+          "prompt": "¿Cuál es la ortografía correcta de 'but' en español? (r simple, no doble)",
+          "answer": "pero"
+        },
+        {
+          "prompt": "Completa el espacio en blanco: 'El ___ (perro) ladra.'",
+          "answer": "perro"
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciación-de-la-ñ",
+      "topic": "Pronunciación de la ñ",
+      "title": "Pronunciando la Ñ española",
+      "explanation": "La letra española 'ñ' representa un sonido nasal palatal distintivo, similar al 'ny' en 'cañón' pero más suave y con la lengua contra el paladar. Los hablantes de inglés a menudo la reemplazan erróneamente por una 'n' simple o una separación 'n-y' incómoda, lo que puede cambiar el significado de las palabras. Practica diciendo 'ny' como un solo sonido, no como dos letras separadas.",
+      "examples": [
+        {
+          "wrong": "mañana",
+          "right": "mañana",
+          "note": "La versión incorrecta usa una 'n' simple, cambiando el significado de 'mañana' a otra cosa. La versión correcta tiene el sonido de la 'ñ'."
+        },
+        {
+          "wrong": "año",
+          "right": "año",
+          "note": "Pronunciar 'año' como 'ano' (que significa 'ano') es un error vergonzoso común. Usa la 'ñ' para decir 'año' correctamente."
+        },
+        {
+          "wrong": "niño",
+          "right": "niño",
+          "note": "Sin la 'ñ', 'nino' no es una palabra española. 'Niño' significa 'niño' o 'muchacho'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "¿Cómo se dice 'España' en español? (Recuerda el sonido de la 'ñ')",
+          "answer": "España"
+        },
+        {
+          "prompt": "Escribe la palabra para 'niña' usando la 'ñ' correcta",
+          "answer": "niña"
+        },
+        {
+          "prompt": "Completa: 'Voy a cenar esta noche' (usa la palabra para 'cena' con 'ñ')",
+          "answer": "voy a cenar esta noche"
+        }
+      ]
+    },
+    {
+      "rule_id": "entonación",
+      "topic": "Entonación",
+      "title": "Entonación en español: Afirmaciones vs. Preguntas",
+      "explanation": "En español, la diferencia entre una afirmación y una pregunta de sí/no a menudo depende únicamente de la entonación. Las afirmaciones terminan con un tono descendente, mientras que las preguntas terminan con un tono ascendente. Los hablantes de inglés suelen usar entonación ascendente en las afirmaciones, lo que puede confundir a los oyentes haciéndoles pensar que están haciendo una pregunta.",
+      "examples": [
+        {
+          "wrong": "Ella viene mañana?",
+          "right": "Ella viene mañana.",
+          "note": "Las mismas palabras, pero el tono ascendente en la primera hace que suene como una pregunta. Usa un tono descendente para las afirmaciones."
+        },
+        {
+          "wrong": "Hablas inglés?",
+          "right": "Hablas inglés.",
+          "note": "De nuevo, la entonación ascendente convierte una afirmación en una pregunta. Recuerda: las afirmaciones bajan, las preguntas suben."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Escribe la oración 'Tú hablas español' como una afirmación (usa un punto).",
+          "answer": "Hablas español."
+        },
+        {
+          "prompt": "Escribe la oración '¿Él vive aquí?' como una pregunta (usa la puntuación correcta).",
+          "answer": "¿Él vive aquí?"
+        },
+        {
+          "prompt": "Cambia la siguiente pregunta a una afirmación: '¿Ella trabaja?'",
+          "answer": "Ella trabaja."
+        }
+      ]
+    },
+    {
+      "rule_id": "gender-of-nouns-masculinefeminine",
+      "topic": "Gender of nouns (masculine/feminine)",
+      "title": "Género de los sustantivos: terminaciones masculinas y femeninas",
+      "explanation": "En español, los sustantivos tienen género: masculino o femenino. La mayoría de los sustantivos que terminan en -o son masculinos, y los que terminan en -a son femeninos, pero hay excepciones importantes. Por ejemplo, los sustantivos que terminan en -ma (a menudo del griego) como 'problema' son masculinos, y 'mano' (mano) es femenino a pesar de terminar en -o.",
+      "examples": [
+        {
+          "wrong": "la problema",
+          "right": "el problema",
+          "note": "Los sustantivos que terminan en -ma suelen ser masculinos."
+        },
+        {
+          "wrong": "el mano",
+          "right": "la mano",
+          "note": "La mano es femenina a pesar de terminar en -o."
+        },
+        {
+          "wrong": "el foto",
+          "right": "la foto",
+          "note": "Foto es abreviatura de fotografía, por lo que sigue siendo femenino."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Completa con el artículo correcto para 'día' (día).",
+          "answer": "el día"
+        },
+        {
+          "prompt": "Completa con el artículo correcto para 'mano' (mano).",
+          "answer": "la mano"
+        },
+        {
+          "prompt": "Completa con el artículo correcto para 'sistema' (sistema).",
+          "answer": "el sistema"
+        }
+      ]
+    },
+    {
+      "rule_id": "adjective-agreement-in-gender-and-number",
+      "topic": "Adjective agreement in gender and number",
+      "title": "Concordancia de Adjetivos en Género y Número",
+      "explanation": "En español, los adjetivos deben coincidir con el sustantivo que describen en género (masculino o femenino) y número (singular o plural). Generalmente, los adjetivos masculinos terminan en -o, los femeninos en -a, y añaden -s para el plural. Los errores comunes ocurren cuando el adjetivo no cambia para concordar con el sustantivo.",
+      "examples": [
+        {
+          "wrong": "La casa rojo",
+          "right": "La casa roja",
+          "note": "‘Casa’ es femenino, por lo que el adjetivo debe ser femenino (roja, no rojo)."
+        },
+        {
+          "wrong": "Los coches roja",
+          "right": "Los coches rojos",
+          "note": "‘Coches’ es masculino plural, por lo que el adjetivo debe ser masculino plural (rojos, no roja)."
+        },
+        {
+          "wrong": "Las flores bonito",
+          "right": "Las flores bonitas",
+          "note": "‘Flores’ es femenino plural, por lo que el adjetivo debe ser femenino plural (bonitas, no bonito)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Completa el espacio en blanco: La casa grande (la casa) → la casa _____ (grande)",
+          "answer": "grande"
+        },
+        {
+          "prompt": "Completa el espacio en blanco: Los gatos blancos (los gatos) → los gatos _____ (blanco)",
+          "answer": "blancos"
+        }
+      ]
+    },
+    {
+      "rule_id": "direct-object-pronouns-lo-la-los-las",
+      "topic": "Direct object pronouns (lo, la, los, las)",
+      "title": "Pronombres de objeto directo (lo, la, los, las)",
+      "explanation": "En español, los pronombres de objeto directo (lo, la, los, las) deben coincidir en género y número con el sustantivo que reemplazan y se colocan antes del verbo conjugado (o se adjuntan a un infinitivo/gerundio). Un error común es poner el pronombre después del verbo o usar la forma incorrecta.",
+      "examples": [
+        {
+          "wrong": "Veo él.",
+          "right": "Lo veo.",
+          "note": "Reemplaza 'él' (él) con 'lo' y colócalo antes del verbo."
+        },
+        {
+          "wrong": "Compro las manzanas y las como.",
+          "right": "Compro las manzanas y las como.",
+          "note": "El segundo 'las' es correcto si reemplaza 'manzanas' (femenino plural). Pero muchos estudiantes olvidan cambiar el pronombre."
+        },
+        {
+          "wrong": "Voy a ver ella.",
+          "right": "La voy a ver. OR Voy a verla.",
+          "note": "Adjunta 'la' al infinitivo o colócala antes del verbo conjugado."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduce: 'I see them (masculine).'",
+          "answer": "Los veo."
+        },
+        {
+          "prompt": "Reemplaza 'la casa' con el pronombre correcto en: 'Ella compra la casa.'",
+          "answer": "Ella la compra."
+        },
+        {
+          "prompt": "Elige el pronombre correcto para 'las flores' en: 'Él riega las flores.'",
+          "answer": "Él las riega."
+        }
+      ]
+    },
+    {
+      "rule_id": "indirect-object-pronouns-le-les",
+      "topic": "Indirect object pronouns (le, les)",
+      "title": "Pronombres de objeto indirecto: Le y Les",
+      "explanation": "En español, 'le' (singular) y 'les' (plural) son pronombres de objeto indirecto, que significan 'a él/ella/usted (formal)' y 'a ellos/ellas/ustedes (plural)'. Un error común es usarlos como objetos directos (por ejemplo, 'le vi' para 'yo lo vi' debería ser 'lo vi') u olvidar concordar en número con el objeto indirecto (por ejemplo, usar 'le' en lugar de 'les' para una persona plural). Además, cuando el objeto indirecto está explícitamente mencionado (como 'a Juan'), debe incluirse el pronombre.",
+      "examples": [
+        {
+          "wrong": "Le vi a Juan.",
+          "right": "Lo vi a Juan.",
+          "note": "Usa 'lo' (objeto directo) para 'él', no 'le' (objeto indirecto), porque 'ver' no requiere un objeto indirecto."
+        },
+        {
+          "wrong": "Le compré un regalo a mis padres.",
+          "right": "Les compré un regalo a mis padres.",
+          "note": "Cambia 'le' a 'les' porque 'mis padres' es plural (a ellos)."
+        },
+        {
+          "wrong": "Doy el libro a Juan.",
+          "right": "Le doy el libro a Juan.",
+          "note": "El pronombre 'le' es necesario incluso cuando se menciona 'a Juan'; no es opcional."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Completa el espacio en blanco con el pronombre de objeto indirecto correcto: Yo doy el libro a María. (Yo) ___ doy el libro a María.",
+          "answer": "Le"
+        },
+        {
+          "prompt": "Completa el espacio en blanco: Ellos escriben una carta a sus abuelos. (Ellos) ___ escriben una carta a sus abuelos.",
+          "answer": "Les"
+        },
+        {
+          "prompt": "Completa el espacio en blanco: Él envía un correo a usted (formal). Él ___ envía un correo a usted.",
+          "answer": "Le"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-personal-a",
+      "topic": "Use of personal 'a'",
+      "title": "La 'a' personal en español",
+      "explanation": "En español, cuando el objeto directo de un verbo es una persona específica o una mascota (tratada como una persona), debes insertar la preposición 'a' antes de ella. Esto se llama la 'a personal' y no tiene traducción directa al inglés. Si el objeto directo no es una persona o mascota (p. ej., un objeto, un animal no tratado como mascota), no se usa 'a'.",
+      "examples": [
+        {
+          "wrong": "Veo Juan.",
+          "right": "Veo a Juan.",
+          "note": "Juan es una persona específica, por lo que se requiere 'a'."
+        },
+        {
+          "wrong": "Busco mi perro.",
+          "right": "Busco a mi perro.",
+          "note": "Las mascotas se consideran como personas, por lo que se usa la 'a personal'."
+        },
+        {
+          "wrong": "Visito la abuela.",
+          "right": "Visito a la abuela.",
+          "note": "Los miembros de la familia son tratados como personas, por lo que se necesita 'a'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduce: I see María.",
+          "answer": "Veo a María."
+        },
+        {
+          "prompt": "Traduce: She loves her cat.",
+          "answer": "Ella ama a su gato."
+        },
+        {
+          "prompt": "Traduce: You (formal) call the doctor.",
+          "answer": "Usted llama al doctor."
+        }
+      ]
+    },
+    {
+      "rule_id": "verbs-like-gustar-me-gusta-etc",
+      "topic": "Verbs like 'gustar' (me gusta, etc.)",
+      "title": "Verbos como 'Gustar' (Me Gusta, etc.)",
+      "explanation": "En español, los verbos como 'gustar' funcionan de manera diferente al inglés 'to like'. El sujeto es la cosa que gusta, y la persona a la que le gusta es el objeto indirecto (me, te, le, nos, les). Así que se dice 'Me gusta la pizza' (la pizza me agrada), no 'Yo gusto la pizza'.",
+      "examples": [
+        {
+          "wrong": "Yo gusto el libro.",
+          "right": "Me gusta el libro.",
+          "note": "El libro es el sujeto (gusta), y 'me' indica a quién le gusta."
+        },
+        {
+          "wrong": "Ellos gustan los deportes.",
+          "right": "A ellos les gustan los deportes.",
+          "note": "Usa 'les' para el objeto indirecto plural y 'gustan' porque los deportes son plurales."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduce: 'I like the movies.' (movies = películas)",
+          "answer": "Me gustan las películas."
+        },
+        {
+          "prompt": "Corrige el error: 'Tú gustas la música.'",
+          "answer": "Te gusta la música."
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-verbs-and-pronouns",
+      "topic": "Reflexive verbs and pronouns",
+      "title": "Verbos y Pronombres Reflexivos",
+      "explanation": "En español, muchas acciones en las que el sujeto se hace algo a sí mismo requieren un pronombre reflexivo (me, te, se, nos, os). El inglés a menudo omite el pronombre reflexivo (por ejemplo, 'I bathe' vs. 'I bathe myself'), pero el español debe incluirlo cuando el sujeto y el objeto son el mismo. Un error común es omitir el pronombre, especialmente con verbos de rutina diaria como 'levantarse' o 'vestirse'.",
+      "examples": [
+        {
+          "wrong": "Yo levanto a las siete.",
+          "right": "Yo me levanto a las siete.",
+          "note": "'Levantar' significa 'levantar a alguien o algo'; necesitas 'me' para decir 'me levanto'."
+        },
+        {
+          "wrong": "Él viste para la fiesta.",
+          "right": "Él se viste para la fiesta.",
+          "note": "'Vestir' sin 'se' significa 'vestir a otra persona'; 'vestirse' significa 'vestirse uno mismo'."
+        },
+        {
+          "wrong": "Nosotros llamamos Pedro.",
+          "right": "Nosotros nos llamamos Pedro.",
+          "note": "'Llamar' significa 'llamar'; 'llamarse' significa 'llamarse' (nuestro nombre). El pronombre es necesario."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduce: 'Me lavo las manos.' (Usa el verbo reflexivo 'lavarse').",
+          "answer": "Yo me lavo las manos."
+        },
+        {
+          "prompt": "Completa: 'Ella se acuesta a las diez.' (Usa 'acostarse').",
+          "answer": "Ella se acuesta a las diez."
+        },
+        {
+          "prompt": "Llena el espacio en blanco: 'Nosotros ___ (sentimos) cansados.' (Usa 'sentirse').",
+          "answer": "Nos sentimos cansados."
+        }
+      ]
+    },
+    {
+      "rule_id": "formal-vs-informal-commands-imperative",
+      "topic": "Formal vs informal commands (imperative)",
+      "title": "Mandatos formales vs informales (Imperativo)",
+      "explanation": "En español, el modo imperativo cambia dependiendo de si te diriges a alguien de manera informal (tú) o formal (usted). Para los mandatos afirmativos informales, usa la forma de él/ella del presente de indicativo (por ejemplo, 'habla'). Para los mandatos formales (tanto afirmativos como negativos) y los mandatos informales negativos, usa el presente de subjuntivo (por ejemplo, 'hable', 'no hables').",
+      "examples": [
+        {
+          "wrong": "Habla más despacio. (to a stranger)",
+          "right": "Hable más despacio.",
+          "note": "Utiliza el mandato formal 'hable' cuando te dirijas a alguien que no conoces bien o para mostrar respeto."
+        },
+        {
+          "wrong": "No come eso. (to a friend)",
+          "right": "No comas eso.",
+          "note": "Los mandatos informales negativos requieren el subjuntivo: 'no comas' en lugar de 'no come'."
+        },
+        {
+          "wrong": "Escribe la carta. (to your boss)",
+          "right": "Escriba la carta.",
+          "note": "Para el 'usted' formal, cambia el verbo a la forma del subjuntivo: 'escriba'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Dile a un amigo (tú) 'habla más despacio' en español.",
+          "answer": "Habla más despacio."
+        },
+        {
+          "prompt": "Dile a un doctor (formal) 'siéntese, por favor' en español.",
+          "answer": "Siéntese, por favor."
+        },
+        {
+          "prompt": "Dile a un niño (tú) 'no corras' en español.",
+          "answer": "No corras."
+        }
+      ]
+    },
+    {
+      "rule_id": "comparative-and-superlative-forms",
+      "topic": "Comparative and superlative forms",
+      "title": "Formas comparativas y superlativas en español",
+      "explanation": "En español, los comparativos usan 'más...que' (más que) o 'menos...que' (menos que) para comparar dos cosas. Para los superlativos, usa 'el/la/los/las más...de' (el/la/los/las más... de) para indicar el grado más alto. Recuerda que los adjetivos deben concordar en género y número, y las formas irregulares como 'mejor' (mejor) y 'peor' (peor) no usan 'más'.",
+      "examples": [
+        {
+          "wrong": "Ella es más inteligente de Juan.",
+          "right": "Ella es más inteligente que Juan.",
+          "note": "Usa 'que' (no 'de') después de 'más/menos' en las comparaciones."
+        },
+        {
+          "wrong": "Ella es más rápida de la clase.",
+          "right": "Ella es la más rápida de la clase.",
+          "note": "Los superlativos necesitan el artículo definido ('el/la/los/las') antes de 'más/menos'."
+        },
+        {
+          "wrong": "Este es el más mejor libro.",
+          "right": "Este es el mejor libro.",
+          "note": "Los superlativos irregulares como 'mejor' y 'peor' nunca usan 'más'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduce: 'Ella es más alta que él.'",
+          "answer": "Ella es más alta que él."
+        },
+        {
+          "prompt": "Traduce: 'Este es el libro más interesante.'",
+          "answer": "Este es el libro más interesante."
+        },
+        {
+          "prompt": "Corrige el error: 'Él es el más inteligente estudiante.'",
+          "answer": "Él es el estudiante más inteligente."
+        }
+      ]
+    },
+    {
+      "rule_id": "demonstrative-adjectives-and-pronouns-este-ese-aquel",
+      "topic": "Demonstrative adjectives and pronouns (este, ese, aquel)",
+      "title": "Adjetivos y Pronombres Demostrativos: Este, Ese, Aquel",
+      "explanation": "En español, 'este' (esto), 'ese' (eso) y 'aquel' (aquello) indican diferentes distancias del hablante. 'Este' se refiere a algo cercano, 'ese' a algo cerca del oyente y 'aquel' a algo lejano de ambos. Un error común es usar 'este' cuando se necesita 'ese' o 'aquel', o confundir las formas de género y número.",
+      "examples": [
+        {
+          "wrong": "Este libro que tienes en la mano es interesante.",
+          "right": "Ese libro que tienes en la mano es interesante.",
+          "note": "Usa 'ese' para algo cerca del oyente, no 'este' (que está cerca del hablante)."
+        },
+        {
+          "wrong": "¿Puedes pasarme aquel lápiz que está aquí?",
+          "right": "¿Puedes pasarme este lápiz que está aquí?",
+          "note": "'Aquel' es para objetos lejanos; si está aquí mismo, usa 'este'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Completa el espacio en blanco con la forma correcta: '___ (aquello) casa en la colina es muy antigua.'",
+          "answer": "Aquella"
+        },
+        {
+          "prompt": "Completa el espacio en blanco: '___ (esto) manzana que tengo en la mano es roja.'",
+          "answer": "Esta"
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-adjectives-mi-tu-su-vs-possessive-pronouns-mío-tuyo",
+      "topic": "Possessive adjectives (mi, tu, su) vs possessive pronouns (mío, tuyo)",
+      "title": "Adjetivos posesivos vs. Pronombres posesivos",
+      "explanation": "Los adjetivos posesivos (mi, tu, su) van delante de un sustantivo y concuerdan solo en número (p. ej., 'mi libro', 'mis libros'). Los pronombres posesivos (mío, tuyo, suyo) reemplazan al sustantivo y concuerdan en género y número (p. ej., 'el libro mío', 'la casa suya'). Usa adjetivos antes de sustantivos, pero usa pronombres después del verbo 'ser' o solos.",
+      "examples": [
+        {
+          "wrong": "Este es mi.",
+          "right": "Este es mío.",
+          "note": "Después de 'ser', usa el pronombre posesivo 'mío', no el adjetivo 'mi'."
+        },
+        {
+          "wrong": "Es el mío libro.",
+          "right": "Es mi libro.",
+          "note": "Antes de un sustantivo, usa el adjetivo posesivo 'mi', no el pronombre 'mío'."
+        },
+        {
+          "wrong": "Son tus amigos? Sí, son tus.",
+          "right": "Son tus amigos? Sí, son míos.",
+          "note": "Después de 'ser', usa el pronombre 'míos' para concordar con 'amigos'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Completa el espacio en blanco con el adjetivo posesivo correcto: 'Esta es mi casa.'",
+          "answer": "Esta es mi casa."
+        },
+        {
+          "prompt": "Completa el espacio en blanco con el pronombre posesivo correcto: 'Ese libro es mío.'",
+          "answer": "Ese libro es mío."
+        },
+        {
+          "prompt": "Elige la palabra correcta: 'Ella es (mi / mía) hermana.'",
+          "answer": "mi"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-qué-vs-cuál",
+      "topic": "Use of 'qué' vs 'cuál'",
+      "title": "Qué vs Cuál: Qué vs Cuál",
+      "explanation": "Usa 'qué' para preguntar sobre definiciones, explicaciones, o cuando hay posibilidades ilimitadas (como 'qué' en inglés). Usa 'cuál' para elegir de un conjunto conocido o cuando el hablante tiene un número limitado de opciones en mente (como 'cuál' en inglés). Un truco común: si puedes reemplazarlo con 'cuál', usa 'cuál'.",
+      "examples": [
+        {
+          "wrong": "¿Qué es tu nombre?",
+          "right": "¿Cuál es tu nombre?",
+          "note": "Porque estás preguntando por un nombre específico de muchas posibilidades (el conjunto de todos los nombres)."
+        },
+        {
+          "wrong": "¿Cuál es eso?",
+          "right": "¿Qué es eso?",
+          "note": "Al preguntar por una explicación o definición de un objeto desconocido, usa 'qué'."
+        },
+        {
+          "wrong": "¿Qué prefieres, café o té?",
+          "right": "¿Cuál prefieres, café o té?",
+          "note": "Con un número limitado de opciones dadas, 'cuál' es correcto."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduce: '¿Cuál es tu película favorita?'",
+          "answer": "¿Cuál es tu película favorita?"
+        },
+        {
+          "prompt": "Traduce: '¿Qué quieres comer?' (pregunta general)",
+          "answer": "¿Qué quieres comer?"
+        },
+        {
+          "prompt": "Traduce: '¿Cuál vestido debería comprar?' (eligiendo entre algunos vestidos)",
+          "answer": "¿Cuál vestido debo comprar?"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-sino-vs-pero",
+      "topic": "Use of 'sino' vs 'pero'",
+      "title": "Uso de 'sino' vs 'pero'",
+      "explanation": "Tanto 'sino' como 'pero' significan 'pero', pero se usan en contextos diferentes. Usa 'pero' para un contraste simple o excepción (ej., 'Me gusta el café, pero no el té'). Usa 'sino' después de una afirmación negativa para introducir una corrección o alternativa (ej., 'No es un gato, sino un perro' – la segunda parte contradice directamente a la primera). Recuerda: 'sino' solo aparece cuando la primera cláusula es negativa y la segunda la contradice directamente.",
+      "examples": [
+        {
+          "wrong": "No es caro, pero barato.",
+          "right": "No es caro, sino barato.",
+          "note": "La oración corrige 'caro' con 'barato' después de una negación, por lo que se necesita 'sino'."
+        },
+        {
+          "wrong": "No compré pan, sino compré leche.",
+          "right": "No compré pan, pero compré leche.",
+          "note": "Aquí la segunda parte añade información (compró leche) en lugar de corregir directamente 'pan'. Usa 'pero'."
+        },
+        {
+          "wrong": "No estudio mucho, sino trabajo.",
+          "right": "No estudio mucho, pero trabajo.",
+          "note": "La segunda parte es un hecho adicional, no una contradicción directa de la primera. Usa 'pero'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Completa el espacio en blanco con 'sino' o 'pero': 'No es azul, _______ rojo.' (No es azul, sino rojo.)",
+          "answer": "sino"
+        },
+        {
+          "prompt": "Completa el espacio en blanco: 'Quiero ir, _______ no puedo.' (Quiero ir, pero no puedo.)",
+          "answer": "pero"
+        },
+        {
+          "prompt": "Completa el espacio en blanco: 'No hablo inglés, _______ español.' (No hablo inglés, sino español.)",
+          "answer": "sino"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-muy-vs-mucho",
+      "topic": "Use of 'muy' vs 'mucho'",
+      "title": "Cuándo usar 'Muy' vs 'Mucho'",
+      "explanation": "Usa 'muy' (que significa 'muy') antes de adjetivos o adverbios para intensificarlos. Usa 'mucho' (que significa 'mucho' o 'mucho') antes de sustantivos o después de verbos para indicar cantidad o grado.",
+      "examples": [
+        {
+          "wrong": "Estoy mucho cansado.",
+          "right": "Estoy muy cansado.",
+          "note": "'Cansado' es un adjetivo, así que usa 'muy' (muy cansado) en lugar de 'mucho'."
+        },
+        {
+          "wrong": "Tengo muy dinero.",
+          "right": "Tengo mucho dinero.",
+          "note": "'Dinero' es un sustantivo, así que usa 'mucho' (mucho dinero) en lugar de 'muy'."
+        },
+        {
+          "wrong": "Me gusta muy el café.",
+          "right": "Me gusta mucho el café.",
+          "note": "Después de un verbo como 'gustar', usa 'mucho' (me gusta mucho) – 'muy' no puede modificar verbos."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complete el espacio en blanco: 'Ella es _____ inteligente.' (muy)",
+          "answer": "muy"
+        },
+        {
+          "prompt": "Complete el espacio en blanco: 'Hay _____ personas en la fiesta.' (mucho)",
+          "answer": "muchas"
+        },
+        {
+          "prompt": "Complete el espacio en blanco: 'Él corre _____ rápido.' (muy)",
+          "answer": "muy"
+        }
+      ]
+    },
+    {
+      "rule_id": "false-cognates-embarazada-etc",
+      "topic": "False cognates (embarazada, etc.)",
+      "title": "Falsos cognados: Embarazada y más",
+      "explanation": "Los falsos cognados son palabras que se parecen en español e inglés pero tienen significados diferentes. Por ejemplo, 'embarazada' significa 'pregnant', no 'embarrassed'. Otros comunes incluyen 'sensible' (que significa 'sensitive', no 'sensible') y 'constipado' (que significa 'tener un resfriado', no 'constipated'). Siempre verifica el significado antes de usar estas palabras engañosas.",
+      "examples": [
+        {
+          "wrong": "Estoy embarazada.",
+          "right": "Estoy avergonzado.",
+          "note": "Si quieres decir 'embarrassed', usa 'avergonzado/a'. 'Embarazada' solo significa 'pregnant'."
+        },
+        {
+          "wrong": "Él es sensible.",
+          "right": "Él es sensato.",
+          "note": "'Sensible' en español significa 'sensitive'. Para 'sensible', usa 'sensato/a'."
+        },
+        {
+          "wrong": "Estoy constipado.",
+          "right": "Estoy estreñido.",
+          "note": "'Constipado' significa 'tener un resfriado'. Para 'constipated', di 'estreñido'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "¿Qué significa 'embarazada' en inglés?",
+          "answer": "pregnant"
+        },
+        {
+          "prompt": "¿Cómo se dice 'She is sensible' (que significa 'practical') en español?",
+          "answer": "Ella es sensata"
+        },
+        {
+          "prompt": "¿Cuál es la palabra en español para 'constipated'?",
+          "answer": "estreñido"
+        }
+      ]
+    },
+    {
+      "rule_id": "apocope-bueno-buen-primero-primer",
+      "topic": "Apocope (bueno -> buen, primero -> primer)",
+      "title": "Apócope: Acortamiento de adjetivos antes de sustantivos masculinos",
+      "explanation": "En español, algunos adjetivos pierden su(s) letra(s) final(es) cuando se colocan directamente antes de un sustantivo masculino singular. Esto se llama apócope. Ejemplos comunes incluyen 'bueno' → 'buen', 'primero' → 'primer', y 'tercero' → 'tercer'. La regla no aplica cuando el adjetivo sigue al sustantivo.",
+      "examples": [
+        {
+          "wrong": "el bueno chico",
+          "right": "el buen chico",
+          "note": "Bueno se acorta a buen antes de un sustantivo masculino singular."
+        },
+        {
+          "wrong": "el primero capítulo",
+          "right": "el primer capítulo",
+          "note": "Primero se convierte en primer antes de un sustantivo masculino singular."
+        },
+        {
+          "wrong": "el tercero piso",
+          "right": "el tercer piso",
+          "note": "Tercero también se acorta a tercer antes de un sustantivo masculino."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduce 'the good book' (book = libro, masculino)",
+          "answer": "el buen libro"
+        },
+        {
+          "prompt": "Traduce 'the first day' (day = día, masculino)",
+          "answer": "el primer día"
+        },
+        {
+          "prompt": "Traduce 'the third floor' (floor = piso, masculino)",
+          "answer": "el tercer piso"
+        }
+      ]
+    },
+    {
+      "rule_id": "contractions-al-and-del",
+      "topic": "Contractions 'al' and 'del'",
+      "title": "Contracciones del español: 'al' y 'del'",
+      "explanation": "En español, las preposiciones 'a' y 'de' se contraen con el artículo masculino 'el' para formar 'al' y 'del'. Nunca debes escribir 'a el' o 'de el' como palabras separadas. Esta regla aplica solo a 'el', no a otros artículos como 'la', 'los' o 'las'.",
+      "examples": [
+        {
+          "wrong": "Voy a el parque.",
+          "right": "Voy al parque.",
+          "note": "'a + el' siempre se convierte en 'al'."
+        },
+        {
+          "wrong": "El libro es de el profesor.",
+          "right": "El libro es del profesor.",
+          "note": "'de + el' siempre se convierte en 'del'."
+        },
+        {
+          "wrong": "Salimos de el aeropuerto.",
+          "right": "Salimos del aeropuerto.",
+          "note": "Recuerda: 'de el' nunca es correcto; siempre se contrae a 'del'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Completa: Voy ___ cine. (a + el)",
+          "answer": "al"
+        },
+        {
+          "prompt": "Completa: La casa es ___ abuelo. (de + el)",
+          "answer": "del"
+        },
+        {
+          "prompt": "Completa: Ella llega ___ banco. (a + el)",
+          "answer": "al"
+        }
+      ]
+    },
+    {
+      "rule_id": "placement-of-adjectives-before-vs-after-noun",
+      "topic": "Placement of adjectives (before vs after noun)",
+      "title": "Colocación de adjetivos: antes vs después del sustantivo",
+      "explanation": "En español, la mayoría de los adjetivos van después del sustantivo (p. ej., 'un coche rojo'). Esto es lo contrario del inglés, donde los adjetivos suelen ir antes. Algunos adjetivos comunes como 'bueno', 'malo', 'grande' pueden ir antes del sustantivo para cambiar el significado (p. ej., 'un gran hombre'), pero como principiante, coloca los adjetivos descriptivos (color, tamaño, nacionalidad) después del sustantivo.",
+      "examples": [
+        {
+          "wrong": "una roja manzana",
+          "right": "una manzana roja",
+          "note": "Los adjetivos de color siempre van después del sustantivo."
+        },
+        {
+          "wrong": "un interesante libro",
+          "right": "un libro interesante",
+          "note": "La mayoría de los adjetivos descriptivos siguen al sustantivo."
+        },
+        {
+          "wrong": "una pequeña casa",
+          "right": "una casa pequeña",
+          "note": "Los adjetivos de tamaño (como 'pequeño') también van después del sustantivo para el tamaño físico."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduce: 'a blue pen'",
+          "answer": "un bolígrafo azul"
+        },
+        {
+          "prompt": "Corrige el orden: 'un (grande) perro'",
+          "answer": "un perro grande"
+        },
+        {
+          "prompt": "Reescribe con la colocación correcta del adjetivo: 'una difícil lección'",
+          "answer": "una lección difícil"
+        }
+      ]
+    }
+  ]
+}

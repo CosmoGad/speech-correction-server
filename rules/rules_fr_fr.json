@@ -1,0 +1,898 @@
+{
+  "learning": "fr",
+  "interface": "fr",
+  "generated_at": "2026-06-22T20:23:19.413084+00:00",
+  "model": "deepseek-v4-flash",
+  "translated_from": "en",
+  "rules": [
+    {
+      "rule_id": "articles",
+      "topic": "Articles",
+      "title": "N'oubliez pas les articles en français !",
+      "explanation": "En français, les noms ont presque toujours besoin d'un article (comme le, la, un, une, des) même là où l'anglais peut les omettre. Par exemple, lorsqu'on parle de choses en général ou pour la première fois, vous devez inclure l'article correct.",
+      "examples": [
+        {
+          "wrong": "J'aime chocolat.",
+          "right": "J'aime le chocolat.",
+          "note": "Utilisez 'le' pour les préférences générales (noms masculins)."
+        },
+        {
+          "wrong": "Elle a chat.",
+          "right": "Elle a un chat.",
+          "note": "Utilisez 'un' ou 'une' pour les noms singuliers indéfinis."
+        },
+        {
+          "wrong": "Nous allons à école.",
+          "right": "Nous allons à l'école.",
+          "note": "Utilisez l'article défini avec des lieux spécifiques (l’ devant une voyelle)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduisez : J'aime le café.",
+          "answer": "J'aime le café."
+        },
+        {
+          "prompt": "Traduisez : Elle a un chat.",
+          "answer": "Elle a un chat."
+        },
+        {
+          "prompt": "Traduisez : Nous allons à l'école.",
+          "answer": "Nous allons à l'école."
+        }
+      ]
+    },
+    {
+      "rule_id": "temps",
+      "topic": "Temps",
+      "title": "Éviter la confusion avec 'Temps'",
+      "explanation": "Le mot français 'temps' peut signifier 'durée', 'météo' ou un 'temps' grammatical. Les anglophones utilisent souvent 'temps' par erreur pour l'heure ou pour une occurrence unique. Utilisez 'heure' pour l'heure, 'fois' pour chaque occurrence, et 'moment' pour un moment agréable spécifique. Pour parler de la météo, utilisez 'il fait + adjectif' (par exemple, il fait beau) plutôt que simplement 'temps'.",
+      "examples": [
+        {
+          "wrong": "Quel temps est-il ?",
+          "right": "Quelle heure est-il ?",
+          "note": "Pour demander 'quelle heure est-il ?', utilisez 'heure', pas 'temps'."
+        },
+        {
+          "wrong": "C'est la première temps que je viens ici.",
+          "right": "C'est la première fois que je viens ici.",
+          "note": "Pour chaque occurrence ou instance, utilisez 'fois'."
+        },
+        {
+          "wrong": "J'ai passé un bon temps à la fête.",
+          "right": "J'ai passé un bon moment à la fête.",
+          "note": "Pour un intervalle spécifique (par exemple, 'un bon moment'), utilisez 'moment'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Comment dit-on 'What time is it?' en français ?",
+          "answer": "Quelle heure est-il ?"
+        },
+        {
+          "prompt": "Traduisez : 'I had a great time at the party.' (utilisez 'moment')",
+          "answer": "J'ai passé un bon moment à la fête."
+        },
+        {
+          "prompt": "Corrigez l'erreur dans cette phrase : 'Il fait du temps.'",
+          "answer": "Il fait beau."
+        }
+      ]
+    },
+    {
+      "rule_id": "accord",
+      "topic": "Accord",
+      "title": "Accord : L'accord des adjectifs avec les noms",
+      "explanation": "En français, les adjectifs doivent s'accorder avec le nom qu'ils décrivent en genre (masculine/feminine) et en nombre (singular/plural). Une erreur courante est d'oublier de modifier la terminaison de l'adjectif. Vérifiez toujours le nom d'abord, puis ajustez l'adjectif.",
+      "examples": [
+        {
+          "wrong": "Une maison blanc",
+          "right": "Une maison blanche",
+          "note": "Blanc devient blanche pour le féminin singulier."
+        },
+        {
+          "wrong": "Des livres intéressant",
+          "right": "Des livres intéressants",
+          "note": "Ajoutez -s pour le masculin pluriel."
+        },
+        {
+          "wrong": "Elle est grand",
+          "right": "Elle est grande",
+          "note": "Grand devient grande pour s'accorder avec elle (feminine)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Corrigez cette phrase : 'Elle est petit.'",
+          "answer": "Elle est petite."
+        },
+        {
+          "prompt": "Corrigez cette phrase : 'Ils sont grand.'",
+          "answer": "Ils sont grands."
+        },
+        {
+          "prompt": "Corrigez cette phrase : 'Une robe vert et un chapeau vert.'",
+          "answer": "Une robe verte et un chapeau vert."
+        }
+      ]
+    },
+    {
+      "rule_id": "pronoms",
+      "topic": "Pronoms",
+      "title": "Pronoms objets directs et indirects (le/la/les vs lui/leur)",
+      "explanation": "En français, les pronoms objets directs (le, la, les) remplacent les personnes ou les choses qui reçoivent directement l'action, comme 'le voir' ou 'les aimer'. Les pronoms objets indirects (lui, leur) remplacent les personnes à qui ou pour qui l'action est faite, comme 'lui parler' ou 'leur donner'. Une erreur courante est de les intervertir, par exemple en utilisant 'lui' là où 'le' est nécessaire.",
+      "examples": [
+        {
+          "wrong": "Je lui vois.",
+          "right": "Je le vois.",
+          "note": "Voir est une action directe : la personne est vue directement, donc utilisez 'le'."
+        },
+        {
+          "wrong": "Je le parle.",
+          "right": "Je lui parle.",
+          "note": "Parler à quelqu'un est indirect, donc utilisez 'lui'."
+        },
+        {
+          "wrong": "Je leur aime.",
+          "right": "Je les aime.",
+          "note": "Aimer est une action directe, donc utilisez 'les' pour 'them' (direct)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Remplacez 'Marie' par le pronom correct : Je vois Marie.",
+          "answer": "Je la vois."
+        },
+        {
+          "prompt": "Remplacez 'à mon frère' par le pronom correct : Je parle à mon frère.",
+          "answer": "Je lui parle."
+        },
+        {
+          "prompt": "Remplacez 'les enfants' par le pronom correct : J'aime les enfants.",
+          "answer": "Je les aime."
+        }
+      ]
+    },
+    {
+      "rule_id": "voyelles-nasales",
+      "topic": "Voyelles nasales",
+      "title": "Maîtrise des voyelles nasales françaises (Voyelles Nasales)",
+      "explanation": "Les voyelles nasales (comme 'an', 'in', 'on', 'un') sont prononcées avec l'air passant par le nez, sans prononcer complètement le 'n' ou le 'm' suivant. Une erreur courante pour les anglophones est de prononcer le 'n' ou le 'm' comme une consonne, ou de confondre différentes voyelles nasales. Rappelez-vous que la voyelle est nasalisée et que la consonne n'est pas prononcée sauf si elle est suivie d'une autre voyelle.",
+      "examples": [
+        {
+          "wrong": "je vien",
+          "right": "je viens",
+          "note": "Le 'en' dans 'viens' est une voyelle nasale ; ne dites pas 'vee-enz' avec un 'n' dur."
+        },
+        {
+          "wrong": "un bon vin blanc",
+          "right": "un bon vin blanc",
+          "note": "Écoutez les voyelles nasales : 'un' (œ̃), 'bon' (ɔ̃), 'vin' (ɛ̃), 'blanc' (ɑ̃). Chacune est distincte et nasalisée."
+        },
+        {
+          "wrong": "la main",
+          "right": "la main",
+          "note": "Le 'ain' sonne comme la voyelle nasale [ɛ̃] ; évitez de prononcer le 'n' à la fin."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Comment dit-on 'j'ai' (en utilisant 'avoir') avec la bonne voyelle nasale?",
+          "answer": "j'ai"
+        },
+        {
+          "prompt": "Écrivez le mot français pour 'temps' (comme dans 'le temps') avec la bonne voyelle nasale.",
+          "answer": "le temps"
+        },
+        {
+          "prompt": "Quelle est la phrase française correcte pour 'le matin' (en utilisant 'matin' et 'dans le')?",
+          "answer": "dans le matin"
+        }
+      ]
+    },
+    {
+      "rule_id": "liaison",
+      "topic": "Liaison",
+      "title": "Liaison française : Quand lier (et ne pas lier) les sons",
+      "explanation": "La liaison est le fait de lier une consonne finale normalement muette au mot suivant s'il commence par une voyelle ou un h muet. Par exemple, 'vous avez' se prononce 'voo-zah-vay'. Cependant, la liaison est facultative ou interdite dans de nombreux cas (par exemple, après un nom ou devant un mot commençant par un h aspiré). Une erreur courante est soit d'utiliser la liaison de façon excessive, soit de l'omettre là où elle est requise.",
+      "examples": [
+        {
+          "wrong": "les amis (pronounced lay ah-mee)",
+          "right": "les amis (pronounced lay-zah-mee)",
+          "note": "Le 's' dans 'les' se lie à 'amis' pour produire un son 'z' parce que 'amis' commence par une voyelle."
+        },
+        {
+          "wrong": "ils ont (pronounced eel on)",
+          "right": "ils ont (pronounced eel-zon)",
+          "note": "Le 's' dans 'ils' se lie à 'ont' pour éviter une collision vocalique et sonner naturel."
+        },
+        {
+          "wrong": "grand homme (pronounced grahn om)",
+          "right": "grand homme (pronounced grahn-tom)",
+          "note": "Le 'd' dans 'grand' se lie à 'homme' (qui a un h muet) pour produire un son 't'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Comment prononcez-vous correctement 'vous avez' (vous avez) avec la liaison ?",
+          "answer": "voo-zah-vay"
+        },
+        {
+          "prompt": "Faut-il faire une liaison dans 'les héros' (les héros) ? ('héros' commence par un h aspiré)",
+          "answer": "No, say 'lay ay-roh' (no linking of the 's')"
+        },
+        {
+          "prompt": "Écrivez la prononciation correcte de 'on a' (on a / nous avons) avec la liaison.",
+          "answer": "on-nah"
+        }
+      ]
+    },
+    {
+      "rule_id": "accent-tonique",
+      "topic": "Accent tonique",
+      "title": "Accent tonique : La règle d'accentuation en français",
+      "explanation": "En français, l'accent tonique tombe toujours sur la dernière syllabe pleine d'un mot ou d'un groupe rythmique. Contrairement à l'anglais, l'accent français est fixe et ne se déplace pas entre les mots ; une erreur courante est d'accentuer la première syllabe comme en anglais. Cela peut rendre votre prononciation peu naturelle.",
+      "examples": [
+        {
+          "wrong": "BANane",
+          "right": "baNANE",
+          "note": "Accentuez la dernière syllabe -NANE, pas la première."
+        },
+        {
+          "wrong": "PARler",
+          "right": "parLER",
+          "note": "Pour les verbes comme 'parler', accentuez toujours la dernière syllabe -LER."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Comment prononcer correctement le mot 'musique' ? Écrivez-le avec la syllabe accentuée en majuscule.",
+          "answer": "muSIQUE"
+        },
+        {
+          "prompt": "Écrivez le mot 'ordinateur' avec la syllabe accentuée en majuscule pour montrer l'accentuation correcte.",
+          "answer": "ordinaTEUR"
+        }
+      ]
+    },
+    {
+      "rule_id": "gender-assignment-of-nouns",
+      "topic": "Gender assignment of nouns",
+      "title": "Maîtriser les genres des noms avec des terminaisons courantes",
+      "explanation": "En français, chaque nom a un genre — masculin ou féminin — qui affecte souvent l'article (le/la). De nombreux noms suivent des modèles : ceux se terminant par -tion, -sion ou -té sont généralement féminins, tandis que ceux se terminant par -age, -ment ou -eau sont généralement masculins. Cependant, attention aux exceptions comme 'problème' (masculin) malgré sa terminaison en -e.",
+      "examples": [
+        {
+          "wrong": "le situation",
+          "right": "la situation",
+          "note": "Les noms se terminant par -tion sont presque toujours féminins, utilisez donc 'la'."
+        },
+        {
+          "wrong": "la voyage",
+          "right": "le voyage",
+          "note": "Les noms se terminant par -age sont généralement masculins, utilisez donc 'le'."
+        },
+        {
+          "wrong": "la problème",
+          "right": "le problème",
+          "note": "Bien qu'il se termine par -e, 'problème' est masculin (comme beaucoup de mots en -ème)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complétez avec l'article correct (le/la): '___ chanson' (chanson)",
+          "answer": "la"
+        },
+        {
+          "prompt": "Complétez avec l'article correct: '___ musée' (musée)",
+          "answer": "le"
+        },
+        {
+          "prompt": "Quel article prend 'nation' (nation)?",
+          "answer": "la"
+        }
+      ]
+    },
+    {
+      "rule_id": "cest-vs-ilelle-est",
+      "topic": "C'est vs il/elle est",
+      "title": "C'est vs Il/Elle est",
+      "explanation": "Utilisez 'c'est' (ou 'ce sont' pour le pluriel) avant un nom ou un pronom tonique pour identifier ou décrire quelque chose. Utilisez 'il est' ou 'elle est' avant un adjectif, une profession, ou une nationalité sans article, ou pour parler d'une personne ou d'une chose spécifique déjà mentionnée.",
+      "examples": [
+        {
+          "wrong": "Il est un professeur.",
+          "right": "C'est un professeur.",
+          "note": "Utilisez 'c'est' avant un nom (avec un article) comme 'un professeur'."
+        },
+        {
+          "wrong": "C'est intelligente.",
+          "right": "Elle est intelligente.",
+          "note": "Utilisez 'elle est' avant un adjectif (ici 'intelligente') lorsqu'il s'agit d'une personne spécifique."
+        },
+        {
+          "wrong": "Ce sont grand.",
+          "right": "Ils sont grands.",
+          "note": "Utilisez 'ils sont' avec un adjectif ; 'ce sont' est pour les noms au pluriel."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complétez le vide avec 'C'est' ou 'Il est' : ... un chat noir.",
+          "answer": "C'est"
+        },
+        {
+          "prompt": "Complétez le vide avec 'C'est' ou 'Elle est' : Marie, ... très sympa.",
+          "answer": "elle est"
+        },
+        {
+          "prompt": "Complétez le vide avec 'Ce sont' ou 'Ils sont' : ... des livres intéressants.",
+          "answer": "Ce sont"
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-adjectives-monmames",
+      "topic": "Possessive adjectives (mon/ma/mes)",
+      "title": "Adjectifs possessifs : Mon, Ma, Mes",
+      "explanation": "En français, les adjectifs possessifs doivent s'accorder avec le nom qu'ils modifient en genre et en nombre. Cependant, devant un nom féminin qui commence par une voyelle ou un 'h' muet, vous devez utiliser 'mon' au lieu de 'ma' pour éviter un hiatus (deux sons voyelles à la suite). Le pluriel 'mes' est utilisé pour les deux genres.",
+      "examples": [
+        {
+          "wrong": "ma amie",
+          "right": "mon amie",
+          "note": "Même si 'amie' est féminin, nous utilisons 'mon' car il commence par une voyelle."
+        },
+        {
+          "wrong": "mon soeur",
+          "right": "ma soeur",
+          "note": "'Soeur' est féminin et commence par une consonne, donc nous utilisons 'ma'."
+        },
+        {
+          "wrong": "ma amis",
+          "right": "mes amis",
+          "note": "'Amis' est masculin pluriel, donc utilisez 'mes'. Notez également que la règle de la voyelle ne s'applique pas aux pluriels."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduisez : 'my mother' (mother = mère, feminine, starts with a consonant).",
+          "answer": "ma mère"
+        },
+        {
+          "prompt": "Traduisez : 'my school' (school = école, feminine, starts with a vowel).",
+          "answer": "mon école"
+        },
+        {
+          "prompt": "Traduisez : 'my parents' (parents, masculine plural).",
+          "answer": "mes parents"
+        }
+      ]
+    },
+    {
+      "rule_id": "negation-in-compound-tenses",
+      "topic": "Negation in compound tenses",
+      "title": "Négation dans les temps composés (Passé Composé)",
+      "explanation": "Dans les temps composés comme le passé composé, la négation entoure le verbe auxiliaire (avoir ou être), pas le participe passé. Placez 'ne' avant l'auxiliaire et 'pas' après, et gardez le participe passé après l'auxiliaire. Une erreur courante est de placer 'pas' après le participe passé au lieu de le placer après l'auxiliaire.",
+      "examples": [
+        {
+          "wrong": "Je n'ai mangé pas.",
+          "right": "Je n'ai pas mangé.",
+          "note": "La négation doit entourer l'auxiliaire 'ai', pas le participe passé 'mangé'."
+        },
+        {
+          "wrong": "Elle n'est allée pas au cinéma.",
+          "right": "Elle n'est pas allée au cinéma.",
+          "note": "Avec 'être' comme auxiliaire, 'ne' et 'pas' entourent toujours 'est'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Corrigez cette phrase : 'Ils ont fini pas leurs devoirs.'",
+          "answer": "Ils n'ont pas fini leurs devoirs."
+        },
+        {
+          "prompt": "Corrigez cette phrase : 'Nous ne sommes partis pas tôt.'",
+          "answer": "Nous ne sommes pas partis tôt."
+        }
+      ]
+    },
+    {
+      "rule_id": "prepositions-à-and-de-after-verbs",
+      "topic": "Prepositions à and de after verbs",
+      "title": "Prépositions à et de après les verbes",
+      "explanation": "De nombreux verbes français sont suivis d’une préposition spécifique (à ou de) avant un infinitif ou un objet, et cette préposition ne se traduit souvent pas directement de l’anglais. Choisir la mauvaise préposition est une erreur courante. Il faut mémoriser quels verbes prennent à et lesquels prennent de.",
+      "examples": [
+        {
+          "wrong": "J'ai commencé à travailler.",
+          "right": "J'ai commencé à travailler.",
+          "note": "Correct en fait – mais notez : 'commencer à' est correct. Une meilleure erreur : 'J'apprends parler français' (à manquant) → 'J'apprends à parler français'."
+        },
+        {
+          "wrong": "Je veux de manger.",
+          "right": "Je veux manger.",
+          "note": "Le verbe 'vouloir' ne prend pas de préposition devant un infinitif. Utiliser 'de' ici est une erreur."
+        },
+        {
+          "wrong": "Il a décidé à partir.",
+          "right": "Il a décidé de partir.",
+          "note": "Le verbe 'décider' nécessite la préposition 'de' devant un infinitif, pas 'à'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complétez avec la préposition correcte (à, de, ou rien) : Elle apprend à conduire. (apprendre)",
+          "answer": "Elle apprend à conduire."
+        },
+        {
+          "prompt": "Complétez avec la préposition correcte : Il a oublié d’appeler. (oublier)",
+          "answer": "Il a oublié d'appeler."
+        },
+        {
+          "prompt": "Complétez avec la préposition correcte : Nous essayons de finir. (essayer)",
+          "answer": "Nous essayons de finir."
+        }
+      ]
+    },
+    {
+      "rule_id": "subjunctive-mood-usage",
+      "topic": "Subjunctive mood usage",
+      "title": "Quand utiliser le subjonctif en français",
+      "explanation": "Le mode subjonctif est utilisé après des expressions de nécessité, d'émotion, de doute et certaines conjonctions (par exemple, 'il faut que', 'bien que', 'pour que'). Contrairement à l'anglais, il n'est pas facultatif et doit suivre ces déclencheurs. Une erreur courante est d'utiliser l'indicatif au lieu du subjonctif après de telles expressions.",
+      "examples": [
+        {
+          "wrong": "Il faut que tu fais tes devoirs.",
+          "right": "Il faut que tu fasses tes devoirs.",
+          "note": "'Il faut que' nécessite toujours le subjonctif — 'fasses' est la forme correcte."
+        },
+        {
+          "wrong": "Je suis content que tu es là.",
+          "right": "Je suis content que tu sois là.",
+          "note": "Les émotions comme 'être content que' déclenchent le subjonctif — utilisez 'sois' au lieu de 'es'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complétez le blanc avec la forme correcte du subjonctif de 'faire' : Il faut que nous ______ nos devoirs.",
+          "answer": "fassions"
+        },
+        {
+          "prompt": "Corrigez l'erreur dans la phrase : Je doute qu'il vient.",
+          "answer": "Je doute qu'il vienne."
+        }
+      ]
+    },
+    {
+      "rule_id": "imperative-with-object-pronouns",
+      "topic": "Imperative with object pronouns",
+      "title": "Impératif avec pronoms objets",
+      "explanation": "Dans les commandes affirmatives en français, les pronoms objets sont attachés au verbe avec des traits d'union et suivent un ordre spécifique (par exemple, me, te, nous, vous puis le, la, les puis lui, leur). Dans les commandes négatives, les pronoms viennent avant le verbe, suivant le même ordre. Une erreur courante est d'oublier les traits d'union ou de placer les pronoms incorrectement.",
+      "examples": [
+        {
+          "wrong": "Donne moi le livre.",
+          "right": "Donne-moi le livre.",
+          "note": "Affirmatif : attachez les pronoms avec des traits d'union après le verbe."
+        },
+        {
+          "wrong": "Ne le donne pas à moi.",
+          "right": "Ne me le donne pas.",
+          "note": "Négatif : les pronoms vont avant le verbe, dans le bon ordre."
+        },
+        {
+          "wrong": "Parle lui.",
+          "right": "Parle-lui.",
+          "note": "Utilisez toujours des traits d'union dans les commandes affirmatives."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Dis-moi la vérité.",
+          "answer": "Dis-moi la vérité."
+        },
+        {
+          "prompt": "Ne le leur donne pas.",
+          "answer": "Ne le leur donne pas."
+        },
+        {
+          "prompt": "Envoie-le-moi.",
+          "answer": "Envoie-le-moi."
+        }
+      ]
+    },
+    {
+      "rule_id": "si-clauses-conditional-sentences",
+      "topic": "Si clauses (conditional sentences)",
+      "title": "Les propositions avec si : le piège du futur et du conditionnel",
+      "explanation": "En français, après le mot « si », on ne peut pas utiliser les temps du futur ou du conditionnel. Utilisez le présent pour les conditions réelles/probables, et l'imparfait pour les conditions hypothétiques ou irréelles. C'est une erreur courante car l'anglais utilise souvent « will » ou « would » dans ces cas.",
+      "examples": [
+        {
+          "wrong": "Si je pourrai, je viendrai.",
+          "right": "Si je peux, je viendrai.",
+          "note": "Utilisez le présent ('peux') après 'si', pas le futur ('pourrai')."
+        },
+        {
+          "wrong": "Si j'aurais de l'argent, j'achèterais une maison.",
+          "right": "Si j'avais de l'argent, j'achèterais une maison.",
+          "note": "Pour les conditions irréelles, utilisez l'imparfait ('avais') après 'si', pas le conditionnel ('aurais')."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Corrigez cette phrase : 'Si je pourrai, je le ferai.'",
+          "answer": "Si je peux, je le ferai."
+        },
+        {
+          "prompt": "Corrigez cette phrase : 'Si tu aurais le temps, tu viendrais.'",
+          "answer": "Si tu avais le temps, tu viendrais."
+        }
+      ]
+    },
+    {
+      "rule_id": "interrogative-pronouns-qui-que-quoi",
+      "topic": "Interrogative pronouns (qui, que, quoi)",
+      "title": "Maîtrise des pronoms interrogatifs : Qui, Que, Quoi",
+      "explanation": "En français, 'qui' interroge sur une personne (sujet ou complément d'une préposition), 'que' interroge sur une chose (complément d'objet direct), et 'quoi' s'emploie après une préposition ou dans les questions informelles sans inversion. Les anglophones confondent souvent 'quoi' avec 'que' ou 'qui'. Rappelez-vous : 'qui' pour les personnes, 'que' pour les choses, et 'quoi' seulement après une préposition ou dans le langage familier.",
+      "examples": [
+        {
+          "wrong": "Quoi tu veux?",
+          "right": "Que veux-tu?",
+          "note": "Utilisez 'que' + inversion pour une question sur un complément d'objet direct désignant une chose."
+        },
+        {
+          "wrong": "Qui vous avez vu?",
+          "right": "Qui avez-vous vu?",
+          "note": "Gardez l'inversion avec 'qui' en tant que complément d'objet direct (whom). 'Qui' peut aussi être sujet : 'Qui a parlé ?'"
+        },
+        {
+          "wrong": "Avec que parles-tu?",
+          "right": "Avec qui parles-tu?",
+          "note": "Après une préposition, utilisez 'qui' pour les personnes et 'quoi' pour les choses : 'Avec quoi écris-tu ?'"
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduisez : 'What are you eating?' (utilisez l'inversion formelle)",
+          "answer": "Que mangez-vous?"
+        },
+        {
+          "prompt": "Demandez 'Who is coming?' (personne en tant que sujet)",
+          "answer": "Qui vient?"
+        },
+        {
+          "prompt": "Complétez la question : 'Tu parles de ______ ?' (à propos d'une chose, informel)",
+          "answer": "quoi"
+        }
+      ]
+    },
+    {
+      "rule_id": "relative-pronouns-qui-que-dont",
+      "topic": "Relative pronouns (qui, que, dont)",
+      "title": "Pronoms relatifs français : Qui, Que, Dont",
+      "explanation": "Qui remplace le sujet d'une proposition (qui/que), que remplace le complément d'objet direct (que/lequel), et dont remplace de + nom (dont/duquel). Utilisez qui avant un verbe, que avant un sujet+verbe, et dont pour indiquer la possession ou l'origine.",
+      "examples": [
+        {
+          "wrong": "C'est l'homme que parle français.",
+          "right": "C'est l'homme qui parle français.",
+          "note": "Qui est utilisé parce que 'l'homme' est le sujet de 'parle'."
+        },
+        {
+          "wrong": "Le livre qui j'ai lu est intéressant.",
+          "right": "Le livre que j'ai lu est intéressant.",
+          "note": "Que remplace le complément d'objet direct 'le livre' parce qu'il reçoit l'action de 'ai lu'."
+        },
+        {
+          "wrong": "C'est la fille que je parle.",
+          "right": "C'est la fille dont je parle.",
+          "note": "Dont remplace 'de la fille' après le verbe 'parler de'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complétez le blanc avec le pronom correct (qui, que ou dont) : 'La voiture ______ est rouge est à moi.'",
+          "answer": "qui"
+        },
+        {
+          "prompt": "Complétez le blanc : 'Le film ______ nous avons regardé était amusant.'",
+          "answer": "que"
+        },
+        {
+          "prompt": "Complétez le blanc : 'C'est le professeur ______ les élèves parlent.'",
+          "answer": "dont"
+        }
+      ]
+    },
+    {
+      "rule_id": "faire-causatif-faire-infinitive",
+      "topic": "Faire causatif (faire + infinitive)",
+      "title": "Le causatif 'Faire' (Faire + Infinitif)",
+      "explanation": "En français, 'faire + infinitif' signifie 'faire faire quelque chose à quelqu'un' ou 'faire en sorte que quelque chose arrive'. La personne qui effectue l'action est l'objet de 'faire', pas le sujet de l'infinitif. Une erreur courante est de placer un pronom entre 'faire' et l'infinitif, mais les pronoms doivent venir avant 'faire'.",
+      "examples": [
+        {
+          "wrong": "Je fais lui manger.",
+          "right": "Je le fais manger.",
+          "note": "Avec les pronoms, placez-les avant 'faire' (ici : 'le' = lui)."
+        },
+        {
+          "wrong": "Je fais mon ami venir.",
+          "right": "Je fais venir mon ami.",
+          "note": "Avec un nom, placez-le après l'infinitif (ici : 'mon ami' = mon ami)."
+        },
+        {
+          "wrong": "Elle fait les enfants dormir.",
+          "right": "Elle fait dormir les enfants.",
+          "note": "L'infinitif 'dormir' vient avant le nom 'les enfants'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduisez : 'I make him work.' (utilisez 'travailler')",
+          "answer": "Je le fais travailler."
+        },
+        {
+          "prompt": "Traduisez : 'She has the children eat.' (utilisez 'manger')",
+          "answer": "Elle fait manger les enfants."
+        },
+        {
+          "prompt": "Traduisez : 'We have the car repaired.' (utilisez 'réparer')",
+          "answer": "Nous faisons réparer la voiture."
+        }
+      ]
+    },
+    {
+      "rule_id": "depuis-vs-il-y-a",
+      "topic": "Depuis vs il y a",
+      "title": "Depuis vs Il y a : Durée vs Temps écoulé",
+      "explanation": "Utilisez 'depuis' pour parler d'une action qui a commencé dans le passé et se poursuit jusqu'au présent (depuis). Utilisez 'il y a' pour parler d'une action terminée qui a eu lieu il y a un certain temps. Pensez à 'depuis' comme répondant à la question 'combien de temps ?' et 'il y a' à 'quand ?'.",
+      "examples": [
+        {
+          "wrong": "J'étudie le français il y a trois ans.",
+          "right": "J'étudie le français depuis trois ans.",
+          "note": "Si vous étudiez encore le français, utilisez 'depuis' (durée du passé jusqu'à maintenant)."
+        },
+        {
+          "wrong": "Je suis arrivé depuis deux heures.",
+          "right": "Je suis arrivé il y a deux heures.",
+          "note": "Si l'arrivée est terminée, utilisez 'il y a' (un point dans le passé)."
+        },
+        {
+          "wrong": "Elle habite ici il y a 2010.",
+          "right": "Elle habite ici depuis 2010.",
+          "note": "Pour un point de départ qui continue jusqu'à maintenant, utilisez 'depuis' (depuis 2010)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduisez : 'I have been waiting for 20 minutes.' (action toujours en cours)",
+          "answer": "J'attends depuis 20 minutes."
+        },
+        {
+          "prompt": "Traduisez : 'He left two days ago.' (action terminée)",
+          "answer": "Il est parti il y a deux jours."
+        },
+        {
+          "prompt": "Complétez : 'Nous nous sommes rencontrés ___ trois mois.' (rencontrés il y a trois mois, action terminée)",
+          "answer": "Nous nous sommes rencontrés il y a trois mois."
+        }
+      ]
+    },
+    {
+      "rule_id": "comparative-and-superlative-forms",
+      "topic": "Comparative and superlative forms",
+      "title": "Formes comparatives et superlatives",
+      "explanation": "En français, les comparatifs utilisent 'plus...que' (plus que), 'aussi...que' (aussi...que), ou 'moins...que' (moins que). Le superlatif se forme avec 'le/la/les plus/moins' + adjectif, et l'adjectif doit s'accorder en genre et en nombre. Une erreur courante est d'oublier l'accord de l'adjectif ou d'utiliser 'que' incorrectement après un superlatif (il faut 'de').",
+      "examples": [
+        {
+          "wrong": "Elle est plus grande que lui.",
+          "right": "Elle est plus grande que lui.",
+          "note": "C'est en fait correct ; une erreur courante est 'plus grand que elle' (mauvais ordre des mots). Mais pour la démonstration, voici une version erronée : 'Elle est plus grande que lui' est correct. Laissez-moi corriger : une erreur typique est 'Il est plus grand que elle' au lieu de 'Il est plus grand qu'elle' (apostrophe)."
+        },
+        {
+          "wrong": "C'est la plus bon tarte.",
+          "right": "C'est la meilleure tarte.",
+          "note": "'Bon' devient 'meilleur' au comparatif/superlatif ; l'adjectif doit aussi s'accorder : 'meilleure' au féminin."
+        },
+        {
+          "wrong": "Il est le plus intelligent de la classe.",
+          "right": "Il est le plus intelligent de la classe.",
+          "note": "Ceci est correct. Une erreur courante est de dire 'le plus intelligent que la classe' au lieu de 'de la classe'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduis : 'She is taller than her brother.' Utilise 'grand(e)'.",
+          "answer": "Elle est plus grande que son frère."
+        },
+        {
+          "prompt": "Remplissez le blanc : 'This is the best restaurant in town.' Utilisez 'bon' au superlatif.",
+          "answer": "C'est le meilleur restaurant de la ville."
+        },
+        {
+          "prompt": "Corrigez l'erreur : 'Marie est aussi intelligente que Paul' est correct, mais mettez au superlatif : 'Marie est la plus intelligente' – ajoutez 'de la classe'.",
+          "answer": "Marie est la plus intelligente de la classe."
+        }
+      ]
+    },
+    {
+      "rule_id": "demonstrative-adjectives-and-pronouns",
+      "topic": "Demonstrative adjectives and pronouns",
+      "title": "Adjectifs et pronoms démonstratifs : Choisir entre ce et celui",
+      "explanation": "Les adjectifs démonstratifs (ce, cet, cette, ces) modifient un nom : 'ce livre'. Les pronoms démonstratifs (celui, celle, ceux, celles) remplacent un nom : 'celui-ci'. Une erreur courante est d'utiliser ce seul là où un pronom est nécessaire, ou de se tromper de genre du pronom. Rappelez-vous : les adjectifs accompagnent les noms, les pronoms sont seuls.",
+      "examples": [
+        {
+          "wrong": "Je préfère ce.",
+          "right": "Je préfère celui-ci.",
+          "note": "Ce est un adjectif et doit être suivi d'un nom ; utilisez un pronom (celui/celle/ceux/celles) lorsque vous le remplacez."
+        },
+        {
+          "wrong": "Cette robe et celui-là sont jolies.",
+          "right": "Cette robe et celle-là sont jolies.",
+          "note": "Celle (féminin) doit correspondre au genre de 'robe', pas celui (masculin)."
+        },
+        {
+          "wrong": "Ces sont mes amis.",
+          "right": "Ce sont mes amis.",
+          "note": "Utilisez 'ce sont' (expression impersonnelle) avant un nom, pas 'ces' qui est un adjectif pluriel."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduisez : « Je veux ce livre, pas celui-là. »",
+          "answer": "Je veux ce livre, pas celui-là."
+        },
+        {
+          "prompt": "Remplissez le blanc : '______ voiture-ci est plus rapide que ______ là.' (Cette voiture-ci est plus rapide que celle-là.)",
+          "answer": "Cette voiture-ci est plus rapide que celle-là."
+        },
+        {
+          "prompt": "Choisissez le bon pronom : 'J'aime mes chaussures, mais je préfère (ces / celles) de Marie.'",
+          "answer": "celles"
+        }
+      ]
+    },
+    {
+      "rule_id": "numbers-70-99-thousandmillion",
+      "topic": "Numbers (70-99, thousand/million)",
+      "title": "Nombres 70-99, Mille et Million : Pièges courants",
+      "explanation": "Les nombres français de 70 à 99 suivent un modèle base‑20. 70 est soixante‑dix (60+10), 80 est quatre‑vingts (4×20), et 90 est quatre‑vingt‑dix (4×20+10). Pour « mille », mille ne prend jamais de -s, mais million et milliard sont des noms qui prennent un -s au pluriel et nécessitent de devant un nom suivant (par exemple, un million de personnes).",
+      "examples": [
+        {
+          "wrong": "Il a soixante et dix ans.",
+          "right": "Il a soixante‑dix ans.",
+          "note": "70 est soixante‑dix (pas de « et »)."
+        },
+        {
+          "wrong": "Il y a quatre‑vingt dix personnes.",
+          "right": "Il y a quatre‑vingt‑dix personnes.",
+          "note": "90 nécessite un trait d'union entre vingt et dix : quatre‑vingt‑dix."
+        },
+        {
+          "wrong": "Cinq milles euros.",
+          "right": "Cinq mille euros.",
+          "note": "Mille est invariable ; n'ajoutez jamais de -s pour les multiples."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Écrivez « 75 » en français.",
+          "answer": "soixante‑quinze"
+        },
+        {
+          "prompt": "Écrivez « 93 » en français.",
+          "answer": "quatre‑vingt‑treize"
+        },
+        {
+          "prompt": "Écrivez « 1 million de personnes » en français.",
+          "answer": "un million de personnes"
+        }
+      ]
+    },
+    {
+      "rule_id": "partitive-articles-after-negation",
+      "topic": "Partitive articles after negation",
+      "title": "Articles partitifs après la négation",
+      "explanation": "En français, après une négation (comme 'ne...pas'), les articles partitifs 'du', 'de la', 'de l'' et 'des' deviennent 'de' (ou 'd'' devant une voyelle). Cette règle s'applique à la plupart des verbes (par ex., avoir, manger, vouloir). Une exception importante est le verbe 'être', où l'article partitif reste inchangé (par ex., 'C'est du pain' → 'Ce n'est pas du pain').",
+      "examples": [
+        {
+          "wrong": "Je n'ai pas du pain.",
+          "right": "Je n'ai pas de pain.",
+          "note": "'Du' devient 'de' après 'ne...pas'."
+        },
+        {
+          "wrong": "Il n'a pas des amis.",
+          "right": "Il n'a pas d'amis.",
+          "note": "'Des' devient 'd'' devant un son voyelle."
+        },
+        {
+          "wrong": "Elle ne veut pas de la salade.",
+          "right": "Elle ne veut pas de salade.",
+          "note": "'De la' devient 'de' (pas de changement de forme, mais l'article est supprimé)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Je ne mange pas de viande.",
+          "answer": "Je ne mange pas de viande."
+        },
+        {
+          "prompt": "Elle n'a pas d'eau.",
+          "answer": "Elle n'a pas d'eau."
+        },
+        {
+          "prompt": "Ils ne veulent pas de pain.",
+          "answer": "Ils ne veulent pas de pain."
+        }
+      ]
+    },
+    {
+      "rule_id": "passé-composé-auxiliary-selection",
+      "topic": "Passé composé auxiliary selection",
+      "title": "Passé Composé : Choisir entre Avoir et Être",
+      "explanation": "En français, la plupart des verbes forment le passé composé avec l'auxiliaire 'avoir'. Cependant, un ensemble de verbes courants (exprimant souvent un mouvement ou un changement d'état) et tous les verbes pronominaux utilisent 'être' à la place. Lorsqu'on utilise 'être', le participe passé doit s'accorder en genre et en nombre avec le sujet.",
+      "examples": [
+        {
+          "wrong": "J'ai allé au cinéma.",
+          "right": "Je suis allé au cinéma.",
+          "note": "'Aller' est l'un des verbes qui nécessite toujours 'être'."
+        },
+        {
+          "wrong": "Elle a tombé.",
+          "right": "Elle est tombée.",
+          "note": "'Tomber' utilise 'être' et le participe s'accorde avec le sujet féminin."
+        },
+        {
+          "wrong": "Nous avons parti tôt.",
+          "right": "Nous sommes partis tôt.",
+          "note": "'Partir' utilise 'être' et le participe s'accorde avec le sujet pluriel."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduisez : 'Je suis arrivé à 8 heures.' (utilisez le masculin singulier)",
+          "answer": "Je suis arrivé à huit heures."
+        },
+        {
+          "prompt": "Traduisez : 'Elles sont sorties.'",
+          "answer": "Elles sont sorties."
+        },
+        {
+          "prompt": "Traduisez : 'Il est resté à la maison.'",
+          "answer": "Il est resté à la maison."
+        }
+      ]
+    },
+    {
+      "rule_id": "adjective-placement-before-vs-after-noun",
+      "topic": "Adjective placement (before vs after noun)",
+      "title": "Placement des adjectifs : avant ou après le nom ?",
+      "explanation": "En français, la plupart des adjectifs se placent après le nom (ex. 'un livre intéressant'). Cependant, un petit groupe d'adjectifs courants – décrivant souvent la beauté, l'âge, la bonté ou la taille (BAGS) – se placent avant le nom (ex. 'un beau jardin'). Apprenez ces exceptions pour paraître naturel.",
+      "examples": [
+        {
+          "wrong": "un jardin beau",
+          "right": "un beau jardin",
+          "note": "'Beau' (beau) est un adjectif BAGS, donc il se place avant le nom."
+        },
+        {
+          "wrong": "une voiture rouge",
+          "right": "une voiture rouge",
+          "note": "Les adjectifs de couleur (comme 'rouge') se placent toujours après le nom — c'est correct comme indiqué."
+        },
+        {
+          "wrong": "une maison vieille",
+          "right": "une vieille maison",
+          "note": "'Vieille' (vieille) décrit l'âge, donc il se place avant le nom."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduisez 'un petit chat' en français, en plaçant l'adjectif correctement.",
+          "answer": "un petit chat"
+        },
+        {
+          "prompt": "Corrigez l'ordre des mots : 'une robe belle'.",
+          "answer": "une belle robe"
+        },
+        {
+          "prompt": "Écrivez 'un nouveau livre' en français avec l'adjectif à la bonne position.",
+          "answer": "un nouveau livre"
+        }
+      ]
+    }
+  ]
+}

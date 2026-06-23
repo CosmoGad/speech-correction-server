@@ -1,0 +1,898 @@
+{
+  "learning": "es",
+  "interface": "fr",
+  "generated_at": "2026-06-22T20:51:12.355470+00:00",
+  "model": "deepseek-v4-flash",
+  "translated_from": "en",
+  "rules": [
+    {
+      "rule_id": "serestar",
+      "topic": "Ser/Estar",
+      "title": "Ser vs Estar : Quand utiliser l'un ou l'autre",
+      "explanation": "En espagnol, 'ser' et 'estar' se traduisent tous deux par 'être', mais ils ont des usages distincts. Utilisez 'ser' pour les caractéristiques permanentes ou déterminantes (identité, origine, profession, temps) et 'estar' pour les états temporaires (localisation, émotions, conditions). Une erreur courante est d'utiliser 'ser' pour la localisation ou les sentiments temporaires, ou 'estar' pour des traits inhérents.",
+      "examples": [
+        {
+          "wrong": "Soy en la biblioteca.",
+          "right": "Estoy en la biblioteca.",
+          "note": "Utilisez 'estar' pour la localisation, pas 'ser'."
+        },
+        {
+          "wrong": "Estoy estudiante.",
+          "right": "Soy estudiante.",
+          "note": "Utilisez 'ser' pour les professions ou les identités."
+        },
+        {
+          "wrong": "Él es cansado.",
+          "right": "Él está cansado.",
+          "note": "Utilisez 'estar' pour les états physiques temporaires comme la fatigue ; 'ser cansado' signifie qu'il est une personne fatigante."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complétez : 'Yo ___ (ser/estar) feliz hoy.'",
+          "answer": "estoy"
+        },
+        {
+          "prompt": "Complétez : 'Ellos ___ (ser/estar) de España.'",
+          "answer": "son"
+        },
+        {
+          "prompt": "Complétez : 'La mesa ___ (ser/estar) en la cocina.'",
+          "answer": "está"
+        }
+      ]
+    },
+    {
+      "rule_id": "subjuntivo",
+      "topic": "Subjuntivo",
+      "title": "Utiliser le subjonctif correctement après les déclencheurs courants",
+      "explanation": "En espagnol, le mode subjonctif est utilisé après certaines expressions qui expriment le doute, l'émotion, la nécessité ou des actions futures. Les déclencheurs courants incluent 'es importante que', 'espero que', 'es necesario que' et 'cuando' lorsqu'il fait référence à un événement futur. Les débutants utilisent souvent par erreur l'indicatif (présent normal) au lieu du subjonctif après ces déclencheurs.",
+      "examples": [
+        {
+          "wrong": "Es importante que estudias mucho.",
+          "right": "Es importante que estudies mucho.",
+          "note": "Après 'es importante que' (il est important que), utilisez le subjonctif car il exprime une nécessité ou une opinion."
+        },
+        {
+          "wrong": "Cuando termino mi trabajo, voy a casa.",
+          "right": "Cuando termine mi trabajo, voy a casa.",
+          "note": "Lorsque 'cuando' fait référence à une action future (pas une action habituelle), utilisez le subjonctif."
+        },
+        {
+          "wrong": "Ojalá llueve mañana.",
+          "right": "Ojalá llueva mañana.",
+          "note": "'Ojalá' déclenche toujours le subjonctif car il exprime un souhait ou un espoir."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Remplissez le blanc avec la forme correcte du subjonctif : Es necesario que (tú) _______ (hablar) con el profesor.",
+          "answer": "hables"
+        },
+        {
+          "prompt": "Remplissez le blanc avec la forme correcte du subjonctif : Espero que (ella) _______ (venir) a la fiesta.",
+          "answer": "venga"
+        },
+        {
+          "prompt": "Remplissez le blanc avec la forme correcte du subjonctif : Cuando yo _______ (llegar) a casa, te llamaré.",
+          "answer": "llegue"
+        }
+      ]
+    },
+    {
+      "rule_id": "tiempos-verbales",
+      "topic": "Tiempos verbales",
+      "title": "Prétérit vs. Imparfait : Quand utiliser chacun",
+      "explanation": "En espagnol, le prétérit est utilisé pour des actions qui sont achevées ou qui ont eu lieu à un moment précis dans le passé, tandis que l'imparfait décrit des actions continues, habituelles ou d'arrière-plan. De nombreux anglophones utilisent par erreur l'imparfait pour des actions achevées ou vice versa. Rappelez-vous : si l'action a un début et une fin clairs, utilisez le prétérit ; pour les descriptions ou les actions répétées, utilisez l'imparfait.",
+      "examples": [
+        {
+          "wrong": "Ayer yo comía pizza.",
+          "right": "Ayer yo comí pizza.",
+          "note": "Utilisez le prétérit pour une action achevée spécifique à un moment défini."
+        },
+        {
+          "wrong": "Cuando era niño, yo fui feliz.",
+          "right": "Cuando era niño, yo era feliz.",
+          "note": "Utilisez l'imparfait pour des descriptions d'états ou de sentiments dans le passé."
+        },
+        {
+          "wrong": "Ellos jugaban fútbol ayer a las 3.",
+          "right": "Ellos jugaron fútbol ayer a las 3.",
+          "note": "Avec un moment précis, utilisez le prétérit pour l'action achevée."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complétez avec le temps passé correct : 'Ayer yo _____ (hablar) con mi madre.'",
+          "answer": "hablé"
+        },
+        {
+          "prompt": "Choisissez le verbe correct : 'Cuando era niño, yo _____ (vivir) en una casa grande.' (viví / vivía)",
+          "answer": "vivía"
+        },
+        {
+          "prompt": "Remplissez : 'Ellos _____ (visitar) el museo el lunes pasado.'",
+          "answer": "visitaron"
+        }
+      ]
+    },
+    {
+      "rule_id": "preposiciones",
+      "topic": "Preposiciones",
+      "title": "Por vs. Para : Une erreur courante de préposition",
+      "explanation": "Les deux 'por' et 'para' peuvent signifier 'for' en anglais, mais ils ont des usages distincts. Utilisez 'por' pour les raisons, les durées et les échanges ; utilisez 'para' pour les buts, les destinations et les destinataires. Une erreur fréquente est de les confondre dans les expressions de gratitude ou d'objectifs.",
+      "examples": [
+        {
+          "wrong": "Gracias para tu ayuda.",
+          "right": "Gracias por tu ayuda.",
+          "note": "Utilisez 'por' après 'gracias' pour indiquer la raison du remerciement."
+        },
+        {
+          "wrong": "Estudio por aprobar el examen.",
+          "right": "Estudio para aprobar el examen.",
+          "note": "Utilisez 'para' pour exprimer un but ou un objectif."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complétez le blanc : 'Estudio ___ aprender.' (but)",
+          "answer": "para"
+        },
+        {
+          "prompt": "Complétez le blanc : 'Gracias ___ tu ayuda.' (raison)",
+          "answer": "por"
+        }
+      ]
+    },
+    {
+      "rule_id": "sonidos-rrr-звуки-rrr",
+      "topic": "Sonidos r/rr (звуки r/rr)",
+      "title": "Les sons R et RR en espagnol",
+      "explanation": "En espagnol, le 'r' simple est un son de battement rapide (comme le 'dd' dans 'ladder' en anglais américain), tandis que le double 'rr' est un son roulé ou vibrant produit en faisant vibrer le bout de la langue contre le palais. Le 'r' en début de mot est également roulé. Les mal prononcer peut changer le sens des mots.",
+      "examples": [
+        {
+          "wrong": "pero",
+          "right": "perro",
+          "note": "Omission du roulement : 'pero' signifie 'mais', 'perro' signifie 'chien'."
+        },
+        {
+          "wrong": "caro",
+          "right": "carro",
+          "note": "Un simple battement contre un roulement : 'caro' signifie 'cher', 'carro' signifie 'voiture'."
+        },
+        {
+          "wrong": "coro",
+          "right": "corro",
+          "note": "Encore, un 'r' simple contre un 'r' double : 'coro' signifie 'chœur', 'corro' signifie 'je cours'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Comment dit-on 'rice' en espagnol ? (indice : il a un 'r' roulé au début)",
+          "answer": "arroz"
+        },
+        {
+          "prompt": "Quelle est l'orthographe correcte de 'but' en espagnol ? (un seul 'r', pas double)",
+          "answer": "pero"
+        },
+        {
+          "prompt": "Complétez le blanc : 'El ___ (chien) ladra.'",
+          "answer": "perro"
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciación-de-la-ñ",
+      "topic": "Pronunciación de la ñ",
+      "title": "Prononcer le Ñ espagnol",
+      "explanation": "La lettre espagnole 'ñ' représente un son nasal palatal distinct, similaire au 'ny' dans 'canyon' mais plus doux et avec la langue contre le palais. Les anglophones le remplacent souvent à tort par un simple 'n' ou une séparation 'n-y' maladroite, ce qui peut changer le sens des mots. Entraînez-vous en prononçant 'ny' comme un seul son, et non deux lettres séparées.",
+      "examples": [
+        {
+          "wrong": "mañana",
+          "right": "mañana",
+          "note": "La version incorrecte utilise un simple 'n', changeant le sens de 'demain' à autre chose. La version correcte a le son 'ñ'."
+        },
+        {
+          "wrong": "año",
+          "right": "año",
+          "note": "Prononcer 'año' comme 'ano' (qui signifie 'anus') est une erreur embarrassante courante. Utilisez le 'ñ' pour dire 'an' correctement."
+        },
+        {
+          "wrong": "niño",
+          "right": "niño",
+          "note": "Sans le 'ñ', 'nino' n'est pas un mot espagnol. 'Niño' signifie 'enfant' ou 'garçon'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Comment dit-on 'Espagne' en espagnol ? (Rappelez-vous le son 'ñ')",
+          "answer": "España"
+        },
+        {
+          "prompt": "Écrivez le mot pour 'petite fille' en utilisant le 'ñ' correct",
+          "answer": "niña"
+        },
+        {
+          "prompt": "Complétez : 'Je vais dîner ce soir' (utilisez le mot pour 'dîner' avec 'ñ')",
+          "answer": "voy a cenar esta noche"
+        }
+      ]
+    },
+    {
+      "rule_id": "entonación",
+      "topic": "Entonación",
+      "title": "Intonation en espagnol : déclarations vs questions",
+      "explanation": "En espagnol, la différence entre une déclaration et une question fermée repose souvent uniquement sur l'intonation. Les déclarations se terminent par un ton descendant, tandis que les questions se terminent par un ton montant. Les anglophones utilisent fréquemment une intonation montante sur les déclarations, ce qui peut amener les auditeurs à penser qu'ils posent une question.",
+      "examples": [
+        {
+          "wrong": "Ella viene mañana?",
+          "right": "Ella viene mañana.",
+          "note": "Les mêmes mots, mais le ton montant dans le premier le fait ressembler à une question. Utilisez un ton descendant pour les déclarations."
+        },
+        {
+          "wrong": "Hablas inglés?",
+          "right": "Hablas inglés.",
+          "note": "Encore une fois, l'intonation montante transforme une déclaration en question. Rappelez-vous : les déclarations descendent, les questions montent."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Écrivez la phrase 'Tu parles espagnol' comme une déclaration (utilisez un point).",
+          "answer": "Hablas español."
+        },
+        {
+          "prompt": "Écrivez la phrase 'Est-ce qu'il habite ici ?' comme une question (utilisez la ponctuation appropriée).",
+          "answer": "¿Él vive aquí?"
+        },
+        {
+          "prompt": "Changez la question suivante en déclaration : '¿Ella trabaja?'",
+          "answer": "Ella trabaja."
+        }
+      ]
+    },
+    {
+      "rule_id": "gender-of-nouns-masculinefeminine",
+      "topic": "Gender of nouns (masculine/feminine)",
+      "title": "Genre des noms : terminaisons masculines et féminines",
+      "explanation": "En espagnol, les noms ont un genre : masculin ou féminin. La plupart des noms se terminant par -o sont masculins, et ceux se terminant par -a sont féminins, mais il y a d'importantes exceptions. Par exemple, les noms se terminant par -ma (souvent d'origine grecque) comme 'problema' sont masculins, et 'mano' (main) est féminin bien qu'il se termine par -o.",
+      "examples": [
+        {
+          "wrong": "la problema",
+          "right": "el problema",
+          "note": "Les noms se terminant par -ma sont généralement masculins."
+        },
+        {
+          "wrong": "el mano",
+          "right": "la mano",
+          "note": "La main est féminine même si elle se termine par -o."
+        },
+        {
+          "wrong": "el foto",
+          "right": "la foto",
+          "note": "Foto est l'abréviation de fotografía, donc il reste féminin."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Remplissez l'article correct pour 'día' (jour).",
+          "answer": "el día"
+        },
+        {
+          "prompt": "Remplissez l'article correct pour 'mano' (main).",
+          "answer": "la mano"
+        },
+        {
+          "prompt": "Remplissez l'article correct pour 'sistema' (système).",
+          "answer": "el sistema"
+        }
+      ]
+    },
+    {
+      "rule_id": "adjective-agreement-in-gender-and-number",
+      "topic": "Adjective agreement in gender and number",
+      "title": "Accord de l'adjectif en genre et en nombre",
+      "explanation": "En espagnol, les adjectifs doivent s'accorder avec le nom qu'ils décrivent en genre (masculin ou féminin) et en nombre (singulier ou pluriel). Généralement, les adjectifs masculins se terminent en -o, les féminins en -a, et on ajoute -s pour le pluriel. Les erreurs courantes surviennent lorsque l'adjectif ne change pas pour s'accorder avec le nom.",
+      "examples": [
+        {
+          "wrong": "La casa rojo",
+          "right": "La casa roja",
+          "note": "'Casa' est féminin, donc l'adjectif doit être féminin (roja, pas rojo)."
+        },
+        {
+          "wrong": "Los coches roja",
+          "right": "Los coches rojos",
+          "note": "'Coches' est masculin pluriel, donc l'adjectif doit être masculin pluriel (rojos, pas roja)."
+        },
+        {
+          "wrong": "Las flores bonito",
+          "right": "Las flores bonitas",
+          "note": "'Flores' est féminin pluriel, donc l'adjectif doit être féminin pluriel (bonitas, pas bonito)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complétez le blanc : La grande maison (la casa) → la casa _____ (grande)",
+          "answer": "grande"
+        },
+        {
+          "prompt": "Complétez le blanc : Les chats blancs (los gatos) → los gatos _____ (blanco)",
+          "answer": "blancos"
+        }
+      ]
+    },
+    {
+      "rule_id": "direct-object-pronouns-lo-la-los-las",
+      "topic": "Direct object pronouns (lo, la, los, las)",
+      "title": "Pronoms d'objet direct (lo, la, los, las)",
+      "explanation": "En espagnol, les pronoms d'objet direct (lo, la, los, las) doivent correspondre en genre et en nombre au nom qu'ils remplacent et se placent avant le verbe conjugué (ou s'attachent à un infinitif/gérondif). Une erreur courante est de mettre le pronom après le verbe ou d'utiliser la forme incorrecte.",
+      "examples": [
+        {
+          "wrong": "Veo él.",
+          "right": "Lo veo.",
+          "note": "Remplacez 'él' (lui) par 'lo' et déplacez-le avant le verbe."
+        },
+        {
+          "wrong": "Compro las manzanas y las como.",
+          "right": "Compro las manzanas y las como.",
+          "note": "Le second 'las' est correct s'il remplace 'manzanas' (féminin pluriel). Mais beaucoup d'apprenants oublient de changer le pronom."
+        },
+        {
+          "wrong": "Voy a ver ella.",
+          "right": "La voy a ver. OR Voy a verla.",
+          "note": "Attachez 'la' à l'infinitif ou placez-le avant le verbe conjugué."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduisez : 'Je les vois (masculin).'",
+          "answer": "Los veo."
+        },
+        {
+          "prompt": "Remplacez 'la casa' par le pronom correct dans : 'Ella compra la casa.'",
+          "answer": "Ella la compra."
+        },
+        {
+          "prompt": "Choisissez le pronom correct pour 'las flores' dans : 'Él riega las flores.'",
+          "answer": "Él las riega."
+        }
+      ]
+    },
+    {
+      "rule_id": "indirect-object-pronouns-le-les",
+      "topic": "Indirect object pronouns (le, les)",
+      "title": "Pronoms d'objet indirect : Le et Les",
+      "explanation": "En espagnol, 'le' (singulier) et 'les' (pluriel) sont des pronoms d'objet indirect, signifiant 'à lui/elle/vous (formel)' et 'à eux/elles/vous (pluriel)'. Une erreur courante est de les utiliser comme objets directs (par exemple, 'le vi' pour 'je l'ai vu' devrait être 'lo vi') ou d'oublier d'accorder le nombre avec l'objet indirect (par exemple, utiliser 'le' au lieu de 'les' pour une personne plurielle). De plus, lorsque l'objet indirect est explicitement mentionné (comme 'a Juan'), vous devez tout de même inclure le pronom.",
+      "examples": [
+        {
+          "wrong": "Le vi a Juan.",
+          "right": "Lo vi a Juan.",
+          "note": "Utilisez 'lo' (objet direct) pour 'lui', et non 'le' (objet indirect), car 'voir' ne prend pas d'objet indirect."
+        },
+        {
+          "wrong": "Le compré un regalo a mis padres.",
+          "right": "Les compré un regalo a mis padres.",
+          "note": "Remplacez 'le' par 'les' car 'mis padres' est pluriel (à eux)."
+        },
+        {
+          "wrong": "Doy el libro a Juan.",
+          "right": "Le doy el libro a Juan.",
+          "note": "Le pronom 'le' est obligatoire même lorsque 'a Juan' est mentionné ; il n'est pas facultatif."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complétez la phrase avec le pronom d'objet indirect correct : Je donne le livre à María. (Yo) ___ doy el libro a María.",
+          "answer": "Le"
+        },
+        {
+          "prompt": "Complétez la phrase : Ils écrivent une lettre à leurs grands-parents. (Ellos) ___ escriben una carta a sus abuelos.",
+          "answer": "Les"
+        },
+        {
+          "prompt": "Complétez la phrase : Il envoie un courriel à vous (formel). Él ___ envía un correo a usted.",
+          "answer": "Le"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-personal-a",
+      "topic": "Use of personal 'a'",
+      "title": "Le 'a' personnel en espagnol",
+      "explanation": "En espagnol, lorsque le complément d'objet direct d'un verbe est une personne spécifique ou un animal de compagnie (traité comme une personne), vous devez insérer la préposition 'a' avant celui-ci. C'est ce qu'on appelle le 'personal a' et il n'a pas de traduction directe en anglais. Si le complément d'objet direct n'est pas une personne ou un animal de compagnie (par exemple, un objet, un animal non traité comme un animal de compagnie), vous n'utilisez pas 'a'.",
+      "examples": [
+        {
+          "wrong": "Veo Juan.",
+          "right": "Veo a Juan.",
+          "note": "Juan est une personne spécifique, donc 'a' est requis."
+        },
+        {
+          "wrong": "Busco mi perro.",
+          "right": "Busco a mi perro.",
+          "note": "Les animaux de compagnie sont considérés comme des personnes, donc le 'a' personnel est utilisé."
+        },
+        {
+          "wrong": "Visito la abuela.",
+          "right": "Visito a la abuela.",
+          "note": "Les membres de la famille sont traités comme des personnes, donc 'a' est nécessaire."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduisez : Je vois María.",
+          "answer": "Veo a María."
+        },
+        {
+          "prompt": "Traduisez : Elle aime son chat.",
+          "answer": "Ella ama a su gato."
+        },
+        {
+          "prompt": "Traduisez : Vous appelez le docteur.",
+          "answer": "Usted llama al doctor."
+        }
+      ]
+    },
+    {
+      "rule_id": "verbs-like-gustar-me-gusta-etc",
+      "topic": "Verbs like 'gustar' (me gusta, etc.)",
+      "title": "Verbes comme 'Gustar' (Me Gusta, etc.)",
+      "explanation": "En espagnol, les verbes comme 'gustar' fonctionnent différemment de l'anglais 'to like'. Le sujet est la chose aimée, et la personne qui aime est l'objet indirect (me, te, le, nos, les). On dit donc 'Me gusta la pizza' (la pizza me plaît), et non 'Yo gusto la pizza'.",
+      "examples": [
+        {
+          "wrong": "Yo gusto el libro.",
+          "right": "Me gusta el libro.",
+          "note": "Le livre est le sujet (gusta), et 'me' indique qui l'aime."
+        },
+        {
+          "wrong": "Ellos gustan los deportes.",
+          "right": "A ellos les gustan los deportes.",
+          "note": "Utilisez 'les' pour l'objet indirect pluriel et 'gustan' car les sports (deportes) sont pluriels."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduisez : 'I like the movies.' (films = películas)",
+          "answer": "Me gustan las películas."
+        },
+        {
+          "prompt": "Corrigez l'erreur : 'Tú gustas la música.'",
+          "answer": "Te gusta la música."
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-verbs-and-pronouns",
+      "topic": "Reflexive verbs and pronouns",
+      "title": "Verbes et pronoms réfléchis",
+      "explanation": "En espagnol, de nombreuses actions où le sujet agit sur lui-même nécessitent un pronom réfléchi (me, te, se, nos, os). L'anglais omet souvent le pronom réfléchi (par exemple, 'I bathe' vs. 'I bathe myself'), mais l'espagnol doit l'inclure lorsque le sujet et l'objet sont identiques. Une erreur fréquente est d'omettre le pronom, surtout avec les verbes de la routine quotidienne comme 'levantarse' (se lever) ou 'vestirse' (s'habiller).",
+      "examples": [
+        {
+          "wrong": "Yo levanto a las siete.",
+          "right": "Yo me levanto a las siete.",
+          "note": "'Levantar' signifie 'soulever quelqu'un/quelque chose' ; il faut 'me' pour dire 'je me lève'."
+        },
+        {
+          "wrong": "Él viste para la fiesta.",
+          "right": "Él se viste para la fiesta.",
+          "note": "'Vestir' sans 'se' signifie 'habiller quelqu'un d'autre' ; 'vestirse' signifie 's'habiller'."
+        },
+        {
+          "wrong": "Nosotros llamamos Pedro.",
+          "right": "Nosotros nos llamamos Pedro.",
+          "note": "'Llamar' signifie 'appeler' ; 'llamarse' signifie 's'appeler' (notre nom). Le pronom est nécessaire."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduisez : 'Je me lave les mains.' (Utilisez le verbe réfléchi 'lavarse').",
+          "answer": "Yo me lavo las manos."
+        },
+        {
+          "prompt": "Complétez : 'Elle se couche à dix heures.' (Utilisez 'acostarse').",
+          "answer": "Ella se acuesta a las diez."
+        },
+        {
+          "prompt": "Remplissez le blanc : 'Nous ___ (nous sentons) fatigués.' (Utilisez 'sentirse').",
+          "answer": "Nos sentimos cansados."
+        }
+      ]
+    },
+    {
+      "rule_id": "formal-vs-informal-commands-imperative",
+      "topic": "Formal vs informal commands (imperative)",
+      "title": "Commandes formelles vs informelles (Impératif)",
+      "explanation": "En espagnol, le mode impératif change selon que l’on s’adresse à quelqu’un de manière informelle (tú) ou formelle (usted). Pour les commandes informelles affirmatives, utilisez la forme él/ella du présent de l’indicatif (par exemple, 'habla'). Pour les commandes formelles (affirmatives et négatives) et les commandes informelles négatives, utilisez le présent du subjonctif (par exemple, 'hable', 'no hables').",
+      "examples": [
+        {
+          "wrong": "Habla más despacio. (to a stranger)",
+          "right": "Hable más despacio.",
+          "note": "Utilisez la commande formelle 'hable' lorsque vous vous adressez à quelqu’un que vous ne connaissez pas bien ou pour montrer du respect."
+        },
+        {
+          "wrong": "No come eso. (to a friend)",
+          "right": "No comas eso.",
+          "note": "Les commandes informelles négatives nécessitent le subjonctif : 'no comas' au lieu de 'no come'."
+        },
+        {
+          "wrong": "Escribe la carta. (to your boss)",
+          "right": "Escriba la carta.",
+          "note": "Pour le formel 'usted', changez le verbe à la forme du subjonctif : 'escriba'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Dites à un ami (tú) 'parle plus lentement' en espagnol.",
+          "answer": "Habla más despacio."
+        },
+        {
+          "prompt": "Dites à un médecin (formel) 'asseyez-vous, s’il vous plaît' en espagnol.",
+          "answer": "Siéntese, por favor."
+        },
+        {
+          "prompt": "Dites à un enfant (tú) 'ne cours pas' en espagnol.",
+          "answer": "No corras."
+        }
+      ]
+    },
+    {
+      "rule_id": "comparative-and-superlative-forms",
+      "topic": "Comparative and superlative forms",
+      "title": "Formes comparatives et superlatives en espagnol",
+      "explanation": "En espagnol, les comparatifs utilisent 'más...que' (plus que) ou 'menos...que' (moins que) pour comparer deux choses. Pour les superlatifs, utilisez 'el/la/los/las más...de' (le/la/les plus... de/parmi) pour indiquer le degré le plus élevé. N'oubliez pas que les adjectifs doivent s'accorder en genre et en nombre, et que les formes irrégulières comme 'mejor' (meilleur/meilleure) et 'peor' (pire) n'utilisent pas 'más'.",
+      "examples": [
+        {
+          "wrong": "Ella es más inteligente de Juan.",
+          "right": "Ella es más inteligente que Juan.",
+          "note": "Utilisez 'que' (pas 'de') après 'más/menos' dans les comparaisons."
+        },
+        {
+          "wrong": "Ella es más rápida de la clase.",
+          "right": "Ella es la más rápida de la clase.",
+          "note": "Les superlatifs nécessitent l'article défini ('el/la/los/las') avant 'más/menos'."
+        },
+        {
+          "wrong": "Este es el más mejor libro.",
+          "right": "Este es el mejor libro.",
+          "note": "Les superlatifs irréguliers comme 'mejor' et 'peor' n'utilisent jamais 'más'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduisez : 'She is taller than him.'",
+          "answer": "Ella es más alta que él."
+        },
+        {
+          "prompt": "Traduisez : 'This is the most interesting book.'",
+          "answer": "Este es el libro más interesante."
+        },
+        {
+          "prompt": "Corrigez l'erreur : 'Él es el más inteligente estudiante.'",
+          "answer": "Él es el estudiante más inteligente."
+        }
+      ]
+    },
+    {
+      "rule_id": "demonstrative-adjectives-and-pronouns-este-ese-aquel",
+      "topic": "Demonstrative adjectives and pronouns (este, ese, aquel)",
+      "title": "Adjectifs et pronoms démonstratifs : Este, Ese, Aquel",
+      "explanation": "En espagnol, 'este' (ceci), 'ese' (cela) et 'aquel' (là-bas) indiquent différentes distances par rapport au locuteur. 'Este' se réfère à quelque chose de proche, 'ese' à quelque chose près de l'auditeur, et 'aquel' à quelque chose de loin des deux. Une erreur courante est d'utiliser 'este' quand 'ese' ou 'aquel' est nécessaire, ou de confondre les formes de genre/nombre.",
+      "examples": [
+        {
+          "wrong": "Este libro que tienes en la mano es interesante.",
+          "right": "Ese libro que tienes en la mano es interesante.",
+          "note": "Utilisez 'ese' pour quelque chose près de l'auditeur, pas 'este' (qui est près du locuteur)."
+        },
+        {
+          "wrong": "¿Puedes pasarme aquel lápiz que está aquí?",
+          "right": "¿Puedes pasarme este lápiz que está aquí?",
+          "note": "'Aquel' est pour les objets éloignés ; si c'est ici, utilisez 'este'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complétez le blanc avec la forme correcte : '___ (là-bas) casa en la colina es muy antigua.'",
+          "answer": "Aquella"
+        },
+        {
+          "prompt": "Complétez le blanc : '___ (ce) manzana que tengo en la mano es roja.'",
+          "answer": "Esta"
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-adjectives-mi-tu-su-vs-possessive-pronouns-mío-tuyo",
+      "topic": "Possessive adjectives (mi, tu, su) vs possessive pronouns (mío, tuyo)",
+      "title": "Adjectifs possessifs vs. Pronoms possessifs",
+      "explanation": "Les adjectifs possessifs (mi, tu, su) se placent avant un nom et s'accordent uniquement en nombre (ex. 'mi libro', 'mis libros'). Les pronoms possessifs (mío, tuyo, suyo) remplacent le nom et s'accordent en genre et en nombre (ex. 'el libro mío', 'la casa suya'). Utilisez les adjectifs avant les noms, mais utilisez les pronoms après le verbe 'ser' ou seuls.",
+      "examples": [
+        {
+          "wrong": "Este es mi.",
+          "right": "Este es mío.",
+          "note": "Après 'ser', utilisez le pronom possessif 'mío', pas l'adjectif 'mi'."
+        },
+        {
+          "wrong": "Es el mío libro.",
+          "right": "Es mi libro.",
+          "note": "Avant un nom, utilisez l'adjectif possessif 'mi', pas le pronom 'mío'."
+        },
+        {
+          "wrong": "Son tus amigos? Sí, son tus.",
+          "right": "Son tus amigos? Sí, son míos.",
+          "note": "Après 'ser', utilisez le pronom 'míos' pour s'accorder avec 'amigos'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complétez le blanc avec l'adjectif possessif correct : 'C'est ma maison.'",
+          "answer": "Esta es mi casa."
+        },
+        {
+          "prompt": "Complétez le blanc avec le pronom possessif correct : 'Ce livre est le mien.'",
+          "answer": "Ese libro es mío."
+        },
+        {
+          "prompt": "Choisissez le mot correct : 'Ella es (mi / mía) hermana.'",
+          "answer": "mi"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-qué-vs-cuál",
+      "topic": "Use of 'qué' vs 'cuál'",
+      "title": "Qué vs Cuál : What vs Which",
+      "explanation": "Utilisez 'qué' pour demander des définitions, des explications, ou quand il y a des possibilités illimitées (comme 'what' en anglais). Utilisez 'cuál' pour choisir parmi un ensemble connu ou quand le locuteur a un nombre limité d'options en tête (comme 'which' en anglais). Un truc courant : si vous pouvez le remplacer par 'which one', utilisez 'cuál'.",
+      "examples": [
+        {
+          "wrong": "¿Qué es tu nombre?",
+          "right": "¿Cuál es tu nombre?",
+          "note": "Parce que vous demandez un nom spécifique parmi de nombreuses possibilités (l'ensemble de tous les noms)."
+        },
+        {
+          "wrong": "¿Cuál es eso?",
+          "right": "¿Qué es eso?",
+          "note": "Quand vous demandez une explication ou une définition d'un objet inconnu, utilisez 'qué'."
+        },
+        {
+          "wrong": "¿Qué prefieres, café o té?",
+          "right": "¿Cuál prefieres, café o té?",
+          "note": "Avec un nombre limité d'options données, 'cuál' est correct."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduisez : 'What is your favorite movie?'",
+          "answer": "¿Cuál es tu película favorita?"
+        },
+        {
+          "prompt": "Traduisez : 'What do you want to eat?' (question générale)",
+          "answer": "¿Qué quieres comer?"
+        },
+        {
+          "prompt": "Traduisez : 'Which dress should I buy?' (choisir parmi quelques robes)",
+          "answer": "¿Cuál vestido debo comprar?"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-sino-vs-pero",
+      "topic": "Use of 'sino' vs 'pero'",
+      "title": "Utilisation de 'sino' vs 'pero'",
+      "explanation": "Les deux 'sino' et 'pero' signifient 'mais', mais ils sont utilisés dans des contextes différents. Utilisez 'pero' pour un simple contraste ou une exception (par exemple, 'J'aime le café, mais pas le thé'). Utilisez 'sino' après une phrase négative pour introduire une correction ou une alternative (par exemple, 'Ce n'est pas un chat, mais un chien' – la deuxième partie contredit directement la première). Rappelez-vous : 'sino' n'apparaît que lorsque la première proposition est négative et que la seconde s'oppose directement à elle.",
+      "examples": [
+        {
+          "wrong": "No es caro, pero barato.",
+          "right": "No es caro, sino barato.",
+          "note": "La phrase corrige 'cher' par 'bon marché' après une négation, donc 'sino' est nécessaire."
+        },
+        {
+          "wrong": "No compré pan, sino compré leche.",
+          "right": "No compré pan, pero compré leche.",
+          "note": "Ici, la deuxième partie ajoute une information (acheté du lait) plutôt que de corriger directement 'pan'. Utilisez 'pero'."
+        },
+        {
+          "wrong": "No estudio mucho, sino trabajo.",
+          "right": "No estudio mucho, pero trabajo.",
+          "note": "La deuxième partie est un fait supplémentaire, pas une contradiction directe de la première. Utilisez 'pero'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complétez le blanc avec 'sino' ou 'pero' : 'No es azul, _______ rojo.' (Ce n'est pas bleu, mais rouge.)",
+          "answer": "sino"
+        },
+        {
+          "prompt": "Complétez le blanc : 'Quiero ir, _______ no puedo.' (Je veux y aller, mais je ne peux pas.)",
+          "answer": "pero"
+        },
+        {
+          "prompt": "Complétez le blanc : 'No hablo inglés, _______ español.' (Je ne parle pas anglais, mais plutôt espagnol.)",
+          "answer": "sino"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-muy-vs-mucho",
+      "topic": "Use of 'muy' vs 'mucho'",
+      "title": "Quand utiliser 'Muy' vs 'Mucho'",
+      "explanation": "Utilisez 'muy' (qui signifie 'très') avant les adjectifs ou les adverbes pour les intensifier. Utilisez 'mucho' (qui signifie 'beaucoup' ou 'de beaucoup') avant les noms ou après les verbes pour indiquer la quantité ou le degré.",
+      "examples": [
+        {
+          "wrong": "Estoy mucho cansado.",
+          "right": "Estoy muy cansado.",
+          "note": "'Cansado' est un adjectif, donc utilisez 'muy' (très fatigué) au lieu de 'mucho'."
+        },
+        {
+          "wrong": "Tengo muy dinero.",
+          "right": "Tengo mucho dinero.",
+          "note": "'Dinero' est un nom, donc utilisez 'mucho' (beaucoup d'argent) au lieu de 'muy'."
+        },
+        {
+          "wrong": "Me gusta muy el café.",
+          "right": "Me gusta mucho el café.",
+          "note": "Après un verbe comme 'gustar', utilisez 'mucho' (je l'aime beaucoup) – 'muy' ne peut pas modifier les verbes."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complétez le blanc : 'Ella es _____ inteligente.' (très)",
+          "answer": "muy"
+        },
+        {
+          "prompt": "Complétez le blanc : 'Hay _____ personas en la fiesta.' (beaucoup de)",
+          "answer": "muchas"
+        },
+        {
+          "prompt": "Complétez le blanc : 'Él corre _____ rápido.' (très)",
+          "answer": "muy"
+        }
+      ]
+    },
+    {
+      "rule_id": "false-cognates-embarazada-etc",
+      "topic": "False cognates (embarazada, etc.)",
+      "title": "Faux amis : Embarazada et autres",
+      "explanation": "Les faux amis sont des mots qui se ressemblent en espagnol et en anglais mais qui ont des significations différentes. Par exemple, « embarazada » signifie « enceinte », pas « embarrassé ». D'autres courants incluent « sensible » (qui signifie « sensible », pas « sensé ») et « constipado » (qui signifie « avoir un rhume », pas « constipé »). Vérifiez toujours le sens avant d'utiliser ces mots piégeux.",
+      "examples": [
+        {
+          "wrong": "Estoy embarazada.",
+          "right": "Estoy avergonzado.",
+          "note": "Si vous voulez dire « embarrassé », utilisez « avergonzado/a ». « Embarazada » signifie uniquement « enceinte »."
+        },
+        {
+          "wrong": "Él es sensible.",
+          "right": "Él es sensato.",
+          "note": "« Sensible » en espagnol signifie « sensible ». Pour « sensé », utilisez « sensato/a »."
+        },
+        {
+          "wrong": "Estoy constipado.",
+          "right": "Estoy estreñido.",
+          "note": "« Constipado » signifie « avoir un rhume ». Pour « constipé », dites « estreñido »."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Que signifie « embarazada » en anglais ?",
+          "answer": "pregnant"
+        },
+        {
+          "prompt": "Comment dit-on « Elle est sensée » (au sens de « pragmatique ») en espagnol ?",
+          "answer": "Ella es sensata"
+        },
+        {
+          "prompt": "Quel est le mot espagnol pour « constipé » ?",
+          "answer": "estreñido"
+        }
+      ]
+    },
+    {
+      "rule_id": "apocope-bueno-buen-primero-primer",
+      "topic": "Apocope (bueno -> buen, primero -> primer)",
+      "title": "Apocope : Raccourcissement des adjectifs devant les noms masculins",
+      "explanation": "En espagnol, certains adjectifs perdent leur(s) lettre(s) finale(s) lorsqu'ils sont placés directement devant un nom masculin singulier. C'est ce qu'on appelle l'apocope. Les exemples courants incluent 'bueno' → 'buen', 'primero' → 'primer', et 'tercero' → 'tercer'. La règle ne s'applique pas lorsque l'adjectif suit le nom.",
+      "examples": [
+        {
+          "wrong": "el bueno chico",
+          "right": "el buen chico",
+          "note": "Bueno se raccourcit en buen devant un nom masculin singulier."
+        },
+        {
+          "wrong": "el primero capítulo",
+          "right": "el primer capítulo",
+          "note": "Primero devient primer devant un nom masculin singulier."
+        },
+        {
+          "wrong": "el tercero piso",
+          "right": "el tercer piso",
+          "note": "Tercero se raccourcit également en tercer devant un nom masculin."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduisez 'le bon livre' (livre = libro, masculin)",
+          "answer": "el buen libro"
+        },
+        {
+          "prompt": "Traduisez 'le premier jour' (jour = día, masculin)",
+          "answer": "el primer día"
+        },
+        {
+          "prompt": "Traduisez 'le troisième étage' (étage = piso, masculin)",
+          "answer": "el tercer piso"
+        }
+      ]
+    },
+    {
+      "rule_id": "contractions-al-and-del",
+      "topic": "Contractions 'al' and 'del'",
+      "title": "Contractions espagnoles : 'al' et 'del'",
+      "explanation": "En espagnol, les prépositions 'a' (à) et 'de' (de) se contractent avec l'article masculin 'el' (le) pour former 'al' et 'del'. Il ne faut jamais écrire 'a el' ou 'de el' comme mots séparés. Cette règle s'applique uniquement à 'el', pas aux autres articles comme 'la', 'los' ou 'las'.",
+      "examples": [
+        {
+          "wrong": "Voy a el parque.",
+          "right": "Voy al parque.",
+          "note": "'a + el' devient toujours 'al'."
+        },
+        {
+          "wrong": "El libro es de el profesor.",
+          "right": "El libro es del profesor.",
+          "note": "'de + el' devient toujours 'del'."
+        },
+        {
+          "wrong": "Salimos de el aeropuerto.",
+          "right": "Salimos del aeropuerto.",
+          "note": "Rappel : 'de el' n'est jamais correct ; contractez toujours en 'del'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complétez: Voy ___ cine. (a + el)",
+          "answer": "al"
+        },
+        {
+          "prompt": "Complétez: La casa es ___ abuelo. (de + el)",
+          "answer": "del"
+        },
+        {
+          "prompt": "Complétez: Ella llega ___ banco. (a + el)",
+          "answer": "al"
+        }
+      ]
+    },
+    {
+      "rule_id": "placement-of-adjectives-before-vs-after-noun",
+      "topic": "Placement of adjectives (before vs after noun)",
+      "title": "Placement des adjectifs : avant vs après le nom",
+      "explanation": "En espagnol, la plupart des adjectifs se placent après le nom (par exemple, 'un coche rojo' = une voiture rouge). C'est l'inverse de l'anglais, où les adjectifs se placent généralement avant. Certains adjectifs courants comme 'bueno', 'malo', 'grande' peuvent se placer avant le nom pour en changer le sens (par exemple, 'un gran hombre' = un grand homme), mais en tant que débutant, placez les adjectifs descriptifs (couleur, taille, nationalité) après le nom.",
+      "examples": [
+        {
+          "wrong": "una roja manzana",
+          "right": "una manzana roja",
+          "note": "Les adjectifs de couleur se placent toujours après le nom."
+        },
+        {
+          "wrong": "un interesante libro",
+          "right": "un libro interesante",
+          "note": "La plupart des adjectifs descriptifs suivent le nom."
+        },
+        {
+          "wrong": "una pequeña casa",
+          "right": "una casa pequeña",
+          "note": "Les adjectifs de taille (comme 'pequeño') se placent aussi après le nom pour la taille physique."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduisez : 'a blue pen'",
+          "answer": "un bolígrafo azul"
+        },
+        {
+          "prompt": "Corrigez l'ordre : 'un (grande) perro'",
+          "answer": "un perro grande"
+        },
+        {
+          "prompt": "Réécrivez avec le placement correct de l'adjectif : 'una difícil lección'",
+          "answer": "una lección difícil"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,881 @@
+{
+  "learning": "es",
+  "interface": "ru",
+  "generated_at": "2026-06-21T18:27:31.000112+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "serestar",
+      "topic": "Ser/Estar",
+      "title": "Глаголы Ser и Estar: как не путать?",
+      "explanation": "Используйте ser для описания постоянных или существенных характеристик (происхождение, профессия, внешность, материал) и estar для временных состояний, местоположения и эмоций. В русском языке нет такого разделения, поэтому важно запомнить это правило.",
+      "examples": [
+        {
+          "wrong": "Ella es cansada.",
+          "right": "Ella está cansada.",
+          "note": "Ошибка: 'cansada' — временное состояние (усталость), поэтому нужно estar. Ser + cansado означает 'быть надоедливым' — редкое значение."
+        },
+        {
+          "wrong": "El niño está alto.",
+          "right": "El niño es alto.",
+          "note": "Рост — это постоянная характеристика, поэтому используется ser."
+        },
+        {
+          "wrong": "Estamos estudiantes.",
+          "right": "Somos estudiantes.",
+          "note": "Профессия или статус считаются постоянными, поэтому требуется ser."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильную форму глагола ser или estar: Yo ______ (быть) en la biblioteca.",
+          "answer": "estoy"
+        },
+        {
+          "prompt": "Вставьте правильную форму глагола ser или estar: Ella ______ (быть) muy inteligente.",
+          "answer": "es"
+        },
+        {
+          "prompt": "Вставьте правильную форму глагола ser или estar: Ellos ______ (быть) en Madrid ahora.",
+          "answer": "están"
+        }
+      ]
+    },
+    {
+      "rule_id": "subjuntivo",
+      "topic": "Subjuntivo",
+      "title": "Ошибка с Subjuntivo (сослагательное наклонение)",
+      "explanation": "Subjuntivo используется после выражений сомнения, желания, эмоций или отрицания (например, esperar que, dudar que, no creer que). В этих случаях нельзя ставить глагол в изъявительном наклонении (indicativo). Простое правило: если в первой части предложения есть сомнение или субъективное отношение, то во второй части (после que) нужен subjuntivo.",
+      "examples": [
+        {
+          "wrong": "Espero que él viene mañana.",
+          "right": "Espero que él venga mañana.",
+          "note": "После 'esperar que' (надеяться, что) требуется subjuntivo, даже если речь идёт о будущем."
+        },
+        {
+          "wrong": "No creo que es verdad.",
+          "right": "No creo que sea verdad.",
+          "note": "Отрицание 'no creo que' (не верю, что) всегда требует subjuntivo."
+        },
+        {
+          "wrong": "Dudo que tienes razón.",
+          "right": "Dudo que tengas razón.",
+          "note": "Глагол 'dudar que' (сомневаться, что) управляет subjuntivo."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильную форму глагола в сослагательном наклонении: «Ojalá que él _______ (venir) pronto.»",
+          "answer": "venga"
+        },
+        {
+          "prompt": "Исправьте ошибку: «No pienso que él está en casa.»",
+          "answer": "No pienso que él esté en casa."
+        },
+        {
+          "prompt": "Заполните пропуск подходящей формой: «Es importante que tú _______ (estudiar) mucho.»",
+          "answer": "estudies"
+        }
+      ]
+    },
+    {
+      "rule_id": "tiempos-verbales",
+      "topic": "Tiempos verbales",
+      "title": "Ошибка в выборе прошедшего времени: Pretérito Indefinido vs Pretérito Imperfecto",
+      "explanation": "В испанском языке есть два основных прошедших времени: Pretérito Indefinido (для завершённых действий в прошлом) и Pretérito Imperfecto (для описаний, привычек или действий, которые длились). Русскоязычные часто путают их, используя Imperfecto для однократных завершённых действий или Indefinido для описаний. Запомните: Indefinido отвечает на вопрос «что сделал?», а Imperfecto — «что делал?» или «каким было?»",
+      "examples": [
+        {
+          "wrong": "Ayer yo caminaba al parque.",
+          "right": "Ayer yo caminé al parque.",
+          "note": "Здесь действие завершено и однократно — нужно Pretérito Indefinido (caminé), а не Imperfecto."
+        },
+        {
+          "wrong": "Cuando era niño, yo jugué al fútbol todos los días.",
+          "right": "Cuando era niño, yo jugaba al fútbol todos los días.",
+          "note": "Привычка в прошлом — используется Imperfecto (jugaba), а не Indefinido."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильную форму глагола в прошедшем времени: Вчера я (читать) книгу (закончил чтение).",
+          "answer": "Ayer yo leí un libro."
+        },
+        {
+          "prompt": "Вставьте правильную форму: Когда я был маленьким, я (жить) в деревне (описание состояния).",
+          "answer": "Cuando era pequeño, yo vivía en el pueblo."
+        },
+        {
+          "prompt": "Выберите правильное время: В тот момент она (смотреть) телевизор (длительное действие, прерванное другим).",
+          "answer": "En ese momento ella miraba la televisión."
+        }
+      ]
+    },
+    {
+      "rule_id": "preposiciones",
+      "topic": "Preposiciones",
+      "title": "Предлоги: EN и A (место и направление)",
+      "explanation": "Русскоязычные учащиеся часто путают предлоги 'en' (для указания места) и 'a' (для указания направления). После глаголов движения (ir, venir) используется 'a', а для нахождения где-то — 'en'. Например, 'Я иду в школу' = 'Voy a la escuela', но 'Я в школе' = 'Estoy en la escuela'.",
+      "examples": [
+        {
+          "wrong": "Voy en la escuela.",
+          "right": "Voy a la escuela.",
+          "note": "Глагол движения ir требует предлога a."
+        },
+        {
+          "wrong": "Estoy a casa.",
+          "right": "Estoy en casa.",
+          "note": "Глагол состояния estar использует en для места."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите: 'Я иду в парк' (используйте глагол ir).",
+          "answer": "Voy al parque."
+        },
+        {
+          "prompt": "Переведите: 'Мы находимся в библиотеке' (используйте глагол estar).",
+          "answer": "Estamos en la biblioteca."
+        }
+      ]
+    },
+    {
+      "rule_id": "sonidos-rrr-звуки-rrr",
+      "topic": "Sonidos r/rr (звуки r/rr)",
+      "title": "Звуки r и rr в испанском",
+      "explanation": "В испанском языке буква 'r' может звучать как мягкий (одноударный) звук, а 'rr' — как раскатистый (многоударный). Для русскоговорящих важно различать эти звуки, так как они меняют значение слова. Одно 'r' произносится как короткое касание языка к нёбу, а двойное 'rr' — с вибрацией.",
+      "examples": [
+        {
+          "wrong": "pero",
+          "right": "perro",
+          "note": "'pero' (но) vs 'perro' (собака) — разное значение из-за одного звука."
+        },
+        {
+          "wrong": "caro",
+          "right": "carro",
+          "note": "'caro' (дорогой) vs 'carro' (машина) — произношение rr делает слово раскатистым."
+        },
+        {
+          "wrong": "coro",
+          "right": "corro",
+          "note": "'coro' (хор) vs 'corro' (я бегу) — меняется глагольная форма."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите слово «собака» по-испански.",
+          "answer": "perro"
+        },
+        {
+          "prompt": "Как будет «но» в испанском? (только одно r)",
+          "answer": "pero"
+        },
+        {
+          "prompt": "Напишите испанское слово «машина» с правильным звуком rr.",
+          "answer": "carro"
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciación-de-la-ñ",
+      "topic": "Pronunciación de la ñ",
+      "title": "Произношение буквы ñ",
+      "explanation": "Буква ñ в испанском языке произносится как мягкий носовой звук «нь», похожий на сочетание «н» и «й» в русском слове «коньяк». Не заменяйте её на обычную «n» или «ny» — звук должен быть единым, а язык прижимается к нёбу.",
+      "examples": [
+        {
+          "wrong": "Espana",
+          "right": "España",
+          "note": "Без ñ слово теряет смысл: 'Espana' не существует, а 'España' — Испания."
+        },
+        {
+          "wrong": "nino",
+          "right": "niño",
+          "note": "Разница: 'nino' — не слово, 'niño' — ребёнок."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите испанское слово «год» с правильной буквой ñ.",
+          "answer": "año"
+        },
+        {
+          "prompt": "Как будет «маленький» (уменьшительное от pequeño) с буквой ñ?",
+          "answer": "pequeño"
+        }
+      ]
+    },
+    {
+      "rule_id": "entonación",
+      "topic": "Entonación",
+      "title": "Типичные ошибки в интонации (Entonación)",
+      "explanation": "В испанском языке интонация играет ключевую роль: утверждения заканчиваются понижением тона, вопросы «да/нет» – повышением, а вопросы с вопросительным словом (qué, dónde и т.д.) – понижением. Русскоговорящие часто переносят свои интонационные паттерны (например, повышение в wh-вопросах), что звучит неестественно для испанцев. Запомните: для вопроса с вопросительным словом тон падает, как в утверждении.",
+      "examples": [
+        {
+          "wrong": "Hoy hace buen tiempo (с восходящей интонацией как в русском утверждении)",
+          "right": "Hoy hace buen tiempo.",
+          "note": "В испанском утверждение произносится с нисходящей интонацией (тон падает)."
+        },
+        {
+          "wrong": "¿Vienes mañana? (с нисходящей интонацией как в русском вопросе)",
+          "right": "¿Vienes mañana?",
+          "note": "Вопрос «да/нет» требует восходящей интонации (тон поднимается в конце)."
+        },
+        {
+          "wrong": "¿Dónde vives? (с восходящей интонацией, как в русском)",
+          "right": "¿Dónde vives?",
+          "note": "Вопрос с вопросительным словом в испанском имеет нисходящую интонацию (тон падает)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Добавьте знаки препинания, чтобы получить утверждение: 'Vienes mañana'",
+          "answer": "Vienes mañana."
+        },
+        {
+          "prompt": "Добавьте знаки препинания, чтобы получить вопрос (да/нет): 'Ella estudia español'",
+          "answer": "¿Ella estudia español?"
+        },
+        {
+          "prompt": "Превратите в вопрос со словом «где»: 'Vives en Madrid.'",
+          "answer": "¿Dónde vives?"
+        }
+      ]
+    },
+    {
+      "rule_id": "gender-of-nouns-masculinefeminine",
+      "topic": "Gender of nouns (masculine/feminine)",
+      "title": "Род существительных в испанском языке",
+      "explanation": "В испанском языке существительные имеют мужской или женский род. Обычно слова, оканчивающиеся на -o, — мужского рода, а на -a — женского. Однако есть исключения, такие как 'mano' (женский) и 'día' (мужской). Запоминайте род вместе с артиклем.",
+      "examples": [
+        {
+          "wrong": "el mano",
+          "right": "la mano",
+          "note": "Слово 'mano' (рука) женского рода, несмотря на окончание -o."
+        },
+        {
+          "wrong": "la problema",
+          "right": "el problema",
+          "note": "Слово 'problema' (проблема) мужского рода, несмотря на окончание -a."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Выберите правильный артикль (el/la): ___ mesa",
+          "answer": "la mesa"
+        },
+        {
+          "prompt": "Выберите правильный артикль (el/la): ___ libro",
+          "answer": "el libro"
+        },
+        {
+          "prompt": "Выберите правильный артикль (el/la): ___ problema",
+          "answer": "el problema"
+        }
+      ]
+    },
+    {
+      "rule_id": "adjective-agreement-in-gender-and-number",
+      "topic": "Adjective agreement in gender and number",
+      "title": "Согласование прилагательных в роде и числе",
+      "explanation": "В испанском языке прилагательные согласуются с существительными в роде (мужской/женский) и числе (единственное/множественное). Обычно мужской род единственного числа оканчивается на -o, женский на -a, а множественное число образуется добавлением -s. Например, 'rojo' (красный) -> 'roja', 'rojos', 'rojas'.",
+      "examples": [
+        {
+          "wrong": "La libro rojo",
+          "right": "El libro rojo",
+          "note": "Существительное 'libro' мужского рода, поэтому артикль и прилагательное должны быть в мужском роде."
+        },
+        {
+          "wrong": "Los chicas altos",
+          "right": "Las chicas altas",
+          "note": "Существительное 'chicas' женского рода множественного числа, прилагательное должно быть женского рода множественного числа."
+        },
+        {
+          "wrong": "Unas casa bonitas",
+          "right": "Unas casas bonitas",
+          "note": "Прилагательное и существительное должны совпадать в числе: 'casas' (мн.ч.) и 'bonitas' (мн.ч.)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на испанский: 'Красивый сад' (сад - мужской род, единственное число)",
+          "answer": "jardín hermoso"
+        },
+        {
+          "prompt": "Исправьте ошибку: 'Las perro negros'",
+          "answer": "Los perros negros"
+        },
+        {
+          "prompt": "Заполните пропуск: '___ casa roja' (определенный артикль женского рода единственного числа)",
+          "answer": "La"
+        }
+      ]
+    },
+    {
+      "rule_id": "direct-object-pronouns-lo-la-los-las",
+      "topic": "Direct object pronouns (lo, la, los, las)",
+      "title": "Прямые дополнения: lo, la, los, las",
+      "explanation": "Прямые дополнения (lo, la, los, las) заменяют существительное, которое уже упомянуто, и согласуются с ним в роде и числе (мужской/женский, единственное/множественное). Обычно они ставятся перед спрягаемым глаголом, но могут присоединяться к инфинитиву или герундию. Не путайте их с притяжательными или указательными местоимениями из русского языка.",
+      "examples": [
+        {
+          "wrong": "Yo veo la casa. Yo veo él.",
+          "right": "Yo veo la casa. Yo la veo.",
+          "note": "Не используйте 'él' для замены объекта женского рода; используйте 'la'."
+        },
+        {
+          "wrong": "Tengo los libros. Tengo los.",
+          "right": "Tengo los libros. Los tengo.",
+          "note": "Местоимение ставится перед глаголом, а не после него."
+        },
+        {
+          "wrong": "Ella compra las flores. Ella compra las.",
+          "right": "Ella compra las flores. Ella las compra.",
+          "note": "Согласование по числу и роду: 'las' для множественного числа женского рода."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Замените 'el libro' местоимением: 'Yo leo el libro.'",
+          "answer": "Yo lo leo."
+        },
+        {
+          "prompt": "Замените 'las cartas' местоимением: 'Ella escribe las cartas.'",
+          "answer": "Ella las escribe."
+        },
+        {
+          "prompt": "Выберите правильное местоимение: '¿Tú ves a María? Sí, yo ____ veo.'",
+          "answer": "la"
+        }
+      ]
+    },
+    {
+      "rule_id": "indirect-object-pronouns-le-les",
+      "topic": "Indirect object pronouns (le, les)",
+      "title": "Косвенные местоимения le и les: избегаем ошибок",
+      "explanation": "В испанском языке косвенные дополнения (отвечающие на вопрос «кому?») заменяются местоимениями le (единственное число) и les (множественное число). Важно не путать их: le используется для одного лица (él, ella, usted), les – для нескольких (ellos, ellas, ustedes). Ошибка часто возникает, когда путают число или вместо le/les используют lo/la (прямые дополнения).",
+      "examples": [
+        {
+          "wrong": "Le doy los libros a los estudiantes.",
+          "right": "Les doy los libros a los estudiantes.",
+          "note": "«Los estudiantes» – множественное число, поэтому нужно les, а не le."
+        },
+        {
+          "wrong": "Les di el regalo a mi madre.",
+          "right": "Le di el regalo a mi madre.",
+          "note": "«Mi madre» – единственное число, поэтому le, а не les."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Замените косвенное дополнение правильным местоимением: Я даю книгу моей сестре.",
+          "answer": "Le doy el libro a mi hermana."
+        },
+        {
+          "prompt": "Вставьте правильное местоимение: Они пишут письмо своим родителям.",
+          "answer": "Les escriben una carta a sus padres."
+        },
+        {
+          "prompt": "Вы рассказываете историю детям? (Ответьте, используя местоимение).",
+          "answer": "¿Les cuentan la historia a los niños?"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-personal-a",
+      "topic": "Use of personal 'a'",
+      "title": "Использование личного 'a' в испанском",
+      "explanation": "В испанском языке перед прямым дополнением, обозначающим конкретное лицо или одушевлённый предмет (особенно домашних животных), обязательно ставится предлог 'a'. В русском языке такого правила нет, поэтому русскоязычные часто забывают его добавлять. Также 'a' не используется после глагола 'tener' (иметь), если дополнение не является конкретным лицом.",
+      "examples": [
+        {
+          "wrong": "Veo mi amigo.",
+          "right": "Veo a mi amigo.",
+          "note": "Перед 'mi amigo' (мой друг) нужен предлог 'a', так как это конкретное лицо."
+        },
+        {
+          "wrong": "Busco el médico.",
+          "right": "Busco al médico.",
+          "note": "С определённым артиклем 'el' перед 'médico' (врач) образуется 'al' (a + el)."
+        },
+        {
+          "wrong": "Tengo una hermana.",
+          "right": "Tengo una hermana.",
+          "note": "После 'tener' личное 'a' не ставится, так как глагол выражает обладание, а не действие над лицом."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на испанский: 'Я вижу Марию.'",
+          "answer": "Veo a María."
+        },
+        {
+          "prompt": "Переведите на испанский: 'Она ищет своего кота.'",
+          "answer": "Ella busca a su gato."
+        },
+        {
+          "prompt": "Переведите на испанский: 'У меня есть два брата.'",
+          "answer": "Tengo dos hermanos."
+        }
+      ]
+    },
+    {
+      "rule_id": "verbs-like-gustar-me-gusta-etc",
+      "topic": "Verbs like 'gustar' (me gusta, etc.)",
+      "title": "Глаголы типа gustar (me gusta, te gusta...)",
+      "explanation": "В испанском языке глагол gustar 'нравиться' согласуется не с тем, кому нравится (я, ты, он), а с тем, что нравится (предмет). Если предмет в единственном числе — используем gusta, во множественном — gustan. Типичная ошибка русскоязычных: ставить глагол в форму, соответствующую лицу (например, \"me gusto\" вместо \"me gusta\").",
+      "examples": [
+        {
+          "wrong": "Me gusto el libro.",
+          "right": "Me gusta el libro.",
+          "note": "Глагол согласуется с «книга» (единственное число), а не с «я»."
+        },
+        {
+          "wrong": "Te gustas los perros.",
+          "right": "Te gustan los perros.",
+          "note": "«Собаки» во множественном числе — нужен gustan, а не gustas."
+        },
+        {
+          "wrong": "Nos gusta las películas.",
+          "right": "Nos gustan las películas.",
+          "note": "«Фильмы» — множественное число, поэтому gustan."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на испанский: «Мне нравится этот фильм.»",
+          "answer": "Me gusta esta película."
+        },
+        {
+          "prompt": "Исправьте ошибку: «Te gusto la comida.»",
+          "answer": "Te gusta la comida."
+        },
+        {
+          "prompt": "Заполните пропуск: «A ellos ___ (gustar) los deportes.»",
+          "answer": "les gustan"
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-verbs-and-pronouns",
+      "topic": "Reflexive verbs and pronouns",
+      "title": "Возвратные глаголы и местоимения в испанском",
+      "explanation": "В испанском языке возвратные глаголы требуют возвратного местоимения, которое согласуется с подлежащим. Частая ошибка — пропуск местоимения или его неправильное расположение. Местоимение ставится перед спрягаемым глаголом или присоединяется к инфинитиву/герундию.",
+      "examples": [
+        {
+          "wrong": "Yo lavo las manos.",
+          "right": "Yo me lavo las manos.",
+          "note": "Глагол lavarse требует местоимения 'me', так как действие направлено на себя."
+        },
+        {
+          "wrong": "Ellos levantan temprano.",
+          "right": "Ellos se levantan temprano.",
+          "note": "Возвратный глагол levantarse требует 'se' для третьего лица."
+        },
+        {
+          "wrong": "Voy a duchar.",
+          "right": "Voy a ducharme.",
+          "note": "Инфинитив может присоединять местоимение (ducharme) или ставить его перед спрягаемой формой (me voy a duchar)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите: 'Я умываюсь каждое утро.' (используя глагол lavarse)",
+          "answer": "Yo me lavo cada mañana."
+        },
+        {
+          "prompt": "Исправьте ошибку: 'Ella pone el abrigo.' (имеется в виду 'надевает на себя')",
+          "answer": "Ella se pone el abrigo."
+        },
+        {
+          "prompt": "Заполните пропуск: 'Tú ___ peinas el pelo.'",
+          "answer": "te"
+        }
+      ]
+    },
+    {
+      "rule_id": "formal-vs-informal-commands-imperative",
+      "topic": "Formal vs informal commands (imperative)",
+      "title": "Формальные и неформальные команды (повелительное наклонение)",
+      "explanation": "В испанском языке для обращения на «ты» (tú) используется неформальная форма повелительного наклонения, а для обращения на «вы» (usted) — формальная. Частая ошибка — смешивать эти формы, например, использовать tú-команду с формальным обращением. Запомните: tú-команды обычно заканчиваются на -a (для -ar глаголов) или -e (для -er/-ir), а usted-команды — на -e (для -ar) или -a (для -er/-ir).",
+      "examples": [
+        {
+          "wrong": "¡Habla más despacio, señor!",
+          "right": "¡Hable más despacio, señor!",
+          "note": "С «señor» (формальное) нужно использовать форму usted: «hable», а не «habla»."
+        },
+        {
+          "wrong": "Coma la sopa, María.",
+          "right": "Come la sopa, María.",
+          "note": "С именем María (неформальное) используем tú-форму: «come», а не «coma»."
+        },
+        {
+          "wrong": "No vayas aquí, doctor.",
+          "right": "No vaya aquí, doctor.",
+          "note": "С «doctor» (формальное) отрицательная команда образуется от формы usted: «no vaya», а не «no vayas»."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Скажите «Присядьте, пожалуйста» (вежливо, на «вы», одному человеку).",
+          "answer": "Siéntese, por favor."
+        },
+        {
+          "prompt": "Скажите другу «Открой дверь».",
+          "answer": "Abre la puerta."
+        },
+        {
+          "prompt": "Скажите учителю «Не говорите так громко» (отрицательная команда).",
+          "answer": "No hable tan fuerte."
+        }
+      ]
+    },
+    {
+      "rule_id": "comparative-and-superlative-forms",
+      "topic": "Comparative and superlative forms",
+      "title": "Сравнительная и превосходная степени прилагательных: распространенные ошибки",
+      "explanation": "В испанском языке для образования сравнительной степени используется 'más' (более) или 'menos' (менее) + прилагательное. Однако у некоторых прилагательных есть особые формы: 'bueno' → 'mejor' (лучше), 'malo' → 'peor' (хуже). Нельзя говорить 'más mejor' — это грубая ошибка. Для превосходной степени используйте определённый артикль + прилагательное с '-ísimo/a' или 'el/la más' + прилагательное, но с особыми формами (mejor, peor) не добавляйте 'más'.",
+      "examples": [
+        {
+          "wrong": "Este libro es más mejor.",
+          "right": "Este libro es mejor.",
+          "note": "Не используйте 'más' с особыми формами 'mejor', 'peor', 'mayor', 'menor'."
+        },
+        {
+          "wrong": "Ella es la más buena estudiante.",
+          "right": "Ella es la mejor estudiante.",
+          "note": "Для 'bueno' превосходная степень — 'el/la mejor', а не 'el más bueno'."
+        },
+        {
+          "wrong": "Esta película es la más mala.",
+          "right": "Esta película es la peor.",
+          "note": "Аналогично с 'malo' — 'peor'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите: 'Это самый лучший ресторан.'",
+          "answer": "Este es el mejor restaurante."
+        },
+        {
+          "prompt": "Исправьте ошибку: 'Este coche es más peor que el otro.'",
+          "answer": "Este coche es peor que el otro."
+        },
+        {
+          "prompt": "Напишите превосходную степень от 'grande' (большой) для предложения: 'Она самая большая.'",
+          "answer": "Ella es la más grande."
+        }
+      ]
+    },
+    {
+      "rule_id": "demonstrative-adjectives-and-pronouns-este-ese-aquel",
+      "topic": "Demonstrative adjectives and pronouns (este, ese, aquel)",
+      "title": "Указательные прилагательные и местоимения: este, ese, aquel",
+      "explanation": "В испанском языке указательные слова меняются в зависимости от расстояния до говорящего. 'Este' указывает на предмет рядом с говорящим, 'ese' — на предмет рядом с собеседником или чуть дальше, а 'aquel' — на удалённый предмет. Не путайте их: 'este' не используется для далёких объектов, а 'aquel' — для близких.",
+      "examples": [
+        {
+          "wrong": "Este libro está lejos, en la estantería.",
+          "right": "Aquel libro está lejos, en la estantería.",
+          "note": "Ошибка: предмет далеко, поэтому нужно 'aquel', а не 'este'."
+        },
+        {
+          "wrong": "Esa casa es la mía (указывая на дом рядом).",
+          "right": "Esta casa es la mía (указывая на дом рядом).",
+          "note": "Ошибка: предмет рядом с говорящим — используем 'esta', а не 'esa'."
+        },
+        {
+          "wrong": "Aquel coche que tienes al lado es bonito.",
+          "right": "Ese coche que tienes al lado es bonito.",
+          "note": "Ошибка: предмет рядом с собеседником (ты держишь) — 'ese', а не 'aquel'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите: «Эта ручка (рядом со мной) красная».",
+          "answer": "Este bolígrafo es rojo."
+        },
+        {
+          "prompt": "Как сказать: «Те книги (у тебя) интересные»?",
+          "answer": "Esos libros son interesantes."
+        },
+        {
+          "prompt": "Как перевести: «Та гора (далеко) очень высокая»?",
+          "answer": "Aquella montaña es muy alta."
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-adjectives-mi-tu-su-vs-possessive-pronouns-mío-tuyo",
+      "topic": "Possessive adjectives (mi, tu, su) vs possessive pronouns (mío, tuyo)",
+      "title": "Разница между притяжательными прилагательными (mi, tu, su) и притяжательными местоимениями (mío, tuyo, suyo)",
+      "explanation": "Притяжательные прилагательные (mi, tu, su) ставятся перед существительным и не изменяются по роду (mi libro, tu casa). Притяжательные местоимения (mío, tuyo, suyo) используются после глагола ser (быть) или вместо существительного и согласуются с ним в роде и числе (el libro es mío, la casa es tuya). Распространённая ошибка — путать их позицию или форму.",
+      "examples": [
+        {
+          "wrong": "Este libro es mi.",
+          "right": "Este libro es mío.",
+          "note": "После глагола ser нужно притяжательное местоимение, а не прилагательное."
+        },
+        {
+          "wrong": "Ella es mía amiga.",
+          "right": "Ella es mi amiga.",
+          "note": "Перед существительным (amiga) используется прилагательное mi, а не местоимение mía."
+        },
+        {
+          "wrong": "La casa es tuyo.",
+          "right": "La casa es tuya.",
+          "note": "Притяжательное местоимение должно согласоваться с существительным в роде (casa — женский род, поэтому tuya)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Выберите правильное слово: Esta es ___ (mi / mía) mochila.",
+          "answer": "mi"
+        },
+        {
+          "prompt": "Заполните пропуск: Este perro es ___ (tuyo / tu).",
+          "answer": "tuyo"
+        },
+        {
+          "prompt": "Переведите на испанский: Эта книга моя.",
+          "answer": "Este libro es mío."
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-qué-vs-cuál",
+      "topic": "Use of 'qué' vs 'cuál'",
+      "title": "Использование 'qué' и 'cuál' в вопросах",
+      "explanation": "В испанском языке 'qué' (что) используется для вопросов об определении или сущности предмета. 'Cuál' (который) – для выбора из ограниченного набора вариантов. Запомните: если можно заменить на 'что' – ставьте 'qué'; если на 'какой/какая' – ставьте 'cuál'.",
+      "examples": [
+        {
+          "wrong": "¿Qué es tu número de teléfono?",
+          "right": "¿Cuál es tu número de teléfono?",
+          "note": "Номер телефона выбирается из множества, поэтому используем 'cuál'."
+        },
+        {
+          "wrong": "¿Cuál es esto?",
+          "right": "¿Qué es esto?",
+          "note": "Вопрос об определении предмета – используем 'qué'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите: Который час?",
+          "answer": "¿Qué hora es?"
+        },
+        {
+          "prompt": "Выберите правильный вариант: ¿______ es tu color preferido? (qué/cuál)",
+          "answer": "cuál"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-sino-vs-pero",
+      "topic": "Use of 'sino' vs 'pero'",
+      "title": "Различие между sino и pero",
+      "explanation": "В испанском языке 'sino' используется после отрицательного предложения, когда вторая часть заменяет первую (как русское 'а' в значении 'не... а'). 'Pero' же используется для простого противопоставления (как русское 'но'). Например: 'No es alto, sino bajo' (не высокий, а низкий) vs 'Es alto, pero delgado' (высокий, но худой).",
+      "examples": [
+        {
+          "wrong": "No quiero café, pero té.",
+          "right": "No quiero café, sino té.",
+          "note": "После отрицания при замене одной вещи другой используем 'sino'."
+        },
+        {
+          "wrong": "No es mi hermano, pero mi primo.",
+          "right": "No es mi hermano, sino mi primo.",
+          "note": "Снова: после 'no' для указания альтернативы пишем 'sino'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на испанский: 'Я не хочу есть, а пить.'",
+          "answer": "No quiero comer, sino beber."
+        },
+        {
+          "prompt": "Переведите на испанский: 'Он умный, но ленивый.'",
+          "answer": "Es inteligente, pero perezoso."
+        },
+        {
+          "prompt": "Заполните пропуск: 'No estudio ruso, ___ español.'",
+          "answer": "No estudio ruso, sino español."
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-muy-vs-mucho",
+      "topic": "Use of 'muy' vs 'mucho'",
+      "title": "Использование 'muy' и 'mucho'",
+      "explanation": "'Muy' означает 'очень' и используется перед прилагательными и наречиями (например, muy bonito). 'Mucho' означает 'много' и используется перед существительными (например, mucho dinero) или с глаголами для обозначения 'очень много' (например, trabajo mucho). Важно не путать их: 'muy' никогда не ставится перед существительными, а 'mucho' никогда не ставится перед прилагательными.",
+      "examples": [
+        {
+          "wrong": "Ella es mucho bonita.",
+          "right": "Ella es muy bonita.",
+          "note": "Перед прилагательным (bonita) нужно использовать 'muy'."
+        },
+        {
+          "wrong": "Tengo muy dinero.",
+          "right": "Tengo mucho dinero.",
+          "note": "Перед существительным (dinero) нужно использовать 'mucho'."
+        },
+        {
+          "wrong": "Estudio muy.",
+          "right": "Estudio mucho.",
+          "note": "С глаголом (estudio) для значения 'очень много' используется 'mucho', а не 'muy'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Заполните пропуск: Ella es ___ inteligente.",
+          "answer": "muy"
+        },
+        {
+          "prompt": "Заполните пропуск: Tengo ___ amigos.",
+          "answer": "muchos"
+        },
+        {
+          "prompt": "Переведите на испанский: 'Я очень устал.'",
+          "answer": "Estoy muy cansado."
+        }
+      ]
+    },
+    {
+      "rule_id": "false-cognates-embarazada-etc",
+      "topic": "False cognates (embarazada, etc.)",
+      "title": "Ложные друзья переводчика (embarazada и другие)",
+      "explanation": "Ложные друзья переводчика — это слова, которые звучат похоже в русском и испанском, но имеют разные значения. Например, испанское 'embarazada' означает 'беременная', а не 'смущённая'. Будьте внимательны, чтобы не попасть в неловкую ситуацию!",
+      "examples": [
+        {
+          "wrong": "Estoy embarazada.",
+          "right": "Estoy avergonzado.",
+          "note": "Embarazada = беременная, avergonzado = смущённый."
+        },
+        {
+          "wrong": "Estoy constipado.",
+          "right": "Tengo estreñimiento.",
+          "note": "Constipado = простуженный, estreñimiento = запор."
+        },
+        {
+          "wrong": "Es una persona sensible.",
+          "right": "Es una persona sensata.",
+          "note": "Sensible = чувствительный, sensato = разумный."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Как сказать по-испански 'Я простужен'?",
+          "answer": "Estoy constipado."
+        },
+        {
+          "prompt": "Как сказать по-испански 'Она беременна'?",
+          "answer": "Ella está embarazada."
+        },
+        {
+          "prompt": "Как сказать по-испански 'Он разумный человек'?",
+          "answer": "Él es una persona sensata."
+        }
+      ]
+    },
+    {
+      "rule_id": "apocope-bueno-buen-primero-primer",
+      "topic": "Apocope (bueno -> buen, primero -> primer)",
+      "title": "Апокопа: сокращение прилагательных перед существительными",
+      "explanation": "В испанском языке некоторые прилагательные теряют последнюю букву или слог, когда стоят перед существительным мужского рода в единственном числе. Это называется апокопой. Например, 'bueno' становится 'buen', а 'primero' — 'primer'. Запомните: апокопа происходит только перед существительным, а не после него.",
+      "examples": [
+        {
+          "wrong": "bueno día",
+          "right": "buen día",
+          "note": "Перед существительным 'día' (мужской род) 'bueno' сокращается до 'buen'."
+        },
+        {
+          "wrong": "primero capítulo",
+          "right": "primer capítulo",
+          "note": "Перед 'capítulo' 'primero' становится 'primer'."
+        },
+        {
+          "wrong": "el primero libro",
+          "right": "el primer libro",
+          "note": "Даже если есть артикль, апокопа сохраняется."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильную форму: Tengo un ___ amigo. (bueno)",
+          "answer": "buen"
+        },
+        {
+          "prompt": "Вставьте правильную форму: Este es el ___ capítulo. (primero)",
+          "answer": "primer"
+        },
+        {
+          "prompt": "Вставьте правильную форму: Es un ___ hombre. (bueno)",
+          "answer": "buen"
+        }
+      ]
+    },
+    {
+      "rule_id": "contractions-al-and-del",
+      "topic": "Contractions 'al' and 'del'",
+      "title": "Контракции 'al' и 'del' в испанском",
+      "explanation": "В испанском языке предлоги 'a' (к, в) и 'de' (из, о) сливаются с артиклем 'el' (мужской род единственное число), образуя контракции 'al' и 'del'. Никогда не пишите 'a el' или 'de el' — это грубая ошибка. Запомните: 'al' = a + el, 'del' = de + el.",
+      "examples": [
+        {
+          "wrong": "Voy a el cine.",
+          "right": "Voy al cine.",
+          "note": "После глагола движения (ir) перед мужским существительным нужна контракция 'al'."
+        },
+        {
+          "wrong": "El libro es de el profesor.",
+          "right": "El libro es del profesor.",
+          "note": "При указании принадлежности (de + el) используйте 'del'."
+        },
+        {
+          "wrong": "Salgo de el trabajo a las cinco.",
+          "right": "Salgo del trabajo a las cinco.",
+          "note": "Предлог 'de' перед 'el trabajo' превращается в 'del'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильную контракцию: Вчера я пошёл __ médico ('a el').",
+          "answer": "al"
+        },
+        {
+          "prompt": "Вставьте правильную контракцию: Это дом __ presidente ('de el').",
+          "answer": "del"
+        },
+        {
+          "prompt": "Исправьте ошибку: 'Vamos a el parque.'",
+          "answer": "Vamos al parque."
+        }
+      ]
+    },
+    {
+      "rule_id": "placement-of-adjectives-before-vs-after-noun",
+      "topic": "Placement of adjectives (before vs after noun)",
+      "title": "Расположение прилагательных в испанском языке",
+      "explanation": "В испанском языке прилагательные обычно ставятся после существительного, если они описывают постоянное качество или признак. Исключение: некоторые прилагательные (например, 'bueno', 'grande', 'nuevo') могут стоять перед существительным для усиления эмоциональной окраски или в устойчивых выражениях. Русскоговорящим важно запомнить, что порядок слов противоположен русскому.",
+      "examples": [
+        {
+          "wrong": "Una roja casa",
+          "right": "Una casa roja",
+          "note": "Прилагательное цвета (roja) ставится после существительного, в отличие от русского."
+        },
+        {
+          "wrong": "Un grande perro",
+          "right": "Un perro grande",
+          "note": "Большинство прилагательных идёт после существительного; 'grande' перед существительным может означать 'великий'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Как правильно сказать 'старый друг'?",
+          "answer": "Un amigo viejo"
+        },
+        {
+          "prompt": "Поставьте прилагательное 'blanca' в правильное место: 'una ___ casa ___'.",
+          "answer": "una casa blanca"
+        },
+        {
+          "prompt": "Переведите 'новая книга' на испанский, используя правильный порядок слов.",
+          "answer": "Un libro nuevo"
+        }
+      ]
+    }
+  ]
+}

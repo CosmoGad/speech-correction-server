@@ -1,0 +1,898 @@
+{
+  "learning": "fr",
+  "interface": "es",
+  "generated_at": "2026-06-22T20:30:10.034387+00:00",
+  "model": "deepseek-v4-flash",
+  "translated_from": "en",
+  "rules": [
+    {
+      "rule_id": "articles",
+      "topic": "Articles",
+      "title": "¡No olvides los artículos en francés!",
+      "explanation": "En francés, los sustantivos casi siempre necesitan un artículo (como le, la, un, une, des) incluso cuando en inglés podrían omitirse. Por ejemplo, al hablar de cosas en general o por primera vez, debes incluir el artículo correcto.",
+      "examples": [
+        {
+          "wrong": "J'aime chocolat.",
+          "right": "J'aime le chocolat.",
+          "note": "Usa 'le' para preferencias generales (sustantivos masculinos)."
+        },
+        {
+          "wrong": "Elle a chat.",
+          "right": "Elle a un chat.",
+          "note": "Usa 'un' o 'une' para sustantivos singulares indefinidos."
+        },
+        {
+          "wrong": "Nous allons à école.",
+          "right": "Nous allons à l'école.",
+          "note": "Usa el artículo definido con lugares específicos (l’ antes de una vocal)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduce: Me gusta el café.",
+          "answer": "J'aime le café."
+        },
+        {
+          "prompt": "Traduce: Ella tiene un gato.",
+          "answer": "Elle a un chat."
+        },
+        {
+          "prompt": "Traduce: Vamos a la escuela.",
+          "answer": "Nous allons à l'école."
+        }
+      ]
+    },
+    {
+      "rule_id": "temps",
+      "topic": "Temps",
+      "title": "Evitando Confusión con 'Temps'",
+      "explanation": "La palabra francesa 'temps' puede significar 'tiempo' (duración), 'clima' o un 'tiempo' gramatical. Los hablantes de inglés a menudo usan 'temps' erróneamente para la hora del reloj o para una ocurrencia única. Usa 'heure' para la hora del reloj, 'fois' para cada ocurrencia, y 'moment' para un período específico agradable. Al hablar del clima, usa 'il fait + adjetivo' (ej., il fait beau) en lugar de solo 'temps'.",
+      "examples": [
+        {
+          "wrong": "Quel temps est-il ?",
+          "right": "Quelle heure est-il ?",
+          "note": "Para preguntar '¿qué hora es?', usa 'heure', no 'temps'."
+        },
+        {
+          "wrong": "C'est la première temps que je viens ici.",
+          "right": "C'est la première fois que je viens ici.",
+          "note": "Para cada ocurrencia o instancia, usa 'fois'."
+        },
+        {
+          "wrong": "J'ai passé un bon temps à la fête.",
+          "right": "J'ai passé un bon moment à la fête.",
+          "note": "Para un intervalo específico (ej., 'un buen momento'), usa 'moment'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "¿Cómo preguntas '¿Qué hora es?' en francés?",
+          "answer": "Quelle heure est-il ?"
+        },
+        {
+          "prompt": "Traduce: 'Pasé un buen momento en la fiesta.' (usa 'moment')",
+          "answer": "J'ai passé un bon moment à la fête."
+        },
+        {
+          "prompt": "Corrige el error en esta oración: 'Il fait du temps.'",
+          "answer": "Il fait beau."
+        }
+      ]
+    },
+    {
+      "rule_id": "accord",
+      "topic": "Accord",
+      "title": "Concordancia: Concordancia de adjetivos con sustantivos",
+      "explanation": "En francés, los adjetivos deben concordar con el sustantivo que describen en género (masculine/feminine) y número (singular/plural). Un error común es olvidar cambiar la terminación del adjetivo. Siempre revisa primero el sustantivo, luego ajusta el adjetivo.",
+      "examples": [
+        {
+          "wrong": "Une maison blanc",
+          "right": "Une maison blanche",
+          "note": "Blanc se convierte en blanche para el singular femenino."
+        },
+        {
+          "wrong": "Des livres intéressant",
+          "right": "Des livres intéressants",
+          "note": "Agrega -s para el plural masculino."
+        },
+        {
+          "wrong": "Elle est grand",
+          "right": "Elle est grande",
+          "note": "Grand se convierte en grande para concordar con elle (feminine)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Corrige esta oración: 'Elle est petit.'",
+          "answer": "Elle est petite."
+        },
+        {
+          "prompt": "Corrige esta oración: 'Ils sont grand.'",
+          "answer": "Ils sont grands."
+        },
+        {
+          "prompt": "Corrige esta oración: 'Une robe vert et un chapeau vert.'",
+          "answer": "Une robe verte et un chapeau vert."
+        }
+      ]
+    },
+    {
+      "rule_id": "pronoms",
+      "topic": "Pronoms",
+      "title": "Pronombres de objeto directo vs indirecto (le/la/les vs lui/leur)",
+      "explanation": "En francés, los pronombres de objeto directo (le, la, les) reemplazan a personas o cosas que reciben la acción directamente, como 'verlo' o 'amarlos'. Los pronombres de objeto indirecto (lui, leur) reemplazan a personas a quienes o para quienes se realiza la acción, como 'hablarle' o 'darles'. Un error común es intercambiarlos, por ejemplo, usar 'lui' donde se necesita 'le'.",
+      "examples": [
+        {
+          "wrong": "Je lui vois.",
+          "right": "Je le vois.",
+          "note": "Ver es una acción directa: la persona es vista directamente, así que usa 'le'."
+        },
+        {
+          "wrong": "Je le parle.",
+          "right": "Je lui parle.",
+          "note": "Hablar con alguien es indirecto, así que usa 'lui'."
+        },
+        {
+          "wrong": "Je leur aime.",
+          "right": "Je les aime.",
+          "note": "Amar es una acción directa, así que usa 'les' para 'ellos' (directo)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Reemplaza 'Marie' con el pronombre correcto: Je vois Marie.",
+          "answer": "Je la vois."
+        },
+        {
+          "prompt": "Reemplaza 'à mon frère' con el pronombre correcto: Je parle à mon frère.",
+          "answer": "Je lui parle."
+        },
+        {
+          "prompt": "Reemplaza 'les enfants' con el pronombre correcto: J'aime les enfants.",
+          "answer": "Je les aime."
+        }
+      ]
+    },
+    {
+      "rule_id": "voyelles-nasales",
+      "topic": "Voyelles nasales",
+      "title": "Dominando las Vocales Nasales Francesas (Voyelles Nasales)",
+      "explanation": "Las vocales nasales (como 'an', 'in', 'on', 'un') se pronuncian con el aire fluyendo por la nariz, sin pronunciar completamente la 'n' o 'm' siguiente. Un error común entre los hablantes de inglés es pronunciar la 'n' o 'm' como consonante, o confundir diferentes vocales nasales. Recuerda que la vocal se nasaliza y la consonante no se pronuncia a menos que le siga otra vocal.",
+      "examples": [
+        {
+          "wrong": "je vien",
+          "right": "je viens",
+          "note": "La 'en' en 'viens' es una vocal nasal; no digas 'vee-enz' con una 'n' dura."
+        },
+        {
+          "wrong": "un bon vin blanc",
+          "right": "un bon vin blanc",
+          "note": "Escucha las vocales nasales: 'un' (œ̃), 'bon' (ɔ̃), 'vin' (ɛ̃), 'blanc' (ɑ̃). Cada una es distinta y nasalizada."
+        },
+        {
+          "wrong": "la main",
+          "right": "la main",
+          "note": "El 'ain' suena como la vocal nasal [ɛ̃]; evita pronunciar la 'n' al final."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "¿Cómo se dice 'yo tengo' (usando 'avoir') con la vocal nasal correcta?",
+          "answer": "j'ai"
+        },
+        {
+          "prompt": "Escribe la palabra francesa para 'tiempo' (como en 'le temps') con la vocal nasal correcta.",
+          "answer": "le temps"
+        },
+        {
+          "prompt": "¿Cuál es la frase francesa correcta para 'por la mañana' (usando 'matin' y 'dans le')?",
+          "answer": "dans le matin"
+        }
+      ]
+    },
+    {
+      "rule_id": "liaison",
+      "topic": "Liaison",
+      "title": "Liaison francesa: Cuándo (y cuándo no) enlazar sonidos",
+      "explanation": "La liaison es el enlace de una consonante final normalmente muda con la siguiente palabra si esta comienza con una vocal o h muda. Por ejemplo, 'vous avez' se pronuncia 'voo-zah-vay'. Sin embargo, la liaison es opcional o está prohibida en muchos casos (p. ej., después de un sustantivo o antes de una palabra que comienza con h aspirada). Un error común es usar la liaison en exceso o no usarla donde es necesaria.",
+      "examples": [
+        {
+          "wrong": "les amis (pronounced lay ah-mee)",
+          "right": "les amis (pronounced lay-zah-mee)",
+          "note": "La 's' en 'les' se enlaza con 'amis' para formar un sonido 'z' porque 'amis' comienza con una vocal."
+        },
+        {
+          "wrong": "ils ont (pronounced eel on)",
+          "right": "ils ont (pronounced eel-zon)",
+          "note": "La 's' en 'ils' se enlaza con 'ont' para evitar colisión de vocales y sonar natural."
+        },
+        {
+          "wrong": "grand homme (pronounced grahn om)",
+          "right": "grand homme (pronounced grahn-tom)",
+          "note": "La 'd' en 'grand' se enlaza con 'homme' (que tiene una h muda) para formar un sonido 't'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "¿Cómo se pronuncia correctamente 'vous avez' (tiene) con liaison?",
+          "answer": "voo-zah-vay"
+        },
+        {
+          "prompt": "¿Se debe hacer una liaison en 'les héros' (los héroes)? ('héros' comienza con una h aspirada)",
+          "answer": "No, say 'lay ay-roh' (no linking of the 's')"
+        },
+        {
+          "prompt": "Escribe la pronunciación correcta de 'on a' (uno tiene / nosotros tenemos) con liaison.",
+          "answer": "on-nah"
+        }
+      ]
+    },
+    {
+      "rule_id": "accent-tonique",
+      "topic": "Accent tonique",
+      "title": "Accent tonique: La regla del acento francés",
+      "explanation": "En francés, el accent tonique (acento) siempre recae en la última sílaba completa de una palabra o grupo rítmico. A diferencia del inglés, el acento francés es fijo y no cambia entre palabras; un error común es acentuar la primera sílaba como en inglés. Esto puede hacer que tu pronunciación suene poco natural.",
+      "examples": [
+        {
+          "wrong": "BANane",
+          "right": "baNANE",
+          "note": "Acentúa la última sílaba -NANE, no la primera."
+        },
+        {
+          "wrong": "PARler",
+          "right": "parLER",
+          "note": "Para verbos como 'parler', acentúa siempre la última sílaba -LER."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "¿Cómo deberías pronunciar correctamente la palabra 'musique'? Escríbela con la sílaba acentuada en mayúsculas.",
+          "answer": "muSIQUE"
+        },
+        {
+          "prompt": "Escribe la palabra 'ordinateur' con la sílaba acentuada en mayúsculas para mostrar el acento correcto.",
+          "answer": "ordinaTEUR"
+        }
+      ]
+    },
+    {
+      "rule_id": "gender-assignment-of-nouns",
+      "topic": "Gender assignment of nouns",
+      "title": "Dominando los Géneros de los Sustantivos con Terminaciones Comunes",
+      "explanation": "En francés, cada sustantivo tiene un género—masculino o femenino—que a menudo afecta el artículo (le/la). Muchos sustantivos siguen patrones: aquellos que terminan en -tion, -sion o -té suelen ser femeninos, mientras que los que terminan en -age, -ment o -eau suelen ser masculinos. Sin embargo, cuidado con excepciones como 'problème' (masculino) a pesar de su terminación en -e.",
+      "examples": [
+        {
+          "wrong": "le situation",
+          "right": "la situation",
+          "note": "Los sustantivos que terminan en -tion son casi siempre femeninos, así que usa 'la'."
+        },
+        {
+          "wrong": "la voyage",
+          "right": "le voyage",
+          "note": "Los sustantivos que terminan en -age son típicamente masculinos, así que usa 'le'."
+        },
+        {
+          "wrong": "la problème",
+          "right": "le problème",
+          "note": "Aunque termina en -e, 'problème' es masculino (como muchas palabras en -ème)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Completa con el artículo correcto (le/la): '___ chanson' (canción)",
+          "answer": "la"
+        },
+        {
+          "prompt": "Completa con el artículo correcto: '___ musée' (museo)",
+          "answer": "le"
+        },
+        {
+          "prompt": "¿Qué artículo toma 'nation' (nación)?",
+          "answer": "la"
+        }
+      ]
+    },
+    {
+      "rule_id": "cest-vs-ilelle-est",
+      "topic": "C'est vs il/elle est",
+      "title": "C'est vs Il/Elle est",
+      "explanation": "Usa 'c'est' (o 'ce sont' para plural) antes de un sustantivo o un pronombre tónico para identificar o describir algo. Usa 'il est' o 'elle est' antes de un adjetivo, una profesión o una nacionalidad sin artículo, o para hablar de una persona o cosa específica ya mencionada.",
+      "examples": [
+        {
+          "wrong": "Il est un professeur.",
+          "right": "C'est un professeur.",
+          "note": "Usa 'c'est' antes de un sustantivo (con artículo) como 'un professeur'."
+        },
+        {
+          "wrong": "C'est intelligente.",
+          "right": "Elle est intelligente.",
+          "note": "Usa 'elle est' antes de un adjetivo (aquí 'intelligente') cuando te refieras a una persona específica."
+        },
+        {
+          "wrong": "Ce sont grand.",
+          "right": "Ils sont grands.",
+          "note": "Usa 'ils sont' con un adjetivo; 'ce sont' es para sustantivos en plural."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Completa el espacio en blanco con 'C'est' o 'Il est': ... un chat noir.",
+          "answer": "C'est"
+        },
+        {
+          "prompt": "Completa el espacio en blanco con 'C'est' o 'Elle est': Marie, ... très sympa.",
+          "answer": "elle est"
+        },
+        {
+          "prompt": "Completa el espacio en blanco con 'Ce sont' o 'Ils sont': ... des livres intéressants.",
+          "answer": "Ce sont"
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-adjectives-monmames",
+      "topic": "Possessive adjectives (mon/ma/mes)",
+      "title": "Adjetivos posesivos: Mon, Ma, Mes",
+      "explanation": "En francés, los adjetivos posesivos deben concordar con el sustantivo que modifican en género y número. Sin embargo, antes de un sustantivo femenino que comienza con una vocal o 'h' muda, debes usar 'mon' en lugar de 'ma' para evitar un hiato (dos sonidos vocálicos seguidos). El plural 'mes' se usa para ambos géneros.",
+      "examples": [
+        {
+          "wrong": "ma amie",
+          "right": "mon amie",
+          "note": "Aunque 'amie' es femenino, usamos 'mon' porque comienza con una vocal."
+        },
+        {
+          "wrong": "mon soeur",
+          "right": "ma soeur",
+          "note": "'Soeur' es femenino y comienza con una consonante, por lo que usamos 'ma'."
+        },
+        {
+          "wrong": "ma amis",
+          "right": "mes amis",
+          "note": "'Amis' es masculino plural, así que usa 'mes'. También nota que la regla de la vocal no aplica a los plurales."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduce: 'mi madre' (madre = mère, femenino, empieza con consonante).",
+          "answer": "ma mère"
+        },
+        {
+          "prompt": "Traduce: 'mi escuela' (escuela = école, femenino, empieza con vocal).",
+          "answer": "mon école"
+        },
+        {
+          "prompt": "Traduce: 'mis padres' (padres = parents, masculino plural).",
+          "answer": "mes parents"
+        }
+      ]
+    },
+    {
+      "rule_id": "negation-in-compound-tenses",
+      "topic": "Negation in compound tenses",
+      "title": "Negación en tiempos compuestos (Passé Composé)",
+      "explanation": "En tiempos compuestos como el passé composé, la negación rodea al verbo auxiliar (avoir o être), no al participio pasado. Coloca 'ne' antes del auxiliar y 'pas' después de él, y mantén el participio pasado después del auxiliar. Un error común es colocar 'pas' después del participio pasado en lugar de después del auxiliar.",
+      "examples": [
+        {
+          "wrong": "Je n'ai mangé pas.",
+          "right": "Je n'ai pas mangé.",
+          "note": "La negación debe rodear al auxiliar 'ai', no al participio pasado 'mangé'."
+        },
+        {
+          "wrong": "Elle n'est allée pas au cinéma.",
+          "right": "Elle n'est pas allée au cinéma.",
+          "note": "Con 'être' como auxiliar, 'ne' y 'pas' aún rodean a 'est'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Corrige esta oración: 'Ils ont fini pas leurs devoirs.'",
+          "answer": "Ils n'ont pas fini leurs devoirs."
+        },
+        {
+          "prompt": "Corrige esta oración: 'Nous ne sommes partis pas tôt.'",
+          "answer": "Nous ne sommes pas partis tôt."
+        }
+      ]
+    },
+    {
+      "rule_id": "prepositions-à-and-de-after-verbs",
+      "topic": "Prepositions à and de after verbs",
+      "title": "Preposiciones à y de después de verbos",
+      "explanation": "Muchos verbos franceses van seguidos de una preposición específica (ya sea à o de) antes de un infinitivo u objeto, y esta preposición a menudo no se traduce directamente del inglés. Elegir la preposición incorrecta es un error común. Necesitas memorizar qué verbos usan à y cuáles usan de.",
+      "examples": [
+        {
+          "wrong": "J'ai commencé à travailler.",
+          "right": "J'ai commencé à travailler.",
+          "note": "En realidad correcto – pero nota: 'commencer à' está bien. Un mejor error: 'J'apprends parler français' (falta à) → 'J'apprends à parler français'."
+        },
+        {
+          "wrong": "Je veux de manger.",
+          "right": "Je veux manger.",
+          "note": "El verbo 'vouloir' no lleva preposición antes de un infinitivo. Usar 'de' aquí es incorrecto."
+        },
+        {
+          "wrong": "Il a décidé à partir.",
+          "right": "Il a décidé de partir.",
+          "note": "El verbo 'décider' requiere la preposición 'de' antes de un infinitivo, no 'à'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Completa con la preposición correcta (à, de o nada): Ella está aprendiendo a conducir. (apprendre)",
+          "answer": "Elle apprend à conduire."
+        },
+        {
+          "prompt": "Completa con la preposición correcta: Él olvidó llamar. (oublier)",
+          "answer": "Il a oublié d'appeler."
+        },
+        {
+          "prompt": "Completa con la preposición correcta: Estamos intentando terminar. (essayer)",
+          "answer": "Nous essayons de finir."
+        }
+      ]
+    },
+    {
+      "rule_id": "subjunctive-mood-usage",
+      "topic": "Subjunctive mood usage",
+      "title": "Cuándo usar el subjuntivo en francés",
+      "explanation": "El modo subjuntivo se usa después de expresiones de necesidad, emoción, duda y ciertas conjunciones (p. ej., 'il faut que', 'bien que', 'pour que'). A diferencia del inglés, no es opcional y debe seguir estos desencadenantes. Un error común es usar el indicativo en lugar del subjuntivo después de dichas expresiones.",
+      "examples": [
+        {
+          "wrong": "Il faut que tu fais tes devoirs.",
+          "right": "Il faut que tu fasses tes devoirs.",
+          "note": "'Il faut que' siempre requiere el subjuntivo — 'fasses' es la forma correcta."
+        },
+        {
+          "wrong": "Je suis content que tu es là.",
+          "right": "Je suis content que tu sois là.",
+          "note": "Emociones como 'être content que' desencadenan el subjuntivo — usa 'sois' en lugar de 'es'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Completa el espacio en blanco con la forma correcta del subjuntivo de 'faire': Il faut que nous ______ nos devoirs.",
+          "answer": "fassions"
+        },
+        {
+          "prompt": "Corrige el error en la oración: Je doute qu'il vient.",
+          "answer": "Je doute qu'il vienne."
+        }
+      ]
+    },
+    {
+      "rule_id": "imperative-with-object-pronouns",
+      "topic": "Imperative with object pronouns",
+      "title": "Imperativo con pronombres de objeto",
+      "explanation": "En los mandatos afirmativos en francés, los pronombres de objeto se unen al verbo con guiones y siguen un orden específico (p. ej., me, te, nous, vous luego le, la, les luego lui, leur). En los mandatos negativos, los pronombres van antes del verbo, siguiendo el mismo orden. Un error común es olvidar los guiones o colocar los pronombres incorrectamente.",
+      "examples": [
+        {
+          "wrong": "Donne moi le livre.",
+          "right": "Donne-moi le livre.",
+          "note": "Afirmativo: añade los pronombres con guiones después del verbo."
+        },
+        {
+          "wrong": "Ne le donne pas à moi.",
+          "right": "Ne me le donne pas.",
+          "note": "Negativo: los pronombres van antes del verbo, en el orden correcto."
+        },
+        {
+          "wrong": "Parle lui.",
+          "right": "Parle-lui.",
+          "note": "Siempre usa guiones en los mandatos afirmativos."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Dime la verdad.",
+          "answer": "Dis-moi la vérité."
+        },
+        {
+          "prompt": "No se lo des.",
+          "answer": "Ne le leur donne pas."
+        },
+        {
+          "prompt": "Envíamelo.",
+          "answer": "Envoie-le-moi."
+        }
+      ]
+    },
+    {
+      "rule_id": "si-clauses-conditional-sentences",
+      "topic": "Si clauses (conditional sentences)",
+      "title": "Cláusulas con 'si': La trampa del futuro y del condicional",
+      "explanation": "En francés, después de la palabra 'si' (si), no puedes usar los tiempos futuro ni condicional. Usa el tiempo presente para condiciones reales/probables, y el tiempo imperfecto para condiciones hipotéticas o irreales. Este es un error común porque el inglés suele usar 'will' o 'would' en estos casos.",
+      "examples": [
+        {
+          "wrong": "Si je pourrai, je viendrai.",
+          "right": "Si je peux, je viendrai.",
+          "note": "Usa el tiempo presente ('peux') después de 'si', no el futuro ('pourrai')."
+        },
+        {
+          "wrong": "Si j'aurais de l'argent, j'achèterais une maison.",
+          "right": "Si j'avais de l'argent, j'achèterais une maison.",
+          "note": "Para condiciones irreales, usa el imperfecto ('avais') después de 'si', no el condicional ('aurais')."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Corrige esta oración: 'Si je pourrai, je le ferai.'",
+          "answer": "Si je peux, je le ferai."
+        },
+        {
+          "prompt": "Corrige esta oración: 'Si tu aurais le temps, tu viendrais.'",
+          "answer": "Si tu avais le temps, tu viendrais."
+        }
+      ]
+    },
+    {
+      "rule_id": "interrogative-pronouns-qui-que-quoi",
+      "topic": "Interrogative pronouns (qui, que, quoi)",
+      "title": "Dominando los pronombres interrogativos: Qui, Que, Quoi",
+      "explanation": "En francés, 'qui' pregunta por una persona (sujeto o complemento de preposición), 'que' pregunta por una cosa (objeto directo) y 'quoi' se usa después de preposiciones o en preguntas informales sin inversión. Los hablantes de inglés suelen usar mal 'quoi' en lugar de 'que' o 'qui'. Recuerda: 'qui' para personas, 'que' para cosas y 'quoi' solo después de preposiciones o en lenguaje coloquial.",
+      "examples": [
+        {
+          "wrong": "Quoi tu veux?",
+          "right": "Que veux-tu?",
+          "note": "Usa 'que' + inversión para una pregunta de objeto directo sobre una cosa."
+        },
+        {
+          "wrong": "Qui vous avez vu?",
+          "right": "Qui avez-vous vu?",
+          "note": "Mantén la inversión con 'qui' como objeto directo (a quién). 'Qui' también puede ser sujeto: 'Qui a parlé?'"
+        },
+        {
+          "wrong": "Avec que parles-tu?",
+          "right": "Avec qui parles-tu?",
+          "note": "Después de una preposición, usa 'qui' para personas y 'quoi' para cosas: 'Avec quoi écris-tu?'"
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduce: '¿Qué estás comiendo?' (usa inversión formal)",
+          "answer": "Que mangez-vous?"
+        },
+        {
+          "prompt": "Pregunta '¿Quién viene?' (persona como sujeto)",
+          "answer": "Qui vient?"
+        },
+        {
+          "prompt": "Completa la pregunta: 'Tu parles de ______ ?' (sobre una cosa, informal)",
+          "answer": "quoi"
+        }
+      ]
+    },
+    {
+      "rule_id": "relative-pronouns-qui-que-dont",
+      "topic": "Relative pronouns (qui, que, dont)",
+      "title": "Pronombres relativos franceses: Qui, Que, Dont",
+      "explanation": "Qui reemplaza el sujeto de una cláusula (quien/el cual), que reemplaza el objeto directo (a quien/el cual), y dont reemplaza de + sustantivo (del cual/de quien). Use qui antes de un verbo, que antes de un sujeto+verbo, y dont para indicar posesión u origen.",
+      "examples": [
+        {
+          "wrong": "C'est l'homme que parle français.",
+          "right": "C'est l'homme qui parle français.",
+          "note": "Qui se usa porque 'l'homme' es el sujeto de 'parle'."
+        },
+        {
+          "wrong": "Le livre qui j'ai lu est intéressant.",
+          "right": "Le livre que j'ai lu est intéressant.",
+          "note": "Que reemplaza el objeto directo 'le livre' porque recibe la acción de 'ai lu'."
+        },
+        {
+          "wrong": "C'est la fille que je parle.",
+          "right": "C'est la fille dont je parle.",
+          "note": "Dont reemplaza 'de la fille' después del verbo 'parler de'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Llena el espacio en blanco con el pronombre correcto (qui, que o dont): 'La voiture ______ est rouge est à moi.'",
+          "answer": "qui"
+        },
+        {
+          "prompt": "Llena el espacio en blanco: 'Le film ______ nous avons regardé était amusant.'",
+          "answer": "que"
+        },
+        {
+          "prompt": "Llena el espacio en blanco: 'C'est le professeur ______ les élèves parlent.'",
+          "answer": "dont"
+        }
+      ]
+    },
+    {
+      "rule_id": "faire-causatif-faire-infinitive",
+      "topic": "Faire causatif (faire + infinitive)",
+      "title": "El causativo 'Faire' (Faire + Infinitivo)",
+      "explanation": "En francés, 'faire + infinitivo' significa 'hacer que alguien haga algo' o 'hacer que algo suceda'. La persona que realiza la acción es el objeto de 'faire', no el sujeto del infinitivo. Un error común es colocar un pronombre entre 'faire' y el infinitivo, pero los pronombres deben ir antes de 'faire'.",
+      "examples": [
+        {
+          "wrong": "Je fais lui manger.",
+          "right": "Je le fais manger.",
+          "note": "Con pronombres, colócalos antes de 'faire' (aquí: 'le' = lo)."
+        },
+        {
+          "wrong": "Je fais mon ami venir.",
+          "right": "Je fais venir mon ami.",
+          "note": "Con un sustantivo, colócalo después del infinitivo (aquí: 'mon ami' = mi amigo)."
+        },
+        {
+          "wrong": "Elle fait les enfants dormir.",
+          "right": "Elle fait dormir les enfants.",
+          "note": "El infinitivo 'dormir' va antes del sustantivo 'les enfants'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduce: 'Yo lo hago trabajar.' (usa 'travailler')",
+          "answer": "Je le fais travailler."
+        },
+        {
+          "prompt": "Traduce: 'Ella hace comer a los niños.' (usa 'manger')",
+          "answer": "Elle fait manger les enfants."
+        },
+        {
+          "prompt": "Traduce: 'Nosotros hacemos reparar el coche.' (usa 'réparer')",
+          "answer": "Nous faisons réparer la voiture."
+        }
+      ]
+    },
+    {
+      "rule_id": "depuis-vs-il-y-a",
+      "topic": "Depuis vs il y a",
+      "title": "Depuis vs Il y a: Duración vs Tiempo atrás",
+      "explanation": "Usa 'depuis' para hablar de una acción que comenzó en el pasado y continúa hasta el presente (durante/desde). Usa 'il y a' para hablar de una acción completada que ocurrió hace un tiempo específico. Piensa en 'depuis' como respuesta a '¿cuánto tiempo?' y 'il y a' como respuesta a '¿cuándo?'.",
+      "examples": [
+        {
+          "wrong": "J'étudie le français il y a trois ans.",
+          "right": "J'étudie le français depuis trois ans.",
+          "note": "Si todavía estudias francés, usa 'depuis' (duración desde el pasado hasta ahora)."
+        },
+        {
+          "wrong": "Je suis arrivé depuis deux heures.",
+          "right": "Je suis arrivé il y a deux heures.",
+          "note": "Si la llegada está terminada, usa 'il y a' (un punto en el pasado)."
+        },
+        {
+          "wrong": "Elle habite ici il y a 2010.",
+          "right": "Elle habite ici depuis 2010.",
+          "note": "Para un punto de inicio que continúa hasta ahora, usa 'depuis' (desde 2010)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduce: 'He estado esperando durante 20 minutos.' (acción que aún continúa)",
+          "answer": "J'attends depuis 20 minutes."
+        },
+        {
+          "prompt": "Traduce: 'Él se fue hace dos días.' (acción completada)",
+          "answer": "Il est parti il y a deux jours."
+        },
+        {
+          "prompt": "Completa: 'Nous nous sommes rencontrés ___ trois mois.' (nos conocimos hace tres meses, completado)",
+          "answer": "Nous nous sommes rencontrés il y a trois mois."
+        }
+      ]
+    },
+    {
+      "rule_id": "comparative-and-superlative-forms",
+      "topic": "Comparative and superlative forms",
+      "title": "Formas comparativas y superlativas",
+      "explanation": "En francés, los comparativos usan 'plus...que' (más que), 'aussi...que' (tan...como) o 'moins...que' (menos que). El superlativo se forma con 'le/la/les plus/moins' + adjetivo, y el adjetivo debe concordar en género y número. Un error común es olvidar hacer concordar el adjetivo o usar 'que' incorrectamente después de un superlativo (debería ser 'de').",
+      "examples": [
+        {
+          "wrong": "Elle est plus grande que lui.",
+          "right": "Elle est plus grande que lui.",
+          "note": "Esto es realmente correcto; un error común es 'plus grand que elle' (orden incorrecto de palabras). Pero para demostración, aquí hay una versión incorrecta: 'Elle est plus grande que lui' está bien. Déjame corregir: Un error típico es 'Il est plus grand que elle' en lugar de 'Il est plus grand qu'elle' (apóstrofe)."
+        },
+        {
+          "wrong": "C'est la plus bon tarte.",
+          "right": "C'est la meilleure tarte.",
+          "note": "'Bon' se convierte en 'meilleur' en comparativo/superlativo; además, el adjetivo debe concordar: 'meilleure' femenino."
+        },
+        {
+          "wrong": "Il est le plus intelligent de la classe.",
+          "right": "Il est le plus intelligent de la classe.",
+          "note": "Esto es correcto. Un error común es decir 'le plus intelligent que la classe' en lugar de 'de la classe'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduce: 'Ella es más alta que su hermano.' Usa 'grand(e)'.",
+          "answer": "Elle est plus grande que son frère."
+        },
+        {
+          "prompt": "Completa el espacio en blanco: 'Este es el mejor restaurante del pueblo.' Usa 'bon' en superlativo.",
+          "answer": "C'est le meilleur restaurant de la ville."
+        },
+        {
+          "prompt": "Corrige el error: 'Marie est aussi intelligente que Paul' es correcto, pero hazlo superlativo: 'Marie est la plus intelligente' – añade 'de la classe'.",
+          "answer": "Marie est la plus intelligente de la classe."
+        }
+      ]
+    },
+    {
+      "rule_id": "demonstrative-adjectives-and-pronouns",
+      "topic": "Demonstrative adjectives and pronouns",
+      "title": "Adjetivos y pronombres demostrativos: Elegir entre ce y celui",
+      "explanation": "Los adjetivos demostrativos (ce, cet, cette, ces) modifican un sustantivo: 'ce livre'. Los pronombres demostrativos (celui, celle, ceux, celles) reemplazan un sustantivo: 'celui-ci'. Un error común es usar ce solo cuando se necesita un pronombre, o asignar el género incorrecto al pronombre. Recuerda: los adjetivos acompañan a los sustantivos, los pronombres van solos.",
+      "examples": [
+        {
+          "wrong": "Je préfère ce.",
+          "right": "Je préfère celui-ci.",
+          "note": "Ce es un adjetivo y debe ir seguido de un sustantivo; usa un pronombre (celui/celle/ceux/celles) cuando lo reemplaces."
+        },
+        {
+          "wrong": "Cette robe et celui-là sont jolies.",
+          "right": "Cette robe et celle-là sont jolies.",
+          "note": "Celle (femenino) debe coincidir con el género de 'robe', no celui (masculino)."
+        },
+        {
+          "wrong": "Ces sont mes amis.",
+          "right": "Ce sont mes amis.",
+          "note": "Usa 'ce sont' (expresión impersonal) antes de un sustantivo, no 'ces' que es un adjetivo plural."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduce: 'Quiero este libro, no ese.'",
+          "answer": "Je veux ce livre, pas celui-là."
+        },
+        {
+          "prompt": "Llena el espacio en blanco: '______ voiture-ci est plus rapide que ______ là.' (Este coche de aquí es más rápido que ese de allá.)",
+          "answer": "Cette voiture-ci est plus rapide que celle-là."
+        },
+        {
+          "prompt": "Elige el pronombre correcto: 'J'aime mes chaussures, mais je préfère (ces / celles) de Marie.'",
+          "answer": "celles"
+        }
+      ]
+    },
+    {
+      "rule_id": "numbers-70-99-thousandmillion",
+      "topic": "Numbers (70-99, thousand/million)",
+      "title": "Números 70-99, Mil y Millón: Errores Comunes",
+      "explanation": "Los números franceses del 70 al 99 siguen un patrón de base 20. 70 es soixante‑dix (60+10), 80 es quatre‑vingts (4×20) y 90 es quatre‑vingt‑dix (4×20+10). Para «mil», mille nunca lleva -s, pero million y milliard son sustantivos que sí toman -s en plural y requieren de antes de un sustantivo posterior (ej., un million de personnes).",
+      "examples": [
+        {
+          "wrong": "Il a soixante et dix ans.",
+          "right": "Il a soixante‑dix ans.",
+          "note": "70 es soixante‑dix (sin «et»)."
+        },
+        {
+          "wrong": "Il y a quatre‑vingt dix personnes.",
+          "right": "Il y a quatre‑vingt‑dix personnes.",
+          "note": "90 requiere un guion entre vingt y dix: quatre‑vingt‑dix."
+        },
+        {
+          "wrong": "Cinq milles euros.",
+          "right": "Cinq mille euros.",
+          "note": "Mille es invariable; nunca añadas -s para los múltiplos."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Escribe «75» en francés.",
+          "answer": "soixante‑quinze"
+        },
+        {
+          "prompt": "Escribe «93» en francés.",
+          "answer": "quatre‑vingt‑treize"
+        },
+        {
+          "prompt": "Escribe «1 millón de personas» en francés.",
+          "answer": "un million de personnes"
+        }
+      ]
+    },
+    {
+      "rule_id": "partitive-articles-after-negation",
+      "topic": "Partitive articles after negation",
+      "title": "Artículos partitivos después de la negación",
+      "explanation": "En francés, después de una negación (como 'ne...pas'), los artículos partitivos 'du', 'de la', 'de l'' y 'des' cambian a 'de' (o 'd'' antes de una vocal). Esta regla se aplica a la mayoría de los verbos (p. ej., avoir, manger, vouloir). Una excepción importante es el verbo 'être' (ser/estar), donde el partitivo permanece sin cambios (p. ej., 'C'est du pain' → 'Ce n'est pas du pain').",
+      "examples": [
+        {
+          "wrong": "Je n'ai pas du pain.",
+          "right": "Je n'ai pas de pain.",
+          "note": "'Du' se convierte en 'de' después de 'ne...pas'."
+        },
+        {
+          "wrong": "Il n'a pas des amis.",
+          "right": "Il n'a pas d'amis.",
+          "note": "'Des' se convierte en 'd'' antes de un sonido vocálico."
+        },
+        {
+          "wrong": "Elle ne veut pas de la salade.",
+          "right": "Elle ne veut pas de salade.",
+          "note": "'De la' se convierte en 'de' (sin cambio en la forma, pero se omite el artículo)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "No como carne.",
+          "answer": "Je ne mange pas de viande."
+        },
+        {
+          "prompt": "Ella no tiene agua.",
+          "answer": "Elle n'a pas d'eau."
+        },
+        {
+          "prompt": "Ellos no quieren pan.",
+          "answer": "Ils ne veulent pas de pain."
+        }
+      ]
+    },
+    {
+      "rule_id": "passé-composé-auxiliary-selection",
+      "topic": "Passé composé auxiliary selection",
+      "title": "Passé Composé: Elegir entre Avoir y Être",
+      "explanation": "En francés, la mayoría de los verbos forman el passé composé con el auxiliar 'avoir'. Sin embargo, un conjunto de verbos comunes (que a menudo expresan movimiento o cambio de estado) y todos los verbos reflexivos usan 'être' en su lugar. Cuando se usa 'être', el participio pasado debe concordar en género y número con el sujeto.",
+      "examples": [
+        {
+          "wrong": "J'ai allé au cinéma.",
+          "right": "Je suis allé au cinéma.",
+          "note": "'Aller' es uno de los verbos que siempre requiere 'être'."
+        },
+        {
+          "wrong": "Elle a tombé.",
+          "right": "Elle est tombée.",
+          "note": "'Tomber' usa 'être' y el participio concuerda con el sujeto femenino."
+        },
+        {
+          "wrong": "Nous avons parti tôt.",
+          "right": "Nous sommes partis tôt.",
+          "note": "'Partir' usa 'être' y el participio concuerda con el sujeto plural."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduce: 'Llegué a las 8 en punto.' (usa masculino singular)",
+          "answer": "Je suis arrivé à huit heures."
+        },
+        {
+          "prompt": "Traduce: 'Ellas salieron.'",
+          "answer": "Elles sont sorties."
+        },
+        {
+          "prompt": "Traduce: 'Él se quedó en casa.'",
+          "answer": "Il est resté à la maison."
+        }
+      ]
+    },
+    {
+      "rule_id": "adjective-placement-before-vs-after-noun",
+      "topic": "Adjective placement (before vs after noun)",
+      "title": "Colocación del adjetivo: antes o después del sustantivo?",
+      "explanation": "En francés, la mayoría de los adjetivos van después del sustantivo (p. ej., 'un livre intéressant'). Sin embargo, un pequeño grupo de adjetivos comunes —a menudo que describen belleza, edad, bondad o tamaño (BAGS)— van antes del sustantivo (p. ej., 'un beau jardin'). Aprende estas excepciones para sonar natural.",
+      "examples": [
+        {
+          "wrong": "un jardin beau",
+          "right": "un beau jardin",
+          "note": "'Beau' (hermoso) es un adjetivo BAGS, por lo que va antes del sustantivo."
+        },
+        {
+          "wrong": "une voiture rouge",
+          "right": "une voiture rouge",
+          "note": "Los adjetivos de color (como 'rouge') siempre van después del sustantivo — esto es correcto como se muestra."
+        },
+        {
+          "wrong": "une maison vieille",
+          "right": "une vieille maison",
+          "note": "'Vieille' (vieja) describe edad, por lo que va antes del sustantivo."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduce 'a small cat' al francés, colocando el adjetivo correctamente.",
+          "answer": "un petit chat"
+        },
+        {
+          "prompt": "Corrige el orden de las palabras: 'une robe belle'.",
+          "answer": "une belle robe"
+        },
+        {
+          "prompt": "Escribe 'a new book' en francés con el adjetivo en la posición correcta.",
+          "answer": "un nouveau livre"
+        }
+      ]
+    }
+  ]
+}

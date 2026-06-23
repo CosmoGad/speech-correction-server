@@ -1,0 +1,892 @@
+{
+  "learning": "en",
+  "interface": "ru",
+  "generated_at": "2026-06-21T13:19:21.388266+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "articles",
+      "topic": "Articles",
+      "title": "Артикли: a/an и the",
+      "explanation": "В русском языке артиклей нет, поэтому русскоязычные студенты часто их пропускают или используют неправильно. Основное правило: 'a/an' ставится перед исчисляемыми существительными в единственном числе, когда речь идёт о чём-то неопределённом; 'the' — когда предмет уже известен или уникален.",
+      "examples": [
+        {
+          "wrong": "I have car.",
+          "right": "I have a car.",
+          "note": "Перед исчисляемым существительным в единственном числе нужен неопределенный артикль 'a'."
+        },
+        {
+          "wrong": "She is best student in class.",
+          "right": "She is the best student in class.",
+          "note": "С превосходной степенью прилагательного всегда используется определенный артикль 'the'."
+        },
+        {
+          "wrong": "Can you close window?",
+          "right": "Can you close the window?",
+          "note": "Если слушатель знает, о каком окне идёт речь, нужен 'the'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на английский: 'Я хочу чашку кофе.'",
+          "answer": "I want a cup of coffee."
+        },
+        {
+          "prompt": "Вставьте пропущенный артикль (a, an, the или ничего): '___ Moon goes around ___ Earth.'",
+          "answer": "The Moon goes around the Earth."
+        },
+        {
+          "prompt": "Исправьте ошибку: 'He is honest man.'",
+          "answer": "He is an honest man."
+        }
+      ]
+    },
+    {
+      "rule_id": "tenses",
+      "topic": "Tenses",
+      "title": "Времена: Present Perfect vs Past Simple",
+      "explanation": "Русские ученики часто путают Present Perfect и Past Simple. Present Perfect используется для действий, которые имеют связь с настоящим (результат, опыт, недавнее событие без указания точного времени). Past Simple — для действий, которые полностью завершены в прошлом и часто указывается конкретное время (yesterday, last year, in 2010). Не используйте Present Perfect с точными указателями прошлого времени.",
+      "examples": [
+        {
+          "wrong": "I have seen him yesterday.",
+          "right": "I saw him yesterday.",
+          "note": "Слово 'yesterday' указывает на конкретное прошлое время, поэтому нужен Past Simple."
+        },
+        {
+          "wrong": "I saw that movie already.",
+          "right": "I have seen that movie already.",
+          "note": "'Already' подчеркивает связь с настоящим (знаю фильм сейчас), поэтому нужен Present Perfect."
+        },
+        {
+          "wrong": "She has lived in London in 2010.",
+          "right": "She lived in London in 2010.",
+          "note": "Указано конкретное прошлое время 'in 2010', поэтому используем Past Simple."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Исправьте ошибку в предложении: I have visited Paris last summer.",
+          "answer": "I visited Paris last summer."
+        },
+        {
+          "prompt": "Выберите правильный вариант: They (have never been / never went) to Japan. (Они никогда не были в Японии — опыт)",
+          "answer": "have never been"
+        },
+        {
+          "prompt": "Закончите предложение: I ______ (not finish) my homework yet.",
+          "answer": "haven't finished"
+        }
+      ]
+    },
+    {
+      "rule_id": "prepositions",
+      "topic": "Prepositions",
+      "title": "Предлоги времени: at, on, in",
+      "explanation": "В английском языке для указания времени используются разные предлоги. 'At' — для точного времени (at 5 o'clock), 'on' — для дней недели и дат (on Monday, on July 4th), 'in' — для месяцев, лет и частей дня (in July, in 2024, in the morning). Русскоязычные часто ошибочно используют 'in' вместо 'on' для дней.",
+      "examples": [
+        {
+          "wrong": "I will see you in Monday.",
+          "right": "I will see you on Monday.",
+          "note": "Для дней недели используем 'on', а не 'in'."
+        },
+        {
+          "wrong": "He was born in 1990 year.",
+          "right": "He was born in 1990.",
+          "note": "С годами 'in' используется без слова 'year'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Заполните пропуск правильным предлогом: I have a meeting ___ 3 PM.",
+          "answer": "at"
+        },
+        {
+          "prompt": "Заполните пропуск: She starts her new job ___ Tuesday.",
+          "answer": "on"
+        },
+        {
+          "prompt": "Заполните пропуск: My birthday is ___ July.",
+          "answer": "in"
+        }
+      ]
+    },
+    {
+      "rule_id": "conditional-sentences",
+      "topic": "Conditional sentences",
+      "title": "Условные предложения: типичные ошибки",
+      "explanation": "В английских условных предложениях в придаточной части с 'if' не используется 'will' для будущего времени — вместо этого употребляется настоящее простое время. Для нереальных ситуаций (второй тип) в части с 'if' используется прошедшее время (Past Simple), а в главной части — 'would'. Не смешивайте типы условных предложений.",
+      "examples": [
+        {
+          "wrong": "If I will have time, I will call you.",
+          "right": "If I have time, I will call you.",
+          "note": "В придаточном предложении с if не используется will для будущего времени."
+        },
+        {
+          "wrong": "If I would be rich, I would travel the world.",
+          "right": "If I were rich, I would travel the world.",
+          "note": "Во втором типе условных предложений используем Past Simple (were) в if-части, а не would."
+        },
+        {
+          "wrong": "If I had money, I will buy a car.",
+          "right": "If I had money, I would buy a car.",
+          "note": "Смешивать типы условных предложений нельзя: для нереального настоящего (второй тип) в главной части нужно would."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Исправьте предложение: 'If I will see him, I will tell him.'",
+          "answer": "If I see him, I will tell him."
+        },
+        {
+          "prompt": "Заполните пропуск: 'If she ___ (be) taller, she could be a model.'",
+          "answer": "were"
+        },
+        {
+          "prompt": "Переведите на английский: 'Если бы я был на твоём месте, я бы согласился.'",
+          "answer": "If I were you, I would agree."
+        }
+      ]
+    },
+    {
+      "rule_id": "th-sounds",
+      "topic": "th sounds",
+      "title": "Звуки «th»: /θ/ и /ð/",
+      "explanation": "В английском есть два звука «th»: глухой /θ/ (как в «think») и звонкий /ð/ (как в «the»). Чтобы их произнести, поместите кончик языка между передними зубами и выдувайте воздух. Русские часто заменяют их на /s/, /z/, /t/ или /d/ — это делает речь непонятной.",
+      "examples": [
+        {
+          "wrong": "I sink it's good.",
+          "right": "I think it's good.",
+          "note": "Не путайте «think» (/θɪŋk/) и «sink» (/sɪŋk/) — разные слова!"
+        },
+        {
+          "wrong": "Zis is my car.",
+          "right": "This is my car.",
+          "note": "Звук /ð/ в начале слова «this» — язык между зубами, а не как русское «з»."
+        },
+        {
+          "wrong": "He is a very tief.",
+          "right": "He is a very thief.",
+          "note": "Слово «thief» (/θiːf/) с глухим «th», а не с /t/."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Как правильно произнести и написать слово «три»? (выберите правильный вариант: tree или three)",
+          "answer": "three"
+        },
+        {
+          "prompt": "Вставьте пропущенное слово: «I need to ___ about it.» (think / sink)",
+          "answer": "think"
+        },
+        {
+          "prompt": "Произнесите фразу вслух: «That is the path.» — какой звук в слове «that»? (глухой или звонкий?)",
+          "answer": "звонкий /ð/"
+        }
+      ]
+    },
+    {
+      "rule_id": "stress",
+      "topic": "Stress",
+      "title": "Ударение в английских словах",
+      "explanation": "В английском языке ударение может падать на разные слоги, и его неправильная постановка может изменить значение слова или сделать речь неестественной. В отличие от русского, где ударение часто фиксировано, в английском оно подвижно: например, слово «record» произносится как REcord (существительное «запись») и reCORD (глагол «записывать»). Обращайте внимание на ударение при заучивании новых слов.",
+      "examples": [
+        {
+          "wrong": "phoTOgraphy",
+          "right": "phoTOGraphy",
+          "note": "Ударение падает на второй слог, а не на третий."
+        },
+        {
+          "wrong": "PREsent (как глагол «дарить»)",
+          "right": "preSENT (глагол)",
+          "note": "Глагол «present» (дарить) – ударение на втором слоге, а существительное «present» (подарок) – на первом."
+        },
+        {
+          "wrong": "COMpound (как глагол «составлять»)",
+          "right": "comPOUND (глагол)",
+          "note": "Глагол «compound» (составлять) – ударение на втором слоге, существительное «compound» (соединение) – на первом."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Произнесите слово «object» как существительное (предмет). Какой слог ударный?",
+          "answer": "OBject"
+        },
+        {
+          "prompt": "Произнесите слово «desert» как глагол (покидать). Какой слог ударный?",
+          "answer": "deSERT"
+        },
+        {
+          "prompt": "Выберите правильное ударение для слова «conflict» как существительное (конфликт): CONflict или conFLICT?",
+          "answer": "CONflict"
+        }
+      ]
+    },
+    {
+      "rule_id": "intonation",
+      "topic": "Intonation",
+      "title": "Интонация в английских утверждениях и вопросах",
+      "explanation": "В английском языке интонация играет важную роль. Утвердительные предложения обычно произносятся с понижением тона в конце (↘), а общие вопросы (на которые можно ответить да/нет) — с повышением (↗). Русские говорящие часто ошибочно используют восходящую интонацию в утверждениях, что может звучать как неуверенность или вопрос.",
+      "examples": [
+        {
+          "wrong": "She lives in Moscow↗.",
+          "right": "She lives in Moscow↘.",
+          "note": "Утвердительное предложение требует нисходящей интонации."
+        },
+        {
+          "wrong": "Do you like coffee↘?",
+          "right": "Do you like coffee↗?",
+          "note": "Общий вопрос требует восходящей интонации."
+        },
+        {
+          "wrong": "He is a teacher↗.",
+          "right": "He is a teacher↘.",
+          "note": "Ещё пример утверждения с правильной интонацией."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Произнесите с правильной интонацией: 'You are from Russia.' (утверждение)",
+          "answer": "You are from Russia↘."
+        },
+        {
+          "prompt": "Произнесите с правильной интонацией: 'Is this your book?' (вопрос)",
+          "answer": "Is this your book?↗"
+        },
+        {
+          "prompt": "Исправьте интонацию: 'He speaks English.' (с восходящей интонацией)",
+          "answer": "He speaks English↘."
+        }
+      ]
+    },
+    {
+      "rule_id": "subject-verb-agreement",
+      "topic": "Subject-verb agreement",
+      "title": "Согласование подлежащего и глагола",
+      "explanation": "В английском языке глагол должен согласоваться с подлежащим в числе. Если подлежащее в единственном числе, глагол тоже должен быть в единственном числе (часто с окончанием -s). Если подлежащее во множественном числе, глагол без окончания -s. Это правило часто нарушают, особенно когда между подлежащим и глаголом есть другие слова.",
+      "examples": [
+        {
+          "wrong": "He go to school.",
+          "right": "He goes to school.",
+          "note": "Подлежащее 'He' (3-е лицо, ед.ч.) требует глагола с окончанием -s."
+        },
+        {
+          "wrong": "The dogs runs fast.",
+          "right": "The dogs run fast.",
+          "note": "Подлежащее 'dogs' (мн.ч.) требует глагола без -s."
+        },
+        {
+          "wrong": "She don't like coffee.",
+          "right": "She doesn't like coffee.",
+          "note": "В отрицательных предложениях с 'doesn't' глагол остаётся в начальной форме."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильную форму глагола: My brother (play/plays) football every Saturday.",
+          "answer": "plays"
+        },
+        {
+          "prompt": "Исправьте ошибку: The teacher explain the lesson clearly.",
+          "answer": "explains"
+        },
+        {
+          "prompt": "Выберите верный вариант: These books (is/are) very interesting.",
+          "answer": "are"
+        }
+      ]
+    },
+    {
+      "rule_id": "countable-vs-uncountable-nouns",
+      "topic": "Countable vs uncountable nouns",
+      "title": "Исчисляемые и неисчисляемые существительные",
+      "explanation": "В английском языке существительные делятся на исчисляемые (их можно посчитать: one apple, two apples) и неисчисляемые (их нельзя посчитать: water, information). Неисчисляемые существительные не имеют формы множественного числа и обычно употребляются без артикля 'a/an', с 'some' или 'much'. С исчисляемыми используем 'a/an' (в единственном числе) и 'many' (во множественном).",
+      "examples": [
+        {
+          "wrong": "I have a money.",
+          "right": "I have money.",
+          "note": "Money — неисчисляемое, поэтому 'a' не используется. Говорим 'some money' или просто 'money'."
+        },
+        {
+          "wrong": "He gave me an advice.",
+          "right": "He gave me some advice.",
+          "note": "Advice — неисчисляемое. Нельзя сказать 'an advice'; используем 'some advice' или 'a piece of advice'."
+        },
+        {
+          "wrong": "There are many furnitures in the room.",
+          "right": "There is a lot of furniture in the room.",
+          "note": "Furniture — неисчисляемое. Не имеет множественного числа; вместо 'many' употребляем 'much' или 'a lot of'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Исправьте ошибку: 'I need an information.'",
+          "answer": "I need some information."
+        },
+        {
+          "prompt": "Выберите правильный вариант: 'How (much/many) milk do you want?'",
+          "answer": "much"
+        },
+        {
+          "prompt": "Вставьте 'few' или 'little': 'I have very ____ patience left.'",
+          "answer": "little"
+        }
+      ]
+    },
+    {
+      "rule_id": "gerund-vs-infinitive",
+      "topic": "Gerund vs infinitive",
+      "title": "Герундий или инфинитив?",
+      "explanation": "В английском языке после некоторых глаголов нужно использовать герундий (глагол с окончанием -ing), а после других — инфинитив (to + глагол). Например, enjoy, avoid, suggest требуют герундия, а want, decide, hope — инфинитива. Запомните это, чтобы избежать типичных ошибок.",
+      "examples": [
+        {
+          "wrong": "I enjoy to swim in the sea.",
+          "right": "I enjoy swimming in the sea.",
+          "note": "После глагола enjoy всегда используется герундий."
+        },
+        {
+          "wrong": "She decided going to the party.",
+          "right": "She decided to go to the party.",
+          "note": "После глагола decide требуется инфинитив."
+        },
+        {
+          "wrong": "He suggested to watch a movie.",
+          "right": "He suggested watching a movie.",
+          "note": "Глагол suggest принимает только герундий."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильную форму: They avoid ___ (to eat / eating) fast food.",
+          "answer": "eating"
+        },
+        {
+          "prompt": "Выберите верный вариант: I hope ___ (to see / seeing) you soon.",
+          "answer": "to see"
+        },
+        {
+          "prompt": "Исправьте ошибку: She finished to write the report.",
+          "answer": "writing"
+        }
+      ]
+    },
+    {
+      "rule_id": "modal-verbs-usage",
+      "topic": "Modal verbs usage",
+      "title": "Модальные глаголы: распространенные ошибки",
+      "explanation": "В английском языке модальные глаголы (can, may, must, should) не требуют частицы 'to' после себя. Также важно различать can (возможность/умение) и may (разрешение), а must (обязанность) и have to (вынужденность). В отрицаниях must not означает 'запрещено', а don't have to — 'не обязательно'.",
+      "examples": [
+        {
+          "wrong": "I can to swim.",
+          "right": "I can swim.",
+          "note": "После модальных глаголов не используется 'to'."
+        },
+        {
+          "wrong": "Can I go to the bathroom?",
+          "right": "May I go to the bathroom?",
+          "note": "Для вежливого разрешения используйте may, а не can."
+        },
+        {
+          "wrong": "You must not go to work tomorrow.",
+          "right": "You don't have to go to work tomorrow.",
+          "note": "Must not = запрет, don't have to = отсутствие необходимости."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите: 'Я умею играть на гитаре.' (используйте can)",
+          "answer": "I can play the guitar."
+        },
+        {
+          "prompt": "Исправьте ошибку: 'She must to study harder.'",
+          "answer": "She must study harder."
+        },
+        {
+          "prompt": "Выберите правильный вариант: 'You ___ (must not / don't have to) eat vegetables if you don't like them.'",
+          "answer": "don't have to"
+        }
+      ]
+    },
+    {
+      "rule_id": "word-order-in-questions",
+      "topic": "Word order in questions",
+      "title": "Порядок слов в английских вопросах",
+      "explanation": "В русском языке вопрос часто строится простым изменением интонации, сохраняя прямой порядок слов. В английском требуется инверсия: вспомогательный глагол ставится перед подлежащим. Для Present Simple и Past Simple нужно добавлять do/does/did, а основной глагол остаётся в начальной форме. С модальными глаголами (can, must) инверсия происходит без дополнительного слова.",
+      "examples": [
+        {
+          "wrong": "You like this book?",
+          "right": "Do you like this book?",
+          "note": "В вопросах Present Simple используем вспомогательный глагол do/does."
+        },
+        {
+          "wrong": "She can swim?",
+          "right": "Can she swim?",
+          "note": "С модальными глаголами меняем порядок слов: глагол идёт перед подлежащим."
+        },
+        {
+          "wrong": "He went to the store?",
+          "right": "Did he go to the store?",
+          "note": "В Past Simple используем вспомогательный глагол did, а основной глагол – в начальной форме."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на английский вопрос: «Ты любишь кофе?»",
+          "answer": "Do you like coffee?"
+        },
+        {
+          "prompt": "Как правильно спросить по-английски: «Она может говорить по-английски?»",
+          "answer": "Can she speak English?"
+        },
+        {
+          "prompt": "Составьте вопрос из слов: they / play / football / yesterday?",
+          "answer": "Did they play football yesterday?"
+        }
+      ]
+    },
+    {
+      "rule_id": "comparatives-and-superlatives",
+      "topic": "Comparatives and superlatives",
+      "title": "Сравнительная и превосходная степень прилагательных",
+      "explanation": "В английском языке для образования сравнительной степени к коротким прилагательным (1-2 слога) добавляется окончание -er, а для превосходной -est. Длинные прилагательные (3+ слога) используют more (сравнительная) и most (превосходная). Нельзя использовать more и -er вместе (например, 'more better' — ошибка).",
+      "examples": [
+        {
+          "wrong": "This house is more bigger than that one.",
+          "right": "This house is bigger than that one.",
+          "note": "Прилагательное big — короткое, поэтому используем -er, а не more."
+        },
+        {
+          "wrong": "She is the most smartest student in class.",
+          "right": "She is the smartest student in class.",
+          "note": "Smart — короткое прилагательное, превосходная степень образуется через -est, а не most."
+        },
+        {
+          "wrong": "He is more better at math than me.",
+          "right": "He is better at math than me.",
+          "note": "Better — уже сравнительная степень от good (неправильная форма), добавлять more нельзя."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Исправьте ошибку: 'This is the most cheapest phone.'",
+          "answer": "This is the cheapest phone."
+        },
+        {
+          "prompt": "Напишите правильную сравнительную степень от 'expensive': 'This car is ... that one.'",
+          "answer": "more expensive than"
+        },
+        {
+          "prompt": "Выберите верный вариант: 'She runs (faster / more faster) than him.'",
+          "answer": "faster"
+        }
+      ]
+    },
+    {
+      "rule_id": "passive-voice-formation",
+      "topic": "Passive voice formation",
+      "title": "Образование пассивного залога: типичная ошибка",
+      "explanation": "В русском языке пассивный залог часто образуется возвратными глаголами (например, 'дом строится'). В английском обязательно используйте вспомогательный глагол 'to be' в нужной форме + причастие прошедшего времени (V3). Распространённая ошибка — пропуск глагола 'be' или путаница с прилагательными.",
+      "examples": [
+        {
+          "wrong": "The house builds.",
+          "right": "The house is built.",
+          "note": "Пропущен глагол is, так как в русском 'дом строится' без вспомогательного глагола."
+        },
+        {
+          "wrong": "The letter wrote yesterday.",
+          "right": "The letter was written yesterday.",
+          "note": "Нужна форма was + written (V3)."
+        },
+        {
+          "wrong": "The windows are clean every week.",
+          "right": "The windows are cleaned every week.",
+          "note": "Clean — прилагательное, cleaned — причастие; в пассиве нужно причастие."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на английский: 'Книга была прочитана вчера.' (используйте пассивный залог)",
+          "answer": "The book was read yesterday."
+        },
+        {
+          "prompt": "Исправьте ошибку: 'The car drives by my father.'",
+          "answer": "The car is driven by my father."
+        },
+        {
+          "prompt": "Заполните пропуск: 'The emails ___ (send) every morning.' (пассив)",
+          "answer": "are sent"
+        }
+      ]
+    },
+    {
+      "rule_id": "relative-clauses",
+      "topic": "Relative clauses",
+      "title": "Относительные придаточные предложения (Relative Clauses)",
+      "explanation": "В английском языке относительные местоимения (who, which, that) обязательно используются для связи главного и придаточного предложений. В русском их можно опустить, но в английском это ошибка. Для людей используем who или that, для предметов — which или that.",
+      "examples": [
+        {
+          "wrong": "The man called is my brother.",
+          "right": "The man who called is my brother.",
+          "note": "Пропущено относительное местоимение who (который)."
+        },
+        {
+          "wrong": "This is the book which I bought it.",
+          "right": "This is the book which I bought.",
+          "note": "Лишнее местоимение it — относительное местоимение уже заменяет объект."
+        },
+        {
+          "wrong": "The woman which lives next door is a doctor.",
+          "right": "The woman who lives next door is a doctor.",
+          "note": "Для людей используем who, а не which."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Исправьте ошибку в предложении: 'The woman which called you is here.'",
+          "answer": "The woman who called you is here."
+        },
+        {
+          "prompt": "Вставьте правильное относительное местоимение: 'This is the house ___ was built in 1900.'",
+          "answer": "This is the house that was built in 1900."
+        },
+        {
+          "prompt": "Объедините два предложения в одно с относительным придаточным: 'I have a friend. She speaks French.'",
+          "answer": "I have a friend who speaks French."
+        }
+      ]
+    },
+    {
+      "rule_id": "phrasal-verbs",
+      "topic": "Phrasal verbs",
+      "title": "Фразовые глаголы: порядок слов с местоимениями",
+      "explanation": "У многих фразовых глаголов объект (существительное) может стоять как перед частицей, так и после. Но если объект — местоимение (me, him, it, them), оно обязательно ставится между глаголом и частицей. Запомните: «глагол + местоимение + частица».",
+      "examples": [
+        {
+          "wrong": "Please pick up me.",
+          "right": "Please pick me up.",
+          "note": "С местоимением (me) частица up должна стоять после него."
+        },
+        {
+          "wrong": "I will call back him.",
+          "right": "I will call him back.",
+          "note": "Местоимение (him) ставится между глаголом и частицей."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Исправьте предложение: 'Can you drop off me at the station?'",
+          "answer": "Can you drop me off at the station?"
+        },
+        {
+          "prompt": "Переделайте: 'He turned on the TV', заменив 'the TV' на 'it'.",
+          "answer": "He turned it on."
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-apostrophe-s",
+      "topic": "Possessive apostrophe s",
+      "title": "Притяжательный апостроф 's",
+      "explanation": "В английском языке притяжательный падеж образуется с помощью апострофа и буквы s ('s). Он показывает, что предмет принадлежит кому-то или чему-то. Важно не путать его с множественным числом, где апостроф не ставится.",
+      "examples": [
+        {
+          "wrong": "the cat toy",
+          "right": "the cat's toy",
+          "note": "Здесь 's указывает, что игрушка принадлежит кошке."
+        },
+        {
+          "wrong": "Marias book",
+          "right": "Maria's book",
+          "note": "Даже если имя заканчивается на гласную, добавляем 's."
+        },
+        {
+          "wrong": "the dogs bone",
+          "right": "the dog's bone",
+          "note": "Для одного предмета - одна собака, поэтому 's."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Как правильно написать притяжательную форму: книга мальчика?",
+          "answer": "the boy's book"
+        },
+        {
+          "prompt": "Исправьте ошибку: the cat tail",
+          "answer": "the cat's tail"
+        },
+        {
+          "prompt": "Напишите правильный вариант: машина Джона",
+          "answer": "John's car"
+        }
+      ]
+    },
+    {
+      "rule_id": "silent-letters",
+      "topic": "Silent letters",
+      "title": "Тихие буквы в английском",
+      "explanation": "В английском языке некоторые буквы пишутся, но не произносятся. Это называется «тихими буквами». Например, буква 'k' перед 'n' (knife) не читается, 'w' перед 'r' (write) не произносится, и 'b' после 'm' в конце слова (comb) тоже молчит. Запоминайте такие слова, чтобы не делать ошибок в произношении и написании.",
+      "examples": [
+        {
+          "wrong": "I have a nife.",
+          "right": "I have a knife.",
+          "note": "Буква 'k' перед 'n' не произносится, но пишется."
+        },
+        {
+          "wrong": "He is riting a letter.",
+          "right": "He is writing a letter.",
+          "note": "Буква 'w' перед 'r' не произносится."
+        },
+        {
+          "wrong": "She lost her com.",
+          "right": "She lost her comb.",
+          "note": "Буква 'b' после 'm' в конце слова не произносится."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте пропущенную букву: '___nife'",
+          "answer": "knife"
+        },
+        {
+          "prompt": "Исправьте ошибку в предложении: 'I have a com in my hair.'",
+          "answer": "I have a comb in my hair."
+        },
+        {
+          "prompt": "Исправьте: 'She is riting a story.'",
+          "answer": "She is writing a story."
+        }
+      ]
+    },
+    {
+      "rule_id": "homophones-spelling",
+      "topic": "Homophones spelling",
+      "title": "Омофоны: их, там, они есть (their, there, they're)",
+      "explanation": "Омофоны — слова, которые звучат одинаково, но пишутся по-разному и имеют разные значения. 'Their' означает 'их' (принадлежность), 'there' — 'там' или 'есть' (указание места), а 'they're' — сокращение от 'they are' (они есть). Чтобы не ошибиться, подумайте о значении предложения.",
+      "examples": [
+        {
+          "wrong": "They're going to their house over there.",
+          "right": "They're going to their house over there.",
+          "note": "В этом примере все три слова использованы верно. 'They're' = they are, 'their' = их, 'there' = там."
+        },
+        {
+          "wrong": "There dog is barking over they're.",
+          "right": "Their dog is barking over there.",
+          "note": "'Their' обозначает принадлежность собаке, 'there' — указывает на место. Не путайте с 'they're' (они есть), здесь оно не подходит."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильное слово: '___ car is parked over ___.' (их/там)",
+          "answer": "Their; there"
+        },
+        {
+          "prompt": "Вставьте правильное слово: 'I think ___ going to be late.' (они есть)",
+          "answer": "they're"
+        }
+      ]
+    },
+    {
+      "rule_id": "irregular-verb-forms",
+      "topic": "Irregular verb forms",
+      "title": "Неправильные глаголы: формы прошедшего времени",
+      "explanation": "В английском языке некоторые глаголы меняют свою форму в прошедшем времени не по правилу (добавление -ed), а полностью. Эти формы нужно запоминать. Например, глагол 'go' становится 'went', а не 'goed'.",
+      "examples": [
+        {
+          "wrong": "I goed to the store.",
+          "right": "I went to the store.",
+          "note": "Глагол 'go' в прошедшем времени — 'went'."
+        },
+        {
+          "wrong": "She buyed a book.",
+          "right": "She bought a book.",
+          "note": "Глагол 'buy' меняется на 'bought'."
+        },
+        {
+          "wrong": "He taked the bus.",
+          "right": "He took the bus.",
+          "note": "Глагол 'take' становится 'took'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильную форму глагола: Yesterday I _______ (see) a movie.",
+          "answer": "saw"
+        },
+        {
+          "prompt": "Исправьте ошибку: She drinked coffee this morning.",
+          "answer": "drank"
+        },
+        {
+          "prompt": "Напишите прошедшую форму: He _______ (have) a dog when he was young.",
+          "answer": "had"
+        }
+      ]
+    },
+    {
+      "rule_id": "reported-speech-backshift",
+      "topic": "Reported speech backshift",
+      "title": "Согласование времён в косвенной речи (Backshift)",
+      "explanation": "В английском языке, когда вы переводите прямую речь в косвенную, время глагола обычно сдвигается на шаг назад в прошлое. Например, настоящее время становится прошедшим, а прошедшее — прошедшим совершенным. Это правило действует, если глагол в главном предложении стоит в прошедшем времени.",
+      "examples": [
+        {
+          "wrong": "She said she is tired.",
+          "right": "She said she was tired.",
+          "note": "Глагол 'is' (настоящее) меняется на 'was' (прошедшее), потому что 'said' — прошедшее время."
+        },
+        {
+          "wrong": "He told me he will come.",
+          "right": "He told me he would come.",
+          "note": "'Will' (будущее) становится 'would' (будущее в прошедшем) после 'told'."
+        },
+        {
+          "wrong": "They said they have finished.",
+          "right": "They said they had finished.",
+          "note": "Настоящее совершенное 'have finished' переходит в прошедшее совершенное 'had finished'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переделайте в косвенную речь, начиная с 'He said...': 'I go to the gym every day.'",
+          "answer": "He said he went to the gym every day."
+        },
+        {
+          "prompt": "Переделайте в косвенную речь, начиная с 'She told me...': 'I am reading a book.'",
+          "answer": "She told me she was reading a book."
+        },
+        {
+          "prompt": "Переделайте в косвенную речь, начиная с 'They said...': 'We have seen that film.'",
+          "answer": "They said they had seen that film."
+        }
+      ]
+    },
+    {
+      "rule_id": "when-to-use-some-vs-any",
+      "topic": "When to use 'some' vs 'any'",
+      "title": "Some vs Any: когда использовать 'some' и 'any'",
+      "explanation": "В утвердительных предложениях обычно используется 'some' (несколько, какой-то). В отрицательных и вопросительных предложениях — 'any' (любой, сколько-нибудь). Но есть исключения: в вежливых просьбах и предложениях (например, 'Would you like some tea?') используется 'some', даже если это вопрос.",
+      "examples": [
+        {
+          "wrong": "I have any apples.",
+          "right": "I have some apples.",
+          "note": "В утверждении нужно 'some', а не 'any'."
+        },
+        {
+          "wrong": "She doesn't have some money.",
+          "right": "She doesn't have any money.",
+          "note": "В отрицании используйте 'any'."
+        },
+        {
+          "wrong": "Do you have some questions?",
+          "right": "Do you have any questions?",
+          "note": "В обычном вопросе — 'any'. Но если это предложение (например, 'Do you want some water?'), допустимо 'some'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте 'some' или 'any': I need ___ help with my homework.",
+          "answer": "some"
+        },
+        {
+          "prompt": "Вставьте 'some' или 'any': There aren't ___ cookies left.",
+          "answer": "any"
+        },
+        {
+          "prompt": "Вставьте 'some' или 'any': Would you like ___ coffee?",
+          "answer": "some"
+        }
+      ]
+    },
+    {
+      "rule_id": "definite-vs-zero-article",
+      "topic": "Definite vs zero article",
+      "title": "Определенный и нулевой артикль",
+      "explanation": "Артикль 'the' используется, когда речь идет о конкретном, известном предмете или явлении. Нулевой артикль (отсутствие артикля) употребляется с общими понятиями, неопределенными множественными и неисчисляемыми существительными.",
+      "examples": [
+        {
+          "wrong": "I love the music.",
+          "right": "I love music.",
+          "note": "Если говорите о музыке в целом, артикль не нужен. 'The music' — это конкретная музыка (например, в данный момент)."
+        },
+        {
+          "wrong": "She is doctor.",
+          "right": "She is a doctor.",
+          "note": "С профессиями в единственном числе нужен неопределенный артикль 'a' или 'an', а не 'the' и не нулевой."
+        },
+        {
+          "wrong": "The dogs are loyal animals.",
+          "right": "Dogs are loyal animals.",
+          "note": "Говоря о собаках вообще (весь вид), используйте нулевой артикль. 'The dogs' — это какие-то конкретные собаки."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте артикль 'the' или поставьте прочерк (нулевой артикль): ___ sun rises in the east.",
+          "answer": "the"
+        },
+        {
+          "prompt": "Выберите правильный вариант: 'I need ___ advice.' (the / нулевой)",
+          "answer": "I need advice."
+        },
+        {
+          "prompt": "Исправьте ошибку: 'The coffee is a popular drink.'",
+          "answer": "Coffee is a popular drink."
+        }
+      ]
+    },
+    {
+      "rule_id": "clause-linking-conjunctions",
+      "topic": "Clause linking conjunctions",
+      "title": "Союзы для связи частей предложения: типичные ошибки",
+      "explanation": "В русском языке часто одно слово используется как союз и как предлог. В английском 'because' — это союз (после него идёт целое предложение), а 'because of' — предлог (после него идёт существительное). Аналогично: 'although' — союз, 'despite' — предлог. Обращайте внимание на то, что стоит после этих слов.",
+      "examples": [
+        {
+          "wrong": "He left because the rain.",
+          "right": "He left because of the rain.",
+          "note": "Потому что + предложение, because of + существительное."
+        },
+        {
+          "wrong": "Despite he was tired, he worked.",
+          "right": "Although he was tired, he worked.",
+          "note": "Хотя + предложение, despite + существительное/герундий."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Исправьте: 'She stayed home because the cold weather.'",
+          "answer": "She stayed home because of the cold weather."
+        },
+        {
+          "prompt": "Исправьте: 'Although the rain, we went out.'",
+          "answer": "Despite the rain, we went out."
+        }
+      ]
+    },
+    {
+      "rule_id": "misplaced-modifiers",
+      "topic": "Misplaced modifiers",
+      "title": "Неверно расположенные модификаторы (Misplaced Modifiers)",
+      "explanation": "Модификатор — это слово или фраза, которая уточняет или описывает другую часть предложения. Его нужно ставить как можно ближе к тому слову, к которому он относится, иначе смысл предложения может исказиться или стать смешным.",
+      "examples": [
+        {
+          "wrong": "She almost drove her kids to school every day.",
+          "right": "She drove her kids to school almost every day.",
+          "note": "В неверном варианте 'almost' относится к 'drove', создавая впечатление, что она почти водила, но не водила. Правильно — 'almost every day'."
+        },
+        {
+          "wrong": "The dog was chased by a cat with a red collar.",
+          "right": "The dog with a red collar was chased by a cat.",
+          "note": "В неверном варианте кажется, что у кота красный ошейник. На самом деле ошейник — у собаки."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Исправьте предложение, переместив модификатор: 'He nearly kicked the ball for ten minutes.'",
+          "answer": "He kicked the ball for nearly ten minutes."
+        },
+        {
+          "prompt": "Исправьте предложение: 'I saw a bird flying over the bridge with blue wings.'",
+          "answer": "I saw a bird with blue wings flying over the bridge."
+        }
+      ]
+    }
+  ]
+}

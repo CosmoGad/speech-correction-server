@@ -1,0 +1,886 @@
+{
+  "learning": "en",
+  "interface": "en",
+  "generated_at": "2026-06-21T13:27:56.817455+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "articles",
+      "topic": "Articles",
+      "title": "Using Articles (a, an, the)",
+      "explanation": "Articles tell us if a noun is general or specific. Use 'a' or 'an' for general singular countable nouns (e.g., a cat, an apple). Use 'the' for specific nouns that both you and the listener know about. No article is used for general plurals or uncountable nouns (e.g., cats, water).",
+      "examples": [
+        {
+          "wrong": "I saw dog in park.",
+          "right": "I saw a dog in the park.",
+          "note": "Use 'a' for a general dog, and 'the' because the park is specific."
+        },
+        {
+          "wrong": "She wants an apple and banana.",
+          "right": "She wants an apple and a banana.",
+          "note": "'An' before vowel sounds (apple), 'a' before consonant sounds (banana)."
+        },
+        {
+          "wrong": "The love is important.",
+          "right": "Love is important.",
+          "note": "No article for general uncountable nouns like love, water, or ideas."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank: I need ___ umbrella. (general, one)",
+          "answer": "an"
+        },
+        {
+          "prompt": "Fill in the blank: ___ sun is very hot today. (specific, we all know)",
+          "answer": "The"
+        },
+        {
+          "prompt": "Fill in the blank: I like ___ dogs. (general, plural)",
+          "answer": "(no article)"
+        }
+      ]
+    },
+    {
+      "rule_id": "tenses",
+      "topic": "Tenses",
+      "title": "Past Simple vs. Present Perfect",
+      "explanation": "Use the past simple for actions that happened at a specific time in the past (e.g., yesterday, last week). Use the present perfect for actions with no specific time or that are connected to the present (e.g., ever, never, already). Do not use present perfect with definite past time expressions.",
+      "examples": [
+        {
+          "wrong": "I have bought a new car yesterday.",
+          "right": "I bought a new car yesterday.",
+          "note": "'Yesterday' is a specific past time, so use past simple."
+        },
+        {
+          "wrong": "Did you ever eat sushi?",
+          "right": "Have you ever eaten sushi?",
+          "note": "'Ever' asks about life experience → use present perfect."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "She _____ (go) to the beach last weekend.",
+          "answer": "went"
+        },
+        {
+          "prompt": "I _____ (never / eat) Thai food.",
+          "answer": "have never eaten"
+        },
+        {
+          "prompt": "They _____ (already / finish) their homework.",
+          "answer": "have already finished"
+        }
+      ]
+    },
+    {
+      "rule_id": "prepositions",
+      "topic": "Prepositions",
+      "title": "Prepositions of Time: In, On, At",
+      "explanation": "Use 'at' for specific times (e.g., 5 PM, midnight), 'on' for days and dates (e.g., Monday, July 4th), and 'in' for longer periods like months, years, seasons, or centuries. A common mistake is mixing these up, such as saying 'in Monday' instead of 'on Monday'.",
+      "examples": [
+        {
+          "wrong": "I will see you in Monday.",
+          "right": "I will see you on Monday.",
+          "note": "Use 'on' for days of the week."
+        },
+        {
+          "wrong": "The meeting is at June.",
+          "right": "The meeting is in June.",
+          "note": "Use 'in' for months and years."
+        },
+        {
+          "wrong": "I wake up on 7 AM.",
+          "right": "I wake up at 7 AM.",
+          "note": "Use 'at' for specific clock times."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "I will meet you ___ Friday.",
+          "answer": "on"
+        },
+        {
+          "prompt": "His birthday is ___ October.",
+          "answer": "in"
+        },
+        {
+          "prompt": "The movie starts ___ 8 PM.",
+          "answer": "at"
+        }
+      ]
+    },
+    {
+      "rule_id": "conditional-sentences",
+      "topic": "Conditional sentences",
+      "title": "Conditional Sentences: Don't Use 'Will' in the 'If' Clause",
+      "explanation": "In first conditional sentences (real future possibility), use the present simple tense in the 'if' clause, not 'will'. The future form ('will' + verb) only belongs in the main clause. For example: 'If it rains, I will stay home' – not 'If it will rain'.",
+      "examples": [
+        {
+          "wrong": "If I will have time, I will call you.",
+          "right": "If I have time, I will call you.",
+          "note": "Use present simple ('have') after 'if', not 'will have'."
+        },
+        {
+          "wrong": "If she will study, she will pass the exam.",
+          "right": "If she studies, she will pass the exam.",
+          "note": "The condition uses present simple ('studies'); 'will' only appears in the result clause."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank: If it ___ (rain) tomorrow, I will stay home.",
+          "answer": "rains"
+        },
+        {
+          "prompt": "Fill in the blank: If I ___ (have) enough money, I will buy a new phone.",
+          "answer": "have"
+        },
+        {
+          "prompt": "Complete correctly: If she ___ (be) late, we will miss the bus.",
+          "answer": "is"
+        }
+      ]
+    },
+    {
+      "rule_id": "th-sounds",
+      "topic": "th sounds",
+      "title": "Mastering the 'th' Sounds",
+      "explanation": "English has two 'th' sounds: voiceless /θ/ (as in 'think') and voiced /ð/ (as in 'this'). To produce them, place the tip of your tongue lightly between your front teeth and blow air out. Many learners mistakenly replace these sounds with /t/ or /d/, which can change the word's meaning.",
+      "examples": [
+        {
+          "wrong": "I tink it's true.",
+          "right": "I think it's true.",
+          "note": "Use the voiceless 'th' (tongue between teeth) instead of 't'."
+        },
+        {
+          "wrong": "Dis is my pen.",
+          "right": "This is my pen.",
+          "note": "Use the voiced 'th' (with vibration) instead of 'd'."
+        },
+        {
+          "wrong": "I have tree apples.",
+          "right": "I have three apples.",
+          "note": "The 'th' in 'three' is voiceless; 'tree' is a completely different word."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Choose the correct word: I need to _____ about it. (think / tink)",
+          "answer": "think"
+        },
+        {
+          "prompt": "Fill in the blank: Please give me _____ book. (this / dis)",
+          "answer": "this"
+        },
+        {
+          "prompt": "Choose the correct word: She has _____ cats. (three / tree)",
+          "answer": "three"
+        }
+      ]
+    },
+    {
+      "rule_id": "stress",
+      "topic": "Stress",
+      "title": "Word Stress: The Hidden Beat of English",
+      "explanation": "English words have one syllable that is stressed, meaning it is longer, louder, and higher in pitch. Putting stress on the wrong syllable can change a word's meaning or make it sound unnatural. For example, 'record' (RE-cord, noun) vs 'record' (re-CORD, verb) have different meanings depending on stress.",
+      "examples": [
+        {
+          "wrong": "I need to re-CORD the meeting.",
+          "right": "I need to RE-cord the meeting.",
+          "note": "As a verb (to record audio), the stress falls on the second syllable: re-CORD. But as a noun (a file), stress is on the first: RE-cord. Many learners mix these up."
+        },
+        {
+          "wrong": "Let's go to the de-SERT for our vacation.",
+          "right": "Let's go to the DES-ert for our vacation.",
+          "note": "'Desert' (dry land) stresses the first syllable: DES-ert. 'Dessert' (sweet food) stresses the second: des-SERT. The spelling is also different!"
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Which syllable is stressed in the word 'present' when it means a gift? (Say the word aloud: PRES-ent or pre-SENT?)",
+          "answer": "PRES-ent"
+        },
+        {
+          "prompt": "Correct the stress mistake in this sentence: 'I need to EX-port these files.' (Hint: 'export' as a verb has stress on the second syllable.)",
+          "answer": "I need to ex-PORT these files."
+        },
+        {
+          "prompt": "Read this word aloud with correct stress: 'photograph'. Which syllable is the strongest?",
+          "answer": "The first syllable: PHO-to-graph"
+        }
+      ]
+    },
+    {
+      "rule_id": "intonation",
+      "topic": "Intonation",
+      "title": "Mastering Intonation in English",
+      "explanation": "Intonation—the rise and fall of your voice—can completely change the meaning of a sentence. For yes/no questions, your voice should rise at the end; for statements and wh- questions (who, what, where, etc.), your voice should fall. Using the wrong intonation can make a question sound like a statement or make you seem uncertain.",
+      "examples": [
+        {
+          "wrong": "You're coming? (said with a falling tone)",
+          "right": "You're coming? (said with a rising tone)",
+          "note": "A rising tone at the end signals a yes/no question; a falling tone makes it sound like a statement."
+        },
+        {
+          "wrong": "Where are you going? (said with a rising tone)",
+          "right": "Where are you going? (said with a falling tone)",
+          "note": "Wh- questions usually end with a falling intonation; a rising tone can sound confused or like you're asking for repetition."
+        },
+        {
+          "wrong": "I like apples, oranges, and bananas. (all flat)",
+          "right": "I like apples↗, oranges↗, and bananas↘.",
+          "note": "When listing items, your voice rises on each item except the last, where it falls to show the list is complete."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Read aloud with correct intonation: 'Are you hungry?' (yes/no question). Should your voice rise or fall at the end?",
+          "answer": "Rise"
+        },
+        {
+          "prompt": "Read aloud with correct intonation: 'What time is it?' (wh- question). Should your voice rise or fall at the end?",
+          "answer": "Fall"
+        },
+        {
+          "prompt": "Say this list with proper intonation: 'We need milk, bread, and eggs.' Where does your voice rise and where does it fall?",
+          "answer": "Rise on 'milk' and 'bread', fall on 'eggs'"
+        }
+      ]
+    },
+    {
+      "rule_id": "subject-verb-agreement",
+      "topic": "Subject-verb agreement",
+      "title": "Subject-Verb Agreement: Matching Subjects and Verbs",
+      "explanation": "In English, the verb must agree with the subject in number. A singular subject takes a singular verb, while a plural subject takes a plural verb. Watch out for tricky subjects like indefinite pronouns or phrases that come between the subject and verb.",
+      "examples": [
+        {
+          "wrong": "The list of items are on the table.",
+          "right": "The list of items is on the table.",
+          "note": "The subject is 'list' (singular), not 'items'."
+        },
+        {
+          "wrong": "Everyone have their own opinion.",
+          "right": "Everyone has their own opinion.",
+          "note": "'Everyone' is singular, so use 'has'."
+        },
+        {
+          "wrong": "She don't like coffee.",
+          "right": "She doesn't like coffee.",
+          "note": "With third-person singular (he, she, it), use 'doesn't'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Rewrite correctly: The group of students is/are studying.",
+          "answer": "The group of students is studying."
+        },
+        {
+          "prompt": "Choose the correct verb: Neither the teacher nor the students (is/are) in the room.",
+          "answer": "are"
+        },
+        {
+          "prompt": "Correct the error: Each of the apples are fresh.",
+          "answer": "Each of the apples is fresh."
+        }
+      ]
+    },
+    {
+      "rule_id": "countable-vs-uncountable-nouns",
+      "topic": "Countable vs uncountable nouns",
+      "title": "Countable vs Uncountable Nouns",
+      "explanation": "Countable nouns can be counted (e.g., one apple, two apples) and use 'a/an', 'many', and 'few'. Uncountable nouns cannot be counted (e.g., water, advice) and use 'much', 'little', or 'some'—never 'a/an' or 'many'.",
+      "examples": [
+        {
+          "wrong": "I have many homeworks.",
+          "right": "I have a lot of homework.",
+          "note": "'Homework' is uncountable; use 'much' or 'a lot of'."
+        },
+        {
+          "wrong": "He gave me a good advice.",
+          "right": "He gave me a piece of good advice.",
+          "note": "'Advice' is uncountable; you can say 'a piece of advice'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank: I need _____ (many/much) time to finish.",
+          "answer": "much"
+        },
+        {
+          "prompt": "Correct the sentence: He has many furniture in his room.",
+          "answer": "He has much furniture in his room."
+        }
+      ]
+    },
+    {
+      "rule_id": "gerund-vs-infinitive",
+      "topic": "Gerund vs infinitive",
+      "title": "Gerund vs Infinitive: Verbs That Love -ing or to",
+      "explanation": "Some English verbs are followed by a gerund (verb+ing) and others by an infinitive (to+verb). For example, 'enjoy' always takes a gerund, while 'want' always takes an infinitive. Learning these patterns helps you avoid common mistakes.",
+      "examples": [
+        {
+          "wrong": "I enjoy to swim.",
+          "right": "I enjoy swimming.",
+          "note": "Use the gerund after 'enjoy'."
+        },
+        {
+          "wrong": "She wants going home.",
+          "right": "She wants to go home.",
+          "note": "Use the infinitive after 'want'."
+        },
+        {
+          "wrong": "He suggested to eat out.",
+          "right": "He suggested eating out.",
+          "note": "Use the gerund after 'suggest'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "I need ___ (study) for the exam.",
+          "answer": "to study"
+        },
+        {
+          "prompt": "She avoids ___ (eat) junk food.",
+          "answer": "eating"
+        },
+        {
+          "prompt": "They decided ___ (move) to a new city.",
+          "answer": "to move"
+        }
+      ]
+    },
+    {
+      "rule_id": "modal-verbs-usage",
+      "topic": "Modal verbs usage",
+      "title": "Modal Verbs: Can, Must, and May",
+      "explanation": "Modal verbs like 'can', 'must', and 'may' have specific uses. 'Can' expresses ability or informal permission; 'may' is for formal permission. 'Must' shows strong obligation, and 'must not' means prohibition. Do not add 'to' after a modal verb (e.g., 'I must go', not 'I must to go').",
+      "examples": [
+        {
+          "wrong": "Can I leave early?",
+          "right": "May I leave early?",
+          "note": "Use 'may' for polite or formal requests, not 'can'."
+        },
+        {
+          "wrong": "I must to finish my homework.",
+          "right": "I must finish my homework.",
+          "note": "Always use the base form of the verb after a modal; do not add 'to'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank: She ___ speak three languages fluently. (ability)",
+          "answer": "can"
+        },
+        {
+          "prompt": "Fill in the blank: You ___ park here; it's forbidden. (prohibition)",
+          "answer": "must not"
+        },
+        {
+          "prompt": "Fill in the blank: ___ I borrow your pen, please? (polite request)",
+          "answer": "May"
+        }
+      ]
+    },
+    {
+      "rule_id": "word-order-in-questions",
+      "topic": "Word order in questions",
+      "title": "Word Order in Questions",
+      "explanation": "In English, questions usually invert the subject and the auxiliary verb (or add 'do' if there's no auxiliary). For wh- questions, the question word comes first, followed by the auxiliary, then the subject, then the main verb. Avoid keeping statement word order (subject before verb).",
+      "examples": [
+        {
+          "wrong": "You are from where?",
+          "right": "Where are you from?",
+          "note": "In wh- questions, the question word comes first, followed by the auxiliary verb and subject."
+        },
+        {
+          "wrong": "He likes coffee?",
+          "right": "Does he like coffee?",
+          "note": "For yes/no questions without an auxiliary, add 'do/does/did' and put it before the subject."
+        },
+        {
+          "wrong": "Why you are late?",
+          "right": "Why are you late?",
+          "note": "Always place the auxiliary after the wh- word and before the subject."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the question: 'You live where?'",
+          "answer": "Where do you live?"
+        },
+        {
+          "prompt": "Correct the question: 'She can swim?'",
+          "answer": "Can she swim?"
+        },
+        {
+          "prompt": "Correct the question: 'What you want?'",
+          "answer": "What do you want?"
+        }
+      ]
+    },
+    {
+      "rule_id": "comparatives-and-superlatives",
+      "topic": "Comparatives and superlatives",
+      "title": "Comparatives and Superlatives: Common Mistakes",
+      "explanation": "When comparing two things, use the comparative form (adjective + -er or 'more' + adjective) followed by 'than'. For three or more, use the superlative (adjective + -est or 'most' + adjective) with 'the'. Avoid double comparatives like 'more better' and remember irregular forms such as 'good, better, best' and 'bad, worse, worst'.",
+      "examples": [
+        {
+          "wrong": "She is more smarter than him.",
+          "right": "She is smarter than him.",
+          "note": "Do not use 'more' with -er forms; 'smarter' is already comparative."
+        },
+        {
+          "wrong": "This is the most best cake I've had.",
+          "right": "This is the best cake I've had.",
+          "note": "'Best' is already a superlative; don't add 'most'."
+        },
+        {
+          "wrong": "He is the taller in his class.",
+          "right": "He is the tallest in his class.",
+          "note": "Use the superlative (-est) when comparing three or more people or things."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complete: This is the ______ (good) movie I've ever seen.",
+          "answer": "best"
+        },
+        {
+          "prompt": "Fix the mistake: 'My house is more bigger than yours.'",
+          "answer": "My house is bigger than yours."
+        },
+        {
+          "prompt": "Choose: 'She runs (faster / most fast) than me.'",
+          "answer": "faster"
+        }
+      ]
+    },
+    {
+      "rule_id": "passive-voice-formation",
+      "topic": "Passive voice formation",
+      "title": "Forming the Passive Voice Correctly",
+      "explanation": "The passive voice is formed with the verb 'to be' (in the correct tense) plus the past participle of the main verb. A common mistake is using the base form or past tense of the main verb instead of the past participle. Remember: the past participle never changes, and the tense is shown by 'be'.",
+      "examples": [
+        {
+          "wrong": "The window was break.",
+          "right": "The window was broken.",
+          "note": "After 'was', use the past participle 'broken', not the base form 'break'."
+        },
+        {
+          "wrong": "The letter is wrote by her.",
+          "right": "The letter is written by her.",
+          "note": "The past participle of 'write' is 'written', not 'wrote'."
+        },
+        {
+          "wrong": "The cake has been eat.",
+          "right": "The cake has been eaten.",
+          "note": "Use the past participle 'eaten' after 'been'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the sentence: 'The window was break by the ball.'",
+          "answer": "The window was broken by the ball."
+        },
+        {
+          "prompt": "Correct the sentence: 'The emails are send every day.'",
+          "answer": "The emails are sent every day."
+        },
+        {
+          "prompt": "Correct the sentence: 'The song has been sing many times.'",
+          "answer": "The song has been sung many times."
+        }
+      ]
+    },
+    {
+      "rule_id": "relative-clauses",
+      "topic": "Relative clauses",
+      "title": "Avoiding Extra Pronouns in Relative Clauses",
+      "explanation": "In English, when you introduce a relative clause, do not repeat the subject or object with a pronoun like 'she', 'he', or 'it'. Instead, use a relative pronoun such as 'who', 'that', or 'which' (or omit it when it acts as the object). This mistake often happens because learners translate directly from their native language.",
+      "examples": [
+        {
+          "wrong": "The woman she lives next door is kind.",
+          "right": "The woman who lives next door is kind.",
+          "note": "Remove the extra 'she' and use 'who' as the relative pronoun for people."
+        },
+        {
+          "wrong": "I like the movie it was very funny.",
+          "right": "I like the movie that was very funny.",
+          "note": "Replace 'it' with 'that' (or 'which') to connect the clause."
+        },
+        {
+          "wrong": "The car he bought it is red.",
+          "right": "The car he bought is red.",
+          "note": "When the relative pronoun is the object, you can drop it entirely. Do not keep 'it'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the sentence: 'The girl she studies hard got an A.'",
+          "answer": "The girl who studies hard got an A."
+        },
+        {
+          "prompt": "Correct the sentence: 'I have a friend he speaks Spanish.'",
+          "answer": "I have a friend who speaks Spanish."
+        },
+        {
+          "prompt": "Correct the sentence: 'The cake I baked it was delicious.'",
+          "answer": "The cake I baked was delicious."
+        }
+      ]
+    },
+    {
+      "rule_id": "phrasal-verbs",
+      "topic": "Phrasal verbs",
+      "title": "Phrasal Verbs: Separable vs Inseparable",
+      "explanation": "Phrasal verbs combine a verb with a particle (e.g., up, off, into). Some are separable: you can place a noun between the verb and particle, but a pronoun must go in the middle. Others are inseparable: the particle always stays with the verb. Mixing these rules is a common mistake.",
+      "examples": [
+        {
+          "wrong": "I will pick up you after work.",
+          "right": "I will pick you up after work.",
+          "note": "With separable phrasal verbs like 'pick up', place pronouns between the verb and particle."
+        },
+        {
+          "wrong": "He ran her into at the store.",
+          "right": "He ran into her at the store.",
+          "note": "'Run into' is inseparable; the pronoun stays after the particle."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct this sentence: 'Please throw away it.'",
+          "answer": "Please throw it away."
+        },
+        {
+          "prompt": "Correct this sentence: 'She looked them after.'",
+          "answer": "She looked after them."
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-apostrophe-s",
+      "topic": "Possessive apostrophe s",
+      "title": "Possessive Apostrophe s",
+      "explanation": "The possessive apostrophe s ('s) shows that something belongs to someone or something. For singular nouns, add 's (e.g., the cat's toy). For plural nouns ending in s, add only an apostrophe (e.g., the cats' toys). For plural nouns not ending in s, add 's (e.g., the children's toys). Do not use an apostrophe for plurals that are not possessive.",
+      "examples": [
+        {
+          "wrong": "The dogs bone is on the floor.",
+          "right": "The dog's bone is on the floor.",
+          "note": "For one dog, add 's before the object."
+        },
+        {
+          "wrong": "The girls dresses are pretty.",
+          "right": "The girls' dresses are pretty.",
+          "note": "For plural girls already ending in s, add only an apostrophe after the s."
+        },
+        {
+          "wrong": "The childrens toys are everywhere.",
+          "right": "The children's toys are everywhere.",
+          "note": "Children is plural but does not end in s, so add 's."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct this: 'The mens room is down the hall.'",
+          "answer": "The men's room is down the hall."
+        },
+        {
+          "prompt": "Correct this: 'The books cover is torn.'",
+          "answer": "The book's cover is torn."
+        },
+        {
+          "prompt": "Correct this: 'My parents car is blue.'",
+          "answer": "My parents' car is blue."
+        }
+      ]
+    },
+    {
+      "rule_id": "silent-letters",
+      "topic": "Silent letters",
+      "title": "Silent Letters: Don't Pronounce the Unspoken",
+      "explanation": "In English, some letters in words are not pronounced. These are called silent letters. You should not say them when speaking. Common silent letters include the 'k' in 'knife', the 't' in 'listen', and the 'l' in 'half'.",
+      "examples": [
+        {
+          "wrong": "I have a k-nife.",
+          "right": "I have a knife.",
+          "note": "The 'k' is silent. Say 'nife'."
+        },
+        {
+          "wrong": "She likes to lis-ten.",
+          "right": "She likes to listen.",
+          "note": "The 't' in 'listen' is silent. Say 'lissen'."
+        },
+        {
+          "wrong": "I will talk with an 'l' sound.",
+          "right": "I will talk (no 'l' sound).",
+          "note": "The 'l' in 'talk' is silent. Say 'tawk'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Which word has a silent 'k'? (knife, kite, king)",
+          "answer": "knife"
+        },
+        {
+          "prompt": "Complete the sentence: The 'b' in '______' is silent. (lamb, bee, broke)",
+          "answer": "lamb"
+        },
+        {
+          "prompt": "Choose the correct pronunciation of 'write': (a) with a 'w' sound (b) silent 'w'",
+          "answer": "silent 'w'"
+        }
+      ]
+    },
+    {
+      "rule_id": "homophones-spelling",
+      "topic": "Homophones spelling",
+      "title": "Common Homophone Spelling Mistakes",
+      "explanation": "Homophones are words that sound the same but have different spellings and meanings. They are often confused in writing. To avoid mistakes, focus on the meaning and context of the sentence.",
+      "examples": [
+        {
+          "wrong": "Their going to the store.",
+          "right": "They're going to the store.",
+          "note": "They're is a contraction of 'they are'; 'their' shows possession."
+        },
+        {
+          "wrong": "Your a great student.",
+          "right": "You're a great student.",
+          "note": "You're is a contraction of 'you are'; 'your' indicates ownership."
+        },
+        {
+          "wrong": "Its a beautiful day.",
+          "right": "It's a beautiful day.",
+          "note": "It's means 'it is'; 'its' (no apostrophe) shows possession."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Choose the correct word: (There/Their/They're) going to the park.",
+          "answer": "They're"
+        },
+        {
+          "prompt": "Fill in: ___ (Your/You're) book is on the table.",
+          "answer": "Your"
+        },
+        {
+          "prompt": "Complete: The dog wagged ___ (its/it's) tail.",
+          "answer": "its"
+        }
+      ]
+    },
+    {
+      "rule_id": "irregular-verb-forms",
+      "topic": "Irregular verb forms",
+      "title": "Irregular Verb Forms",
+      "explanation": "Irregular verbs do not follow the regular pattern of adding -ed for past tense. Instead, they change their spelling completely. You need to memorize these common irregular forms to avoid mistakes.",
+      "examples": [
+        {
+          "wrong": "I have went to the store.",
+          "right": "I have gone to the store.",
+          "note": "The past participle of 'go' is 'gone', not 'went'."
+        },
+        {
+          "wrong": "She drinked the water.",
+          "right": "She drank the water.",
+          "note": "The simple past of 'drink' is 'drank', not 'drinked'."
+        },
+        {
+          "wrong": "He brang his book.",
+          "right": "He brought his book.",
+          "note": "The past tense of 'bring' is 'brought', not 'brang'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Yesterday, I ____ (go) to the park.",
+          "answer": "went"
+        },
+        {
+          "prompt": "She has ____ (write) a letter.",
+          "answer": "written"
+        },
+        {
+          "prompt": "They ____ (eat) lunch already.",
+          "answer": "eaten"
+        }
+      ]
+    },
+    {
+      "rule_id": "reported-speech-backshift",
+      "topic": "Reported speech backshift",
+      "title": "Reported Speech: Tense Backshift",
+      "explanation": "When you report what someone said, you usually change the tense of the original statement to a past tense. This is called backshifting. For example, present simple becomes past simple, and present continuous becomes past continuous. Always adjust the tense to match the past reporting verb.",
+      "examples": [
+        {
+          "wrong": "She said she is tired.",
+          "right": "She said she was tired.",
+          "note": "The original 'is' (present) changes to 'was' (past) because 'said' is past."
+        },
+        {
+          "wrong": "He told me he will come.",
+          "right": "He told me he would come.",
+          "note": "'Will' backshifts to 'would' in reported speech."
+        },
+        {
+          "wrong": "They said they are going to the party.",
+          "right": "They said they were going to the party.",
+          "note": "Present continuous 'are going' changes to past continuous 'were going'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Change to reported speech: 'I live in London.' (He said...)",
+          "answer": "He said he lived in London."
+        },
+        {
+          "prompt": "Change to reported speech: 'We are watching a movie.' (They told me...)",
+          "answer": "They told me they were watching a movie."
+        },
+        {
+          "prompt": "Change to reported speech: 'I will call you.' (She said...)",
+          "answer": "She said she would call me."
+        }
+      ]
+    },
+    {
+      "rule_id": "when-to-use-some-vs-any",
+      "topic": "When to use 'some' vs 'any'",
+      "title": "Some vs Any: A Simple Rule",
+      "explanation": "Use 'some' in positive sentences and in offers or requests. Use 'any' in negative sentences and most questions. For example, \"I have some apples\" (positive) and \"I don't have any apples\" (negative). In offers or polite requests, use 'some' even in questions: \"Would you like some coffee?\"",
+      "examples": [
+        {
+          "wrong": "I don't have some money.",
+          "right": "I don't have any money.",
+          "note": "Negative sentences need 'any', not 'some'."
+        },
+        {
+          "wrong": "Do you have any apples? (as a polite request)",
+          "right": "Do you have some apples?",
+          "note": "Polite requests or offers use 'some' instead of 'any'."
+        },
+        {
+          "wrong": "There is any milk in the fridge.",
+          "right": "There is some milk in the fridge.",
+          "note": "Positive statements use 'some', not 'any'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank: I want ___ water. (positive sentence)",
+          "answer": "some"
+        },
+        {
+          "prompt": "Fill in the blank: She doesn't have ___ friends. (negative)",
+          "answer": "any"
+        },
+        {
+          "prompt": "Fill in the blank: Would you like ___ tea? (offer)",
+          "answer": "some"
+        }
+      ]
+    },
+    {
+      "rule_id": "definite-vs-zero-article",
+      "topic": "Definite vs zero article",
+      "title": "Definite vs Zero Article: When to Use 'the'",
+      "explanation": "Use 'the' (definite article) when referring to a specific noun that the listener can identify. Use no article (zero article) for general, uncountable, or plural nouns when speaking in general terms. For example, 'I love music' (general) but 'I love the music in this movie' (specific).",
+      "examples": [
+        {
+          "wrong": "I go to the school every day.",
+          "right": "I go to school every day.",
+          "note": "Use zero article for institutions (school, hospital, prison) when describing their primary purpose."
+        },
+        {
+          "wrong": "She loves the dogs.",
+          "right": "She loves dogs.",
+          "note": "Use zero article for plural nouns when speaking generally."
+        },
+        {
+          "wrong": "The milk is good for health.",
+          "right": "Milk is good for health.",
+          "note": "Use zero article for uncountable nouns when referring to them in general."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank: '_____ cats are cute.' (speaking about cats in general)",
+          "answer": "Cats"
+        },
+        {
+          "prompt": "Fill in the blank: 'I need to go to _____ hospital to visit my friend.' (a specific hospital)",
+          "answer": "the"
+        },
+        {
+          "prompt": "Fill in the blank: '_____ life is beautiful.' (speaking about life in general)",
+          "answer": "Life"
+        }
+      ]
+    },
+    {
+      "rule_id": "clause-linking-conjunctions",
+      "topic": "Clause linking conjunctions",
+      "title": "Connecting Clauses with Conjunctions",
+      "explanation": "When you join two complete sentences (independent clauses), you need a conjunction like 'and', 'but', 'or', 'so', or 'because'. A common mistake is using only a comma (comma splice) or no punctuation at all. Always add a conjunction between the clauses to make the sentence correct.",
+      "examples": [
+        {
+          "wrong": "I went to the store, I bought milk.",
+          "right": "I went to the store, and I bought milk.",
+          "note": "Use a comma and a conjunction like 'and' to join two complete thoughts."
+        },
+        {
+          "wrong": "She is tired she went to bed.",
+          "right": "She is tired, so she went to bed.",
+          "note": "Add a conjunction like 'so' to show a result or reason."
+        },
+        {
+          "wrong": "He likes coffee she prefers tea.",
+          "right": "He likes coffee, but she prefers tea.",
+          "note": "Use 'but' to show contrast between the two ideas."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct this sentence: 'I was hungry I ate lunch.'",
+          "answer": "I was hungry, so I ate lunch."
+        },
+        {
+          "prompt": "Join these two clauses with 'because': 'I stayed home. I was sick.'",
+          "answer": "I stayed home because I was sick."
+        },
+        {
+          "prompt": "Fix this comma splice: 'The sun set, the stars appeared.'",
+          "answer": "The sun set, and the stars appeared."
+        }
+      ]
+    },
+    {
+      "rule_id": "misplaced-modifiers",
+      "topic": "Misplaced modifiers",
+      "title": "Misplaced Modifiers",
+      "explanation": "A misplaced modifier is a word or phrase that is placed too far from the word it describes, causing confusion or unintended humor. To fix it, move the modifier closer to the word it modifies, so the sentence is clear and logical.",
+      "examples": [
+        {
+          "wrong": "Running to catch the bus, my backpack fell.",
+          "right": "Running to catch the bus, I dropped my backpack.",
+          "note": "The modifier 'Running to catch the bus' should be next to the person doing the action (I), not the backpack."
+        },
+        {
+          "wrong": "She almost drove her kids to school every day.",
+          "right": "She drove her kids to school almost every day.",
+          "note": "Place 'almost' next to 'every day' to show how often she drove, not that she nearly drove but didn't."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fix the misplaced modifier: 'The waiter served a steak to the man with a side of fries.'",
+          "answer": "The waiter served a man a steak with a side of fries."
+        },
+        {
+          "prompt": "Correct this sentence: 'He nearly ate the whole pizza himself.'",
+          "answer": "He ate nearly the whole pizza himself."
+        }
+      ]
+    }
+  ]
+}

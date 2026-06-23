@@ -1,0 +1,905 @@
+{
+  "learning": "fr",
+  "interface": "ru",
+  "generated_at": "2026-06-21T18:20:27.810719+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "articles",
+      "topic": "Articles",
+      "title": "Ошибки с артиклями во французском языке",
+      "explanation": "В русском языке артиклей нет, поэтому студенты часто их пропускают или используют неправильно. Во французском почти всегда нужен артикль: неопределённый (un, une, des), определённый (le, la, les) или частичный (du, de la, de l'). Запомните: перед существительным обычно ставится артикль, а его форма зависит от рода, числа и значения.",
+      "examples": [
+        {
+          "wrong": "Je veux pain.",
+          "right": "Je veux du pain.",
+          "note": "Перед неисчисляемыми существительными (еда, напитки) нужен частичный артикль 'du'."
+        },
+        {
+          "wrong": "Elle a voiture.",
+          "right": "Elle a une voiture.",
+          "note": "Исчисляемые существительные в единственном числе требуют неопределённого артикля (un / une)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите: 'У меня есть собака' (с правильным артиклем).",
+          "answer": "J'ai un chien."
+        },
+        {
+          "prompt": "Переведите: 'Я пью кофе' (с правильным артиклем).",
+          "answer": "Je bois du café."
+        }
+      ]
+    },
+    {
+      "rule_id": "temps",
+      "topic": "Temps",
+      "title": "Ошибка со словом 'Temps'",
+      "explanation": "Французское слово 'temps' переводится как 'время' в значении продолжительности или погода, но не для обозначения часов (используйте 'heure') или количества раз (используйте 'fois'). Например, 'Quel temps fait-il?' означает 'Какая погода?', а 'Quelle heure est-il?' — 'Который час?'. Будьте внимательны, чтобы не путать эти значения.",
+      "examples": [
+        {
+          "wrong": "Quel temps est-il?",
+          "right": "Quelle heure est-il?",
+          "note": "Для вопроса о времени суток всегда используйте 'heure', а не 'temps'."
+        },
+        {
+          "wrong": "Je l'ai vu deux temps.",
+          "right": "Je l'ai vu deux fois.",
+          "note": "Для обозначения количества раз употребляется 'fois', а не 'temps'."
+        },
+        {
+          "wrong": "J'ai passé un bon temps.",
+          "right": "J'ai passé un bon moment.",
+          "note": "Для приятного отрезка времени (момента) используйте 'moment', а 'temps' обычно обозначает длительность или погоду."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на французский: «Который час?» (НЕ используйте 'temps').",
+          "answer": "Quelle heure est-il?"
+        },
+        {
+          "prompt": "Исправьте ошибку: «Je suis allé à Paris trois temps.»",
+          "answer": "Je suis allé à Paris trois fois."
+        },
+        {
+          "prompt": "Как сказать по-французски: «У меня нет времени» (используя 'temps' правильно)?",
+          "answer": "Je n'ai pas le temps."
+        }
+      ]
+    },
+    {
+      "rule_id": "accord",
+      "topic": "Accord",
+      "title": "Согласование прилагательных с существительными во французском языке",
+      "explanation": "Во французском языке прилагательные согласуются в роде и числе с существительными, к которым они относятся. Обычно к форме мужского рода добавляется -e для образования женского рода и -s для множественного числа. Например: 'grand' (большой) → 'grande' (большая), 'grands' (большие, м.р.) → 'grandes' (большие, ж.р.).",
+      "examples": [
+        {
+          "wrong": "Il a une grand sœur.",
+          "right": "Il a une grande sœur.",
+          "note": "Прилагательное 'grand' должно согласоваться с существительным женского рода 'sœur', поэтому добавляем -e."
+        },
+        {
+          "wrong": "Les petit filles.",
+          "right": "Les petites filles.",
+          "note": "Прилагательное 'petit' стоит во множественном числе и женском роде, поэтому добавляем -es."
+        },
+        {
+          "wrong": "Des livres intéressant.",
+          "right": "Des livres intéressants.",
+          "note": "Прилагательное 'intéressant' стоит во множественном числе, поэтому добавляем -s."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите правильную форму прилагательного 'joli' для фразы 'красивая девушка' (une fille).",
+          "answer": "jolie"
+        },
+        {
+          "prompt": "Напишите правильную форму прилагательного 'petit' для фразы 'маленькие собаки' (les chiens).",
+          "answer": "petits"
+        },
+        {
+          "prompt": "Напишите правильную форму прилагательного 'vert' для фразы 'зелёные глаза' (les yeux).",
+          "answer": "verts"
+        }
+      ]
+    },
+    {
+      "rule_id": "pronoms",
+      "topic": "Pronoms",
+      "title": "Путаница между прямыми и косвенными местоимениями (le/la vs lui/leur)",
+      "explanation": "Французские местоимения 'le/la' (его/её) используются для прямого дополнения (кого? что?), а 'lui/leur' (ему/ей, им) — для косвенного (кому?). Русскоязычные часто ошибочно используют 'le/la', когда нужно 'lui/leur', особенно с глаголами типа parler, donner, téléphoner.",
+      "examples": [
+        {
+          "wrong": "Je le parle.",
+          "right": "Je lui parle.",
+          "note": "Глагол 'parler' требует косвенного дополнения (говорить кому?), поэтому 'lui'."
+        },
+        {
+          "wrong": "Je la donne le livre.",
+          "right": "Je lui donne le livre.",
+          "note": "'Donner' кому? – 'lui'; что? – 'le livre'."
+        },
+        {
+          "wrong": "Je les téléphone.",
+          "right": "Je leur téléphone.",
+          "note": "'Téléphoner' требует косвенного дополнения (звонить кому?)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите: 'Я говорю ей.' (используйте правильное местоимение)",
+          "answer": "Je lui parle."
+        },
+        {
+          "prompt": "Переведите: 'Я даю им книгу.'",
+          "answer": "Je leur donne le livre."
+        },
+        {
+          "prompt": "Исправьте ошибку: 'Je la téléphone.'",
+          "answer": "Je lui téléphone."
+        }
+      ]
+    },
+    {
+      "rule_id": "voyelles-nasales",
+      "topic": "Voyelles nasales",
+      "title": "Французские носовые гласные",
+      "explanation": "Во французском языке есть носовые гласные, которые произносятся через нос. Русскоязычные учащиеся часто добавляют согласный 'н' после гласной. Например, слово 'bon' должно звучать как /bɔ̃/, а не /bɔn/. Носовые гласные обозначаются сочетаниями an, am, en, em, in, im, on, om, un, um.",
+      "examples": [
+        {
+          "wrong": "bon",
+          "right": "bon",
+          "note": "Не произносите 'н' на конце. Носовой гласный [ɔ̃]."
+        },
+        {
+          "wrong": "vin",
+          "right": "vin",
+          "note": "Звук [ɛ̃], произносится в нос, без 'н'."
+        },
+        {
+          "wrong": "temps",
+          "right": "temps",
+          "note": "Буквы 'm' и 'p' не произносятся, только носовой гласный [ɑ̃]."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите французское слово для 'пять' (с носовым гласным).",
+          "answer": "cinq"
+        },
+        {
+          "prompt": "Завершите слово: 'm___' (рука).",
+          "answer": "main"
+        },
+        {
+          "prompt": "Исправьте ошибку: 'le tan' (время) — правильное слово.",
+          "answer": "le temps"
+        }
+      ]
+    },
+    {
+      "rule_id": "liaison",
+      "topic": "Liaison",
+      "title": "Связывание (liaison) во французском языке",
+      "explanation": "Во французском языке связывание (liaison) — это произнесение последнего согласного одного слова перед гласным звуком следующего слова. Ошибки часто возникают, когда связывание делают там, где оно запрещено (например, после союза 'et'), или не делают там, где оно обязательно (например, между артиклем и существительным). Запомните: после 'et' связывание никогда не выполняется.",
+      "examples": [
+        {
+          "wrong": "les amis (произносится без связи)",
+          "right": "les amis (произносится /lez‿ami/)",
+          "note": "Перед существительным, начинающимся с гласной, артикль 'les' обязательно связывается."
+        },
+        {
+          "wrong": "et elle (произносится /et‿ɛl/)",
+          "right": "et elle (произносится /e ɛl/, без связи)",
+          "note": "После союза 'et' связывание никогда не делается."
+        },
+        {
+          "wrong": "vous avez (произносится без связи)",
+          "right": "vous avez (произносится /vuz‿ave/)",
+          "note": "Местоимения 'vous', 'nous', 'ils' и т.д. связываются с глаголом, начинающимся с гласной."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Исправьте ошибку связывания: 'et elle est belle' (как правильно произнести 'et elle'?)",
+          "answer": "et elle (без связи: /e ɛl/)"
+        },
+        {
+          "prompt": "Вставьте правильную форму с учётом связывания: 'Les ___ (enfants) jouent.' (напишите фразу полностью с произношением во французском написании)",
+          "answer": "Les enfants (произносится /lez‿ɑ̃fɑ̃/)"
+        },
+        {
+          "prompt": "Выберите верный вариант: 'Nous avons' — нужно ли связывать? Если да, напишите фразу так, как она произносится.",
+          "answer": "Nous avons (произносится /nuz‿avɔ̃/)"
+        }
+      ]
+    },
+    {
+      "rule_id": "accent-tonique",
+      "topic": "Accent tonique",
+      "title": "Ударение во французском языке (Accent tonique)",
+      "explanation": "Во французском языке ударение всегда падает на последний слог слова или ритмической группы. В отличие от русского языка, где ударение может быть подвижным, французское ударение фиксировано. Это частая ошибка русскоговорящих.",
+      "examples": [
+        {
+          "wrong": "MUseE",
+          "right": "muSEE",
+          "note": "В слове «musée» (музей) ударение должно быть на последнем слоге -sée."
+        },
+        {
+          "wrong": "EtuDIANT",
+          "right": "etuDIANT",
+          "note": "В слове «étudiant» (студент) ударение падает на последний слог -diant."
+        },
+        {
+          "wrong": "auJOURDhui",
+          "right": "aujourDHUI",
+          "note": "В сложном слове «aujourd'hui» (сегодня) ударение также на последнем слоге -hui."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Как правильно произнести слово «restaurant»? (укажите ударный слог заглавными буквами)",
+          "answer": "restauRANT"
+        },
+        {
+          "prompt": "Поставьте ударение во фразе «il est heureux».",
+          "answer": "il est heuREUX"
+        },
+        {
+          "prompt": "Как произнести «bibliothèque»?",
+          "answer": "bibliothèQUE"
+        }
+      ]
+    },
+    {
+      "rule_id": "gender-assignment-of-nouns",
+      "topic": "Gender assignment of nouns",
+      "title": "Определение рода французских существительных",
+      "explanation": "Во французском языке род существительных часто не совпадает с русским. Например, слова, оканчивающиеся на -tion, -sion, -té, почти всегда женского рода, а на -age, -ment, -oir — мужского. Запомните эти окончания, чтобы избежать распространённых ошибок.",
+      "examples": [
+        {
+          "wrong": "le plage",
+          "right": "la plage",
+          "note": "Слово 'plage' (пляж) — женского рода, хотя в русском 'пляж' мужской."
+        },
+        {
+          "wrong": "la problème",
+          "right": "le problème",
+          "note": "Слово 'problème' (проблема) — мужского рода, хотя в русском 'проблема' женский."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Какой артикль (le/la) нужно поставить перед словом 'saison'?",
+          "answer": "la saison"
+        },
+        {
+          "prompt": "Исправьте ошибку: 'le liberté'",
+          "answer": "la liberté"
+        }
+      ]
+    },
+    {
+      "rule_id": "cest-vs-ilelle-est",
+      "topic": "C'est vs il/elle est",
+      "title": "C'est vs il/elle est: основное правило",
+      "explanation": "Используйте 'c'est' перед существительным (с артиклем или без, но обычно с артиклем) или перед прилагательным + существительным. Используйте 'il/elle est' перед прилагательным без существительного, а также с профессией без артикля. Например: 'C'est un livre' (это книга), 'Il est grand' (он высокий).",
+      "examples": [
+        {
+          "wrong": "Il est un professeur.",
+          "right": "C'est un professeur.",
+          "note": "Перед существительным с неопределённым артиклем нужно 'c'est'."
+        },
+        {
+          "wrong": "C'est intéressant.",
+          "right": "Il est intéressant.",
+          "note": "Когда речь идёт о конкретном человеке и прилагательном без существительного, используем 'il est'."
+        },
+        {
+          "wrong": "Elle est la sœur.",
+          "right": "C'est la sœur.",
+          "note": "Перед существительным с определённым артиклем тоже нужно 'c'est'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильную форму (c'est или il/elle est): ___ mon ami.",
+          "answer": "C'est mon ami."
+        },
+        {
+          "prompt": "Вставьте правильную форму: ___ intelligente.",
+          "answer": "Elle est intelligente."
+        },
+        {
+          "prompt": "Вставьте правильную форму: ___ un film intéressant.",
+          "answer": "C'est un film intéressant."
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-adjectives-monmames",
+      "topic": "Possessive adjectives (mon/ma/mes)",
+      "title": "Французские притяжательные прилагательные: mon, ma, mes",
+      "explanation": "Во французском языке притяжательное прилагательное согласуется с родом и числом существительного, а не с владельцем. Используйте «mon» для мужского рода единственного числа, «ma» для женского рода единственного числа и «mes» для множественного числа. Важно: перед существительными женского рода, начинающимися с гласной или немой h, употребляется «mon» вместо «ma» для благозвучия.",
+      "examples": [
+        {
+          "wrong": "ma amie",
+          "right": "mon amie",
+          "note": "Перед гласной или немой h используйте «mon», даже если существительное женского рода."
+        },
+        {
+          "wrong": "mon soeur",
+          "right": "ma soeur",
+          "note": "Для женского рода (кроме случаев с гласной) используйте «ma»."
+        },
+        {
+          "wrong": "mes ami",
+          "right": "mes amis",
+          "note": "Для множественного числа используйте «mes» независимо от рода."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Как сказать «мой друг» (мужской род)?",
+          "answer": "mon ami"
+        },
+        {
+          "prompt": "Как сказать «моя сестра» (женский род, начинается с согласной)?",
+          "answer": "ma soeur"
+        },
+        {
+          "prompt": "Как сказать «мои родители» (множественное число)?",
+          "answer": "mes parents"
+        }
+      ]
+    },
+    {
+      "rule_id": "negation-in-compound-tenses",
+      "topic": "Negation in compound tenses",
+      "title": "Отрицание в составных временах (passé composé и др.)",
+      "explanation": "В составных временах (passé composé, plus-que-parfait и т.д.) отрицательная частица «ne…pas» ставится вокруг вспомогательного глагола (avoir или être), а не вокруг причастия прошедшего времени. Запомните: вспомогательный глагол — это «мостик» для отрицания, причастие остаётся после «pas».",
+      "examples": [
+        {
+          "wrong": "Je n'ai mangé pas.",
+          "right": "Je n'ai pas mangé.",
+          "note": "Частица pas стоит после вспомогательного глагола ai, а не после причастия mangé."
+        },
+        {
+          "wrong": "Elle n'est venue pas.",
+          "right": "Elle n'est pas venue.",
+          "note": "С глаголом être (est) отрицание тоже ставится вокруг него: ne...pas venue."
+        },
+        {
+          "wrong": "Nous ne nous sommes levé pas.",
+          "right": "Nous ne nous sommes pas levés.",
+          "note": "Для возвратных глаголов отрицание окружает местоимение + être: ne nous sommes pas... (согласование причастия тоже важно)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите по-французски: «Я не купил хлеб» (используя passé composé).",
+          "answer": "Je n'ai pas acheté de pain."
+        },
+        {
+          "prompt": "Исправьте ошибку: «Ils ont pas fini leurs devoirs.»",
+          "answer": "Ils n'ont pas fini leurs devoirs."
+        },
+        {
+          "prompt": "Переведите на французский: «Она не пришла вчера.»",
+          "answer": "Elle n'est pas venue hier."
+        }
+      ]
+    },
+    {
+      "rule_id": "prepositions-à-and-de-after-verbs",
+      "topic": "Prepositions à and de after verbs",
+      "title": "Предлоги à и de после глаголов",
+      "explanation": "Во французском языке после некоторых глаголов перед инфинитивом обязательно ставится предлог à или de. Выбор предлога зависит от глагола и его нужно запоминать, так как он не всегда совпадает с русским аналогом. Ошибки в этих предлогах — одни из самых частых у изучающих.",
+      "examples": [
+        {
+          "wrong": "Je commence de travailler.",
+          "right": "Je commence à travailler.",
+          "note": "Глагол commencer требует предлога à."
+        },
+        {
+          "wrong": "Il décide à partir.",
+          "right": "Il décide de partir.",
+          "note": "Глагол décider требует предлога de."
+        },
+        {
+          "wrong": "J'essaie à comprendre.",
+          "right": "J'essaie de comprendre.",
+          "note": "Глагол essayer требует предлога de."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильный предлог: Je réussis ___ finir.",
+          "answer": "Je réussis à finir."
+        },
+        {
+          "prompt": "Вставьте правильный предлог: Elle continue ___ étudier.",
+          "answer": "Elle continue à étudier."
+        },
+        {
+          "prompt": "Исправьте ошибку: Il a peur de rater le train. (ошибки нет, но замените на другой пример) — Нет, дайте: Исправьте ошибку: Nous apprenons à parler français. (правильно) — лучше: Исправьте ошибку: J'ai besoin à manger.",
+          "answer": "J'ai besoin de manger."
+        }
+      ]
+    },
+    {
+      "rule_id": "subjunctive-mood-usage",
+      "topic": "Subjunctive mood usage",
+      "title": "Использование сослагательного наклонения (Subjonctif) во французском языке",
+      "explanation": "Сослагательное наклонение (subjonctif) часто используется после определённых выражений, таких как 'il faut que', 'bien que', 'douter que' и других. Многие учащиеся ошибочно ставят глагол в изъявительное наклонение (indicatif) вместо сослагательного. Запомните: после этих конструкций subjonctif обязателен, даже если в русском языке используется изъявительное наклонение.",
+      "examples": [
+        {
+          "wrong": "Il faut que tu viens.",
+          "right": "Il faut que tu viennes.",
+          "note": "После 'il faut que' всегда требуется subjonctif, а не indicatif."
+        },
+        {
+          "wrong": "Bien qu'il est fatigué, il travaille.",
+          "right": "Bien qu'il soit fatigué, il travaille.",
+          "note": "После 'bien que' (хотя) нужно использовать subjonctif."
+        },
+        {
+          "wrong": "Je doute qu'il a raison.",
+          "right": "Je doute qu'il ait raison.",
+          "note": "После 'douter que' (в утвердительной форме) требуется subjonctif."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Заполните пропуск формой глагола в subjonctif: Il faut que tu ____ (faire) tes devoirs.",
+          "answer": "fasses"
+        },
+        {
+          "prompt": "Заполните пропуск: Bien qu'il ____ (être) en retard, il est gentil.",
+          "answer": "soit"
+        },
+        {
+          "prompt": "Заполните пропуск: Je ne pense pas qu'elle ____ (venir) demain.",
+          "answer": "vienne"
+        }
+      ]
+    },
+    {
+      "rule_id": "imperative-with-object-pronouns",
+      "topic": "Imperative with object pronouns",
+      "title": "Повелительное наклонение с местоимениями-дополнениями",
+      "explanation": "В утвердительной форме повелительного наклонения местоимения-дополнения ставятся после глагола и пишутся через дефис. В отрицательной форме они ставятся перед глаголом. Обратите внимание: в утвердительной форме 'me' и 'te' заменяются на 'moi' и 'toi', а при двух местоимениях прямое дополнение идёт перед косвенным.",
+      "examples": [
+        {
+          "wrong": "Le donne!",
+          "right": "Donne-le!",
+          "note": "В утвердительной форме местоимение ставится после глагола через дефис."
+        },
+        {
+          "wrong": "Ne donne le pas!",
+          "right": "Ne le donne pas!",
+          "note": "В отрицательной форме местоимение ставится перед глаголом."
+        },
+        {
+          "wrong": "Donnez nous le!",
+          "right": "Donnez-le-nous!",
+          "note": "С двумя местоимениями в утвердительной форме дефисы обязательны, и прямое дополнение ('le') стоит перед косвенным ('nous')."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на французский: 'Дай мне это!' (утвердительно, используйте 'le').",
+          "answer": "Donne-le-moi!"
+        },
+        {
+          "prompt": "Переведите на французский: 'Не давай им это!' (отрицательно, используйте 'le' и 'leur').",
+          "answer": "Ne le leur donne pas!"
+        },
+        {
+          "prompt": "Исправьте ошибку: 'Donnez nous le!'",
+          "answer": "Donnez-le-nous!"
+        }
+      ]
+    },
+    {
+      "rule_id": "si-clauses-conditional-sentences",
+      "topic": "Si clauses (conditional sentences)",
+      "title": "Ошибки с условными предложениями с 'si'",
+      "explanation": "Во французском языке после 'si' (если) никогда не употребляются будущее время (futur) и условное наклонение (conditionnel). В придаточном предложении с 'si' используется только настоящее время (présent) для выражения реального условия или имперфект (imparfait) для нереального условия. Например: 'Si je suis libre' (а не 'Si je serai libre').",
+      "examples": [
+        {
+          "wrong": "Si je serai riche, j'achèterai une maison.",
+          "right": "Si je suis riche, j'achèterai une maison.",
+          "note": "После 'si' нельзя ставить будущее время (serai); нужно настоящее (suis)."
+        },
+        {
+          "wrong": "Si j'aurais le temps, je t'aiderais.",
+          "right": "Si j'avais le temps, je t'aiderais.",
+          "note": "После 'si' в условном предложении (нереальное условие) используется imparfait (avais), а не conditionnel (aurais)."
+        },
+        {
+          "wrong": "Si tu viendras, nous serons contents.",
+          "right": "Si tu viens, nous serons contents.",
+          "note": "Настоящее время (viens) после 'si', даже если речь о будущем."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на французский: «Если я буду свободен, я приду». (Исправьте ошибку: не используйте будущее после si)",
+          "answer": "Si je suis libre, je viendrai."
+        },
+        {
+          "prompt": "Заполните пропуск: Si tu _______ (avoir) de l'argent, tu achèterais une voiture? (используйте правильную форму, избегая conditionnel после si)",
+          "answer": "avais"
+        },
+        {
+          "prompt": "Исправьте ошибку в предложении: «Si il fera beau, on ira à la plage».",
+          "answer": "Si il fait beau, on ira à la plage."
+        }
+      ]
+    },
+    {
+      "rule_id": "interrogative-pronouns-qui-que-quoi",
+      "topic": "Interrogative pronouns (qui, que, quoi)",
+      "title": "Вопросительные местоимения qui, que, quoi",
+      "explanation": "Во французском языке qui используется для одушевлённых лиц (кто?), que — для неодушевлённых предметов (что? как прямое дополнение), а quoi — после предлогов или в неформальных вопросах (о чём? с чем?). Ошибка возникает, когда путают que и quoi в роли прямого дополнения: после глагола без предлога нужно que, а не quoi.",
+      "examples": [
+        {
+          "wrong": "Quoi tu fais ?",
+          "right": "Que fais-tu ?",
+          "note": "В вопросе без предлога (прямое дополнение) используем que, а не quoi."
+        },
+        {
+          "wrong": "Qui tu vois ?",
+          "right": "Qui vois-tu ?",
+          "note": "Qui для людей — верно, но инверсия подлежащего обязательна в формальном вопросе."
+        },
+        {
+          "wrong": "À que tu penses ?",
+          "right": "À quoi penses-tu ?",
+          "note": "После предлога (à) используем quoi, а не que."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Выберите правильное вопросительное местоимение для: «(Кого) tu attends ?»",
+          "answer": "Qui attends-tu ?"
+        },
+        {
+          "prompt": "Вставьте нужное слово: «(Что) tu manges ?»",
+          "answer": "Que manges-tu ?"
+        },
+        {
+          "prompt": "Закончите вопрос: «Avec (чем) tu écris ?»",
+          "answer": "Avec quoi écris-tu ?"
+        }
+      ]
+    },
+    {
+      "rule_id": "relative-pronouns-qui-que-dont",
+      "topic": "Relative pronouns (qui, que, dont)",
+      "title": "Относительные местоимения qui, que, dont",
+      "explanation": "Во французском языке относительные местоимения зависят от функции слова в придаточном предложении. Qui заменяет подлежащее, que — прямое дополнение, а dont — дополнение с предлогом de. Самая частая ошибка — путать qui и que, особенно когда речь идёт об одушевлённых или неодушевлённых объектах.",
+      "examples": [
+        {
+          "wrong": "La fille qui je vois est gentille.",
+          "right": "La fille que je vois est gentille.",
+          "note": "Здесь je vois имеет прямое дополнение (la fille), поэтому нужно que, а не qui."
+        },
+        {
+          "wrong": "Le livre que est sur la table est rouge.",
+          "right": "Le livre qui est sur la table est rouge.",
+          "note": "Здесь qui — подлежащее (книга находится на столе), поэтому используется qui."
+        },
+        {
+          "wrong": "C'est la voiture que je rêve.",
+          "right": "C'est la voiture dont je rêve.",
+          "note": "Глагол rêver требует предлога de (rêver de), поэтому нужно dont."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильное относительное местоимение: L'homme ___ parle est mon père.",
+          "answer": "qui"
+        },
+        {
+          "prompt": "Вставьте правильное относительное местоимение: Le film ___ nous avons vu est intéressant.",
+          "answer": "que"
+        },
+        {
+          "prompt": "Вставьте правильное относительное местоимение: La maison ___ les murs sont blancs est à vendre.",
+          "answer": "dont"
+        }
+      ]
+    },
+    {
+      "rule_id": "faire-causatif-faire-infinitive",
+      "topic": "Faire causatif (faire + infinitive)",
+      "title": "Каузативная конструкция с глаголом faire (faire + инфинитив)",
+      "explanation": "Конструкция 'faire + инфинитив' означает 'заставлять/поручать кому-то сделать что-то'. Действующее лицо (кто выполняет действие) ставится после инфинитива с предлогом à. Если действующее лицо не указано, объект действия ставится сразу после инфинитива. Важно не путать порядок слов: нельзя ставить действующее лицо между faire и инфинитивом.",
+      "examples": [
+        {
+          "wrong": "Je fais mon frère laver la voiture.",
+          "right": "Je fais laver la voiture à mon frère.",
+          "note": "Действующее лицо (брат) ставится после инфинитива с предлогом à."
+        },
+        {
+          "wrong": "Elle fait les enfants dormir.",
+          "right": "Elle fait dormir les enfants.",
+          "note": "Если действующее лицо не указано, объект (дети) ставится после инфинитива."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите: 'Я заставляю детей убирать свою комнату.'",
+          "answer": "Je fais ranger leur chambre aux enfants."
+        },
+        {
+          "prompt": "Составьте правильное предложение: (faire / réparer / le robinet / le plombier) — 'Я поручаю сантехнику починить кран.'",
+          "answer": "Je fais réparer le robinet au plombier."
+        },
+        {
+          "prompt": "Переведите: 'Она заставляет меня ждать.' (используйте местоимение me перед faire)",
+          "answer": "Elle me fait attendre."
+        }
+      ]
+    },
+    {
+      "rule_id": "depuis-vs-il-y-a",
+      "topic": "Depuis vs il y a",
+      "title": "Depuis vs il y a: разница во времени",
+      "explanation": "«Depuis» указывает на действие, которое началось в прошлом и продолжается до сих пор (отвечает на вопрос «как долго?»). «Il y a» указывает на завершённое действие, которое произошло в определённый момент в прошлом (отвечает на вопрос «как давно?»).",
+      "examples": [
+        {
+          "wrong": "J'étudie le français il y a deux ans.",
+          "right": "J'étudie le français depuis deux ans.",
+          "note": "Действие (учёба) продолжается до сих пор, нужно использовать «depuis»."
+        },
+        {
+          "wrong": "Je suis arrivé à Paris depuis trois jours.",
+          "right": "Je suis arrivé à Paris il y a trois jours.",
+          "note": "Приезд — завершённое действие, которое произошло три дня назад, нужно «il y a»."
+        },
+        {
+          "wrong": "Il pleut il y a une heure.",
+          "right": "Il pleut depuis une heure.",
+          "note": "Дождь всё ещё идёт (продолжается), поэтому «depuis»."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильное выражение: Je travaille dans cette entreprise _____ 2015.",
+          "answer": "depuis"
+        },
+        {
+          "prompt": "Вставьте правильное выражение: J'ai rencontré Marie _____ trois semaines.",
+          "answer": "il y a"
+        },
+        {
+          "prompt": "Переведите на французский: 'Я живу здесь с января.' (используя depuis)",
+          "answer": "J'habite ici depuis janvier."
+        }
+      ]
+    },
+    {
+      "rule_id": "comparative-and-superlative-forms",
+      "topic": "Comparative and superlative forms",
+      "title": "Сравнительная и превосходная степень прилагательных во французском языке",
+      "explanation": "Во французском языке для образования сравнительной степени используется 'plus' (более) или 'moins' (менее) перед прилагательным. Для превосходной степени обязательно ставится определенный артикль (le, la, les) перед 'plus' или 'moins'. Типичная ошибка русскоязычных — опускать артикль, например, говорить 'c'est plus beau' вместо 'c'est le plus beau'.",
+      "examples": [
+        {
+          "wrong": "Il est plus grand de la classe.",
+          "right": "Il est le plus grand de la classe.",
+          "note": "В превосходной степени обязателен артикль 'le'."
+        },
+        {
+          "wrong": "Elle est plus belle de toutes.",
+          "right": "Elle est la plus belle de toutes.",
+          "note": "Артикль 'la' обязателен перед 'plus' в превосходной степени."
+        },
+        {
+          "wrong": "Les plus grand élèves",
+          "right": "Les plus grands élèves",
+          "note": "Прилагательное согласуется в числе с существительным."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите: 'Это самый интересный фильм'.",
+          "answer": "C'est le film le plus intéressant."
+        },
+        {
+          "prompt": "Исправьте ошибку: 'Elle est plus belle de sa classe'.",
+          "answer": "Elle est la plus belle de sa classe."
+        },
+        {
+          "prompt": "Переведите: 'Он менее высокий, чем его брат'.",
+          "answer": "Il est moins grand que son frère."
+        }
+      ]
+    },
+    {
+      "rule_id": "demonstrative-adjectives-and-pronouns",
+      "topic": "Demonstrative adjectives and pronouns",
+      "title": "Указательные прилагательные и местоимения (ce, cet, cette, ces / celui, celle, ceux, celles)",
+      "explanation": "Указательные прилагательные (ce, cet, cette, ces) ставятся перед существительным и согласуются с ним в роде и числе. Указательные местоимения (celui, celle, ceux, celles) заменяют существительное и часто сопровождаются уточнением (de, qui, -ci, -là). Типичная ошибка: использовать прилагательное вместо местоимения или путать формы рода и числа.",
+      "examples": [
+        {
+          "wrong": "Je préfère ce livre-ci, mais ce de Marie est aussi intéressant.",
+          "right": "Je préfère ce livre-ci, mais celui de Marie est aussi intéressant.",
+          "note": "После 'ce' должно идти существительное. Для замены существительного 'livre' нужно местоимение 'celui'."
+        },
+        {
+          "wrong": "Ces voitures sont rapides, mais ces sont lentes.",
+          "right": "Ces voitures sont rapides, mais celles-ci sont lentes.",
+          "note": "Во второй части 'ces' не может стоять без существительного. Используйте местоимение 'celles' (женский род, множественное число)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Выберите правильное указательное прилагательное или местоимение: ... chat (этот кот, мужской род, единственное число)",
+          "answer": "ce chat"
+        },
+        {
+          "prompt": "Замените 'les fleurs' на соответствующее местоимение в фразе: 'Je préfère les fleurs de Paul, mais ... de Marie sont aussi jolies.'",
+          "answer": "celles"
+        },
+        {
+          "prompt": "Исправьте ошибку (вставьте правильное слово): 'Cette robe est belle, mais cette de ma sœur est trop petite.'",
+          "answer": "celle"
+        }
+      ]
+    },
+    {
+      "rule_id": "numbers-70-99-thousandmillion",
+      "topic": "Numbers (70-99, thousand/million)",
+      "title": "Числа 70-99, тысяча и миллион во французском",
+      "explanation": "Во французском языке числа от 70 до 99 образуются через сложение и умножение: 70 = soixante-dix (60+10), 80 = quatre-vingts (4×20), 90 = quatre-vingt-dix (4×20+10). Слово 'mille' (тысяча) не меняется во множественном числе (deux mille, без s), а слово 'million' (миллион) получает окончание -s во множественном числе (deux millions).",
+      "examples": [
+        {
+          "wrong": "septante",
+          "right": "soixante-dix",
+          "note": "В стандартном французском 70 – это soixante-dix (60+10), а не septante (вариант в Бельгии и Швейцарии)."
+        },
+        {
+          "wrong": "huitante",
+          "right": "quatre-vingts",
+          "note": "80 во французском – quatre-vingts (буквально 'четыре двадцатки'), а не huitante."
+        },
+        {
+          "wrong": "deux milles",
+          "right": "deux mille",
+          "note": "Слово 'mille' никогда не принимает окончание -s во множественном числе."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите по-французски число 77.",
+          "answer": "soixante-dix-sept"
+        },
+        {
+          "prompt": "Напишите по-французски число 95.",
+          "answer": "quatre-vingt-quinze"
+        },
+        {
+          "prompt": "Переведите на французский: 2 миллиона 500 тысяч.",
+          "answer": "deux millions cinq cent mille"
+        }
+      ]
+    },
+    {
+      "rule_id": "partitive-articles-after-negation",
+      "topic": "Partitive articles after negation",
+      "title": "Частичные артикли после отрицания",
+      "explanation": "Во французском языке после отрицания (ne…pas, ne…jamais и т.д.) частичные артикли du, de la, des заменяются на de (или d' перед гласной). Это правило не касается глагола être — после него артикль сохраняется. Запомните: если вы говорите 'я не ем…', то используйте 'de'.",
+      "examples": [
+        {
+          "wrong": "Je ne mange pas du pain.",
+          "right": "Je ne mange pas de pain.",
+          "note": "После отрицания 'du' меняется на 'de'."
+        },
+        {
+          "wrong": "Il n'achète pas de la viande.",
+          "right": "Il n'achète pas de viande.",
+          "note": "После 'ne…pas' 'de la' → 'de'."
+        },
+        {
+          "wrong": "Elle n'a pas des amis.",
+          "right": "Elle n'a pas d'amis.",
+          "note": "Перед гласной 'de' становится 'd''."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на французский: 'Я не пью кофе.'",
+          "answer": "Je ne bois pas de café."
+        },
+        {
+          "prompt": "Исправьте ошибку: 'Il ne veut pas du sucre.'",
+          "answer": "Il ne veut pas de sucre."
+        },
+        {
+          "prompt": "Напишите отрицательную форму: 'Je bois de l'eau.'",
+          "answer": "Je ne bois pas d'eau."
+        }
+      ]
+    },
+    {
+      "rule_id": "passé-composé-auxiliary-selection",
+      "topic": "Passé composé auxiliary selection",
+      "title": "Выбор вспомогательного глагола в Passé composé",
+      "explanation": "Во французском языке Passé composé образуется с помощью вспомогательных глаголов avoir или être. Глагол être используется с некоторыми непереходными глаголами движения и изменения состояния (например, aller, venir, naître, mourir, tomber) и со всеми возвратными глаголами. Остальные глаголы требуют avoir. Запомните список глаголов, которые спрягаются с être.",
+      "examples": [
+        {
+          "wrong": "J'ai allé à Paris.",
+          "right": "Je suis allé à Paris.",
+          "note": "Глагол aller (идти) требует être."
+        },
+        {
+          "wrong": "Elle a venue hier.",
+          "right": "Elle est venue hier.",
+          "note": "Глагол venir (приходить) также требует être."
+        },
+        {
+          "wrong": "Il a tombé.",
+          "right": "Il est tombé.",
+          "note": "Глагол tomber (падать) требует être."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите: 'Я пришел вчера.' (используйте Passé composé)",
+          "answer": "Je suis venu hier."
+        },
+        {
+          "prompt": "Заполните пропуск: Elle _____ (naître) en 2000.",
+          "answer": "est née"
+        },
+        {
+          "prompt": "Исправьте ошибку: Ils ont sorti de la maison.",
+          "answer": "Ils sont sortis de la maison."
+        }
+      ]
+    },
+    {
+      "rule_id": "adjective-placement-before-vs-after-noun",
+      "topic": "Adjective placement (before vs after noun)",
+      "title": "Порядок прилагательных перед или после существительного",
+      "explanation": "Во французском языке большинство прилагательных ставятся после существительного (un livre intéressant). Однако есть группа коротких и часто встречающихся прилагательных, которые ставятся перед существительным: это прилагательные красоты, возраста, количества, «хороший/плохой» и размера (BANGS). Например: beau, jeune, grand, bon, petit.",
+      "examples": [
+        {
+          "wrong": "une femme belle",
+          "right": "une belle femme",
+          "note": "Прилагательное beau (красивый) относится к категории BANGS, поэтому стоит перед существительным."
+        },
+        {
+          "wrong": "un livre nouveau",
+          "right": "un nouveau livre",
+          "note": "Nouveau (новый) обычно ставится перед существительным, хотя некоторые прилагательные могут менять значение в зависимости от позиции."
+        },
+        {
+          "wrong": "un homme grand",
+          "right": "un grand homme",
+          "note": "Grand (большой/высокий) в значении «великий» стоит перед существительным; после существительного означает «высокий ростом»."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Поставьте прилагательное в правильное место: une (joli) maison",
+          "answer": "une jolie maison"
+        },
+        {
+          "prompt": "Исправьте порядок: un garçon gentil (но здесь gentil обычно после) — дайте правильный вариант",
+          "answer": "un gentil garçon"
+        },
+        {
+          "prompt": "Поставьте прилагательное в правильное место: une (vieille) dame",
+          "answer": "une vieille dame"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,887 @@
+{
+  "learning": "en",
+  "interface": "de",
+  "generated_at": "2026-06-22T18:50:43.085587+00:00",
+  "model": "deepseek-v4-flash",
+  "translated_from": "en",
+  "rules": [
+    {
+      "rule_id": "articles",
+      "topic": "Articles",
+      "title": "Verwendung von Artikeln (a, an, the)",
+      "explanation": "Artikel zeigen an, ob ein Nomen allgemein oder spezifisch ist. Verwende 'a' oder 'an' für allgemeine zählbare Nomen im Singular (z. B. a cat, an apple). Verwende 'the' für spezifische Nomen, die sowohl dir als auch dem Zuhörer bekannt sind. Kein Artikel wird für allgemeine Pluralformen oder unzählbare Nomen verwendet (z. B. cats, water).",
+      "examples": [
+        {
+          "wrong": "I saw dog in park.",
+          "right": "I saw a dog in the park.",
+          "note": "Verwende 'a' für einen allgemeinen Hund und 'the', weil der Park spezifisch ist."
+        },
+        {
+          "wrong": "She wants an apple and banana.",
+          "right": "She wants an apple and a banana.",
+          "note": "'An' vor Vokallauten (apple), 'a' vor Konsonantenlauten (banana)."
+        },
+        {
+          "wrong": "The love is important.",
+          "right": "Love is important.",
+          "note": "Kein Artikel für allgemeine unzählbare Nomen wie Liebe, Wasser oder Ideen."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fülle die Lücke aus: Ich brauche ___ Regenschirm. (allgemein, einer)",
+          "answer": "an"
+        },
+        {
+          "prompt": "Fülle die Lücke aus: ___ Sonne ist heute sehr heiß. (spezifisch, wir alle kennen sie)",
+          "answer": "The"
+        },
+        {
+          "prompt": "Fülle die Lücke aus: Ich mag ___ Hunde. (allgemein, Plural)",
+          "answer": "(no article)"
+        }
+      ]
+    },
+    {
+      "rule_id": "tenses",
+      "topic": "Tenses",
+      "title": "Past Simple vs. Present Perfect",
+      "explanation": "Verwende das past simple für Handlungen, die zu einem bestimmten Zeitpunkt in der Vergangenheit stattfanden (z.B. gestern, letzte Woche). Verwende das present perfect für Handlungen ohne bestimmten Zeitpunkt oder die mit der Gegenwart verbunden sind (z.B. jemals, nie, schon). Verwende das present perfect nicht mit bestimmten vergangenen Zeitausdrücken.",
+      "examples": [
+        {
+          "wrong": "I have bought a new car yesterday.",
+          "right": "I bought a new car yesterday.",
+          "note": "„Gestern“ ist eine bestimmte vergangene Zeit, also verwende das past simple."
+        },
+        {
+          "wrong": "Did you ever eat sushi?",
+          "right": "Have you ever eaten sushi?",
+          "note": "„Jemals“ fragt nach Lebenserfahrung → verwende das present perfect."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Sie _____ (gehen) letztes Wochenende an den Strand.",
+          "answer": "went"
+        },
+        {
+          "prompt": "Ich _____ (nie / essen) thailändisches Essen.",
+          "answer": "have never eaten"
+        },
+        {
+          "prompt": "Sie _____ (schon / beenden) ihre Hausaufgaben.",
+          "answer": "have already finished"
+        }
+      ]
+    },
+    {
+      "rule_id": "prepositions",
+      "topic": "Prepositions",
+      "title": "Zeitpräpositionen: In, On, At",
+      "explanation": "Verwende 'at' für spezifische Zeiten (z.B. 17 Uhr, Mitternacht), 'on' für Tage und Daten (z.B. Montag, 4. Juli) und 'in' für längere Zeiträume wie Monate, Jahre, Jahreszeiten oder Jahrhunderte. Ein häufiger Fehler ist, diese zu verwechseln, wie zum Beispiel 'in Monday' anstelle von 'on Monday' zu sagen.",
+      "examples": [
+        {
+          "wrong": "I will see you in Monday.",
+          "right": "I will see you on Monday.",
+          "note": "Verwende 'on' für Wochentage."
+        },
+        {
+          "wrong": "The meeting is at June.",
+          "right": "The meeting is in June.",
+          "note": "Verwende 'in' für Monate und Jahre."
+        },
+        {
+          "wrong": "I wake up on 7 AM.",
+          "right": "I wake up at 7 AM.",
+          "note": "Verwende 'at' für spezifische Uhrzeiten."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Ich treffe dich ___ Freitag.",
+          "answer": "on"
+        },
+        {
+          "prompt": "Sein Geburtstag ist ___ Oktober.",
+          "answer": "in"
+        },
+        {
+          "prompt": "Der Film beginnt ___ 20 Uhr.",
+          "answer": "at"
+        }
+      ]
+    },
+    {
+      "rule_id": "conditional-sentences",
+      "topic": "Conditional sentences",
+      "title": "Konditionalsätze: Verwende 'will' nicht im 'if'-Satz",
+      "explanation": "In Konditionalsätzen des ersten Typs (reale Zukunfts möglichkeit) verwende das Präsens im 'if'-Satz, nicht 'will'. Die Futurform ('will' + Verb) gehört nur in den Hauptsatz. Zum Beispiel: 'If it rains, I will stay home' – nicht 'If it will rain'.",
+      "examples": [
+        {
+          "wrong": "If I will have time, I will call you.",
+          "right": "If I have time, I will call you.",
+          "note": "Verwende Präsens ('have') nach 'if', nicht 'will have'."
+        },
+        {
+          "wrong": "If she will study, she will pass the exam.",
+          "right": "If she studies, she will pass the exam.",
+          "note": "Die Bedingung verwendet Präsens ('studies'); 'will' erscheint nur im Folgesatz."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Ergänze die Lücke: If it ___ (rain) tomorrow, I will stay home.",
+          "answer": "rains"
+        },
+        {
+          "prompt": "Ergänze die Lücke: If I ___ (have) enough money, I will buy a new phone.",
+          "answer": "have"
+        },
+        {
+          "prompt": "Vervollständige korrekt: If she ___ (be) late, we will miss the bus.",
+          "answer": "is"
+        }
+      ]
+    },
+    {
+      "rule_id": "th-sounds",
+      "topic": "th sounds",
+      "title": "Die 'th'-Laute meistern",
+      "explanation": "Das Englische hat zwei 'th'-Laute: stimmlos /θ/ (wie in 'think') und stimmhaft /ð/ (wie in 'this'). Um sie zu erzeugen, legen Sie die Zungenspitze leicht zwischen die Vorderzähne und blasen Sie Luft aus. Viele Lernende ersetzen diese Laute fälschlicherweise durch /t/ oder /d/, was die Wortbedeutung ändern kann.",
+      "examples": [
+        {
+          "wrong": "I tink it's true.",
+          "right": "I think it's true.",
+          "note": "Verwenden Sie das stimmlose 'th' (Zunge zwischen den Zähnen) anstelle von 't'."
+        },
+        {
+          "wrong": "Dis is my pen.",
+          "right": "This is my pen.",
+          "note": "Verwenden Sie das stimmhafte 'th' (mit Vibration) anstelle von 'd'."
+        },
+        {
+          "wrong": "I have tree apples.",
+          "right": "I have three apples.",
+          "note": "Das 'th' in 'three' ist stimmlos; 'tree' ist ein völlig anderes Wort."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Wählen Sie das richtige Wort: I need to _____ about it. (think / tink)",
+          "answer": "think"
+        },
+        {
+          "prompt": "Füllen Sie die Lücke aus: Please give me _____ book. (this / dis)",
+          "answer": "this"
+        },
+        {
+          "prompt": "Wählen Sie das richtige Wort: She has _____ cats. (three / tree)",
+          "answer": "three"
+        }
+      ]
+    },
+    {
+      "rule_id": "stress",
+      "topic": "Stress",
+      "title": "Wortbetonung: Der verborgene Takt des Englischen",
+      "explanation": "Englische Wörter haben eine Silbe, die betont wird, das heißt, sie ist länger, lauter und höher in der Tonhöhe. Das Betonen der falschen Silbe kann die Bedeutung eines Wortes verändern oder es unnatürlich klingen lassen. Zum Beispiel haben 'record' (RE-cord, Nomen) und 'record' (re-CORD, Verb) je nach Betonung unterschiedliche Bedeutungen.",
+      "examples": [
+        {
+          "wrong": "I need to re-CORD the meeting.",
+          "right": "I need to RE-cord the meeting.",
+          "note": "Als Verb (um Audio aufzunehmen) liegt die Betonung auf der zweiten Silbe: re-CORD. Aber als Nomen (eine Datei) liegt die Betonung auf der ersten: RE-cord. Viele Lernende verwechseln diese."
+        },
+        {
+          "wrong": "Let's go to the de-SERT for our vacation.",
+          "right": "Let's go to the DES-ert for our vacation.",
+          "note": "'Desert' (trockenes Land) betont die erste Silbe: DES-ert. 'Dessert' (süßes Essen) betont die zweite: des-SERT. Die Schreibweise ist auch unterschiedlich!"
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Welche Silbe wird im Wort 'present' betont, wenn es ein Geschenk bedeutet? (Sprechen Sie das Wort laut aus: PRES-ent oder pre-SENT?)",
+          "answer": "PRES-ent"
+        },
+        {
+          "prompt": "Korrigieren Sie den Betonungsfehler in diesem Satz: 'I need to EX-port these files.' (Hinweis: 'export' als Verb hat die Betonung auf der zweiten Silbe.)",
+          "answer": "I need to ex-PORT these files."
+        },
+        {
+          "prompt": "Lesen Sie dieses Wort mit korrekter Betonung laut vor: 'photograph'. Welche Silbe ist die stärkste?",
+          "answer": "The first syllable: PHO-to-graph"
+        }
+      ]
+    },
+    {
+      "rule_id": "intonation",
+      "topic": "Intonation",
+      "title": "Intonation im Englischen meistern",
+      "explanation": "Intonation – das Heben und Senken Ihrer Stimme – kann die Bedeutung eines Satzes völlig verändern. Bei yes/no questions sollte Ihre Stimme am Ende steigen; bei Aussagen und wh- questions (who, what, where usw.) sollte Ihre Stimme fallen. Die falsche Intonation kann eine Frage wie eine Aussage klingen lassen oder Sie unsicher wirken lassen.",
+      "examples": [
+        {
+          "wrong": "You're coming? (said with a falling tone)",
+          "right": "You're coming? (said with a rising tone)",
+          "note": "Ein steigender Ton am Ende signalisiert eine yes/no question; ein fallender Ton lässt es wie eine Aussage klingen."
+        },
+        {
+          "wrong": "Where are you going? (said with a rising tone)",
+          "right": "Where are you going? (said with a falling tone)",
+          "note": "Wh- questions enden normalerweise mit einer fallenden Intonation; ein steigender Ton kann verwirrt wirken oder als ob Sie um Wiederholung bitten."
+        },
+        {
+          "wrong": "I like apples, oranges, and bananas. (all flat)",
+          "right": "I like apples↗, oranges↗, and bananas↘.",
+          "note": "Beim Aufzählen von Dingen steigt Ihre Stimme bei jedem Punkt außer dem letzten, wo sie fällt, um anzuzeigen, dass die Liste vollständig ist."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Lesen Sie mit korrekter Intonation vor: 'Are you hungry?' (yes/no question). Sollte Ihre Stimme am Ende steigen oder fallen?",
+          "answer": "Rise"
+        },
+        {
+          "prompt": "Lesen Sie mit korrekter Intonation vor: 'What time is it?' (wh- question). Sollte Ihre Stimme am Ende steigen oder fallen?",
+          "answer": "Fall"
+        },
+        {
+          "prompt": "Sagen Sie diese Liste mit richtiger Intonation: 'We need milk, bread, and eggs.' Wo steigt Ihre Stimme und wo fällt sie?",
+          "answer": "Rise on 'milk' and 'bread', fall on 'eggs'"
+        }
+      ]
+    },
+    {
+      "rule_id": "subject-verb-agreement",
+      "topic": "Subject-verb agreement",
+      "title": "Subjekt-Verb-Kongruenz: Übereinstimmung von Subjekt und Verb",
+      "explanation": "Im Englischen muss das Verb mit dem Subjekt in der Zahl übereinstimmen. Ein Subjekt im Singular verlangt ein Verb im Singular, während ein Subjekt im Plural ein Verb im Plural verlangt. Achten Sie auf knifflige Subjekte wie unbestimmte Pronomen oder Phrasen, die zwischen Subjekt und Verb stehen.",
+      "examples": [
+        {
+          "wrong": "The list of items are on the table.",
+          "right": "The list of items is on the table.",
+          "note": "Das Subjekt ist 'list' (singular), nicht 'items'."
+        },
+        {
+          "wrong": "Everyone have their own opinion.",
+          "right": "Everyone has their own opinion.",
+          "note": "'Everyone' ist Singular, also verwende 'has'."
+        },
+        {
+          "wrong": "She don't like coffee.",
+          "right": "She doesn't like coffee.",
+          "note": "Bei der dritten Person Singular (he, she, it) verwende 'doesn't'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Schreibe korrekt: The group of students is/are studying.",
+          "answer": "The group of students is studying."
+        },
+        {
+          "prompt": "Wähle das richtige Verb: Neither the teacher nor the students (is/are) in the room.",
+          "answer": "are"
+        },
+        {
+          "prompt": "Korrigiere den Fehler: Each of the apples are fresh.",
+          "answer": "Each of the apples is fresh."
+        }
+      ]
+    },
+    {
+      "rule_id": "countable-vs-uncountable-nouns",
+      "topic": "Countable vs uncountable nouns",
+      "title": "Zählbare vs. unzählbare Nomen",
+      "explanation": "Zählbare Nomen können gezählt werden (z.B. one apple, two apples) und verwenden 'a/an', 'many' und 'few'. Unzählbare Nomen können nicht gezählt werden (z.B. water, advice) und verwenden 'much', 'little' oder 'some' – niemals 'a/an' oder 'many'.",
+      "examples": [
+        {
+          "wrong": "I have many homeworks.",
+          "right": "I have a lot of homework.",
+          "note": "'Homework' ist unzählbar; verwende 'much' oder 'a lot of'."
+        },
+        {
+          "wrong": "He gave me a good advice.",
+          "right": "He gave me a piece of good advice.",
+          "note": "'Advice' ist unzählbar; du kannst 'a piece of advice' sagen."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Füllen Sie die Lücke aus: I need _____ (many/much) time to finish.",
+          "answer": "much"
+        },
+        {
+          "prompt": "Korrigieren Sie den Satz: He has many furniture in his room.",
+          "answer": "He has much furniture in his room."
+        }
+      ]
+    },
+    {
+      "rule_id": "gerund-vs-infinitive",
+      "topic": "Gerund vs infinitive",
+      "title": "Gerund vs Infinitiv: Verben, die -ing oder to lieben",
+      "explanation": "Einige englische Verben werden von einem Gerund (Verb+ing) und andere von einem Infinitiv (to+Verb) gefolgt. Zum Beispiel nimmt 'enjoy' immer ein Gerund, während 'want' immer einen Infinitiv nimmt. Das Erlernen dieser Muster hilft dir, häufige Fehler zu vermeiden.",
+      "examples": [
+        {
+          "wrong": "I enjoy to swim.",
+          "right": "I enjoy swimming.",
+          "note": "Verwende das Gerund nach 'enjoy'."
+        },
+        {
+          "wrong": "She wants going home.",
+          "right": "She wants to go home.",
+          "note": "Verwende den Infinitiv nach 'want'."
+        },
+        {
+          "wrong": "He suggested to eat out.",
+          "right": "He suggested eating out.",
+          "note": "Verwende das Gerund nach 'suggest'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Ich muss ___ (study) für die Prüfung.",
+          "answer": "to study"
+        },
+        {
+          "prompt": "Sie vermeidet ___ (eat) Junkfood.",
+          "answer": "eating"
+        },
+        {
+          "prompt": "Sie beschlossen ___ (move) in eine neue Stadt.",
+          "answer": "to move"
+        }
+      ]
+    },
+    {
+      "rule_id": "modal-verbs-usage",
+      "topic": "Modal verbs usage",
+      "title": "Modalverben: Can, Must und May",
+      "explanation": "Modalverben wie 'can', 'must' und 'may' haben spezifische Verwendungen. 'Can' drückt Fähigkeit oder informelle Erlaubnis aus; 'may' wird für formelle Erlaubnis verwendet. 'Must' zeigt starke Verpflichtung an, und 'must not' bedeutet Verbot. Fügen Sie nach einem Modalverb kein 'to' hinzu (z. B. 'I must go', nicht 'I must to go').",
+      "examples": [
+        {
+          "wrong": "Can I leave early?",
+          "right": "May I leave early?",
+          "note": "Verwenden Sie 'may' für höfliche oder formelle Bitten, nicht 'can'."
+        },
+        {
+          "wrong": "I must to finish my homework.",
+          "right": "I must finish my homework.",
+          "note": "Verwenden Sie nach einem Modalverb immer die Grundform des Verbs; fügen Sie kein 'to' hinzu."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Füllen Sie die Lücke aus: She ___ speak three languages fluently. (Fähigkeit)",
+          "answer": "can"
+        },
+        {
+          "prompt": "Füllen Sie die Lücke aus: You ___ park here; it's forbidden. (Verbot)",
+          "answer": "must not"
+        },
+        {
+          "prompt": "Füllen Sie die Lücke aus: ___ I borrow your pen, please? (höfliche Bitte)",
+          "answer": "May"
+        }
+      ]
+    },
+    {
+      "rule_id": "word-order-in-questions",
+      "topic": "Word order in questions",
+      "title": "Wortstellung in Fragen",
+      "explanation": "Im Englischen wird bei Fragen normalerweise das Subjekt und das Hilfsverb invertiert (oder 'do' hinzugefügt, wenn kein Hilfsverb vorhanden ist). Bei wh-Fragen steht das Fragewort zuerst, gefolgt vom Hilfsverb, dann dem Subjekt, dann dem Hauptverb. Vermeiden Sie die Satzstellung eines Aussagesatzes (Subjekt vor Verb).",
+      "examples": [
+        {
+          "wrong": "You are from where?",
+          "right": "Where are you from?",
+          "note": "Bei wh-Fragen steht das Fragewort zuerst, gefolgt vom Hilfsverb und Subjekt."
+        },
+        {
+          "wrong": "He likes coffee?",
+          "right": "Does he like coffee?",
+          "note": "Bei Ja/Nein-Fragen ohne Hilfsverb fügen Sie 'do/does/did' hinzu und setzen es vor das Subjekt."
+        },
+        {
+          "wrong": "Why you are late?",
+          "right": "Why are you late?",
+          "note": "Setzen Sie das Hilfsverb immer nach dem wh-Wort und vor das Subjekt."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Korrigieren Sie die Frage: 'You live where?'",
+          "answer": "Where do you live?"
+        },
+        {
+          "prompt": "Korrigieren Sie die Frage: 'She can swim?'",
+          "answer": "Can she swim?"
+        },
+        {
+          "prompt": "Korrigieren Sie die Frage: 'What you want?'",
+          "answer": "What do you want?"
+        }
+      ]
+    },
+    {
+      "rule_id": "comparatives-and-superlatives",
+      "topic": "Comparatives and superlatives",
+      "title": "Komparativ und Superlativ: Häufige Fehler",
+      "explanation": "Beim Vergleich von zwei Dingen verwendet man die Komparativform (Adjektiv + -er oder 'more' + Adjektiv) gefolgt von 'than'. Bei drei oder mehr Dingen verwendet man den Superlativ (Adjektiv + -est oder 'most' + Adjektiv) mit 'the'. Vermeide Doppelkomparative wie 'more better' und denke an unregelmäßige Formen wie 'good, better, best' und 'bad, worse, worst'.",
+      "examples": [
+        {
+          "wrong": "She is more smarter than him.",
+          "right": "She is smarter than him.",
+          "note": "Verwende nicht 'more' mit -er-Formen; 'smarter' ist bereits ein Komparativ."
+        },
+        {
+          "wrong": "This is the most best cake I've had.",
+          "right": "This is the best cake I've had.",
+          "note": "'Best' ist bereits ein Superlativ; füge kein 'most' hinzu."
+        },
+        {
+          "wrong": "He is the taller in his class.",
+          "right": "He is the tallest in his class.",
+          "note": "Verwende den Superlativ (-est) beim Vergleich von drei oder mehr Personen oder Dingen."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vervollständige: This is the ______ (good) movie I've ever seen.",
+          "answer": "best"
+        },
+        {
+          "prompt": "Korrigiere den Fehler: 'My house is more bigger than yours.'",
+          "answer": "My house is bigger than yours."
+        },
+        {
+          "prompt": "Wähle: 'She runs (faster / most fast) than me.'",
+          "answer": "faster"
+        }
+      ]
+    },
+    {
+      "rule_id": "passive-voice-formation",
+      "topic": "Passive voice formation",
+      "title": "Das Passiv richtig bilden",
+      "explanation": "Das Passiv wird mit dem Verb 'to be' (in der richtigen Zeitform) plus dem Partizip Perfekt des Hauptverbs gebildet. Ein häufiger Fehler ist die Verwendung der Grundform oder des Präteritums des Hauptverbs anstelle des Partizip Perfekt. Denken Sie daran: Das Partizip Perfekt ändert sich nie, und die Zeitform wird durch 'be' angezeigt.",
+      "examples": [
+        {
+          "wrong": "The window was break.",
+          "right": "The window was broken.",
+          "note": "Nach 'was' verwenden Sie das Partizip Perfekt 'broken', nicht die Grundform 'break'."
+        },
+        {
+          "wrong": "The letter is wrote by her.",
+          "right": "The letter is written by her.",
+          "note": "Das Partizip Perfekt von 'write' ist 'written', nicht 'wrote'."
+        },
+        {
+          "wrong": "The cake has been eat.",
+          "right": "The cake has been eaten.",
+          "note": "Verwenden Sie das Partizip Perfekt 'eaten' nach 'been'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Korrigieren Sie den Satz: 'The window was break by the ball.'",
+          "answer": "The window was broken by the ball."
+        },
+        {
+          "prompt": "Korrigieren Sie den Satz: 'The emails are send every day.'",
+          "answer": "The emails are sent every day."
+        },
+        {
+          "prompt": "Korrigieren Sie den Satz: 'The song has been sing many times.'",
+          "answer": "The song has been sung many times."
+        }
+      ]
+    },
+    {
+      "rule_id": "relative-clauses",
+      "topic": "Relative clauses",
+      "title": "Vermeidung von überflüssigen Pronomen in Relativsätzen",
+      "explanation": "Im Englischen, wenn du einen Relativsatz einleitest, wiederhole nicht das Subjekt oder Objekt mit einem Pronomen wie 'she', 'he' oder 'it'. Verwende stattdessen ein Relativpronomen wie 'who', 'that' oder 'which' (oder lasse es weg, wenn es als Objekt fungiert). Dieser Fehler passiert oft, weil Lernende direkt aus ihrer Muttersprache übersetzen.",
+      "examples": [
+        {
+          "wrong": "The woman she lives next door is kind.",
+          "right": "The woman who lives next door is kind.",
+          "note": "Entferne das zusätzliche 'she' und verwende 'who' als Relativpronomen für Personen."
+        },
+        {
+          "wrong": "I like the movie it was very funny.",
+          "right": "I like the movie that was very funny.",
+          "note": "Ersetze 'it' durch 'that' (oder 'which'), um den Satz zu verbinden."
+        },
+        {
+          "wrong": "The car he bought it is red.",
+          "right": "The car he bought is red.",
+          "note": "Wenn das Relativpronomen das Objekt ist, kannst du es ganz weglassen. Behalte 'it' nicht."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Korrigiere den Satz: 'The girl she studies hard got an A.'",
+          "answer": "The girl who studies hard got an A."
+        },
+        {
+          "prompt": "Korrigiere den Satz: 'I have a friend he speaks Spanish.'",
+          "answer": "I have a friend who speaks Spanish."
+        },
+        {
+          "prompt": "Korrigiere den Satz: 'The cake I baked it was delicious.'",
+          "answer": "The cake I baked was delicious."
+        }
+      ]
+    },
+    {
+      "rule_id": "phrasal-verbs",
+      "topic": "Phrasal verbs",
+      "title": "Phrasalverben: Trennbar vs Untrennbar",
+      "explanation": "Phrasalverben kombinieren ein Verb mit einer Partikel (z. B. up, off, into). Manche sind trennbar: Sie können ein Nomen zwischen Verb und Partikel setzen, aber ein Pronomen muss dazwischen. Andere sind untrennbar: Die Partikel bleibt immer beim Verb. Diese Regeln zu vermischen ist ein häufiger Fehler.",
+      "examples": [
+        {
+          "wrong": "I will pick up you after work.",
+          "right": "I will pick you up after work.",
+          "note": "Bei trennbaren Phrasalverben wie 'pick up' setzen Sie Pronomen zwischen Verb und Partikel."
+        },
+        {
+          "wrong": "He ran her into at the store.",
+          "right": "He ran into her at the store.",
+          "note": "'Run into' ist untrennbar; das Pronomen bleibt nach der Partikel."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Korrigieren Sie diesen Satz: 'Please throw away it.'",
+          "answer": "Please throw it away."
+        },
+        {
+          "prompt": "Korrigieren Sie diesen Satz: 'She looked them after.'",
+          "answer": "She looked after them."
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-apostrophe-s",
+      "topic": "Possessive apostrophe s",
+      "title": "Possessivapostroph s",
+      "explanation": "Der Possessivapostroph s ('s) zeigt an, dass etwas jemandem oder etwas gehört. Bei Singularnomen wird 's angehängt (z.B. the cat's toy). Bei Pluralnomen, die auf s enden, wird nur ein Apostroph angehängt (z.B. the cats' toys). Bei Pluralnomen, die nicht auf s enden, wird 's angehängt (z.B. the children's toys). Verwenden Sie keinen Apostroph für Plurale, die nicht possessiv sind.",
+      "examples": [
+        {
+          "wrong": "The dogs bone is on the floor.",
+          "right": "The dog's bone is on the floor.",
+          "note": "Fügen Sie bei einem einzelnen Hund 's vor dem Objekt hinzu."
+        },
+        {
+          "wrong": "The girls dresses are pretty.",
+          "right": "The girls' dresses are pretty.",
+          "note": "Fügen Sie bei Pluralformen wie girls, die bereits auf s enden, nur einen Apostroph nach dem s hinzu."
+        },
+        {
+          "wrong": "The childrens toys are everywhere.",
+          "right": "The children's toys are everywhere.",
+          "note": "Children ist ein Plural, der nicht auf s endet, daher fügen Sie 's hinzu."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Korrigieren Sie dies: 'The mens room is down the hall.'",
+          "answer": "The men's room is down the hall."
+        },
+        {
+          "prompt": "Korrigieren Sie dies: 'The books cover is torn.'",
+          "answer": "The book's cover is torn."
+        },
+        {
+          "prompt": "Korrigieren Sie dies: 'My parents car is blue.'",
+          "answer": "My parents' car is blue."
+        }
+      ]
+    },
+    {
+      "rule_id": "silent-letters",
+      "topic": "Silent letters",
+      "title": "Stille Buchstaben: Sprich das Ungesagte nicht aus",
+      "explanation": "Im Englischen werden manche Buchstaben in Wörtern nicht ausgesprochen. Sie werden stille Buchstaben genannt. Du solltest sie beim Sprechen nicht sagen. Zu den häufigen stillen Buchstaben gehören das 'k' in 'knife', das 't' in 'listen' und das 'l' in 'half'.",
+      "examples": [
+        {
+          "wrong": "I have a k-nife.",
+          "right": "I have a knife.",
+          "note": "Das 'k' ist stumm. Sage 'nife'."
+        },
+        {
+          "wrong": "She likes to lis-ten.",
+          "right": "She likes to listen.",
+          "note": "Das 't' in 'listen' ist stumm. Sage 'lissen'."
+        },
+        {
+          "wrong": "I will talk with an 'l' sound.",
+          "right": "I will talk (no 'l' sound).",
+          "note": "Das 'l' in 'talk' ist stumm. Sage 'tawk'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Welches Wort hat ein stummes 'k'? (knife, kite, king)",
+          "answer": "knife"
+        },
+        {
+          "prompt": "Vervollständige den Satz: Das 'b' in '______' ist stumm. (lamb, bee, broke)",
+          "answer": "lamb"
+        },
+        {
+          "prompt": "Wähle die richtige Aussprache von 'write': (a) mit einem 'w'-Laut (b) stummes 'w'",
+          "answer": "silent 'w'"
+        }
+      ]
+    },
+    {
+      "rule_id": "homophones-spelling",
+      "topic": "Homophones spelling",
+      "title": "Häufige Rechtschreibfehler bei Homophonen",
+      "explanation": "Homophone sind Wörter, die gleich klingen, aber unterschiedliche Schreibweisen und Bedeutungen haben. Sie werden beim Schreiben oft verwechselt. Um Fehler zu vermeiden, achte auf die Bedeutung und den Kontext des Satzes.",
+      "examples": [
+        {
+          "wrong": "Their going to the store.",
+          "right": "They're going to the store.",
+          "note": "They're ist eine Zusammenziehung von 'they are'; 'their' zeigt Besitz an."
+        },
+        {
+          "wrong": "Your a great student.",
+          "right": "You're a great student.",
+          "note": "You're ist eine Zusammenziehung von 'you are'; 'your' zeigt Besitz an."
+        },
+        {
+          "wrong": "Its a beautiful day.",
+          "right": "It's a beautiful day.",
+          "note": "It's bedeutet 'it is'; 'its' (ohne Apostroph) zeigt Besitz an."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Wähle das richtige Wort: (There/Their/They're) gehen in den Park.",
+          "answer": "They're"
+        },
+        {
+          "prompt": "Ergänze: ___ (Your/You're) Buch ist auf dem Tisch.",
+          "answer": "Your"
+        },
+        {
+          "prompt": "Vervollständige: Der Hund wedelte mit ___ (its/it's) Schwanz.",
+          "answer": "its"
+        }
+      ]
+    },
+    {
+      "rule_id": "irregular-verb-forms",
+      "topic": "Irregular verb forms",
+      "title": "Unregelmäßige Verbformen",
+      "explanation": "Unregelmäßige Verben folgen nicht dem üblichen Muster, -ed für die Vergangenheitsform anzuhängen. Stattdessen ändern sie ihre Schreibweise vollständig. Sie müssen diese häufigen unregelmäßigen Formen auswendig lernen, um Fehler zu vermeiden.",
+      "examples": [
+        {
+          "wrong": "I have went to the store.",
+          "right": "I have gone to the store.",
+          "note": "Das Partizip Perfekt von 'go' ist 'gone', nicht 'went'."
+        },
+        {
+          "wrong": "She drinked the water.",
+          "right": "She drank the water.",
+          "note": "Das Präteritum von 'drink' ist 'drank', nicht 'drinked'."
+        },
+        {
+          "wrong": "He brang his book.",
+          "right": "He brought his book.",
+          "note": "Die Vergangenheitsform von 'bring' ist 'brought', nicht 'brang'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Gestern ____ ich (go) in den Park.",
+          "answer": "went"
+        },
+        {
+          "prompt": "Sie hat ____ (write) einen Brief.",
+          "answer": "written"
+        },
+        {
+          "prompt": "Sie ____ (eat) bereits zu Mittag.",
+          "answer": "eaten"
+        }
+      ]
+    },
+    {
+      "rule_id": "reported-speech-backshift",
+      "topic": "Reported speech backshift",
+      "title": "Indirekte Rede: Zeitverschiebung",
+      "explanation": "Wenn du wiedergibst, was jemand gesagt hat, änderst du normalerweise die Zeitform der ursprünglichen Aussage in eine Vergangenheitsform. Dies wird als Zeitverschiebung bezeichnet. Zum Beispiel wird das Präsens zum Präteritum und das Present Continuous zum Past Continuous. Passe die Zeitform immer an das vergangene einleitende Verb an.",
+      "examples": [
+        {
+          "wrong": "She said she is tired.",
+          "right": "She said she was tired.",
+          "note": "Das ursprüngliche 'is' (present) ändert sich zu 'was' (past), da 'said' in der Vergangenheit steht."
+        },
+        {
+          "wrong": "He told me he will come.",
+          "right": "He told me he would come.",
+          "note": "'Will' wird in der indirekten Rede zu 'would' zurückverschoben."
+        },
+        {
+          "wrong": "They said they are going to the party.",
+          "right": "They said they were going to the party.",
+          "note": "Das Present Continuous 'are going' ändert sich zum Past Continuous 'were going'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Ändern Sie in indirekte Rede: 'Ich lebe in London.' (Er sagte...)",
+          "answer": "He said he lived in London."
+        },
+        {
+          "prompt": "Ändern Sie in indirekte Rede: 'Wir schauen einen Film.' (Sie sagten mir...)",
+          "answer": "They told me they were watching a movie."
+        },
+        {
+          "prompt": "Ändern Sie in indirekte Rede: 'Ich werde dich anrufen.' (Sie sagte...)",
+          "answer": "She said she would call me."
+        }
+      ]
+    },
+    {
+      "rule_id": "when-to-use-some-vs-any",
+      "topic": "When to use 'some' vs 'any'",
+      "title": "Some vs Any: Eine einfache Regel",
+      "explanation": "Verwende 'some' in positiven Sätzen sowie in Angeboten oder Bitten. Verwende 'any' in negativen Sätzen und den meisten Fragen. Zum Beispiel: \"I have some apples\" (positiv) und \"I don't have any apples\" (negativ). In Angeboten oder höflichen Bitten verwendet man 'some' auch in Fragen: \"Would you like some coffee?\"",
+      "examples": [
+        {
+          "wrong": "I don't have some money.",
+          "right": "I don't have any money.",
+          "note": "In verneinten Sätzen wird 'any' benötigt, nicht 'some'."
+        },
+        {
+          "wrong": "Do you have any apples? (as a polite request)",
+          "right": "Do you have some apples?",
+          "note": "Höfliche Bitten oder Angebote verwenden 'some' statt 'any'."
+        },
+        {
+          "wrong": "There is any milk in the fridge.",
+          "right": "There is some milk in the fridge.",
+          "note": "Positive Aussagen verwenden 'some', nicht 'any'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fülle die Lücke aus: I want ___ water. (positiver Satz)",
+          "answer": "some"
+        },
+        {
+          "prompt": "Fülle die Lücke aus: She doesn't have ___ friends. (negativ)",
+          "answer": "any"
+        },
+        {
+          "prompt": "Fülle die Lücke aus: Would you like ___ tea? (Angebot)",
+          "answer": "some"
+        }
+      ]
+    },
+    {
+      "rule_id": "definite-vs-zero-article",
+      "topic": "Definite vs zero article",
+      "title": "Bestimmter vs. Nullartikel: Wann man 'the' verwendet",
+      "explanation": "Verwende 'the' (definite article), wenn du dich auf ein bestimmtes Nomen beziehst, das der Zuhörer identifizieren kann. Verwende keinen Artikel (zero article) für allgemeine, unzählbare oder Pluralnomen, wenn du allgemein sprichst. Zum Beispiel: 'Ich liebe Musik' (allgemein) aber 'Ich liebe die Musik in diesem Film' (spezifisch).",
+      "examples": [
+        {
+          "wrong": "I go to the school every day.",
+          "right": "I go to school every day.",
+          "note": "Verwende den Nullartikel für Institutionen (Schule, Krankenhaus, Gefängnis), wenn deren Hauptzweck beschrieben wird."
+        },
+        {
+          "wrong": "She loves the dogs.",
+          "right": "She loves dogs.",
+          "note": "Verwende den Nullartikel für Pluralnomen, wenn du allgemein sprichst."
+        },
+        {
+          "wrong": "The milk is good for health.",
+          "right": "Milk is good for health.",
+          "note": "Verwende den Nullartikel für unzählbare Nomen, wenn du sie allgemein meinst."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fülle die Lücke aus: '_____ Katzen sind süß.' (über Katzen im Allgemeinen sprechen)",
+          "answer": "Cats"
+        },
+        {
+          "prompt": "Fülle die Lücke aus: 'Ich muss in _____ Krankenhaus gehen, um meinen Freund zu besuchen.' (ein bestimmtes Krankenhaus)",
+          "answer": "the"
+        },
+        {
+          "prompt": "Fülle die Lücke aus: '_____ Leben ist schön.' (über das Leben im Allgemeinen sprechen)",
+          "answer": "Life"
+        }
+      ]
+    },
+    {
+      "rule_id": "clause-linking-conjunctions",
+      "topic": "Clause linking conjunctions",
+      "title": "Verbindung von Sätzen mit Konjunktionen",
+      "explanation": "Wenn Sie zwei vollständige Sätze (Hauptsätze) miteinander verbinden, benötigen Sie eine Konjunktion wie 'and', 'but', 'or', 'so' oder 'because'. Ein häufiger Fehler ist die Verwendung nur eines Kommas (comma splice) oder gar keiner Zeichensetzung. Fügen Sie immer eine Konjunktion zwischen den Sätzen hinzu, um den Satz korrekt zu machen.",
+      "examples": [
+        {
+          "wrong": "I went to the store, I bought milk.",
+          "right": "I went to the store, and I bought milk.",
+          "note": "Verwenden Sie ein Komma und eine Konjunktion wie 'and', um zwei vollständige Gedanken zu verbinden."
+        },
+        {
+          "wrong": "She is tired she went to bed.",
+          "right": "She is tired, so she went to bed.",
+          "note": "Fügen Sie eine Konjunktion wie 'so' hinzu, um ein Ergebnis oder einen Grund anzuzeigen."
+        },
+        {
+          "wrong": "He likes coffee she prefers tea.",
+          "right": "He likes coffee, but she prefers tea.",
+          "note": "Verwenden Sie 'but', um einen Kontrast zwischen den beiden Ideen zu zeigen."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Korrigieren Sie diesen Satz: 'I was hungry I ate lunch.'",
+          "answer": "I was hungry, so I ate lunch."
+        },
+        {
+          "prompt": "Verbinden Sie diese beiden Sätze mit 'because': 'I stayed home. I was sick.'",
+          "answer": "I stayed home because I was sick."
+        },
+        {
+          "prompt": "Beheben Sie diesen comma splice: 'The sun set, the stars appeared.'",
+          "answer": "The sun set, and the stars appeared."
+        }
+      ]
+    },
+    {
+      "rule_id": "misplaced-modifiers",
+      "topic": "Misplaced modifiers",
+      "title": "Fehlplatzierte Modifikatoren",
+      "explanation": "Ein fehlplatzierter Modifikator ist ein Wort oder eine Phrase, das/die zu weit von dem Wort entfernt steht, das es beschreibt, was zu Verwirrung oder unbeabsichtigtem Humor führt. Um dies zu beheben, setzen Sie den Modifikator näher an das Wort, das er modifiziert, sodass der Satz klar und logisch ist.",
+      "examples": [
+        {
+          "wrong": "Running to catch the bus, my backpack fell.",
+          "right": "Running to catch the bus, I dropped my backpack.",
+          "note": "Der Modifikator ‚Running to catch the bus‘ sollte neben der Person stehen, die die Handlung ausführt (ich), nicht neben dem Rucksack."
+        },
+        {
+          "wrong": "She almost drove her kids to school every day.",
+          "right": "She drove her kids to school almost every day.",
+          "note": "Setze ‚almost‘ neben ‚every day‘, um zu zeigen, wie oft sie fuhr, nicht dass sie fast gefahren wäre, es aber nicht tat."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Korrigiere den fehlplatzierten Modifikator: ‚Der Kellner servierte dem Mann ein Steak mit einer Portion Pommes.‘",
+          "answer": "The waiter served a man a steak with a side of fries."
+        },
+        {
+          "prompt": "Verbessere diesen Satz: ‚Er aß fast die ganze Pizza selbst.‘",
+          "answer": "He ate nearly the whole pizza himself."
+        }
+      ]
+    }
+  ]
+}

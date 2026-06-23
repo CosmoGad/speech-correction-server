@@ -1,0 +1,105 @@
+{
+  "learning": "fr",
+  "topics": [
+    {
+      "rule_id": "articles",
+      "title": "Articles"
+    },
+    {
+      "rule_id": "temps",
+      "title": "Temps"
+    },
+    {
+      "rule_id": "accord",
+      "title": "Accord"
+    },
+    {
+      "rule_id": "pronoms",
+      "title": "Pronoms"
+    },
+    {
+      "rule_id": "voyelles-nasales",
+      "title": "Voyelles nasales"
+    },
+    {
+      "rule_id": "liaison",
+      "title": "Liaison"
+    },
+    {
+      "rule_id": "accent-tonique",
+      "title": "Accent tonique"
+    },
+    {
+      "rule_id": "gender-assignment-of-nouns",
+      "title": "Gender assignment of nouns"
+    },
+    {
+      "rule_id": "cest-vs-ilelle-est",
+      "title": "C'est vs il/elle est"
+    },
+    {
+      "rule_id": "possessive-adjectives-monmames",
+      "title": "Possessive adjectives (mon/ma/mes)"
+    },
+    {
+      "rule_id": "negation-in-compound-tenses",
+      "title": "Negation in compound tenses"
+    },
+    {
+      "rule_id": "prepositions-à-and-de-after-verbs",
+      "title": "Prepositions à and de after verbs"
+    },
+    {
+      "rule_id": "subjunctive-mood-usage",
+      "title": "Subjunctive mood usage"
+    },
+    {
+      "rule_id": "imperative-with-object-pronouns",
+      "title": "Imperative with object pronouns"
+    },
+    {
+      "rule_id": "si-clauses-conditional-sentences",
+      "title": "Si clauses (conditional sentences)"
+    },
+    {
+      "rule_id": "interrogative-pronouns-qui-que-quoi",
+      "title": "Interrogative pronouns (qui, que, quoi)"
+    },
+    {
+      "rule_id": "relative-pronouns-qui-que-dont",
+      "title": "Relative pronouns (qui, que, dont)"
+    },
+    {
+      "rule_id": "faire-causatif-faire-infinitive",
+      "title": "Faire causatif (faire + infinitive)"
+    },
+    {
+      "rule_id": "depuis-vs-il-y-a",
+      "title": "Depuis vs il y a"
+    },
+    {
+      "rule_id": "comparative-and-superlative-forms",
+      "title": "Comparative and superlative forms"
+    },
+    {
+      "rule_id": "demonstrative-adjectives-and-pronouns",
+      "title": "Demonstrative adjectives and pronouns"
+    },
+    {
+      "rule_id": "numbers-70-99-thousandmillion",
+      "title": "Numbers (70-99, thousand/million)"
+    },
+    {
+      "rule_id": "partitive-articles-after-negation",
+      "title": "Partitive articles after negation"
+    },
+    {
+      "rule_id": "passé-composé-auxiliary-selection",
+      "title": "Passé composé auxiliary selection"
+    },
+    {
+      "rule_id": "adjective-placement-before-vs-after-noun",
+      "title": "Adjective placement (before vs after noun)"
+    }
+  ]
+}

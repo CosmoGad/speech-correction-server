@@ -1,0 +1,105 @@
+{
+  "learning": "de",
+  "topics": [
+    {
+      "rule_id": "artikel",
+      "title": "Artikel"
+    },
+    {
+      "rule_id": "wortstellung",
+      "title": "Wortstellung"
+    },
+    {
+      "rule_id": "kasus",
+      "title": "Kasus"
+    },
+    {
+      "rule_id": "modalverben",
+      "title": "Modalverben"
+    },
+    {
+      "rule_id": "umlaute",
+      "title": "Umlaute"
+    },
+    {
+      "rule_id": "ch-laute",
+      "title": "ch-Laute"
+    },
+    {
+      "rule_id": "betonung-in-zusammengesetzten-wörtern",
+      "title": "Betonung in zusammengesetzten Wörtern"
+    },
+    {
+      "rule_id": "separable-prefix-verbs-usage",
+      "title": "Separable prefix verbs usage"
+    },
+    {
+      "rule_id": "reflexive-verbs-and-pronoun-placement",
+      "title": "Reflexive verbs and pronoun placement"
+    },
+    {
+      "rule_id": "adjective-endings-after-determiners",
+      "title": "Adjective endings after determiners"
+    },
+    {
+      "rule_id": "werden-vs-sein-for-passive",
+      "title": "werden vs sein for passive"
+    },
+    {
+      "rule_id": "es-gibt-vs-es-istsind",
+      "title": "es gibt vs es ist/sind"
+    },
+    {
+      "rule_id": "wissen-vs-kennen",
+      "title": "wissen vs kennen"
+    },
+    {
+      "rule_id": "als-vs-wie-in-comparisons",
+      "title": "als vs wie in comparisons"
+    },
+    {
+      "rule_id": "ob-vs-wenn-vs-als-temporal",
+      "title": "ob vs wenn vs als temporal"
+    },
+    {
+      "rule_id": "zu-infinitive-vs-dass-clauses",
+      "title": "zu + infinitive vs dass-clauses"
+    },
+    {
+      "rule_id": "pronunciation-uvular-r",
+      "title": "Pronunciation: uvular R"
+    },
+    {
+      "rule_id": "pronunciation-ig-ending-ɪç-vs-ɪk",
+      "title": "Pronunciation: ig ending [ɪç] vs [ɪk]"
+    },
+    {
+      "rule_id": "kein-vs-nicht-negation",
+      "title": "kein vs nicht negation"
+    },
+    {
+      "rule_id": "time-prepositions-um-am-im",
+      "title": "Time prepositions: um am im"
+    },
+    {
+      "rule_id": "viel-vs-sehr-distinction",
+      "title": "viel vs sehr distinction"
+    },
+    {
+      "rule_id": "lernen-vs-studieren",
+      "title": "lernen vs studieren"
+    },
+    {
+      "rule_id": "denn-vs-weil-vs-da",
+      "title": "denn vs weil vs da"
+    },
+    {
+      "rule_id": "nach-vs-zu-vs-in-destinations",
+      "title": "nach vs zu vs in destinations"
+    },
+    {
+      "rule_id": "sich-freuen-auf-vs-über",
+      "title": "sich freuen auf vs über"
+    }
+  ]
+}

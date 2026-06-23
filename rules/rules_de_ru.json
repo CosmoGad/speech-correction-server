@@ -1,0 +1,864 @@
+{
+  "learning": "de",
+  "interface": "ru",
+  "generated_at": "2026-06-21T18:11:55.199196+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "artikel",
+      "topic": "Artikel",
+      "title": "Артикли в немецком языке: не забывайте их!",
+      "explanation": "В русском языке артиклей нет, но в немецком почти каждое существительное требует артикля, который указывает на род (der, die, das) и падеж. Самая распространенная ошибка — пропускать артикль или путать род. Запоминайте каждое новое слово вместе с артиклем!",
+      "examples": [
+        {
+          "wrong": "Ich habe Apfel.",
+          "right": "Ich habe einen Apfel.",
+          "note": "Существительное 'Apfel' мужского рода, в винительном падеже нужно 'einen'."
+        },
+        {
+          "wrong": "Das ist schöne Blume.",
+          "right": "Das ist eine schöne Blume.",
+          "note": "'Blume' женского рода, неопределенный артикль — 'eine'."
+        },
+        {
+          "wrong": "Kinder spielen in Park.",
+          "right": "Kinder spielen im Park.",
+          "note": "С предлогом 'in' и мужским родом ('Park') нужно 'im' (in + dem)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильный артикль: '___ Hund ist braun.' (Hund — мужской род)",
+          "answer": "Der"
+        },
+        {
+          "prompt": "Вставьте правильный артикль: 'Sie kauft ___ Tasche.' (Tasche — женский род, неопределенный)",
+          "answer": "eine"
+        },
+        {
+          "prompt": "Вставьте правильный артикль: '___ Kinder spielen draußen.' (Kinder — множественное число, определенный)",
+          "answer": "Die"
+        }
+      ]
+    },
+    {
+      "rule_id": "wortstellung",
+      "topic": "Wortstellung",
+      "title": "Порядок слов в немецком предложении",
+      "explanation": "В немецком главном предложении спрягаемый глагол всегда стоит на втором месте (по смыслу, не обязательно вторым словом). Это означает, что если вы начинаете предложение с обстоятельства времени (например, \"heute\"), то подлежащее перемещается после глагола. Частая ошибка русских студентов — ставить глагол в конец предложения, как в русском языке.",
+      "examples": [
+        {
+          "wrong": "Ich gestern ins Kino gegangen bin.",
+          "right": "Ich bin gestern ins Kino gegangen.",
+          "note": "Глагол 'bin' должен быть на втором месте, а не в конце."
+        },
+        {
+          "wrong": "Heute ich gehe zur Schule.",
+          "right": "Heute gehe ich zur Schule.",
+          "note": "После обстоятельства времени 'heute' глагол 'gehe' идёт на второе место, а подлежащее 'ich' — после него."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите и поставьте правильный порядок слов: 'Завтра я иду в кино.'",
+          "answer": "Morgen gehe ich ins Kino."
+        },
+        {
+          "prompt": "Исправьте ошибку: 'Wir am Sonntag Fußball spielen.'",
+          "answer": "Wir spielen am Sonntag Fußball."
+        }
+      ]
+    },
+    {
+      "rule_id": "kasus",
+      "topic": "Kasus",
+      "title": "Ошибка в падежах: Akkusativ или Dativ после предлогов места",
+      "explanation": "Предлоги in, auf, unter, hinter и другие требуют Akkusativ (винительный падеж), если речь идёт о движении или направлении (куда?), и Dativ (дательный падеж), если о нахождении (где?). Русскоязычные часто путают эти падежи, так как в русском языке предлоги 'в' и 'на' в обоих случаях одинаковы, а падеж меняется. Запомните: глаголы движения (gehen, legen, stellen) + Akkusativ, глаголы состояния (sein, liegen, stehen) + Dativ.",
+      "examples": [
+        {
+          "wrong": "Ich bin in die Schule.",
+          "right": "Ich bin in der Schule.",
+          "note": "Глагол 'bin' (быть) обозначает состояние (где?), поэтому нужен Dativ (in der Schule)."
+        },
+        {
+          "wrong": "Ich gehe in der Schule.",
+          "right": "Ich gehe in die Schule.",
+          "note": "Глагол 'gehe' (иду) обозначает движение (куда?), поэтому нужен Akkusativ (in die Schule)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Он кладет книгу на стол (куда?). Напишите предложение.",
+          "answer": "Er legt das Buch auf den Tisch."
+        },
+        {
+          "prompt": "Книга лежит на столе (где?). Напишите предложение.",
+          "answer": "Das Buch liegt auf dem Tisch."
+        }
+      ]
+    },
+    {
+      "rule_id": "modalverben",
+      "topic": "Modalverben",
+      "title": "Модальные глаголы: порядок слов",
+      "explanation": "В немецком языке модальный глагол (например, können, müssen, wollen) стоит на втором месте в предложении (в повествовательном предложении), а основной глагол (инфинитив) перемещается в конец. Русскоговорящие часто ошибочно ставят инфинитив сразу после модального глагола, следуя привычному порядку слов русского языка.",
+      "examples": [
+        {
+          "wrong": "Ich muss machen meine Hausaufgaben.",
+          "right": "Ich muss meine Hausaufgaben machen.",
+          "note": "Инфинитив 'machen' должен стоять в конце предложения, а не после модального глагола."
+        },
+        {
+          "wrong": "Er kann singen gut.",
+          "right": "Er kann gut singen.",
+          "note": "Сначала идёт наречие 'gut', затем инфинитив в конце."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Расставьте слова в правильном порядке: wollen / wir / heute / ins Kino / gehen",
+          "answer": "Wir wollen heute ins Kino gehen."
+        },
+        {
+          "prompt": "Поставьте слова в правильном порядке: müssen / du / die Arbeit / machen",
+          "answer": "Du musst die Arbeit machen."
+        },
+        {
+          "prompt": "Исправьте ошибку в предложении: Sie möchte trinken einen Kaffee.",
+          "answer": "Sie möchte einen Kaffee trinken."
+        }
+      ]
+    },
+    {
+      "rule_id": "umlaute",
+      "topic": "Umlaute",
+      "title": "Ошибки с умлаутами (ä, ö, ü)",
+      "explanation": "В немецком языке умлауты (ä, ö, ü) меняют значение и произношение слов. Русские часто заменяют их на a, o, u, что приводит к ошибкам. Запомните правильные написания.",
+      "examples": [
+        {
+          "wrong": "schon",
+          "right": "schön",
+          "note": "Schon означает 'уже', schön – 'красивый'."
+        },
+        {
+          "wrong": "Uber",
+          "right": "Über",
+          "note": "Über – 'над, о', без умлаута слово неверно."
+        },
+        {
+          "wrong": "Muller",
+          "right": "Müller",
+          "note": "Müller – распространённая фамилия, без умлаута теряет смысл."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите правильное немецкое слово для 'красивый':",
+          "answer": "schön"
+        },
+        {
+          "prompt": "Напишите правильное немецкое слово для 'над':",
+          "answer": "über"
+        },
+        {
+          "prompt": "Напишите правильное немецкое слово для 'размер':",
+          "answer": "Größe"
+        }
+      ]
+    },
+    {
+      "rule_id": "ch-laute",
+      "topic": "ch-Laute",
+      "title": "Немецкие звуки «ch»: твёрдый и мягкий",
+      "explanation": "В немецком языке буквосочетание «ch» может произноситься по-разному. После гласных a, o, u и au звук твёрдый, как в русском «х» (например, Buch). После e, i, ä, ö, ü и после согласных (кроме s) звук мягкий, похожий на русское «хь» (например, ich). Русские часто путают эти звуки, произнося везде твёрдое «х», что режет слух немцам.",
+      "examples": [
+        {
+          "wrong": "Ich habe ein Buch (произносится «их» с твёрдым х).",
+          "right": "Ich habe ein Buch (первое ch мягко, второе — твёрдо).",
+          "note": "Запомните: в слове «ich» — мягкое ch (как «ихь»), в слове «Buch» — твёрдое (как «бух»)."
+        },
+        {
+          "wrong": "Die Nacht (произносится с мягким ch после a).",
+          "right": "Die Nacht (ch после a — твёрдое).",
+          "note": "После a, o, u всегда твёрдое ch, как в русском «х»."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Произнесите слово «sprechen» правильно (ch после e). Какой звук?",
+          "answer": "Sprechen (мягкое ch, как «шпрехьен»)"
+        },
+        {
+          "prompt": "Как правильно произнести слово «Tochter»?",
+          "answer": "Tochter (твёрдое ch после o, как «тохтер»)"
+        }
+      ]
+    },
+    {
+      "rule_id": "betonung-in-zusammengesetzten-wörtern",
+      "topic": "Betonung in zusammengesetzten Wörtern",
+      "title": "Ударение в сложных словах немецкого языка",
+      "explanation": "В немецких сложных существительных ударение обычно падает на первый компонент (определяющее слово). Например, в слове 'Wohnungstür' ударение на 'Wohnung', а не на 'Tür'. Русскоязычные учащиеся часто ошибочно ставят ударение на второй компонент по аналогии с русским языком.",
+      "examples": [
+        {
+          "wrong": "WohnungsTÜR",
+          "right": "WOHNUNGStür",
+          "note": "Ударение на первый компонент 'Wohnung'."
+        },
+        {
+          "wrong": "HausaufGABE",
+          "right": "HAUSaufgabe",
+          "note": "Ударение на 'Haus'."
+        },
+        {
+          "wrong": "KinderZIMMER",
+          "right": "KINDERzimmer",
+          "note": "Ударение на 'Kinder'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Поставьте правильное ударение в слове 'Tischlampe' (настольная лампа). Напишите слово с заглавной буквы на ударном слоге.",
+          "answer": "TISCHlampe"
+        },
+        {
+          "prompt": "В слове 'Schreibtisch' (письменный стол) ударение падает на первый слог. Как будет выглядеть слово с правильным ударением?",
+          "answer": "SCHREIBtisch"
+        },
+        {
+          "prompt": "Исправьте неверное ударение в слове 'BücherREGAL'.",
+          "answer": "BÜCHERregal"
+        }
+      ]
+    },
+    {
+      "rule_id": "separable-prefix-verbs-usage",
+      "topic": "Separable prefix verbs usage",
+      "title": "Глаголы с отделяемыми приставками",
+      "explanation": "В немецком языке у глаголов с отделяемыми приставками (например, ankommen, aufstehen) в настоящем времени приставка отделяется и уходит в конец предложения, а спрягаемая часть стоит на втором месте. Типичная ошибка — не отделять приставку или ставить её не в конец.",
+      "examples": [
+        {
+          "wrong": "Ich ankomme morgen.",
+          "right": "Ich komme morgen an.",
+          "note": "Приставка 'an' должна быть в конце предложения."
+        },
+        {
+          "wrong": "Er aufsteht früh.",
+          "right": "Er steht früh auf.",
+          "note": "Приставка 'auf' отделяется и идёт в конец."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на немецкий: 'Я встаю в 7 часов' (глагол aufstehen).",
+          "answer": "Ich stehe um 7 Uhr auf."
+        },
+        {
+          "prompt": "Исправьте ошибку: 'Ich anrufe dich morgen'.",
+          "answer": "Ich rufe dich morgen an."
+        },
+        {
+          "prompt": "Составьте предложение: 'Он приходит завтра' (глагол ankommen).",
+          "answer": "Er kommt morgen an."
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-verbs-and-pronoun-placement",
+      "topic": "Reflexive verbs and pronoun placement",
+      "title": "Возвратные глаголы: правильное место местоимения",
+      "explanation": "В немецком языке возвратное местоимение (mich, dich, sich, uns, euch) в простом предложении стоит сразу после спрягаемого глагола. В сложных временах (Perfekt) оно следует за вспомогательным глаголом (haben/sein). Не ставьте местоимение перед глаголом — это типичная ошибка для русскоговорящих.",
+      "examples": [
+        {
+          "wrong": "Ich mich wasche.",
+          "right": "Ich wasche mich.",
+          "note": "В простом предложении местоимение ставится после глагола."
+        },
+        {
+          "wrong": "Ich mich habe gewaschen.",
+          "right": "Ich habe mich gewaschen.",
+          "note": "В Perfekt местоимение идёт после вспомогательного глагола."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на немецкий: 'Я моюсь' (глагол sich waschen).",
+          "answer": "Ich wasche mich."
+        },
+        {
+          "prompt": "Переведите на немецкий: 'Я помылся' (Perfekt).",
+          "answer": "Ich habe mich gewaschen."
+        },
+        {
+          "prompt": "Вставьте правильное место для местоимения: 'Er ___ (sich) ___ (kämmen) jeden Morgen.'",
+          "answer": "Er kämmt sich jeden Morgen."
+        }
+      ]
+    },
+    {
+      "rule_id": "adjective-endings-after-determiners",
+      "topic": "Adjective endings after determiners",
+      "title": "Окончания прилагательных после определённых артиклей",
+      "explanation": "После определённых артиклей (der, die, das) прилагательное в именительном падеже единственного числа всегда получает окончание -e. Распространённая ошибка — использовать сильные окончания (-er, -es) или не добавлять окончание вовсе. Запомните: der große, die große, das große.",
+      "examples": [
+        {
+          "wrong": "der groß Hund",
+          "right": "der große Hund",
+          "note": "После der (мужской род) прилагательное получает окончание -e, а не -ø."
+        },
+        {
+          "wrong": "die schön Blume",
+          "right": "die schöne Blume",
+          "note": "После die (женский род) окончание тоже -e."
+        },
+        {
+          "wrong": "das klein Kind",
+          "right": "das kleine Kind",
+          "note": "После das (средний род) окончание тоже -e."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Заполните пропуск правильным окончанием: der alt__ Mann",
+          "answer": "der alte Mann"
+        },
+        {
+          "prompt": "Заполните пропуск правильным окончанием: die weiß__ Katze",
+          "answer": "die weiße Katze"
+        },
+        {
+          "prompt": "Заполните пропуск правильным окончанием: das rot__ Auto",
+          "answer": "das rote Auto"
+        }
+      ]
+    },
+    {
+      "rule_id": "werden-vs-sein-for-passive",
+      "topic": "werden vs sein for passive",
+      "title": "Werden или sein в пассиве? Разница между процессом и состоянием",
+      "explanation": "В немецком языке пассив образуется с помощью двух вспомогательных глаголов: 'werden' (процессный пассив) и 'sein' (статичный пассив). 'Werden' + Partizip II описывает действие, которое происходит или произошло (например, 'Das Fenster wird geöffnet' — окно открывают). 'Sein' + Partizip II описывает состояние после завершения действия (например, 'Das Fenster ist geöffnet' — окно открыто). Частая ошибка — путать эти формы, используя 'sein' для процессов или 'werden' для состояний.",
+      "examples": [
+        {
+          "wrong": "Das Fenster ist geöffnet.",
+          "right": "Das Fenster wird geöffnet.",
+          "note": "Если вы имеете в виду процесс (кто-то открывает окно), используйте 'werden', а не 'sein'."
+        },
+        {
+          "wrong": "Das Fenster wird geöffnet.",
+          "right": "Das Fenster ist geöffnet.",
+          "note": "Если вы имеете в виду результат (окно уже открыто), используйте 'sein', а не 'werden'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите: 'Дверь открывается (сейчас).' (процесс)",
+          "answer": "Die Tür wird geöffnet."
+        },
+        {
+          "prompt": "Переведите: 'Дверь открыта.' (состояние)",
+          "answer": "Die Tür ist geöffnet."
+        }
+      ]
+    },
+    {
+      "rule_id": "es-gibt-vs-es-istsind",
+      "topic": "es gibt vs es ist/sind",
+      "title": "Разница между es gibt и es ist/sind",
+      "explanation": "Es gibt означает 'существует, имеется' и указывает на наличие чего-либо в общем смысле. Es ist/sind используется для описания конкретного местоположения или состояния предмета. Запомните: после es gibt всегда стоит винительный падеж (Akkusativ), а после es ist/sind – именительный (Nominativ).",
+      "examples": [
+        {
+          "wrong": "Es ist viele Bücher in der Bibliothek.",
+          "right": "Es gibt viele Bücher in der Bibliothek.",
+          "note": "Говорим о наличии книг в библиотеке, а не об их местонахождении."
+        },
+        {
+          "wrong": "Es gibt ein Buch auf dem Tisch.",
+          "right": "Es ist ein Buch auf dem Tisch.",
+          "note": "Здесь конкретное местоположение – книга лежит на столе, поэтому es ist."
+        },
+        {
+          "wrong": "Es gibt kalt.",
+          "right": "Es ist kalt.",
+          "note": "Погодные явления всегда с es ist."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите: 'В городе есть музей.'",
+          "answer": "Es gibt ein Museum in der Stadt."
+        },
+        {
+          "prompt": "Переведите: 'На столе есть чашка.'",
+          "answer": "Es ist eine Tasse auf dem Tisch."
+        },
+        {
+          "prompt": "Исправьте ошибку: 'Es gibt heute sonnig.'",
+          "answer": "Es ist heute sonnig."
+        }
+      ]
+    },
+    {
+      "rule_id": "wissen-vs-kennen",
+      "topic": "wissen vs kennen",
+      "title": "Разница между wissen и kennen",
+      "explanation": "Глагол 'wissen' используется, когда речь идёт о знании фактов или информации (знать, что...). Глагол 'kennen' означает быть знакомым с человеком, местом или предметом (знать кого-то/что-то). В отличие от русского, в немецком эти понятия чётко различаются.",
+      "examples": [
+        {
+          "wrong": "Ich kenne, dass Berlin die Hauptstadt ist.",
+          "right": "Ich weiß, dass Berlin die Hauptstadt ist.",
+          "note": "Wissen используется для фактов (знать, что...)."
+        },
+        {
+          "wrong": "Weißt du diesen Mann?",
+          "right": "Kennst du diesen Mann?",
+          "note": "Kennen используется для людей (быть знакомым)."
+        },
+        {
+          "wrong": "Ich weiß Maria seit fünf Jahren.",
+          "right": "Ich kenne Maria seit fünf Jahren.",
+          "note": "Kennen – для людей и объектов, с которыми знакомы."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите: «Я знаю, что завтра будет дождь.»",
+          "answer": "Ich weiß, dass es morgen regnen wird."
+        },
+        {
+          "prompt": "Вставьте правильный глагол: «___ du das Restaurant neben dem Kino?»",
+          "answer": "Kennst"
+        },
+        {
+          "prompt": "Выберите верный вариант: «Er ___ nicht, wie spät es ist.» (weiß / kennt)",
+          "answer": "weiß"
+        }
+      ]
+    },
+    {
+      "rule_id": "als-vs-wie-in-comparisons",
+      "topic": "als vs wie in comparisons",
+      "title": "Ошибка: als vs wie в сравнениях",
+      "explanation": "В немецком языке при сравнении используется 'wie' при равенстве (так же, как) и 'als' при неравенстве (чем). Например: 'Er ist so groß wie ich' (он такой же высокий, как я) – здесь 'wie'. 'Er ist größer als ich' (он выше, чем я) – здесь 'als'. Частая ошибка – путать эти слова, ставя 'als' вместо 'wie' или наоборот.",
+      "examples": [
+        {
+          "wrong": "Er läuft schneller wie sein Bruder.",
+          "right": "Er läuft schneller als sein Bruder.",
+          "note": "Здесь сравнивается неравенство (быстрее), поэтому нужно 'als', а не 'wie'."
+        },
+        {
+          "wrong": "Sie ist genauso alt als ich.",
+          "right": "Sie ist genauso alt wie ich.",
+          "note": "Здесь равенство (такого же возраста), поэтому нужно 'wie', а не 'als'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на немецкий: 'Моя машина быстрее, чем твоя.'",
+          "answer": "Mein Auto ist schneller als deins."
+        },
+        {
+          "prompt": "Переведите на немецкий: 'Он говорит по-немецки так же хорошо, как и по-английски.'",
+          "answer": "Er spricht Deutsch genauso gut wie Englisch."
+        }
+      ]
+    },
+    {
+      "rule_id": "ob-vs-wenn-vs-als-temporal",
+      "topic": "ob vs wenn vs als temporal",
+      "title": "ob, wenn, als: временные союзы",
+      "explanation": "В немецком языке для выражения времени используются разные союзы: 'als' — для однократного действия в прошлом, 'wenn' — для повторяющихся действий в прошлом или для будущего/настоящего времени, а 'ob' — для косвенного вопроса ('ли'), не связан со временем. Ошибка возникает, когда путают 'wenn' и 'als' в прошлом или используют 'ob' вместо временного союза.",
+      "examples": [
+        {
+          "wrong": "Ob ich klein war, spielte ich gern.",
+          "right": "Als ich klein war, spielte ich gern.",
+          "note": "'Ob' означает 'ли', а не 'когда'. Для однократного события в прошлом используйте 'als'."
+        },
+        {
+          "wrong": "Wenn ich gestern kam, war sie schon da.",
+          "right": "Als ich gestern kam, war sie schon da.",
+          "note": "'Wenn' не используется для однократного прошлого. Для конкретного момента в прошлом нужен 'als'."
+        },
+        {
+          "wrong": "Als ich nach Hause komme, rufe ich dich an.",
+          "right": "Wenn ich nach Hause komme, rufe ich dich an.",
+          "note": "Для будущего времени или повторяющегося действия используйте 'wenn', а не 'als'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильный союз: «_____ ich in Berlin war, habe ich das Brandenburger Tor gesehen.» (однократное действие в прошлом)",
+          "answer": "Als"
+        },
+        {
+          "prompt": "Вставьте правильный союз: «_____ ich Zeit habe, lese ich ein Buch.» (повторяющееся или будущее действие)",
+          "answer": "Wenn"
+        },
+        {
+          "prompt": "Вставьте правильный союз: «Ich weiß nicht, _____ er morgen kommt.» (косвенный вопрос)",
+          "answer": "ob"
+        }
+      ]
+    },
+    {
+      "rule_id": "zu-infinitive-vs-dass-clauses",
+      "topic": "zu + infinitive vs dass-clauses",
+      "title": "Ошибка: zu + Infinitiv или dass-Satz?",
+      "explanation": "В русском языке мы часто используем «что» (dass) в придаточных предложениях, даже когда подлежащее главного и придаточного предложения одинаковое. В немецком в таких случаях нужно использовать конструкцию «zu + Infinitiv» вместо «dass-Satz». Если же подлежащие разные, то требуется «dass-Satz» с глаголом в спрягаемой форме.",
+      "examples": [
+        {
+          "wrong": "Ich hoffe, dass ich dich sehe.",
+          "right": "Ich hoffe, dich zu sehen.",
+          "note": "Подлежащее одинаковое (ich) – используем zu + Infinitiv."
+        },
+        {
+          "wrong": "Er sagt, zu kommen.",
+          "right": "Er sagt, dass er kommt.",
+          "note": "Подлежащее разное (er / er – формально разные, так как в придаточном подлежащее выражено) – нужен dass-Satz."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите: «Я надеюсь, что завтра пойду в кино.» (подлежащее одинаковое)",
+          "answer": "Ich hoffe, morgen ins Kino zu gehen."
+        },
+        {
+          "prompt": "Переведите: «Он говорит, что завтра идет в кино.» (подлежащее разное)",
+          "answer": "Er sagt, dass er morgen ins Kino geht."
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciation-uvular-r",
+      "topic": "Pronunciation: uvular R",
+      "title": "Произношение немецкого звука R (увулярный R)",
+      "explanation": "В немецком языке звук R произносится в задней части горла (увулярно), в отличие от русского раскатистого Р. Он напоминает мягкое картавление или горловой звук, похожий на французское R или русское Г в некоторых диалектах. Попробуйте вибрировать язычком в горле, не касаясь кончиком языка нёба.",
+      "examples": [
+        {
+          "wrong": "rot (с русским раскатистым Р)",
+          "right": "rot (с увулярным R)",
+          "note": "Немецкое R звучит гортанно, а не как русское раскатистое Р."
+        },
+        {
+          "wrong": "Brot (с русским Р)",
+          "right": "Brot (с увулярным R)",
+          "note": "Обратите внимание на мягкий, почти скребущий звук в горле."
+        },
+        {
+          "wrong": "Rasen (с русским Р)",
+          "right": "Rasen (с увулярным R)",
+          "note": "Попробуйте вибрировать язычком — это не кончик языка, а задняя часть горла."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Произнесите слово 'rot' с правильным немецким R.",
+          "answer": "rot"
+        },
+        {
+          "prompt": "Как будет 'хлеб' по-немецки? Произнесите с увулярным R.",
+          "answer": "Brot"
+        },
+        {
+          "prompt": "Скажите слово 'газон', используя гортанное R.",
+          "answer": "Rasen"
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciation-ig-ending-ɪç-vs-ɪk",
+      "topic": "Pronunciation: ig ending [ɪç] vs [ɪk]",
+      "title": "Произношение окончания -ig: [ɪç] или [ɪk]?",
+      "explanation": "В стандартном немецком языке окончание -ig в конце слова произносится как [ɪç] (мягко, как в слове 'ich'), а не [ɪk] (твёрдо). Это типичная ошибка русскоговорящих. Исключения редки (например, в региональных диалектах), поэтому для правильного произношения всегда используйте мягкий звук.",
+      "examples": [
+        {
+          "wrong": "richtik",
+          "right": "richtig",
+          "note": "Ошибочно произносить с твёрдым 'к' — правильно мягкий звук [ɪç]."
+        },
+        {
+          "wrong": "wichtik",
+          "right": "wichtig",
+          "note": "То же правило: окончание звучит как в 'ich', а не как в 'ick'."
+        },
+        {
+          "wrong": "Könik",
+          "right": "König",
+          "note": "Даже в слове 'король' окончание мягкое, не поддавайтесь интуиции."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Какое из двух написаний соответствует правильному произношению: 'richtik' или 'richtig'?",
+          "answer": "richtig"
+        },
+        {
+          "prompt": "Исправьте ошибку в слове 'Könik' — напишите правильный вариант.",
+          "answer": "König"
+        },
+        {
+          "prompt": "Как правильно произнести слово 'двадцать' (zwanzig)? Выберите: [ˈt͡svant͡sɪk] или [ˈt͡svant͡sɪç]. Напишите слово по-немецки.",
+          "answer": "zwanzig"
+        }
+      ]
+    },
+    {
+      "rule_id": "kein-vs-nicht-negation",
+      "topic": "kein vs nicht negation",
+      "title": "Отрицание: kein или nicht?",
+      "explanation": "В немецком языке для отрицания существительных используется 'kein' (означает 'никакой', 'ни одного'). Для отрицания глаголов, прилагательных, наречий и других частей речи используется 'nicht'. 'Kein' ставится перед существительным и склоняется по родам и числам, а 'nicht' обычно стоит в конце предложения или перед отрицаемым словом.",
+      "examples": [
+        {
+          "wrong": "Ich habe nicht Geld.",
+          "right": "Ich habe kein Geld.",
+          "note": "Слово 'Geld' — существительное, поэтому нужно 'kein'."
+        },
+        {
+          "wrong": "Er ist kein groß.",
+          "right": "Er ist nicht groß.",
+          "note": "Слово 'groß' — прилагательное, поэтому нужно 'nicht'."
+        },
+        {
+          "wrong": "Sie liest kein.",
+          "right": "Sie liest nicht.",
+          "note": "Глагол 'liest' отрицается с помощью 'nicht'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "У меня нет времени.",
+          "answer": "Ich habe keine Zeit."
+        },
+        {
+          "prompt": "Он не работает.",
+          "answer": "Er arbeitet nicht."
+        },
+        {
+          "prompt": "У меня нет брата.",
+          "answer": "Ich habe keinen Bruder."
+        }
+      ]
+    },
+    {
+      "rule_id": "time-prepositions-um-am-im",
+      "topic": "Time prepositions: um am im",
+      "title": "Предлоги времени: um, am, im",
+      "explanation": "В немецком языке предлоги времени различаются: um используется с точным временем (часы), am — с днями недели и датами, im — с месяцами, временами года и частями суток (кроме ночи). Запомните: um 8 Uhr, am Montag, im Januar.",
+      "examples": [
+        {
+          "wrong": "Ich treffe dich im 8 Uhr.",
+          "right": "Ich treffe dich um 8 Uhr.",
+          "note": "С часами используем um, а не im."
+        },
+        {
+          "wrong": "Wir fahren um Montag weg.",
+          "right": "Wir fahren am Montag weg.",
+          "note": "С днями недели (Montag) нужен am, не um."
+        },
+        {
+          "wrong": "Der Kurs beginnt am Januar.",
+          "right": "Der Kurs beginnt im Januar.",
+          "note": "С месяцами (Januar) используем im, не am."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Как правильно сказать «в три часа»?",
+          "answer": "um drei Uhr"
+        },
+        {
+          "prompt": "Как правильно сказать «в среду»?",
+          "answer": "am Mittwoch"
+        },
+        {
+          "prompt": "Как правильно сказать «летом»?",
+          "answer": "im Sommer"
+        }
+      ]
+    },
+    {
+      "rule_id": "viel-vs-sehr-distinction",
+      "topic": "viel vs sehr distinction",
+      "title": "Разница между viel и sehr",
+      "explanation": "Viel используется для обозначения количества (много) с существительными или глаголами. Sehr означает «очень» и стоит перед прилагательными или наречиями. Не путайте: нельзя сказать «viel müde» (нужно «sehr müde») или «sehr Geld» (нужно «viel Geld»).",
+      "examples": [
+        {
+          "wrong": "Ich bin viel müde.",
+          "right": "Ich bin sehr müde.",
+          "note": "Перед прилагательным müde нужно sehr, а не viel."
+        },
+        {
+          "wrong": "Ich habe sehr Geld.",
+          "right": "Ich habe viel Geld.",
+          "note": "Перед существительным Geld нужно viel (много), а не sehr."
+        },
+        {
+          "wrong": "Das Buch ist viel interessant.",
+          "right": "Das Buch ist sehr interessant.",
+          "note": "Перед прилагательным interessant используется sehr."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте viel или sehr: Das ist _____ schön.",
+          "answer": "sehr"
+        },
+        {
+          "prompt": "Вставьте viel или sehr: Er hat _____ Arbeit.",
+          "answer": "viel"
+        },
+        {
+          "prompt": "Вставьте viel или sehr: Sie singt _____ gut.",
+          "answer": "sehr"
+        }
+      ]
+    },
+    {
+      "rule_id": "lernen-vs-studieren",
+      "topic": "lernen vs studieren",
+      "title": "Разница между lernen и studieren",
+      "explanation": "Глагол 'lernen' означает учиться вообще: запоминать, осваивать навыки, готовиться к экзаменам. 'Studieren' — это учиться в университете или колледже, получать высшее образование. Ошибка возникает, когда русские говорят 'Ich studiere Deutsch' вместо 'Ich lerne Deutsch', если речь не об университетском курсе.",
+      "examples": [
+        {
+          "wrong": "Ich studiere Deutsch für die Prüfung.",
+          "right": "Ich lerne Deutsch für die Prüfung.",
+          "note": "Здесь речь о подготовке к экзамену (общее изучение), а не об университетском курсе."
+        },
+        {
+          "wrong": "Er lernt an der Universität Berlin.",
+          "right": "Er studiert an der Universität Berlin.",
+          "note": "Если человек получает высшее образование в вузе, используем 'studieren'."
+        },
+        {
+          "wrong": "Sie studiert Autofahren.",
+          "right": "Sie lernt Autofahren.",
+          "note": "Учиться водить машину — это освоение навыка, а не университетская дисциплина."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильный глагол: Я учусь в университете.",
+          "answer": "Ich studiere an der Universität."
+        },
+        {
+          "prompt": "Вставьте правильный глагол: Она учит слова для завтрашнего теста.",
+          "answer": "Sie lernt die Vokabeln für den Test morgen."
+        },
+        {
+          "prompt": "Вставьте правильный глагол: Мы изучаем историю в институте.",
+          "answer": "Wir studieren Geschichte an der Hochschule."
+        }
+      ]
+    },
+    {
+      "rule_id": "denn-vs-weil-vs-da",
+      "topic": "denn vs weil vs da",
+      "title": "Разница между denn, weil и da",
+      "explanation": "Союз 'denn' является сочинительным и не меняет порядок слов (глагол остаётся на втором месте). 'weil' и 'da' — подчинительные союзы, поэтому глагол уходит в конец предложения. 'da' обычно используется, когда причина уже известна или очевидна, и звучит более формально, чем 'weil'.",
+      "examples": [
+        {
+          "wrong": "Ich bleibe zu Hause, weil ich bin müde.",
+          "right": "Ich bleibe zu Hause, weil ich müde bin.",
+          "note": "После 'weil' глагол должен стоять в конце предложения."
+        },
+        {
+          "wrong": "Da er krank ist, er bleibt im Bett.",
+          "right": "Da er krank ist, bleibt er im Bett.",
+          "note": "После 'da' глагол тоже идёт в конец придаточной части, но в главном предложении порядок слов прямой."
+        },
+        {
+          "wrong": "Ich lerne Deutsch, denn ich mag die Sprache.",
+          "right": "Ich lerne Deutsch, denn ich mag die Sprache.",
+          "note": "С 'denn' всё верно: глагол стоит на втором месте. Здесь ошибки нет, но часто путают порядок слов."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на немецкий: 'Я иду домой, потому что устал.' (используйте 'weil')",
+          "answer": "Ich gehe nach Hause, weil ich müde bin."
+        },
+        {
+          "prompt": "Исправьте предложение: 'Da das Wetter schlecht ist, wir bleiben zu Hause.'",
+          "answer": "Da das Wetter schlecht ist, bleiben wir zu Hause."
+        },
+        {
+          "prompt": "Вставьте правильный союз (denn/weil/da): 'Er kommt nicht, ___ er keine Zeit hat.' (причина уже известна собеседнику)",
+          "answer": "Er kommt nicht, da er keine Zeit hat."
+        }
+      ]
+    },
+    {
+      "rule_id": "nach-vs-zu-vs-in-destinations",
+      "topic": "nach vs zu vs in destinations",
+      "title": "Предлоги nach, zu, in для указания направления",
+      "explanation": "Для стран и городов без артикля используем nach (nach Deutschland). Для людей и мест с определённым артиклем (например, zum Arzt, zur Schule) – zu. Для закрытых помещений и стран с артиклем – in с винительным падежом (ins Kino, in die Schweiz). Запомните: nach никогда не используется с артиклем, а in всегда требует артикля или слияния.",
+      "examples": [
+        {
+          "wrong": "Ich gehe in Deutschland.",
+          "right": "Ich gehe nach Deutschland.",
+          "note": "Страны без артикля (Россия, Германия) требуют nach."
+        },
+        {
+          "wrong": "Ich gehe zu dem Kino.",
+          "right": "Ich gehe ins Kino.",
+          "note": "Для зданий и помещений используем in + Akkusativ (ins = in das)."
+        },
+        {
+          "wrong": "Ich fahre in dem Arzt.",
+          "right": "Ich fahre zum Arzt.",
+          "note": "К людям или учреждениям (врач, школа, аптека) – zu (+ Dativ, слитно: zum = zu dem)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Я еду в Россию.",
+          "answer": "Ich fahre nach Russland."
+        },
+        {
+          "prompt": "Я иду к врачу.",
+          "answer": "Ich gehe zum Arzt."
+        },
+        {
+          "prompt": "Я иду в кино.",
+          "answer": "Ich gehe ins Kino."
+        }
+      ]
+    },
+    {
+      "rule_id": "sich-freuen-auf-vs-über",
+      "topic": "sich freuen auf vs über",
+      "title": "Разница между sich freuen auf и sich freuen über",
+      "explanation": "Глагол sich freuen с предлогом auf (Akkusativ) означает радость от предстоящего события (будущее). С предлогом über (Akkusativ) — радость от того, что уже произошло или происходит сейчас. Например: Ich freue mich auf den Urlaub (я жду отпуска) vs. Ich freue mich über das Geschenk (я рад подарку, который уже получил).",
+      "examples": [
+        {
+          "wrong": "Ich freue mich über den Urlaub nächste Woche.",
+          "right": "Ich freue mich auf den Urlaub nächste Woche.",
+          "note": "Здесь речь о будущем событии (отпуск на следующей неделе), поэтому нужен предлог auf."
+        },
+        {
+          "wrong": "Ich freue mich auf deine Hilfe gestern.",
+          "right": "Ich freue mich über deine Hilfe gestern.",
+          "note": "Помощь уже оказана в прошлом (вчера), поэтому нужен предлог über."
+        },
+        {
+          "wrong": "Er freut sich auf die gute Note, die er bekommen hat.",
+          "right": "Er freut sich über die gute Note, die er bekommen hat.",
+          "note": "Оценка уже получена (прошедшее время), поэтому используется über."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Ты радуешься предстоящему отпуску. Напиши правильное предложение.",
+          "answer": "Ich freue mich auf den Urlaub."
+        },
+        {
+          "prompt": "Она радуется хорошей оценке (уже получила). Напиши правильное предложение.",
+          "answer": "Sie freut sich über die gute Note."
+        },
+        {
+          "prompt": "Мы радуемся завтрашней вечеринке. Напиши правильное предложение.",
+          "answer": "Wir freuen uns auf die Party morgen."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "learning": "es",
+  "topics": [
+    {
+      "rule_id": "serestar",
+      "title": "Ser/Estar"
+    },
+    {
+      "rule_id": "subjuntivo",
+      "title": "Subjuntivo"
+    },
+    {
+      "rule_id": "tiempos-verbales",
+      "title": "Tiempos verbales"
+    },
+    {
+      "rule_id": "preposiciones",
+      "title": "Preposiciones"
+    },
+    {
+      "rule_id": "sonidos-rrr-звуки-rrr",
+      "title": "Sonidos r/rr (звуки r/rr)"
+    },
+    {
+      "rule_id": "pronunciación-de-la-ñ",
+      "title": "Pronunciación de la ñ"
+    },
+    {
+      "rule_id": "entonación",
+      "title": "Entonación"
+    },
+    {
+      "rule_id": "gender-of-nouns-masculinefeminine",
+      "title": "Gender of nouns (masculine/feminine)"
+    },
+    {
+      "rule_id": "adjective-agreement-in-gender-and-number",
+      "title": "Adjective agreement in gender and number"
+    },
+    {
+      "rule_id": "direct-object-pronouns-lo-la-los-las",
+      "title": "Direct object pronouns (lo, la, los, las)"
+    },
+    {
+      "rule_id": "indirect-object-pronouns-le-les",
+      "title": "Indirect object pronouns (le, les)"
+    },
+    {
+      "rule_id": "use-of-personal-a",
+      "title": "Use of personal 'a'"
+    },
+    {
+      "rule_id": "verbs-like-gustar-me-gusta-etc",
+      "title": "Verbs like 'gustar' (me gusta, etc.)"
+    },
+    {
+      "rule_id": "reflexive-verbs-and-pronouns",
+      "title": "Reflexive verbs and pronouns"
+    },
+    {
+      "rule_id": "formal-vs-informal-commands-imperative",
+      "title": "Formal vs informal commands (imperative)"
+    },
+    {
+      "rule_id": "comparative-and-superlative-forms",
+      "title": "Comparative and superlative forms"
+    },
+    {
+      "rule_id": "demonstrative-adjectives-and-pronouns-este-ese-aquel",
+      "title": "Demonstrative adjectives and pronouns (este, ese, aquel)"
+    },
+    {
+      "rule_id": "possessive-adjectives-mi-tu-su-vs-possessive-pronouns-mío-tuyo",
+      "title": "Possessive adjectives (mi, tu, su) vs possessive pronouns (mío, tuyo)"
+    },
+    {
+      "rule_id": "use-of-qué-vs-cuál",
+      "title": "Use of 'qué' vs 'cuál'"
+    },
+    {
+      "rule_id": "use-of-sino-vs-pero",
+      "title": "Use of 'sino' vs 'pero'"
+    },
+    {
+      "rule_id": "use-of-muy-vs-mucho",
+      "title": "Use of 'muy' vs 'mucho'"
+    },
+    {
+      "rule_id": "false-cognates-embarazada-etc",
+      "title": "False cognates (embarazada, etc.)"
+    },
+    {
+      "rule_id": "apocope-bueno-buen-primero-primer",
+      "title": "Apocope (bueno -> buen, primero -> primer)"
+    },
+    {
+      "rule_id": "contractions-al-and-del",
+      "title": "Contractions 'al' and 'del'"
+    },
+    {
+      "rule_id": "placement-of-adjectives-before-vs-after-noun",
+      "title": "Placement of adjectives (before vs after noun)"
+    }
+  ]
+}
