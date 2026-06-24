@@ -9,7 +9,7 @@ from functools import lru_cache
 import threading
 
 import regex as re
-from fastapi import FastAPI, HTTPException, Request, Depends, Security
+from fastapi import FastAPI, HTTPException, Request, Depends, Security, Query
 from fastapi.responses import JSONResponse
 from fastapi.security import APIKeyHeader
 from fastapi.middleware.cors import CORSMiddleware
@@ -110,6 +110,7 @@ app.add_middleware(
 # Grammar rule book endpoints (GET /rules, GET /rule) — served from static JSON
 # in rules/ (see rules/README.md). Same X-API-Key auth as the other routes.
 from rules_api import router as rules_router
+import rules_store
 
 app.include_router(rules_router, dependencies=[Depends(verify_api_key)])
 
@@ -557,6 +558,112 @@ async def process_text(
     except Exception as e:
         logger.error(f"Processing error for {client_ip}: {type(e).__name__}", exc_info=True)
         raise HTTPException(status_code=500, detail="Internal server error")
+
+
+_RULE_MEDIA = "application/json; charset=utf-8"
+
+
+@app.get("/rule")
+async def get_rule_endpoint(
+    learning: str,
+    interface: str,
+    rule_id: str,
+    _: None = Depends(verify_api_key),
+):
+    """Full lesson for one rule. Served from the pre-generated static file when
+    available; otherwise generated on demand for a valid taxonomy key and cached
+    (the "grows with use" path). See rules/DYNAMIC_RULES_SPEC.md."""
+    # 1) static pre-generated content
+    try:
+        rule = rules_store.get_rule(learning, interface, rule_id)
+        return JSONResponse(content=rule, media_type=_RULE_MEDIA)
+    except ValueError:
+        raise HTTPException(status_code=400, detail="invalid parameters")
+    except (rules_store.RulesNotFound, rules_store.RuleNotFound):
+        pass  # fall through to on-demand generation
+
+    # 2) rule_id MUST be a known taxonomy key — never mint ids from free text
+    title = rules_store.topic_title(learning, rule_id)
+    if not title:
+        raise HTTPException(status_code=404, detail="rule not found")
+
+    # 3) on-demand cache
+    cache_key = f"rule::{learning}::{interface}::{rule_id}"
+    cached = response_cache.get(cache_key)
+    if cached is not None:
+        return JSONResponse(content=cached, media_type=_RULE_MEDIA)
+
+    # 4) lazy generation via the model, then cache
+    if not _deepseek_client:
+        raise HTTPException(status_code=503, detail="generation unavailable")
+    learning_name = rules_store.LANGUAGE_NAMES.get(learning, learning)
+    interface_name = rules_store.LANGUAGE_NAMES.get(interface, interface)
+    prompt = rules_store.build_rule_prompt(title, learning_name, interface_name)
+    try:
+        raw = await _call_deepseek(
+            _deepseek_client, prompt, "Generate the lesson as JSON now.")
+        data = rules_store.extract_json(raw)
+        if not data.get("title") or not data.get("explanation"):
+            raise ValueError("incomplete rule")
+        rule = {
+            "rule_id": rule_id,
+            "topic": title,
+            "title": data["title"],
+            "explanation": data["explanation"],
+            "examples": data.get("examples", []),
+            "exercises": data.get("exercises", []),
+        }
+    except Exception as e:
+        logger.error(
+            f"Rule gen failed {learning}/{interface}/{rule_id}: {type(e).__name__}")
+        raise HTTPException(status_code=502, detail="rule generation failed")
+    response_cache.put(cache_key, rule)
+    return JSONResponse(content=rule, media_type=_RULE_MEDIA)
+
+
+@app.get("/resolve-rule")
+async def resolve_rule_endpoint(
+    learning: str,
+    interface: str,
+    err_type: str = Query("", alias="type"),
+    original: str = "",
+    corrected: str = "",
+    explanation: str = "",
+    _: None = Depends(verify_api_key),
+):
+    """Map a correction error to the best-matching rule_id from the fixed
+    taxonomy (or null). The model can only SELECT an existing id, never invent
+    one — this is the anti-duplication guarantee. Cached per error signature."""
+    try:
+        topics = rules_store.load_topics(learning)
+    except ValueError:
+        raise HTTPException(status_code=400, detail="invalid parameters")
+    if not topics:
+        return JSONResponse(content={"rule_id": None}, media_type=_RULE_MEDIA)
+
+    sig = rules_store.error_signature(learning, err_type, original, corrected)
+    cache_key = f"resolve::{sig}"
+    cached = response_cache.get(cache_key)
+    if cached is not None:
+        return JSONResponse(content=cached, media_type=_RULE_MEDIA)
+
+    valid_ids = {t["rule_id"] for t in topics}
+    result = {"rule_id": None}
+    if _deepseek_client:
+        prompt = rules_store.build_resolve_prompt(
+            rules_store.LANGUAGE_NAMES.get(learning, learning), topics,
+            err_type, original, corrected, explanation)
+        try:
+            raw = await _call_deepseek(
+                _deepseek_client, prompt, "Return the JSON now.")
+            picked = rules_store.extract_json(raw).get("rule_id")
+            if isinstance(picked, str) and picked in valid_ids:
+                result = {"rule_id": picked}
+        except Exception as e:
+            logger.error(f"Rule resolve failed {learning}: {type(e).__name__}")
+            # leave rule_id None — never fail the request over resolution
+    response_cache.put(cache_key, result)
+    return JSONResponse(content=result, media_type=_RULE_MEDIA)
 
 
 @app.get("/health")

@@ -32,19 +32,6 @@ def list_rules(learning: str = Query(...), interface: str = Query(...)):
         raise HTTPException(status_code=404, detail="rules not found")
 
 
-@router.get("/rule")
-def get_rule(
-    learning: str = Query(...),
-    interface: str = Query(...),
-    rule_id: str = Query(...),
-):
-    """Full lesson for a single rule."""
-    try:
-        return JSONResponse(
-            content=rules_store.get_rule(learning, interface, rule_id),
-            media_type=_MEDIA,
-        )
-    except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e))
-    except (rules_store.RulesNotFound, rules_store.RuleNotFound):
-        raise HTTPException(status_code=404, detail="rule not found")
+# NOTE: GET /rule and GET /resolve-rule are defined in speech_correction_server.py
+# (not here) because they need the DeepSeek client + ResponseCache for lazy
+# generation and error->rule resolution. See rules/DYNAMIC_RULES_SPEC.md.
