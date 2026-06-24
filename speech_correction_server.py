@@ -647,21 +647,28 @@ async def resolve_rule_endpoint(
     if cached is not None:
         return JSONResponse(content=cached, media_type=_RULE_MEDIA)
 
+    # No model configured → return null WITHOUT caching (so it resolves once
+    # generation is available again).
+    if not _deepseek_client:
+        return JSONResponse(content={"rule_id": None}, media_type=_RULE_MEDIA)
+
     valid_ids = {t["rule_id"] for t in topics}
-    result = {"rule_id": None}
-    if _deepseek_client:
-        prompt = rules_store.build_resolve_prompt(
-            rules_store.LANGUAGE_NAMES.get(learning, learning), topics,
-            err_type, original, corrected, explanation)
-        try:
-            raw = await _call_deepseek(
-                _deepseek_client, prompt, "Return the JSON now.")
-            picked = rules_store.extract_json(raw).get("rule_id")
-            if isinstance(picked, str) and picked in valid_ids:
-                result = {"rule_id": picked}
-        except Exception as e:
-            logger.error(f"Rule resolve failed {learning}: {type(e).__name__}")
-            # leave rule_id None — never fail the request over resolution
+    prompt = rules_store.build_resolve_prompt(
+        rules_store.LANGUAGE_NAMES.get(learning, learning), topics,
+        err_type, original, corrected, explanation)
+    try:
+        raw = await _call_deepseek(
+            _deepseek_client, prompt, "Return the JSON now.")
+        picked = rules_store.extract_json(raw).get("rule_id")
+    except Exception as e:
+        # Transient failure → return null but DON'T cache it (avoid poisoning
+        # this error with a permanent "no rule" for the cache TTL).
+        logger.error(f"Rule resolve failed {learning}: {type(e).__name__}")
+        return JSONResponse(content={"rule_id": None}, media_type=_RULE_MEDIA)
+
+    # Definitive answer (a valid pick, or a genuine "none") — safe to cache.
+    result = {"rule_id": picked if (isinstance(picked, str)
+                                    and picked in valid_ids) else None}
     response_cache.put(cache_key, result)
     return JSONResponse(content=result, media_type=_RULE_MEDIA)
 
