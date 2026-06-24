@@ -1,229 +1,210 @@
 {
   "learning": "de",
   "interface": "de",
-  "generated_at": "2026-06-23T12:54:06.736611+00:00",
+  "generated_at": "2026-06-23T13:33:27.840122+00:00",
   "model": "deepseek-v4-flash",
-  "translated_from": "en",
   "rules": [
     {
       "rule_id": "artikel",
       "topic": "Artikel",
-      "title": "Deutsche Artikel: Der, Die, Das",
-      "explanation": "Im Deutschen hat jedes Nomen ein Genus: maskulin (der), feminin (die) oder neutrum (das). Dies ist oft willkürlich und muss mit jedem Nomen auswendig gelernt werden. Ein häufiger Fehler ist die Verwendung des falschen Artikels, da das Englische kein grammatikalisches Geschlecht für Gegenstände kennt. Lerne den Artikel immer zusammen mit dem Nomen.",
+      "title": "Der richtige Artikel – der, die oder das?",
+      "explanation": "Im Deutschen hat jedes Nomen ein festes Genus (maskulin, feminin, neutrum). Der bestimmte Artikel ist **der** für maskulin, **die** für feminin und **das** für neutrum. Ein häufiger Fehler ist, den Artikel aufgrund der Endung oder des Klangs zu raten, aber das Genus muss man meist mitlernen.",
       "examples": [
         {
-          "wrong": "der Mädchen",
-          "right": "das Mädchen",
-          "note": "'Mädchen' ist sächlich, nicht männlich, weil es auf '-chen' endet."
+          "wrong": "die Hund",
+          "right": "der Hund",
+          "note": "„Hund“ ist maskulin, deshalb heißt es **der** Hund."
         },
         {
-          "wrong": "die Tisch",
+          "wrong": "der Katze",
+          "right": "die Katze",
+          "note": "„Katze“ ist feminin, also **die** Katze."
+        },
+        {
+          "wrong": "das Tisch",
           "right": "der Tisch",
-          "note": "'Tisch' (Tisch) ist männlich, daher nimmt es 'der'."
-        },
-        {
-          "wrong": "das Sonne",
-          "right": "die Sonne",
-          "note": "'Sonne' (Sonne) ist weiblich, die Endung '-e' deutet oft auf Weiblichkeit hin."
+          "note": "„Tisch“ ist maskulin, nicht neutrum – es heißt **der** Tisch."
         }
       ],
       "exercises": [
         {
-          "prompt": "Was ist der richtige Artikel für 'Buch' (Buch)?",
+          "prompt": "___ Buch (das)",
           "answer": "das Buch"
         },
         {
-          "prompt": "Was ist der richtige Artikel für 'Mann' (Mann)?",
-          "answer": "der Mann"
+          "prompt": "___ Blume (die)",
+          "answer": "die Blume"
         },
         {
-          "prompt": "Was ist der richtige Artikel für 'Haus' (Haus)?",
-          "answer": "das Haus"
+          "prompt": "___ Stuhl (der)",
+          "answer": "der Stuhl"
         }
       ]
     },
     {
       "rule_id": "wortstellung",
       "topic": "Wortstellung",
-      "title": "Deutsche Wortstellung: Die Verb-Zweit-Regel",
-      "explanation": "In deutschen Hauptsätzen muss das konjugierte Verb das zweite Element im Satz sein (nicht unbedingt das zweite Wort). Das erste Element kann ein Nomen, Pronomen, Adverb oder eine Phrase sein. Ein häufiger Fehler ist das Verb an die dritte Position zu setzen, insbesondere nach Voranstellung eines Adverbs oder einer anderen Phrase.",
+      "title": "Wortstellung: Position des Verbs in Haupt- und Nebensätzen",
+      "explanation": "In einem deutschen Hauptsatz steht das konjugierte Verb immer an zweiter Stelle. In Nebensätzen mit Konjunktionen wie 'weil', 'dass' oder 'obwohl' rutscht das Verb ans Satzende. Ein häufiger Fehler ist, das Verb im Nebensatz auf Position zwei zu lassen oder im Hauptsatz ans Ende zu stellen.",
       "examples": [
         {
-          "wrong": "Ich heute kaufe Brot.",
-          "right": "Heute kaufe ich Brot.",
-          "note": "Nach einem Adverb wie 'heute' rückt das Verb an die zweite Position und das Subjekt folgt."
+          "wrong": "Ich habe gestern Fußball gespielt weil ich Zeit hatte.",
+          "right": "Ich habe gestern Fußball gespielt, weil ich Zeit hatte.",
+          "note": "Im Hauptsatz steht das Verb 'habe' an zweiter Stelle; im Nebensatz hinter 'weil' steht das Verb 'hatte' am Ende."
         },
         {
-          "wrong": "Er gestern ins Kino ging.",
-          "right": "Gestern ging er ins Kino.",
-          "note": "Das Verb 'ging' muss an zweiter Position stehen; das Zeitadverb 'gestern' wird vorangestellt, was eine Inversion verursacht."
+          "wrong": "Weil ich habe keine Zeit, kann ich nicht kommen.",
+          "right": "Weil ich keine Zeit habe, kann ich nicht kommen.",
+          "note": "Nach 'weil' muss das Verb 'habe' ans Ende – nicht an Position zwei."
         },
         {
-          "wrong": "Wir morgen nach Berlin fahren.",
-          "right": "Morgen fahren wir nach Berlin.",
-          "note": "Wenn eine Zeitangabe den Satz beginnt, tauschen Subjekt und Verb die Positionen."
+          "wrong": "Morgen ich gehe ins Kino.",
+          "right": "Morgen gehe ich ins Kino.",
+          "note": "Auch wenn der Satz mit einer Zeitangabe beginnt, bleibt das Verb ('gehe') an zweiter Stelle."
         }
       ],
       "exercises": [
         {
-          "prompt": "Korrigiere die Wortstellung: 'Ich morgen habe einen Termin.' (Ich habe morgen einen Termin.)",
-          "answer": "Morgen habe ich einen Termin."
+          "prompt": "Bilde einen korrekten Satz: 'weil / sie / müde / sein' (Nebensatz).",
+          "answer": "weil sie müde ist"
         },
         {
-          "prompt": "Ordne neu: 'Sie heute kocht Suppe.' (Sie kocht heute Suppe.)",
-          "answer": "Heute kocht sie Suppe."
+          "prompt": "Setze das Verb an die richtige Stelle: 'Gestern ich habe einen Film gesehen.'",
+          "answer": "Gestern habe ich einen Film gesehen."
         },
         {
-          "prompt": "Korrigiere: 'Du immer zu spät kommst.' (Du kommst immer zu spät.)",
-          "answer": "Du kommst immer zu spät."
+          "prompt": "Vervollständige den Satz: 'Er sagt, dass er ________ (morgen / kommen).'",
+          "answer": "Er sagt, dass er morgen kommt."
         }
       ]
     },
     {
       "rule_id": "kasus",
       "topic": "Kasus",
-      "title": "Deutsche Fälle (Kasus): Häufige Fehler vermeiden",
-      "explanation": "Im Deutschen ändern Substantive ihre Form je nach ihrer Rolle im Satz: Subjekt (Nominativ), direktes Objekt (Akkusativ), indirektes Objekt (Dativ) oder Besitz (Genitiv). Englischsprachige verwechseln oft Akkusativ und Dativ, besonders bei Artikeln und Pronomen. Denken Sie daran: 'den' (maskulin Akkusativ) vs. 'dem' (maskulin Dativ) ist ein häufiger Fehler.",
+      "title": "Der, den, dem: Der Akkusativ bei maskulinen Nomen",
+      "explanation": "Im Deutschen verändert sich der Artikel maskuliner Nomen im Akkusativ. Der bestimmte Artikel 'der' wird zu 'den'. Bei neutralen und femininen Nomen bleibt der Artikel im Nominativ und Akkusativ gleich ('das' und 'die'). Denke daran: Nach Verben wie 'sehen', 'haben', 'kaufen' steht der Akkusativ.",
       "examples": [
         {
-          "wrong": "Ich gebe der Mann den Buch.",
-          "right": "Ich gebe dem Mann das Buch.",
-          "note": "'der Mann' ist das indirekte Objekt (Dativ), daher wird es zu 'dem Mann'. 'das Buch' ist das direkte Objekt (Akkusativ), daher bleibt es 'das Buch'."
+          "wrong": "Ich sehe der Hund.",
+          "right": "Ich sehe den Hund.",
+          "note": "Nach 'sehen' brauchst du den Akkusativ: 'den Hund'."
         },
         {
-          "wrong": "Sie sieht den Hund mit der Katze spielen.",
-          "right": "Sie sieht den Hund mit der Katze spielen.",
-          "note": "Dieses Beispiel ist tatsächlich richtig! 'den Hund' ist Akkusativ (direktes Objekt) und 'der Katze' ist Dativ (wegen 'mit'). Hier ist kein Fehler."
+          "wrong": "Er hat der Ball.",
+          "right": "Er hat den Ball.",
+          "note": "'Haben' erfordert den Akkusativ: 'den Ball'."
         },
         {
-          "wrong": "Ich liebe der Vater.",
-          "right": "Ich liebe den Vater.",
-          "note": "'lieben' verlangt den Akkusativ. 'der Vater' (maskulin) wird zu 'den Vater' als direktes Objekt."
+          "wrong": "Sie kauft der Tisch.",
+          "right": "Sie kauft den Tisch.",
+          "note": "'Kaufen' mit Akkusativ: 'den Tisch'."
         }
       ],
       "exercises": [
         {
-          "prompt": "Übersetzen Sie: 'I give the woman the book.' (Verwenden Sie 'die Frau' für 'the woman' und 'das Buch' für 'the book')",
-          "answer": "Ich gebe der Frau das Buch."
+          "prompt": "Ich habe ___ (der) Apfel.",
+          "answer": "den"
         },
         {
-          "prompt": "Ergänzen Sie die Lücke: 'Er kauft ___ (der Apfel) für das Kind.'",
-          "answer": "Er kauft den Apfel für das Kind."
+          "prompt": "Sie sieht ___ (der) Mann.",
+          "answer": "den"
         },
         {
-          "prompt": "Korrigieren Sie den Satz: 'Die Katze gehört der Junge.' (gehört dem Jungen)",
-          "answer": "Die Katze gehört dem Jungen."
+          "prompt": "Wir kaufen ___ (der) Computer.",
+          "answer": "den"
         }
       ]
     },
     {
       "rule_id": "modalverben",
       "topic": "Modalverben",
-      "title": "Wortstellung mit Modalverben (Modalverben)",
-      "explanation": "Im Deutschen wird ein Modalverb (z. B. können, müssen, wollen) konjugiert und an die zweite Position des Satzes gesetzt, während das Hauptverb in seiner Infinitivform ganz ans Ende kommt. Ein häufiger Fehler ist es, das Hauptverb direkt neben das Modalverb zu setzen oder den Infinitiv ganz zu vergessen.",
+      "title": "Modalverben: Die richtige Satzstellung",
+      "explanation": "In Hauptsätzen steht das konjugierte Modalverb an zweiter Position und der Infinitiv am Ende. In Nebensätzen (z.B. mit 'weil', 'dass', 'ob') steht der Infinitiv direkt vor dem Modalverb am Satzende. Achte auf diese Reihenfolge – ein häufiger Fehler ist es, das Modalverb im Nebensatz vor den Infinitiv zu setzen.",
       "examples": [
         {
-          "wrong": "Ich kann schwimmen gehen.",
-          "right": "Ich kann schwimmen gehen.",
-          "note": "Eigentlich ist das richtig! Ein typischer Fehler ist jedoch 'Ich kann gehen schwimmen' – also der falsche Satz lautet 'Ich kann gehen schwimmen'."
+          "wrong": "Ich weiß nicht, warum er kann nicht kommen.",
+          "right": "Ich weiß nicht, warum er nicht kommen kann.",
+          "note": "Im Nebensatz ('warum') steht der Infinitiv 'kommen' vor dem Modalverb 'kann'."
         },
         {
-          "wrong": "Er muss heute arbeiten.",
-          "right": "Er muss heute arbeiten.",
-          "note": "Richtige Reihenfolge: Modalverb an Position 2, Hauptverb am Ende. Eine falsche Version wäre 'Er muss arbeiten heute'."
+          "wrong": "Er sagt, dass er morgen muss arbeiten.",
+          "right": "Er sagt, dass er morgen arbeiten muss.",
+          "note": "Auch hier: der Infinitiv 'arbeiten' kommt vor 'muss'."
         },
         {
-          "wrong": "Wir wollen ein Bier trinken.",
-          "right": "Wir wollen ein Bier trinken.",
-          "note": "Wieder richtig. Lass mich korrigieren: häufiger Fehler: 'Wir wollen trinken ein Bier' – also falsch: 'Wir wollen trinken ein Bier', richtig: 'Wir wollen ein Bier trinken'."
+          "wrong": "Sie fragt, ob wir können helfen.",
+          "right": "Sie fragt, ob wir helfen können.",
+          "note": "Nach 'ob' gilt die gleiche Regel: Infinitiv vor Modalverb."
         }
       ],
       "exercises": [
         {
-          "prompt": "Schreiben Sie den Satz mit der richtigen Wortstellung um: 'Ich möchte kaufen ein Geschenk.'",
-          "answer": "Ich möchte ein Geschenk kaufen."
+          "prompt": "Korrigiere den Satz: 'Er fragt, ob wir können helfen.'",
+          "answer": "Er fragt, ob wir helfen können."
         },
         {
-          "prompt": "Ergänze den fehlenden Infinitiv: 'Du musst deine Hausaufgaben ________.' (machen)",
-          "answer": "Du musst deine Hausaufgaben machen."
+          "prompt": "Ergänze den Nebensatz: 'Ich hoffe, dass du ... (dürfen / mitkommen)'",
+          "answer": "Ich hoffe, dass du mitkommen darfst."
         },
         {
-          "prompt": "Korrigiere den Fehler: 'Wir können spielen Fußball.'",
-          "answer": "Wir können Fußball spielen."
+          "prompt": "Setze das Modalverb richtig ein: 'Weil ich nicht ... (können / schwimmen)'",
+          "answer": "Weil ich nicht schwimmen kann."
         }
       ]
     },
     {
       "rule_id": "umlaute",
       "topic": "Umlaute",
-      "title": "Beherrschung der deutschen Umlaute: Ä, Ö, Ü",
-      "explanation": "Umlaute verändern den Klang und die Bedeutung von Vokalen. Ein häufiger Fehler ist es, 'a' statt 'ä', 'o' statt 'ö' oder 'u' statt 'ü' zu schreiben. Das Vergessen von Umlauten kann ein Wort wie 'schon' (bereits) in ein völlig anderes Wort wie 'schön' (schön) verwandeln. Übe, sie richtig zu hören und zu schreiben.",
+      "title": "Umlaute richtig setzen",
+      "explanation": "Umlaute (ä, ö, ü) sind eigenständige Buchstaben im Deutschen. Ein häufiger Fehler ist, sie durch einfache Vokale (a, o, u) zu ersetzen, was die Bedeutung eines Wortes völlig ändern kann. Achte darauf, die Umlaute korrekt zu schreiben – sie verändern die Aussprache und den Sinn.",
       "examples": [
         {
           "wrong": "schon",
           "right": "schön",
-          "note": "'schon' bedeutet 'bereits', während 'schön' 'schön' bedeutet. Der Umlaut ändert die Bedeutung vollständig."
-        },
-        {
-          "wrong": "Mutter",
-          "right": "Mütter",
-          "note": "'Mutter' ist der Singular (Mutter), aber 'Mütter' ist der Plural (Mütter). Der Umlaut kennzeichnet hier den Plural."
+          "note": "„schon“ bedeutet „already“, „schön“ bedeutet „beautiful“."
         },
         {
           "wrong": "Apfel",
           "right": "Äpfel",
-          "note": "'Apfel' ist der Singular (Apfel), 'Äpfel' der Plural (Äpfel). Auch hier unterscheidet der Umlaut zwischen Singular und Plural."
+          "note": "Der Plural von „Apfel“ (apple) ist „Äpfel“ – ohne Umlaut falsch."
         }
       ],
       "exercises": [
         {
-          "prompt": "Schreibe das korrekte deutsche Wort für 'hübsch' (das Adjektiv, das hübsch/schön bedeutet) mit dem korrekten Umlaut.",
-          "answer": "hübsch"
+          "prompt": "Ergänze den richtigen Umlaut: „M__ller“ (Nachname).",
+          "answer": "Müller"
         },
         {
-          "prompt": "Fülle den fehlenden Umlaut ein: Das Wort für 'kochen' (kochen) im Präsens erste Person Singular ist 'ich k___e' (Hinweis: Es klingt wie 'kay', aber mit Umlaut).",
-          "answer": "koche"
-        },
-        {
-          "prompt": "Was ist der Plural von 'der Fuß' (der Fuß)? Achte darauf, den Umlaut einzufügen.",
-          "answer": "die Füße"
+          "prompt": "Wie heißt der Plural von „Buch“? (Achtung: Umlaut!)",
+          "answer": "Bücher"
         }
       ]
     },
     {
       "rule_id": "ch-laute",
       "topic": "ch-Laute",
-      "title": "Die Beherrschung der beiden deutschen 'ch'-Laute (ich-Laut vs. ach-Laut)",
-      "explanation": "Deutsch hat zwei verschiedene 'ch'-Laute: ein weiches, palatales 'ch' (wie das englische 'h' in 'hue') nach Vorderzungenvokalen (i, e, ä, ö, ü) und Konsonanten wie l, n, r; und ein hartes, velares 'ch' (wie das schottische 'loch') nach Hinterzungenvokalen (a, o, u). Der falsche Laut kann die Bedeutung ändern oder dich fremd klingen lassen. Übe, indem du fühlst, wo deine Zunge hinlangt: weiches 'ch' nahe dem harten Gaumen, hartes 'ch' im hinteren Rachenbereich.",
+      "title": "Die ch-Laute: ich-Laut vs. ach-Laut",
+      "explanation": "Im Deutschen gibt es zwei verschiedene „ch“-Laute: den weichen ich-Laut (wie in „ich“) und den harten ach-Laut (wie in „ach“). Nach den Vokalen e, i, ä, ö, ü, sowie nach eu, äu, ai, ei und Konsonanten spricht man den ich-Laut. Nach a, o, u und au kommt der ach-Laut. Achte auf die Vokale vor dem „ch“, um den richtigen Laut zu wählen.",
       "examples": [
         {
-          "wrong": "Ich spreche Deutsch mit einem harten 'ch' (like 'ach').",
-          "right": "Ich spreche Deutsch mit einem weichen 'ch'.",
-          "note": "Das Wort 'ich' muss das weiche 'ch' verwenden, da es dem Vokal 'i' folgt."
+          "wrong": "Ich mag das Buch.",
+          "right": "Ich mag das Buch.",
+          "note": "Das 'ch' in 'Buch' wird nach 'u' als harter ach-Laut gesprochen, nicht weich."
         },
         {
-          "wrong": "Buch (sounding like 'buch' with soft 'ch').",
-          "right": "Buch (sounding like 'booch' with hard 'ch').",
-          "note": "'Buch' hat einen Hinterzungenvokal 'u', daher nimmt es das harte 'ch'."
-        },
-        {
-          "wrong": "Milch (sounding like 'milch' with hard 'ch').",
-          "right": "Milch (sounding like 'milch' with soft 'ch').",
-          "note": "Obwohl 'l' ein Konsonant ist, wird das weiche 'ch' nach 'l' verwendet."
+          "wrong": "Die Milch ist kalt.",
+          "right": "Die Milch ist kalt.",
+          "note": "In 'Milch' steht 'ch' nach 'i' – das ist der weiche ich-Laut."
         }
       ],
       "exercises": [
         {
-          "prompt": "Welchen 'ch'-Laut verwendet das Wort 'Nacht'? (hart oder weich) Schreibe die korrekte Aussprache auf Deutsch (nur das Wort).",
-          "answer": "Nacht"
+          "prompt": "Welchen Laut spricht man in dem Wort 'Nacht'? (ich-Laut oder ach-Laut?)",
+          "answer": "ach-Laut (hart)"
         },
         {
-          "prompt": "Sprich das Wort 'ich' laut aus. Schreibe es dann auf Deutsch so, wie es ausgesprochen werden sollte (nur das Wort).",
-          "answer": "ich"
-        },
-        {
-          "prompt": "Ergänze den Satz mit der richtigen Form: 'Ich mag ___ (Buch) sehr.' Schreibe den vollständigen Satz mit dem korrekten 'ch'-Laut.",
-          "answer": "Ich mag Buch sehr."
+          "prompt": "Ergänze: Nach den Vokalen e, i, ä, ö, ü spricht man das 'ch' als _____.",
+          "answer": "ich-Laut (weich)"
         }
       ]
     },
@@ -231,73 +212,73 @@
       "rule_id": "betonung-in-zusammengesetzten-wörtern",
       "topic": "Betonung in zusammengesetzten Wörtern",
       "title": "Betonung in zusammengesetzten Wörtern",
-      "explanation": "In deutschen zusammengesetzten Wörtern liegt die Hauptbetonung normalerweise auf der ersten Komponente (dem Bestimmungswort). Viele Lernende betonen fälschlicherweise den zweiten Teil, da dieser oft die Kernbedeutung trägt. Denken Sie daran: Das erste Element erhält die primäre Betonung.",
+      "explanation": "Bei zusammengesetzten Wörtern (Komposita) liegt die Hauptbetonung fast immer auf dem ersten Wortteil. Zum Beispiel: 'Wörterbuch' wird auf 'Wörter' betont, nicht auf 'Buch'. Achten Sie darauf, nicht den zweiten Teil zu betonen.",
       "examples": [
         {
-          "wrong": "FahrRAD",
-          "right": "FAHRrad",
-          "note": "Die Betonung liegt auf 'Fahr-' (dem ersten Teil), nicht auf '-rad'."
+          "wrong": "FernSEHer",
+          "right": "FERNseher",
+          "note": "Das Wort setzt sich aus 'fern' und 'Seher' zusammen – die Betonung liegt auf 'fern'."
         },
         {
-          "wrong": "WohnungsTÜR",
-          "right": "WOHNungstür",
-          "note": "Betonen Sie 'Wohnungs-', nicht 'Tür'."
+          "wrong": "FamilienNAme",
+          "right": "FAMILienname",
+          "note": "Hier ist 'Familie' der erste Bestandteil, also betont."
         },
         {
           "wrong": "HausaufGABE",
           "right": "HAUSaufgabe",
-          "note": "Betonen Sie 'Haus-', die erste Komponente."
+          "note": "Die Aufgabe ist rund ums Haus, Betonung auf 'Haus'."
         }
       ],
       "exercises": [
         {
-          "prompt": "Wie sollten Sie das zusammengesetzte Wort 'Kühlschrank' (Kühlschrank) betonen?",
-          "answer": "KÜHLschrank"
+          "prompt": "Wie betont man 'Autobahn' richtig?",
+          "answer": "AUTObahn"
         },
         {
-          "prompt": "Korrigieren Sie die Betonung in 'StraßenBAHN' (Straßenbahn).",
-          "answer": "STRASßenbahn"
+          "prompt": "Setzen Sie die richtige Betonung in 'Jahreszeit':",
+          "answer": "JAHRESzeit"
         },
         {
-          "prompt": "Was ist die richtige Betonung für 'Lebensmittel' (Lebensmittel)?",
-          "answer": "LEbensmittel"
+          "prompt": "Betonen Sie 'Schreibtisch' richtig:",
+          "answer": "SCHREIBtisch"
         }
       ]
     },
     {
       "rule_id": "separable-prefix-verbs-usage",
       "topic": "Separable prefix verbs usage",
-      "title": "Trennbare Präfixverben: Die Position ist wichtig!",
-      "explanation": "Viele deutsche Verben haben trennbare Präfixe (z.B. 'auf', 'an', 'mit'). In einem Hauptsatz muss sich das Präfix abtrennen und ans Ende des Satzes wandern, während der Verbstamm an zweiter Position bleibt. Ein häufiger Fehler ist es, das Präfix am Verb zu lassen, besonders für Anfänger.",
+      "title": "Trennbare Verben richtig verwenden",
+      "explanation": "Trennbare Verben bestehen aus einem Präfix und einem Stammverb. Im Präsens und Präteritum wird das Präfix ans Satzende gestellt. Ein häufiger Fehler ist, das Präfix nicht zu trennen, z. B. 'Ich aufstehe' statt 'Ich stehe auf'.",
       "examples": [
         {
           "wrong": "Ich aufstehe um 7 Uhr.",
           "right": "Ich stehe um 7 Uhr auf.",
-          "note": "Das Präfix 'auf' kommt ans Ende des Satzes."
+          "note": "Das Präfix 'auf' muss im Hauptsatz am Ende stehen."
         },
         {
-          "wrong": "Er anruft seine Mutter.",
-          "right": "Er ruft seine Mutter an.",
-          "note": "Das Präfix 'an' trennt sich ab und wandert ans Ende."
+          "wrong": "Sie einkauft im Supermarkt.",
+          "right": "Sie kauft im Supermarkt ein.",
+          "note": "Bei trennbaren Verben wird das Präfix im Präsens getrennt."
         },
         {
-          "wrong": "Wir mitkommen ins Kino.",
-          "right": "Wir kommen ins Kino mit.",
-          "note": "Das Präfix 'mit' trennt sich und geht ans Ende."
+          "wrong": "Wir abfahren morgen.",
+          "right": "Wir fahren morgen ab.",
+          "note": "Das Präfix 'ab' gehört ans Satzende."
         }
       ],
       "exercises": [
         {
-          "prompt": "Übersetze: 'She gets up at 8 o'clock.'",
-          "answer": "Sie steht um 8 Uhr auf."
+          "prompt": "Er (auf|räumen) sein Zimmer.",
+          "answer": "Er räumt sein Zimmer auf."
         },
         {
-          "prompt": "Korrigiere den Fehler: 'Ich zuhöre dem Lehrer.'",
-          "answer": "Ich höre dem Lehrer zu."
+          "prompt": "Ich (an|rufen) meine Mutter.",
+          "answer": "Ich rufe meine Mutter an."
         },
         {
-          "prompt": "Übersetze: 'We are coming along to the party.'",
-          "answer": "Wir kommen zur Party mit."
+          "prompt": "Sie (ein|laden) ihre Freunde.",
+          "answer": "Sie lädt ihre Freunde ein."
         }
       ]
     },
@@ -305,378 +286,386 @@
       "rule_id": "reflexive-verbs-and-pronoun-placement",
       "topic": "Reflexive verbs and pronoun placement",
       "title": "Reflexive Verben und Pronomenstellung",
-      "explanation": "Im Deutschen erscheinen reflexive Pronomen (mich, dich, sich, usw.) normalerweise direkt nach dem konjugierten Verb in einfachen Zeitformen. In zusammengesetzten Zeitformen oder bei Modalverben steht das reflexive Pronomen vor dem Partizip Perfekt oder Infinitiv. Ein häufiger Fehler ist es, das Pronomen zu weit hinten oder nach dem Infinitiv zu platzieren.",
+      "explanation": "Bei reflexiven Verben steht das Reflexivpronomen (mich, dich, sich, uns, euch) im Hauptsatz direkt nach dem konjugierten Verb. Wenn ein Modalverb oder ein trennbares Verb vorkommt, bleibt das Pronomen vor dem Infinitiv bzw. am Satzende vor dem Präfix. In Nebensätzen rückt das Pronomen vor das Subjekt.",
       "examples": [
         {
-          "wrong": "Ich wasche heute mich.",
-          "right": "Ich wasche mich heute.",
-          "note": "Das reflexive Pronomen muss unmittelbar nach dem konjugierten Verb stehen, vor anderen Satzelementen."
+          "wrong": "Ich wasche mich nicht.",
+          "right": "Ich wasche mich nicht.",
+          "note": "Dieser Satz ist korrekt – das Pronomen steht direkt nach dem Verb."
         },
         {
-          "wrong": "Er hat gewaschen sich.",
-          "right": "Er hat sich gewaschen.",
-          "note": "Im Perfekt steht das reflexive Pronomen vor dem Partizip Perfekt."
+          "wrong": "Ich kann waschen mich.",
+          "right": "Ich kann mich waschen.",
+          "note": "Bei Modalverben steht das Reflexivpronomen vor dem Infinitiv."
         },
         {
-          "wrong": "Wir können anziehen uns.",
-          "right": "Wir können uns anziehen.",
-          "note": "Bei Modalverben wird das reflexive Pronomen vor den Infinitiv gestellt."
+          "wrong": "Ich ziehe an mich.",
+          "right": "Ich ziehe mich an.",
+          "note": "Bei trennbaren Verben bleibt das Pronomen vor dem Präfix."
         }
       ],
       "exercises": [
         {
-          "prompt": "Korrigieren Sie die Wortstellung: 'Er hat gewaschen sich.'",
-          "answer": "Er hat sich gewaschen."
+          "prompt": "Setze das Reflexivpronomen richtig ein: „Er _______ (sich) wäscht.“",
+          "answer": "Er wäscht sich."
         },
         {
-          "prompt": "Korrigieren Sie die Wortstellung: 'Wir müssen anziehen uns.'",
-          "answer": "Wir müssen uns anziehen."
+          "prompt": "Bilde einen korrekten Satz mit „mich“ und dem Verb „anziehen“: „Ich _______ an.“",
+          "answer": "Ich ziehe mich an."
         },
         {
-          "prompt": "Korrigieren Sie die Wortstellung: 'Ich wasche jeden Morgen mich.'",
-          "answer": "Ich wasche mich jeden Morgen."
+          "prompt": "Vervollständige mit Modalverb: „Wir _______ (sich) treffen.“",
+          "answer": "Wir können uns treffen."
         }
       ]
     },
     {
       "rule_id": "adjective-endings-after-determiners",
       "topic": "Adjective endings after determiners",
-      "title": "Adjektivendungen nach Determinanten",
-      "explanation": "Im Deutschen müssen Adjektive Endungen haben, die mit dem Geschlecht, dem Fall und der Anzahl des Nomens übereinstimmen, und diese Endungen hängen vom Determinanten (wie 'der' oder 'ein') ab. Nach bestimmten Artikeln (der, die, das) nehmen Adjektive schwache Endungen (z. B. -e, -en). Nach unbestimmten Artikeln (ein, eine) und Possessivartikeln (mein, dein) nehmen sie gemischte Endungen, die starke und schwache Muster kombinieren.",
+      "title": "Adjektivendungen nach Artikeln",
+      "explanation": "Nach bestimmten Artikeln (der, die, das) bekommen Adjektive die schwache Endung -e oder -en. Nach unbestimmten Artikeln (ein, eine, kein, mein usw.) folgt die gemischte Deklination, z.B. im Nominativ Singular: -er (maskulin), -e (feminin), -es (neutrum). Merken Sie sich diese Endungen, um typische Fehler zu vermeiden.",
       "examples": [
         {
           "wrong": "der groß Hund",
           "right": "der große Hund",
-          "note": "Nach dem bestimmten Artikel 'der' (nominative masculine) erhält das Adjektiv -e (weak ending)."
+          "note": "Nach 'der' (maskulin Nominativ) erhält das Adjektiv die Endung -e."
         },
         {
-          "wrong": "ein nett Frau",
-          "right": "eine nette Frau",
-          "note": "Nach 'eine' (indefinite article, nominative feminine) erhält das Adjektiv -e (mixed ending)."
+          "wrong": "ein klein Kind",
+          "right": "ein kleines Kind",
+          "note": "Nach 'ein' (neutrum Nominativ) erhält das Adjektiv die Endung -es."
+        },
+        {
+          "wrong": "die schön Blume",
+          "right": "die schöne Blume",
+          "note": "Nach 'die' (feminin Nominativ) erhält das Adjektiv die Endung -e."
         }
       ],
       "exercises": [
         {
-          "prompt": "Setze die richtige Endung ein: der klein__ Junge",
-          "answer": "der kleine Junge"
+          "prompt": "Ergänzen Sie die richtige Adjektivendung: Der _____ (groß) Hund bellt.",
+          "answer": "große"
         },
         {
-          "prompt": "Korrigiere den Fehler: ein rot Auto",
-          "answer": "ein rotes Auto"
+          "prompt": "Ergänzen Sie: Ein _____ (alt) Mann geht spazieren.",
+          "answer": "alter"
+        },
+        {
+          "prompt": "Ergänzen Sie: Das ist ein _____ (neu) Auto.",
+          "answer": "neues"
         }
       ]
     },
     {
       "rule_id": "werden-vs-sein-for-passive",
       "topic": "werden vs sein for passive",
-      "title": "Werden vs. Sein im Passiv",
-      "explanation": "Im Deutschen bildet ‚werden‘ das Vorgangspassiv, das eine Handlung beschreibt, die gerade stattfindet oder stattfand. ‚Sein‘ bildet das Zustandspassiv, das einen resultierenden Zustand nach einer Handlung beschreibt. Verwenden Sie ‚werden‘ für laufende oder abgeschlossene Handlungen und ‚sein‘ für den Zustand oder das Ergebnis.",
+      "title": "Passiv: 'werden' oder 'sein'?",
+      "explanation": "Im Deutschen unterscheiden wir zwischen Vorgangspassiv (Handlung läuft) und Zustandspassiv (Ergebnis der Handlung). Das Vorgangspassiv bildest du mit 'werden' + Partizip II, das Zustandspassiv mit 'sein' + Partizip II. Ein häufiger Fehler ist, die beiden zu verwechseln: 'werden' betont den Prozess, 'sein' den fertigen Zustand.",
       "examples": [
         {
-          "wrong": "Das Fenster ist geöffnet worden.",
+          "wrong": "Das Fenster ist geöffnet.",
           "right": "Das Fenster wird geöffnet.",
-          "note": "Verwenden Sie für eine Handlung, die gerade stattfindet, ‚werden‘ + Partizip II, nicht ‚sein‘ mit ‚worden‘."
+          "note": "Hier geht es um den Vorgang des Öffnens, also 'werden'."
         },
         {
-          "wrong": "Die Tür wird geschlossen.",
-          "right": "Die Tür ist geschlossen.",
-          "note": "Wenn Sie meinen, dass die Tür sich in einem geschlossenen Zustand befindet (nicht gerade geschlossen wird), verwenden Sie ‚sein‘."
+          "wrong": "Der Brief wird geschrieben.",
+          "right": "Der Brief ist geschrieben.",
+          "note": "Hier geht es um den Zustand nach dem Schreiben, also 'sein'."
         },
         {
-          "wrong": "Das Buch ist gelesen worden.",
-          "right": "Das Buch wird gelesen.",
-          "note": "Verwenden Sie ‚werden‘ für die Handlung des Lesens, ‚sein‘ + ‚worden‘ für das Perfekt Passiv (abgeschlossene Handlung), aber hier einfaches Präsens für die Handlung."
+          "wrong": "Das Essen wird gekocht.",
+          "right": "Das Essen ist gekocht.",
+          "note": "Wenn das Kochen abgeschlossen ist, verwendest du 'sein'."
         }
       ],
       "exercises": [
         {
-          "prompt": "Übersetzen Sie: ‚The letter is being written.‘ (Vorgangspassiv, Präsens)",
-          "answer": "Der Brief wird geschrieben."
+          "prompt": "Setze das richtige Verb ein (Vorgang): Das Auto _____ repariert.",
+          "answer": "wird"
         },
         {
-          "prompt": "Übersetzen Sie: ‚The letter is written (already).‘ (Zustandspassiv, Präsens)",
-          "answer": "Der Brief ist geschrieben."
+          "prompt": "Setze das richtige Verb ein (Zustand): Die Tür _____ geschlossen.",
+          "answer": "ist"
         },
         {
-          "prompt": "Übersetzen Sie: ‚The house was built (action) last year.‘ (Vorgangspassiv, Präteritum)",
-          "answer": "Das Haus wurde letztes Jahr gebaut."
+          "prompt": "___ das Buch schon gelesen? (Zustand)",
+          "answer": "Ist"
         }
       ]
     },
     {
       "rule_id": "es-gibt-vs-es-istsind",
       "topic": "es gibt vs es ist/sind",
-      "title": "es gibt vs es ist/sind – Es gibt vs Es ist/Sind",
-      "explanation": "Verwende 'es gibt', um über Existenz oder Verfügbarkeit zu sprechen (entspricht dem englischen 'there is/are'). Verwende 'es ist' für 'es ist' (Beschreibung einer Sache oder des Wetters) und 'es sind' für 'sie sind'. Ein häufiger Fehler ist die Verwendung von 'es ist/sind' im Sinne von 'es gibt' – das funktioniert nur mit 'es gibt'.",
+      "title": "Es gibt vs. es ist/sind – der Unterschied",
+      "explanation": "„Es gibt“ verwendet man, um auszudrücken, dass etwas existiert oder vorhanden ist. „Es ist“ oder „es sind“ benutzt man dagegen für Beschreibungen (z. B. Wetter, Eigenschaften) oder um einen Ort anzugeben. Merke: „Es gibt“ + Akkusativ, „es ist/sind“ + Nominativ oder Adjektiv.",
       "examples": [
         {
-          "wrong": "Es ist ein Buch auf dem Tisch.",
-          "right": "Es gibt ein Buch auf dem Tisch.",
-          "note": "'Es gibt' drückt Existenz aus (ein Buch existiert auf dem Tisch). 'Es ist' würde bedeuten 'es ist ein Buch' – nicht der Ort."
+          "wrong": "Es ist einen Hund im Garten.",
+          "right": "Es gibt einen Hund im Garten.",
+          "note": "Hier geht es um die Existenz eines Hundes – also „es gibt“."
         },
         {
-          "wrong": "Es sind viele Menschen in der Stadt.",
-          "right": "Es gibt viele Menschen in der Stadt.",
-          "note": "Auch im Plural verwendet man 'es gibt' für 'es gibt'. 'Es sind' würde 'sie sind' bedeuten (Beschreibung der Personen)."
+          "wrong": "Es gibt kalt heute.",
+          "right": "Es ist kalt heute.",
+          "note": "Wetter wird mit „es ist“ + Adjektiv beschrieben."
         },
         {
-          "wrong": "Es gibt kalt.",
-          "right": "Es ist kalt.",
-          "note": "Bei Wetter und Zeit verwendet man immer 'es ist' (es ist kalt), nie 'es gibt'."
+          "wrong": "Es sind viele Sterne am Himmel.",
+          "right": "Es gibt viele Sterne am Himmel.",
+          "note": "Auch bei sichtbaren Dingen (Existenz) verwendet man „es gibt“."
         }
       ],
       "exercises": [
         {
-          "prompt": "Ergänze mit der richtigen Form: 'Es gibt ein Restaurant in der Nähe.'",
-          "answer": "Es gibt ein Restaurant in der Nähe."
+          "prompt": "_____ einen neuen Film im Kino.",
+          "answer": "Es gibt"
         },
         {
-          "prompt": "Ergänze mit der richtigen Form: 'Es ist ein sonniger Tag.'",
-          "answer": "Es ist ein sonniger Tag."
+          "prompt": "_____ sehr windig draußen.",
+          "answer": "Es ist"
         },
         {
-          "prompt": "Ergänze mit der richtigen Form: 'Es gibt viele Bücher im Regal.'",
-          "answer": "Es gibt viele Bücher im Regal."
+          "prompt": "In meiner Stadt _____ viele Museen.",
+          "answer": "Es gibt"
         }
       ]
     },
     {
       "rule_id": "wissen-vs-kennen",
       "topic": "wissen vs kennen",
-      "title": "wissen vs kennen – 'to know' im Deutschen",
-      "explanation": "Sowohl 'wissen' als auch 'kennen' entsprechen dem englischen 'to know', werden aber unterschiedlich verwendet. Verwende 'kennen', wenn du mit einer Person, einem Ort oder einer Sache vertraut bist (z. B. eine Stadt oder einen Film kennen). Verwende 'wissen' für Fakten, Informationen oder Wissen, wie etwas funktioniert (z. B. wissen, dass etwas wahr ist, oder wissen, wie man etwas tut). Ein guter Trick: Wenn du 'know' durch 'vertraut sein mit' ersetzen kannst, wähle 'kennen'; wenn du es durch 'sich bewusst sein' oder 'wissen, dass' ersetzen kannst, wähle 'wissen'.",
+      "title": "wissen vs kennen – der Unterschied",
+      "explanation": "Verwende 'wissen' für Fakten, Informationen oder wie etwas funktioniert (z. B. 'Ich weiß die Antwort'). Verwende 'kennen' für Personen, Orte oder Dinge, die du persönlich erlebt oder kennengelernt hast (z. B. 'Ich kenne den Film'). Eine einfache Regel: Wissen = über etwas Bescheid wissen, kennen = jemanden oder etwas persönlich kennen.",
       "examples": [
         {
-          "wrong": "Ich weiß Berlin.",
-          "right": "Ich kenne Berlin.",
-          "note": "Verwende 'kennen' für Vertrautheit mit einem Ort (einer Stadt)."
+          "wrong": "Ich kenne die Antwort nicht.",
+          "right": "Ich weiß die Antwort nicht.",
+          "note": "Weil 'die Antwort' ein Fakt ist – du weißt sie oder weißt sie nicht."
         },
         {
-          "wrong": "Ich kenne, dass er heute kommt.",
-          "right": "Ich weiß, dass er heute kommt.",
-          "note": "Verwende 'wissen' für Fakten oder Informationen (wissen, *dass* etwas der Fall ist)."
+          "wrong": "Weißt du den neuen Kollegen?",
+          "right": "Kennst du den neuen Kollegen?",
+          "note": "Weil es um eine Person geht – du kennst sie oder kennst sie nicht."
         }
       ],
       "exercises": [
         {
-          "prompt": "Übersetze: 'I know that answer.' (Fakt)",
-          "answer": "Ich weiß die Antwort."
+          "prompt": "___ du, wo der Bahnhof ist?",
+          "answer": "Weißt"
         },
         {
-          "prompt": "Übersetze: 'Do you know my sister?' (Person)",
-          "answer": "Kennst du meine Schwester?"
+          "prompt": "Ich ___ diesen Film schon. Er ist sehr lustig.",
+          "answer": "kenne"
+        },
+        {
+          "prompt": "Er ___ nicht, wie man kocht.",
+          "answer": "weiß"
         }
       ]
     },
     {
       "rule_id": "als-vs-wie-in-comparisons",
       "topic": "als vs wie in comparisons",
-      "title": "als vs wie bei Vergleichen",
-      "explanation": "Verwenden Sie 'wie' für Gleichheit (so...wie) und 'als' für Ungleichheit (als). Dies ist ein häufiger Fehler, da Englisch 'than' für sowohl positive als auch negative Vergleiche verwendet, Deutsch jedoch unterscheidet.",
+      "title": "als vs. wie bei Vergleichen",
+      "explanation": "Benutze 'wie' bei Gleichheit (z.B. 'genauso groß wie'). Benutze 'als' bei Ungleichheit, also nach einem Komparativ (z.B. 'größer als'). Ein häufiger Fehler ist, 'wie' auch nach einem Komparativ zu verwenden.",
       "examples": [
         {
           "wrong": "Er ist größer wie ich.",
           "right": "Er ist größer als ich.",
-          "note": "Ungleichheit (größer) erfordert 'als', nicht 'wie'."
+          "note": "Nach dem Komparativ 'größer' steht 'als', nicht 'wie'."
         },
         {
-          "wrong": "Sie ist so schnell als er.",
-          "right": "Sie ist so schnell wie er.",
-          "note": "Gleichheit mit 'so...wie' ; 'so...als' ist falsch."
-        },
-        {
-          "wrong": "Das Haus ist teurer wie das Auto.",
-          "right": "Das Haus ist teurer als das Auto.",
-          "note": "Komparativ (teurer) + 'als' für den Vergleich des Unterschieds."
+          "wrong": "Sie singt genauso gut als ihre Schwester.",
+          "right": "Sie singt genauso gut wie ihre Schwester.",
+          "note": "Bei Gleichheit ('genauso ...') verwendest du 'wie'."
         }
       ],
       "exercises": [
         {
-          "prompt": "Ergänzen Sie: 'Mein Hund ist genauso klug ___ deiner.' (so...wie)",
-          "answer": "wie"
-        },
-        {
-          "prompt": "Ergänzen Sie: 'Dieser Film ist spannender ___ der andere.' (als)",
+          "prompt": "Er ist schneller ___ ein Gepard.",
           "answer": "als"
         },
         {
-          "prompt": "Ergänzen Sie: 'Sie läuft nicht so schnell ___ ich.' (so...wie, negativ)",
+          "prompt": "Sie ist genau so alt ___ ihre Cousine.",
           "answer": "wie"
+        },
+        {
+          "prompt": "Dieses Buch ist weniger spannend ___ der Film.",
+          "answer": "als"
         }
       ]
     },
     {
       "rule_id": "ob-vs-wenn-vs-als-temporal",
       "topic": "ob vs wenn vs als temporal",
-      "title": "Wann man 'ob', 'wenn' und 'als' verwendet (Zeitkontexte)",
-      "explanation": "Verwende 'ob' nur für indirekte Ja/Nein-Fragen (Bedeutung 'ob'). Verwende 'wenn' für Bedingungen in der Gegenwart/Zukunft oder wiederholte Ereignisse in der Vergangenheit (Bedeutung 'wann auch immer' oder 'falls'). Verwende 'als' für ein einzelnes vergangenes Ereignis (Bedeutung 'als').",
+      "title": "ob vs. wenn vs. als (temporal)",
+      "explanation": "„Ob“ leitet eine indirekte Frage ein („ob“ = whether) und wird nicht zeitlich verwendet. „Wenn“ benutzt du für wiederholte Ereignisse oder die Zukunft („immer wenn“). „Als“ verwendest du für ein einmaliges Ereignis in der Vergangenheit.",
       "examples": [
         {
-          "wrong": "Ich weiß nicht, wenn er kommt.",
-          "right": "Ich weiß nicht, ob er kommt.",
-          "note": "'ob' wird bei indirekten Fragen zur Unsicherheit benötigt."
+          "wrong": "Ob ich nach Hause komme, rufe ich an.",
+          "right": "Wenn ich nach Hause komme, rufe ich an.",
+          "note": "Hier geht es um eine Bedingung/Zukunft, also „wenn“ – nicht „ob“."
         },
         {
-          "wrong": "Als ich müde bin, gehe ich schlafen.",
-          "right": "Wenn ich müde bin, gehe ich schlafen.",
-          "note": "'wenn' für wiederholte/gewohnheitsmäßige Situationen in der Gegenwart."
+          "wrong": "Wenn ich gestern ins Kino ging, traf ich Anna.",
+          "right": "Als ich gestern ins Kino ging, traf ich Anna.",
+          "note": "„Gestern“ ist ein einzelner Zeitpunkt in der Vergangenheit → „als“."
         },
         {
-          "wrong": "Wenn ich gestern ankam, regnete es.",
-          "right": "Als ich gestern ankam, regnete es.",
-          "note": "'als' für ein einzelnes vergangenes Ereignis (gestern)."
+          "wrong": "Ich frage mich, als er kommt.",
+          "right": "Ich frage mich, ob er kommt.",
+          "note": "„Sich fragen“ braucht eine indirekte Frage → „ob“."
         }
       ],
       "exercises": [
         {
-          "prompt": "Ergänze: ___ du mich anrufst, bin ich immer zu Hause. (Wenn du mich anrufst...)",
+          "prompt": "Setze das richtige Wort ein: „______ ich klein war, spielte ich viel draußen.“",
+          "answer": "Als"
+        },
+        {
+          "prompt": "Setze das richtige Wort ein: „______ ich Zeit habe, lese ich gerne.“",
           "answer": "Wenn"
         },
         {
-          "prompt": "Ergänze: Ich frage mich, ___ das stimmt. (Ich frage mich, ob das stimmt.)",
+          "prompt": "Setze das richtige Wort ein: „Weißt du, ______ er morgen kommt?“",
           "answer": "ob"
-        },
-        {
-          "prompt": "Ergänze: ___ ich ein Kind war, spielte ich gern im Garten. (Als ich ein Kind war...)",
-          "answer": "Als"
         }
       ]
     },
     {
       "rule_id": "zu-infinitive-vs-dass-clauses",
       "topic": "zu + infinitive vs dass-clauses",
-      "title": "Zu + Infinitiv vs. dass-Sätze",
-      "explanation": "Im Deutschen können sowohl 'zu + Infinitiv' als auch 'dass-Sätze' Ideen wie 'etwas tun' oder 'dass etwas passiert' ausdrücken. Der Hauptunterschied: Verwende 'zu + Infinitiv', wenn das Subjekt des Hauptsatzes und des Nebensatzes identisch ist und das Verb modalähnlich ist oder nach bestimmten Verben (z. B. hoffen, versuchen). Verwende einen 'dass-Satz', wenn die Subjekte unterschiedlich sind oder wenn ein vollständiger Satz mit einem konjugierten Verb benötigt wird. Vermeide die Verwendung von 'dass', wo 'zu + Infinitiv' korrekt ist, und umgekehrt.",
+      "title": "zu + Infinitiv vs. dass-Sätze",
+      "explanation": "Nach bestimmten Verben (z. B. hoffen, glauben, denken) kann man entweder einen dass-Satz oder eine zu-Infinitiv-Konstruktion verwenden, wenn das Subjekt im Haupt- und Nebensatz identisch ist. Der dass-Satz wird konjugiert, der Infinitiv bleibt unverändert und steht mit 'zu' am Satzende.",
       "examples": [
         {
           "wrong": "Ich hoffe, dass ich dich morgen sehen.",
           "right": "Ich hoffe, dich morgen zu sehen.",
-          "note": "Nach 'hoffen' verwendet man 'zu + Infinitiv', wenn das Subjekt gleich ist (ich). 'Dass' würde ein konjugiertes Verb erfordern, wie 'sehe'."
+          "note": "Bei gleichem Subjekt (ich) verwendet man den zu-Infinitiv, nicht den dass-Satz."
         },
         {
-          "wrong": "Er versucht, dass er das Fenster öffnet.",
-          "right": "Er versucht, das Fenster zu öffnen.",
-          "note": "Nach 'versuchen' verwendet man 'zu + Infinitiv', wenn das Subjekt gleich ist (er). Die 'dass'-Version ist unnatürlich."
-        },
-        {
-          "wrong": "Sie sagt, zu kommen später.",
-          "right": "Sie sagt, dass sie später kommt.",
-          "note": "Nach 'sagen' ist das Subjekt des Nebensatzes unterschiedlich vom Subjekt des Hauptsatzes, daher benötigt man einen 'dass'-Satz mit einem konjugierten Verb."
+          "wrong": "Er glaubt, zu gewinnen das Spiel.",
+          "right": "Er glaubt, das Spiel zu gewinnen.",
+          "note": "Der Infinitivsatz steht am Ende, das Objekt (das Spiel) davor."
         }
       ],
       "exercises": [
         {
-          "prompt": "Übersetzen Sie: 'I hope to see you tomorrow.' (Verwenden Sie zu + Infinitiv, gleiches Subjekt)",
-          "answer": "Ich hoffe, dich morgen zu sehen."
+          "prompt": "Vervollständige: Sie plant, __________ (nach Berlin fliegen).",
+          "answer": "nach Berlin zu fliegen"
         },
         {
-          "prompt": "Übersetzen Sie: 'He says that he is tired.' (Verwenden Sie einen dass-Satz, unterschiedliches Subjekt)",
-          "answer": "Er sagt, dass er müde ist."
-        },
-        {
-          "prompt": "Übersetzen Sie: 'She tries to close the door.' (Verwenden Sie zu + Infinitiv, gleiches Subjekt)",
-          "answer": "Sie versucht, die Tür zu schließen."
+          "prompt": "Vervollständige: Wir freuen uns, __________ (Sie kennenlernen).",
+          "answer": "Sie kennenzulernen"
         }
       ]
     },
     {
       "rule_id": "pronunciation-uvular-r",
       "topic": "Pronunciation: uvular R",
-      "title": "Das deutsche uvulare R meistern",
-      "explanation": "Im Deutschen wird der Buchstabe 'R' im hinteren Rachenraum (uvular) ausgesprochen, nicht mit der Zungenspitze wie im Englischen. Es klingt wie ein sanftes Gurgeln oder ein französisches 'r'. Vermeide es, es mit der Zungenspitze zu rollen – lass die Vibration tief im Rachen stattfinden.",
+      "title": "Die Aussprache des Zäpfchen-R",
+      "explanation": "Im Deutschen wird das R meistens als Zäpfchen-R (uvular) im Rachen gesprochen, nicht wie das englische oder spanische R mit der Zungenspitze. Übe, indem du ein leises 'ch' wie in 'Bach' hörst und dann ein R daraus machst. Deine Zunge bleibt hinten, die Zungenspitze berührt den Gaumen nicht.",
       "examples": [
         {
-          "wrong": "rot (with rolled tongue R)",
-          "right": "rot",
-          "note": "Übe, einen sanften, kehligen Laut zu machen, als ob du leise räusperst."
+          "wrong": "ˈʁoːt (alveolares R wie im Englischen)",
+          "right": "ʁoːt (Zäpfchen-R)",
+          "note": "Das Zäpfchen-R klingt wie ein leises Kratzen im Rachen, nicht wie ein Trillern mit der Zungenspitze."
         },
         {
-          "wrong": "Farbe (with English R)",
-          "right": "Farbe",
-          "note": "Die Endung '-er' ist besonders knifflig – halte das R sehr weich und offen."
+          "wrong": "ˈʁʊnd (alveolares R)",
+          "right": "ʁʊnd (Zäpfchen-R)",
+          "note": "Achte darauf, dass das R nicht zu stimmhaft wird – es bleibt ein Reibelaut."
         },
         {
-          "wrong": "Brot (with tapped R)",
-          "right": "Brot",
-          "note": "Betrachte das R als einen vokalähnlichen Laut, nicht als Konsonanten."
+          "wrong": "ˈbaʁ (alveolares R in 'Bar')",
+          "right": "baːɐ̯ (vokalisiertes R am Ende)",
+          "note": "Am Wortende (z.B. 'Bar') wird das R oft zu einem 'a'-ähnlichen Laut (vokalisiert)."
         }
       ],
       "exercises": [
         {
-          "prompt": "Sage das deutsche Wort für 'rot' mit einem korrekten uvularen R.",
-          "answer": "rot"
+          "prompt": "Sprich das Wort 'Riese' aus. Welche R-Aussprache ist korrekt?",
+          "answer": "ˈʁiːzə (Zäpfchen-R am Anfang)"
         },
         {
-          "prompt": "Sprich das deutsche Wort für 'Straße' (Straße) mit einem uvularen R am Anfang aus.",
-          "answer": "Straße"
+          "prompt": "Wie spricht man das R in 'fahren' aus?",
+          "answer": "ˈfaːʁən (Zäpfchen-R in der Mitte; am Ende vokalisiert: 'faːɐn')"
         },
         {
-          "prompt": "Sage das deutsche Wort für 'Zug' (Zug) – beachte, dass das 'g' hart ist, aber konzentriere dich auf das uvulare R in verwandten Wörtern wie 'Zug' hat kein R; versuche stattdessen 'fahren'.",
-          "answer": "fahren"
+          "prompt": "Übe das Wort 'rot'. Sag es zuerst falsch (alveolar) und dann richtig.",
+          "answer": "Richtig: ʁoːt, Falsch: roːt (mit Zungenspitze)"
         }
       ]
     },
     {
       "rule_id": "pronunciation-ig-ending-ɪç-vs-ɪk",
       "topic": "Pronunciation: ig ending [ɪç] vs [ɪk]",
-      "title": "Aussprache der Endung '-ig': [ɪç] nicht [ɪk]",
-      "explanation": "Im Standarddeutschen wird die Endung '-ig' am Ende eines Wortes mit einem weichen 'ch'-Laut ausgesprochen, wie das 'ch' in 'ich'. Ein häufiger Fehler ist es, es wie 'ik' auszusprechen (wie im englischen 'tick'). Verwenden Sie immer den 'ich'-Laut für '-ig' am Wortende.",
+      "title": "Die Endung 'ig' – [ɪç] oder [ɪk]?",
+      "explanation": "In vielen deutschen Wörtern wird die Endung '-ig' wie [ɪç] ausgesprochen, also wie das 'ch' in 'ich'. Eine typische Fehlerquelle ist die Aussprache als [ɪk] (wie 'ik'), die besonders in norddeutschen Dialekten oder bei Lernenden vorkommt. Die korrekte Standardaussprache ist jedoch meist [ɪç], vor allem bei Adjektiven und Substantiven. Merke: Bei Wörtern wie 'König', 'zwanzig' oder 'richtig' sprichst du die Endung weich – wie ein 'ch'.",
       "examples": [
         {
-          "wrong": "fertik",
-          "right": "fertig",
-          "note": "Das abschließende 'g' ist weich, wie 'ich' – niemals 'ik'."
+          "wrong": "Könik",
+          "right": "Könich",
+          "note": "Denk an das 'ch' in 'ich'."
         },
         {
-          "wrong": "lustik",
-          "right": "lustig",
-          "note": "Gleiche Regel: 'lustig' endet mit dem 'ich'-Laut."
+          "wrong": "zwanzik",
+          "right": "zwanzich",
+          "note": "Zahlen wie 'zwanzig' enden immer mit [ɪç]."
+        },
+        {
+          "wrong": "richtik",
+          "right": "richtich",
+          "note": "Auch bei 'richtig' – nie mit hartem 'k'."
         }
       ],
       "exercises": [
         {
-          "prompt": "Sagen Sie das deutsche Wort für 'bereit' und stellen Sie sicher, dass Sie die Endung '-ig' richtig aussprechen.",
-          "answer": "fertig"
+          "prompt": "Sprich das Wort 'Lustig' aus. Welche Endung ist korrekt? [ɪç] oder [ɪk]?",
+          "answer": "[ɪç]"
         },
         {
-          "prompt": "Welches deutsche Wort, das auf '-ig' endet, bedeutet 'lustig'? Nennen Sie das Wort.",
-          "answer": "lustig"
+          "prompt": "Wie sagt man 'zwanzig' richtig? Gib die Lautschrift an (z.B. [ˈt͡svant͡sɪç] oder [ˈt͡svant͡sɪk]).",
+          "answer": "[ˈt͡svant͡sɪç]"
+        },
+        {
+          "prompt": "Korrigiere die Aussprache: 'Er ist der Künik von England.' Schreibe das Wort richtig mit der Endung [ɪç].",
+          "answer": "König"
         }
       ]
     },
     {
       "rule_id": "kein-vs-nicht-negation",
       "topic": "kein vs nicht negation",
-      "title": "Verwendung von 'kein' vs 'nicht' zur Verneinung",
-      "explanation": "Im Deutschen verneint 'kein' Nomen – es wird anstelle von 'ein' oder wenn kein Artikel vorhanden verwendet. 'Nicht' verneint Verben, Adjektive, Adverbien oder ganze Sätze. Denke daran: 'kein' ändert seine Endungen wie 'ein', während 'nicht' immer 'nicht' bleibt.",
+      "title": "Kein vs. nicht – Die Verneinung im Deutschen",
+      "explanation": "„Kein“ verneint Nomen mit unbestimmtem Artikel oder ohne Artikel (z. B. „ein“ oder null Artikel). „Nicht“ verneint Verben, Adjektive, Adverbien und Nomen mit bestimmtem Artikel oder Possessivartikel. Merke: „kein“ = „nicht ein“ – also immer vor einem Nomen ohne bestimmten Artikel.",
       "examples": [
         {
           "wrong": "Ich habe nicht Hund.",
           "right": "Ich habe keinen Hund.",
-          "note": "Die Verneinung eines Nomens (Hund) erfordert 'keinen' (Akkusativ maskulin)."
+          "note": "„Hund“ ist ein Nomen ohne Artikel – deshalb „keinen“."
         },
         {
-          "wrong": "Er ist kein müde.",
-          "right": "Er ist nicht müde.",
-          "note": "'Müde' ist ein Adjektiv, also verwende 'nicht'."
+          "wrong": "Das ist kein mein Buch.",
+          "right": "Das ist nicht mein Buch.",
+          "note": "„Mein“ ist ein Possessivartikel – deshalb „nicht“."
         },
         {
-          "wrong": "Ich mag nicht Kaffee.",
-          "right": "Ich mag keinen Kaffee.",
-          "note": "Wenn man ein bestimmtes Nomenobjekt wie Kaffee verneint, verwende 'keinen'."
+          "wrong": "Er kommt keine morgen.",
+          "right": "Er kommt nicht morgen.",
+          "note": "„Morgen“ ist ein Zeitadverb – deshalb „nicht“."
         }
       ],
       "exercises": [
         {
-          "prompt": "Übersetze: 'Ich habe keine Zeit.'",
-          "answer": "Ich habe keine Zeit."
+          "prompt": "Vervollständige: Ich trinke ______ Kaffee. (kein/nicht)",
+          "answer": "keinen"
         },
         {
-          "prompt": "Negiere: 'Sie kommt.' (Sie kommt nicht.)",
-          "answer": "Sie kommt nicht."
+          "prompt": "Vervollständige: Das Auto ist ______ rot. (kein/nicht)",
+          "answer": "nicht"
         },
         {
-          "prompt": "Vervollständige: 'Er isst ___ Fleisch.' (Er isst kein Fleisch.)",
+          "prompt": "Vervollständige: Wir haben ______ Geld. (kein/nicht)",
           "answer": "kein"
         }
       ]
@@ -685,72 +674,72 @@
       "rule_id": "time-prepositions-um-am-im",
       "topic": "Time prepositions: um am im",
       "title": "Zeitpräpositionen: um, am, im",
-      "explanation": "Verwende 'um' für konkrete Uhrzeiten (z.B. um 8 Uhr). Verwende 'am' für Wochentage, Daten und Tageszeiten (Morgen, Nachmittag, Abend). Verwende 'im' für Monate, Jahreszeiten und Jahre. Hinweis: 'in der Nacht' ist eine Ausnahme.",
+      "explanation": "Die Präposition 'um' benutzt du bei konkreten Uhrzeiten (z.B. um 8 Uhr). 'Am' verwendest du bei Tagen und Tageszeiten wie Morgen, Abend, Nachmittag (z.B. am Montag, am Morgen). 'Im' steht vor Monaten, Jahreszeiten und Jahren (z.B. im Januar, im Sommer). Achtung: 'In der Nacht' ist eine Ausnahme.",
       "examples": [
         {
-          "wrong": "Ich treffe dich in 8 Uhr.",
-          "right": "Ich treffe dich um 8 Uhr.",
-          "note": "Verwende 'um' für genaue Uhrzeiten."
+          "wrong": "Ich komme im Montag.",
+          "right": "Ich komme am Montag.",
+          "note": "Wochentage immer mit 'am'."
         },
         {
-          "wrong": "Ich habe am Montag geboren.",
-          "right": "Ich bin am Montag geboren.",
-          "note": "Verwende 'am' für Tage (Montag) und Daten. Beachte auch das Verb 'bin' anstelle von 'habe'."
+          "wrong": "Wir treffen uns am 14 Uhr.",
+          "right": "Wir treffen uns um 14 Uhr.",
+          "note": "Uhrzeiten immer mit 'um'."
         },
         {
-          "wrong": "Ich reise um Sommer.",
-          "right": "Ich reise im Sommer.",
-          "note": "Verwende 'im' für Jahreszeiten (Sommer)."
+          "wrong": "Der Urlaub ist um Mai.",
+          "right": "Der Urlaub ist im Mai.",
+          "note": "Monate immer mit 'im'."
         }
       ],
       "exercises": [
         {
-          "prompt": "Ergänze: Ich habe einen Termin ___ 3 Uhr.",
-          "answer": "um 3 Uhr"
+          "prompt": "Ergänze die richtige Präposition: ___ Morgen gehe ich zur Arbeit.",
+          "answer": "Am"
         },
         {
-          "prompt": "Ergänze: Ich arbeite ___ Montag.",
-          "answer": "am Montag"
+          "prompt": "Ergänze: Der Film beginnt ___ 20 Uhr.",
+          "answer": "um"
         },
         {
-          "prompt": "Ergänze: Das Festival ist ___ Juli.",
-          "answer": "im Juli"
+          "prompt": "Ergänze: ____ Winter schneit es oft.",
+          "answer": "Im"
         }
       ]
     },
     {
       "rule_id": "viel-vs-sehr-distinction",
       "topic": "viel vs sehr distinction",
-      "title": "viel vs sehr: Quantität vs Intensität",
-      "explanation": "Im Deutschen bedeutet 'viel' 'viel' oder 'viele' und wird für Mengen verwendet. 'Sehr' bedeutet 'sehr' und wird verwendet, um Adjektive oder Adverbien zu verstärken. Ein häufiger Fehler ist die Verwendung von 'viel' anstelle von 'sehr', wie zum Beispiel 'viel gut' statt 'sehr gut'.",
+      "title": "Der Unterschied zwischen 'viel' und 'sehr'",
+      "explanation": "'Viel' drückt eine große Menge oder Anzahl aus und wird mit Nomen oder Verben verwendet (z. B. viel Wasser, viel lernen). 'Sehr' verstärkt Adjektive oder Adverbien (z. B. sehr gut, sehr schnell). Ein häufiger Fehler ist, 'viel' statt 'sehr' vor Adjektiven zu setzen.",
       "examples": [
         {
-          "wrong": "Das ist viel gut.",
-          "right": "Das ist sehr gut.",
-          "note": "Verwende 'sehr', um 'sehr' vor einem Adjektiv auszudrücken, nicht 'viel'."
+          "wrong": "Das Buch ist viel interessant.",
+          "right": "Das Buch ist sehr interessant.",
+          "note": "Nach 'ist' folgt ein Adjektiv – hier braucht man 'sehr' zur Verstärkung."
         },
         {
-          "wrong": "Ich habe sehr Geld.",
-          "right": "Ich habe viel Geld.",
-          "note": "Verwende 'viel', um 'viel' oder 'viele' mit unzählbaren Nomen wie 'Geld' zu sagen."
+          "wrong": "Ich habe sehr Freunde.",
+          "right": "Ich habe viele Freunde.",
+          "note": "'Freunde' ist ein zählbares Nomen – daher 'viel' (im Plural 'viele')."
         },
         {
-          "wrong": "Er läuft viel schnell.",
-          "right": "Er läuft sehr schnell.",
-          "note": "Verwende 'sehr', um ein Adverb wie 'schnell' (schnell) zu verstärken."
+          "wrong": "Er arbeitet viel schnell.",
+          "right": "Er arbeitet sehr schnell.",
+          "note": "'Schnell' ist ein Adverb – 'sehr' verstärkt es, nicht 'viel'."
         }
       ],
       "exercises": [
         {
-          "prompt": "Fülle die Lücke: 'Das ist _____ interessant.' (sehr interessant)",
+          "prompt": "Er ist ___ klug. (viel / sehr)",
           "answer": "sehr"
         },
         {
-          "prompt": "Fülle die Lücke: 'Ich habe _____ Freunde.' (viele Freunde)",
+          "prompt": "Wir haben ___ Zeit. (viel / sehr)",
           "answer": "viel"
         },
         {
-          "prompt": "Fülle die Lücke: 'Sie ist _____ müde.' (sehr müde)",
+          "prompt": "Das Essen schmeckt ___ gut. (viel / sehr)",
           "answer": "sehr"
         }
       ]
@@ -758,64 +747,73 @@
     {
       "rule_id": "lernen-vs-studieren",
       "topic": "lernen vs studieren",
-      "title": "Lernen vs Studieren: Den Unterschied verstehen",
-      "explanation": "Im Deutschen bedeutet 'lernen' lernen oder studieren im allgemeinen Sinne – wie für eine Prüfung lernen oder eine neue Fähigkeit erlernen. 'Studieren' bedeutet speziell an einer Universität studieren oder sich mit akademischer Forschung im Detail befassen. Verwenden Sie 'lernen' für alltägliches Lernen und 'studieren' für universitäres oder wissenschaftliches Studium.",
+      "title": "lernen vs studieren",
+      "explanation": "„Lernen“ bedeutet allgemein, sich Wissen oder Fähigkeiten anzueignen, z. B. Vokabeln, ein Instrument oder für eine Prüfung. „Studieren“ bezieht sich auf das wissenschaftliche Studium an einer Hochschule oder das intensive Untersuchen eines Themas. Merke: Man studiert an der Uni, aber man lernt für den Führerschein.",
       "examples": [
         {
           "wrong": "Ich studiere Deutsch für die Prüfung.",
           "right": "Ich lerne Deutsch für die Prüfung.",
-          "note": "Weil Sie die Sprache für eine Prüfung lernen, nicht als Universitätsfach studieren."
+          "note": "„Studieren“ ist hier falsch, weil es um allgemeines Lernen geht, nicht um ein Hochschulstudium."
         },
         {
-          "wrong": "Sie lernt an der Universität.",
-          "right": "Sie studiert an der Universität.",
-          "note": "Wenn es um die Einschreibung an einer Universität geht, verwenden Sie 'studieren'."
+          "wrong": "Sie lernt an der Universität Medizin.",
+          "right": "Sie studiert an der Universität Medizin.",
+          "note": "„Lernen“ passt nicht, da es um ein akademisches Fach an einer Hochschule geht."
         },
         {
-          "wrong": "Er studiert, wie man kocht.",
-          "right": "Er lernt, wie man kocht.",
-          "note": "Für das Erlernen einer praktischen Fähigkeit wie Kochen verwenden Sie 'lernen'."
+          "wrong": "Er studiert Klavier spielen.",
+          "right": "Er lernt Klavier spielen.",
+          "note": "Klavier spielen ist eine Fähigkeit, die man durch Übung lernt, kein akademisches Studium."
         }
       ],
       "exercises": [
         {
-          "prompt": "Füllen Sie die Lücke mit entweder 'lernen' oder 'studieren' (konjugiert) aus: Ich ___ für den Führerschein.",
-          "answer": "lerne"
+          "prompt": "Ergänze: Ich möchte _____ (lernen/studieren), um Ärztin zu werden. (an der Uni)",
+          "answer": "studieren"
         },
         {
-          "prompt": "Füllen Sie die Lücke aus: Sie ___ Medizin an der Charité.",
-          "answer": "studiert"
+          "prompt": "Ergänze: Wir _____ (lernen/studieren) morgen für den Mathetest.",
+          "answer": "lernen"
         },
         {
-          "prompt": "Wählen Sie das richtige Verb: Er ___ (lernt/studiert) jeden Abend Vokabeln.",
-          "answer": "lernt"
+          "prompt": "Ergänze: Sie _____ (lernen/studieren) die Zusammenhänge zwischen Klima und Landwirtschaft genau.",
+          "answer": "studieren"
         }
       ]
     },
     {
       "rule_id": "denn-vs-weil-vs-da",
       "topic": "denn vs weil vs da",
-      "title": "Denn vs Weil vs Da: Wie man 'weil' auf Deutsch sagt",
-      "explanation": "Denn ist eine nebenordnende Konjunktion, daher ändert es die Wortstellung nicht (Subjekt-Verb bleiben wie in einem Hauptsatz). Weil und da sind unterordnende Konjunktionen und schieben das konjugierte Verb ans Ende des Satzes. Da wird oft für Gründe verwendet, die bereits bekannt oder offensichtlich sind, während weil neutraler ist. Ein häufiger Fehler ist die Verwendung von weil oder da mit Hauptsatz-Wortstellung (z.B. das Verb in die zweite Position zu setzen statt ans Ende).",
+      "title": "denn, weil, da – der Unterschied",
+      "explanation": "Die Konjunktionen 'denn', 'weil' und 'da' drücken einen Grund aus, unterscheiden sich aber in Satzstellung und Verwendung. 'denn' ist nebenordnend (Hauptsatz + Hauptsatz) – das Verb bleibt an Position 2. 'weil' und 'da' sind unterordnend (Nebensatz) – das Verb geht ans Ende. 'da' wird oft für bekannte Gründe benutzt, 'weil' für neue oder betonte Gründe.",
       "examples": [
         {
-          "wrong": "Ich bleibe zu Hause, weil ich bin krank.",
-          "right": "Ich bleibe zu Hause, weil ich krank bin.",
-          "note": "Weil sendet das Verb ans Ende des Satzes. Vergleiche: 'denn ich bin krank' wäre korrekt, weil denn die Wortstellung nicht ändert."
+          "wrong": "Er kommt nicht, weil er hat keine Zeit.",
+          "right": "Er kommt nicht, weil er keine Zeit hat.",
+          "note": "Bei 'weil' muss das Verb am Satzende stehen."
         },
         {
-          "wrong": "Da er hat keine Zeit, kann er nicht kommen.",
-          "right": "Da er keine Zeit hat, kann er nicht kommen.",
-          "note": "Da erfordert ebenfalls das Verb am Ende, genau wie weil. Der Hauptsatz nach dem Komma behält die normale Wortstellung."
+          "wrong": "Er kommt nicht, denn er keine Zeit hat.",
+          "right": "Er kommt nicht, denn er hat keine Zeit.",
+          "note": "'denn' ändert die Wortstellung nicht – es bleibt die normale Hauptsatzstellung (Verb an Position 2)."
+        },
+        {
+          "wrong": "Da er keine Zeit hat, er kommt nicht.",
+          "right": "Da er keine Zeit hat, kommt er nicht.",
+          "note": "Wenn der Nebensatz mit 'da' am Anfang steht, folgt im Hauptsatz das Verb direkt nach dem Komma (Inversion)."
         }
       ],
       "exercises": [
         {
-          "prompt": "Wähle das richtige Wort (denn oder weil) aus, um den Satz zu vervollständigen: 'Ich bleibe zu Hause, ____ ich krank bin.'",
+          "prompt": "Ich bin müde, _______ ich heute viel gearbeitet habe.",
           "answer": "weil"
         },
         {
-          "prompt": "Fülle die Lücke mit denn oder weil aus: 'Sie geht spazieren, ____ das Wetter ist schön.'",
+          "prompt": "____ ich kein Geld habe, kann ich nicht ins Kino gehen.",
+          "answer": "Da"
+        },
+        {
+          "prompt": "Er geht nicht zur Party, ______ er hat keine Lust.",
           "answer": "denn"
         }
       ]
@@ -823,74 +821,65 @@
     {
       "rule_id": "nach-vs-zu-vs-in-destinations",
       "topic": "nach vs zu vs in destinations",
-      "title": "Nach vs. Zu vs. In für Ziele",
-      "explanation": "Verwende 'nach' für Länder, Städte und Richtungen ohne Artikel (z.B. 'nach Berlin'). Verwende 'zu' für Personen, Orte oder Ereignisse, wenn es 'zu' jemandem oder einem bestimmten Ort bedeutet (z.B. 'zum Arzt'). Verwende 'in' für Gebäude, Räume oder Orte mit einem Geschlecht/Artikel (z.B. 'ins Kino') und zeigt das Betreten oder das Innesein an.",
+      "title": "nach, zu oder in? – Richtige Präpositionen für Ziele",
+      "explanation": "Verwende 'nach' bei Ländern, Städten und Kontinenten ohne Artikel (z. B. nach Berlin, nach Deutschland). 'Zu' benutzt du für Personen, Orte mit einem Zweck oder wenn keine Bewegung in etwas hinein erfolgt (z. B. zum Arzt, zur Post). 'In' verwendest du, wenn du in einen bestimmten Raum, ein Gebäude oder ein Land mit Artikel gehst (z. B. in die Schule, in den Park, in die Schweiz).",
       "examples": [
         {
-          "wrong": "Ich gehe zu Deutschland.",
-          "right": "Ich gehe nach Deutschland.",
-          "note": "Länder ohne Artikel verwenden 'nach', nicht 'zu'."
+          "wrong": "Ich fahre zu Berlin.",
+          "right": "Ich fahre nach Berlin.",
+          "note": "Städte und Länder ohne Artikel brauchen 'nach'."
         },
         {
-          "wrong": "Ich gehe in der Arzt.",
-          "right": "Ich gehe zum Arzt.",
-          "note": "'Zu' wird für Personen verwendet (wie ein Arzt); 'zum' = 'zu dem'."
+          "wrong": "Ich gehe in mein Freund.",
+          "right": "Ich gehe zu meinem Freund.",
+          "note": "Bei Personen und Besuchen verwendest du 'zu'."
         },
         {
-          "wrong": "Ich gehe nach das Kino.",
-          "right": "Ich gehe ins Kino.",
-          "note": "'In' + Akkusativ ('ins' = 'in das') für das Betreten eines Ortes wie eines Kinos."
+          "wrong": "Er geht nach die Bibliothek.",
+          "right": "Er geht in die Bibliothek.",
+          "note": "Gebäude und Räume mit bestimmtem Artikel brauchen 'in' (Akkusativ)."
         }
       ],
       "exercises": [
         {
-          "prompt": "Wie sagt man 'I'm going to the supermarket'? (supermarket = Supermarkt, masculine)",
-          "answer": "Ich gehe in den Supermarkt."
+          "prompt": "Er fliegt ______ Spanien. (nach / zu / in)",
+          "answer": "nach"
         },
         {
-          "prompt": "Wie sagt man 'She is traveling to Italy'? (Italy = Italien, neuter)",
-          "answer": "Sie reist nach Italien."
+          "prompt": "Wir gehen ______ Zahnarzt. (nach / zu / in)",
+          "answer": "zum (zu + dem)"
         },
         {
-          "prompt": "Wie sagt man 'We go to the dentist'? (dentist = Zahnarzt, masculine)",
-          "answer": "Wir gehen zum Zahnarzt."
+          "prompt": "Sie fährt ______ das Kino. (nach / zu / in)",
+          "answer": "ins (in + das)"
         }
       ]
     },
     {
       "rule_id": "sich-freuen-auf-vs-über",
       "topic": "sich freuen auf vs über",
-      "title": "sich freuen auf vs. über – Zukunft vs. Gegenwart/Vergangenheit",
-      "explanation": "Verwenden Sie 'sich freuen auf' (mit Akkusativ), wenn Sie sich auf etwas in der Zukunft freuen. Verwenden Sie 'sich freuen über' (mit Akkusativ), wenn Sie sich über etwas freuen, das bereits passiert ist oder gerade zutrifft. Ein häufiger Fehler ist die Verwendung von 'auf' für vergangene Ereignisse oder 'über' für zukünftige Pläne.",
+      "title": "sich freuen auf vs. über – der wichtige Unterschied",
+      "explanation": "„Sich freuen auf“ benutzt man, wenn man sich auf ein zukünftiges Ereignis freut (Vorfreude). „Sich freuen über“ verwendet man, wenn man sich über etwas freut, das bereits passiert ist oder im Moment geschieht. Achte auf die Zeitform des Satzes, um die richtige Präposition zu wählen.",
       "examples": [
         {
-          "wrong": "Ich freue mich über den Urlaub nächste Woche.",
-          "right": "Ich freue mich auf den Urlaub nächste Woche.",
-          "note": "Der Urlaub liegt in der Zukunft, also verwende 'auf'."
+          "wrong": "Ich freue mich über die Geburtstagsfeier nächste Woche.",
+          "right": "Ich freue mich auf die Geburtstagsfeier nächste Woche.",
+          "note": "Die Feier ist noch in der Zukunft – daher „auf“."
         },
         {
-          "wrong": "Ich freue mich auf das Geschenk, das ich gestern bekommen habe.",
-          "right": "Ich freue mich über das Geschenk, das ich gestern bekommen habe.",
-          "note": "Das Geschenk wurde in der Vergangenheit erhalten, also verwende 'über'."
-        },
-        {
-          "wrong": "Wir freuen uns auf deine Hilfe jetzt.",
-          "right": "Wir freuen uns über deine Hilfe jetzt.",
-          "note": "Die Hilfe findet gerade statt (Gegenwart), also verwende 'über'."
+          "wrong": "Er freut sich auf das Geschenk, das er gestern bekommen hat.",
+          "right": "Er freut sich über das Geschenk, das er gestern bekommen hat.",
+          "note": "Das Geschenk ist schon da – daher „über“."
         }
       ],
       "exercises": [
         {
-          "prompt": "Füllen Sie die richtige Präposition ein (auf oder über): Er freut sich ___ den Film morgen.",
+          "prompt": "Vervollständige: Wir freuen uns ________ den Urlaub im Juli.",
           "answer": "auf"
         },
         {
-          "prompt": "Füllen Sie die richtige Präposition ein: Sie freut sich ___ die guten Noten von letzter Woche.",
+          "prompt": "Vervollständige: Sie freut sich ________ die guten Noten in der Prüfung.",
           "answer": "über"
-        },
-        {
-          "prompt": "Wählen Sie das richtige Wort: Wir freuen uns (auf / über) das Konzert am Samstag.",
-          "answer": "auf"
         }
       ]
     }

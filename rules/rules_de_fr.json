@@ -1,756 +1,741 @@
 {
   "learning": "de",
   "interface": "fr",
-  "generated_at": "2026-06-22T19:48:04.542149+00:00",
+  "generated_at": "2026-06-23T13:37:49.815174+00:00",
   "model": "deepseek-v4-flash",
-  "translated_from": "en",
   "rules": [
     {
       "rule_id": "artikel",
       "topic": "Artikel",
-      "title": "Articles allemands : Der, Die, Das",
-      "explanation": "En allemand, chaque nom a un genre : masculin (der), féminin (die) ou neutre (das). C'est souvent arbitraire et doit être mémorisé avec chaque nom. Une erreur courante est d'utiliser le mauvais article car l'anglais n'a pas de genre grammatical pour les objets. Apprenez toujours l'article en même temps que le nom.",
+      "title": "Les articles définis en allemand (der, die, das)",
+      "explanation": "En allemand, chaque nom possède un genre (masculin, féminin ou neutre) qui ne correspond pas toujours à celui du français. Il est essentiel d'apprendre chaque nom avec son article défini au nominatif : der (masculin), die (féminin), das (neutre). Une erreur fréquente consiste à transférer le genre du français à l'allemand.",
       "examples": [
         {
-          "wrong": "der Mädchen",
-          "right": "das Mädchen",
-          "note": "'Mädchen' est neutre, pas masculin, parce qu'il se termine par '-chen'."
+          "wrong": "der Sonne",
+          "right": "die Sonne",
+          "note": "Le soleil est masculin en français, mais en allemand 'die Sonne' est féminin."
         },
         {
           "wrong": "die Tisch",
           "right": "der Tisch",
-          "note": "'Tisch' (table) est masculin, donc il prend 'der'."
+          "note": "La table est féminine en français, mais 'der Tisch' est masculin en allemand."
         },
         {
-          "wrong": "das Sonne",
-          "right": "die Sonne",
-          "note": "'Sonne' (soleil) est féminin ; une terminaison en '-e' indique souvent le féminin."
+          "wrong": "das Mond",
+          "right": "der Mond",
+          "note": "La lune est féminine en français, mais 'der Mond' est masculin en allemand."
         }
       ],
       "exercises": [
         {
-          "prompt": "Quel est l'article correct pour 'livre' (Buch) ?",
+          "prompt": "Complétez avec l'article défini correct (der, die, das) : ... Frau (la femme).",
+          "answer": "die Frau"
+        },
+        {
+          "prompt": "Complétez : ... Buch (le livre).",
           "answer": "das Buch"
         },
         {
-          "prompt": "Quel est l'article correct pour 'homme' (Mann) ?",
-          "answer": "der Mann"
-        },
-        {
-          "prompt": "Quel est l'article correct pour 'maison' (Haus) ?",
-          "answer": "das Haus"
+          "prompt": "Complétez : ... Hund (le chien).",
+          "answer": "der Hund"
         }
       ]
     },
     {
       "rule_id": "wortstellung",
       "topic": "Wortstellung",
-      "title": "Ordre des mots en allemand : la règle du verbe en deuxième position",
-      "explanation": "Dans les propositions principales allemandes, le verbe conjugué doit être le deuxième élément de la phrase (pas nécessairement le deuxième mot). Le premier élément peut être un nom, un pronom, un adverbe ou une locution. Une erreur courante consiste à placer le verbe en troisième position, surtout après avoir mis un adverbe ou une autre locution en tête de phrase.",
+      "title": "L'ordre des mots en allemand : la place du verbe",
+      "explanation": "En allemand, dans une phrase principale (déclarative), le verbe conjugué se place toujours en deuxième position, même si un autre élément (comme un adverbe) commence la phrase. Dans une proposition subordonnée introduite par 'dass', 'weil', etc., le verbe conjugué se déplace à la fin de la phrase. C'est une différence essentielle avec le français.",
       "examples": [
         {
-          "wrong": "Ich heute kaufe Brot.",
-          "right": "Heute kaufe ich Brot.",
-          "note": "Après un adverbe comme « heute », le verbe se place en deuxième position et le sujet suit."
+          "wrong": "Ich heute gehe ins Kino.",
+          "right": "Ich gehe heute ins Kino.",
+          "note": "Le verbe 'gehe' doit être en deuxième position, après le sujet."
         },
         {
-          "wrong": "Er gestern ins Kino ging.",
-          "right": "Gestern ging er ins Kino.",
-          "note": "Le verbe « ging » doit être en deuxième position ; l'adverbe de temps « gestern » est mis en tête, ce qui provoque l'inversion."
+          "wrong": "Weil ich habe keine Zeit.",
+          "right": "Weil ich keine Zeit habe.",
+          "note": "Dans la subordonnée avec 'weil', le verbe 'habe' se place à la fin."
         },
         {
-          "wrong": "Wir morgen nach Berlin fahren.",
-          "right": "Morgen fahren wir nach Berlin.",
-          "note": "Lorsqu'une locution temporelle commence la phrase, le sujet et le verbe inversent leurs positions."
+          "wrong": "Gestern ich habe gearbeitet.",
+          "right": "Gestern habe ich gearbeitet.",
+          "note": "Quand 'gestern' commence la phrase, le verbe reste en deuxième position et le sujet passe après le verbe."
         }
       ],
       "exercises": [
         {
-          "prompt": "Corrigez l'ordre des mots : « Ich morgen habe einen Termin. » (J'ai un rendez-vous demain.)",
-          "answer": "Morgen habe ich einen Termin."
+          "prompt": "Réorganisez ces mots pour former une phrase principale correcte : 'heute / er / arbeitet / viel'.",
+          "answer": "Er arbeitet heute viel."
         },
         {
-          "prompt": "Remettez dans l'ordre : « Sie heute kocht Suppe. » (Elle cuisine de la soupe aujourd'hui.)",
-          "answer": "Heute kocht sie Suppe."
+          "prompt": "Complétez avec le verbe à la bonne place : 'Ich glaube, dass er ___ (kommen) ___ .'",
+          "answer": "Ich glaube, dass er kommt."
         },
         {
-          "prompt": "Corrigez : « Du immer zu spät kommst. » (Tu arrives toujours trop tard.)",
-          "answer": "Du kommst immer zu spät."
+          "prompt": "Corrigez l'erreur : 'Heute ich habe keine Zeit.'",
+          "answer": "Heute habe ich keine Zeit."
         }
       ]
     },
     {
       "rule_id": "kasus",
       "topic": "Kasus",
-      "title": "Cas allemands (Kasus) : Éviter les erreurs courantes",
-      "explanation": "En allemand, les noms changent de forme selon leur rôle dans la phrase : sujet (nominatif), complément d'objet direct (accusatif), complément d'objet indirect (datif) ou possession (génitif). Les anglophones confondent souvent l'accusatif et le datif, surtout avec les articles et les pronoms. Rappelez-vous : 'den' (accusatif masculin) contre 'dem' (datif masculin) est une erreur fréquente.",
+      "title": "Les cas en allemand : le nominatif et l'accusatif",
+      "explanation": "En allemand, le cas d'un nom change selon sa fonction dans la phrase. Le nominatif est utilisé pour le sujet, tandis que l'accusatif est employé pour le complément d'objet direct. Une erreur fréquente chez les francophones est d'oublier de modifier l'article masculin 'der' en 'den' à l'accusatif.",
       "examples": [
         {
-          "wrong": "Ich gebe der Mann den Buch.",
-          "right": "Ich gebe dem Mann das Buch.",
-          "note": "'der Mann' est le complément d'objet indirect (datif), donc il devient 'dem Mann'. 'das Buch' est le complément d'objet direct (accusatif), donc il reste 'das Buch'."
+          "wrong": "Der Mann sieht der Hund.",
+          "right": "Der Mann sieht den Hund.",
+          "note": "Ici, 'Hund' est le complément d'objet direct (accusatif), donc 'der' devient 'den'."
         },
         {
-          "wrong": "Sie sieht den Hund mit der Katze spielen.",
-          "right": "Sie sieht den Hund mit der Katze spielen.",
-          "note": "Cet exemple est en fait correct ! 'den Hund' est à l'accusatif (complément d'objet direct) et 'der Katze' est au datif (à cause de 'mit'). Aucune erreur ici."
-        },
-        {
-          "wrong": "Ich liebe der Vater.",
-          "right": "Ich liebe den Vater.",
-          "note": "'lieben' prend le cas accusatif. 'der Vater' (masculin) devient 'den Vater' comme complément d'objet direct."
+          "wrong": "Ich habe der Kuchen gegessen.",
+          "right": "Ich habe den Kuchen gegessen.",
+          "note": "Le gâteau est l'objet mangé (accusatif), il faut 'den' au lieu de 'der'."
         }
       ],
       "exercises": [
         {
-          "prompt": "Traduisez : « Je donne le livre à la femme. » (Utilisez 'die Frau' pour 'la femme' et 'das Buch' pour 'le livre')",
-          "answer": "Ich gebe der Frau das Buch."
+          "prompt": "Complétez avec l'article correct au nominatif ou à l'accusatif : '____ Mann (le sujet) liest ein Buch.'",
+          "answer": "Der"
         },
         {
-          "prompt": "Remplissez le blanc : 'Er kauft ___ (der Apfel) für das Kind.'",
-          "answer": "Er kauft den Apfel für das Kind."
-        },
-        {
-          "prompt": "Corrigez la phrase : 'Die Katze gehört der Junge.' (appartient au garçon)",
-          "answer": "Die Katze gehört dem Jungen."
+          "prompt": "Complétez avec l'article correct : 'Ich sehe ____ Mann (l'homme que je vois).'",
+          "answer": "den"
         }
       ]
     },
     {
       "rule_id": "modalverben",
       "topic": "Modalverben",
-      "title": "Ordre des mots avec les verbes modaux (Modalverben)",
-      "explanation": "En allemand, un verbe modal (par ex., können, müssen, wollen) est conjugué et placé en deuxième position dans la phrase, tandis que le verbe principal se trouve tout à la fin à l'infinitif. Une erreur courante consiste à placer le verbe principal à côté du modal ou à oublier l'infinitif.",
+      "title": "Les verbes modaux en allemand : erreurs courantes",
+      "explanation": "En allemand, le verbe modal conjugué se place en deuxième position dans une phrase principale, et l'infinitif du verbe principal se trouve à la fin. Attention à ne pas confondre 'müssen' (obligation) avec 'sollen' (recommandation), ni 'mögen' (aimer) avec 'möchten' (souhaiter poliment).",
       "examples": [
         {
-          "wrong": "Ich kann schwimmen gehen.",
-          "right": "Ich kann schwimmen gehen.",
-          "note": "En fait, c'est correct ! Mais une erreur typique est 'Ich kann gehen schwimmen' – donc le mauvais ici est 'Ich kann gehen schwimmen'."
+          "wrong": "Ich kann sprechen Deutsch.",
+          "right": "Ich kann Deutsch sprechen.",
+          "note": "L'infinitif doit être à la fin de la phrase."
         },
         {
-          "wrong": "Er muss heute arbeiten.",
-          "right": "Er muss heute arbeiten.",
-          "note": "Ordre correct : le modal en position 2, le verbe principal à la fin. Une version incorrecte serait 'Er muss arbeiten heute.'"
+          "wrong": "Du musst dieses Buch lesen, es ist gut.",
+          "right": "Du solltest dieses Buch lesen, es ist gut.",
+          "note": "'müssen' exprime une obligation, 'sollen' ou 'sollten' un conseil ou une recommandation."
         },
         {
-          "wrong": "Wir wollen ein Bier trinken.",
-          "right": "Wir wollen ein Bier trinken.",
-          "note": "Encore correct. Laissez-moi corriger : erreur courante : 'Wir wollen trinken ein Bier' – donc mauvais : 'Wir wollen trinken ein Bier', correct : 'Wir wollen ein Bier trinken'."
+          "wrong": "Ich mag einen Kaffee.",
+          "right": "Ich möchte einen Kaffee.",
+          "note": "'mögen' signifie 'aimer', 'möchten' est le subjonctif de 'mögen' utilisé pour une demande polie."
         }
       ],
       "exercises": [
         {
-          "prompt": "Réécrivez la phrase avec le bon ordre des mots : 'Ich möchte kaufen ein Geschenk.'",
-          "answer": "Ich möchte ein Geschenk kaufen."
+          "prompt": "Transformez la phrase incorrecte : 'Ich muss gehen nach Hause.' -> ?",
+          "answer": "Ich muss nach Hause gehen."
         },
         {
-          "prompt": "Complétez l'infinitif manquant : 'Du musst deine Hausaufgaben ________.' (machen)",
-          "answer": "Du musst deine Hausaufgaben machen."
+          "prompt": "Choisissez le verbe modal correct : 'Du ___ (devoir – conseil) mehr schlafen.'",
+          "answer": "Du sollst mehr schlafen."
         },
         {
-          "prompt": "Corrigez l'erreur : 'Wir können spielen Fußball.'",
-          "answer": "Wir können Fußball spielen."
+          "prompt": "Complétez avec 'mögen' ou 'möchten' : 'Ich ___ einen Tee, bitte.'",
+          "answer": "Ich möchte einen Tee, bitte."
         }
       ]
     },
     {
       "rule_id": "umlaute",
       "topic": "Umlaute",
-      "title": "Maîtriser les Umlauts allemands : Ä, Ö, Ü",
-      "explanation": "Les umlauts modifient le son et le sens des voyelles. Une erreur courante est d'écrire 'a' au lieu de 'ä', 'o' au lieu de 'ö', ou 'u' au lieu de 'ü'. Oublier les umlauts peut transformer un mot comme 'schon' (déjà) en un mot complètement différent comme 'schön' (beau). Entraînez-vous à les entendre et à les écrire correctement.",
+      "title": "Les Umlaute : Attention aux trémas !",
+      "explanation": "En allemand, les Umlaute (ä, ö, ü) changent complètement le sens et la prononciation des mots. Beaucoup d'apprenants francophones oublient ces trémas, ce qui peut mener à des erreurs de compréhension. Il est essentiel de les mémoriser avec le mot.",
       "examples": [
         {
           "wrong": "schon",
           "right": "schön",
-          "note": "'schon' signifie 'déjà', tandis que 'schön' signifie 'beau'. L'umlaut change complètement le sens."
+          "note": "« schon » signifie « déjà », tandis que « schön » signifie « beau/belle ». L'omission du tréma change le sens."
         },
         {
           "wrong": "Mutter",
           "right": "Mütter",
-          "note": "'Mutter' est le singulier 'mère', mais 'Mütter' est le pluriel 'mères'. L'umlaut marque ici le pluriel."
+          "note": "« Mutter » = mère (singulier), « Mütter » = mères (pluriel). Le tréma marque le pluriel."
         },
         {
-          "wrong": "Apfel",
-          "right": "Äpfel",
-          "note": "'Apfel' est le singulier 'pomme', tandis que 'Äpfel' est le pluriel 'pommes'. Encore une fois, l'umlaut distingue le singulier du pluriel."
+          "wrong": "konnen",
+          "right": "können",
+          "note": "« können » (pouvoir, savoir) est un verbe très courant. Sans tréma, ce mot n'existe pas en allemand standard."
         }
       ],
       "exercises": [
         {
-          "prompt": "Écrivez le mot allemand correct pour 'joli' (l'adjectif signifiant joli/beau) avec l'umlaut correct.",
-          "answer": "hübsch"
+          "prompt": "Écris le mot allemand pour « beau » (adjectif).",
+          "answer": "schön"
         },
         {
-          "prompt": "Complétez l'umlaut manquant : Le mot pour 'cuisiner' (cuire) au présent de la première personne du singulier est 'ich k___e' (indice : cela sonne comme 'kay' mais avec un umlaut).",
-          "answer": "koche"
+          "prompt": "Quel est le pluriel de « Mutter » (mère) ?",
+          "answer": "Mütter"
         },
         {
-          "prompt": "Quel est le pluriel de 'der Fuß' (le pied) ? Assurez-vous d'inclure l'umlaut.",
-          "answer": "die Füße"
+          "prompt": "Comment dit-on « pouvoir » (verbe) en allemand ?",
+          "answer": "können"
         }
       ]
     },
     {
       "rule_id": "ch-laute",
       "topic": "ch-Laute",
-      "title": "Maîtriser les deux sons allemands 'ch' (ich-Laut vs. ach-Laut)",
-      "explanation": "L'allemand a deux sons 'ch' distincts : un 'ch' doux, palatal (comme le 'h' anglais dans 'hue') après les voyelles antérieures (i, e, ä, ö, ü) et les consonnes comme l, n, r ; et un 'ch' dur, vélaire (comme le 'loch' écossais) après les voyelles postérieures (a, o, u). Un mauvais son peut changer le sens ou vous faire paraître étranger. Entraînez-vous en sentant où votre langue touche : le 'ch' doux près du palais dur, le 'ch' dur au fond de la gorge.",
+      "title": "Les sons 'ch' en allemand : ich-Laut et ach-Laut",
+      "explanation": "En allemand, la combinaison 'ch' peut se prononcer de deux façons : le son doux (ich-Laut, comme dans 'ich') après e, i, ä, ö, ü, et le son dur (ach-Laut, comme dans 'Nacht') après a, o, u. Les francophones ont tendance à utiliser le son 'ch' français (comme dans 'chat') qui est incorrect. Le son doux ressemble à un 'h' très léger, tandis que le son dur est guttural, comme le 'j' espagnol.",
       "examples": [
         {
-          "wrong": "Ich spreche Deutsch mit einem harten 'ch' (like 'ach').",
-          "right": "Ich spreche Deutsch mit einem weichen 'ch'.",
-          "note": "Le mot 'ich' doit utiliser le 'ch' doux car il suit la voyelle 'i'."
+          "wrong": "Ich (prononcé /ʃ/)",
+          "right": "Ich (prononcé /ç/)",
+          "note": "Le son /ç/ n’existe pas en français. Imaginez un 'h' très doux, comme dans le mot anglais 'huge'."
         },
         {
-          "wrong": "Buch (sounding like 'buch' with soft 'ch').",
-          "right": "Buch (sounding like 'booch' with hard 'ch').",
-          "note": "Le mot 'Buch' a une voyelle postérieure 'u', donc il prend le 'ch' dur."
+          "wrong": "Nacht (prononcé /naʃt/)",
+          "right": "Nacht (prononcé /naxt/)",
+          "note": "Le son /x/ est guttural, comme le 'j' espagnol dans 'jamón'."
         },
         {
-          "wrong": "Milch (sounding like 'milch' with hard 'ch').",
-          "right": "Milch (sounding like 'milch' with soft 'ch').",
-          "note": "Même si 'l' est une consonne, le 'ch' doux est utilisé après 'l'."
+          "wrong": "Bücher (prononcé /byʃər/)",
+          "right": "Bücher (prononcé /byːçər/)",
+          "note": "Après ü, on utilise le son doux."
         }
       ],
       "exercises": [
         {
-          "prompt": "Quel son 'ch' le mot 'Nacht' utilise-t-il ? (dur ou doux) Écrivez la prononciation correcte en allemand (juste le mot).",
-          "answer": "Nacht"
+          "prompt": "Quel son 'ch' faut-il utiliser dans le mot 'ich' ?",
+          "answer": "Ich (son doux /ç/)"
         },
         {
-          "prompt": "Prononcez le mot 'ich' à voix haute. Écrivez-le ensuite en allemand comme il doit être prononcé (juste le mot).",
-          "answer": "ich"
-        },
-        {
-          "prompt": "Complétez la phrase avec la forme correcte : 'Ich mag ___ (Buch) sehr.' Écrivez la phrase complète avec le son 'ch' correct.",
-          "answer": "Ich mag Buch sehr."
+          "prompt": "Donnez le mot allemand pour 'la nuit' avec le bon son 'ch'.",
+          "answer": "Nacht (son dur /x/)"
         }
       ]
     },
     {
       "rule_id": "betonung-in-zusammengesetzten-wörtern",
       "topic": "Betonung in zusammengesetzten Wörtern",
-      "title": "Accent dans les mots composés",
-      "explanation": "Dans les mots composés allemands, l'accent principal tombe généralement sur le premier composant (le déterminant). De nombreux apprenants accentuent à tort la deuxième partie car elle porte souvent le sens principal. Souvenez-vous : le premier élément reçoit l'accent principal.",
+      "title": "L'accent tonique dans les mots composés",
+      "explanation": "En allemand, dans un mot composé, l'accent principal tombe généralement sur la première partie. Placer l'accent sur la seconde partie est une erreur fréquente des francophones. Cela peut changer le sens du mot.",
       "examples": [
         {
-          "wrong": "FahrRAD",
-          "right": "FAHRrad",
-          "note": "L'accent porte sur 'Fahr-' (la première partie), pas sur '-rad'."
+          "wrong": "WohnZIMMER",
+          "right": "WOHNzimmer",
+          "note": "Le premier élément 'Wohn' porte l'accent, pas 'Zimmer'."
         },
         {
-          "wrong": "WohnungsTÜR",
-          "right": "WOHNungstür",
-          "note": "Accentuez 'Wohnungs-', pas 'Tür'."
+          "wrong": "FleischBÄLLchen",
+          "right": "FLEISCHbällchen",
+          "note": "L'accent est sur 'Fleisch', la première partie du composé."
         },
         {
-          "wrong": "HausaufGABE",
-          "right": "HAUSaufgabe",
-          "note": "Accentuez 'Haus-', le premier composant."
+          "wrong": "KühlSCHRANK",
+          "right": "KÜHLschrank",
+          "note": "Même règle : l'accent est sur 'Kühl'."
         }
       ],
       "exercises": [
         {
-          "prompt": "Comment accentuer le mot composé 'Kühlschrank' (réfrigérateur) ?",
-          "answer": "KÜHLschrank"
+          "prompt": "Corrigez l'accentuation du mot 'Hausaufgaben' (devoirs) – on met souvent l'accent sur 'aufgaben'. Écrivez le mot correctement en mettant la syllabe accentuée en majuscule.",
+          "answer": "HAUSaufgaben"
         },
         {
-          "prompt": "Corrigez l'accent dans 'StraßenBAHN' (tramway).",
-          "answer": "STRASßenbahn"
+          "prompt": "Quelle est la bonne accentuation pour le mot composé 'Weihnachtsbaum' (arbre de Noël) ? Écrivez le mot avec la syllabe accentuée en majuscule.",
+          "answer": "WEIHnachtsbaum"
         },
         {
-          "prompt": "Quel est l'accent correct pour 'Lebensmittel' (courses) ?",
-          "answer": "LEbensmittel"
+          "prompt": "Écrivez 'chambre à coucher' en allemand (mot composé) avec l'accent correct en majuscule.",
+          "answer": "SCHLAFzimmer"
         }
       ]
     },
     {
       "rule_id": "separable-prefix-verbs-usage",
       "topic": "Separable prefix verbs usage",
-      "title": "Verbes à préfixe séparable : la position compte !",
-      "explanation": "De nombreux verbes allemands ont des préfixes séparables (par exemple, 'auf', 'an', 'mit'). Dans une proposition principale, le préfixe doit se détacher et se déplacer à la toute fin de la phrase, tandis que le radical du verbe reste en deuxième position. Une erreur courante est de garder le préfixe attaché au verbe, surtout pour les débutants.",
+      "title": "Les verbes à préfixe séparable en allemand",
+      "explanation": "En allemand, certains verbes ont un préfixe qui se sépare du radical dans les phrases principales au présent et au prétérit. Le préfixe est alors placé à la fin de la proposition. Dans les subordonnées et à l'infinitif, le préfixe reste attaché au verbe. Une erreur courante est de ne pas séparer le préfixe en phrase principale.",
       "examples": [
         {
-          "wrong": "Ich aufstehe um 7 Uhr.",
-          "right": "Ich stehe um 7 Uhr auf.",
-          "note": "Le préfixe 'auf' va à la fin de la phrase."
+          "wrong": "Ich anrufe meine Mutter.",
+          "right": "Ich rufe meine Mutter an.",
+          "note": "Le préfixe 'an' se sépare et va à la fin de la phrase."
         },
         {
-          "wrong": "Er anruft seine Mutter.",
-          "right": "Er ruft seine Mutter an.",
-          "note": "Le préfixe 'an' se détache et se déplace à la fin."
-        },
-        {
-          "wrong": "Wir mitkommen ins Kino.",
-          "right": "Wir kommen ins Kino mit.",
-          "note": "Le préfixe 'mit' se sépare et va à la fin."
+          "wrong": "Er aufsteht früh.",
+          "right": "Er steht früh auf.",
+          "note": "Le préfixe 'auf' se place après le complément."
         }
       ],
       "exercises": [
         {
-          "prompt": "Traduisez : 'Elle se lève à 8 heures.'",
-          "answer": "Sie steht um 8 Uhr auf."
+          "prompt": "Complétez la phrase principale : Je commence le travail. (anfangen)",
+          "answer": "Ich fange die Arbeit an."
         },
         {
-          "prompt": "Corrigez l'erreur : 'Ich zuhöre dem Lehrer.'",
-          "answer": "Ich höre dem Lehrer zu."
-        },
-        {
-          "prompt": "Traduisez : 'Nous venons à la fête.'",
-          "answer": "Wir kommen zur Party mit."
+          "prompt": "Complétez la phrase principale : Nous faisons les valises. (packen → einpacken)",
+          "answer": "Wir packen die Koffer ein."
         }
       ]
     },
     {
       "rule_id": "reflexive-verbs-and-pronoun-placement",
       "topic": "Reflexive verbs and pronoun placement",
-      "title": "Verbes réfléchis et placement du pronom",
-      "explanation": "En allemand, les pronoms réfléchis (mich, dich, sich, etc.) apparaissent généralement directement après le verbe conjugué aux temps simples. Aux temps composés ou avec les verbes modaux, le pronom réfléchi se place avant le participe passé ou l'infinitif. Une erreur courante consiste à placer le pronom trop loin ou après l'infinitif.",
+      "title": "Les verbes réfléchis en allemand : placement du pronom",
+      "explanation": "En allemand, dans une phrase principale, le pronom réfléchi se place directement après le verbe conjugué. Dans une subordonnée, il se place avant le verbe conjugué. Attention à ne pas le mettre à la fin comme en français, car cela change le sens ou rend la phrase incorrecte.",
       "examples": [
         {
-          "wrong": "Ich wasche heute mich.",
-          "right": "Ich wasche mich heute.",
-          "note": "Le pronom réfléchi doit suivre directement le verbe conjugué, avant les autres éléments de la phrase."
+          "wrong": "Ich wasche am Morgen mich.",
+          "right": "Ich wasche mich am Morgen.",
+          "note": "Le pronom réfléchi 'mich' doit être placé juste après le verbe conjugué 'wasche', pas après le complément de temps."
         },
         {
-          "wrong": "Er hat gewaschen sich.",
-          "right": "Er hat sich gewaschen.",
-          "note": "Au passé composé, le pronom réfléchi se place avant le participe passé."
+          "wrong": "Er freut auf sich den Urlaub.",
+          "right": "Er freut sich auf den Urlaub.",
+          "note": "Le pronom réfléchi 'sich' suit immédiatement le verbe 'freut', avant la préposition 'auf'."
         },
         {
-          "wrong": "Wir können anziehen uns.",
-          "right": "Wir können uns anziehen.",
-          "note": "Avec les verbes modaux, le pronom réfléchi se place avant l'infinitif."
+          "wrong": "Sie setzt den Hut auf sich.",
+          "right": "Sie setzt sich den Hut auf.",
+          "note": "Avec un verbe à particule séparable, le pronom réfléchi se place après le verbe conjugué, la particule reste à la fin."
         }
       ],
       "exercises": [
         {
-          "prompt": "Corrigez l'ordre des mots: 'Er hat gewaschen sich.'",
-          "answer": "Er hat sich gewaschen."
+          "prompt": "Traduisez : 'Je m’habille.' (utilisez le verbe 'sich anziehen')",
+          "answer": "Ich ziehe mich an."
         },
         {
-          "prompt": "Corrigez l'ordre des mots: 'Wir müssen anziehen uns.'",
-          "answer": "Wir müssen uns anziehen."
+          "prompt": "Traduisez : 'Il se repose.' (utilisez le verbe 'sich ausruhen')",
+          "answer": "Er ruht sich aus."
         },
         {
-          "prompt": "Corrigez l'ordre des mots: 'Ich wasche jeden Morgen mich.'",
-          "answer": "Ich wasche mich jeden Morgen."
+          "prompt": "Traduisez : 'Nous nous lavons les mains.' (utilisez 'sich waschen' et précisez 'les mains')",
+          "answer": "Wir waschen uns die Hände."
         }
       ]
     },
     {
       "rule_id": "adjective-endings-after-determiners",
       "topic": "Adjective endings after determiners",
-      "title": "Terminaisons d'adjectifs après les déterminants",
-      "explanation": "En allemand, les adjectifs doivent avoir des terminaisons qui correspondent au genre, au cas et au nombre du nom, et ces terminaisons dépendent du déterminant (comme 'der' ou 'ein'). Après les articles définis (der, die, das), les adjectifs prennent des terminaisons faibles (ex. -e, -en). Après les articles indéfinis (ein, eine) et les articles possessifs (mein, dein), ils prennent des terminaisons mixtes qui combinent des schémas forts et faibles.",
+      "title": "Les terminaisons des adjectifs après les déterminants",
+      "explanation": "En allemand, la terminaison de l'adjectif dépend du déterminant qui le précède. Après un article défini (der, die, das), on utilise les terminaisons faibles (-e ou -en). Après un article indéfini (ein, eine) ou un article possessif, on utilise les terminaisons mixtes, qui reprennent la terminaison de l'article défini manquant. Il est crucial d'accorder l'adjectif pour éviter des erreurs courantes.",
       "examples": [
         {
-          "wrong": "der groß Hund",
-          "right": "der große Hund",
-          "note": "Après l'article défini 'der' (nominatif masculin), l'adjectif ajoute -e (terminaison faible)."
+          "wrong": "der guter Mann",
+          "right": "der gute Mann",
+          "note": "Après l'article défini 'der' (masculin nominatif), l'adjectif prend la terminaison faible -e."
         },
         {
-          "wrong": "ein nett Frau",
-          "right": "eine nette Frau",
-          "note": "Après 'eine' (article indéfini, nominatif féminin), l'adjectif ajoute -e (terminaison mixte)."
+          "wrong": "ein gute Mann",
+          "right": "ein guter Mann",
+          "note": "Au masculin nominatif après 'ein', l'adjectif prend -er, comme le déterminant défini 'der'."
+        },
+        {
+          "wrong": "ein gut Kind",
+          "right": "ein gutes Kind",
+          "note": "Au neutre nominatif après 'ein', l'adjectif prend -es, comme le déterminant défini 'das'."
         }
       ],
       "exercises": [
         {
-          "prompt": "Complétez avec la terminaison correcte : der klein__ Junge",
-          "answer": "der kleine Junge"
+          "prompt": "Complétez avec la terminaison correcte : 'ein (gut) Mann'",
+          "answer": "ein guter Mann"
         },
         {
-          "prompt": "Corrigez l'erreur : ein rot Auto",
-          "answer": "ein rotes Auto"
+          "prompt": "Complétez : 'das (klein) Kind'",
+          "answer": "das kleine Kind"
+        },
+        {
+          "prompt": "Complétez : 'eine (schön) Blume'",
+          "answer": "eine schöne Blume"
         }
       ]
     },
     {
       "rule_id": "werden-vs-sein-for-passive",
       "topic": "werden vs sein for passive",
-      "title": "Werden vs Sein dans la voix passive",
-      "explanation": "En allemand, 'werden' forme le passif processuel (Vorgangspassiv), décrivant une action qui se déroule ou s'est déroulée. 'Sein' forme le passif d'état (Zustandspassiv), décrivant un état résultant après une action. Utilisez 'werden' pour les actions en cours ou terminées, et 'sein' pour l'état ou le résultat.",
+      "title": "Le passif en allemand : werden ou sein ?",
+      "explanation": "En allemand, on forme le passif d'action (Vorgangspassiv) avec 'werden' + participe passé, tandis que le passif d'état (Zustandspassiv) utilise 'sein' + participe passé. Une erreur fréquente des francophones est d'employer 'sein' pour toutes les formes passives. Rappelez-vous : si l'action est en cours ou se produit, utilisez 'werden' ; si le résultat est déjà atteint, utilisez 'sein'.",
       "examples": [
         {
-          "wrong": "Das Fenster ist geöffnet worden.",
+          "wrong": "Das Fenster ist geöffnet.",
           "right": "Das Fenster wird geöffnet.",
-          "note": "Pour une action qui se déroule maintenant, utilisez 'werden' + participe passé, pas 'sein' avec 'worden'."
+          "note": "'ist geöffnet' décrit l'état (la fenêtre est ouverte), alors que 'wird geöffnet' décrit l'action (on ouvre la fenêtre, ou elle est en train d'être ouverte)."
         },
         {
-          "wrong": "Die Tür wird geschlossen.",
-          "right": "Die Tür ist geschlossen.",
-          "note": "Si vous voulez dire que la porte est fermée (pas en train d'être fermée à ce moment), utilisez 'sein'."
-        },
-        {
-          "wrong": "Das Buch ist gelesen worden.",
-          "right": "Das Buch wird gelesen.",
-          "note": "Utilisez 'werden' pour l'action de lire, 'sein' + 'worden' pour le passif parfait (action terminée), mais ici action au présent simple."
+          "wrong": "Der Brief ist geschrieben.",
+          "right": "Der Brief wird geschrieben.",
+          "note": "'ist geschrieben' = état (la lettre est écrite) ; 'wird geschrieben' = action en cours (on écrit la lettre)."
         }
       ],
       "exercises": [
         {
-          "prompt": "Traduisez : 'La lettre est en train d'être écrite.' (passif processuel, présent)",
-          "answer": "Der Brief wird geschrieben."
+          "prompt": "Traduisez en allemand (passif d'action) : 'La porte est fermée.' (action en cours)",
+          "answer": "Die Tür wird geschlossen."
         },
         {
-          "prompt": "Traduisez : 'La lettre est écrite (déjà).' (passif d'état, présent)",
-          "answer": "Der Brief ist geschrieben."
+          "prompt": "Traduisez en allemand (passif d'état) : 'La porte est fermée.' (résultat)",
+          "answer": "Die Tür ist geschlossen."
         },
         {
-          "prompt": "Traduisez : 'La maison a été construite (action) l'année dernière.' (passif processuel, passé simple)",
-          "answer": "Das Haus wurde letztes Jahr gebaut."
+          "prompt": "Complétez avec 'wird' ou 'ist' : 'Das Essen ___ gekocht.' (action de cuisiner en ce moment)",
+          "answer": "wird"
         }
       ]
     },
     {
       "rule_id": "es-gibt-vs-es-istsind",
       "topic": "es gibt vs es ist/sind",
-      "title": "es gibt vs es ist/sind – Il y a vs C'est",
-      "explanation": "Utilisez 'es gibt' pour dire 'il y a' lorsque vous parlez d'existence ou de disponibilité. Utilisez 'es ist' pour 'c'est' (décrire une chose ou le temps) et 'es sind' pour 'ils sont'. Une erreur courante est d'utiliser 'es ist/sind' pour dire 'il y a' – cela ne fonctionne qu'avec 'es gibt'.",
+      "title": "« Es gibt » ou « es ist/sind » ?",
+      "explanation": "Utilisez « es gibt » pour exprimer l'existence ou la disponibilité de quelque chose (comme « il y a » en français). Utilisez « es ist » (singulier) ou « es sind » (pluriel) pour décrire ou localiser un sujet spécifique. Attention : on ne dit pas « es ist ein Problem » mais « es gibt ein Problem » si on parle de l'existence d'un problème.",
       "examples": [
         {
           "wrong": "Es ist ein Buch auf dem Tisch.",
           "right": "Es gibt ein Buch auf dem Tisch.",
-          "note": "'Es gibt' exprime l'existence (un livre existe sur la table). 'Es ist' signifierait 'c'est un livre' – pas un lieu."
+          "note": "On utilise « es gibt » pour indiquer qu'un objet existe à un endroit (il y a un livre)."
         },
         {
-          "wrong": "Es sind viele Menschen in der Stadt.",
-          "right": "Es gibt viele Menschen in der Stadt.",
-          "note": "Même au pluriel, utilisez 'es gibt' pour 'il y a'. 'Es sind' signifierait 'ils sont' (décrivant les personnes)."
+          "wrong": "Es gibt kalt heute.",
+          "right": "Es ist kalt heute.",
+          "note": "Pour décrire le temps ou une condition, on utilise « es ist » (il fait froid)."
         },
         {
-          "wrong": "Es gibt kalt.",
-          "right": "Es ist kalt.",
-          "note": "Le temps et l'heure utilisent toujours 'es ist' (il fait froid), jamais 'es gibt'."
+          "wrong": "Es sind viele Leute im Park.",
+          "right": "Es gibt viele Leute im Park.",
+          "note": "Quand on parle de la présence de personnes, c'est une existence : « il y a beaucoup de gens »."
         }
       ],
       "exercises": [
         {
-          "prompt": "Complétez avec la forme correcte : 'Il y a un restaurant près d'ici.'",
-          "answer": "Es gibt ein Restaurant in der Nähe."
+          "prompt": "Complétez avec « es gibt » ou « es ist/sind » : ___ einen Supermarkt in der Nähe.",
+          "answer": "Es gibt"
         },
         {
-          "prompt": "Complétez avec la forme correcte : 'C'est une journée ensoleillée.'",
-          "answer": "Es ist ein sonniger Tag."
+          "prompt": "Complétez : ___ heute sehr sonnig.",
+          "answer": "Es ist"
         },
         {
-          "prompt": "Complétez avec la forme correcte : 'Il y a beaucoup de livres sur l'étagère.'",
-          "answer": "Es gibt viele Bücher im Regal."
+          "prompt": "Complétez : ___ drei Katzen im Garten.",
+          "answer": "Es gibt"
         }
       ]
     },
     {
       "rule_id": "wissen-vs-kennen",
       "topic": "wissen vs kennen",
-      "title": "wissen vs kennen – 'savoir' en allemand",
-      "explanation": "Les deux verbes 'wissen' et 'kennen' signifient 'savoir', mais ils sont utilisés différemment. Utilisez 'kennen' lorsque vous êtes familier avec une personne, un lieu ou une chose (par exemple, connaître une ville ou un film). Utilisez 'wissen' pour les faits, les informations ou le savoir-faire (par exemple, savoir que quelque chose est vrai, ou savoir comment faire quelque chose). Une bonne astuce : si vous pouvez remplacer 'savoir' par 'être familier avec', choisissez 'kennen' ; si vous pouvez le remplacer par 'être conscient de' ou 'avoir la connaissance que', choisissez 'wissen'.",
+      "title": "Wissen vs Kennen : Connaître un fait ou une personne ?",
+      "explanation": "En allemand, 'wissen' s'utilise pour connaître un fait ou une information (je sais que...), tandis que 'kennen' s'emploie pour connaître une personne, un lieu ou une chose (je connais quelqu'un/quelque chose). Ne confondez pas : on 'sait' quelque chose (wissen), on 'connaît' quelqu'un (kennen).",
       "examples": [
         {
-          "wrong": "Ich weiß Berlin.",
-          "right": "Ich kenne Berlin.",
-          "note": "Utilisez 'kennen' pour être familier avec un lieu (une ville)."
+          "wrong": "Ich kenne, dass Berlin die Hauptstadt ist.",
+          "right": "Ich weiß, dass Berlin die Hauptstadt ist.",
+          "note": "Avec un fait (que...), utilisez 'wissen'."
         },
         {
-          "wrong": "Ich kenne, dass er heute kommt.",
-          "right": "Ich weiß, dass er heute kommt.",
-          "note": "Utilisez 'wissen' pour les faits ou les informations (savoir *que* quelque chose est le cas)."
+          "wrong": "Ich weiß meinen Lehrer.",
+          "right": "Ich kenne meinen Lehrer.",
+          "note": "Avec une personne, utilisez 'kennen'."
+        },
+        {
+          "wrong": "Kennst du, wo der Bahnhof ist?",
+          "right": "Weißt du, wo der Bahnhof ist?",
+          "note": "Pour une question d'information (où, quand, comment), utilisez 'wissen'."
         }
       ],
       "exercises": [
         {
-          "prompt": "Traduisez : « Je sais cette réponse. » (fait)",
-          "answer": "Ich weiß die Antwort."
+          "prompt": "Complétez : 'Ich ___ dich seit Jahren.' (je te connais)",
+          "answer": "kenne"
         },
         {
-          "prompt": "Traduisez : « Connais-tu ma sœur ? » (personne)",
-          "answer": "Kennst du meine Schwester?"
+          "prompt": "Complétez : '___ du, wie spät es ist?' (sais-tu)",
+          "answer": "Weißt"
+        },
+        {
+          "prompt": "Complétez : 'Er ___ nicht, dass sie krank ist.' (il ne sait pas)",
+          "answer": "weiß"
         }
       ]
     },
     {
       "rule_id": "als-vs-wie-in-comparisons",
       "topic": "als vs wie in comparisons",
-      "title": "als vs wie dans les comparaisons",
-      "explanation": "Utilisez 'wie' pour exprimer l'égalité (aussi...que) et 'als' pour exprimer l'inégalité (que). C'est une erreur courante car l'anglais utilise 'than' pour les comparaisons positives et négatives, mais l'allemand les distingue.",
+      "title": "Als vs Wie dans les comparaisons",
+      "explanation": "Utilisez 'wie' pour exprimer l'égalité ou la similitude (comme / aussi… que). Utilisez 'als' pour exprimer la différence ou la supériorité / infériorité (plus… que / moins… que). Attention : ne traduisez pas le français 'que' par 'wie' dans les comparatifs de différences.",
       "examples": [
         {
           "wrong": "Er ist größer wie ich.",
           "right": "Er ist größer als ich.",
-          "note": "L'inégalité (plus grand) nécessite 'als', pas 'wie'."
+          "note": "Pour dire 'plus grand que', on emploie 'als', pas 'wie'."
         },
         {
-          "wrong": "Sie ist so schnell als er.",
-          "right": "Sie ist so schnell wie er.",
-          "note": "L'égalité avec 'so...wie' ; 'so...als' est incorrect."
-        },
-        {
-          "wrong": "Das Haus ist teurer wie das Auto.",
-          "right": "Das Haus ist teurer als das Auto.",
-          "note": "Comparatif (plus cher) + 'als' pour la comparaison de la différence."
+          "wrong": "Sie singt so schön als ihre Schwester.",
+          "right": "Sie singt so schön wie ihre Schwester.",
+          "note": "Pour une égalité (aussi… que), on utilise 'wie', pas 'als'."
         }
       ],
       "exercises": [
         {
-          "prompt": "Complétez : 'Mon chien est aussi intelligent ___ le tien.' (aussi...que)",
-          "answer": "wie"
-        },
-        {
-          "prompt": "Complétez : 'Ce film est plus passionnant ___ l'autre.' (que)",
+          "prompt": "Complétez la phrase : 'Dein Auto ist teurer ___ meins.' (votre voiture est plus chère que la mienne)",
           "answer": "als"
         },
         {
-          "prompt": "Complétez : 'Elle ne court pas aussi vite ___ moi.' (aussi...que, négatif)",
+          "prompt": "Complétez la phrase : 'Er läuft genauso schnell ___ sie.' (il court aussi vite qu'elle)",
           "answer": "wie"
+        },
+        {
+          "prompt": "Corrigez l'erreur : 'Ich habe mehr Zeit wie du.' (j'ai plus de temps que toi)",
+          "answer": "Ich habe mehr Zeit als du."
         }
       ]
     },
     {
       "rule_id": "ob-vs-wenn-vs-als-temporal",
       "topic": "ob vs wenn vs als temporal",
-      "title": "Quand utiliser 'ob', 'wenn' et 'als' (Contextes temporels)",
-      "explanation": "Utilisez 'ob' uniquement pour les questions indirectes oui/non (signifiant 'si'). Utilisez 'wenn' pour les conditions présentes/futures ou les événements passés répétés (signifiant 'quand' ou 'si'). Utilisez 'als' pour un événement passé unique (signifiant 'quand').",
+      "title": "Ob, wenn ou als ? Ne confondez pas les conjonctions temporelles",
+      "explanation": "En allemand, « ob » signifie « si » pour une question indirecte (ex. : je ne sais pas si...), jamais pour exprimer le temps. Pour dire « quand », utilisez « wenn » pour des actions répétées ou futures, et « als » pour un événement unique dans le passé. Ne les mélangez pas !",
       "examples": [
         {
-          "wrong": "Ich weiß nicht, wenn er kommt.",
-          "right": "Ich weiß nicht, ob er kommt.",
-          "note": "'ob' est nécessaire pour les questions indirectes sur l'incertitude."
+          "wrong": "Ich frage mich, ob ich nach Hause komme, wenn es regnet.",
+          "right": "Ich frage mich, ob ich nach Hause komme, wenn es regnet.",
+          "note": "Cette phrase est correcte car « ob » introduit une question indirecte (« si ») et « wenn » exprime une condition temporelle. Pas d'erreur ici – mais attention à ne pas utiliser « ob » pour le temps."
         },
         {
-          "wrong": "Als ich müde bin, gehe ich schlafen.",
-          "right": "Wenn ich müde bin, gehe ich schlafen.",
-          "note": "'wenn' pour les situations répétées/habituelles au présent."
+          "wrong": "Als ich jung war, wenn ich viel spielte.",
+          "right": "Als ich jung war, spielte ich viel.",
+          "note": "« Als » décrit une période unique dans le passé (quand j'étais jeune). « Wenn » serait utilisé pour des actions répétées à cette époque."
         },
         {
-          "wrong": "Wenn ich gestern ankam, regnete es.",
-          "right": "Als ich gestern ankam, regnete es.",
-          "note": "'als' pour un événement passé unique (hier)."
+          "wrong": "Ob du kommst, ruf mich an.",
+          "right": "Wenn du kommst, ruf mich an.",
+          "note": "« Ob » ne peut pas signifier « quand ». Ici, il faut « wenn » pour exprimer une condition temporelle (quand tu viendras)."
         }
       ],
       "exercises": [
         {
-          "prompt": "Complétez : ___ du mich anrufst, bin ich immer zu Hause. (Quand/Chaque fois que tu m'appelles...)",
-          "answer": "Wenn"
+          "prompt": "Complétez avec « ob », « wenn » ou « als » : ___ ich klein war, lebte ich in Berlin.",
+          "answer": "Als"
         },
         {
-          "prompt": "Complétez : Ich frage mich, ___ das stimmt. (Je me demande si c'est vrai.)",
+          "prompt": "Complétez : Je ne sais pas ___ er morgen kommt.",
           "answer": "ob"
         },
         {
-          "prompt": "Complétez : ___ ich ein Kind war, spielte ich gern im Garten. (Quand j'étais enfant...)",
-          "answer": "Als"
+          "prompt": "Complétez : ___ er kommt, machen wir einen Spaziergang. (futur)",
+          "answer": "Wenn"
         }
       ]
     },
     {
       "rule_id": "zu-infinitive-vs-dass-clauses",
       "topic": "zu + infinitive vs dass-clauses",
-      "title": "Zu + Infinitif vs. propositions 'dass'",
-      "explanation": "En allemand, 'zu + infinitif' et 'propositions en dass' peuvent exprimer des idées comme 'faire quelque chose' ou 'que quelque chose se passe'. La différence clé : utilisez 'zu + infinitif' lorsque le sujet de la proposition principale et de la subordonnée est le même, et que le verbe est de type modal ou après certains verbes (p. ex. hoffen, versuchen). Utilisez une 'proposition en dass' lorsque les sujets sont différents ou lorsque vous avez besoin d'une proposition complète avec un verbe conjugué. Évitez d'utiliser 'dass' là où 'zu + infinitif' est correct, et vice versa.",
+      "title": "Zu + infinitif vs. propositions avec 'dass'",
+      "explanation": "En allemand, quand le sujet de la proposition principale et celui de la subordonnée sont identiques, on utilise 'zu' + infinitif au lieu d'une subordonnée avec 'dass'. Cela s'applique aux verbes comme 'hoffen', 'versuchen', 'beschließen', 'planen', 'vergessen', etc. Si les sujets sont différents, on emploie 'dass'.",
       "examples": [
         {
-          "wrong": "Ich hoffe, dass ich dich morgen sehen.",
+          "wrong": "Ich hoffe, dass ich dich morgen sehe.",
           "right": "Ich hoffe, dich morgen zu sehen.",
-          "note": "Après 'hoffen' (espérer), utilisez 'zu + infinitif' lorsque le sujet est le même (ich). 'Dass' nécessiterait un verbe conjugué comme 'sehe'."
+          "note": "Sujet identique ('ich') → 'zu' + infinitif."
         },
         {
-          "wrong": "Er versucht, dass er das Fenster öffnet.",
-          "right": "Er versucht, das Fenster zu öffnen.",
-          "note": "Après 'versuchen' (essayer), utilisez 'zu + infinitif' lorsque le sujet est le même (er). La version avec 'dass' est peu naturelle."
+          "wrong": "Er beschloss, dass er nach Hause geht.",
+          "right": "Er beschloss, nach Hause zu gehen.",
+          "note": "Même règle pour 'beschließen'."
         },
         {
-          "wrong": "Sie sagt, zu kommen später.",
-          "right": "Sie sagt, dass sie später kommt.",
-          "note": "Après 'sagen' (dire), le sujet de la subordonnée est différent du sujet de la proposition principale, vous avez donc besoin d'une 'proposition en dass' avec un verbe conjugué."
+          "wrong": "Sie plant, dass sie in Berlin studiert.",
+          "right": "Sie plant, in Berlin zu studieren.",
+          "note": "Pour 'planen' aussi, on utilise 'zu' + infinitif."
         }
       ],
       "exercises": [
         {
-          "prompt": "Traduisez : 'J'espère te voir demain.' (Utilisez zu + infinitif, même sujet)",
-          "answer": "Ich hoffe, dich morgen zu sehen."
+          "prompt": "Traduisez en allemand : 'Il essaie d'ouvrir la porte.'",
+          "answer": "Er versucht, die Tür zu öffnen."
         },
         {
-          "prompt": "Traduisez : 'Il dit qu'il est fatigué.' (Utilisez une proposition en dass, sujet différent)",
-          "answer": "Er sagt, dass er müde ist."
+          "prompt": "Corrigez l'erreur : 'Ich hoffe, dass ich dich bald sehe.' (sujets identiques)",
+          "answer": "Ich hoffe, dich bald zu sehen."
         },
         {
-          "prompt": "Traduisez : 'Elle essaie de fermer la porte.' (Utilisez zu + infinitif, même sujet)",
-          "answer": "Sie versucht, die Tür zu schließen."
+          "prompt": "Complétez : 'Sie hat vergessen, _____ (les clés) zu nehmen.'",
+          "answer": "Sie hat vergessen, die Schlüssel zu nehmen."
         }
       ]
     },
     {
       "rule_id": "pronunciation-uvular-r",
       "topic": "Pronunciation: uvular R",
-      "title": "Maîtrise du R uvulaire allemand",
-      "explanation": "En allemand, la lettre 'R' se prononce au fond de la gorge (uvulaire), et non avec le bout de la langue comme en anglais. Cela ressemble à un léger gargarisme ou à un 'r' à la française. Évitez de le rouler avec le bout de la langue — laissez la vibration se produire au fond de la gorge.",
+      "title": "Prononciation du R uvulaire allemand",
+      "explanation": "Le R allemand se prononce comme le R français standard : c'est un son uvulaire, produit au fond de la gorge, près de la luette. Contrairement au R roulé de l'italien ou de l'espagnol, il ne faut pas faire vibrer la pointe de la langue. Faites attention à garder ce son guttural pour éviter une erreur fréquente.",
       "examples": [
         {
-          "wrong": "rot (with rolled tongue R)",
-          "right": "rot",
-          "note": "Entraînez-vous à produire un son doux et guttural, comme si vous vous éclaircissiez la gorge doucement."
+          "wrong": "Rot (avec R roulé)",
+          "right": "Rot",
+          "note": "Le mot 'Rot' (rouge) doit avoir un R uvulaire, pas un R alvéolaire roulé."
         },
         {
-          "wrong": "Farbe (with English R)",
-          "right": "Farbe",
-          "note": "La terminaison '-er' est particulièrement délicate — gardez le R très doux et ouvert."
-        },
-        {
-          "wrong": "Brot (with tapped R)",
-          "right": "Brot",
-          "note": "Considérez le R comme un son proche d'une voyelle, et non d'une consonne."
+          "wrong": "arbeiten (avec R roulé)",
+          "right": "arbeiten",
+          "note": "Dans 'arbeiten' (travailler), le R est aussi uvulaire, même au milieu du mot."
         }
       ],
       "exercises": [
         {
-          "prompt": "Dites le mot allemand pour 'rouge' avec un R uvulaire correct.",
-          "answer": "rot"
+          "prompt": "Prononcez correctement le mot allemand pour 'grand'.",
+          "answer": "groß"
         },
         {
-          "prompt": "Prononcez le mot allemand pour 'rue' (Strasse) avec un R uvulaire au début.",
-          "answer": "Straße"
-        },
-        {
-          "prompt": "Dites le mot allemand pour 'train' (Zug) – notez que le 'g' est dur, mais concentrez-vous sur le R uvulaire dans les mots apparentés, car 'Zug' n'a pas de R ; essayez plutôt 'fahren'.",
-          "answer": "fahren"
+          "prompt": "Dites le mot 'rivière' en allemand avec le bon R.",
+          "answer": "Fluss"
         }
       ]
     },
     {
       "rule_id": "pronunciation-ig-ending-ɪç-vs-ɪk",
       "topic": "Pronunciation: ig ending [ɪç] vs [ɪk]",
-      "title": "Prononciation des terminaisons '-ig' : [ɪç] et non [ɪk]",
-      "explanation": "En allemand standard, le suffixe '-ig' à la fin d'un mot se prononce avec un son 'ch' doux, comme le 'ch' dans 'ich'. Une erreur courante est de le dire comme 'ik' (comme dans l'anglais 'tick'). Utilisez toujours le son 'ich' pour '-ig' à la fin d'un mot.",
+      "title": "La terminaison -ig : [ɪç] ou [ɪk] ?",
+      "explanation": "En allemand standard, la terminaison -ig à la fin d'un mot se prononce [ɪç] (comme le 'ch' dans 'ich'), et non [ɪk] (comme 'ick'). Une erreur fréquente des francophones est de prononcer [ɪk] à la place. Cette règle s'applique aux adjectifs et noms se terminant par -ig.",
       "examples": [
         {
-          "wrong": "fertik",
-          "right": "fertig",
-          "note": "Le 'g' final est doux, comme 'ich' – jamais 'ik'."
+          "wrong": "fer-tik",
+          "right": "fertig [ˈfɛʁtɪç]",
+          "note": "Le mot 'fertig' se termine par le son [ɪç], pas [ɪk]."
         },
         {
-          "wrong": "lustik",
-          "right": "lustig",
-          "note": "Même règle : 'lustig' se termine par le son 'ich'."
+          "wrong": "wich-tik",
+          "right": "wichtig [ˈvɪçtɪç]",
+          "note": "Attention : le 'ch' intérieur est déjà [ç], et le -ig final aussi."
+        },
+        {
+          "wrong": "kuh-nik",
+          "right": "könig [ˈkøːnɪç]",
+          "note": "Comme dans 'König' (roi)."
         }
       ],
       "exercises": [
         {
-          "prompt": "Dites le mot allemand pour 'prêt' et assurez-vous de prononcer correctement le '-ig'.",
-          "answer": "fertig"
+          "prompt": "Prononcez correctement le mot 'richtig' (correct) :",
+          "answer": "richtig [ˈʁɪçtɪç]"
         },
         {
-          "prompt": "Quel mot allemand se terminant par '-ig' signifie 'drôle' ? Donnez le mot.",
-          "answer": "lustig"
+          "prompt": "Quelle est la prononciation standard de 'wenig' (peu) ?",
+          "answer": "wenig [ˈveːnɪç]"
+        },
+        {
+          "prompt": "Dites 'essentiel' en allemand et prononcez-le bien :",
+          "answer": "nötig [ˈnøːtɪç]"
         }
       ]
     },
     {
       "rule_id": "kein-vs-nicht-negation",
       "topic": "kein vs nicht negation",
-      "title": "Utiliser 'kein' vs 'nicht' pour la négation",
-      "explanation": "En allemand, 'kein' nie les noms – il est utilisé à la place de 'ein' ou lorsqu'il n'y a pas d'article. 'Nicht' nie les verbes, les adjectifs, les adverbes ou des phrases entières. N'oubliez pas : 'kein' change ses terminaisons comme 'ein', tandis que 'nicht' est toujours 'nicht'.",
+      "title": "La négation en allemand : 'kein' ou 'nicht' ?",
+      "explanation": "En allemand, on utilise 'kein' pour nier un nom (souvent avec un article indéfini ou sans article), tandis que 'nicht' sert à nier un verbe, un adjectif, un adverbe ou un groupe de mots. La règle simple : si le mot nié est un nom, choisissez 'kein' ; sinon, utilisez 'nicht'.",
       "examples": [
         {
           "wrong": "Ich habe nicht Hund.",
           "right": "Ich habe keinen Hund.",
-          "note": "Nier un nom (Hund) nécessite 'keinen' (accusatif masculin)."
+          "note": "On utilise 'kein' car 'Hund' est un nom sans article défini."
         },
         {
-          "wrong": "Er ist kein müde.",
-          "right": "Er ist nicht müde.",
-          "note": "'Müde' est un adjectif, donc utilisez 'nicht'."
+          "wrong": "Er kommt kein.",
+          "right": "Er kommt nicht.",
+          "note": "On utilise 'nicht' car il s'agit de la négation du verbe 'kommen'."
         },
         {
-          "wrong": "Ich mag nicht Kaffee.",
-          "right": "Ich mag keinen Kaffee.",
-          "note": "Quand on nie un objet nominal spécifique comme Kaffee, utilisez 'keinen'."
+          "wrong": "Das ist kein interessant.",
+          "right": "Das ist nicht interessant.",
+          "note": "On utilise 'nicht' pour un adjectif ('interessant')."
         }
       ],
       "exercises": [
         {
-          "prompt": "Traduisez : 'I have no time.'",
-          "answer": "Ich habe keine Zeit."
+          "prompt": "Traduisez : 'Je n'ai pas d'argent.'",
+          "answer": "Ich habe kein Geld."
         },
         {
-          "prompt": "Niez : 'Sie kommt.' (Elle ne vient pas.)",
-          "answer": "Sie kommt nicht."
+          "prompt": "Traduisez : 'Il ne mange pas de pain.'",
+          "answer": "Er isst kein Brot."
         },
         {
-          "prompt": "Complétez : 'Er isst ___ Fleisch.' (Il ne mange pas de viande.)",
-          "answer": "kein"
+          "prompt": "Traduisez : 'Elle n'est pas fatiguée.'",
+          "answer": "Sie ist nicht müde."
         }
       ]
     },
     {
       "rule_id": "time-prepositions-um-am-im",
       "topic": "Time prepositions: um am im",
-      "title": "Prépositions de temps : um, am, im",
-      "explanation": "Utilisez 'um' pour les heures précises (ex. um 8 Uhr). Utilisez 'am' pour les jours de la semaine, les dates et les parties de la journée (matin, après-midi, soir). Utilisez 'im' pour les mois, les saisons et les années. Remarque : 'in der Nacht' est une exception.",
+      "title": "Les prépositions de temps : um, am, im",
+      "explanation": "En allemand, on utilise 'um' pour les heures précises (ex. um 8 Uhr), 'am' pour les jours et les moments de la journée (ex. am Montag, am Morgen) et 'im' pour les mois, les saisons et les années (ex. im Januar, im Sommer). Attention : ne confondez pas avec le français « à » qui peut correspondre aux trois.",
       "examples": [
         {
-          "wrong": "Ich treffe dich in 8 Uhr.",
-          "right": "Ich treffe dich um 8 Uhr.",
-          "note": "Utilisez 'um' pour les heures exactes."
+          "wrong": "Ich komme im 8 Uhr.",
+          "right": "Ich komme um 8 Uhr.",
+          "note": "Pour une heure précise, utilisez 'um', pas 'im'."
         },
         {
-          "wrong": "Ich habe am Montag geboren.",
-          "right": "Ich bin am Montag geboren.",
-          "note": "Utilisez 'am' pour les jours (Montag) et les dates. Notez également le verbe 'bin' au lieu de 'habe'."
+          "wrong": "Wir treffen uns um Montag.",
+          "right": "Wir treffen uns am Montag.",
+          "note": "Pour un jour de la semaine, utilisez 'am', pas 'um'."
         },
         {
-          "wrong": "Ich reise um Sommer.",
-          "right": "Ich reise im Sommer.",
-          "note": "Utilisez 'im' pour les saisons (Sommer)."
+          "wrong": "Es ist kalt am Januar.",
+          "right": "Es ist kalt im Januar.",
+          "note": "Pour un mois, utilisez 'im', pas 'am'."
         }
       ],
       "exercises": [
         {
-          "prompt": "Complétez : J'ai un rendez-vous ___ 3 heures.",
-          "answer": "um 3 Uhr"
+          "prompt": "Complétez avec la bonne préposition : « _____ Sommer fahren wir ans Meer. »",
+          "answer": "Im"
         },
         {
-          "prompt": "Complétez : Je travaille ___ Monday.",
-          "answer": "am Montag"
+          "prompt": "Corrigez la phrase : « Der Unterricht beginnt am 9 Uhr. »",
+          "answer": "Der Unterricht beginnt um 9 Uhr."
         },
         {
-          "prompt": "Complétez : Le festival a lieu ___ July.",
-          "answer": "im Juli"
+          "prompt": "Choisissez la préposition correcte : « _____ Wochenende arbeiten wir nicht. »",
+          "answer": "Am"
         }
       ]
     },
     {
       "rule_id": "viel-vs-sehr-distinction",
       "topic": "viel vs sehr distinction",
-      "title": "viel vs sehr: Quantité vs Intensité",
-      "explanation": "En allemand, 'viel' signifie 'beaucoup' ou 'plusieurs' et est utilisé pour les quantités. 'Sehr' signifie 'très' et est utilisé pour intensifier des adjectifs ou des adverbes. Une erreur courante est d'utiliser 'viel' là où 'sehr' est nécessaire, comme dire 'viel gut' au lieu de 'sehr gut'.",
+      "title": "Ne pas confondre « viel » et « sehr »",
+      "explanation": "En allemand, « viel » s'utilise pour exprimer une grande quantité (beaucoup de quelque chose) et modifie un nom ou un verbe. « Sehr » exprime un degré élevé (très) et modifie un adjectif ou un adverbe. Attention : on dit « viel Spaß » (beaucoup de plaisir) mais « sehr schön » (très beau).",
       "examples": [
+        {
+          "wrong": "Ich habe sehr Zeit.",
+          "right": "Ich habe viel Zeit.",
+          "note": "« Zeit » est un nom : on utilise « viel » pour dire « beaucoup de temps »."
+        },
         {
           "wrong": "Das ist viel gut.",
           "right": "Das ist sehr gut.",
-          "note": "Utilisez 'sehr' pour dire 'très' devant un adjectif, pas 'viel'."
+          "note": "« gut » est un adjectif : on utilise « sehr » pour dire « très bon »."
         },
         {
-          "wrong": "Ich habe sehr Geld.",
-          "right": "Ich habe viel Geld.",
-          "note": "Utilisez 'viel' pour dire 'beaucoup/plusieurs' avec des noms indénombrables comme 'Geld'."
-        },
-        {
-          "wrong": "Er läuft viel schnell.",
-          "right": "Er läuft sehr schnell.",
-          "note": "Utilisez 'sehr' pour intensifier un adverbe comme 'schnell' (vite)."
+          "wrong": "Er trinkt sehr Kaffee.",
+          "right": "Er trinkt viel Kaffee.",
+          "note": "« Kaffee » est un nom (quantité) : on utilise « viel »."
         }
       ],
       "exercises": [
         {
-          "prompt": "Remplissez le blanc : 'Das ist _____ interessant.' (très intéressant)",
+          "prompt": "Complète par « viel » ou « sehr » : Das Wetter ist _____ schön.",
           "answer": "sehr"
         },
         {
-          "prompt": "Remplissez le blanc : 'Ich habe _____ Freunde.' (beaucoup d'amis)",
+          "prompt": "Complète par « viel » ou « sehr » : Ich habe _____ Arbeit.",
           "answer": "viel"
         },
         {
-          "prompt": "Remplissez le blanc : 'Sie ist _____ müde.' (très fatiguée)",
+          "prompt": "Complète par « viel » ou « sehr » : Er läuft _____ schnell.",
           "answer": "sehr"
         }
       ]
@@ -758,138 +743,142 @@
     {
       "rule_id": "lernen-vs-studieren",
       "topic": "lernen vs studieren",
-      "title": "Lernen vs Studieren : Comprendre la différence",
-      "explanation": "En allemand, 'lernen' signifie apprendre ou étudier dans un sens général—comme étudier pour un examen ou apprendre une nouvelle compétence. 'Studieren' signifie spécifiquement étudier à l'université ou s'engager dans une recherche académique approfondie. Utilisez 'lernen' pour l'apprentissage quotidien et 'studieren' pour les études universitaires ou savantes.",
+      "title": "lernen vs studieren : ne les confondez plus !",
+      "explanation": "En allemand, 'lernen' signifie apprendre ou étudier de manière générale (réviser, acquérir une compétence). 'Studieren' est réservé aux études universitaires (être inscrit dans une université, suivre un cursus). N'utilisez pas 'studieren' pour apprendre une langue ou réviser un examen hors contexte universitaire.",
       "examples": [
         {
-          "wrong": "Ich studiere Deutsch für die Prüfung.",
-          "right": "Ich lerne Deutsch für die Prüfung.",
-          "note": "Parce que vous apprenez la langue pour un examen, et non pour l'étudier comme matière universitaire."
+          "wrong": "Ich studiere Deutsch.",
+          "right": "Ich lerne Deutsch.",
+          "note": "À moins d'être inscrit en philologie allemande, on utilise 'lernen' pour l'apprentissage d'une langue."
         },
         {
-          "wrong": "Sie lernt an der Universität.",
-          "right": "Sie studiert an der Universität.",
-          "note": "Lorsqu'on fait référence au fait d'être inscrit à une université, utilisez 'studieren'."
-        },
-        {
-          "wrong": "Er studiert, wie man kocht.",
-          "right": "Er lernt, wie man kocht.",
-          "note": "Apprendre une compétence pratique comme la cuisine nécessite 'lernen'."
+          "wrong": "Er studiert für die Prüfung.",
+          "right": "Er lernt für die Prüfung.",
+          "note": "Réviser un examen est 'lernen', pas 'studieren'."
         }
       ],
       "exercises": [
         {
-          "prompt": "Complétez le blanc avec 'lernen' ou 'studieren' (conjugué): Ich ___ für den Führerschein.",
-          "answer": "lerne"
+          "prompt": "Complétez avec 'lernen' ou 'studieren' (conjugué) : « Je veux apprendre le piano. »",
+          "answer": "Ich möchte Klavier lernen."
         },
         {
-          "prompt": "Complétez le blanc: Sie ___ Medizin an der Charité.",
-          "answer": "studiert"
+          "prompt": "Complétez : « Elle étudie la médecine à l’université. »",
+          "answer": "Sie studiert Medizin an der Universität."
         },
         {
-          "prompt": "Choisissez le verbe correct: Er ___ (lernt/studiert) jeden Abend Vokabeln.",
-          "answer": "lernt"
+          "prompt": "Complétez : « Nous révisons pour le test de demain. »",
+          "answer": "Wir lernen für den Test morgen."
         }
       ]
     },
     {
       "rule_id": "denn-vs-weil-vs-da",
       "topic": "denn vs weil vs da",
-      "title": "Denn vs Weil vs Da: Dire 'Parce que' en allemand",
-      "explanation": "Denn est une conjonction de coordination, donc elle ne change pas l'ordre des mots (sujet-verbe reste comme dans une proposition principale). Weil et da sont des conjonctions de subordination et placent le verbe conjugué à la fin de la proposition. Da est souvent utilisé pour des raisons déjà connues ou évidentes, tandis que weil est plus neutre. Une erreur courante est d'utiliser weil ou da avec l'ordre des mots d'une proposition principale (par exemple, placer le verbe en deuxième position au lieu de la fin).",
+      "title": "Denn vs Weil vs Da : Ne confondez plus les conjonctions de cause",
+      "explanation": "En allemand, 'denn' est une conjonction de coordination : le verbe reste en deuxième position dans la proposition qu'il introduit. 'Weil' et 'da' sont des conjonctions de subordination : le verbe se place à la fin de la proposition subordonnée. 'Da' est plus formel et s'utilise souvent pour une cause déjà connue (comme 'puisque').",
       "examples": [
         {
-          "wrong": "Ich bleibe zu Hause, weil ich bin krank.",
-          "right": "Ich bleibe zu Hause, weil ich krank bin.",
-          "note": "Weil envoie le verbe à la fin de la proposition. Comparez : 'denn ich bin krank' serait correct car denn ne change pas l'ordre des mots."
+          "wrong": "Ich bleibe zu Hause, denn ich krank bin.",
+          "right": "Ich bleibe zu Hause, denn ich bin krank.",
+          "note": "Avec 'denn', le verbe reste en deuxième position (comme dans une phrase principale)."
         },
         {
-          "wrong": "Da er hat keine Zeit, kann er nicht kommen.",
-          "right": "Da er keine Zeit hat, kann er nicht kommen.",
-          "note": "Da exige aussi le verbe à la fin, tout comme weil. La proposition principale après la virgule garde l'ordre normal."
+          "wrong": "Ich bin müde, weil ich habe gearbeitet.",
+          "right": "Ich bin müde, weil ich gearbeitet habe.",
+          "note": "Avec 'weil', le verbe conjugué se place à la fin de la subordonnée."
+        },
+        {
+          "wrong": "Da es regnet, ich bleibe zu Hause.",
+          "right": "Da es regnet, bleibe ich zu Hause.",
+          "note": "'Da' est une subordonnée, donc verbe à la fin dans la proposition en 'da' ; la principale commence par le verbe (inversion)."
         }
       ],
       "exercises": [
         {
-          "prompt": "Choisissez le mot correct (denn ou weil) pour compléter la phrase : 'Ich bleibe zu Hause, ____ ich krank bin.'",
-          "answer": "weil"
+          "prompt": "Traduis 'Je reste à la maison parce que je suis fatigué' en utilisant 'weil'.",
+          "answer": "Ich bleibe zu Hause, weil ich müde bin."
         },
         {
-          "prompt": "Remplissez le blanc avec denn ou weil : 'Sie geht spazieren, ____ das Wetter ist schön.'",
-          "answer": "denn"
+          "prompt": "Complète la phrase avec 'denn' : 'Il pleut, _______ (car) je prends un parapluie.'",
+          "answer": "Es regnet, denn ich nehme einen Regenschirm."
+        },
+        {
+          "prompt": "Réécris cette phrase en commençant par 'da' : 'Je ne viens pas, parce que je suis malade.'",
+          "answer": "Da ich krank bin, komme ich nicht."
         }
       ]
     },
     {
       "rule_id": "nach-vs-zu-vs-in-destinations",
       "topic": "nach vs zu vs in destinations",
-      "title": "Nach vs. Zu vs. In pour les destinations",
-      "explanation": "Utilisez 'nach' pour les pays, villes et directions sans article (par ex., 'nach Berlin'). Utilisez 'zu' pour les personnes, lieux ou événements quand cela signifie 'vers' quelqu'un ou un lieu spécifique (par ex., 'zum Arzt'). Utilisez 'in' pour les bâtiments, pièces ou lieux avec un genre/article (par ex., 'ins Kino') et indique l'entrée ou le fait d'être à l'intérieur.",
+      "title": "« nach », « zu » ou « in » pour les destinations ?",
+      "explanation": "En allemand, on utilise « nach » pour les pays et villes sans article, ainsi que pour les directions. « zu » sert pour les personnes, les lieux précis (comme le médecin) ou quand on veut dire « chez » ou « à » de manière générale. Enfin, « in » s'emploie pour les pays avec article et pour entrer dans un bâtiment ou un lieu fermé (« dans »).",
       "examples": [
         {
-          "wrong": "Ich gehe zu Deutschland.",
+          "wrong": "Ich gehe in Deutschland.",
           "right": "Ich gehe nach Deutschland.",
-          "note": "Les pays sans article utilisent 'nach', pas 'zu'."
+          "note": "Avec les noms de pays neutres (sans article), on utilise « nach »."
         },
         {
-          "wrong": "Ich gehe in der Arzt.",
-          "right": "Ich gehe zum Arzt.",
-          "note": "'Zu' est utilisé pour les personnes (comme un médecin) ; 'zum' = 'zu dem'."
+          "wrong": "Ich fahre zu dem Arzt.",
+          "right": "Ich fahre zum Arzt.",
+          "note": "« zu » se contracte souvent avec l'article : « zum » (zu dem)."
         },
         {
-          "wrong": "Ich gehe nach das Kino.",
-          "right": "Ich gehe ins Kino.",
-          "note": "'In' + accusatif ('ins' = 'in das') pour entrer dans un lieu comme un cinéma."
+          "wrong": "Ich gehe nach die Schule.",
+          "right": "Ich gehe in die Schule.",
+          "note": "Avec un lieu précis comme une école (avec article « die »), on utilise « in » + accusatif."
         }
       ],
       "exercises": [
         {
-          "prompt": "Comment dit-on 'Je vais au supermarché' ? (supermarché = Supermarkt, masculin)",
-          "answer": "Ich gehe in den Supermarkt."
+          "prompt": "Complétez : Je vais à Paris. → Ich fahre ______ Paris.",
+          "answer": "nach"
         },
         {
-          "prompt": "Comment dit-on 'Elle voyage en Italie' ? (Italie = Italien, neutre)",
-          "answer": "Sie reist nach Italien."
+          "prompt": "Complétez : Je vais chez le dentiste. → Ich gehe ______ Zahnarzt.",
+          "answer": "zum"
         },
         {
-          "prompt": "Comment dit-on 'Nous allons chez le dentiste' ? (dentiste = Zahnarzt, masculin)",
-          "answer": "Wir gehen zum Zahnarzt."
+          "prompt": "Complétez : Je vais dans le cinéma. → Ich gehe ______ Kino.",
+          "answer": "ins"
         }
       ]
     },
     {
       "rule_id": "sich-freuen-auf-vs-über",
       "topic": "sich freuen auf vs über",
-      "title": "sich freuen auf vs. über – Futur vs. Présent/Passé",
-      "explanation": "Utilisez 'sich freuen auf' (avec l'accusatif) lorsque vous vous réjouissez de quelque chose dans le futur. Utilisez 'sich freuen über' (avec l'accusatif) lorsque vous êtes content de quelque chose qui s'est déjà produit ou qui est actuellement vrai. Une erreur courante est d'utiliser 'auf' pour des événements passés ou 'über' pour des projets futurs.",
+      "title": "sich freuen auf vs über : un piège courant",
+      "explanation": "En allemand, 'sich freuen auf' s'utilise pour exprimer l'impatience d'un événement futur (on a hâte de). 'Sich freuen über' exprime la joie pour un événement passé ou présent (on est content(e) de). L'erreur fréquente est d'employer 'auf' pour le passé ou 'über' pour le futur.",
       "examples": [
         {
           "wrong": "Ich freue mich über den Urlaub nächste Woche.",
           "right": "Ich freue mich auf den Urlaub nächste Woche.",
-          "note": "Les vacances sont dans le futur, donc utilisez 'auf'."
+          "note": "'auf' est correct car il s'agit d'un événement futur."
         },
         {
-          "wrong": "Ich freue mich auf das Geschenk, das ich gestern bekommen habe.",
-          "right": "Ich freue mich über das Geschenk, das ich gestern bekommen habe.",
-          "note": "Le cadeau a été reçu dans le passé, donc utilisez 'über'."
+          "wrong": "Ich freue mich auf das Geschenk, das ich bekommen habe.",
+          "right": "Ich freue mich über das Geschenk, das ich bekommen habe.",
+          "note": "'über' est correct car l'action est déjà passée."
         },
         {
-          "wrong": "Wir freuen uns auf deine Hilfe jetzt.",
-          "right": "Wir freuen uns über deine Hilfe jetzt.",
-          "note": "L'aide se produit maintenant (présent), donc utilisez 'über'."
+          "wrong": "Sie freut sich über die Party morgen.",
+          "right": "Sie freut sich auf die Party morgen.",
+          "note": "Pour une fête à venir, on utilise 'auf'."
         }
       ],
       "exercises": [
         {
-          "prompt": "Complétez avec la préposition correcte (auf ou über) : Er freut sich ___ den Film morgen.",
+          "prompt": "Complétez avec 'auf' ou 'über' : Ich freue mich ___ das Konzert (à venir).",
           "answer": "auf"
         },
         {
-          "prompt": "Complétez avec la préposition correcte : Sie freut sich ___ die guten Noten von letzter Woche.",
+          "prompt": "Complétez avec 'auf' ou 'über' : Ich freue mich ___ die guten Noten (déjà reçues).",
           "answer": "über"
         },
         {
-          "prompt": "Choisissez le bon mot : Wir freuen uns (auf / über) das Konzert am Samstag.",
+          "prompt": "Complétez avec 'auf' ou 'über' : Er freut sich ___ den Sommerurlaub (l'été prochain).",
           "answer": "auf"
         }
       ]

@@ -3,6 +3,15 @@
 language, delegated to a cheap model (DeepSeek via OpenModel). Reuses the
 provider config + helpers from generate_rules.py.
 
+⚠️ UNRELIABLE FOR EXERCISES — DEPRECATED in favour of native generation.
+The model frequently translates the practice sentence embedded in an exercise
+prompt into the interface language while leaving the answer in the learning
+language (e.g. "Ich brauche ___ Regenschirm" -> answer "an"), which breaks the
+exercise. Translation also does not ADAPT explanations to the speaker. Prefer
+`generate_rules.py --interface <X>` (native generation) for new interfaces —
+it keeps practice sentences in the learning language and adapts contrastively.
+Kept only for reference / quick drafts of explanation text.
+
 What gets translated (interface-language fields):
   title, explanation, each example's `note`, each exercise's `prompt`.
 What is kept verbatim (learning-language / identity fields):

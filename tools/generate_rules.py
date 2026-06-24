@@ -224,7 +224,7 @@ def generate_rule(client: OpenAI, model: str, mode: str, topic: str,
                   learning_name: str, interface_name: str,
                   base_url: str, api_key: str) -> dict | None:
     prompt = build_prompt(topic, learning_name, interface_name)
-    for attempt in range(2):
+    for attempt in range(3):
         try:
             content = _call_model(
                 client, model, mode, prompt, base_url, api_key)

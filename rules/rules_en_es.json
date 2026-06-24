@@ -1,112 +1,116 @@
 {
   "learning": "en",
   "interface": "es",
-  "generated_at": "2026-06-22T19:13:12.256550+00:00",
+  "generated_at": "2026-06-23T13:25:37.427783+00:00",
   "model": "deepseek-v4-flash",
-  "translated_from": "en",
   "rules": [
     {
       "rule_id": "articles",
       "topic": "Articles",
-      "title": "Uso de artículos (a, an, the)",
-      "explanation": "Los artículos nos indican si un sustantivo es general o específico. Usa 'a' o 'an' para sustantivos contables singulares generales (p. ej., a cat, an apple). Usa 'the' para sustantivos específicos que tanto tú como el oyente conocen. No se usa artículo para plurales generales o sustantivos incontables (p. ej., cats, water).",
+      "title": "Los artículos en inglés: a/an/the",
+      "explanation": "En inglés, los artículos 'a', 'an' y 'the' se usan de manera diferente al español. 'A' y 'an' acompañan a sustantivos contables singulares no específicos; 'the' se usa para algo específico o conocido. No olvides incluir el artículo cuando sea necesario, especialmente con profesiones y objetos únicos.",
       "examples": [
         {
-          "wrong": "I saw dog in park.",
-          "right": "I saw a dog in the park.",
-          "note": "Usa 'a' para un perro en general, y 'the' porque el parque es específico."
+          "wrong": "I have car.",
+          "right": "I have a car.",
+          "note": "Falta el artículo indefinido 'a' antes de 'car'."
         },
         {
-          "wrong": "She wants an apple and banana.",
-          "right": "She wants an apple and a banana.",
-          "note": "'An' antes de sonidos vocálicos (apple), 'a' antes de sonidos consonánticos (banana)."
+          "wrong": "He is doctor.",
+          "right": "He is a doctor.",
+          "note": "En inglés, con profesiones se usa obligatoriamente 'a' o 'an'."
         },
         {
-          "wrong": "The love is important.",
-          "right": "Love is important.",
-          "note": "No se usa artículo para sustantivos incontables en general como love, water o ideas."
+          "wrong": "I saw moon last night.",
+          "right": "I saw the moon last night.",
+          "note": "La luna es un objeto único, por eso usamos 'the'."
         }
       ],
       "exercises": [
         {
-          "prompt": "Completa el espacio: I need ___ umbrella. (general, uno)",
-          "answer": "an"
+          "prompt": "Completa: I need ___ new phone.",
+          "answer": "a"
         },
         {
-          "prompt": "Completa el espacio: ___ sun is very hot today. (específico, todos lo conocemos)",
+          "prompt": "Completa: ___ sun rises in the east.",
           "answer": "The"
         },
         {
-          "prompt": "Completa el espacio: I like ___ dogs. (general, plural)",
-          "answer": "(no article)"
+          "prompt": "Completa: She is ___ honest person.",
+          "answer": "an"
         }
       ]
     },
     {
       "rule_id": "tenses",
       "topic": "Tenses",
-      "title": "Past Simple vs. Present Perfect",
-      "explanation": "Usa el past simple para acciones que ocurrieron en un tiempo específico en el pasado (e.g., yesterday, last week). Usa el present perfect para acciones sin tiempo específico o que están conectadas al presente (e.g., ever, never, already). No uses present perfect con expresiones de tiempo pasado definidas.",
+      "title": "Errores comunes con los tiempos verbales: Presente Simple vs. Presente Continuo",
+      "explanation": "En inglés, usamos el presente simple para acciones habituales o hechos generales. El presente continuo se usa para acciones que están ocurriendo en este momento. Un error común es usar el presente simple para describir lo que está sucediendo ahora.",
       "examples": [
         {
-          "wrong": "I have bought a new car yesterday.",
-          "right": "I bought a new car yesterday.",
-          "note": "'Yesterday' es un tiempo pasado específico, así que usa past simple."
+          "wrong": "I go to the store now.",
+          "right": "I am going to the store now.",
+          "note": "Para acciones que suceden ahora, necesitas el presente continuo (am/is/are + verbo -ing)."
         },
         {
-          "wrong": "Did you ever eat sushi?",
-          "right": "Have you ever eaten sushi?",
-          "note": "'Ever' pregunta sobre experiencias de vida → usa present perfect."
+          "wrong": "She reads a book right now.",
+          "right": "She is reading a book right now.",
+          "note": "El marcador 'right now' indica que la acción está en progreso."
+        },
+        {
+          "wrong": "They play football at the moment.",
+          "right": "They are playing football at the moment.",
+          "note": "La frase 'at the moment' requiere el presente continuo."
         }
       ],
       "exercises": [
         {
-          "prompt": "Ella _____ (go) a la playa el fin de semana pasado.",
-          "answer": "went"
+          "prompt": "Completa la oración: 'She ______ (study) for the exam at the moment.'",
+          "answer": "is studying"
         },
         {
-          "prompt": "Yo _____ (never / eat) comida tailandesa.",
-          "answer": "have never eaten"
+          "prompt": "Corrige el error: 'They play tennis now.'",
+          "answer": "They are playing tennis now."
         },
         {
-          "prompt": "Ellos _____ (already / finish) su tarea.",
-          "answer": "have already finished"
+          "prompt": "Traduce al inglés: 'Él está cocinando la cena ahora.'",
+          "answer": "He is cooking dinner now."
         }
       ]
     },
     {
       "rule_id": "prepositions",
       "topic": "Prepositions",
-      "title": "Preposiciones de tiempo: In, On, At",
-      "explanation": "Usa 'at' para horas específicas (p. ej., 5 PM, medianoche), 'on' para días y fechas (p. ej., lunes, 4 de julio), y 'in' para periodos más largos como meses, años, estaciones o siglos. Un error común es confundirlos, como decir 'in Monday' en lugar de 'on Monday'.",
+      "title": "Preposiciones en inglés: errores comunes",
+      "explanation": "En inglés, las preposiciones no siempre coinciden con las del español. Errores típicos ocurren al traducir directamente, por ejemplo usando 'on' para días o 'at' para lugares específicos. Aprende las combinaciones correctas para sonar más natural.",
       "examples": [
         {
-          "wrong": "I will see you in Monday.",
-          "right": "I will see you on Monday.",
-          "note": "Usa 'on' para los días de la semana."
+          "wrong": "I depend of my parents.",
+          "right": "I depend on my parents.",
+          "note": "Depender de se traduce como 'depend on', no 'depend of'."
         },
         {
-          "wrong": "The meeting is at June.",
-          "right": "The meeting is in June.",
-          "note": "Usa 'in' para meses y años."
+          "wrong": "She is married with a doctor.",
+          "right": "She is married to a doctor.",
+          "note": "Casado con es 'married to', no 'married with'."
         },
         {
-          "wrong": "I wake up on 7 AM.",
-          "right": "I wake up at 7 AM.",
-          "note": "Usa 'at' para horas específicas."
+          "wrong": "We go to school in the morning.",
+          "right": "We go to school in the morning.",
+          "note": "Esta está bien, pero un error común es 'at the morning' (incorrecto). Decimos 'in the morning'."
         }
       ],
       "exercises": [
         {
-          "prompt": "Te veré ___ viernes.",
-          "answer": "on"
-        },
-        {
-          "prompt": "Su cumpleaños es ___ octubre.",
+          "prompt": "Completa la frase: I'm interested ___ learning English.",
           "answer": "in"
         },
         {
-          "prompt": "La película empieza ___ 8 PM.",
+          "prompt": "Completa: He is afraid ___ spiders.",
+          "answer": "of"
+        },
+        {
+          "prompt": "Completa: She will arrive ___ 5 PM.",
           "answer": "at"
         }
       ]
@@ -114,309 +118,310 @@
     {
       "rule_id": "conditional-sentences",
       "topic": "Conditional sentences",
-      "title": "Oraciones condicionales: No uses 'will' en la cláusula 'if'",
-      "explanation": "En las oraciones condicionales de primer tipo (posibilidad real futura), usa el presente simple en la cláusula 'if', no 'will'. La forma futura ('will' + verbo) solo pertenece a la oración principal. Por ejemplo: 'If it rains, I will stay home' – no 'If it will rain'.",
+      "title": "Errores comunes con condicionales (If-clauses)",
+      "explanation": "En inglés, las oraciones condicionales de tipo 1 (futuro real) no llevan 'will' en la cláusula con 'if'. Solo se usa 'will' en la cláusula principal. Además, no se usa el subjuntivo como en español; en su lugar, se emplea el presente simple en la parte de 'if'.",
       "examples": [
         {
-          "wrong": "If I will have time, I will call you.",
-          "right": "If I have time, I will call you.",
-          "note": "Usa presente simple ('have') después de 'if', no 'will have'."
+          "wrong": "If it will rain, we will cancel the picnic.",
+          "right": "If it rains, we will cancel the picnic.",
+          "note": "No uses 'will' después de 'if'. Usa presente simple (rains)."
         },
         {
-          "wrong": "If she will study, she will pass the exam.",
-          "right": "If she studies, she will pass the exam.",
-          "note": "La condición usa presente simple ('studies'); 'will' solo aparece en la cláusula de resultado."
+          "wrong": "If you will study, you will pass the exam.",
+          "right": "If you study, you will pass the exam.",
+          "note": "Recuerda: la cláusula con 'if' lleva presente simple, no 'will'."
         }
       ],
       "exercises": [
         {
-          "prompt": "Completa el espacio en blanco: If it ___ (rain) tomorrow, I will stay home.",
-          "answer": "rains"
+          "prompt": "Corrige esta oración: 'If it will be sunny, we will go to the beach.'",
+          "answer": "If it is sunny, we will go to the beach."
         },
         {
-          "prompt": "Completa el espacio en blanco: If I ___ (have) enough money, I will buy a new phone.",
-          "answer": "have"
+          "prompt": "Completa la oración con la forma correcta: 'If she ______ (come) to the party, I will be happy.'",
+          "answer": "comes"
         },
         {
-          "prompt": "Completa correctamente: If she ___ (be) late, we will miss the bus.",
-          "answer": "is"
+          "prompt": "Corrige: 'If you will not hurry, you will be late.'",
+          "answer": "If you don't hurry, you will be late."
         }
       ]
     },
     {
       "rule_id": "th-sounds",
       "topic": "th sounds",
-      "title": "Dominando los sonidos de la 'th'",
-      "explanation": "El inglés tiene dos sonidos de la 'th': sordo /θ/ (como en 'think') y sonoro /ð/ (como en 'this'). Para producirlos, coloca la punta de la lengua ligeramente entre los dientes frontales y expulsa aire. Muchos estudiantes los reemplazan erróneamente con /t/ o /d/, lo que puede cambiar el significado de la palabra.",
+      "title": "Los sonidos 'th' en inglés",
+      "explanation": "En inglés, la combinación 'th' puede tener dos sonidos: uno sonoro (como en 'this') y otro sordo (como en 'think'). Para el sonido sonoro, colocas la lengua entre los dientes y vibran las cuerdas vocales. Para el sonido sordo, la posición es la misma pero sin vibración. Los hispanohablantes suelen reemplazar estos sonidos por /d/, /t/ o /s/, lo que puede cambiar el significado de la palabra.",
       "examples": [
         {
-          "wrong": "I tink it's true.",
-          "right": "I think it's true.",
-          "note": "Usa la 'th' sorda (lengua entre los dientes) en lugar de la 't'."
+          "wrong": "I sink this is correct.",
+          "right": "I think this is correct.",
+          "note": "'Sink' (hundirse) cambia el significado de 'think' (pensar)."
         },
         {
-          "wrong": "Dis is my pen.",
-          "right": "This is my pen.",
-          "note": "Usa la 'th' sonora (con vibración) en lugar de la 'd'."
+          "wrong": "He is a tree.",
+          "right": "He is three.",
+          "note": "'Tree' (árbol) es diferente a 'three' (tres)."
         },
         {
-          "wrong": "I have tree apples.",
-          "right": "I have three apples.",
-          "note": "La 'th' en 'three' es sorda; 'tree' es una palabra completamente diferente."
+          "wrong": "That is my modder.",
+          "right": "That is my mother.",
+          "note": "'Modder' no es una palabra real; 'mother' usa el sonido /ð/ sonoro."
         }
       ],
       "exercises": [
         {
-          "prompt": "Elige la palabra correcta: Necesito _____ sobre ello. (think / tink)",
+          "prompt": "¿Cómo se dice 'pensar' en inglés? (el sonido inicial es sordo)",
           "answer": "think"
         },
         {
-          "prompt": "Completa el espacio en blanco: Por favor, dame _____ libro. (this / dis)",
-          "answer": "this"
+          "prompt": "Elige la palabra correcta para completar: 'I _____ (sink / think) this is a good idea.'",
+          "answer": "think"
         },
         {
-          "prompt": "Elige la palabra correcta: Ella tiene _____ gatos. (three / tree)",
-          "answer": "three"
+          "prompt": "Completa la oración: 'She is my _____ (sister / mother).'",
+          "answer": "mother"
         }
       ]
     },
     {
       "rule_id": "stress",
       "topic": "Stress",
-      "title": "Acento de palabra: El latido oculto del inglés",
-      "explanation": "Las palabras en inglés tienen una sílaba que se acentúa, es decir, es más larga, más fuerte y de tono más alto. Poner el acento en la sílaba incorrecta puede cambiar el significado de una palabra o hacer que suene antinatural. Por ejemplo, 'record' (RE-cord, sustantivo) vs 'record' (re-CORD, verbo) tienen significados diferentes según el acento.",
+      "title": "El Estrés en las Palabras en Inglés",
+      "explanation": "En inglés, la sílaba tónica de una palabra se pronuncia con más fuerza, duración y tono. Los hispanohablantes a menudo colocan el acento en la sílaba incorrecta porque el español tiene reglas de acentuación más predecibles. Por ejemplo, verbos como 'present' y 'record' cambian su sílaba tónica según si son verbo o nombre.",
       "examples": [
         {
-          "wrong": "I need to re-CORD the meeting.",
-          "right": "I need to RE-cord the meeting.",
-          "note": "Como verbo (grabar audio), el acento recae en la segunda sílaba: re-CORD. Pero como sustantivo (un archivo), el acento está en la primera: RE-cord. Muchos estudiantes los confunden."
+          "wrong": "I will PRESent the gift.",
+          "right": "I will preSENT the gift.",
+          "note": "El verbo 'present' se acentúa en la segunda sílaba (preSENT); el nombre 'present' se acentúa en la primera (PRESent)."
         },
         {
-          "wrong": "Let's go to the de-SERT for our vacation.",
-          "right": "Let's go to the DES-ert for our vacation.",
-          "note": "'Desert' (tierra seca) acentúa la primera sílaba: DES-ert. 'Dessert' (comida dulce) acentúa la segunda: des-SERT. ¡La ortografía también es diferente!"
+          "wrong": "Can you REcord this song?",
+          "right": "Can you reCORD this song?",
+          "note": "El verbo 'record' se acentúa en la segunda sílaba (reCORD); el nombre 'record' se acentúa en la primera (REcord)."
         }
       ],
       "exercises": [
         {
-          "prompt": "¿Qué sílaba se acentúa en la palabra 'present' cuando significa un regalo? (Di la palabra en voz alta: PRES-ent o pre-SENT?)",
-          "answer": "PRES-ent"
+          "prompt": "Corrige el error de acentuación en esta oración: 'They will PROduce a new movie.'",
+          "answer": "They will proDUCE a new movie."
         },
         {
-          "prompt": "Corrige el error de acento en esta oración: 'I need to EX-port these files.' (Pista: 'export' como verbo tiene el acento en la segunda sílaba.)",
-          "answer": "I need to ex-PORT these files."
-        },
-        {
-          "prompt": "Lee esta palabra en voz alta con el acento correcto: 'photograph'. ¿Qué sílaba es la más fuerte?",
-          "answer": "The first syllable: PHO-to-graph"
+          "prompt": "¿Cuál es la forma correcta? 'I need to EXport these files.'",
+          "answer": "I need to exPORT these files."
         }
       ]
     },
     {
       "rule_id": "intonation",
       "topic": "Intonation",
-      "title": "Dominando la entonación en inglés",
-      "explanation": "La entonación—el ascenso y descenso de tu voz—puede cambiar completamente el significado de una oración. Para las preguntas de sí/no, tu voz debe elevarse al final; para las afirmaciones y las preguntas wh- (who, what, where, etc.), tu voz debe bajar. Usar la entonación incorrecta puede hacer que una pregunta suene como una afirmación o que parezcas inseguro.",
+      "title": "La entonación en inglés: preguntas y afirmaciones",
+      "explanation": "La entonación (subir o bajar la voz) cambia el significado. En inglés, las preguntas de sí/no terminan con un tono ascendente (la voz sube). Las preguntas con wh- (what, where, etc.) y las afirmaciones terminan con un tono descendente (la voz baja). Los hispanohablantes suelen usar un tono plano, lo que puede sonar confuso o grosero.",
       "examples": [
         {
-          "wrong": "You're coming? (said with a falling tone)",
-          "right": "You're coming? (said with a rising tone)",
-          "note": "Un tono ascendente al final señala una pregunta de sí/no; un tono descendente hace que suene como una afirmación."
+          "wrong": "You are coming?",
+          "right": "You are coming?",
+          "note": "En la versión correcta, la voz sube claramente al final. En español a veces no se eleva, pero en inglés es obligatorio para preguntas de sí/no."
         },
         {
-          "wrong": "Where are you going? (said with a rising tone)",
-          "right": "Where are you going? (said with a falling tone)",
-          "note": "Las preguntas wh- usualmente terminan con una entonación descendente; un tono ascendente puede sonar confuso o como si estuvieras pidiendo una repetición."
-        },
-        {
-          "wrong": "I like apples, oranges, and bananas. (all flat)",
-          "right": "I like apples↗, oranges↗, and bananas↘.",
-          "note": "Al enumerar elementos, tu voz se eleva en cada elemento excepto el último, donde baja para indicar que la lista está completa."
+          "wrong": "Where are you going?",
+          "right": "Where are you going?",
+          "note": "La versión correcta tiene un tono descendente al final (la voz baja). Subir la voz en preguntas con wh- suena a duda o sorpresa."
         }
       ],
       "exercises": [
         {
-          "prompt": "Lee en voz alta con la entonación correcta: 'Are you hungry?' (yes/no question). ¿Tu voz debe elevarse o bajar al final?",
-          "answer": "Rise"
+          "prompt": "Di esta oración con la entonación correcta (pregunta de sí/no): '¿Vienes?'",
+          "answer": "Are you coming?"
         },
         {
-          "prompt": "Lee en voz alta con la entonación correcta: 'What time is it?' (wh- question). ¿Tu voz debe elevarse o bajar al final?",
-          "answer": "Fall"
-        },
-        {
-          "prompt": "Di esta lista con la entonación adecuada: 'We need milk, bread, and eggs.' ¿Dónde se eleva y dónde baja tu voz?",
-          "answer": "Rise on 'milk' and 'bread', fall on 'eggs'"
+          "prompt": "Di esta oración con la entonación correcta (pregunta con wh-): '¿Dónde está?'",
+          "answer": "Where is it?"
         }
       ]
     },
     {
       "rule_id": "subject-verb-agreement",
       "topic": "Subject-verb agreement",
-      "title": "Concordancia entre sujeto y verbo: Emparejar sujetos y verbos",
-      "explanation": "En inglés, el verbo debe concordar con el sujeto en número. Un sujeto singular requiere un verbo singular, mientras que un sujeto plural requiere un verbo plural. Cuidado con sujetos complicados como pronombres indefinidos o frases que se interponen entre el sujeto y el verbo.",
+      "title": "Concordancia entre sujeto y verbo",
+      "explanation": "En inglés, el verbo debe concordar en número con el sujeto. Si el sujeto es singular (tercera persona: he, she, it), el verbo normalmente lleva una -s al final. Si el sujeto es plural, el verbo no lleva -s. Los hispanohablantes a menudo olvidan agregar esa -s.",
       "examples": [
         {
-          "wrong": "The list of items are on the table.",
-          "right": "The list of items is on the table.",
-          "note": "El sujeto es 'list' (singular), no 'items'."
+          "wrong": "He go to school.",
+          "right": "He goes to school.",
+          "note": "El verbo 'go' debe añadir -s para concordar con el sujeto singular 'he'."
         },
         {
-          "wrong": "Everyone have their own opinion.",
-          "right": "Everyone has their own opinion.",
-          "note": "'Everyone' es singular, por lo tanto usa 'has'."
+          "wrong": "She like apples.",
+          "right": "She likes apples.",
+          "note": "Con 'she' (tercera persona singular), el verbo 'like' necesita -s."
         },
         {
-          "wrong": "She don't like coffee.",
-          "right": "She doesn't like coffee.",
-          "note": "Con la tercera persona singular (he, she, it), usa 'doesn't'."
+          "wrong": "The dogs runs fast.",
+          "right": "The dogs run fast.",
+          "note": "El sujeto 'dogs' es plural, por lo que el verbo no lleva -s."
         }
       ],
       "exercises": [
         {
-          "prompt": "Reescribe correctamente: El grupo de estudiantes está/están estudiando.",
-          "answer": "The group of students is studying."
+          "prompt": "Completa la oración con la forma correcta del verbo: He ___ (play) soccer.",
+          "answer": "plays"
         },
         {
-          "prompt": "Elige el verbo correcto: Ni el profesor ni los estudiantes (is/are) en la sala.",
-          "answer": "are"
+          "prompt": "Elige la opción correcta: The cat ____ on the roof. (sit / sits)",
+          "answer": "sits"
         },
         {
-          "prompt": "Corrige el error: Cada una de las manzanas son frescas.",
-          "answer": "Each of the apples is fresh."
+          "prompt": "Corrige el error: They goes to the park.",
+          "answer": "They go to the park."
         }
       ]
     },
     {
       "rule_id": "countable-vs-uncountable-nouns",
       "topic": "Countable vs uncountable nouns",
-      "title": "Sustantivos contables e incontables",
-      "explanation": "Los sustantivos contables pueden contarse (p.ej., one apple, two apples) y usan 'a/an', 'many' y 'few'. Los sustantivos incontables no pueden contarse (p.ej., water, advice) y usan 'much', 'little' o 'some'—nunca 'a/an' o 'many'.",
+      "title": "Sustantivos contables e incontables en inglés",
+      "explanation": "En inglés, los sustantivos contables se pueden contar (one apple, two apples) y usan 'a/an' y 'many'. Los incontables no se pueden contar (water, advice) y usan 'much' o 'a lot of'. No uses 'a/an' con incontables ni 'many' con ellos.",
       "examples": [
         {
-          "wrong": "I have many homeworks.",
-          "right": "I have a lot of homework.",
-          "note": "'Homework' es incontable; usa 'much' o 'a lot of'."
+          "wrong": "I have many money.",
+          "right": "I have a lot of money.",
+          "note": "'Money' es incontable; no uses 'many'."
         },
         {
-          "wrong": "He gave me a good advice.",
-          "right": "He gave me a piece of good advice.",
-          "note": "'Advice' es incontable; puedes decir 'a piece of advice'."
+          "wrong": "I need an advice.",
+          "right": "I need some advice.",
+          "note": "'Advice' es incontable; no uses 'an'."
+        },
+        {
+          "wrong": "She has many furnitures.",
+          "right": "She has a lot of furniture.",
+          "note": "'Furniture' es incontable; no tiene forma plural."
         }
       ],
       "exercises": [
         {
-          "prompt": "Llena el espacio: I need _____ (many/much) time to finish.",
-          "answer": "much"
+          "prompt": "Completa con 'many' o 'much': How ______ books do you have?",
+          "answer": "many"
         },
         {
-          "prompt": "Corrige la oración: He has many furniture in his room.",
-          "answer": "He has much furniture in his room."
+          "prompt": "Corrige la frase: 'I need a water.'",
+          "answer": "I need some water. / I need water."
+        },
+        {
+          "prompt": "Elige la opción correcta: 'There is (much / many) information in this book.'",
+          "answer": "much"
         }
       ]
     },
     {
       "rule_id": "gerund-vs-infinitive",
       "topic": "Gerund vs infinitive",
-      "title": "Gerundio vs Infinitivo: Verbos que aman -ing o to",
-      "explanation": "Algunos verbos en inglés van seguidos de un gerundio (verbo+ing) y otros de un infinitivo (to+verbo). Por ejemplo, 'enjoy' siempre lleva un gerundio, mientras que 'want' siempre lleva un infinitivo. Aprender estos patrones te ayuda a evitar errores comunes.",
+      "title": "Gerundio vs Infinitivo en inglés",
+      "explanation": "En inglés, algunos verbos requieren un gerundio (verbo + -ing) y otros un infinitivo (to + verbo). Por ejemplo, después de 'enjoy', 'avoid' y 'suggest' usamos gerundio; después de 'want', 'need' y 'decide' usamos infinitivo. También, después de preposiciones siempre usamos gerundio.",
       "examples": [
         {
-          "wrong": "I enjoy to swim.",
-          "right": "I enjoy swimming.",
-          "note": "Usa el gerundio después de 'enjoy'."
+          "wrong": "I enjoy to swim in the ocean.",
+          "right": "I enjoy swimming in the ocean.",
+          "note": "Después de 'enjoy' siempre usamos gerundio, no infinitivo."
         },
         {
-          "wrong": "She wants going home.",
-          "right": "She wants to go home.",
-          "note": "Usa el infinitivo después de 'want'."
+          "wrong": "She wants going to the party.",
+          "right": "She wants to go to the party.",
+          "note": "Después de 'want' usamos infinitivo (to + verbo), no gerundio."
         },
         {
-          "wrong": "He suggested to eat out.",
-          "right": "He suggested eating out.",
-          "note": "Usa el gerundio después de 'suggest'."
+          "wrong": "He is interested to learn Spanish.",
+          "right": "He is interested in learning Spanish.",
+          "note": "Después de la preposición 'in' (de 'interested in') usamos gerundio."
         }
       ],
       "exercises": [
         {
-          "prompt": "Necesito ___ (study) para el examen.",
+          "prompt": "Completa la oración: He decided ___ (study) engineering.",
           "answer": "to study"
         },
         {
-          "prompt": "Ella evita ___ (eat) comida chatarra.",
+          "prompt": "Completa la oración: They avoid ___ (eat) too much sugar.",
           "answer": "eating"
         },
         {
-          "prompt": "Ellos decidieron ___ (move) a una nueva ciudad.",
-          "answer": "to move"
+          "prompt": "Completa la oración: She is good at ___ (play) the piano.",
+          "answer": "playing"
         }
       ]
     },
     {
       "rule_id": "modal-verbs-usage",
       "topic": "Modal verbs usage",
-      "title": "Verbos modales: Can, Must y May",
-      "explanation": "Los verbos modales como 'can', 'must' y 'may' tienen usos específicos. 'Can' expresa habilidad o permiso informal; 'may' es para permiso formal. 'Must' indica obligación fuerte, y 'must not' significa prohibición. No agregues 'to' después de un verbo modal (por ejemplo, 'I must go', no 'I must to go').",
+      "title": "Uso de los verbos modales en inglés",
+      "explanation": "Los verbos modales (can, must, should, etc.) nunca llevan 'to' después de ellos y no cambian de forma con la tercera persona del singular. Por ejemplo, decimos 'He can swim', no 'He can to swim' ni 'He cans swim'.",
       "examples": [
         {
-          "wrong": "Can I leave early?",
-          "right": "May I leave early?",
-          "note": "Usa 'may' para solicitudes formales o corteses, no 'can'."
+          "wrong": "She can to speak English.",
+          "right": "She can speak English.",
+          "note": "Nunca uses 'to' después de un modal."
         },
         {
-          "wrong": "I must to finish my homework.",
-          "right": "I must finish my homework.",
-          "note": "Siempre usa la forma base del verbo después de un modal; no agregues 'to'."
+          "wrong": "He musts go to work.",
+          "right": "He must go to work.",
+          "note": "Los modales no añaden '-s' en tercera persona."
+        },
+        {
+          "wrong": "We should to study more.",
+          "right": "We should study more.",
+          "note": "Después de 'should' no uses 'to'."
         }
       ],
       "exercises": [
         {
-          "prompt": "Completa el espacio: She ___ speak three languages fluently. (ability)",
-          "answer": "can"
+          "prompt": "Completa la frase: Él __ (can / to play) fútbol muy bien.",
+          "answer": "can play"
         },
         {
-          "prompt": "Completa el espacio: You ___ park here; it's forbidden. (prohibition)",
-          "answer": "must not"
+          "prompt": "Completa la frase: Ella __ (must / to finish) la tarea.",
+          "answer": "must finish"
         },
         {
-          "prompt": "Completa el espacio: ___ I borrow your pen, please? (polite request)",
-          "answer": "May"
+          "prompt": "Completa la frase: Nosotros __ (should / to arrive) temprano.",
+          "answer": "should arrive"
         }
       ]
     },
     {
       "rule_id": "word-order-in-questions",
       "topic": "Word order in questions",
-      "title": "Orden de las palabras en preguntas",
-      "explanation": "En inglés, las preguntas usualmente invierten el sujeto y el verbo auxiliar (o añaden 'do' si no hay auxiliar). Para preguntas wh-, la palabra interrogativa va primero, seguida del auxiliar, luego el sujeto, luego el verbo principal. Evita mantener el orden de las oraciones enunciativas (sujeto antes del verbo).",
+      "title": "El orden de las palabras en preguntas en inglés",
+      "explanation": "En inglés, las preguntas suelen empezar con un verbo auxiliar (do, does, did, is, are, etc.) seguido del sujeto. En preguntas con palabras interrogativas (what, where, why, etc.), la palabra interrogativa va primero, luego el auxiliar y después el sujeto. A diferencia del español, no se mantiene el mismo orden que en las afirmaciones.",
       "examples": [
         {
-          "wrong": "You are from where?",
-          "right": "Where are you from?",
-          "note": "En preguntas wh-, la palabra interrogativa va primero, seguida del verbo auxiliar y el sujeto."
+          "wrong": "You are a student?",
+          "right": "Are you a student?",
+          "note": "En preguntas sí/no, el verbo auxiliar va antes del sujeto."
         },
         {
-          "wrong": "He likes coffee?",
-          "right": "Does he like coffee?",
-          "note": "Para preguntas de sí/no sin auxiliar, añade 'do/does/did' y colócalo antes del sujeto."
+          "wrong": "What you want?",
+          "right": "What do you want?",
+          "note": "En preguntas con 'wh-', se usa 'do', 'does' o 'did' como auxiliar antes del sujeto."
         },
         {
-          "wrong": "Why you are late?",
-          "right": "Why are you late?",
-          "note": "Siempre coloca el auxiliar después de la palabra wh- y antes del sujeto."
+          "wrong": "Where the store is?",
+          "right": "Where is the store?",
+          "note": "Con el verbo 'to be', el verbo va justo después de la palabra interrogativa."
         }
       ],
       "exercises": [
         {
-          "prompt": "Corrige la pregunta: 'You live where?'",
-          "answer": "Where do you live?"
+          "prompt": "Reordena para formar una pregunta: (you / like / coffee?)",
+          "answer": "Do you like coffee?"
         },
         {
-          "prompt": "Corrige la pregunta: 'She can swim?'",
-          "answer": "Can she swim?"
+          "prompt": "Corrige: 'Where she lives?'",
+          "answer": "Where does she live?"
         },
         {
-          "prompt": "Corrige la pregunta: 'What you want?'",
-          "answer": "What do you want?"
+          "prompt": "Escribe la pregunta correcta para 'He is a doctor'.",
+          "answer": "Is he a doctor?"
         }
       ]
     },
@@ -424,248 +429,234 @@
       "rule_id": "comparatives-and-superlatives",
       "topic": "Comparatives and superlatives",
       "title": "Comparativos y superlativos: errores comunes",
-      "explanation": "Al comparar dos cosas, usa la forma comparativa (adjetivo + -er o 'more' + adjetivo) seguida de 'than'. Para tres o más, usa el superlativo (adjetivo + -est o 'most' + adjetivo) con 'the'. Evita los dobles comparativos como 'more better' y recuerda las formas irregulares como 'good, better, best' y 'bad, worse, worst'.",
+      "explanation": "En inglés, los adjetivos cortos (una sílaba) forman el comparativo con '-er' y el superlativo con '-est'. No uses 'more' ni 'most' con estos adjetivos. Con adjetivos largos (dos o más sílabas), sí se usa 'more' y 'most'. Evita duplicar la comparación (como 'more bigger').",
       "examples": [
         {
-          "wrong": "She is more smarter than him.",
-          "right": "She is smarter than him.",
-          "note": "No uses 'more' con formas -er; 'smarter' ya es comparativo."
+          "wrong": "She is more tall than her brother.",
+          "right": "She is taller than her brother.",
+          "note": "Con adjetivos cortos como 'tall', usa '-er' en vez de 'more'."
         },
         {
-          "wrong": "This is the most best cake I've had.",
-          "right": "This is the best cake I've had.",
-          "note": "'Best' ya es un superlativo; no le añadas 'most'."
+          "wrong": "This is the most cheapest option.",
+          "right": "This is the cheapest option.",
+          "note": "No combines 'most' con '-est'. Elige una forma, no ambas."
         },
         {
-          "wrong": "He is the taller in his class.",
-          "right": "He is the tallest in his class.",
-          "note": "Usa el superlativo (-est) al comparar tres o más personas o cosas."
+          "wrong": "He is more better at math than me.",
+          "right": "He is better at math than me.",
+          "note": "'Better' ya es la forma comparativa de 'good'; no añadas 'more'."
         }
       ],
       "exercises": [
         {
-          "prompt": "Completa: This is the ______ (good) movie I've ever seen.",
-          "answer": "best"
+          "prompt": "Completa la frase con la forma correcta: 'My house is _____ (big) than yours.'",
+          "answer": "bigger"
         },
         {
-          "prompt": "Corrige el error: 'My house is more bigger than yours.'",
-          "answer": "My house is bigger than yours."
+          "prompt": "Elige la opción correcta: 'She is the _____ (intelligent) student in class.' (usa la forma superlativa)",
+          "answer": "most intelligent"
         },
         {
-          "prompt": "Elige: 'She runs (faster / most fast) than me.'",
-          "answer": "faster"
+          "prompt": "Corrige este error: 'This book is more interesting than that one.' (ya está correcto, pero escribe la forma correcta de 'interesting' en superlativo)",
+          "answer": "most interesting"
         }
       ]
     },
     {
       "rule_id": "passive-voice-formation",
       "topic": "Passive voice formation",
-      "title": "Formando la voz pasiva correctamente",
-      "explanation": "La voz pasiva se forma con el verbo 'to be' (en el tiempo correcto) más el participio pasado del verbo principal. Un error común es usar la forma base o el pasado del verbo principal en lugar del participio pasado. Recuerda: el participio pasado nunca cambia, y el tiempo se indica con 'be'.",
+      "title": "Formación de la voz pasiva en inglés",
+      "explanation": "La voz pasiva se forma con el verbo auxiliar 'be' (conjugado según el tiempo) y el participio pasado del verbo principal. El sujeto de la oración activa se convierte en el complemento agente introducido por 'by'. Un error común es omitir el auxiliar 'be' o usar el participio incorrecto.",
       "examples": [
         {
-          "wrong": "The window was break.",
-          "right": "The window was broken.",
-          "note": "Después de 'was', usa el participio pasado 'broken', no la forma base 'break'."
+          "wrong": "The house painted by my brother.",
+          "right": "The house was painted by my brother.",
+          "note": "Falta el verbo auxiliar 'be' (en pasado: 'was')."
         },
         {
           "wrong": "The letter is wrote by her.",
           "right": "The letter is written by her.",
           "note": "El participio pasado de 'write' es 'written', no 'wrote'."
-        },
-        {
-          "wrong": "The cake has been eat.",
-          "right": "The cake has been eaten.",
-          "note": "Usa el participio pasado 'eaten' después de 'been'."
         }
       ],
       "exercises": [
         {
-          "prompt": "Corrige la oración: 'The window was break by the ball.'",
-          "answer": "The window was broken by the ball."
+          "prompt": "Convierte a voz pasiva: 'The cat chased the mouse.'",
+          "answer": "The mouse was chased by the cat."
         },
         {
-          "prompt": "Corrige la oración: 'The emails are send every day.'",
-          "answer": "The emails are sent every day."
-        },
-        {
-          "prompt": "Corrige la oración: 'The song has been sing many times.'",
-          "answer": "The song has been sung many times."
+          "prompt": "Corrige el error: 'The cake baked by my mom.'",
+          "answer": "The cake was baked by my mom."
         }
       ]
     },
     {
       "rule_id": "relative-clauses",
       "topic": "Relative clauses",
-      "title": "Evitando Pronombres Extra en Cláusulas Relativas",
-      "explanation": "En inglés, cuando introduces una cláusula relativa, no repitas el sujeto u objeto con un pronombre como 'she', 'he' o 'it'. En su lugar, usa un pronombre relativo como 'who', 'that' o 'which' (o elimínalo cuando actúa como objeto). Este error ocurre a menudo porque los estudiantes traducen directamente de su lengua materna.",
+      "title": "Oraciones de relativo (Relative Clauses)",
+      "explanation": "En inglés, no uses 'what' como pronombre relativo para cosas o personas. Usa 'that', 'which' (para cosas) o 'who' (para personas). Tampoco repitas el sujeto después del pronombre relativo.",
       "examples": [
         {
-          "wrong": "The woman she lives next door is kind.",
-          "right": "The woman who lives next door is kind.",
-          "note": "Elimina el 'she' extra y usa 'who' como pronombre relativo para personas."
+          "wrong": "The book what I read is interesting.",
+          "right": "The book that I read is interesting.",
+          "note": "Para cosas usa 'that' o 'which', nunca 'what'."
         },
         {
-          "wrong": "I like the movie it was very funny.",
-          "right": "I like the movie that was very funny.",
-          "note": "Reemplaza 'it' con 'that' (o 'which') para conectar la cláusula."
-        },
-        {
-          "wrong": "The car he bought it is red.",
-          "right": "The car he bought is red.",
-          "note": "Cuando el pronombre relativo es el objeto, puedes omitirlo por completo. No mantengas 'it'."
+          "wrong": "The man who he lives next door is kind.",
+          "right": "The man who lives next door is kind.",
+          "note": "No repitas el sujeto ('he') después de 'who'."
         }
       ],
       "exercises": [
         {
-          "prompt": "Corrige la oración: 'The girl she studies hard got an A.'",
-          "answer": "The girl who studies hard got an A."
+          "prompt": "Corrige la frase: 'The car what is blue is mine.'",
+          "answer": "The car that is blue is mine."
         },
         {
-          "prompt": "Corrige la oración: 'I have a friend he speaks Spanish.'",
-          "answer": "I have a friend who speaks Spanish."
-        },
-        {
-          "prompt": "Corrige la oración: 'The cake I baked it was delicious.'",
-          "answer": "The cake I baked was delicious."
+          "prompt": "Completa con 'who' o 'that': 'The girl ______ sings well is my sister.'",
+          "answer": "who"
         }
       ]
     },
     {
       "rule_id": "phrasal-verbs",
       "topic": "Phrasal verbs",
-      "title": "Verbos frasales: Separables vs Inseparables",
-      "explanation": "Los verbos frasales combinan un verbo con una partícula (p. ej., up, off, into). Algunos son separables: puedes colocar un sustantivo entre el verbo y la partícula, pero un pronombre debe ir en medio. Otros son inseparables: la partícula siempre permanece con el verbo. Mezclar estas reglas es un error común.",
+      "title": "Los phrasal verbs: evita errores comunes",
+      "explanation": "Los phrasal verbs son combinaciones de un verbo con una preposición o adverbio que cambian el significado original del verbo. Un error común es separarlos incorrectamente o usar la partícula equivocada. Recuerda que algunos phrasal verbs pueden separarse (como 'pick up'), mientras que otros no (como 'look for').",
       "examples": [
         {
-          "wrong": "I will pick up you after work.",
-          "right": "I will pick you up after work.",
-          "note": "Con verbos frasales separables como 'pick up', coloca los pronombres entre el verbo y la partícula."
+          "wrong": "I will pick up you at the station.",
+          "right": "I will pick you up at the station.",
+          "note": "Cuando el objeto es un pronombre, debe ir entre el verbo y la partícula en los phrasal verbs separables."
         },
         {
-          "wrong": "He ran her into at the store.",
-          "right": "He ran into her at the store.",
-          "note": "'Run into' es inseparable; el pronombre permanece después de la partícula."
+          "wrong": "She looks after her little brother?",
+          "right": "Does she look after her little brother?",
+          "note": "En preguntas, el verbo principal ('look') va en forma base después del auxiliar; la partícula ('after') se queda al final."
+        },
+        {
+          "wrong": "He gave up smoking last year.",
+          "right": "He gave up smoking last year.",
+          "note": "Este ejemplo está correcto, pero muchos estudiantes confunden 'give up' con 'give in'. 'Give up' significa dejar un hábito; 'give in' significa rendirse."
         }
       ],
       "exercises": [
         {
-          "prompt": "Corrige esta oración: 'Please throw away it.'",
-          "answer": "Please throw it away."
+          "prompt": "Completa la frase con el phrasal verb correcto: 'Please ______ (apagar) the lights before you leave.'",
+          "answer": "turn off"
         },
         {
-          "prompt": "Corrige esta oración: 'She looked them after.'",
-          "answer": "She looked after them."
+          "prompt": "Reescribe la oración usando el pronombre correctamente: 'I need to pick up my friend from the airport.' (cambia 'my friend' por 'him')",
+          "answer": "I need to pick him up from the airport."
+        },
+        {
+          "prompt": "Elige la opción correcta: 'She is looking forward ___ (to / for) her vacation.'",
+          "answer": "to"
         }
       ]
     },
     {
       "rule_id": "possessive-apostrophe-s",
       "topic": "Possessive apostrophe s",
-      "title": "Apóstrofe posesivo s",
-      "explanation": "El apóstrofe posesivo s ('s) indica que algo pertenece a alguien o algo. Para sustantivos singulares, se añade 's (ej., the cat's toy). Para sustantivos plurales que terminan en s, se añade solo un apóstrofe (ej., the cats' toys). Para sustantivos plurales que no terminan en s, se añade 's (ej., the children's toys). No uses apóstrofe para plurales que no sean posesivos.",
+      "title": "El apóstrofe posesivo (’s)",
+      "explanation": "En inglés, usamos ’s para indicar posesión en sustantivos singulares (ej. 'the boy’s book'). Para sustantivos plurales que terminan en -s, solo añadimos un apóstrofe (ej. 'the boys’ books'). Con plurales irregulares (que no terminan en -s), añadimos ’s (ej. 'the children’s toys'). No se usa para pronombres posesivos (his, hers, its).",
       "examples": [
         {
-          "wrong": "The dogs bone is on the floor.",
-          "right": "The dog's bone is on the floor.",
-          "note": "Para un perro, añade 's antes del objeto."
+          "wrong": "The dog tail is wagging.",
+          "right": "The dog’s tail is wagging.",
+          "note": "Añade ’s al sustantivo singular 'dog'."
         },
         {
           "wrong": "The girls dresses are pretty.",
-          "right": "The girls' dresses are pretty.",
-          "note": "Para chicas plurales que ya terminan en s, añade solo un apóstrofe después de la s."
+          "right": "The girls’ dresses are pretty.",
+          "note": "Si el plural termina en -s, solo añade un apóstrofe después de la -s."
         },
         {
-          "wrong": "The childrens toys are everywhere.",
-          "right": "The children's toys are everywhere.",
-          "note": "Children es plural pero no termina en s, así que añade 's."
+          "wrong": "The mens room is over there.",
+          "right": "The men’s room is over there.",
+          "note": "Los plurales irregulares (men, women, children) usan ’s como los singulares."
         }
       ],
       "exercises": [
         {
-          "prompt": "Corrige esto: 'The mens room is down the hall.'",
-          "answer": "The men's room is down the hall."
+          "prompt": "Corrige: 'The car wheel is flat.' (usa posesivo)",
+          "answer": "The car’s wheel is flat."
         },
         {
-          "prompt": "Corrige esto: 'The books cover is torn.'",
-          "answer": "The book's cover is torn."
+          "prompt": "Completa: 'This is _____ (the books of the teachers)'",
+          "answer": "the teachers’ books"
         },
         {
-          "prompt": "Corrige esto: 'My parents car is blue.'",
-          "answer": "My parents' car is blue."
+          "prompt": "Traduce: 'La mochila de María'",
+          "answer": "María’s backpack"
         }
       ]
     },
     {
       "rule_id": "silent-letters",
       "topic": "Silent letters",
-      "title": "Letras mudas: No pronuncies lo no dicho",
-      "explanation": "En inglés, algunas letras en las palabras no se pronuncian. Se llaman letras mudas. No debes decirlas al hablar. Las letras mudas comunes incluyen la 'k' en 'knife', la 't' en 'listen' y la 'l' en 'half'.",
+      "title": "Las letras mudas en inglés",
+      "explanation": "En inglés, algunas letras se escriben pero no se pronuncian. Esto es común con combinaciones como 'kn' (la 'k' es muda) y 'gh' (la 'gh' es muda). Los hispanohablantes a veces omiten estas letras al escribir porque no las oyen, pero deben incluirse.",
       "examples": [
         {
-          "wrong": "I have a k-nife.",
-          "right": "I have a knife.",
-          "note": "La 'k' es muda. Di 'nife'."
+          "wrong": "nife",
+          "right": "knife",
+          "note": "La 'k' al inicio de 'knife' no se pronuncia, pero se escribe."
         },
         {
-          "wrong": "She likes to lis-ten.",
-          "right": "She likes to listen.",
-          "note": "La 't' en 'listen' es muda. Di 'lissen'."
-        },
-        {
-          "wrong": "I will talk with an 'l' sound.",
-          "right": "I will talk (no 'l' sound).",
-          "note": "La 'l' en 'talk' es muda. Di 'tawk'."
+          "wrong": "nite",
+          "right": "night",
+          "note": "La combinación 'gh' en 'night' es muda."
         }
       ],
       "exercises": [
         {
-          "prompt": "¿Qué palabra tiene una 'k' muda? (knife, kite, king)",
+          "prompt": "Escribe la palabra correcta en inglés que significa 'cuchillo' (la 'k' es muda).",
           "answer": "knife"
         },
         {
-          "prompt": "Completa la oración: La 'b' en '______' es muda. (lamb, bee, broke)",
-          "answer": "lamb"
+          "prompt": "Escribe la palabra correcta en inglés que significa 'noche' (la 'gh' es muda).",
+          "answer": "night"
         },
         {
-          "prompt": "Elige la pronunciación correcta de 'write': (a) con sonido de 'w' (b) 'w' muda",
-          "answer": "silent 'w'"
+          "prompt": "Escribe la palabra correcta en inglés que significa 'escribir' (la 'w' es muda).",
+          "answer": "write"
         }
       ]
     },
     {
       "rule_id": "homophones-spelling",
       "topic": "Homophones spelling",
-      "title": "Errores comunes de ortografía con homófonos",
-      "explanation": "Los homófonos son palabras que suenan igual pero tienen diferentes ortografías y significados. A menudo se confunden al escribir. Para evitar errores, concéntrate en el significado y el contexto de la oración.",
+      "title": "Homófonos en inglés: errores comunes de ortografía",
+      "explanation": "Los homófonos son palabras que suenan igual pero se escriben diferente y tienen significados distintos. En inglés, es común confundir 'their', 'there' y 'they're', o 'your' y 'you're'. Aprender la ortografía correcta según el significado te ayudará a evitar errores.",
       "examples": [
         {
-          "wrong": "Their going to the store.",
-          "right": "They're going to the store.",
-          "note": "They're es una contracción de 'they are'; 'their' indica posesión."
+          "wrong": "Their going to the park.",
+          "right": "They're going to the park.",
+          "note": "'They're' es la contracción de 'they are' (ellos están/van). 'Their' es posesivo (de ellos)."
         },
         {
-          "wrong": "Your a great student.",
-          "right": "You're a great student.",
-          "note": "You're es una contracción de 'you are'; 'your' indica pertenencia."
+          "wrong": "Your welcome!",
+          "right": "You're welcome!",
+          "note": "'You're' es 'you are' (tú eres/estás). 'Your' es posesivo (tu/tuyo)."
         },
         {
           "wrong": "Its a beautiful day.",
           "right": "It's a beautiful day.",
-          "note": "It's significa 'it is'; 'its' (sin apóstrofe) indica posesión."
+          "note": "'It's' es 'it is' (es/está). 'Its' es posesivo (de ello)."
         }
       ],
       "exercises": [
         {
-          "prompt": "Elige la palabra correcta: (There/Their/They're) van al parque.",
+          "prompt": "Completa la oración con el homófono correcto (their, there, they're): _____ going to visit us tomorrow.",
           "answer": "They're"
         },
         {
-          "prompt": "Completa: ___ (Your/You're) libro está sobre la mesa.",
-          "answer": "Your"
+          "prompt": "Elige la palabra correcta (your, you're): I think _____ right about that.",
+          "answer": "you're"
         },
         {
-          "prompt": "Completa: El perro meneó ___ (its/it's) cola.",
+          "prompt": "Completa con its o it's: The dog wagged _____ tail happily.",
           "answer": "its"
         }
       ]
@@ -673,110 +664,110 @@
     {
       "rule_id": "irregular-verb-forms",
       "topic": "Irregular verb forms",
-      "title": "Formas de Verbos Irregulares",
-      "explanation": "Los verbos irregulares no siguen el patrón regular de añadir -ed para el pasado. En cambio, cambian su ortografía por completo. Necesitas memorizar estas formas irregulares comunes para evitar errores.",
+      "title": "Formas verbales irregulares en inglés",
+      "explanation": "Muchos verbos en inglés no siguen la regla de agregar '-ed' para el pasado. Estos verbos cambian su forma de manera impredecible. Es importante memorizar las tres formas: presente, pasado y participio pasado.",
       "examples": [
         {
-          "wrong": "I have went to the store.",
-          "right": "I have gone to the store.",
-          "note": "El participio pasado de 'go' es 'gone', no 'went'."
+          "wrong": "I goed to the store yesterday.",
+          "right": "I went to the store yesterday.",
+          "note": "El pasado de 'go' es 'went', no 'goed'."
         },
         {
-          "wrong": "She drinked the water.",
-          "right": "She drank the water.",
-          "note": "El pasado simple de 'drink' es 'drank', no 'drinked'."
+          "wrong": "She has buyed a new car.",
+          "right": "She has bought a new car.",
+          "note": "El participio pasado de 'buy' es 'bought', no 'buyed'."
         },
         {
-          "wrong": "He brang his book.",
-          "right": "He brought his book.",
-          "note": "El pasado de 'bring' es 'brought', no 'brang'."
+          "wrong": "He taked the book from the shelf.",
+          "right": "He took the book from the shelf.",
+          "note": "El pasado de 'take' es 'took', no 'taked'."
         }
       ],
       "exercises": [
         {
-          "prompt": "Ayer, yo ____ (go) al parque.",
-          "answer": "went"
+          "prompt": "Completa con la forma correcta del pasado: \"Yesterday, I _____ (see) a movie.\"",
+          "answer": "saw"
         },
         {
-          "prompt": "Ella ha ____ (write) una carta.",
+          "prompt": "Completa con el participio pasado: \"She has _____ (write) three letters.\"",
           "answer": "written"
         },
         {
-          "prompt": "Ellos ya ____ (eat) el almuerzo.",
-          "answer": "eaten"
+          "prompt": "Completa con la forma correcta del pasado: \"They _____ (drink) all the water.\"",
+          "answer": "drank"
         }
       ]
     },
     {
       "rule_id": "reported-speech-backshift",
       "topic": "Reported speech backshift",
-      "title": "Discurso Indirecto: Retroceso de Tiempos Verbales",
-      "explanation": "Cuando reportas lo que alguien dijo, normalmente cambias el tiempo verbal de la declaración original a un tiempo pasado. Esto se llama retroceso temporal. Por ejemplo, present simple se convierte en past simple, y present continuous se convierte en past continuous. Siempre ajusta el tiempo verbal para que coincida con el verbo de reporte en pasado.",
+      "title": "El cambio de tiempo verbal en el estilo indirecto (Reported Speech Backshift)",
+      "explanation": "En inglés, cuando reportamos lo que alguien dijo, normalmente retrocedemos el tiempo verbal al pasado. Por ejemplo, 'I am' se convierte en 'he was'. Esto se llama 'backshift'. Olvidar este cambio es un error común para los hispanohablantes.",
       "examples": [
         {
-          "wrong": "She said she is tired.",
-          "right": "She said she was tired.",
-          "note": "El original 'is' (present) cambia a 'was' (past) porque 'said' es pasado."
+          "wrong": "She said she is happy.",
+          "right": "She said she was happy.",
+          "note": "El presente 'is' pasa a pasado 'was' porque la oración principal está en pasado ('said')."
         },
         {
           "wrong": "He told me he will come.",
           "right": "He told me he would come.",
-          "note": "'Will' retrocede a 'would' en el discurso indirecto."
+          "note": "El futuro 'will' se convierte en 'would' al reportar."
         },
         {
-          "wrong": "They said they are going to the party.",
-          "right": "They said they were going to the party.",
-          "note": "Present continuous 'are going' cambia a past continuous 'were going'."
+          "wrong": "They said they have finished.",
+          "right": "They said they had finished.",
+          "note": "El presente perfecto 'have finished' retrocede a pasado perfecto 'had finished'."
         }
       ],
       "exercises": [
         {
-          "prompt": "Cambia a discurso indirecto: 'I live in London.' (He said...)",
-          "answer": "He said he lived in London."
+          "prompt": "Convierte la siguiente oración a estilo indirecto: \"I love this song.\" → He said ...",
+          "answer": "He said he loved that song."
         },
         {
-          "prompt": "Cambia a discurso indirecto: 'We are watching a movie.' (They told me...)",
-          "answer": "They told me they were watching a movie."
+          "prompt": "Convierte: \"We are going to the park.\" → They said ...",
+          "answer": "They said they were going to the park."
         },
         {
-          "prompt": "Cambia a discurso indirecto: 'I will call you.' (She said...)",
-          "answer": "She said she would call me."
+          "prompt": "Convierte: \"I have seen that movie.\" → She told me ...",
+          "answer": "She told me she had seen that movie."
         }
       ]
     },
     {
       "rule_id": "when-to-use-some-vs-any",
       "topic": "When to use 'some' vs 'any'",
-      "title": "Some vs Any: Una Regla Sencilla",
-      "explanation": "Usa 'some' en oraciones positivas y en ofertas o peticiones. Usa 'any' en oraciones negativas y en la mayoría de preguntas. Por ejemplo, \"Tengo algunas manzanas\" (positiva) y \"No tengo ninguna manzana\" (negativa). En ofertas o peticiones educadas, usa 'some' incluso en preguntas: \"¿Te gustaría un poco de café?\"",
+      "title": "¿Cuándo usar 'some' y 'any'?",
+      "explanation": "Usamos 'some' en oraciones afirmativas y en peticiones u ofrecimientos corteses. Usamos 'any' en oraciones negativas y en la mayoría de las preguntas. Recuerda que 'any' también puede significar 'ningún' en negativas.",
       "examples": [
         {
           "wrong": "I don't have some money.",
           "right": "I don't have any money.",
-          "note": "Las oraciones negativas necesitan 'any', no 'some'."
+          "note": "En oraciones negativas usamos 'any'."
         },
         {
-          "wrong": "Do you have any apples? (as a polite request)",
-          "right": "Do you have some apples?",
-          "note": "Las peticiones educadas u ofertas usan 'some' en lugar de 'any'."
+          "wrong": "Do you want any coffee?",
+          "right": "Do you want some coffee?",
+          "note": "En ofrecimientos corteses usamos 'some'."
         },
         {
           "wrong": "There is any milk in the fridge.",
           "right": "There is some milk in the fridge.",
-          "note": "Las oraciones positivas usan 'some', no 'any'."
+          "note": "En afirmativas usamos 'some'."
         }
       ],
       "exercises": [
         {
-          "prompt": "Completa el espacio: Quiero ___ agua. (oración positiva)",
+          "prompt": "Completa: I need ___ help.",
           "answer": "some"
         },
         {
-          "prompt": "Completa el espacio: Ella no tiene ___ amigos. (negativa)",
+          "prompt": "Completa: She doesn't have ___ friends.",
           "answer": "any"
         },
         {
-          "prompt": "Completa el espacio: ¿Te gustaría ___ té? (oferta)",
+          "prompt": "Completa: Would you like ___ tea?",
           "answer": "some"
         }
       ]
@@ -784,74 +775,74 @@
     {
       "rule_id": "definite-vs-zero-article",
       "topic": "Definite vs zero article",
-      "title": "Artículo definido vs artículo cero: Cuándo usar 'the'",
-      "explanation": "Usa 'the' (definite article) cuando te refieras a un sustantivo específico que el oyente pueda identificar. No uses artículo (zero article) para sustantivos generales, incontables o plurales cuando se hable en términos generales. Por ejemplo, 'Me encanta la música' (general) pero 'Me encanta la música de esta película' (específico).",
+      "title": "Artículo definido vs artículo cero en inglés",
+      "explanation": "En inglés, no usamos el artículo definido 'the' con sustantivos en sentido general o abstracto, mientras que en español a menudo sí lo hacemos. Tampoco se usa 'the' con comidas, deportes, días de la semana, o lugares de rutina cuando se habla de su función. Usamos 'the' solo cuando el sustantivo es específico o único.",
       "examples": [
         {
-          "wrong": "I go to the school every day.",
-          "right": "I go to school every day.",
-          "note": "Usa artículo cero para instituciones (escuela, hospital, prisión) cuando se describa su propósito principal."
+          "wrong": "I like the soccer.",
+          "right": "I like soccer.",
+          "note": "En español decimos 'el fútbol', pero en inglés los deportes en general no llevan artículo."
         },
         {
-          "wrong": "She loves the dogs.",
-          "right": "She loves dogs.",
-          "note": "Usa artículo cero para sustantivos plurales cuando se hable en términos generales."
+          "wrong": "She goes to the work.",
+          "right": "She goes to work.",
+          "note": "Con lugares de rutina como 'work', 'school', 'church' no usamos artículo cuando hablamos de su propósito."
         },
         {
-          "wrong": "The milk is good for health.",
-          "right": "Milk is good for health.",
-          "note": "Usa artículo cero para sustantivos incontables cuando se refiera a ellos en general."
+          "wrong": "The love is beautiful.",
+          "right": "Love is beautiful.",
+          "note": "Los conceptos abstractos (love, life, time) no llevan 'the' en sentido general."
         }
       ],
       "exercises": [
         {
-          "prompt": "Llena el espacio en blanco: '_____ gatos son lindos.' (hablando de gatos en general)",
-          "answer": "Cats"
+          "prompt": "Traduce al inglés: 'Me gusta el café.'",
+          "answer": "I like coffee."
         },
         {
-          "prompt": "Llena el espacio en blanco: 'Necesito ir a _____ hospital para visitar a mi amigo.' (un hospital específico)",
-          "answer": "the"
+          "prompt": "Completa: 'He goes to ___ bed at ten.' (como lugar para dormir)",
+          "answer": "He goes to bed at ten."
         },
         {
-          "prompt": "Llena el espacio en blanco: '_____ vida es hermosa.' (hablando de la vida en general)",
-          "answer": "Life"
+          "prompt": "Completa: 'She is at ___ school.' (como lugar de estudio)",
+          "answer": "She is at school."
         }
       ]
     },
     {
       "rule_id": "clause-linking-conjunctions",
       "topic": "Clause linking conjunctions",
-      "title": "Conectar cláusulas con conjunciones",
-      "explanation": "Cuando unes dos oraciones completas (cláusulas independientes), necesitas una conjunción como 'and', 'but', 'or', 'so' o 'because'. Un error común es usar solo una coma (coma splice) o ninguna puntuación. Siempre agrega una conjunción entre las cláusulas para que la oración sea correcta.",
+      "title": "Conjunciones para enlazar cláusulas",
+      "explanation": "En inglés, las conjunciones conectan cláusulas. Un error común de los hispanohablantes es usar 'because' para indicar resultado (como 'so') o combinar 'although' con 'but'. Recuerda usar una sola conjunción y elegir la adecuada según causa, resultado o contraste.",
       "examples": [
         {
-          "wrong": "I went to the store, I bought milk.",
-          "right": "I went to the store, and I bought milk.",
-          "note": "Usa una coma y una conjunción como 'and' para unir dos pensamientos completos."
+          "wrong": "I was tired because I went to bed.",
+          "right": "I was tired so I went to bed.",
+          "note": "'Because' indica causa, no resultado. Usa 'so' para expresar consecuencia."
         },
         {
-          "wrong": "She is tired she went to bed.",
-          "right": "She is tired, so she went to bed.",
-          "note": "Agrega una conjunción como 'so' para mostrar un resultado o razón."
+          "wrong": "Although he was sick, but he went to work.",
+          "right": "Although he was sick, he went to work.",
+          "note": "No uses 'although' y 'but' juntos. Elige solo uno."
         },
         {
-          "wrong": "He likes coffee she prefers tea.",
-          "right": "He likes coffee, but she prefers tea.",
-          "note": "Usa 'but' para mostrar contraste entre las dos ideas."
+          "wrong": "I like coffee because I don't like tea.",
+          "right": "I like coffee but I don't like tea.",
+          "note": "Para contrastar ideas opuestas, usa 'but', no 'because'."
         }
       ],
       "exercises": [
         {
-          "prompt": "Corrige esta oración: 'Tenía hambre comí almuerzo.'",
-          "answer": "I was hungry, so I ate lunch."
+          "prompt": "Completa la oración con la conjunción correcta (so / because / but): She studied hard, ___ she passed the exam.",
+          "answer": "so"
         },
         {
-          "prompt": "Une estas dos cláusulas con 'because': 'Me quedé en casa. Estaba enfermo.'",
-          "answer": "I stayed home because I was sick."
+          "prompt": "Elige la opción correcta: He is rich, ___ he is not happy. (because / but / so)",
+          "answer": "but"
         },
         {
-          "prompt": "Arregla esta coma splice: 'El sol se puso, las estrellas aparecieron.'",
-          "answer": "The sun set, and the stars appeared."
+          "prompt": "Corrige el error: Because it was raining, so I took an umbrella.",
+          "answer": "Because it was raining, I took an umbrella."
         }
       ]
     },
@@ -859,27 +850,36 @@
       "rule_id": "misplaced-modifiers",
       "topic": "Misplaced modifiers",
       "title": "Modificadores mal colocados",
-      "explanation": "Un modificador mal colocado es una palabra o frase que está demasiado lejos de la palabra que describe, lo que causa confusión o humor involuntario. Para corregirlo, acerque el modificador a la palabra que modifica, de modo que la oración sea clara y lógica.",
+      "explanation": "Un modificador es una palabra o frase que describe a otra parte de la oración. Cuando está mal colocado, puede causar confusión o cambiar el significado. Para evitar errores, coloca el modificador lo más cerca posible de la palabra que modifica.",
       "examples": [
-        {
-          "wrong": "Running to catch the bus, my backpack fell.",
-          "right": "Running to catch the bus, I dropped my backpack.",
-          "note": "El modificador 'Corriendo para alcanzar el autobús' debe estar junto a la persona que realiza la acción (yo), no a la mochila."
-        },
         {
           "wrong": "She almost drove her kids to school every day.",
           "right": "She drove her kids to school almost every day.",
-          "note": "Coloca 'casi' junto a 'todos los días' para indicar con qué frecuencia conducía, no que casi conducía pero no lo hizo."
+          "note": "'Almost' debe modificar 'every day', no 'drove'."
+        },
+        {
+          "wrong": "I saw a bird flying over the fence with yellow wings.",
+          "right": "I saw a bird with yellow wings flying over the fence.",
+          "note": "Coloca 'with yellow wings' junto a 'bird' para evitar que parezca que la cerca tiene alas amarillas."
+        },
+        {
+          "wrong": "The man was walking the dog with a limp.",
+          "right": "The man with a limp was walking the dog.",
+          "note": "'With a limp' describe al hombre, no al perro."
         }
       ],
       "exercises": [
         {
-          "prompt": "Corrige el modificador mal colocado: 'El camarero sirvió un filete al hombre con una guarnición de papas fritas.'",
-          "answer": "The waiter served a man a steak with a side of fries."
+          "prompt": "Corrige la siguiente oración reordenando el modificador mal colocado: 'He nearly spent all his money on video games.'",
+          "answer": "He spent nearly all his money on video games."
         },
         {
-          "prompt": "Corrige esta oración: 'Él casi se comió toda la pizza él mismo.'",
-          "answer": "He ate nearly the whole pizza himself."
+          "prompt": "Corrige: 'She served dinner to the guests on paper plates.'",
+          "answer": "She served dinner on paper plates to the guests."
+        },
+        {
+          "prompt": "Corrige: 'The child was scolded by the teacher with messy hair.'",
+          "answer": "The child with messy hair was scolded by the teacher."
         }
       ]
     }
