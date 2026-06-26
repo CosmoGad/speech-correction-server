@@ -9,7 +9,7 @@ from functools import lru_cache
 import threading
 
 import regex as re
-from fastapi import FastAPI, HTTPException, Request, Depends, Security, Query
+from fastapi import FastAPI, HTTPException, Request, Depends, Security
 from fastapi.responses import JSONResponse
 from fastapi.security import APIKeyHeader
 from fastapi.middleware.cors import CORSMiddleware
@@ -565,6 +565,7 @@ _RULE_MEDIA = "application/json; charset=utf-8"
 
 @app.get("/rule")
 async def get_rule_endpoint(
+    request: Request,
     learning: str,
     interface: str,
     rule_id: str,
@@ -573,6 +574,8 @@ async def get_rule_endpoint(
     """Full lesson for one rule. Served from the pre-generated static file when
     available; otherwise generated on demand for a valid taxonomy key and cached
     (the "grows with use" path). See rules/DYNAMIC_RULES_SPEC.md."""
+    if not rate_limiter.is_allowed(_get_client_ip(request)):
+        raise HTTPException(status_code=429, detail="Too many requests")
     # 1) static pre-generated content
     try:
         rule = rules_store.get_rule(learning, interface, rule_id)
@@ -621,19 +624,32 @@ async def get_rule_endpoint(
     return JSONResponse(content=rule, media_type=_RULE_MEDIA)
 
 
-@app.get("/resolve-rule")
+class ResolveRuleRequest(BaseModel):
+    learning: str
+    interface: str = ""
+    type: str = ""
+    original: str = ""
+    corrected: str = ""
+    explanation: str = ""
+
+
+@app.post("/resolve-rule")
 async def resolve_rule_endpoint(
-    learning: str,
-    interface: str,
-    err_type: str = Query("", alias="type"),
-    original: str = "",
-    corrected: str = "",
-    explanation: str = "",
+    request: Request,
+    body: ResolveRuleRequest,
     _: None = Depends(verify_api_key),
 ):
     """Map a correction error to the best-matching rule_id from the fixed
     taxonomy (or null). The model can only SELECT an existing id, never invent
-    one — this is the anti-duplication guarantee. Cached per error signature."""
+    one — the anti-duplication guarantee. POST keeps the user's text out of
+    request URLs/logs; cached per error signature; rate-limited."""
+    if not rate_limiter.is_allowed(_get_client_ip(request)):
+        raise HTTPException(status_code=429, detail="Too many requests")
+    learning = body.learning
+    err_type = body.type
+    original = body.original
+    corrected = body.corrected
+    explanation = body.explanation
     try:
         topics = rules_store.load_topics(learning)
     except ValueError:
