@@ -1,0 +1,881 @@
+{
+  "learning": "ru",
+  "interface": "de",
+  "generated_at": "2026-06-26T11:17:04.903635+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "падежные-окончания",
+      "topic": "падежные окончания",
+      "title": "Akkusativ femininer Substantive (Endungen -а/-я)",
+      "explanation": "Feminine Substantive, die im Nominativ auf -а oder -я enden, ändern ihre Endung im Akkusativ zu -у bzw. -ю. Vergessen Sie diese Änderung nicht, sonst klingt der Satz ungrammatisch. Zum Beispiel: 'Я вижу сестра' ist falsch – richtig ist 'Я вижу сестру'.",
+      "examples": [
+        {
+          "wrong": "Я вижу мама",
+          "right": "Я вижу маму",
+          "note": "Hier muss das direkte Objekt 'мама' in den Akkusativ: маму"
+        },
+        {
+          "wrong": "Она читает книга",
+          "right": "Она читает книгу",
+          "note": "Das feminine Substantiv 'книга' bekommt die Endung -у"
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Übersetze: 'Ich sehe die Schwester' (Schwester = сестра)",
+          "answer": "Я вижу сестру"
+        },
+        {
+          "prompt": "Übersetze: 'Er liebt seine Mama' (Mama = мама)",
+          "answer": "Он любит свою маму"
+        },
+        {
+          "prompt": "Übersetze: 'Sie liest ein Buch' (Buch = книга)",
+          "answer": "Она читает книгу"
+        }
+      ]
+    },
+    {
+      "rule_id": "глагольные-приставки",
+      "topic": "глагольные приставки",
+      "title": "Russische Verbalpräfixe: по- und про-",
+      "explanation": "Viele russische Verben bilden den perfektiven Aspekt mit dem Präfix 'про-', was eine vollendete Handlung bedeutet. Das Präfix 'по-' hingegen zeigt eine Handlung mit begrenzter Dauer oder den Beginn einer Handlung an. Ein häufiger Fehler ist es, 'по-' anstelle von 'про-' zu verwenden, um eine abgeschlossene Handlung auszudrücken. Richtig ist: 'прочитать' (durchlesen/fertig lesen) und 'прослушать' (ganz anhören), während 'почитать' und 'послушать' nur eine Weile Lesen/Hören bedeuten.",
+      "examples": [
+        {
+          "wrong": "Я почитал книгу.",
+          "right": "Я прочитал книгу.",
+          "note": "'Почитал' bedeutet 'las eine Weile', nicht 'las zu Ende'."
+        },
+        {
+          "wrong": "Я послушал музыку.",
+          "right": "Я прослушал музыку.",
+          "note": "'Послушал' heißt 'hörte eine Weile', 'прослушал' heißt 'hörte ganz an'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Setze das richtige Präfix ein (по- oder про-): Ich habe das Buch zu Ende gelesen. – Я _______ книгу.",
+          "answer": "прочитал"
+        },
+        {
+          "prompt": "Setze das richtige Präfix ein: Ich habe eine Weile Radio gehört. – Я _______ радио.",
+          "answer": "послушал"
+        },
+        {
+          "prompt": "Setze das richtige Präfix ein: Ich habe den Film bis zum Ende gesehen. – Я _______ фильм.",
+          "answer": "просмотрел"
+        }
+      ]
+    },
+    {
+      "rule_id": "ударения",
+      "topic": "ударения",
+      "title": "Russische Betonung (ударение) – häufige Fehler",
+      "explanation": "Im Russischen ist die Betonung frei und kann auf jeder Silbe liegen. Ein häufiger Fehler deutscher Lernender ist es, die Betonung auf die falsche Silbe zu setzen. Merke dir: Die Betonung verschiebt sich oft in verschiedenen Wortformen, du musst sie also für jedes Wort einzeln lernen.",
+      "examples": [
+        {
+          "wrong": "зво́нит",
+          "right": "звони́т",
+          "note": "Das Verb 'звонить' (klingeln/anrufen) wird in der 3. Person Singular immer auf der letzten Silbe betont: звони́т."
+        },
+        {
+          "wrong": "то́рты",
+          "right": "то́рты",
+          "note": "Im Plural von 'торт' (Kuchen) bleibt die Betonung auf der ersten Silbe – entgegen der häufigen falschen Aussprache 'торты́'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Setze die richtige Betonung (betonte Silbe markiert) in das Wort ein: Das Verb für 'anfangen' im Infinitiv – 'начать'. Welche Silbe ist betont?",
+          "answer": "нача́ть"
+        },
+        {
+          "prompt": "Wie spricht man das Wort für 'schön' (weiblich, kurzform) richtig aus? Bitte gib das Wort mit Betonung an: красива.",
+          "answer": "краси́ва"
+        }
+      ]
+    },
+    {
+      "rule_id": "видовые-пары-глаголов",
+      "topic": "видовые пары глаголов",
+      "title": "Russische Aspektpaare: perfektiv vs. imperfektiv",
+      "explanation": "Im Russischen unterscheidet man zwischen perfektiven und imperfektiven Verben. Der perfektive Aspekt betont den Abschluss einer Handlung, der imperfektive betont den Verlauf oder die Wiederholung. Ein häufiger Fehler ist die Verwendung des falschen Aspekts, z.B. bei einmaligen abgeschlossenen Handlungen das imperfektive Verb zu benutzen.",
+      "examples": [
+        {
+          "wrong": "Я читал эту книгу вчера.",
+          "right": "Я прочитал эту книгу вчера.",
+          "note": "Wenn gestern die Handlung abgeschlossen wurde, braucht man den perfektiven Aspekt (прочитал), nicht den imperfektiven (читал)."
+        },
+        {
+          "wrong": "Он писал письмо и отправил его.",
+          "right": "Он написал письмо и отправил его.",
+          "note": "Beide Handlungen sind abgeschlossen (schreiben und senden) – daher perfektiv (написал)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Wähle den richtigen Aspekt für den Satz: \"Ich habe gestern (kochen) – fertig.\"",
+          "answer": "Я приготовил ужин вчера."
+        },
+        {
+          "prompt": "Vervollständige: \"Jeden Morgen (frühstücken) – ich gewöhnlich.\"",
+          "answer": "Я завтракаю каждое утро."
+        }
+      ]
+    },
+    {
+      "rule_id": "мягкие-согласные",
+      "topic": "мягкие согласные",
+      "title": "Weiche Konsonanten (мягкие согласные)",
+      "explanation": "Im Russischen können Konsonanten hart oder weich (palatalisiert) sein. Ein häufiger Fehler deutscher Muttersprachler ist, weiche Konsonanten am Wortende oder vor bestimmten Vokalen nicht zu palatalisieren. Das Weichheitszeichen 'ь' zeigt an, dass der vorhergehende Konsonant weich ausgesprochen werden muss.",
+      "examples": [
+        {
+          "wrong": "мат",
+          "right": "мать",
+          "note": "Das 'т' am Ende muss weich sein – wie 'tj'."
+        },
+        {
+          "wrong": "брат",
+          "right": "брать",
+          "note": "Der Konsonant 'т' wird weich, da das Wort mit 'ь' endet."
+        },
+        {
+          "wrong": "мел",
+          "right": "мель",
+          "note": "Das 'л' wird weich – vergleiche die Aussprache."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Schreiben Sie das russische Wort für 'Mutter' (mit weichem 'т').",
+          "answer": "мать"
+        },
+        {
+          "prompt": "Schreiben Sie das russische Wort für 'nehmen' (mit weichem 'т').",
+          "answer": "брать"
+        },
+        {
+          "prompt": "Schreiben Sie das russische Wort für 'Untiefe' (mit weichem 'л').",
+          "answer": "мель"
+        }
+      ]
+    },
+    {
+      "rule_id": "редукция-гласных",
+      "topic": "редукция гласных",
+      "title": "Reduktion der unbetonten Vokale (Редукция гласных)",
+      "explanation": "Im Russischen werden unbetonte Vokale anders ausgesprochen als geschrieben. Das unbetonte 'о' klingt wie ein kurzes 'а', und das unbetonte 'е' (nach weichem Konsonanten) wie ein kurzes 'и'. Die Schreibung bleibt jedoch immer gleich – du musst die richtige Rechtschreibung lernen.",
+      "examples": [
+        {
+          "wrong": "карова",
+          "right": "корова",
+          "note": "Das unbetonte erste 'o' in 'корова' klingt wie 'а', wird aber 'o' geschrieben."
+        },
+        {
+          "wrong": "миня",
+          "right": "меня",
+          "note": "Das unbetonte 'e' in 'меня' klingt wie 'и', wird aber 'е' geschrieben."
+        },
+        {
+          "wrong": "харашо",
+          "right": "хорошо",
+          "note": "Beide unbetonten 'o' klingen wie 'а', die Schreibung bleibt 'о'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Schreibe das russische Wort für 'Kuh' (denk an die Vokalreduktion).",
+          "answer": "корова"
+        },
+        {
+          "prompt": "Schreibe das russische Wort für 'Telefon' (Achtung auf das unbetonte 'e').",
+          "answer": "телефон"
+        },
+        {
+          "prompt": "Schreibe das russische Wort für 'Garten' (Gemüsegarten, mit zwei unbetonten 'o').",
+          "answer": "огород"
+        }
+      ]
+    },
+    {
+      "rule_id": "ударение",
+      "topic": "ударение",
+      "title": "Der russische Wortakzent – eine typische Fehlerquelle",
+      "explanation": "Im Russischen ist der Akzent frei und kann auf jede Silbe fallen. Anders als im Deutschen wird er nicht durch Regeln bestimmt. Du musst ihn für jedes Wort einzeln lernen, sonst entstehen Missverständnisse – z. B. bei Wörtern wie «звони́т» (ruft an) und «зво́нит» (falsch).",
+      "examples": [
+        {
+          "wrong": "зво́нит",
+          "right": "звони́т",
+          "note": "Man sagt nicht «зво́нит», sondern «звони́т» – der Akzent liegt auf der letzten Silbe."
+        },
+        {
+          "wrong": "до́говор",
+          "right": "догово́р",
+          "note": "Im Russischen heißt es «догово́р», nicht «до́говор». Üblich ist der Akzent auf der letzten Silbe."
+        },
+        {
+          "wrong": "торты́",
+          "right": "то́рты",
+          "note": "Bei «торты» (Kuchen) bleibt der Akzent auf der ersten Silbe – auch im Plural."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Setze den richtigen Akzent im Wort «магазин» (Geschäft).",
+          "answer": "магази́н"
+        },
+        {
+          "prompt": "Korrigiere die falsche Betonung: «нача́ть» oder «на́чать»? (beginnen)",
+          "answer": "нача́ть"
+        },
+        {
+          "prompt": "Wie wird «понял» (er verstand) richtig betont?",
+          "answer": "по́нял"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-быть-in-present-tense",
+      "topic": "Use of \"быть\" in present tense",
+      "title": "Das Verb 'быть' im Präsens weglassen",
+      "explanation": "Im Russischen wird das Verb 'sein' (быть) im Präsens normalerweise nicht verwendet. Statt 'Я есть студент' sagt man einfach 'Я студент'. Die Form 'есть' kommt nur in bestimmten Ausnahmefällen vor, z.B. bei Besitzangaben oder wenn die Existenz betont wird. In den meisten Sätzen lässt man es weg.",
+      "examples": [
+        {
+          "wrong": "Я есть студент.",
+          "right": "Я студент.",
+          "note": "Falsche Kopula – 'есть' wird nicht benötigt."
+        },
+        {
+          "wrong": "Она есть врач.",
+          "right": "Она врач.",
+          "note": "Auch hier entfällt 'есть' im Präsens."
+        },
+        {
+          "wrong": "Это есть книга.",
+          "right": "Это книга.",
+          "note": "Bei 'это' wird ebenfalls kein 'есть' verwendet."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Übersetze 'Ich bin Lehrer' ins Russische.",
+          "answer": "Я учитель."
+        },
+        {
+          "prompt": "Übersetze 'Sie ist Studentin' (formell) ins Russische.",
+          "answer": "Она студентка."
+        },
+        {
+          "prompt": "Übersetze 'Das ist ein Haus' ins Russische.",
+          "answer": "Это дом."
+        }
+      ]
+    },
+    {
+      "rule_id": "genitive-of-negation",
+      "topic": "Genitive of negation",
+      "title": "Der Genitiv der Verneinung im Russischen",
+      "explanation": "Wenn du im Russischen verneinst, dass etwas vorhanden ist (z. B. mit „нет“) oder eine Handlung mit „не“ verneinst, steht das Objekt im Genitiv statt im Nominativ oder Akkusativ. Das gilt besonders für Sätze wie „Ich habe kein …“ (У меня нет …) oder „Ich sehe nicht …“ (Я не вижу …). Merke: Nach verneinten Verben und „нет“ folgt fast immer der Genitiv.",
+      "examples": [
+        {
+          "wrong": "У меня нет книга.",
+          "right": "У меня нет книги.",
+          "note": "„Книга“ (Nominativ) wird zu „книги“ (Genitiv), weil der Satz die Abwesenheit ausdrückt."
+        },
+        {
+          "wrong": "Я не вижу собаку.",
+          "right": "Я не вижу собаки.",
+          "note": "Nach dem verneinten Verb „не вижу“ steht das Objekt im Genitiv („собаки“) statt im Akkusativ („собаку“)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Übersetze: „Ich habe keinen Freund.“",
+          "answer": "У меня нет друга."
+        },
+        {
+          "prompt": "Übersetze: „Sie liest keine Zeitung.“",
+          "answer": "Она не читает газеты."
+        }
+      ]
+    },
+    {
+      "rule_id": "numerals-with-noun-agreement",
+      "topic": "Numerals with noun agreement",
+      "title": "Zahlen mit Substantiven: 2-4 vs. 5+",
+      "explanation": "Im Russischen richtet sich die Form des Substantivs nach der Zahl. Nach den Zahlen 2, 3 und 4 steht das Substantiv im Genitiv Singular (z. B. два стула). Nach Zahlen ab 5 (es sei denn, die letzte Ziffer ist 1) steht das Substantiv im Genitiv Plural (z. B. пять стульев). Die Zahl 1 verlangt den Nominativ Singular.",
+      "examples": [
+        {
+          "wrong": "два стулы",
+          "right": "два стула",
+          "note": "Nach 'два' steht der Genitiv Singular 'стула'."
+        },
+        {
+          "wrong": "пять стула",
+          "right": "пять стульев",
+          "note": "Nach 'пять' steht der Genitiv Plural 'стульев'."
+        },
+        {
+          "wrong": "три книг",
+          "right": "три книги",
+          "note": "Nach 'три' steht der Genitiv Singular 'книги'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Wie sagt man 'zwei Stühle' auf Russisch?",
+          "answer": "два стула"
+        },
+        {
+          "prompt": "Wie sagt man 'fünf Bücher' auf Russisch?",
+          "answer": "пять книг"
+        },
+        {
+          "prompt": "Wie sagt man 'drei Tische' auf Russisch?",
+          "answer": "три стола"
+        }
+      ]
+    },
+    {
+      "rule_id": "short-vs-long-adjectives",
+      "topic": "Short vs long adjectives",
+      "title": "Kurze und lange Adjektive im Russischen",
+      "explanation": "Im Russischen gibt es kurze und lange Formen von Adjektiven. Lange Adjektive werden attributiv (vor einem Nomen) verwendet, kurze Adjektive dagegen prädikativ (als Teil des Prädikats). Ein häufiger Fehler ist es, die lange Form im Prädikat zu verwenden, obwohl die kurze Form korrekt wäre.",
+      "examples": [
+        {
+          "wrong": "Он больной.",
+          "right": "Он болен.",
+          "note": "Hier ist 'болен' die Kurzform für den Zustand. Die Langform 'больной' gehört nur vor ein Nomen (z. B. 'больной человек')."
+        },
+        {
+          "wrong": "Это красивый.",
+          "right": "Это красиво.",
+          "note": "Für unpersönliche Aussagen („das ist schön“) verwendet man die Kurzform im Neutrum 'красиво'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Übersetze: „Er ist jung.“ (Verwende die korrekte Adjektivform)",
+          "answer": "Он молод."
+        },
+        {
+          "prompt": "Übersetze: „Das ist ein interessantes Buch.“ (Verwende das richtige Adjektiv vor dem Nomen)",
+          "answer": "Это интересная книга."
+        },
+        {
+          "prompt": "Wähle die richtige Form: 'Она (красивая/красива)' für „Sie ist schön.“",
+          "answer": "красива"
+        }
+      ]
+    },
+    {
+      "rule_id": "word-order-in-questions",
+      "topic": "Word order in questions",
+      "title": "Wortstellung in Fragen (Russisch vs. Deutsch)",
+      "explanation": "Im Russischen wird die Frage meist durch die Betonung (steigende Intonation) gebildet, nicht durch die Wortstellung. Bei Ja/Nein-Fragen bleibt die Wortstellung wie im Aussagesatz. Bei W-Fragen steht das Fragewort am Anfang, danach folgt die normale Satzstellung (Subjekt – Verb – Objekt). Deutsche Lernende neigen dazu, Verb und Subjekt zu vertauschen wie im Deutschen, was im Russischen ein typischer Fehler ist.",
+      "examples": [
+        {
+          "wrong": "Любишь ты кофе?",
+          "right": "Ты любишь кофе?",
+          "note": "Ja/Nein-Frage: Wortstellung wie im Aussagesatz, nur die Intonation ändert sich."
+        },
+        {
+          "wrong": "Где живёшь ты?",
+          "right": "Где ты живёшь?",
+          "note": "W-Frage: Fragewort zuerst, dann Subjekt, dann Verb (wie im Aussagesatz)."
+        },
+        {
+          "wrong": "Кого видишь ты?",
+          "right": "Кого ты видишь?",
+          "note": "Auch bei Objektfragen: Subjekt bleibt vor dem Verb."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Übersetze: „Sprichst du Russisch?“ (Ja/Nein-Frage)",
+          "answer": "Ты говоришь по-русски?"
+        },
+        {
+          "prompt": "Übersetze: „Wo wohnt er?“ (W-Frage)",
+          "answer": "Где он живёт?"
+        },
+        {
+          "prompt": "Übersetze: „Ist sie Ärztin?“ (Ja/Nein-Frage, ohne Verb)",
+          "answer": "Она врач?"
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-verbs-vs-non-reflexive",
+      "topic": "Reflexive verbs vs non-reflexive",
+      "title": "Reflexive Verben vs. nicht-reflexive Verben im Russischen",
+      "explanation": "Im Russischen enden reflexive Verben auf -ся (nach Vokal -сь) und zeigen an, dass die Handlung auf das Subjekt selbst zurückfällt (sich waschen, sich anziehen) oder gegenseitig ist (sich küssen). Nicht-reflexive Verben ohne -ся sind transitiv oder intransitiv, beziehen sich aber nicht auf das Subjekt. Ein häufiger Fehler ist, das -ся zu vergessen, wenn es nötig ist, oder es fälschlich hinzuzufügen.",
+      "examples": [
+        {
+          "wrong": "Я мою.",
+          "right": "Я моюсь.",
+          "note": "мою = ich wasche (etwas), моюсь = ich wasche mich."
+        },
+        {
+          "wrong": "Они целуют.",
+          "right": "Они целуются.",
+          "note": "целуют = sie küssen (jemanden), целуются = sie küssen sich (gegenseitig)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vervollständigen Sie: 'Я _____ (sich waschen) каждое утро.'",
+          "answer": "моюсь"
+        },
+        {
+          "prompt": "Vervollständigen Sie: 'Он _____ (kochen) das Abendessen.'",
+          "answer": "готовит"
+        },
+        {
+          "prompt": "Vervollständigen Sie: 'Мы _____ (sich treffen) um 6 Uhr.'",
+          "answer": "встречаемся"
+        }
+      ]
+    },
+    {
+      "rule_id": "motion-verbs-ходитьидтиехать",
+      "topic": "Motion verbs ходить/идти/ехать",
+      "title": "Russische Bewegungsverben: ходить/идти/ехать – häufige Fehler",
+      "explanation": "Die Verben идти/ходить bedeuten „zu Fuß gehen“ und ехать/ездить „mit einem Fahrzeug fahren“. Идти/ехать drücken eine einmalige, aktuelle Bewegung in eine Richtung aus, während ходить/ездить für wiederholte oder gewohnheitsmäßige Handlungen stehen. Ein häufiger Fehler ist, diese Aspekte zu verwechseln.",
+      "examples": [
+        {
+          "wrong": "Я иду в школу каждый день.",
+          "right": "Я хожу в школу каждый день.",
+          "note": "„Идти“ bezeichnet die aktuelle Bewegung; für regelmäßige Handlungen verwendet man „ходить“."
+        },
+        {
+          "wrong": "Я хожу сейчас в магазин.",
+          "right": "Я иду сейчас в магазин.",
+          "note": "Bei einer einmaligen, aktuellen Bewegung benutzt man „идти“."
+        },
+        {
+          "wrong": "Я иду на работу на автобусе.",
+          "right": "Я еду на работу на автобусе.",
+          "note": "Für Fahrzeugbewegungen verwendet man „ехать/ездить“, nicht „идти/ходить“."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Übersetze: 'Ich gehe (zu Fuß) gerade ins Kino.'",
+          "answer": "Я иду в кино."
+        },
+        {
+          "prompt": "Übersetze: 'Ich fahre jeden Tag mit dem Bus zur Arbeit.'",
+          "answer": "Я езжу на работу на автобусе каждый день."
+        },
+        {
+          "prompt": "Ergänze: 'Обычно я ___ (walk) в парк, но сегодня я ___ (go by car).'",
+          "answer": "Обычно я хожу в парк, но сегодня я еду на машине."
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-свой-vs-мойтвой",
+      "topic": "Possessive свой vs мой/твой",
+      "title": "Possessivpronomen: свой vs мой/твой",
+      "explanation": "Im Russischen verwendet man свой, wenn das Subjekt des Satzes der Besitzer ist (reflexiv). Мой/твой werden benutzt, wenn der Besitzer nicht das Subjekt ist oder um zu betonen. Ein typischer Fehler ist die Verwendung von мой/твой anstelle von свой, wenn Subjekt und Besitzer identisch sind.",
+      "examples": [
+        {
+          "wrong": "Я беру мою книгу.",
+          "right": "Я беру свою книгу.",
+          "note": "Hier bin ich (я) das Subjekt und Besitzer – daher reflexives свой."
+        },
+        {
+          "wrong": "Он любит его жену.",
+          "right": "Он любит свою жену.",
+          "note": "Er (он) ist Subjekt und besitzt die Frau – свой, nicht его (würde eine andere Person bedeuten)."
+        },
+        {
+          "wrong": "Ты взял твою ручку?",
+          "right": "Ты взял свою ручку?",
+          "note": "Du (ты) bist Subjekt und Besitzer – also свой."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Übersetze ins Russische: „Ich wasche meine Hände.“ (mit dem richtigen Possessivpronomen)",
+          "answer": "Я мою свои руки."
+        },
+        {
+          "prompt": "Korrigiere den Satz: „Она читает её книгу.“ (gemeint: ihr eigenes Buch)",
+          "answer": "Она читает свою книгу."
+        },
+        {
+          "prompt": "Setze das fehlende Pronomen ein: „Мы любим ___ детей.“ (unsere eigenen Kinder)",
+          "answer": "своих"
+        }
+      ]
+    },
+    {
+      "rule_id": "subjunctive-with-бы",
+      "topic": "Subjunctive with бы",
+      "title": "Der Konjunktiv mit „бы“",
+      "explanation": "Im Russischen wird die Partikel „бы“ für den Konjunktiv (irreale Wünsche, Bedingungen, Höflichkeit) verwendet. Sie steht meist nach dem Verb oder am Ende des Satzes. Ein häufiger Fehler ist, sie wie im Deutschen an den Satzanfang zu setzen oder zu vergessen.",
+      "examples": [
+        {
+          "wrong": "Я бы хочу пойти.",
+          "right": "Я хотел бы пойти.",
+          "note": "„бы“ steht nie bei Präsensformen; verwende Vergangenheit oder Infinitiv + бы."
+        },
+        {
+          "wrong": "Если бы я знал, я пришел.",
+          "right": "Если бы я знал, я бы пришел.",
+          "note": "Im Hauptsatz muss „бы“ wiederholt werden, auch wenn es im Nebensatz schon steht."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Übersetze: „Ich würde gerne Tee trinken.“ (Verwende den Infinitiv + бы)",
+          "answer": "Я бы хотел выпить чай."
+        },
+        {
+          "prompt": "Bilde einen Konditionalsatz: „Wenn ich Zeit hätte, würde ich kommen.“",
+          "answer": "Если бы у меня было время, я бы пришёл."
+        },
+        {
+          "prompt": "Korrigiere: „Я бы хочу спать.“",
+          "answer": "Я хотел бы спать."
+        }
+      ]
+    },
+    {
+      "rule_id": "impersonal-constructions-мне-холодно",
+      "topic": "Impersonal constructions (мне холодно)",
+      "title": "Unpersönliche Konstruktionen (мне холодно)",
+      "explanation": "Im Russischen werden Zustände wie Kälte, Wärme oder Gefühle nicht mit dem Subjekt im Nominativ („ich“) ausgedrückt, sondern mit dem Dativ („mir“) und einem Adverb. Sag also nicht „я холодно“, sondern „мне холодно“. Der Dativ zeigt an, wer den Zustand erlebt.",
+      "examples": [
+        {
+          "wrong": "Я холодно.",
+          "right": "Мне холодно.",
+          "note": "„Я“ (Nominativ) ist falsch; verwende „мне“ (Dativ)."
+        },
+        {
+          "wrong": "Я жарко.",
+          "right": "Мне жарко.",
+          "note": "Gleiches Prinzip: Dativ + Adverb."
+        },
+        {
+          "wrong": "Я грустно.",
+          "right": "Мне грустно.",
+          "note": "Auch bei Gefühlen steht die Person im Dativ."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Wie sagt man „Mir ist kalt“ auf Russisch?",
+          "answer": "Мне холодно."
+        },
+        {
+          "prompt": "Wie sagt man „Mir ist heiß“ auf Russisch?",
+          "answer": "Мне жарко."
+        },
+        {
+          "prompt": "Vervollständigen Sie: „... грустно.“ (Mir ist traurig.)",
+          "answer": "Мне"
+        }
+      ]
+    },
+    {
+      "rule_id": "particle-ли-in-indirect-questions",
+      "topic": "Particle ли in indirect questions",
+      "title": "Die Partikel 'ли' in indirekten Fragen",
+      "explanation": "Im Russischen wird die Partikel 'ли' in indirekten Fragen verwendet, um 'ob' auszudrücken. Sie steht direkt nach dem Wort, über das die Frage gestellt wird (z. B. nach dem Verb oder dem Subjekt). Im Gegensatz zum Deutschen gibt es keine Inversion des Subjekts. Ein häufiger Fehler ist die Verwendung von 'если' (wenn/falls) anstelle von 'ли'.",
+      "examples": [
+        {
+          "wrong": "Я не знаю, если он придёт.",
+          "right": "Я не знаю, придёт ли он.",
+          "note": "Nach 'знаю' folgt die indirekte Frage mit 'ли' nach dem Verb 'придёт'."
+        },
+        {
+          "wrong": "Скажите, если у вас есть время.",
+          "right": "Скажите, есть ли у вас время.",
+          "note": "'ли' steht nach dem Verb 'есть'."
+        },
+        {
+          "wrong": "Он спросил, если я хочу чай.",
+          "right": "Он спросил, хочу ли я чай.",
+          "note": "Das Verb 'хочу' steht vor 'ли'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Übersetzen Sie ins Russische: 'Ich frage mich, ob er morgen kommt.'",
+          "answer": "Я спрашиваю, придёт ли он завтра."
+        },
+        {
+          "prompt": "Ergänzen Sie: 'Мы не знаем, ___ (ob sie einverstanden ist).'",
+          "answer": "согласна ли она"
+        },
+        {
+          "prompt": "Korrigieren Sie den Fehler: 'Она спросила, если это правда.'",
+          "answer": "Она спросила, правда ли это."
+        }
+      ]
+    },
+    {
+      "rule_id": "declension-of-cardinal-numerals",
+      "topic": "Declension of cardinal numerals",
+      "title": "Deklination der Kardinalzahlen (Grundzahlen)",
+      "explanation": "Im Russischen müssen Kardinalzahlen wie два, три, vier nach Kasus, Genus und Numerus dekliniert werden. Ein häufiger Fehler von Deutschsprachigen ist es, sie unverändert zu lassen (wie im Deutschen). Merke: два/две (zwei) wird im Genitiv und Präpositional zu двух, und für feminine Nomen im Nominativ/Akkusativ verwendest du две.",
+      "examples": [
+        {
+          "wrong": "У меня есть два книга.",
+          "right": "У меня есть две книги.",
+          "note": "два (maskulin/neutral) vs. две (feminin) im Nominativ/Akkusativ."
+        },
+        {
+          "wrong": "Я говорю о два друзьях.",
+          "right": "Я говорю о двух друзьях.",
+          "note": "Nach Präpositionen (z.B. о) steht der Präpositional: два → двух."
+        },
+        {
+          "wrong": "У меня нет два книги.",
+          "right": "У меня нет двух книг.",
+          "note": "Im Genitiv (z.B. nach нет) wird два zu двух, Nomen im Genitiv Plural."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Setze die richtige Form von 'два' im Genitiv ein: У меня нет ___ книг.",
+          "answer": "двух"
+        },
+        {
+          "prompt": "Setze die richtige Form von 'два' im Präpositional ein: Я говорю о ___ студентах.",
+          "answer": "двух"
+        },
+        {
+          "prompt": "Setze die richtige Form von 'два' für ein feminines Nomen im Nominativ ein: ___ книги лежат на столе.",
+          "answer": "две"
+        }
+      ]
+    },
+    {
+      "rule_id": "prepositional-case-with-time-expressions",
+      "topic": "Prepositional case with time expressions",
+      "title": "Präpositiv bei Zeitangaben (в + Präpositiv)",
+      "explanation": "Im Russischen verwendet man den Präpositiv (6. Fall) mit der Präposition 'в' für Zeitangaben wie Monate, Jahre und Jahreszeiten. Deutsche Lernende setzen oft fälschlicherweise den Akkusativ ein (z.B. 'в январь' statt 'в январе'). Merken Sie sich: Nach 'в' bei diesen Zeitangaben steht immer der Präpositiv.",
+      "examples": [
+        {
+          "wrong": "Я приеду в январь.",
+          "right": "Я приеду в январе.",
+          "note": "Monate erfordern den Präpositiv (Januar -> январе)."
+        },
+        {
+          "wrong": "Он родился в 1990 год.",
+          "right": "Он родился в 1990 году.",
+          "note": "Jahre erfordern den Präpositiv (год -> году)."
+        },
+        {
+          "wrong": "Мы встретились в прошлый год.",
+          "right": "Мы встретились в прошлом году.",
+          "note": "Adjektiv + Jahr -> Präpositiv (прошлом году)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Übersetzen Sie: 'Ich komme im Mai.'",
+          "answer": "Я приеду в мае."
+        },
+        {
+          "prompt": "Ergänzen Sie: 'Она родилась ___ 2005 ___' (im Jahr 2005)",
+          "answer": "в 2005 году"
+        },
+        {
+          "prompt": "Korrigieren Sie den Fehler: 'Я был в Москве в прошлый год.'",
+          "answer": "Я был в Москве в прошлом году."
+        }
+      ]
+    },
+    {
+      "rule_id": "spelling-rules-after-velars-гкх",
+      "topic": "Spelling rules after velars (г/к/х)",
+      "title": "Rechtschreibregeln nach den Gaumenlauten (г/к/х)",
+      "explanation": "Nach den Konsonanten г, к und х darf man die Buchstaben ы, ю und я nicht schreiben. Stattdessen verwendet man и, у und а. Diese Regel hilft, typische Fehler bei der Schreibung von Wörtern wie „книги“ (nicht „книгы“) zu vermeiden.",
+      "examples": [
+        {
+          "wrong": "книгы",
+          "right": "книги",
+          "note": "Nach к wird и statt ы geschrieben."
+        },
+        {
+          "wrong": "хюдожник",
+          "right": "художник",
+          "note": "Nach х wird у statt ю geschrieben."
+        },
+        {
+          "wrong": "гярячий",
+          "right": "горячий",
+          "note": "Nach г wird о (hier kein я!) – die Regel betrifft я, nicht aber о."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Ergänze den richtigen Buchstaben: „дру_ья“ (Freunde) – nach г/к/х?",
+          "answer": "друзья (hier kein г/к/х, also bleibt я)"
+        },
+        {
+          "prompt": "Korrigiere den Fehler: „тихый“ (leise).",
+          "answer": "тихий"
+        },
+        {
+          "prompt": "Setze das richtige Wort ein: „На уроке мы читаем __иги“ (Bücher).",
+          "answer": "книги"
+        }
+      ]
+    },
+    {
+      "rule_id": "hard-sign-vs-soft-sign-usage",
+      "topic": "Hard sign vs soft sign usage",
+      "title": "Härtezeichen (ъ) vs. Weichheitszeichen (ь) im Russischen",
+      "explanation": "Das Härtezeichen 'ъ' dient nur als Trennzeichen vor 'е, ё, ю, я' und zeigt an, dass der vorherige Konsonant hart ausgesprochen wird. Das Weichheitszeichen 'ь' macht den vorherigen Konsonanten weich und wird ebenfalls als Trennzeichen vor denselben Vokalen verwendet. Der Schlüssel liegt in der Härte oder Weichheit des vorhergehenden Konsonanten.",
+      "examples": [
+        {
+          "wrong": "сьел",
+          "right": "съел",
+          "note": "Hier muss das Härtezeichen stehen, weil das 'с' hart ausgesprochen wird (Bedeutung: er aß)."
+        },
+        {
+          "wrong": "обьявление",
+          "right": "объявление",
+          "note": "Das 'б' ist hart, daher 'ъ' statt 'ь' (Ankündigung)."
+        },
+        {
+          "wrong": "семъя",
+          "right": "семья",
+          "note": "In 'семья' (Familie) ist das 'м' weich, deshalb Weichheitszeichen."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Setze das richtige Zeichen ein: с...ел (aß)",
+          "answer": "съел"
+        },
+        {
+          "prompt": "Setze das richtige Zeichen ein: об...явление (Ankündigung)",
+          "answer": "объявление"
+        },
+        {
+          "prompt": "Setze das richtige Zeichen ein: сем...я (Familie)",
+          "answer": "семья"
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciation-of-ч-vs-щ",
+      "topic": "Pronunciation of ч vs щ",
+      "title": "Aussprache von ч und щ",
+      "explanation": "ч wird wie das deutsche 'tsch' in 'Tschüss' ausgesprochen – kurz und hart. щ hingegen ist ein weicher, langer Laut, der wie ein 'schtsch' klingt, aber mit der Zunge am Gaumen. Achten Sie besonders auf die Länge und Weichheit: щ ist immer länger und weicher als ч.",
+      "examples": [
+        {
+          "wrong": "плащ",
+          "right": "плач",
+          "note": "Verwechseln Sie nicht 'плач' (das Weinen) mit 'плащ' (der Regenmantel)."
+        },
+        {
+          "wrong": "мочь",
+          "right": "мощь",
+          "note": "In 'мощь' (die Macht) ist щ lang und weich, während 'мочь' (können) ein kurzes, hartes ч hat."
+        },
+        {
+          "wrong": "чука",
+          "right": "щука",
+          "note": "Bei 'щука' (der Hecht) müssen Sie щ verwenden – nicht ч."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Welches Wort ist richtig für 'das Weinen'? – плач oder плащ?",
+          "answer": "плач"
+        },
+        {
+          "prompt": "Ergänzen Sie den fehlenden Laut: '_áшка' (die Tasse).",
+          "answer": "чашка"
+        },
+        {
+          "prompt": "Sprechen Sie 'der Hecht' auf Russisch aus und schreiben Sie das Wort.",
+          "answer": "щука"
+        }
+      ]
+    },
+    {
+      "rule_id": "conjugation-patterns-еи-endings",
+      "topic": "Conjugation patterns е/и endings",
+      "title": "Russische Verben: Endungen -ешь/-ишь und -ет/-ит richtig verwenden",
+      "explanation": "Im Russischen werden Verben im Präsens nach zwei Konjugationstypen gebeugt: Endungen mit -е- (1. Konjugation) oder -и- (2. Konjugation). Ein häufiger Fehler ist, die Endungen zu verwechseln, z. B. bei „писать“ (schreiben) sagt man „ты пишешь“ (nicht *пишишь) oder bei „говорить“ (sprechen) heißt es „он говорит“ (nicht *говорет). Merke: Verben auf -ать/-ять gehören meist zur 1. Konjugation (e), Verben auf -ить zur 2. Konjugation (и).",
+      "examples": [
+        {
+          "wrong": "Ты пишишь письмо.",
+          "right": "Ты пишешь письмо.",
+          "note": "Das Verb „писать“ (schreiben) ist 1. Konjugation, daher -ешь, nicht -ишь."
+        },
+        {
+          "wrong": "Он говорет по-русски.",
+          "right": "Он говорит по-русски.",
+          "note": "Das Verb „говорить“ (sprechen) ist 2. Konjugation, daher -ит, nicht -ет."
+        },
+        {
+          "wrong": "Мы учем русский язык.",
+          "right": "Мы учим русский язык.",
+          "note": "Das Verb „учить“ (lernen) ist 2. Konjugation, daher -им, nicht -ем."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Setze die richtige Endung ein: Ты (читать) книгу?",
+          "answer": "читаешь"
+        },
+        {
+          "prompt": "Setze die richtige Endung ein: Она (строить) дом.",
+          "answer": "строит"
+        },
+        {
+          "prompt": "Setze die richtige Endung ein: Мы (отдыхать) на море.",
+          "answer": "отдыхаем"
+        }
+      ]
+    },
+    {
+      "rule_id": "ordinal-vs-cardinal-numbers",
+      "topic": "Ordinal vs cardinal numbers",
+      "title": "Ordnungs- vs. Grundzahlen im Russischen",
+      "explanation": "Im Russischen werden Ordnungszahlen (z. B. первый, второй) verwendet, um Reihenfolgen, Daten und Stockwerke anzugeben. Grundzahlen (один, два) hingegen zählen Dinge, Personen oder das Alter. Ein typischer Fehler deutscher Lerner ist, bei Daten oder Positionen fälschlich Grundzahlen zu benutzen.",
+      "examples": [
+        {
+          "wrong": "Сегодня один мая.",
+          "right": "Сегодня первое мая.",
+          "note": "Bei Daten steht die Ordnungszahl im Neutrum Singular (первое, второе …)."
+        },
+        {
+          "wrong": "Я живу на один этаже.",
+          "right": "Я живу на первом этаже.",
+          "note": "Stockwerke erfordern Ordnungszahlen im Präpositiv (на первом, на втором …)."
+        },
+        {
+          "wrong": "Я в очередь номер три.",
+          "right": "Я в третьей очереди.",
+          "note": "Für Positionen in einer Reihenfolge verwendet man Ordnungszahlen (третьей, четвёртой …)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Übersetze: „Heute ist der 5. März.“",
+          "answer": "Сегодня пятое марта."
+        },
+        {
+          "prompt": "Ergänze: „Ich wohne im zweiten Stock.“",
+          "answer": "Я живу на втором этаже."
+        },
+        {
+          "prompt": "Sag auf Russisch: „Er ist der Erste in der Liste.“",
+          "answer": "Он первый в списке."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,841 @@
+{
+  "learning": "uk",
+  "interface": "en",
+  "generated_at": "2026-06-26T11:37:52.413324+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "чергування-голосних",
+      "topic": "чергування голосних",
+      "title": "Vowel Alternation (Чергування голосних) in Ukrainian",
+      "explanation": "In Ukrainian, certain vowels change when a word's syllable structure changes between cases or forms. The most common alternations are о↔і and е↔і, typically seen when a closed syllable (with і) becomes open (with о or е) in forms like the locative case.",
+      "examples": [
+        {
+          "wrong": "на стілі",
+          "right": "на столі",
+          "note": "The word 'стіл' changes to 'стол' in the locative because the syllable becomes open."
+        },
+        {
+          "wrong": "на кіті",
+          "right": "на коті",
+          "note": "'кіт' becomes 'кот' in the locative for the same reason."
+        },
+        {
+          "wrong": "на пічі",
+          "right": "на печі",
+          "note": "'піч' changes 'і' to 'е' in the locative when the syllable opens."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the locative form (meaning 'on the table') of the word 'стіл'.",
+          "answer": "на столі"
+        },
+        {
+          "prompt": "Write the locative form (meaning 'on the stove') of the word 'піч'.",
+          "answer": "на печі"
+        }
+      ]
+    },
+    {
+      "rule_id": "мякий-знак",
+      "topic": "м'який знак",
+      "title": "Mastering the Soft Sign (М'який знак)",
+      "explanation": "The soft sign (ь) softens the preceding consonant. Unlike English, it is a distinct letter that changes pronunciation. Common mistakes include omitting it where needed or adding it incorrectly.",
+      "examples": [
+        {
+          "wrong": "учител",
+          "right": "учитель",
+          "note": "Without the soft sign, 'л' is hard; with it, 'л' becomes soft, which is essential for the correct pronunciation of 'teacher'."
+        },
+        {
+          "wrong": "ден",
+          "right": "день",
+          "note": "The soft sign changes 'н' from hard to soft, altering the meaning to 'day'."
+        },
+        {
+          "wrong": "сол",
+          "right": "соль",
+          "note": "Similarly, 'соль' means 'salt' with a soft 'л', while 'сол' would be a different (non-existent) word."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Add the soft sign (ь) to make the word for 'horse': кін →",
+          "answer": "кінь"
+        },
+        {
+          "prompt": "Choose the correct Ukrainian word for 'day': (a) ден  (b) день",
+          "answer": "день"
+        },
+        {
+          "prompt": "Write the correct Ukrainian word for 'salt' (ending with soft sign):",
+          "answer": "сіль"
+        }
+      ]
+    },
+    {
+      "rule_id": "наголос",
+      "topic": "наголос",
+      "title": "Common Ukrainian Stress (Наголос) Mistakes",
+      "explanation": "In Ukrainian, stress placement can change meaning or sound unnatural if wrong. Many learners incorrectly stress the first syllable of common words like 'один' or 'була'. The stress is not predictable, so memorize the correct syllable.",
+      "examples": [
+        {
+          "wrong": "о́дин",
+          "right": "оди́н",
+          "note": "The stress on the first syllable (o) is incorrect; it should be on the second syllable (i)."
+        },
+        {
+          "wrong": "бу́ла",
+          "right": "була́",
+          "note": "For the feminine past tense verb 'to be', stress falls on the final syllable (a), not the first."
+        },
+        {
+          "wrong": "укра́їнська",
+          "right": "украї́нська",
+          "note": "The nationality adjective is stressed on the second syllable (ї), not the first (a)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Place the stress correctly in the word: один",
+          "answer": "оди́н"
+        },
+        {
+          "prompt": "Place the stress correctly in the word: була",
+          "answer": "була́"
+        },
+        {
+          "prompt": "Place the stress correctly in the word: українська",
+          "answer": "украї́нська"
+        }
+      ]
+    },
+    {
+      "rule_id": "відмінювання",
+      "topic": "відмінювання",
+      "title": "Genitive Case After Negation",
+      "explanation": "In Ukrainian, when a verb is negated (e.g., немає, не було, не бачу), the object must be in the genitive case. English speakers often mistakenly use the nominative form. Focus on changing the ending of the noun.",
+      "examples": [
+        {
+          "wrong": "немає стіл",
+          "right": "немає стола",
+          "note": "'стіл' (nominative) → 'стола' (genitive)"
+        },
+        {
+          "wrong": "не бачу книжка",
+          "right": "не бачу книжки",
+          "note": "'книжка' (nominative) → 'книжки' (genitive)"
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank with the correct genitive form: 'Немає ______ (друг)'",
+          "answer": "друга"
+        },
+        {
+          "prompt": "Correct the sentence: 'Я не маю час.'",
+          "answer": "Я не маю часу."
+        }
+      ]
+    },
+    {
+      "rule_id": "мякі-приголосні",
+      "topic": "м'які приголосні",
+      "title": "Soft Consonants (М'які приголосні) in Ukrainian",
+      "explanation": "In Ukrainian, consonants can be 'hard' (non-palatalized) or 'soft' (palatalized). Soft consonants are pronounced with the middle of the tongue raised toward the hard palate, similar to the 'ny' in 'canyon' or 'ly' in 'million'. English speakers often omit this softening, which can change the meaning of words. Pay attention to the soft sign (ь) and certain vowels (я, є, і, ї, ю) that indicate softness.",
+      "examples": [
+        {
+          "wrong": "мат",
+          "right": "мать",
+          "note": "The soft sign (ь) softens the final 't', changing 'mat' (a mat) to 'mother'."
+        },
+        {
+          "wrong": "лук",
+          "right": "люк",
+          "note": "The vowel 'ю' makes the preceding 'л' soft, turning 'bow/onion' into 'hatch'."
+        },
+        {
+          "wrong": "син",
+          "right": "синь",
+          "note": "The soft sign softens the 'н', distinguishing 'son' from 'blue' (feminine color)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'mother' in Ukrainian, ensuring the final 't' is soft?",
+          "answer": "мать"
+        },
+        {
+          "prompt": "Write the Ukrainian word for 'hatch' (e.g., a door hatch) with a soft 'l'.",
+          "answer": "люк"
+        },
+        {
+          "prompt": "Write the Ukrainian word for 'blue' (feminine), making sure it differs from 'son'.",
+          "answer": "синь"
+        }
+      ]
+    },
+    {
+      "rule_id": "дифтонги",
+      "topic": "дифтонги",
+      "title": "No Diphthongs in Ukrainian",
+      "explanation": "Ukrainian does not have diphthongs like English. Every vowel is pronounced clearly and separately. When you see two vowel letters in a row, say each one distinctly without gliding. Common mistakes include blending 'ау' into 'au' as in 'cow', or 'ой' into 'oy'.",
+      "examples": [
+        {
+          "wrong": "пауза",
+          "right": "пауза",
+          "note": "Say 'pa-u-za' (three syllables), not 'pow-za' as in English 'pause'."
+        },
+        {
+          "wrong": "клоун",
+          "right": "клоун",
+          "note": "Pronounce 'klo-un' (two syllables), not 'klown'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the Ukrainian word 'пауза' with hyphens to show correct syllable division.",
+          "answer": "па-у-за"
+        },
+        {
+          "prompt": "Which syllable division is correct for 'клоун'? Write it with hyphens.",
+          "answer": "кло-ун"
+        },
+        {
+          "prompt": "Correct the English-style mispronunciation 'pow-za' by writing the correct Ukrainian word.",
+          "answer": "пауза"
+        }
+      ]
+    },
+    {
+      "rule_id": "perfective-vs-imperfective-aspect",
+      "topic": "Perfective vs imperfective aspect",
+      "title": "Perfective vs Imperfective Aspect in Ukrainian",
+      "explanation": "In Ukrainian, every verb has two aspects: imperfective (for ongoing, habitual, or incomplete actions) and perfective (for completed, one-time, or achieved actions). English speakers often confuse them because English does not mark aspect as strictly. Use imperfective with actions that are repeated or in progress, and perfective when the action is finished or has a clear result.",
+      "examples": [
+        {
+          "wrong": "Я читав цю книгу вчора.",
+          "right": "Я прочитав цю книгу вчора.",
+          "note": "Use perfective 'прочитав' to show that you finished reading the book yesterday, not just that you were reading it."
+        },
+        {
+          "wrong": "Я купив хліб кожного дня.",
+          "right": "Я купував хліб кожного дня.",
+          "note": "Use imperfective 'купував' for a repeated/habitual action like buying bread every day."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank with the correct past-tense verb: I ______ (read) this book yesterday (completed action). Use perfective.",
+          "answer": "прочитав"
+        },
+        {
+          "prompt": "Fill in the blank with the correct past-tense verb: He ______ (buy) bread every morning last year (habitual). Use imperfective.",
+          "answer": "купував"
+        },
+        {
+          "prompt": "Fill in the blank with the correct present-tense verb: I ______ (write) a letter right now (ongoing). Use imperfective.",
+          "answer": "пишу"
+        }
+      ]
+    },
+    {
+      "rule_id": "genitive-vs-accusative-after-negation",
+      "topic": "Genitive vs accusative after negation",
+      "title": "Genitive vs Accusative After Negation",
+      "explanation": "In Ukrainian, when a verb is negated (using 'не'), the direct object typically changes from the accusative case to the genitive case. This rule applies to most transitive verbs. For example, 'Я читаю книгу' (I read a book) becomes 'Я не читаю книги' (I don't read a book).",
+      "examples": [
+        {
+          "wrong": "Я не бачу стіл.",
+          "right": "Я не бачу стола.",
+          "note": "After 'не бачу', the object should be in genitive: 'стола' instead of accusative 'стіл'."
+        },
+        {
+          "wrong": "Вона не купила квіти.",
+          "right": "Вона не купила квітів.",
+          "note": "After 'не купила', use genitive plural 'квітів' instead of accusative 'квіти'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I don't have a sister.' (use 'мати' - to have, 'сестра' - sister)",
+          "answer": "Я не маю сестри."
+        },
+        {
+          "prompt": "Translate: 'He doesn't drink water.' (use 'пити' - to drink, 'вода' - water)",
+          "answer": "Він не п'є води."
+        }
+      ]
+    },
+    {
+      "rule_id": "prepositions-в-на-у-usage",
+      "topic": "Prepositions в, на, у usage",
+      "title": "Prepositions в, на, у: When to Use Which",
+      "explanation": "In Ukrainian, в and у both mean 'in' or 'at', but в is used before consonants and у before vowels for smooth pronunciation. The preposition на means 'on' (surface), 'at' (events or open areas like beach, market) or 'by' (means of transport). A common mistake is using на instead of в for enclosed spaces or institutions (e.g., offices, universities).",
+      "examples": [
+        {
+          "wrong": "Я працюю на офісі.",
+          "right": "Я працюю в офісі.",
+          "note": "Use в for being inside a building or room."
+        },
+        {
+          "wrong": "Я йду в пляж.",
+          "right": "Я йду на пляж.",
+          "note": "Use на for open areas like beach, stadium, or market."
+        },
+        {
+          "wrong": "Вона навчається на університеті.",
+          "right": "Вона навчається в університеті.",
+          "note": "Use в for educational institutions, hospitals, etc."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank with the correct preposition (в, у, or на): I am going to the cinema.",
+          "answer": "Я йду в кіно."
+        },
+        {
+          "prompt": "Fill in the blank: She is at the market.",
+          "answer": "Вона на ринку."
+        },
+        {
+          "prompt": "Fill in the blank: He lives in the city.",
+          "answer": "Він живе в місті."
+        }
+      ]
+    },
+    {
+      "rule_id": "numeral-agreement-with-nouns",
+      "topic": "Numeral agreement with nouns",
+      "title": "Numeral Agreement with Nouns",
+      "explanation": "In Ukrainian, the noun form changes depending on the numeral. After 2, 3, and 4, masculine inanimate nouns use the nominative plural (e.g., столи), while feminine and neuter nouns use the genitive singular (e.g., книги, вікна). For 5 and above, all nouns require the genitive plural (e.g., столів, книг). A common mistake is using the wrong case after these numbers.",
+      "examples": [
+        {
+          "wrong": "два стола",
+          "right": "два столи",
+          "note": "With masculine inanimate nouns like стіл, use nominative plural after 2,3,4."
+        },
+        {
+          "wrong": "п'ять столи",
+          "right": "п'ять столів",
+          "note": "After 5 and above, all nouns take genitive plural."
+        },
+        {
+          "wrong": "три книг",
+          "right": "три книги",
+          "note": "With feminine nouns like книга, use genitive singular after 2,3,4."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct form for 'two tables' (стіл).",
+          "answer": "два столи"
+        },
+        {
+          "prompt": "Fill in the correct form for 'five books' (книга).",
+          "answer": "п'ять книг"
+        },
+        {
+          "prompt": "Fill in the correct form for 'three windows' (вікно).",
+          "answer": "три вікна"
+        }
+      ]
+    },
+    {
+      "rule_id": "directional-vs-multidirectional-verbs-of-motion",
+      "topic": "Directional vs multidirectional verbs of motion",
+      "title": "Directional vs Multidirectional Verbs of Motion in Ukrainian",
+      "explanation": "Ukrainian distinguishes between directional verbs (one-way, specific direction at a specific time) and multidirectional verbs (repeated, habitual, or back-and-forth motion). English speakers often mistakenly use the directional form for repeated actions. Learn the pairs: іти (to go on foot, directional) vs ходити (multidirectional), їхати (to go by vehicle, directional) vs їздити (multidirectional).",
+      "examples": [
+        {
+          "wrong": "Я йду до магазину кожен день.",
+          "right": "Я ходжу до магазину кожен день.",
+          "note": "Use the multidirectional 'ходжу' for a habitual action (every day)."
+        },
+        {
+          "wrong": "Вона їде в Київ щоліта.",
+          "right": "Вона їздить в Київ щоліта.",
+          "note": "Use 'їздить' for repeated trips (every summer)."
+        },
+        {
+          "wrong": "Ми йдемо до парку зараз?",
+          "right": "Ми йдемо до парку зараз?",
+          "note": "This is correct! 'Йдемо' is directional and appropriate for a specific current action."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complete: Every morning I (go) to work on foot. (habitual)",
+          "answer": "Я ходжу на роботу щоранку."
+        },
+        {
+          "prompt": "Complete: This weekend we (go) to Lviv by train. (one-time specific)",
+          "answer": "Цього вікенду ми їдемо до Львова поїздом."
+        },
+        {
+          "prompt": "Complete: He (go) to the gym three times a week. (repeated)",
+          "answer": "Він ходить до спортзалу тричі на тиждень."
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-pronoun-forms",
+      "topic": "Possessive pronoun forms",
+      "title": "Possessive Pronouns: Gender and Number Agreement",
+      "explanation": "In Ukrainian, possessive pronouns must agree in gender and number with the noun they modify (the owned object), not with the owner. A common mistake is using the same form for all nouns, but in fact 'мій' (masculine), 'моя' (feminine), 'моє' (neuter), and 'мої' (plural) are distinct forms.",
+      "examples": [
+        {
+          "wrong": "моя стіл",
+          "right": "мій стіл",
+          "note": "'Стіл' is masculine, so use 'мій'."
+        },
+        {
+          "wrong": "мій книга",
+          "right": "моя книга",
+          "note": "'Книга' is feminine, so use 'моя'."
+        },
+        {
+          "wrong": "моє друзі",
+          "right": "мої друзі",
+          "note": "'Друзі' is plural, so use 'мої'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct possessive form of 'my': Це ______ ручка. (Ручка is feminine.)",
+          "answer": "моя"
+        },
+        {
+          "prompt": "Fill in the correct possessive form of 'my': Це ______ місто. (Місто is neuter.)",
+          "answer": "моє"
+        },
+        {
+          "prompt": "Fill in the correct possessive form of 'my': Це ______ друзі. (Plural.)",
+          "answer": "мої"
+        }
+      ]
+    },
+    {
+      "rule_id": "conditional-mood-with-би",
+      "topic": "Conditional mood with би",
+      "title": "Using 'би' in Conditional Mood",
+      "explanation": "In Ukrainian, the conditional mood is formed by adding the particle 'би' (or 'б' after vowels) to a past tense verb. A common mistake is using 'би' with present or future tense verbs instead of the past tense. Always use the past tense form of the verb to express a hypothetical situation.",
+      "examples": [
+        {
+          "wrong": "Я хочу би каву.",
+          "right": "Я хотів би каву.",
+          "note": "'хочу' is present tense; use past tense 'хотів'."
+        },
+        {
+          "wrong": "Він піде би до магазину.",
+          "right": "Він пішов би до магазину.",
+          "note": "'піде' is future tense; use past tense 'пішов'."
+        },
+        {
+          "wrong": "Вона може би прийти.",
+          "right": "Вона могла б прийти.",
+          "note": "'може' is present tense; use past 'могла' and shorten 'би' to 'б' after the vowel."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct this sentence: 'Я буду би радий.'",
+          "answer": "Я був би радий."
+        },
+        {
+          "prompt": "Correct this sentence: 'Ти зробиш би це?'",
+          "answer": "Ти зробив би це?"
+        },
+        {
+          "prompt": "Correct this sentence: 'Ми хочемо би піти.'",
+          "answer": "Ми хотіли б піти."
+        }
+      ]
+    },
+    {
+      "rule_id": "passive-voice-with-ся-verbs",
+      "topic": "Passive voice with -ся verbs",
+      "title": "Passive Voice with -ся Verbs: Common Mistakes",
+      "explanation": "In Ukrainian, -ся verbs can express passive meaning in the present tense (e.g., книга читається – the book is being read). However, English learners often mistakenly use -ся for past or completed actions, where you should use the auxiliary бути + passive participle (e.g., книга була прочитана – the book was read). The -ся form in past tense usually indicates a reflexive or spontaneous action, not a passive with an agent.",
+      "examples": [
+        {
+          "wrong": "Лист написався вчора.",
+          "right": "Лист був написаний вчора.",
+          "note": "For past passive, use 'був/була/було/були + past passive participle', not -ся."
+        },
+        {
+          "wrong": "Робота зробилася швидко.",
+          "right": "Робота була зроблена швидко.",
+          "note": "-ся verbs in past tense often mean 'got done by itself' – use the participle for a clear passive meaning."
+        },
+        {
+          "wrong": "Двері відчинилися (коли я хотів сказати, що їх відчинили).",
+          "right": "Двері були відчинені.",
+          "note": "If an agent performed the action, avoid -ся; use 'бути + participle' or the active voice."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'The window was opened by the wind.' (Use correct passive form.)",
+          "answer": "Вікно було відчинене вітром."
+        },
+        {
+          "prompt": "Correct this sentence: 'Завдання зробилося легко.' (Change to proper passive for a completed action.)",
+          "answer": "Завдання було зроблене легко."
+        },
+        {
+          "prompt": "How would you say 'The letter is being written right now' (present passive)?",
+          "answer": "Лист пишеться зараз."
+        }
+      ]
+    },
+    {
+      "rule_id": "active-participles-present-and-past",
+      "topic": "Active participles present and past",
+      "title": "Avoiding Active Participles in Ukrainian",
+      "explanation": "Active participles (present and past) exist in Ukrainian but are very rare in everyday speech. English speakers often mistakenly use forms like 'читаючий' (reading) or 'написавший' (having written). Instead, Ukrainians naturally use relative clauses with 'який' (who/which) plus a verb. Stick to 'який + verb' for clear, natural communication.",
+      "examples": [
+        {
+          "wrong": "чоловік, читаючий книгу",
+          "right": "чоловік, який читає книгу",
+          "note": "Replace 'читаючий' with 'який читає' (who reads)."
+        },
+        {
+          "wrong": "студент, написавший есе",
+          "right": "студент, який написав есе",
+          "note": "Past active participle 'написавший' is bookish; use 'який написав' (who wrote)."
+        },
+        {
+          "wrong": "жінка, співаюча пісню",
+          "right": "жінка, яка співає пісню",
+          "note": "Present active participle 'співаюча' sounds unnatural; use 'яка співає'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'the girl who is dancing' using a relative clause.",
+          "answer": "дівчина, яка танцює"
+        },
+        {
+          "prompt": "Correct the sentence: 'хлопчик, граючий у футбол'.",
+          "answer": "хлопчик, який грає у футбол"
+        },
+        {
+          "prompt": "How would you say 'the writer who created this book' (past action) naturally?",
+          "answer": "письменник, який створив цю книгу"
+        }
+      ]
+    },
+    {
+      "rule_id": "gerund-дієприслівник-usage",
+      "topic": "Gerund (дієприслівник) usage",
+      "title": "Using Ukrainian Gerunds (Дієприслівники) Correctly",
+      "explanation": "Ukrainian gerunds (дієприслівники) express an action that happens at the same time as or before the main verb. They are not used like English '-ing' forms after prepositions. Instead, choose the correct form: use the simultaneous gerund (e.g., читаючи) for actions happening together, and the past gerund (e.g., прочитавши) for actions completed before the main verb.",
+      "examples": [
+        {
+          "wrong": "Я вийшов, щоб купити хліб.",
+          "right": "Я вийшов, купивши хліб.",
+          "note": "Use the past gerund купивши (having bought) instead of the infinitive щоб купити (in order to buy) when the buying happens before leaving."
+        },
+        {
+          "wrong": "Він співає і танцює одночасно.",
+          "right": "Він співаючи танцює.",
+          "note": "Use the simultaneous gerund співаючи (while singing) to show two actions at once, avoiding the conjunction."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'Having read the book, she went to sleep.' (use past gerund of читати)",
+          "answer": "Прочитавши книгу, вона пішла спати."
+        },
+        {
+          "prompt": "Translate: 'He listens to music while working.' (use simultaneous gerund of працювати)",
+          "answer": "Він слухає музику, працюючи."
+        }
+      ]
+    },
+    {
+      "rule_id": "comparative-and-superlative-degrees",
+      "topic": "Comparative and superlative degrees",
+      "title": "Comparative and Superlative Degrees: Synthetic vs. Analytic Forms",
+      "explanation": "In Ukrainian, most adjectives form the comparative by adding -іший or -ший (synthetic), and the superlative by adding най- to that form. A common mistake is using the analytic forms 'більш' (more) or 'найбільш' (most) with adjectives that already have a synthetic form. Use analytic forms only when the adjective lacks a synthetic comparative (e.g., borrowed words) or for emphasis.",
+      "examples": [
+        {
+          "wrong": "Цей фільм більш цікавий.",
+          "right": "Цей фільм цікавіший.",
+          "note": "Use the synthetic form -іший for 'цікавий' (interesting)."
+        },
+        {
+          "wrong": "Вона найбільш гарна.",
+          "right": "Вона найгарніша.",
+          "note": "For superlative, add най- to the synthetic comparative form."
+        },
+        {
+          "wrong": "Це завдання більш важливе.",
+          "right": "Це завдання важливіше.",
+          "note": "Adjectives like 'важливий' (important) also take synthetic -іший."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the sentence: 'Ця книга більш цікава.'",
+          "answer": "Ця книга цікавіша."
+        },
+        {
+          "prompt": "Correct the sentence: 'Він найбільш розумний.'",
+          "answer": "Він найрозумніший."
+        },
+        {
+          "prompt": "Write the comparative form of 'сильний' in this sentence: 'Мій брат _____ (сильний) за мене.'",
+          "answer": "сильніший"
+        }
+      ]
+    },
+    {
+      "rule_id": "double-negation-with-ні-prefixes",
+      "topic": "Double negation with ні- prefixes",
+      "title": "Double Negation with Ні- Prefixes: Using Не for Correct Negation",
+      "explanation": "In Ukrainian, words with the negative prefix ні- (e.g., ніхто, ніщо, ніколи) must always be followed by the negative particle не before the verb. This double negation is grammatically required, unlike in English where only one negative is used. Omitting не is a common mistake for English learners.",
+      "examples": [
+        {
+          "wrong": "Ніхто прийшов.",
+          "right": "Ніхто не прийшов.",
+          "note": "The word ніхто needs an additional не before the verb."
+        },
+        {
+          "wrong": "Я нічого бачив.",
+          "right": "Я нічого не бачив.",
+          "note": "Always use не with нічого to make a correct negative sentence."
+        },
+        {
+          "wrong": "Він ніколи був вдома.",
+          "right": "Він ніколи не був вдома.",
+          "note": "With ніколи (never), the verb must have не as well."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate into Ukrainian: 'Nobody knows.'",
+          "answer": "Ніхто не знає."
+        },
+        {
+          "prompt": "Correct the mistake: 'Ми ніде ходили.'",
+          "answer": "Ми ніде не ходили."
+        },
+        {
+          "prompt": "Translate: 'I never eat meat.'",
+          "answer": "Я ніколи не їм м'ясо."
+        }
+      ]
+    },
+    {
+      "rule_id": "conjunctions-і-та-а-але",
+      "topic": "Conjunctions і, та, а, але",
+      "title": "Common Mistake: Conjunctions і, та, а, але",
+      "explanation": "In Ukrainian, і and та both mean 'and' (і is more common; та is slightly more informal or used for variety). Use а to contrast two different facts (like 'while' or 'and on the other hand'), and але for a direct 'but' (strong opposition). A common mistake is using а where але is needed, or using і where а is required.",
+      "examples": [
+        {
+          "wrong": "Я люблю каву, а вона не любить.",
+          "right": "Я люблю каву, але вона не любить.",
+          "note": "Use але for a clear contradiction (she does not like it). Using а here sounds incomplete or unnatural."
+        },
+        {
+          "wrong": "Він читає книгу, і вона дивиться фільм.",
+          "right": "Він читає книгу, а вона дивиться фільм.",
+          "note": "Use а to contrast two different actions happening at the same time (he reads, while she watches)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Choose the correct conjunction: 'I wanted to go, ___ I was tired.'",
+          "answer": "але"
+        },
+        {
+          "prompt": "Fill in: 'She likes tea, ___ he prefers coffee.' (contrast, not strong opposition)",
+          "answer": "а"
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciation-of-the-letter-щ",
+      "topic": "Pronunciation of the letter щ",
+      "title": "Pronouncing the Ukrainian Letter Щ",
+      "explanation": "The letter щ represents a single, soft, prolonged 'sh' sound, similar to the 'sh' in 'sheep' but with your tongue raised higher and held longer. It is not a combination of 'sh' and 'ch' (like 'shch') – that is a common mistake for English speakers. Practice making a smooth, hissing sound without separating it into two parts.",
+      "examples": [
+        {
+          "wrong": "шчука",
+          "right": "щука",
+          "note": "‘щука’ (pike) – pronounce as a soft, long ‘shoo-ka’, not ‘shchoo-ka’."
+        },
+        {
+          "wrong": "дошч",
+          "right": "дощ",
+          "note": "‘дощ’ (rain) – the final sound is a soft, extended ‘sh’, not ‘shch’."
+        },
+        {
+          "wrong": "шчітка",
+          "right": "щітка",
+          "note": "‘щітка’ (brush) – keep the ‘sh’ sound continuous and soft, avoiding a break into ‘sh’+‘ch’."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Spell the Ukrainian word for ‘rain’ with the letter щ.",
+          "answer": "дощ"
+        },
+        {
+          "prompt": "Write the Ukrainian word for ‘pike’ that uses the letter щ.",
+          "answer": "щука"
+        },
+        {
+          "prompt": "How do you spell the Ukrainian word for ‘brush’ with the letter щ?",
+          "answer": "щітка"
+        }
+      ]
+    },
+    {
+      "rule_id": "hard-vs-soft-adjective-endings",
+      "topic": "Hard vs soft adjective endings",
+      "title": "Hard vs Soft Adjective Endings in Ukrainian",
+      "explanation": "In Ukrainian, adjectives have hard or soft endings depending on the final consonant of the stem. For masculine nominative, hard adjectives end in -ий (e.g., добрий) and soft adjectives in -ій (e.g., синій). For feminine nominative, hard endings use -а (e.g., велика) and soft endings use -я (e.g., синя). A common mistake is using the wrong ending, such as writing -ий after a soft stem or -а after a soft stem.",
+      "examples": [
+        {
+          "wrong": "синий",
+          "right": "синій",
+          "note": "The stem 'син' ends in a soft 'н', so the masculine form takes the soft ending -ій, not -ий."
+        },
+        {
+          "wrong": "сина",
+          "right": "синя",
+          "note": "For feminine, a soft stem like 'син' requires the ending -я, not -а."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the correct masculine nominative form of 'blue' (based on stem син-):",
+          "answer": "синій"
+        },
+        {
+          "prompt": "Write the correct feminine nominative form of 'blue' (based on stem син-):",
+          "answer": "синя"
+        },
+        {
+          "prompt": "Write the correct masculine nominative form of 'good' (based on stem добр-):",
+          "answer": "добрий"
+        }
+      ]
+    },
+    {
+      "rule_id": "vocative-case-forms",
+      "topic": "Vocative case forms",
+      "title": "Using the Vocative Case in Ukrainian",
+      "explanation": "In Ukrainian, when you address someone directly (calling their name or title), you must change the noun into the vocative case. English speakers often make the mistake of using the nominative form instead. For masculine names ending in a consonant, add -e or -u; for feminine names ending in -a, change the -a to -o.",
+      "examples": [
+        {
+          "wrong": "Привіт, Іван.",
+          "right": "Привіт, Іване.",
+          "note": "Masculine name ending in consonant: add -e."
+        },
+        {
+          "wrong": "Оксана, йди сюди.",
+          "right": "Оксано, йди сюди.",
+          "note": "Feminine name ending in -a: change to -o."
+        },
+        {
+          "wrong": "Пане професор, допоможіть.",
+          "right": "Пане професоре, допоможіть.",
+          "note": "For masculine titles like 'професор', also add -e."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Address your friend Andriy (masculine) in a sentence: 'Hello, Andriy!'",
+          "answer": "Привіт, Андрію."
+        },
+        {
+          "prompt": "Call your sister Olena: 'Olena, come here!'",
+          "answer": "Олено, йди сюди."
+        },
+        {
+          "prompt": "Say 'Thank you, teacher (пані вчителька)' (feminine title).",
+          "answer": "Дякую, пані вчителько."
+        }
+      ]
+    },
+    {
+      "rule_id": "the-letter-ґ-versus-г",
+      "topic": "The letter ґ versus г",
+      "title": "The Letter ґ vs г: A Common Ukrainian Mistake",
+      "explanation": "In Ukrainian, 'г' represents a soft 'h' sound (like English 'hello'), while 'ґ' represents a hard 'g' sound (like English 'go'). Many learners mistakenly use 'г' where 'ґ' is needed, especially in words borrowed from other languages or in native Ukrainian words with a hard 'g' sound. Remember: 'ґ' is always pronounced as a hard 'g', and it appears in specific words like ґанок, ґудзик, and ґрати.",
+      "examples": [
+        {
+          "wrong": "гудзик",
+          "right": "ґудзик",
+          "note": "Means 'button'. The hard 'g' sound requires ґ."
+        },
+        {
+          "wrong": "ганок",
+          "right": "ґанок",
+          "note": "Means 'porch' or 'stoop'. A common word where ґ is essential."
+        },
+        {
+          "wrong": "нголка",
+          "right": "нґолка",
+          "note": "Means 'needle'. The sequence 'нґ' has a distinct hard g sound."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the Ukrainian word for 'hook' (a hard g sound).",
+          "answer": "ґак"
+        },
+        {
+          "prompt": "Write the Ukrainian word for 'lattice' or 'grille' (hard g).",
+          "answer": "ґрати"
+        },
+        {
+          "prompt": "Write the Ukrainian word for 'button' (hard g).",
+          "answer": "ґудзик"
+        }
+      ]
+    },
+    {
+      "rule_id": "verbal-prefixes-for-aspect",
+      "topic": "Verbal prefixes for aspect",
+      "title": "Verbal Prefixes and Aspect in Ukrainian",
+      "explanation": "In Ukrainian, verbs have two aspects: imperfective (ongoing or repeated actions) and perfective (completed actions). Adding a prefix to an imperfective verb often creates a perfective verb, but not all prefixes work the same way—some also change the meaning. Common prefixes that indicate completion include про- (through/completely), на- (on/result), and за- (begin/complete). Avoid using an imperfective verb when you mean a finished action.",
+      "examples": [
+        {
+          "wrong": "Я читав книгу вчора.",
+          "right": "Я прочитав книгу вчора.",
+          "note": "Use 'прочитати' (perfective) to emphasize that you finished reading the book."
+        },
+        {
+          "wrong": "Вона писала листа.",
+          "right": "Вона написала листа.",
+          "note": "Use 'написати' (perfective) to show that she completed writing the letter."
+        },
+        {
+          "wrong": "Ми робили уроки.",
+          "right": "Ми зробили уроки.",
+          "note": "Use 'зробити' (perfective) to indicate the homework is finished."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complete the sentence with the correct perfective form of 'робити' (to do): Я _____ домашнє завдання. (I did/finished my homework.)",
+          "answer": "зробив"
+        },
+        {
+          "prompt": "Fill in the blank: Він _____ сніданок. (He ate breakfast – completed action.) Use the perfective form of 'їсти' (to eat).",
+          "answer": "з'їв"
+        },
+        {
+          "prompt": "Choose the correct verb: Вчора ми _____ (дивитися / подивитися) фільм. (Yesterday we watched a movie – finished action.)",
+          "answer": "подивилися"
+        }
+      ]
+    }
+  ]
+}

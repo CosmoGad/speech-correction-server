@@ -1,0 +1,101 @@
+{
+  "learning": "uk",
+  "topics": [
+    {
+      "rule_id": "чергування-голосних",
+      "title": "чергування голосних"
+    },
+    {
+      "rule_id": "мякий-знак",
+      "title": "м'який знак"
+    },
+    {
+      "rule_id": "наголос",
+      "title": "наголос"
+    },
+    {
+      "rule_id": "відмінювання",
+      "title": "відмінювання"
+    },
+    {
+      "rule_id": "мякі-приголосні",
+      "title": "м'які приголосні"
+    },
+    {
+      "rule_id": "дифтонги",
+      "title": "дифтонги"
+    },
+    {
+      "rule_id": "perfective-vs-imperfective-aspect",
+      "title": "Perfective vs imperfective aspect"
+    },
+    {
+      "rule_id": "genitive-vs-accusative-after-negation",
+      "title": "Genitive vs accusative after negation"
+    },
+    {
+      "rule_id": "prepositions-в-на-у-usage",
+      "title": "Prepositions в, на, у usage"
+    },
+    {
+      "rule_id": "numeral-agreement-with-nouns",
+      "title": "Numeral agreement with nouns"
+    },
+    {
+      "rule_id": "directional-vs-multidirectional-verbs-of-motion",
+      "title": "Directional vs multidirectional verbs of motion"
+    },
+    {
+      "rule_id": "possessive-pronoun-forms",
+      "title": "Possessive pronoun forms"
+    },
+    {
+      "rule_id": "conditional-mood-with-би",
+      "title": "Conditional mood with би"
+    },
+    {
+      "rule_id": "passive-voice-with-ся-verbs",
+      "title": "Passive voice with -ся verbs"
+    },
+    {
+      "rule_id": "active-participles-present-and-past",
+      "title": "Active participles present and past"
+    },
+    {
+      "rule_id": "gerund-дієприслівник-usage",
+      "title": "Gerund (дієприслівник) usage"
+    },
+    {
+      "rule_id": "comparative-and-superlative-degrees",
+      "title": "Comparative and superlative degrees"
+    },
+    {
+      "rule_id": "double-negation-with-ні-prefixes",
+      "title": "Double negation with ні- prefixes"
+    },
+    {
+      "rule_id": "conjunctions-і-та-а-але",
+      "title": "Conjunctions і, та, а, але"
+    },
+    {
+      "rule_id": "pronunciation-of-the-letter-щ",
+      "title": "Pronunciation of the letter щ"
+    },
+    {
+      "rule_id": "hard-vs-soft-adjective-endings",
+      "title": "Hard vs soft adjective endings"
+    },
+    {
+      "rule_id": "vocative-case-forms",
+      "title": "Vocative case forms"
+    },
+    {
+      "rule_id": "the-letter-ґ-versus-г",
+      "title": "The letter ґ versus г"
+    },
+    {
+      "rule_id": "verbal-prefixes-for-aspect",
+      "title": "Verbal prefixes for aspect"
+    }
+  ]
+}

@@ -1,0 +1,868 @@
+{
+  "learning": "uk",
+  "interface": "it",
+  "generated_at": "2026-06-26T12:07:00.392822+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "чергування-голосних",
+      "topic": "чергування голосних",
+      "title": "Alternanza vocalica: і ↔ о",
+      "explanation": "In ucraino, in molti sostantivi maschili (e alcuni femminili) la vocale 'і' nella forma base (nominativo) si alterna con 'о' quando la sillaba diventa aperta, ad esempio nei casi obliqui. Questo è un errore comune: non applicare l'alternanza. Ad esempio, 'ніс' (naso) al genitivo diventa 'носа', non 'ніса'.",
+      "examples": [
+        {
+          "wrong": "ніса",
+          "right": "носа",
+          "note": "Genitivo di 'ніс': la 'і' diventa 'о' perché la sillaba è aperta (non termina con consonante)."
+        },
+        {
+          "wrong": "стіла",
+          "right": "стола",
+          "note": "Genitivo di 'стіл': 'і' diventa 'о'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Scrivi il genitivo di 'ніс'.",
+          "answer": "носа"
+        },
+        {
+          "prompt": "Scrivi il genitivo di 'стіл'.",
+          "answer": "стола"
+        },
+        {
+          "prompt": "Scrivi il genitivo di 'кінь'.",
+          "answer": "коня"
+        }
+      ]
+    },
+    {
+      "rule_id": "мякий-знак",
+      "topic": "м'який знак",
+      "title": "Il segno morbido (м'який знак) in ucraino",
+      "explanation": "Il м'який знак (ь) non è un suono, ma ammorbidisce la consonante che lo precede. Gli italiani spesso lo dimenticano o lo usano nel posto sbagliato, cambiando il significato della parola. Ricorda: in ucraino, molte parole richiedono questo segno per essere pronunciate correttamente.",
+      "examples": [
+        {
+          "wrong": "кін",
+          "right": "кінь",
+          "note": "Senza segno morbido significa 'fine', con segno morbido significa 'cavallo'."
+        },
+        {
+          "wrong": "сьогодни",
+          "right": "сьогодні",
+          "note": "La 'н' finale deve essere palatalizzata per ottenere 'oggi'."
+        },
+        {
+          "wrong": "любит",
+          "right": "любить",
+          "note": "La terza persona singolare dei verbi richiede il segno morbido (lui/lei ama)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Scrivi la parola ucraina per 'cavallo'.",
+          "answer": "кінь"
+        },
+        {
+          "prompt": "Completa: 'oggi' in ucraino è ______.",
+          "answer": "сьогодні"
+        },
+        {
+          "prompt": "Qual è la forma corretta del verbo 'amare' (lui/lei ama)?",
+          "answer": "любить"
+        }
+      ]
+    },
+    {
+      "rule_id": "наголос",
+      "topic": "наголос",
+      "title": "L'accento in ucraino: errori comuni",
+      "explanation": "In ucraino, l'accento è libero e può cadere su qualsiasi sillaba, a differenza dell'italiano dove spesso è prevedibile. Un errore comune è posizionare l'accento sulla sillaba sbagliata, cambiando il significato della parola o rendendola incomprensibile. Impara a riconoscere e correggere alcuni degli errori più frequenti.",
+      "examples": [
+        {
+          "wrong": "Укра́їна",
+          "right": "Украї́на",
+          "note": "L'accento cade sulla 'і', non sulla 'а'."
+        },
+        {
+          "wrong": "випа́док",
+          "right": "ви́падок",
+          "note": "L'accento cade sulla prima sillaba 'ви', non sulla 'па'."
+        },
+        {
+          "wrong": "ле́гко",
+          "right": "легко́",
+          "note": "L'accento cade sull'ultima sillaba 'ко', non sulla prima 'ле'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Scrivi la parola 'Україна' con l'accento corretto.",
+          "answer": "Украї́на"
+        },
+        {
+          "prompt": "Scrivi la parola 'випадок' con l'accento corretto.",
+          "answer": "ви́падок"
+        },
+        {
+          "prompt": "Scrivi la parola 'легко' con l'accento corretto.",
+          "answer": "легко́"
+        }
+      ]
+    },
+    {
+      "rule_id": "відмінювання",
+      "topic": "відмінювання",
+      "title": "Come evitare errori comuni nella declinazione dei sostantivi",
+      "explanation": "In ucraino, i sostantivi cambiano forma a seconda del caso (declinazione). Un errore frequente è usare il nominativo invece del caso richiesto da una preposizione o da un numero. Ad esempio, dopo 'для' (per) si usa il genitivo, dopo 'з' (con) lo strumentale, e dopo 'у' (in) il locativo.",
+      "examples": [
+        {
+          "wrong": "для книга",
+          "right": "для книги",
+          "note": "Dopo 'для' il sostantivo va al genitivo singolare (книга → книги)."
+        },
+        {
+          "wrong": "з вода",
+          "right": "з водою",
+          "note": "Dopo 'з' (con) si usa lo strumentale singolare (вода → водою)."
+        },
+        {
+          "wrong": "у Київ",
+          "right": "у Києві",
+          "note": "Dopo 'у' (in) per indicare luogo si usa il locativo singolare (Київ → Києві)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Completa con la forma corretta: 'Це подарунок для ________ (сестра).'",
+          "answer": "сестри"
+        },
+        {
+          "prompt": "Completa: 'Я розмовляю з ________ (друг).'",
+          "answer": "другом"
+        },
+        {
+          "prompt": "Completa: 'Вона живе у ________ (Львів).'",
+          "answer": "Львові"
+        }
+      ]
+    },
+    {
+      "rule_id": "мякі-приголосні",
+      "topic": "м'які приголосні",
+      "title": "Le consonanti morbide (м'які приголосні)",
+      "explanation": "In ucraino, le consonanti possono essere 'dure' o 'morbide' (palatalizzate). La morbidezza è spesso indicata dal segno morbido ь o da alcune vocali (я, ю, є, ї). Gli italofoni tendono a omettere il segno morbido o a pronunciare la consonante come dura, cambiando il significato della parola.",
+      "examples": [
+        {
+          "wrong": "ден",
+          "right": "день",
+          "note": "Il segno morbido ь rende la н palatalizzata. Senza di esso la parola perde significato (ден non esiste)."
+        },
+        {
+          "wrong": "сил",
+          "right": "сіль",
+          "note": "La л morbida (ль) si pronuncia con la lingua che tocca il palato, diversa dalla l italiana. Confronta con 'сил' che significa 'forze' (duro)."
+        },
+        {
+          "wrong": "тін",
+          "right": "тінь",
+          "note": "La н morbida (нь) ha un suono simile a 'gn' ma più breve. 'Тін' non è una parola ucraina."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Scrivi la parola ucraina per 'giorno' (con la consonante morbida).",
+          "answer": "день"
+        },
+        {
+          "prompt": "Scrivi la parola ucraina per 'sale' (con la consonante morbida).",
+          "answer": "сіль"
+        },
+        {
+          "prompt": "Scrivi la parola ucraina per 'ombra' (con la consonante morbida).",
+          "answer": "тінь"
+        }
+      ]
+    },
+    {
+      "rule_id": "дифтонги",
+      "topic": "дифтонги",
+      "title": "Evita i dittonghi in ucraino",
+      "explanation": "In ucraino non esistono dittonghi: due vocali consecutive si pronunciano sempre come sillabe separate (iato). Un errore comune è pronunciarle come un unico suono, come in italiano. Attenzione a non unire le vocali.",
+      "examples": [
+        {
+          "wrong": "айропорт",
+          "right": "аеропорт",
+          "note": "La 'а' e 'е' sono due vocali distinte, non 'ай'."
+        },
+        {
+          "wrong": "пойет",
+          "right": "поет",
+          "note": "Si legge 'по-ет' (due sillabe), non 'пойет'."
+        },
+        {
+          "wrong": "тйатр",
+          "right": "театр",
+          "note": "La 'е' e 'а' vanno separate: 'те-атр'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Come si scrive correttamente 'aeroporto' in ucraino?",
+          "answer": "аеропорт"
+        },
+        {
+          "prompt": "Qual è la grafia corretta per 'poeta'?",
+          "answer": "поет"
+        },
+        {
+          "prompt": "Scegli la forma corretta per 'teatro'.",
+          "answer": "театр"
+        }
+      ]
+    },
+    {
+      "rule_id": "perfective-vs-imperfective-aspect",
+      "topic": "Perfective vs imperfective aspect",
+      "title": "Aspetto perfettivo e imperfettivo in ucraino",
+      "explanation": "In ucraino, l'aspetto verbale distingue azioni in corso o abituali (imperfettivo) da azioni completate o puntuali (perfettivo). Un errore comune dei madrelingua italiani è usare il perfettivo per azioni abituali, poiché in italiano spesso si usa il presente. Ricorda: l'aspetto è obbligatorio e va scelto in base al contesto.",
+      "examples": [
+        {
+          "wrong": "Я вчора читаю книгу.",
+          "right": "Я вчора прочитав книгу.",
+          "note": "Con un'azione completata nel passato serve il perfettivo (прочитав), non l'imperfettivo presente (читаю)."
+        },
+        {
+          "wrong": "Вона завжди напише листи.",
+          "right": "Вона завжди пише листи.",
+          "note": "Per un'abitudine (sempre) si usa l'imperfettivo (пише), non il perfettivo (напише)."
+        },
+        {
+          "wrong": "Ми вчора гуляли в парку і побачили друга.",
+          "right": "Ми вчора гуляли в парку і побачили друга.",
+          "note": "Qui 'гуляли' (imperfettivo) indica il contesto in corso, 'побачили' (perfettivo) l'evento concluso. Entrambi corretti, ma attenzione alla scelta."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Scegli la forma corretta: 'Ogni mattina io (bevo / berrò) il caffè.'",
+          "answer": "п'ю"
+        },
+        {
+          "prompt": "Completa con il verbo al passato perfettivo: 'Ieri lui (scrivere) una lettera.'",
+          "answer": "написав"
+        },
+        {
+          "prompt": "Scegli la forma corretta: 'Mentre io (leggo / leggerò), è arrivato un pacco.'",
+          "answer": "читаю"
+        }
+      ]
+    },
+    {
+      "rule_id": "genitive-vs-accusative-after-negation",
+      "topic": "Genitive vs accusative after negation",
+      "title": "Genitivo vs accusativo dopo la negazione",
+      "explanation": "In ucraino, quando un verbo è negato (con 'не'), il complemento oggetto diretto va messo al genitivo, non all'accusativo. Questa regola è molto comune e importante: L'accusativo si usa solo con verbi affermativi. Per i principianti: pensa a 'non vedere' + genitivo.",
+      "examples": [
+        {
+          "wrong": "Я не бачу книгу.",
+          "right": "Я не бачу книги.",
+          "note": "Dopo 'не бачу' (non vedo) il sostantivo 'книга' va al genitivo: 'книги'."
+        },
+        {
+          "wrong": "Вона не має часу? (accusativo corretto qui? No, serve genitivo)",
+          "right": "Вона не має часу.",
+          "note": "'Мати' al negativo richiede il genitivo: 'часу' (di tempo), non 'час' (accusativo)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Come si dice 'Non compro una mela'? (usa 'яблуко' al genitivo)",
+          "answer": "Я не купую яблука."
+        },
+        {
+          "prompt": "Traduci: 'Lui non legge il libro' (книга → genitivo).",
+          "answer": "Він не читає книги."
+        }
+      ]
+    },
+    {
+      "rule_id": "prepositions-в-на-у-usage",
+      "topic": "Prepositions в, на, у usage",
+      "title": "Preposizioni у, в, на in ucraino",
+      "explanation": "In ucraino, у e в sono varianti della stessa preposizione (dentro, a) e si usano per indicare luogo chiuso, direzione o appartenenza. La scelta tra у e в dipende dall'armonia fonetica: у si usa prima di consonante o all'inizio di frase, в prima di vocale. На si usa invece per superfici, eventi, mezzi di trasporto o attività. Un errore comune è usare на al posto di у/в per luoghi chiusi come città o paesi.",
+      "examples": [
+        {
+          "wrong": "Я живу на Києві.",
+          "right": "Я живу в Києві.",
+          "note": "Con città si usa в (o у) perché indica 'dentro la città', non 'sulla superficie'."
+        },
+        {
+          "wrong": "Ми йдемо у роботу.",
+          "right": "Ми йдемо на роботу.",
+          "note": "Per 'andare al lavoro' (attività/sede) si usa на, non у (che sarebbe astratto)."
+        },
+        {
+          "wrong": "Вона на школі.",
+          "right": "Вона в школі.",
+          "note": "Scuola come edificio chiuso vuole в/у; на scuola si usa solo per dire 'a scuola' come istituzione/evento (es. на уроках)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduci: 'Sono a Roma' (città).",
+          "answer": "Я в Римі."
+        },
+        {
+          "prompt": "Traduci: 'Andiamo in università' (edificio).",
+          "answer": "Ми йдемо в університет."
+        },
+        {
+          "prompt": "Traduci: 'Lavoro in ufficio' (luogo chiuso).",
+          "answer": "Я працюю в офісі."
+        }
+      ]
+    },
+    {
+      "rule_id": "numeral-agreement-with-nouns",
+      "topic": "Numeral agreement with nouns",
+      "title": "Accordo del nome con i numeri in ucraino",
+      "explanation": "In ucraino, dopo 1 (e numeri che finiscono con 1, tranne 11) si usa il nominativo singolare. Dopo 2, 3, 4 (e numeri che finiscono con questi, tranne 12-14) si usa il nominativo plurale. Dopo 5-20 e numeri che finiscono con 5-9 si usa il genitivo plurale. Attenzione: molti italiani sbagliano usando sempre il plurale o il genitivo sbagliato.",
+      "examples": [
+        {
+          "wrong": "два столів",
+          "right": "два столи",
+          "note": "Dopo 2 si usa il nominativo plurale, non il genitivo plurale."
+        },
+        {
+          "wrong": "п'ять стіл",
+          "right": "п'ять столів",
+          "note": "Dopo 5+ si usa il genitivo plurale."
+        },
+        {
+          "wrong": "один столи",
+          "right": "один стіл",
+          "note": "Dopo 1 si usa il nominativo singolare."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Completa: 'due libri' in ucraino.",
+          "answer": "дві книги"
+        },
+        {
+          "prompt": "Completa: 'cinque penne' in ucraino.",
+          "answer": "п'ять ручок"
+        },
+        {
+          "prompt": "Completa: 'un quaderno' in ucraino.",
+          "answer": "один зошит"
+        }
+      ]
+    },
+    {
+      "rule_id": "directional-vs-multidirectional-verbs-of-motion",
+      "topic": "Directional vs multidirectional verbs of motion",
+      "title": "Verbi di movimento: direzionale vs multidirezionale",
+      "explanation": "In ucraino, molti verbi di movimento hanno due forme: una per un'azione in una sola direzione (direzionale) e una per movimenti ripetuti, abituali o in più direzioni (multidirezionale). La scelta sbagliata è un errore comune tra i principianti. Ad esempio, 'іти' significa 'andare (a piedi) in una direzione specifica', mentre 'ходити' significa 'camminare' o 'andare abitualmente'.",
+      "examples": [
+        {
+          "wrong": "Я ходжу до магазину зараз.",
+          "right": "Я йду до магазину зараз.",
+          "note": "'Ходжу' indica un'abitudine, ma stai descrivendo un'azione in corso in questo momento. Usa 'йду' (direzionale)."
+        },
+        {
+          "wrong": "Вчора я їхав до Києва і повернувся.",
+          "right": "Вчора я їздив до Києва і повернувся.",
+          "note": "Se fai un viaggio di andata e ritorno (multidirezionale), usa 'їздив'. 'Їхав' è per un singolo tragitto in una direzione."
+        },
+        {
+          "wrong": "Ми біжимо щодня в парку.",
+          "right": "Ми бігаємо щодня в парку.",
+          "note": "Per azioni ripetute/abitudini usa il multidirezionale 'бігаємо'. 'Біжимо' è per un singolo evento in corso."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Scegli la forma corretta: 'Ora lei (andare a piedi) a scuola.' (singola direzione)",
+          "answer": "йде"
+        },
+        {
+          "prompt": "Scegli la forma corretta: 'L'estate scorsa io (viaggiare in macchina) in montagna ogni fine settimana.' (ripetuto/abituale)",
+          "answer": "їздив"
+        },
+        {
+          "prompt": "Scegli la forma corretta: 'Loro (correre) nel parco in questo momento.' (azione in corso, direzionale)",
+          "answer": "біжать"
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-pronoun-forms",
+      "topic": "Possessive pronoun forms",
+      "title": "Forme dei pronomi possessivi (мій / моя / моє / мої)",
+      "explanation": "In ucraino i pronomi possessivi concordano in genere e numero con il sostantivo che accompagnano. 'Mій' si usa per il maschile, 'моя' per il femminile, 'моє' per il neutro e 'мої' per il plurale. Un errore comune degli italiani è usare sempre la forma maschile 'мій' anche con sostantivi femminili o neutri.",
+      "examples": [
+        {
+          "wrong": "Це мій книга.",
+          "right": "Це моя книга.",
+          "note": "'Книга' è femminile, quindi serve 'моя'."
+        },
+        {
+          "wrong": "Це моя стіл.",
+          "right": "Це мій стіл.",
+          "note": "'Стіл' è maschile, quindi serve 'мій'."
+        },
+        {
+          "wrong": "Це мій вікно.",
+          "right": "Це моє вікно.",
+          "note": "'Вікно' è neutro, quindi serve 'моє'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Completa con la forma corretta del possessivo per 'моя' (mio): ______ подруга (amica).",
+          "answer": "моя"
+        },
+        {
+          "prompt": "Completa con la forma corretta per 'кіт' (gatto, maschile): ______ кіт.",
+          "answer": "мій"
+        },
+        {
+          "prompt": "Completa con la forma corretta per 'місце' (posto, neutro): ______ місце.",
+          "answer": "моє"
+        }
+      ]
+    },
+    {
+      "rule_id": "conditional-mood-with-би",
+      "topic": "Conditional mood with би",
+      "title": "Il modo condizionale con 'би' in ucraino",
+      "explanation": "In ucraino, il modo condizionale si forma con la particella 'би' (o 'б' davanti a vocale) e il verbo al passato. Un errore comune è usare 'би' con il presente o l'infinito, oppure posizionarlo in modo errato.",
+      "examples": [
+        {
+          "wrong": "Я хочу би купити книгу.",
+          "right": "Я хотів би купити книгу.",
+          "note": "'Би' si usa con il verbo al passato (хотів), non con l'infinito (хочу)."
+        },
+        {
+          "wrong": "Вона би ходить до школи.",
+          "right": "Вона б ходила до школи.",
+          "note": "Il verbo 'ходить' è presente, deve essere passato 'ходила'; 'би' diventa 'б' prima di vocale."
+        },
+        {
+          "wrong": "Ми би читаємо книгу.",
+          "right": "Ми б читали книгу.",
+          "note": "'Читаємо' è presente, sostituiscilo con il passato 'читали' e usa 'б' prima di consonante."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduci: Vorrei andare al cinema.",
+          "answer": "Я хотів би піти в кіно."
+        },
+        {
+          "prompt": "Correggi: Ти би робиш домашнє завдання.",
+          "answer": "Ти б робив домашнє завдання."
+        },
+        {
+          "prompt": "Completa: Вона ____ (купити) би машину.",
+          "answer": "купила б"
+        }
+      ]
+    },
+    {
+      "rule_id": "passive-voice-with-ся-verbs",
+      "topic": "Passive voice with -ся verbs",
+      "title": "La voce passiva con i verbi in -ся: un errore comune",
+      "explanation": "In ucraino, la voce passiva può essere espressa con i verbi riflessivi in -ся, ma spesso questi indicano un'azione che avviene da sola o un significato medio, non un vero passivo. Per esprimere correttamente il passivo (azione subita da un soggetto), è meglio usare il participio passato o la costruzione con “бути”. Ad esempio, “Книга читається” significa “Il libro si legge (da solo)”, mentre “Книга прочитана” significa “Il libro è stato letto”.",
+      "examples": [
+        {
+          "wrong": "Лист пишеться мною.",
+          "right": "Лист написаний мною.",
+          "note": "Il verbo riflessivo 'пишеться' indica l'azione in corso, non il risultato passivo. Per un passivo corretto usa il participio 'написаний'."
+        },
+        {
+          "wrong": "Двері відчиняються хлопцем.",
+          "right": "Двері відчинені хлопцем.",
+          "note": "Con 'відчиняються' il soggetto sembra compiere l'azione da solo; per esprimere che la porta è stata aperta da qualcuno usa il participio 'відчинені'."
+        },
+        {
+          "wrong": "Завдання виконується учнями.",
+          "right": "Завдання виконане учнями.",
+          "note": "'Виконується' descrive il processo in svolgimento; per il passivo compiuto (compito eseguito) si usa 'виконане'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduci in ucraino: 'La casa è costruita dai lavoratori.' (usa la forma passiva corretta)",
+          "answer": "Будинок побудований робітниками."
+        },
+        {
+          "prompt": "Correggi l'errore: 'Суп вариться мамою.' (La minestra si cuoce dalla mamma)",
+          "answer": "Суп зварений мамою."
+        },
+        {
+          "prompt": "Scegli la forma giusta per dire: 'Il libro è letto da molti studenti.' (usa participio)",
+          "answer": "Книга прочитана багатьма студентами."
+        }
+      ]
+    },
+    {
+      "rule_id": "active-participles-present-and-past",
+      "topic": "Active participles present and past",
+      "title": "Evitare i participi attivi in ucraino",
+      "explanation": "In ucraino i participi attivi presenti e passati (дієприкметники активного стану) sono molto rari nella lingua parlata e suonano arcaici o libreschi. Per esprimere un'azione in corso o passata, si preferiscono le subordinate relative con 'який' (che). Gli italiani tendono a usarli per analogia con l'italiano, ma è meglio evitarli.",
+      "examples": [
+        {
+          "wrong": "Студент, читаючий книгу",
+          "right": "Студент, який читає книгу",
+          "note": "Il participio presente attivo 'читаючий' è sostituito da 'який' + verbo al presente."
+        },
+        {
+          "wrong": "Жінка, прийшовша вчора",
+          "right": "Жінка, яка прийшла вчора",
+          "note": "Il participio passato attivo 'прийшовша' è raro; meglio usare 'який' + verbo al passato."
+        },
+        {
+          "wrong": "Хлопчик, граючий у парку",
+          "right": "Хлопчик, який грає у парку",
+          "note": "Evitate la forma participiale, usate sempre la relativa con 'який'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Trasforma la frase usando 'який': 'Людина, читаюча газету'.",
+          "answer": "Людина, яка читає газету"
+        },
+        {
+          "prompt": "Correggi: 'Кіт, сплячий на дивані'.",
+          "answer": "Кіт, який спить на дивані"
+        },
+        {
+          "prompt": "Sostituisci il participio passato attivo: 'Дівчина, заспівавша пісню'.",
+          "answer": "Дівчина, яка заспівала пісню"
+        }
+      ]
+    },
+    {
+      "rule_id": "gerund-дієприслівник-usage",
+      "topic": "Gerund (дієприслівник) usage",
+      "title": "Uso del gerundio ucraino (дієприслівник) – errori comuni",
+      "explanation": "In ucraino, il gerundio (дієприслівник) esprime un'azione secondaria compiuta dallo stesso soggetto del verbo principale. A differenza dell'italiano, non può essere usato con soggetti diversi. Inoltre, per azioni completate prima del verbo principale si usa il gerundio perfettivo (es. зробивши), mentre per azioni contemporanee si usa quello imperfettivo (es. роблячи).",
+      "examples": [
+        {
+          "wrong": "Читаючи книгу, стіл був брудним.",
+          "right": "Коли я читав книгу, стіл був брудним.",
+          "note": "Il gerundio richiede lo stesso soggetto del verbo principale. Qui il soggetto cambia (io -> tavolo), quindi si usa una subordinata."
+        },
+        {
+          "wrong": "Роблячи домашнє завдання, я пішов гуляти.",
+          "right": "Зробивши домашнє завдання, я пішов гуляти.",
+          "note": "Per un'azione completata prima del verbo principale si usa il gerundio perfettivo (зробивши), non quello imperfettivo (роблячи)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correggi la frase: 'Працюючи в саду, погода була чудовою.'",
+          "answer": "Коли я працював у саду, погода була чудовою."
+        },
+        {
+          "prompt": "Scegli la forma corretta del gerundio per completare: '____ (прочитати) книгу, я пішов спати.'",
+          "answer": "Прочитавши"
+        },
+        {
+          "prompt": "Traduci in ucraino usando il gerundio: 'Mangiando, parlava.'",
+          "answer": "Їдячи, він говорив."
+        }
+      ]
+    },
+    {
+      "rule_id": "comparative-and-superlative-degrees",
+      "topic": "Comparative and superlative degrees",
+      "title": "Gradi comparativo e superlativo in ucraino: errori comuni",
+      "explanation": "In ucraino, il comparativo si forma con il suffisso '-ший' (sintetico) o con la parola 'більш' (analitico), ma mai insieme. Per il superlativo si usa il prefisso 'най-' (sintetico) o 'найбільш' (analitico). Evita 'самий', che è un russofismo e non si usa in ucraino standard.",
+      "examples": [
+        {
+          "wrong": "більш кращий",
+          "right": "кращий",
+          "note": "Non usare 'більш' con aggettivi che hanno già la forma comparativa."
+        },
+        {
+          "wrong": "самий красивий",
+          "right": "найкрасивіший",
+          "note": "In ucraino 'самий' non esiste per il superlativo; usa 'най-' o 'найбільш'."
+        },
+        {
+          "wrong": "найбільш кращий",
+          "right": "найкращий",
+          "note": "Non combinare 'найбільш' con la forma sintetica del superlativo."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduci 'più alto' (comparativo) in ucraino, usando la forma corretta.",
+          "answer": "вищий"
+        },
+        {
+          "prompt": "Come si dice 'il più interessante'? (superlativo)",
+          "answer": "найцікавіший"
+        },
+        {
+          "prompt": "Correggi l'errore: 'більш дешевший' e scrivi la forma giusta.",
+          "answer": "дешевший"
+        }
+      ]
+    },
+    {
+      "rule_id": "double-negation-with-ні-prefixes",
+      "topic": "Double negation with ні- prefixes",
+      "title": "Doppia negazione con prefissi ні-",
+      "explanation": "In ucraino, le parole con prefisso ні- (ad esempio ніхто, ніщо, ніколи) richiedono sempre un verbo negato con не. Una doppia negazione è obbligatoria, non un errore. L'errore comune degli italiani è omettere il не (usando solo la parola con ні-) o aggiungere un extra не, creando una tripla negazione.",
+      "examples": [
+        {
+          "wrong": "Я нікого бачу.",
+          "right": "Я нікого не бачу.",
+          "note": "Manca il 'не' davanti al verbo: la frase corretta vuole la doppia negazione."
+        },
+        {
+          "wrong": "Він ніколи приходить.",
+          "right": "Він ніколи не приходить.",
+          "note": "Anche qui, dopo 'ніколи' il verbo deve essere negato con 'не'."
+        },
+        {
+          "wrong": "Ніхто не не прийшов.",
+          "right": "Ніхто не прийшов.",
+          "note": "Non serve un secondo 'не': la forma giusta è una sola doppia negazione."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Traduci in ucraino: 'Nessuno mi ha visto.'",
+          "answer": "Ніхто мене не бачив."
+        },
+        {
+          "prompt": "Traduci in ucraino: 'Non vado mai al cinema.'",
+          "answer": "Я ніколи не ходжу в кіно."
+        }
+      ]
+    },
+    {
+      "rule_id": "conjunctions-і-та-а-але",
+      "topic": "Conjunctions і, та, а, але",
+      "title": "Congiunzioni ucraine: і, та, а, але",
+      "explanation": "In ucraino, 'і' e 'та' significano 'e' (additivo), mentre 'а' si usa per contrapporre due idee (come 'mentre' o 'e invece') e 'але' significa 'ma' (avversativo). Un errore comune è usare 'а' al posto di 'і' quando si elencano elementi simili.",
+      "examples": [
+        {
+          "wrong": "Я купив хліб а молоко.",
+          "right": "Я купив хліб і молоко.",
+          "note": "Con 'а' si crea un contrasto ingiustificato; qui serve un semplice 'e'."
+        },
+        {
+          "wrong": "Він багатий, але щасливий.",
+          "right": "Він багатий, але нещасливий.",
+          "note": "Dopo 'але' serve una contraddizione logica; oppure usa 'а' per contrapporre: 'Він багатий, а нещасливий'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Scegli la congiunzione corretta: я люблю каву, _____ чай не п'ю.",
+          "answer": "а"
+        },
+        {
+          "prompt": "Scegli la congiunzione corretta: ми купили яблука _____ груші.",
+          "answer": "і"
+        },
+        {
+          "prompt": "Scegli la congiunzione corretta: вона втомилася, _____ продовжує працювати.",
+          "answer": "але"
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciation-of-the-letter-щ",
+      "topic": "Pronunciation of the letter щ",
+      "title": "La pronuncia della lettera ucraina Щ",
+      "explanation": "La lettera ucraina 'щ' si pronuncia come il suono 'shch' in inglese 'fresh cheese', cioè una 'sh' seguita da una 'ch' dolce. Gli italiani spesso la confondono con 'ш' (che è semplicemente 'sh') o con 'ск'. Attenzione: non è un suono singolo ma una combinazione morbida di due suoni.",
+      "examples": [
+        {
+          "wrong": "борщ (pronunciato 'borsh')",
+          "right": "борщ (pronunciato 'borshch')",
+          "note": "La parola 'борщ' (borscht) è famosa: la 'щ' finale non è solo 'sh', ma 'shch'."
+        },
+        {
+          "wrong": "щука (pronunciato 'shuka')",
+          "right": "щука (pronunciato 'shchuka')",
+          "note": "'Щука' significa luccio: la 'щ' iniziale richiede il suono 'shch'."
+        },
+        {
+          "wrong": "плащ (pronunciato 'plash')",
+          "right": "плащ (pronunciato 'plashch')",
+          "note": "'Плащ' è l'impermeabile: la 'щ' finale va pronunciata chiaramente 'shch'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Ascolta e ripeti: come si pronuncia 'щит' (scudo)? Scrivi la trascrizione approssimativa in italiano.",
+          "answer": "shchyt"
+        },
+        {
+          "prompt": "Leggi ad alta voce: 'товарищ' (compagno). Quale suono devi usare alla fine?",
+          "answer": "shch (товарищ → tovaryshch)"
+        },
+        {
+          "prompt": "Correggi la pronuncia sbagliata: 'ящірка' (lucertola) detto 'yashirka'.",
+          "answer": "yashchirka"
+        }
+      ]
+    },
+    {
+      "rule_id": "hard-vs-soft-adjective-endings",
+      "topic": "Hard vs soft adjective endings",
+      "title": "Desinenze dure e morbide degli aggettivi in ucraino",
+      "explanation": "In ucraino gli aggettivi hanno desinenze diverse a seconda che la radice termini con una consonante dura o morbida. Le desinenze dure sono -ий (maschile), -а (femminile), -е (neutro); quelle morbide sono -ій, -я, -є. Un errore comune è confondere queste desinenze, ad esempio scrivendo *синий invece di синій.",
+      "examples": [
+        {
+          "wrong": "синий",
+          "right": "синій",
+          "note": "L'aggettivo 'blu' ha radice morbida (н'), quindi richiede -ій."
+        },
+        {
+          "wrong": "добрій",
+          "right": "добрий",
+          "note": "La radice 'добр' termina con una consonante dura (р), quindi desinenza -ий."
+        },
+        {
+          "wrong": "третий",
+          "right": "третій",
+          "note": "L'aggettivo 'terzo' è morbido e prende -ій."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Completa con la desinenza corretta (dura o morbida): 'Це ... (синій) олівець.'",
+          "answer": "синій"
+        },
+        {
+          "prompt": "Completa: 'Це ... (добрий) жінка.'",
+          "answer": "добра"
+        },
+        {
+          "prompt": "Completa: 'Це ... (третій) вправа.'",
+          "answer": "третя"
+        }
+      ]
+    },
+    {
+      "rule_id": "vocative-case-forms",
+      "topic": "Vocative case forms",
+      "title": "Il caso vocativo in ucraino: come rivolgersi a qualcuno",
+      "explanation": "In ucraino, quando chiami o ti rivolgi direttamente a una persona, devi usare il caso vocativo. Spesso i principianti usano il nominativo, ma è un errore comune. Per i nomi maschili che terminano in consonante, si aggiunge -e o -y; per i femminili in -a, -я, la desinenza diventa -o, -e.",
+      "examples": [
+        {
+          "wrong": "Привіт, брат!",
+          "right": "Привіт, брате!",
+          "note": "Il nome maschile 'брат' (fratello) al vocativo prende -е."
+        },
+        {
+          "wrong": "Добрий день, мама!",
+          "right": "Добрий день, мамо!",
+          "note": "Il nome femminile 'мама' (mamma) cambia -а in -о al vocativo."
+        },
+        {
+          "wrong": "Іван, йди сюди!",
+          "right": "Іване, йди сюди!",
+          "note": "I nomi propri maschili come 'Іван' aggiungono -е al vocativo."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Come si dice 'Ciao, amico!' in ucraino? (usa il vocativo di 'друг')",
+          "answer": "Привіт, друже!"
+        },
+        {
+          "prompt": "Riscrivi correttamente: 'Дякую, сестра!' (usa il vocativo della parola 'сестра')",
+          "answer": "Дякую, сестро!"
+        },
+        {
+          "prompt": "Come diresti 'Buonasera, Anna!' (vocativo di 'Анна')?",
+          "answer": "Добрий вечір, Анно!"
+        }
+      ]
+    },
+    {
+      "rule_id": "the-letter-ґ-versus-г",
+      "topic": "The letter ґ versus г",
+      "title": "La differenza tra Г e Ґ in ucraino",
+      "explanation": "In ucraino, la lettera Г rappresenta il suono /ɦ/ (simile all'inglese 'h' ma sonoro), mentre Ґ rappresenta /ɡ/ (come la 'g' dura italiana di 'gatto'). Molti italiani confondono le due perché in italiano non esiste il suono /ɦ/. Per evitare errori, ricorda: Ґ si usa solo in parole di origine straniera o in parole ucraine specifiche (ad esempio ґанок, ґудзик), mentre Г è molto più comune.",
+      "examples": [
+        {
+          "wrong": "гуляти",
+          "right": "ґуляти (non esiste, ma errore comune: scrivere ґ invece di г)",
+          "note": "Parola corretta: гуляти (camminare) si scrive con Г, non Ґ."
+        },
+        {
+          "wrong": "гудзик",
+          "right": "ґудзик",
+          "note": "La parola 'bottone' si scrive con Ґ (suono duro /ɡ/)."
+        },
+        {
+          "wrong": "ангел",
+          "right": "анґел (non standard, ma per illustrare: in prestiti si usa Ґ)",
+          "note": "In realtà 'ангел' (angelo) si scrive con Г, ma alcune parole straniere come 'ґанок' (portico) richiedono Ґ. Attenzione ai prestiti!"
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Scegli la lettera corretta: _уляти (camminare)",
+          "answer": "гуляти"
+        },
+        {
+          "prompt": "Scegli la lettera corretta: _удзик (bottone)",
+          "answer": "ґудзик"
+        },
+        {
+          "prompt": "Scegli la lettera corretta: _ерой (eroe)",
+          "answer": "герой"
+        }
+      ]
+    },
+    {
+      "rule_id": "verbal-prefixes-for-aspect",
+      "topic": "Verbal prefixes for aspect",
+      "title": "Prefissi verbali e aspetto: l'errore comune",
+      "explanation": "In ucraino i verbi hanno due aspetti: imperfettivo (azione in corso, abituale) e perfettivo (azione completata). Un errore frequente per chi parla italiano è usare il perfettivo (spesso con un prefisso) per azioni abituali o in corso, dove invece serve l'imperfettivo. Ricorda: il perfettivo non si usa al presente e per azioni ripetute si richiede sempre l'imperfettivo.",
+      "examples": [
+        {
+          "wrong": "Я напишу листа щодня.",
+          "right": "Я пишу листа щодня.",
+          "note": "Il perfettivo 'напишу' indica un'azione che sarà completata una volta, non un'abitudine."
+        },
+        {
+          "wrong": "Вона прочитає книгу кожного вечора.",
+          "right": "Вона читає книгу кожного вечора.",
+          "note": "Per azioni ripetute (ogni sera) serve l'imperfettivo 'читає'."
+        },
+        {
+          "wrong": "Ми з'їли суп на обід щодня.",
+          "right": "Ми їли суп на обід щодня.",
+          "note": "Anche nel passato, un'abitudine richiede l'imperfettivo 'їли'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Completa con la forma corretta (imperfettivo presente): Ogni giorno io (scrivere) una lettera.",
+          "answer": "пишу"
+        },
+        {
+          "prompt": "Scegli la forma giusta per un'azione abituale: Lei (leggere) un libro ogni sera.",
+          "answer": "читає"
+        },
+        {
+          "prompt": "Correggi la frase per indicare un'abitudine passata: 'Вони з'їли суп щодня.'",
+          "answer": "Вони їли суп щодня."
+        }
+      ]
+    }
+  ]
+}

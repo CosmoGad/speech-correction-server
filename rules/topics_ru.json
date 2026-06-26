@@ -1,0 +1,105 @@
+{
+  "learning": "ru",
+  "topics": [
+    {
+      "rule_id": "падежные-окончания",
+      "title": "падежные окончания"
+    },
+    {
+      "rule_id": "глагольные-приставки",
+      "title": "глагольные приставки"
+    },
+    {
+      "rule_id": "ударения",
+      "title": "ударения"
+    },
+    {
+      "rule_id": "видовые-пары-глаголов",
+      "title": "видовые пары глаголов"
+    },
+    {
+      "rule_id": "мягкие-согласные",
+      "title": "мягкие согласные"
+    },
+    {
+      "rule_id": "редукция-гласных",
+      "title": "редукция гласных"
+    },
+    {
+      "rule_id": "ударение",
+      "title": "ударение"
+    },
+    {
+      "rule_id": "use-of-быть-in-present-tense",
+      "title": "Use of \"быть\" in present tense"
+    },
+    {
+      "rule_id": "genitive-of-negation",
+      "title": "Genitive of negation"
+    },
+    {
+      "rule_id": "numerals-with-noun-agreement",
+      "title": "Numerals with noun agreement"
+    },
+    {
+      "rule_id": "short-vs-long-adjectives",
+      "title": "Short vs long adjectives"
+    },
+    {
+      "rule_id": "word-order-in-questions",
+      "title": "Word order in questions"
+    },
+    {
+      "rule_id": "reflexive-verbs-vs-non-reflexive",
+      "title": "Reflexive verbs vs non-reflexive"
+    },
+    {
+      "rule_id": "motion-verbs-ходитьидтиехать",
+      "title": "Motion verbs ходить/идти/ехать"
+    },
+    {
+      "rule_id": "possessive-свой-vs-мойтвой",
+      "title": "Possessive свой vs мой/твой"
+    },
+    {
+      "rule_id": "subjunctive-with-бы",
+      "title": "Subjunctive with бы"
+    },
+    {
+      "rule_id": "impersonal-constructions-мне-холодно",
+      "title": "Impersonal constructions (мне холодно)"
+    },
+    {
+      "rule_id": "particle-ли-in-indirect-questions",
+      "title": "Particle ли in indirect questions"
+    },
+    {
+      "rule_id": "declension-of-cardinal-numerals",
+      "title": "Declension of cardinal numerals"
+    },
+    {
+      "rule_id": "prepositional-case-with-time-expressions",
+      "title": "Prepositional case with time expressions"
+    },
+    {
+      "rule_id": "spelling-rules-after-velars-гкх",
+      "title": "Spelling rules after velars (г/к/х)"
+    },
+    {
+      "rule_id": "hard-sign-vs-soft-sign-usage",
+      "title": "Hard sign vs soft sign usage"
+    },
+    {
+      "rule_id": "pronunciation-of-ч-vs-щ",
+      "title": "Pronunciation of ч vs щ"
+    },
+    {
+      "rule_id": "conjugation-patterns-еи-endings",
+      "title": "Conjugation patterns е/и endings"
+    },
+    {
+      "rule_id": "ordinal-vs-cardinal-numbers",
+      "title": "Ordinal vs cardinal numbers"
+    }
+  ]
+}
