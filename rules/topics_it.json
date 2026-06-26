@@ -1,0 +1,105 @@
+{
+  "learning": "it",
+  "topics": [
+    {
+      "rule_id": "articoli",
+      "title": "Articoli"
+    },
+    {
+      "rule_id": "concordanza-dei-tempi",
+      "title": "Concordanza dei tempi"
+    },
+    {
+      "rule_id": "preposizioni",
+      "title": "Preposizioni"
+    },
+    {
+      "rule_id": "congiuntivo",
+      "title": "Congiuntivo"
+    },
+    {
+      "rule_id": "consonanti-doppie",
+      "title": "Consonanti doppie"
+    },
+    {
+      "rule_id": "accento",
+      "title": "Accento"
+    },
+    {
+      "rule_id": "intonazione",
+      "title": "Intonazione"
+    },
+    {
+      "rule_id": "imperfetto-vs-passato-prossimo",
+      "title": "Imperfetto vs passato prossimo"
+    },
+    {
+      "rule_id": "omission-of-subject-pronouns",
+      "title": "Omission of subject pronouns"
+    },
+    {
+      "rule_id": "adjective-agreement-gender-number",
+      "title": "Adjective agreement gender number"
+    },
+    {
+      "rule_id": "reflexive-verbs-and-reciprocals",
+      "title": "Reflexive verbs and reciprocals"
+    },
+    {
+      "rule_id": "piacere-and-similar-verbs",
+      "title": "Piacere and similar verbs"
+    },
+    {
+      "rule_id": "ci-locative-pronoun-usage",
+      "title": "Ci locative pronoun usage"
+    },
+    {
+      "rule_id": "ne-partitive-and-topic-pronoun",
+      "title": "Ne partitive and topic pronoun"
+    },
+    {
+      "rule_id": "auxiliary-essere-vs-avere",
+      "title": "Auxiliary essere vs avere"
+    },
+    {
+      "rule_id": "direct-indirect-object-pronouns",
+      "title": "Direct indirect object pronouns"
+    },
+    {
+      "rule_id": "andare-vs-venire",
+      "title": "Andare vs venire"
+    },
+    {
+      "rule_id": "molto-troppo-tanto-differences",
+      "title": "Molto troppo tanto differences"
+    },
+    {
+      "rule_id": "sapere-vs-conoscere",
+      "title": "Sapere vs conoscere"
+    },
+    {
+      "rule_id": "potere-vs-riuscire",
+      "title": "Potere vs riuscire"
+    },
+    {
+      "rule_id": "dovere-vs-avere-bisogno-di",
+      "title": "Dovere vs avere bisogno di"
+    },
+    {
+      "rule_id": "relative-pronouns-che-vs-cui",
+      "title": "Relative pronouns che vs cui"
+    },
+    {
+      "rule_id": "stare-vs-essere-usage",
+      "title": "Stare vs essere usage"
+    },
+    {
+      "rule_id": "double-negatives-non-mai-nessuno",
+      "title": "Double negatives non mai nessuno"
+    },
+    {
+      "rule_id": "ordinal-numbers-for-dates",
+      "title": "Ordinal numbers for dates"
+    }
+  ]
+}

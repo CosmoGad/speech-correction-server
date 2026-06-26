@@ -1,0 +1,901 @@
+{
+  "learning": "pt",
+  "interface": "en",
+  "generated_at": "2026-06-26T12:26:09.602681+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "artigos",
+      "topic": "Artigos",
+      "title": "Articles in Portuguese: Gender Agreement",
+      "explanation": "In Portuguese, every noun has a gender (masculine or feminine), and the definite article must match that gender. A common mistake is using 'a' for masculine nouns or 'o' for feminine nouns, often because the noun's ending is misleading. Always learn the article together with the noun to avoid errors.",
+      "examples": [
+        {
+          "wrong": "a problema",
+          "right": "o problema",
+          "note": "'Problema' is masculine even though it ends in -a."
+        },
+        {
+          "wrong": "o mão",
+          "right": "a mão",
+          "note": "'Mão' is feminine despite ending in -ão."
+        },
+        {
+          "wrong": "a dia",
+          "right": "o dia",
+          "note": "'Dia' is masculine even though it ends in -a."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct article: '_______ problema' (the problem)",
+          "answer": "o"
+        },
+        {
+          "prompt": "Fill in the correct article: '_______ mão' (the hand)",
+          "answer": "a"
+        },
+        {
+          "prompt": "Fill in the correct article: '_______ dia' (the day)",
+          "answer": "o"
+        }
+      ]
+    },
+    {
+      "rule_id": "tempos-verbais",
+      "topic": "Tempos verbais",
+      "title": "Past Tenses: Perfeito vs. Imperfeito",
+      "explanation": "Portuguese uses two main past tenses: pretérito perfeito (simple past) for single, completed actions, and pretérito imperfeito (imperfect) for habitual or ongoing actions in the past. English speakers often mistakenly use the simple past for both, so choose carefully based on whether the action was a one-time event or a repeated/descriptive situation.",
+      "examples": [
+        {
+          "wrong": "Eu estudava para a prova ontem.",
+          "right": "Eu estudei para a prova ontem.",
+          "note": "Use pretérito perfeito for a single, completed action in the past."
+        },
+        {
+          "wrong": "Eu falei com ela todos os dias.",
+          "right": "Eu falava com ela todos os dias.",
+          "note": "Use pretérito imperfeito for habitual or repeated actions in the past."
+        },
+        {
+          "wrong": "Quando eu fui criança, eu brinquei no parque.",
+          "right": "Quando eu era criança, eu brincava no parque.",
+          "note": "Use imperfeito for descriptions and ongoing situations in the past."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complete with the correct past tense: Yesterday I (call) my friend once.",
+          "answer": "Eu liguei para meu amigo."
+        },
+        {
+          "prompt": "Complete: Every summer, we (visit) our grandparents.",
+          "answer": "Nós visitávamos nossos avós."
+        },
+        {
+          "prompt": "Complete: When I was young, I (read) a lot.",
+          "answer": "Eu lia muito."
+        }
+      ]
+    },
+    {
+      "rule_id": "preposições",
+      "topic": "Preposições",
+      "title": "Prepositions with Articles: Use Contractions",
+      "explanation": "In Portuguese, prepositions like 'em' (in/on/at), 'de' (of/from), and 'por' (by/for) combine with definite articles (o, a, os, as) to form single words. For example, 'em' + 'o' = 'no', 'de' + 'a' = 'da'. English speakers often mistakenly keep them separate (e.g., 'em o'), which is incorrect. Always use the contracted form.",
+      "examples": [
+        {
+          "wrong": "O livro está em a mesa.",
+          "right": "O livro está na mesa.",
+          "note": "'em' + 'a' becomes 'na'."
+        },
+        {
+          "wrong": "Ele é de o Brasil.",
+          "right": "Ele é do Brasil.",
+          "note": "'de' + 'o' becomes 'do'."
+        },
+        {
+          "wrong": "Vou por o parque.",
+          "right": "Vou pelo parque.",
+          "note": "'por' + 'o' becomes 'pelo'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I am in the house.' Use the contraction.",
+          "answer": "Estou na casa."
+        },
+        {
+          "prompt": "Correct this sentence: 'O carro é de a minha mãe.'",
+          "answer": "O carro é da minha mãe."
+        },
+        {
+          "prompt": "Fill in the blank: 'Ela mora em _____ escola.' (the school)",
+          "answer": "na"
+        }
+      ]
+    },
+    {
+      "rule_id": "conjugação",
+      "topic": "Conjugação",
+      "title": "Don't Use the Infinitive After Subject Pronouns",
+      "explanation": "In Portuguese, verbs must be conjugated to match the subject. A common mistake is using the infinitive (e.g., 'falar') directly after a subject pronoun instead of the correct conjugated form. For example, after 'eu' you need first-person singular endings, not the infinitive.",
+      "examples": [
+        {
+          "wrong": "Eu falar português.",
+          "right": "Eu falo português.",
+          "note": "For -ar verbs like 'falar', 'eu' takes the ending '-o' in present tense."
+        },
+        {
+          "wrong": "Ela comer pizza.",
+          "right": "Ela come pizza.",
+          "note": "For -er verbs like 'comer', 'ela' takes the ending '-e'."
+        },
+        {
+          "wrong": "Nós jogar futebol.",
+          "right": "Nós jogamos futebol.",
+          "note": "For -ar verbs, 'nós' takes '-amos'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank with the correct present tense conjugation: Eu ________ (falar) inglês.",
+          "answer": "falo"
+        },
+        {
+          "prompt": "Fill in the blank: Vocês ________ (correr) no parque.",
+          "answer": "correm"
+        },
+        {
+          "prompt": "Fill in the blank: Tu ________ (partir) cedo.",
+          "answer": "partes"
+        }
+      ]
+    },
+    {
+      "rule_id": "vogais-nasais",
+      "topic": "Vogais nasais",
+      "title": "Nasal Vowels in Portuguese",
+      "explanation": "Portuguese has nasal vowels, which are produced by letting air escape through the nose. They occur when a vowel is followed by 'm' or 'n' in the same syllable, or when marked with a tilde (˜). English speakers often forget to nasalize these vowels or omit the tilde in writing, which can change the meaning of the word.",
+      "examples": [
+        {
+          "wrong": "pao",
+          "right": "pão",
+          "note": "The tilde (~) over the 'a' makes it a nasal vowel. Without it, 'pao' would be pronounced as two oral vowels."
+        },
+        {
+          "wrong": "mae",
+          "right": "mãe",
+          "note": "'Mãe' (mother) has a nasal 'ã' and a silent 'e'. The tilde is essential for correct pronunciation and meaning."
+        },
+        {
+          "wrong": "irmaos",
+          "right": "irmãos",
+          "note": "The diphthong 'ão' at the end is nasal. Forgetting the tilde changes the word to a different (often nonexistent) form."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you write 'bread' in Portuguese? (Remember the nasal vowel)",
+          "answer": "pão"
+        },
+        {
+          "prompt": "Write the word for 'hand' (it has a nasal 'a' and is a one-syllable word).",
+          "answer": "mão"
+        },
+        {
+          "prompt": "Spell the masculine form of 'good' (it ends with a nasal consonant 'm').",
+          "answer": "bom"
+        }
+      ]
+    },
+    {
+      "rule_id": "sotaque",
+      "topic": "Sotaque",
+      "title": "Understanding \"Sotaque\" vs \"Acento\"",
+      "explanation": "In Portuguese, \"sotaque\" refers to a regional or foreign pronunciation accent, while \"acento\" means a written accent mark (like ´, ^, or ~). A common mistake is using \"sotaque\" to talk about written marks. Remember: you speak with a \"sotaque\", but you write with \"acentos\".",
+      "examples": [
+        {
+          "wrong": "O português tem muitos sotaques gráficos.",
+          "right": "O português tem muitos acentos gráficos.",
+          "note": "\"Sotaque\" is for pronunciation, not for written marks."
+        },
+        {
+          "wrong": "Ela tem um sotaque no 'é'.",
+          "right": "Ela tem um acento no 'é'.",
+          "note": "The mark on the letter is an \"acento\", not \"sotaque\"."
+        },
+        {
+          "wrong": "Não entendo seu sotaque escrito.",
+          "right": "Não entendo sua escrita com acentos.",
+          "note": "Written language has \"acentos\", not \"sotaque\"."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank: He speaks with a strong Brazilian _______. (sotaque or acento)",
+          "answer": "sotaque"
+        },
+        {
+          "prompt": "Fill in the blank: The word 'café' has a _______ on the 'e'. (sotaque or acento)",
+          "answer": "acento"
+        },
+        {
+          "prompt": "Choose the correct sentence: 'Ele tem um sotaque forte.' or 'Ele tem um acento forte.'",
+          "answer": "Ele tem um sotaque forte."
+        }
+      ]
+    },
+    {
+      "rule_id": "entonação",
+      "topic": "Entonação",
+      "title": "Portuguese Intonation: Rising vs. Falling",
+      "explanation": "Portuguese intonation differs from English. Statements usually end with a falling tone, while yes/no questions require a clear rising tone at the end. A common mistake is using a rising tone for statements (sounding like a question) or a flat tone for questions.",
+      "examples": [
+        {
+          "wrong": "Você vai.",
+          "right": "Você vai?",
+          "note": "Saying 'Você vai.' with a flat or rising tone makes it sound like a question; use a falling tone for statements and a rising tone for questions."
+        },
+        {
+          "wrong": "Ele é brasileiro? (with falling tone)",
+          "right": "Ele é brasileiro? (with rising tone)",
+          "note": "Yes/no questions must end with a clearly rising intonation, otherwise it sounds like a statement."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you ask 'Do you speak English?' with the correct rising intonation? Write the question in Portuguese.",
+          "answer": "Você fala inglês?"
+        },
+        {
+          "prompt": "How do you state 'She is a teacher' with the correct falling intonation? Write the statement in Portuguese.",
+          "answer": "Ela é professora."
+        }
+      ]
+    },
+    {
+      "rule_id": "ser-vs-estar-usage",
+      "topic": "Ser vs Estar usage",
+      "title": "Ser vs Estar: When to Use Each",
+      "explanation": "Use 'ser' for permanent or inherent characteristics, such as identity, origin, profession, and physical traits. Use 'estar' for temporary states, locations, emotions, and conditions that can change. A common mistake is using 'ser' for location or temporary feelings.",
+      "examples": [
+        {
+          "wrong": "Ele é no Brasil.",
+          "right": "Ele está no Brasil.",
+          "note": "Use 'estar' for location, even if the person lives there, because location is a temporary state relative to the verb."
+        },
+        {
+          "wrong": "Ela está triste sempre.",
+          "right": "Ela é triste.",
+          "note": "Use 'ser' for a permanent personality trait like being a sad person; use 'estar' for a temporary mood."
+        },
+        {
+          "wrong": "Eu sou cansado.",
+          "right": "Eu estou cansado.",
+          "note": "Use 'estar' for temporary physical states like tiredness; 'ser' is for inherent qualities."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank: 'Ela ______ muito inteligente.' (She is very intelligent – permanent trait)",
+          "answer": "é"
+        },
+        {
+          "prompt": "Fill in the blank: 'Nós ______ no cinema agora.' (We are at the cinema now – location)",
+          "answer": "estamos"
+        },
+        {
+          "prompt": "Fill in the blank: 'Você ______ feliz hoje?' (Are you happy today? – temporary emotion)",
+          "answer": "está"
+        }
+      ]
+    },
+    {
+      "rule_id": "gender-agreement-of-nouns",
+      "topic": "Gender agreement of nouns",
+      "title": "Gender Agreement of Nouns",
+      "explanation": "In Portuguese, every noun has a gender (masculine or feminine), and words that modify it (articles, adjectives, etc.) must match that gender. Most nouns ending in -o are masculine, and most ending in -a are feminine, but there are exceptions.",
+      "examples": [
+        {
+          "wrong": "A livro é interessante.",
+          "right": "O livro é interessante.",
+          "note": "Livro ends in -o, so it's masculine. Use 'o' instead of 'a'."
+        },
+        {
+          "wrong": "O casa é grande.",
+          "right": "A casa é grande.",
+          "note": "Casa ends in -a, so it's feminine. Use 'a' instead of 'o'."
+        },
+        {
+          "wrong": "O problema é difícil.",
+          "right": "O problema é difícil.",
+          "note": "Problema ends in -a but is masculine. This is an exception; keep 'o'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Choose the correct article for 'menino' (boy):",
+          "answer": "O"
+        },
+        {
+          "prompt": "Choose the correct article for 'mesa' (table):",
+          "answer": "A"
+        },
+        {
+          "prompt": "Fill in the blank: '__ cadeira é confortável.' (chair)",
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "rule_id": "plural-formation-rules",
+      "topic": "Plural formation rules",
+      "title": "Plural Formation in Portuguese: Don't Forget to Change the Ending!",
+      "explanation": "In Portuguese, nouns and adjectives usually form plurals by adding -s if they end in a vowel, or -es if they end in -r, -z, or -n. A common mistake is to simply add -s to words ending in -l or -m, which require specific changes: -l becomes -is, and -m becomes -ns. Also, words ending in -ão can have three different plural forms, but the most common is -ões.",
+      "examples": [
+        {
+          "wrong": "carnavals",
+          "right": "carnavais",
+          "note": "Words ending in -l (except -il) change -l to -is."
+        },
+        {
+          "wrong": "homems",
+          "right": "homens",
+          "note": "Words ending in -m change to -ns."
+        },
+        {
+          "wrong": "cãos",
+          "right": "cães",
+          "note": "Words ending in -ão often change to -ães or -ões; memorize common ones."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the plural of 'animal' (animal).",
+          "answer": "animais"
+        },
+        {
+          "prompt": "Write the plural of 'lição' (lesson).",
+          "answer": "lições"
+        },
+        {
+          "prompt": "Write the plural of 'fácil' (easy).",
+          "answer": "fáceis"
+        }
+      ]
+    },
+    {
+      "rule_id": "personal-object-pronouns",
+      "topic": "Personal object pronouns",
+      "title": "Using Object Pronouns Correctly",
+      "explanation": "In Portuguese, you cannot use subject pronouns (like eu, você, ele, ela) as the object of a verb. Instead, use object pronouns: me, te, o, a, lhe, nos, vos, os, as, lhes. This rule applies especially in formal writing and speech. For example, 'Eu vi ele' is incorrect; the correct form is 'Eu o vi'.",
+      "examples": [
+        {
+          "wrong": "Eu vi ela.",
+          "right": "Eu a vi.",
+          "note": "Replace subject pronoun 'ela' with object pronoun 'a' for feminine direct object."
+        },
+        {
+          "wrong": "Ele deu o presente para eu.",
+          "right": "Ele me deu o presente.",
+          "note": "After prepositions, use 'mim' (or 'ti', etc.), not 'eu'. Or use an indirect object pronoun like 'me'."
+        },
+        {
+          "wrong": "Você pode ajudar eu?",
+          "right": "Você pode me ajudar?",
+          "note": "Use 'me' as the object pronoun for 'me' when it receives the action."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the sentence: 'Eu vi ele no parque.'",
+          "answer": "Eu o vi no parque."
+        },
+        {
+          "prompt": "How would you say 'She gave the book to me' using an object pronoun?",
+          "answer": "Ela me deu o livro."
+        },
+        {
+          "prompt": "Correct the sentence: 'Ela chamou eu para a festa.'",
+          "answer": "Ela me chamou para a festa."
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-verb-pronouns",
+      "topic": "Reflexive verb pronouns",
+      "title": "Using Reflexive Pronouns with Verbs",
+      "explanation": "In Portuguese, many verbs require a reflexive pronoun that matches the subject. English speakers often forget this pronoun, especially with common verbs like 'levantar-se' (to get up) and 'vestir-se' (to get dressed). The pronoun comes before the verb in simple tenses, like 'eu me levanto' or 'ele se veste'.",
+      "examples": [
+        {
+          "wrong": "Eu levanto cedo.",
+          "right": "Eu me levanto cedo.",
+          "note": "The reflexive pronoun 'me' is needed for 'I' with 'levantar-se'."
+        },
+        {
+          "wrong": "Ele veste o casaco.",
+          "right": "Ele veste-se com o casaco.",
+          "note": "With clothing verbs, 'se' is needed when the action is on oneself."
+        },
+        {
+          "wrong": "Nós sentamos na cadeira.",
+          "right": "Nós nos sentamos na cadeira.",
+          "note": "'Sentar-se' requires the pronoun 'nos' for 'we'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'I get up at 7 AM' using the correct reflexive pronoun?",
+          "answer": "Eu me levanto às 7 da manhã."
+        },
+        {
+          "prompt": "Correct the sentence: 'Ela chama Ana.' (to be named)",
+          "answer": "Ela se chama Ana."
+        },
+        {
+          "prompt": "Translate 'They get dressed' using the correct reflexive pronoun.",
+          "answer": "Eles se vestem."
+        }
+      ]
+    },
+    {
+      "rule_id": "false-cognates-false-friends",
+      "topic": "False cognates (false friends)",
+      "title": "False Cognates (False Friends) in Portuguese",
+      "explanation": "False cognates are words that look similar in Portuguese and English but have different meanings. For example, 'puxar' looks like 'push' but actually means 'to pull'. Watch out for these common traps to avoid confusion.",
+      "examples": [
+        {
+          "wrong": "Puxe a porta.",
+          "right": "Empurre a porta.",
+          "note": "In Portuguese, 'puxar' means 'to pull', not 'to push'. Use 'empurrar' for push."
+        },
+        {
+          "wrong": "Ele pretende estar doente.",
+          "right": "Ele finge estar doente.",
+          "note": "'Pretender' means 'to intend', not 'to pretend'. Use 'fingir' for pretend."
+        },
+        {
+          "wrong": "Atualmente, ele é o chefe.",
+          "right": "Na verdade, ele é o chefe.",
+          "note": "'Atualmente' means 'currently', not 'actually'. Use 'na verdade' for 'actually'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'I am actually tired' in Portuguese?",
+          "answer": "Na verdade, estou cansado."
+        },
+        {
+          "prompt": "Translate 'She is pretending to study' into Portuguese.",
+          "answer": "Ela finge estudar."
+        },
+        {
+          "prompt": "You see a door with a sign that says 'Puxe'. Should you push or pull? Answer with the correct Portuguese verb in infinitive.",
+          "answer": "Puxar"
+        }
+      ]
+    },
+    {
+      "rule_id": "subjunctive-mood-usage",
+      "topic": "Subjunctive mood usage",
+      "title": "Using the Subjunctive After 'Espero Que' and Similar Expressions",
+      "explanation": "In Portuguese, the subjunctive mood is required after expressions of doubt, emotion, desire, or necessity (e.g., 'espero que', 'é importante que', 'talvez'). A common mistake is using the indicative instead of the subjunctive in these contexts. Remember to conjugate the verb in the present subjunctive after such triggers.",
+      "examples": [
+        {
+          "wrong": "Espero que você vai bem.",
+          "right": "Espero que você vá bem.",
+          "note": "After 'espero que', use the present subjunctive 'vá', not the indicative 'vai'."
+        },
+        {
+          "wrong": "É importante que ele estuda muito.",
+          "right": "É importante que ele estude muito.",
+          "note": "After 'é importante que', the verb must be in the subjunctive ('estude'), not indicative ('estuda')."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complete with the correct form of 'falar': É necessário que nós ________ português.",
+          "answer": "falemos"
+        },
+        {
+          "prompt": "Complete with the correct form of 'ter': Talvez ela ________ razão.",
+          "answer": "tenha"
+        }
+      ]
+    },
+    {
+      "rule_id": "imperative-mood-commands",
+      "topic": "Imperative mood commands",
+      "title": "Using the Imperative Mood Correctly",
+      "explanation": "In Portuguese, commands, requests, and advice use the imperative mood. A common mistake is using the infinitive (e.g., 'Falar') instead of the correct imperative form. For 'você' (formal), the imperative usually matches the present subjunctive; for 'tu' (informal), it matches the third person singular of the present indicative (minus the final -s). Negative commands always use the subjunctive.",
+      "examples": [
+        {
+          "wrong": "Falar mais devagar, por favor.",
+          "right": "Fale mais devagar, por favor.",
+          "note": "'Falar' is the infinitive; use 'Fale' for a polite command with 'você'."
+        },
+        {
+          "wrong": "Não correr no corredor.",
+          "right": "Não corra no corredor.",
+          "note": "Negative commands require the subjunctive form ('corra' for 'você')."
+        },
+        {
+          "wrong": "Senta aqui.",
+          "right": "Sente aqui.",
+          "note": "'Senta' is the informal 'tu' form; use 'Sente' for formal 'você'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'Speak now!' (informal, to a friend using 'tu')?",
+          "answer": "Fala agora."
+        },
+        {
+          "prompt": "How do you say 'Don't speak so loud' (formal, using 'você')?",
+          "answer": "Não fale tão alto."
+        },
+        {
+          "prompt": "How do you say 'Open the door' (formal, using 'você')?",
+          "answer": "Abra a porta."
+        }
+      ]
+    },
+    {
+      "rule_id": "prepositionarticle-contractions",
+      "topic": "Preposition+article contractions",
+      "title": "Preposition + Article Contractions",
+      "explanation": "In Portuguese, when a preposition (like de, em, por, a) comes directly before a definite article (o, a, os, as), they must contract into a single word. For example, 'de' + 'o' becomes 'do', and 'em' + 'a' becomes 'na'. Common mistake: using the separate forms (e.g., 'de o') is incorrect in standard Portuguese.",
+      "examples": [
+        {
+          "wrong": "Eu gosto de o café.",
+          "right": "Eu gosto do café.",
+          "note": "'de' + 'o' contracts to 'do'."
+        },
+        {
+          "wrong": "Ela está em a escola.",
+          "right": "Ela está na escola.",
+          "note": "'em' + 'a' contracts to 'na'."
+        },
+        {
+          "wrong": "Vamos a o mercado.",
+          "right": "Vamos ao mercado.",
+          "note": "'a' + 'o' contracts to 'ao'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'I am going to the beach' (using 'para' + 'a').",
+          "answer": "Vou para a praia. (Note: 'para' does not contract with 'a' – it's 'para a' or 'pra' informally. But for standard contraction, use 'à' if using 'a' + 'a' = 'à'. However, 'para' + 'a' = 'para a' is correct. To avoid confusion, here use 'a' + 'a' = 'à': 'Vou à praia.')"
+        },
+        {
+          "prompt": "Correct the mistake: 'O livro é de o professor.'",
+          "answer": "O livro é do professor."
+        },
+        {
+          "prompt": "Fill in the blank with the correct contraction: 'Eles estão ___ (em + os) Estados Unidos.'",
+          "answer": "Eles estão nos Estados Unidos."
+        }
+      ]
+    },
+    {
+      "rule_id": "open-vs-closed-vowel-distinction",
+      "topic": "Open vs closed vowel distinction",
+      "title": "Open vs Closed Vowel Distinction in Portuguese",
+      "explanation": "Portuguese distinguishes between open and closed vowels, which can change the meaning of words. Open vowels (like é, ó) are pronounced with the mouth more open, while closed vowels (like ê, ô) are pronounced with the mouth more closed. For example, 'avô' (grandfather) has a closed ô, and 'avó' (grandmother) has an open ó.",
+      "examples": [
+        {
+          "wrong": "Ele é meu avô?",
+          "right": "Ele é meu avô?",
+          "note": "Wrong spelling/pronunciation: the closed ô is correct for 'grandfather'. Using ó would mean 'grandmother'."
+        },
+        {
+          "wrong": "Eu quero um pêso.",
+          "right": "Eu quero um peso.",
+          "note": "'Peso' (weight) has an open é, not closed ê. The closed vowel would change the word to 'peço' (I ask) in some contexts."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Which vowel (open or closed) is used in the word for 'grandmother'? Write the correct Portuguese word.",
+          "answer": "avó"
+        },
+        {
+          "prompt": "How do you say 'I want a seat' using the correct open/closed vowel for 'seat' (cadeira)? Write the full sentence.",
+          "answer": "Eu quero uma cadeira."
+        }
+      ]
+    },
+    {
+      "rule_id": "impersonal-se-constructions",
+      "topic": "Impersonal 'se' constructions",
+      "title": "Impersonal 'se': Always Singular",
+      "explanation": "In Portuguese, the impersonal 'se' is used to make general statements where the subject is unspecified (like 'one' or 'people' in English). The verb must always be in the third person singular, even if the object or complement is plural. A common mistake is to make the verb agree with a plural noun, but in impersonal constructions, the verb remains singular.",
+      "examples": [
+        {
+          "wrong": "Precisam-se de funcionários.",
+          "right": "Precisa-se de funcionários.",
+          "note": "Even though 'funcionários' is plural, the impersonal 'se' requires the verb in the singular."
+        },
+        {
+          "wrong": "Falam-se português aqui.",
+          "right": "Fala-se português aqui.",
+          "note": "The verb stays singular because the subject is unspecified ('people speak Portuguese')."
+        },
+        {
+          "wrong": "Vivem-se bem no Brasil.",
+          "right": "Vive-se bem no Brasil.",
+          "note": "A general statement about life: the verb is always singular with impersonal 'se'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'People speak Portuguese in Brazil' using impersonal 'se'?",
+          "answer": "Fala-se português no Brasil."
+        },
+        {
+          "prompt": "Translate: 'One needs patience' (using 'precisa-se de').",
+          "answer": "Precisa-se de paciência."
+        },
+        {
+          "prompt": "Correct this sentence to impersonal meaning: 'Vendem-se frutas na feira' (intended as 'One sells fruits at the market').",
+          "answer": "Vende-se frutas na feira."
+        }
+      ]
+    },
+    {
+      "rule_id": "word-order-in-questions",
+      "topic": "Word order in questions",
+      "title": "Word Order in Questions",
+      "explanation": "In Portuguese, questions usually invert the subject and verb, or place the question word first followed by the verb and subject. Unlike English, you do not use an auxiliary verb like 'do' to form questions. Simply invert the subject and verb or start with the question word.",
+      "examples": [
+        {
+          "wrong": "Você gosta de café?",
+          "right": "Gosta você de café?",
+          "note": "Inversion of subject and verb is common: verb first, then subject."
+        },
+        {
+          "wrong": "O que você está fazendo?",
+          "right": "O que você está fazendo?",
+          "note": "With question words, the word order is usually question word + subject + verb (no inversion needed)."
+        },
+        {
+          "wrong": "Ela vai ao cinema?",
+          "right": "Vai ela ao cinema?",
+          "note": "Yes/no questions invert subject and verb."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'Do you speak English?' using inversion.",
+          "answer": "Fala você inglês?"
+        },
+        {
+          "prompt": "Ask 'Where does she live?' in Portuguese.",
+          "answer": "Onde ela mora?"
+        },
+        {
+          "prompt": "Form a yes/no question from 'Ele estuda português.'",
+          "answer": "Estuda ele português?"
+        }
+      ]
+    },
+    {
+      "rule_id": "já-vs-ainda-alreadystill",
+      "topic": "Já vs ainda (already/still)",
+      "title": "Já vs Ainda: Already vs Still (and Yet)",
+      "explanation": "Já means 'already' and refers to an action that has happened. Ainda means 'still' for ongoing actions, or 'yet' in negative sentences (ainda não). A common mistake is using já where ainda is needed, especially when expressing continuity or negation.",
+      "examples": [
+        {
+          "wrong": "Eu já estou esperando.",
+          "right": "Eu ainda estou esperando.",
+          "note": "Use 'ainda' for 'still' to indicate the action is ongoing."
+        },
+        {
+          "wrong": "Você já comeu? - Não, já não.",
+          "right": "Você já comeu? - Não, ainda não.",
+          "note": "In negative answers to 'already' questions, use 'ainda não' (not yet)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I have already finished my homework.'",
+          "answer": "Eu já terminei meu dever de casa."
+        },
+        {
+          "prompt": "Translate: 'She is still working.'",
+          "answer": "Ela ainda está trabalhando."
+        },
+        {
+          "prompt": "Translate: 'They haven't arrived yet.'",
+          "answer": "Eles ainda não chegaram."
+        }
+      ]
+    },
+    {
+      "rule_id": "ter-vs-haver-haveexist",
+      "topic": "Ter vs haver (have/exist)",
+      "title": "Ter vs Haver: Possession vs Existence",
+      "explanation": "In Portuguese, 'ter' means 'to have' and is used for possession. 'Haver' (in the form 'há') is used impersonally to mean 'there is/are' (existence). A common mistake is using 'ter' to express existence, which should be 'haver'.",
+      "examples": [
+        {
+          "wrong": "Tem muitas pessoas na festa.",
+          "right": "Há muitas pessoas na festa.",
+          "note": "Use 'há' (from haver) for existence, not 'tem' (from ter)."
+        },
+        {
+          "wrong": "Eu tenho um carro.",
+          "right": "Eu tenho um carro.",
+          "note": "This is correct because 'ter' shows possession."
+        },
+        {
+          "wrong": "Tem três opções disponíveis.",
+          "right": "Há três opções disponíveis.",
+          "note": "Again, when listing things that exist, use 'há'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'There are many books on the table.' (use the correct verb for existence)",
+          "answer": "Há muitos livros na mesa."
+        },
+        {
+          "prompt": "Correct the mistake: 'Tem um problema com o computador.'",
+          "answer": "Há um problema com o computador."
+        },
+        {
+          "prompt": "Translate: 'I have two brothers.' (use the correct verb for possession)",
+          "answer": "Eu tenho dois irmãos."
+        }
+      ]
+    },
+    {
+      "rule_id": "muito-as-adjective-vs-adverb",
+      "topic": "Muito as adjective vs adverb",
+      "title": "Muito: Adjective vs Adverb",
+      "explanation": "In Portuguese, 'muito' can be either an adjective meaning 'many/much' (it must agree in gender and number with the noun it modifies) or an adverb meaning 'very' (it is invariable). A common mistake is using the invariable form when agreement is required, e.g., saying 'muito pessoas' instead of 'muitas pessoas'.",
+      "examples": [
+        {
+          "wrong": "Ela tem muito amigas.",
+          "right": "Ela tem muitas amigas.",
+          "note": "'Amigas' is feminine plural, so 'muito' must become 'muitas'."
+        },
+        {
+          "wrong": "Ele corre muito rápido.",
+          "right": "Ele corre muito rápido.",
+          "note": "Here 'muito' is an adverb modifying 'rápido', so it stays invariable — this sentence is correct."
+        },
+        {
+          "wrong": "Nós comemos muito comida.",
+          "right": "Nós comemos muita comida.",
+          "note": "'Comida' is feminine singular, so 'muito' must become 'muita'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank with the correct form of 'muito': Ela tem ___ livros. (She has many books.)",
+          "answer": "muitos"
+        },
+        {
+          "prompt": "Fill in the blank: O filme é ___ interessante. (The movie is very interesting.)",
+          "answer": "muito"
+        },
+        {
+          "prompt": "Choose the correct form: Havia (muito / muitas) gente na festa.",
+          "answer": "muita"
+        }
+      ]
+    },
+    {
+      "rule_id": "diminutives-and-augmentatives",
+      "topic": "Diminutives and augmentatives",
+      "title": "Diminutives and Augmentatives: Common Mistakes",
+      "explanation": "In Portuguese, diminutives (often -inho/-inha) and augmentatives (often -ão/-ona) add size, affection, or intensity. A common mistake is using the wrong suffix for gender or ignoring irregular forms. Match the suffix to the base word's gender: -inho/-ão for masculine, -inha/-ona for feminine. Also, words ending in a stressed vowel (e.g., café) drop the vowel before adding -inho/-inha.",
+      "examples": [
+        {
+          "wrong": "Ela é bonitão.",
+          "right": "Ela é bonitona.",
+          "note": "Use feminine augmentative -ona for feminine nouns and adjectives."
+        },
+        {
+          "wrong": "Quero um cafézinho.",
+          "right": "Quero um cafezinho.",
+          "note": "Words ending in a stressed vowel often drop that vowel before adding -inho. Café becomes cafezinho."
+        },
+        {
+          "wrong": "A casa é grandeão.",
+          "right": "A casa é grandona.",
+          "note": "For feminine nouns, use -ona (not -ão) to form the augmentative."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How would you say 'little coffee' in Portuguese?",
+          "answer": "cafezinho"
+        },
+        {
+          "prompt": "Complete: 'She is a big (tall) woman.' -> 'Ela é uma mulher ________.'",
+          "answer": "grandona"
+        },
+        {
+          "prompt": "What is the correct diminutive of 'flor' (flower)?",
+          "answer": "florzinha"
+        }
+      ]
+    },
+    {
+      "rule_id": "obrigado-vs-obrigada-gender",
+      "topic": "Obrigado vs obrigada gender",
+      "title": "Obrigado vs Obrigada: Gender Agreement",
+      "explanation": "In Portuguese, the word for 'thank you' changes depending on the gender of the speaker. Men always say 'obrigado' (masculine), and women always say 'obrigada' (feminine). This is because the word agrees with the speaker, not the person being thanked.",
+      "examples": [
+        {
+          "wrong": "Ela disse: 'Obrigado pelo presente.'",
+          "right": "Ela disse: 'Obrigada pelo presente.'",
+          "note": "A female speaker must use 'obrigada' because she is feminine."
+        },
+        {
+          "wrong": "Ele respondeu: 'Obrigada pela ajuda.'",
+          "right": "Ele respondeu: 'Obrigado pela ajuda.'",
+          "note": "A male speaker must use 'obrigado' because he is masculine."
+        },
+        {
+          "wrong": "Nós agradecemos: 'Obrigado, professor.'",
+          "right": "Nós agradecemos: 'Obrigados, professor.'",
+          "note": "For a group of all males or mixed genders, use the masculine plural 'obrigados'. For all females, use 'obrigadas'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write how a woman would say 'thank you' in Portuguese.",
+          "answer": "Obrigada"
+        },
+        {
+          "prompt": "If a man is the speaker, which form should he use to say 'thank you'?",
+          "answer": "Obrigado"
+        },
+        {
+          "prompt": "A group of women says 'thank you' together. What is the correct word?",
+          "answer": "Obrigadas"
+        }
+      ]
+    },
+    {
+      "rule_id": "object-pronoun-placement",
+      "topic": "Object pronoun placement",
+      "title": "Object Pronoun Placement: After the Verb",
+      "explanation": "In Portuguese, object pronouns (me, te, o, a, nos, vos, os, as) are usually placed after the verb in affirmative sentences, attached with a hyphen. English speakers often mistakenly put them before the verb. Remember to attach the pronoun to the end of the verb, adjusting the verb form if needed (e.g., ver becomes vê-lo).",
+      "examples": [
+        {
+          "wrong": "Eu o vejo.",
+          "right": "Eu vejo-o.",
+          "note": "In affirmative statements, the pronoun comes after the verb."
+        },
+        {
+          "wrong": "Eu quero o comprar.",
+          "right": "Eu quero comprá-lo.",
+          "note": "With infinitives, drop the final -r and add -lo (or -la, -los, -las)."
+        },
+        {
+          "wrong": "Ele me chamou.",
+          "right": "Ele chamou-me.",
+          "note": "Again, after the verb in simple past affirmative."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'I see you (formal, masculine)' using the pronoun 'o'.",
+          "answer": "Eu vejo-o."
+        },
+        {
+          "prompt": "Correct this sentence (European Portuguese): 'Eu vou o encontrar.'",
+          "answer": "Eu vou encontrá-lo."
+        },
+        {
+          "prompt": "Write the correct form of 'Ela nos chama' (affirmative statement).",
+          "answer": "Ela chama-nos."
+        }
+      ]
+    }
+  ]
+}

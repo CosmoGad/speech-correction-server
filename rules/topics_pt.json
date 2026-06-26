@@ -1,0 +1,105 @@
+{
+  "learning": "pt",
+  "topics": [
+    {
+      "rule_id": "artigos",
+      "title": "Artigos"
+    },
+    {
+      "rule_id": "tempos-verbais",
+      "title": "Tempos verbais"
+    },
+    {
+      "rule_id": "preposições",
+      "title": "Preposições"
+    },
+    {
+      "rule_id": "conjugação",
+      "title": "Conjugação"
+    },
+    {
+      "rule_id": "vogais-nasais",
+      "title": "Vogais nasais"
+    },
+    {
+      "rule_id": "sotaque",
+      "title": "Sotaque"
+    },
+    {
+      "rule_id": "entonação",
+      "title": "Entonação"
+    },
+    {
+      "rule_id": "ser-vs-estar-usage",
+      "title": "Ser vs Estar usage"
+    },
+    {
+      "rule_id": "gender-agreement-of-nouns",
+      "title": "Gender agreement of nouns"
+    },
+    {
+      "rule_id": "plural-formation-rules",
+      "title": "Plural formation rules"
+    },
+    {
+      "rule_id": "personal-object-pronouns",
+      "title": "Personal object pronouns"
+    },
+    {
+      "rule_id": "reflexive-verb-pronouns",
+      "title": "Reflexive verb pronouns"
+    },
+    {
+      "rule_id": "false-cognates-false-friends",
+      "title": "False cognates (false friends)"
+    },
+    {
+      "rule_id": "subjunctive-mood-usage",
+      "title": "Subjunctive mood usage"
+    },
+    {
+      "rule_id": "imperative-mood-commands",
+      "title": "Imperative mood commands"
+    },
+    {
+      "rule_id": "prepositionarticle-contractions",
+      "title": "Preposition+article contractions"
+    },
+    {
+      "rule_id": "open-vs-closed-vowel-distinction",
+      "title": "Open vs closed vowel distinction"
+    },
+    {
+      "rule_id": "impersonal-se-constructions",
+      "title": "Impersonal 'se' constructions"
+    },
+    {
+      "rule_id": "word-order-in-questions",
+      "title": "Word order in questions"
+    },
+    {
+      "rule_id": "já-vs-ainda-alreadystill",
+      "title": "Já vs ainda (already/still)"
+    },
+    {
+      "rule_id": "ter-vs-haver-haveexist",
+      "title": "Ter vs haver (have/exist)"
+    },
+    {
+      "rule_id": "muito-as-adjective-vs-adverb",
+      "title": "Muito as adjective vs adverb"
+    },
+    {
+      "rule_id": "diminutives-and-augmentatives",
+      "title": "Diminutives and augmentatives"
+    },
+    {
+      "rule_id": "obrigado-vs-obrigada-gender",
+      "title": "Obrigado vs obrigada gender"
+    },
+    {
+      "rule_id": "object-pronoun-placement",
+      "title": "Object pronoun placement"
+    }
+  ]
+}

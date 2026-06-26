@@ -1,0 +1,105 @@
+{
+  "learning": "pl",
+  "topics": [
+    {
+      "rule_id": "przypadki",
+      "title": "Przypadki"
+    },
+    {
+      "rule_id": "aspekty-czasownikowe",
+      "title": "Aspekty czasownikowe"
+    },
+    {
+      "rule_id": "przyimki",
+      "title": "Przyimki"
+    },
+    {
+      "rule_id": "liczebniki",
+      "title": "Liczebniki"
+    },
+    {
+      "rule_id": "samogłoski-nosowe",
+      "title": "Samogłoski nosowe"
+    },
+    {
+      "rule_id": "spółgłoski-szumiące",
+      "title": "Spółgłoski szumiące"
+    },
+    {
+      "rule_id": "akcent",
+      "title": "Akcent"
+    },
+    {
+      "rule_id": "gender-agreement-of-adjectives",
+      "title": "Gender agreement of adjectives"
+    },
+    {
+      "rule_id": "verb-conjugation-endings",
+      "title": "Verb conjugation endings"
+    },
+    {
+      "rule_id": "reflexive-pronoun-się-placement",
+      "title": "Reflexive pronoun 'się' placement"
+    },
+    {
+      "rule_id": "double-negation-with-nie",
+      "title": "Double negation with 'nie'"
+    },
+    {
+      "rule_id": "predicate-nominative-vs-instrumental",
+      "title": "Predicate nominative vs instrumental"
+    },
+    {
+      "rule_id": "possessive-pronoun-swój-vs-jegojej",
+      "title": "Possessive pronoun 'swój' vs 'jego/jej'"
+    },
+    {
+      "rule_id": "comparative-and-superlative-formation",
+      "title": "Comparative and superlative formation"
+    },
+    {
+      "rule_id": "future-tense-perfective-vs-imperfective",
+      "title": "Future tense: perfective vs imperfective"
+    },
+    {
+      "rule_id": "conditional-mood-with-by",
+      "title": "Conditional mood with 'by'"
+    },
+    {
+      "rule_id": "imperative-mood-formation",
+      "title": "Imperative mood formation"
+    },
+    {
+      "rule_id": "motion-verbs-iść-vs-chodzić",
+      "title": "Motion verbs: iść vs chodzić"
+    },
+    {
+      "rule_id": "verbs-of-placing-kłaść-stawiać-etc",
+      "title": "Verbs of placing: kłaść, stawiać, etc."
+    },
+    {
+      "rule_id": "use-of-to-as-subject-vs-pronoun",
+      "title": "Use of 'to' as subject vs pronoun"
+    },
+    {
+      "rule_id": "relative-pronouns-który-vs-jaki",
+      "title": "Relative pronouns 'który' vs 'jaki'"
+    },
+    {
+      "rule_id": "question-word-czy",
+      "title": "Question word 'czy'"
+    },
+    {
+      "rule_id": "adverbs-bardzo-vs-dużo-vs-wiele",
+      "title": "Adverbs: 'bardzo' vs 'dużo' vs 'wiele'"
+    },
+    {
+      "rule_id": "expressing-age-and-temperature-mieć-vs-być",
+      "title": "Expressing age and temperature: mieć vs być"
+    },
+    {
+      "rule_id": "verb-agreement-with-numerals-jest-vs-są",
+      "title": "Verb agreement with numerals (jest vs są)"
+    }
+  ]
+}

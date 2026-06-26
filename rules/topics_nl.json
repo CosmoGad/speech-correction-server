@@ -1,0 +1,105 @@
+{
+  "learning": "nl",
+  "topics": [
+    {
+      "rule_id": "lidwoorden",
+      "title": "Lidwoorden"
+    },
+    {
+      "rule_id": "werkwoordstijden",
+      "title": "Werkwoordstijden"
+    },
+    {
+      "rule_id": "voorzetsels",
+      "title": "Voorzetsels"
+    },
+    {
+      "rule_id": "woordvolgorde",
+      "title": "Woordvolgorde"
+    },
+    {
+      "rule_id": "uitspraak-van-de-g",
+      "title": "Uitspraak van de g"
+    },
+    {
+      "rule_id": "klinkers",
+      "title": "Klinkers"
+    },
+    {
+      "rule_id": "intonatie",
+      "title": "Intonatie"
+    },
+    {
+      "rule_id": "use-of-er-existentialpronoun",
+      "title": "Use of 'er' (existential/pronoun)"
+    },
+    {
+      "rule_id": "diminutive-formation-je-tje-pje",
+      "title": "Diminutive formation (-je, -tje, -pje)"
+    },
+    {
+      "rule_id": "reflexive-verbs-and-zich",
+      "title": "Reflexive verbs and 'zich'"
+    },
+    {
+      "rule_id": "separable-prefix-verbs-placement",
+      "title": "Separable prefix verbs placement"
+    },
+    {
+      "rule_id": "modal-verbs-meanings-and-usage",
+      "title": "Modal verbs: meanings and usage"
+    },
+    {
+      "rule_id": "comparatives-dan-vs-als",
+      "title": "Comparatives: 'dan' vs 'als'"
+    },
+    {
+      "rule_id": "negation-niet-vs-geen-placement",
+      "title": "Negation: 'niet' vs 'geen' placement"
+    },
+    {
+      "rule_id": "possessive-forms-s-van-mijnjouw",
+      "title": "Possessive forms ('s, van, mijn/jouw)"
+    },
+    {
+      "rule_id": "demonstratives-dezedieditdat",
+      "title": "Demonstratives: deze/die/dit/dat"
+    },
+    {
+      "rule_id": "relative-pronouns-diedatwatwie",
+      "title": "Relative pronouns: die/dat/wat/wie"
+    },
+    {
+      "rule_id": "numbers-cardinal-vs-ordinal-eenéén",
+      "title": "Numbers: cardinal vs ordinal, 'een/één'"
+    },
+    {
+      "rule_id": "plural-noun-formation-en-s-exceptions",
+      "title": "Plural noun formation (-en/-s) exceptions"
+    },
+    {
+      "rule_id": "adjective-inflection-after-articles",
+      "title": "Adjective inflection after articles"
+    },
+    {
+      "rule_id": "pronominal-adverbs-ermee-ervan",
+      "title": "Pronominal adverbs (ermee, ervan)"
+    },
+    {
+      "rule_id": "subordinate-clause-verb-final-order",
+      "title": "Subordinate clause verb-final order"
+    },
+    {
+      "rule_id": "u-vs-jijje-formalinformal-address",
+      "title": "'u' vs 'jij/je' formal/informal address"
+    },
+    {
+      "rule_id": "false-friends-between-dutch-and-english",
+      "title": "False friends between Dutch and English"
+    },
+    {
+      "rule_id": "pronunciation-of-sch-and-ng-clusters",
+      "title": "Pronunciation of 'sch' and 'ng' clusters"
+    }
+  ]
+}

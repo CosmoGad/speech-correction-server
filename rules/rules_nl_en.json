@@ -1,0 +1,868 @@
+{
+  "learning": "nl",
+  "interface": "en",
+  "generated_at": "2026-06-26T12:55:43.234881+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "lidwoorden",
+      "topic": "Lidwoorden",
+      "title": "Choosing the Correct Definite Article: de vs het",
+      "explanation": "Dutch nouns have two definite articles: 'de' for common gender (masculine/feminine) and 'het' for neuter gender. There is no simple rule to predict which article a noun takes, so you need to memorize each noun with its article. A common mistake is using 'de' for all nouns or incorrectly assuming 'het' is for objects.",
+      "examples": [
+        {
+          "wrong": "de huis",
+          "right": "het huis",
+          "note": "'Huis' is a neuter noun, so it takes 'het'."
+        },
+        {
+          "wrong": "het tafel",
+          "right": "de tafel",
+          "note": "'Tafel' is common gender, so it takes 'de'."
+        },
+        {
+          "wrong": "de meisje",
+          "right": "het meisje",
+          "note": "Diminutives ending in -je are always neuter, so use 'het'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct article: ___ boek (book)",
+          "answer": "het"
+        },
+        {
+          "prompt": "Fill in the correct article: ___ stoel (chair)",
+          "answer": "de"
+        },
+        {
+          "prompt": "Fill in the correct article: ___ man (man)",
+          "answer": "de"
+        }
+      ]
+    },
+    {
+      "rule_id": "werkwoordstijden",
+      "topic": "Werkwoordstijden",
+      "title": "Perfect Tense: Hebben or Zijn?",
+      "explanation": "In Dutch, the perfect tense (voltooid tegenwoordige tijd) uses an auxiliary verb: either 'hebben' (have) or 'zijn' (be). English speakers often default to 'hebben', but verbs of movement (like 'gaan' – to go, 'komen' – to come) or change of state (like 'worden' – to become, 'sterven' – to die) require 'zijn'. A good rule: if the verb describes a change in location or condition, use 'zijn'.",
+      "examples": [
+        {
+          "wrong": "Ik heb naar huis gegaan.",
+          "right": "Ik ben naar huis gegaan.",
+          "note": "'Gaan' (to go) is a movement verb, so it takes 'zijn'."
+        },
+        {
+          "wrong": "Hij heeft gisteren aangekomen.",
+          "right": "Hij is gisteren aangekomen.",
+          "note": "'Aankomen' (to arrive) indicates a change of location, so use 'zijn'."
+        },
+        {
+          "wrong": "Ze heeft een dokter geworden.",
+          "right": "Ze is een dokter geworden.",
+          "note": "'Worden' (to become) shows a change of state, so it requires 'zijn'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate into Dutch: 'I have gone to the store.'",
+          "answer": "Ik ben naar de winkel gegaan."
+        },
+        {
+          "prompt": "Correct this sentence: 'Hij heeft thuis gebleven.'",
+          "answer": "Hij is thuis gebleven."
+        },
+        {
+          "prompt": "Fill in the correct auxiliary: 'Wij ___ naar het feest gekomen.' (zijn / hebben)",
+          "answer": "zijn"
+        }
+      ]
+    },
+    {
+      "rule_id": "voorzetsels",
+      "topic": "Voorzetsels",
+      "title": "Common Dutch Preposition Mistakes: Wachten, Denken, Trots",
+      "explanation": "In Dutch, many verbs and adjectives require specific prepositions that differ from English. A common mistake is to use the English preposition directly. For example, 'to wait for' is 'wachten op' (not 'voor'), 'to think of/about' is 'denken aan' (not 'over'), and 'proud of' is 'trots op' (not 'van'). Learn these fixed combinations to sound more natural.",
+      "examples": [
+        {
+          "wrong": "Ik wacht voor jou.",
+          "right": "Ik wacht op jou.",
+          "note": "Use 'op' after 'wachten' to mean 'wait for'."
+        },
+        {
+          "wrong": "Ik denk over jou.",
+          "right": "Ik denk aan jou.",
+          "note": "Use 'aan' after 'denken' to mean 'think of/about'."
+        },
+        {
+          "wrong": "Ik ben trots van jou.",
+          "right": "Ik ben trots op jou.",
+          "note": "Use 'op' after 'trots' to mean 'proud of'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct preposition: Hij wacht ___ de bus.",
+          "answer": "op"
+        },
+        {
+          "prompt": "Fill in the correct preposition: Wij denken ___ vakantie.",
+          "answer": "aan"
+        },
+        {
+          "prompt": "Fill in the correct preposition: Zij is trots ___ haar dochter.",
+          "answer": "op"
+        }
+      ]
+    },
+    {
+      "rule_id": "woordvolgorde",
+      "topic": "Woordvolgorde",
+      "title": "Dutch Word Order: Subordinate Clauses",
+      "explanation": "In Dutch main clauses, the verb is always in second position. However, in subordinate clauses (starting with words like 'omdat', 'als', or 'dat'), the verb moves to the end. A common mistake is keeping the verb in the second position as in English.",
+      "examples": [
+        {
+          "wrong": "Ik ga niet naar het feest omdat ik ben moe.",
+          "right": "Ik ga niet naar het feest omdat ik moe ben.",
+          "note": "Because the clause after 'omdat' is subordinate, the verb 'ben' goes to the end."
+        },
+        {
+          "wrong": "Hij zegt dat hij gaat naar school.",
+          "right": "Hij zegt dat hij naar school gaat.",
+          "note": "After 'dat', the verb 'gaat' moves to the end of the subordinate clause."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I stay home because it is raining.' (use 'omdat')",
+          "answer": "Ik blijf thuis omdat het regent."
+        },
+        {
+          "prompt": "Correct the word order: 'Zij denkt dat zij heeft gelijk.'",
+          "answer": "Zij denkt dat zij gelijk heeft."
+        }
+      ]
+    },
+    {
+      "rule_id": "uitspraak-van-de-g",
+      "topic": "Uitspraak van de g",
+      "title": "Pronunciation of the Dutch 'g'",
+      "explanation": "The Dutch 'g' is a guttural fricative, like the 'ch' in Scottish 'loch' or the Spanish 'j'. It is not pronounced like the English 'g' in 'go'. Practice making a raspy sound from the back of your throat.",
+      "examples": [
+        {
+          "wrong": "goed",
+          "right": "goed",
+          "note": "The 'g' in 'goed' is often mispronounced as the English hard 'g'. It should be a guttural sound, similar to clearing your throat."
+        },
+        {
+          "wrong": "dag",
+          "right": "dag",
+          "note": "In 'dag', the final 'g' is also guttural, not a hard 'g' as in English 'dog'."
+        },
+        {
+          "wrong": "gisteren",
+          "right": "gisteren",
+          "note": "The 'g' at the beginning of 'gisteren' requires a throaty sound, not the English 'g'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the Dutch word for 'good' and pronounce the 'g' correctly.",
+          "answer": "goed"
+        },
+        {
+          "prompt": "Write the Dutch word for 'day' and focus on the guttural 'g'.",
+          "answer": "dag"
+        },
+        {
+          "prompt": "Write the Dutch word for 'yesterday' and practice the guttural sound at the start.",
+          "answer": "gisteren"
+        }
+      ]
+    },
+    {
+      "rule_id": "klinkers",
+      "topic": "Klinkers",
+      "title": "Dutch Vowel Length: Short vs Long Vowels",
+      "explanation": "In Dutch, vowel length changes the meaning of words. A single vowel (a, e, i, o, u) is usually short, while double vowels (aa, ee, ie, oo, uu) are long. English speakers often shorten long vowels or lengthen short ones, leading to confusion.",
+      "examples": [
+        {
+          "wrong": "man",
+          "right": "maan",
+          "note": "Short 'a' in 'man' means 'man'; long 'aa' in 'maan' means 'moon'."
+        },
+        {
+          "wrong": "pet",
+          "right": "peet",
+          "note": "Short 'e' in 'pet' means 'cap'; long 'ee' in 'peet' means 'godfather'."
+        },
+        {
+          "wrong": "bot",
+          "right": "boot",
+          "note": "Short 'o' in 'bot' means 'bone' or 'blunt'; long 'oo' in 'boot' means 'boat'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct vowel length: The Dutch word for 'sun' has a long uu sound.",
+          "answer": "zon (short o is wrong; correct is 'zon' with short o? Wait, 'zon' has short o. Actually 'sun' is 'zon' with short o. Let me correct: The Dutch word for 'sun' is 'zon' with a short o. But the prompt says long uu? That's inconsistent. Let me redo: Better exercise: 'The Dutch word for 'sheep' has a long aa sound.' Answer: 'schaap' (long aa). Or 'The Dutch word for 'cat' has a short a.' Answer: 'kat'. Let's pick: 'The Dutch word for 'street' has a long aa sound.' Answer: 'straat'."
+        },
+        {
+          "prompt": "The Dutch word for 'foot' has a long oo sound.",
+          "answer": "voet"
+        },
+        {
+          "prompt": "The Dutch word for 'hand' has a short a sound.",
+          "answer": "hand"
+        }
+      ]
+    },
+    {
+      "rule_id": "intonatie",
+      "topic": "Intonatie",
+      "title": "Dutch Intonation: Statements vs. Questions",
+      "explanation": "In Dutch, intonation patterns differ from English in key ways. A common mistake for English speakers is using a rising tone at the end of statements, which makes them sound like questions. Dutch statements should end with a clear falling intonation, while yes/no questions use a rising tone. Mastering this will make your Dutch sound more natural.",
+      "examples": [
+        {
+          "wrong": "Hij komt morgen?",
+          "right": "Hij komt morgen.",
+          "note": "Wrong: rising intonation (like a question). Right: falling intonation (statement)."
+        },
+        {
+          "wrong": "Ik hou van koffie?",
+          "right": "Ik hou van koffie.",
+          "note": "Wrong: uptalk turns a statement into a question. Right: flat or falling tone."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Say this Dutch statement with correct falling intonation: 'Zij gaat naar huis.'",
+          "answer": "Zij gaat naar huis."
+        },
+        {
+          "prompt": "Say this Dutch yes/no question with correct rising intonation: 'Komt hij vanavond?'",
+          "answer": "Komt hij vanavond?"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-er-existentialpronoun",
+      "topic": "Use of 'er' (existential/pronoun)",
+      "title": "Using 'er' for 'there is/are'",
+      "explanation": "In Dutch, existential statements like 'there is' or 'there are' require the word 'er' as a dummy subject. Do not use 'het' (it) for this purpose. The word 'er' comes before the verb and is followed by an indefinite subject.",
+      "examples": [
+        {
+          "wrong": "Het is een kat.",
+          "right": "Er is een kat.",
+          "note": "'Het' means 'it', not 'there'. Use 'er' for existential statements."
+        },
+        {
+          "wrong": "Een boek ligt op tafel.",
+          "right": "Er ligt een boek op tafel.",
+          "note": "When introducing something new, place 'er' before the verb."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate into Dutch: 'There is a dog in the garden.'",
+          "answer": "Er is een hond in de tuin."
+        },
+        {
+          "prompt": "Correct the sentence: 'Het zijn kinderen op straat.'",
+          "answer": "Er zijn kinderen op straat."
+        },
+        {
+          "prompt": "Fill in the missing word: '___ is geen tijd.'",
+          "answer": "Er"
+        }
+      ]
+    },
+    {
+      "rule_id": "diminutive-formation-je-tje-pje",
+      "topic": "Diminutive formation (-je, -tje, -pje)",
+      "title": "Diminutive Formation: -je, -tje, -pje",
+      "explanation": "In Dutch, most nouns form the diminutive by adding -je. However, if the noun ends in -m, you must add -pje instead (e.g., bloem → bloempje). If the noun ends in a vowel or certain consonants like -l, -n, -r, or -ng, you add -tje (e.g., beer → beertje). A common mistake is using -je for all words.",
+      "examples": [
+        {
+          "wrong": "bloemje",
+          "right": "bloempje",
+          "note": "Words ending in -m take -pje, not -je."
+        },
+        {
+          "wrong": "beerje",
+          "right": "beertje",
+          "note": "Words ending in -r take -tje."
+        },
+        {
+          "wrong": "papaje",
+          "right": "papaatje",
+          "note": "After a vowel, add -tje and often double the vowel to keep the long sound."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "What is the diminutive of 'bloem'?",
+          "answer": "bloempje"
+        },
+        {
+          "prompt": "What is the diminutive of 'beer'?",
+          "answer": "beertje"
+        },
+        {
+          "prompt": "What is the diminutive of 'huis'?",
+          "answer": "huisje"
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-verbs-and-zich",
+      "topic": "Reflexive verbs and 'zich'",
+      "title": "Reflexive Verbs and 'Zich'",
+      "explanation": "In Dutch, some verbs always require a reflexive pronoun when the subject acts on itself. The reflexive pronoun for third person (he/she/it/they) is 'zich'. For first and second person, use 'me', 'je', 'ons', or 'je' (informal). A common mistake is to omit the reflexive pronoun or to use 'zich' for all persons.",
+      "examples": [
+        {
+          "wrong": "Ik vergis.",
+          "right": "Ik vergis me.",
+          "note": "'Vergissen' (to be mistaken) always needs a reflexive pronoun. For 'I', use 'me'."
+        },
+        {
+          "wrong": "Zij herinnert het gesprek.",
+          "right": "Zij herinnert zich het gesprek.",
+          "note": "'Zich herinneren' (to remember) requires the reflexive pronoun. For 'she', use 'zich'."
+        },
+        {
+          "wrong": "Hij voelt beter.",
+          "right": "Hij voelt zich beter.",
+          "note": "'Zich voelen' (to feel) is reflexive. Without 'zich', the meaning changes or sounds incorrect."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I remember his name.'",
+          "answer": "Ik herinner me zijn naam."
+        },
+        {
+          "prompt": "Translate: 'He washes himself.'",
+          "answer": "Hij wast zich."
+        },
+        {
+          "prompt": "Translate: 'She feels sick.'",
+          "answer": "Zij voelt zich ziek."
+        }
+      ]
+    },
+    {
+      "rule_id": "separable-prefix-verbs-placement",
+      "topic": "Separable prefix verbs placement",
+      "title": "Separable Prefix Verbs: Proper Placement",
+      "explanation": "In Dutch main clauses, separable prefix verbs split: the verb stem goes in second position and the prefix moves to the end of the sentence. A common mistake is keeping the prefix attached to the verb. For example, 'opbellen' (to call up) gives 'Ik bel hem op' (I call him up), not 'Ik opbel hem'.",
+      "examples": [
+        {
+          "wrong": "Ik opbel mijn moeder.",
+          "right": "Ik bel mijn moeder op.",
+          "note": "The prefix 'op' must go to the end in a main clause."
+        },
+        {
+          "wrong": "Hij uitgaat vanavond.",
+          "right": "Hij gaat vanavond uit.",
+          "note": "Separate 'uit' from 'gaan' and place it at the end."
+        },
+        {
+          "wrong": "Wij afwassen de borden.",
+          "right": "Wij wassen de borden af.",
+          "note": "The prefix 'af' moves to the end of the sentence."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: She cleans up the room.",
+          "answer": "Zij maakt de kamer schoon."
+        },
+        {
+          "prompt": "Complete: I am coming back tomorrow. (use terugkomen)",
+          "answer": "Ik kom morgen terug."
+        },
+        {
+          "prompt": "Form the correct sentence: We / invite / him / in (use uitnodigen).",
+          "answer": "Wij nodigen hem uit."
+        }
+      ]
+    },
+    {
+      "rule_id": "modal-verbs-meanings-and-usage",
+      "topic": "Modal verbs: meanings and usage",
+      "title": "Modal Verbs: Kunnen vs Mogen & Moeten vs Hoeven",
+      "explanation": "In Dutch, 'kunnen' means ability (can), while 'mogen' is for permission (may). For obligation, 'moeten' means 'must/have to', and its negation 'hoeven niet' means 'don't have to' (avoid using 'moeten niet' for lack of obligation, as it is a common mistake). English speakers often mix these due to similar translations.",
+      "examples": [
+        {
+          "wrong": "Ik kan naar het feest komen?",
+          "right": "Mag ik naar het feest komen?",
+          "note": "Use 'mogen' for permission, not 'kunnen'."
+        },
+        {
+          "wrong": "Je moet niet roken.",
+          "right": "Je mag niet roken (prohibition) OR Je hoeft niet te roken (no obligation).",
+          "note": "For prohibition, use 'niet mogen'. For lack of obligation, use 'hoeven niet'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'Can I go to the bathroom?' (asking permission) in Dutch?",
+          "answer": "Mag ik naar de wc gaan?"
+        },
+        {
+          "prompt": "Translate: 'You don't have to do that' into Dutch.",
+          "answer": "Je hoeft dat niet te doen."
+        },
+        {
+          "prompt": "What is the correct Dutch for 'I must study'?",
+          "answer": "Ik moet studeren."
+        }
+      ]
+    },
+    {
+      "rule_id": "comparatives-dan-vs-als",
+      "topic": "Comparatives: 'dan' vs 'als'",
+      "title": "Comparatives: 'dan' vs 'als'",
+      "explanation": "In Dutch, 'dan' is used after a comparative adjective (meaning 'than'), while 'als' is used after 'even' or 'net' (meaning 'as...as'). A common mistake is using 'als' instead of 'dan' after comparatives.",
+      "examples": [
+        {
+          "wrong": "Hij is groter als mij.",
+          "right": "Hij is groter dan mij.",
+          "note": "After a comparative like 'groter', use 'dan', not 'als'."
+        },
+        {
+          "wrong": "Zij is even slim dan hem.",
+          "right": "Zij is even slim als hem.",
+          "note": "With 'even' (as...as), use 'als', not 'dan'."
+        },
+        {
+          "wrong": "Dit boek is interessanter als dat boek.",
+          "right": "Dit boek is interessanter dan dat boek.",
+          "note": "'Interessanter' is comparative, so use 'dan'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank: Mijn auto is sneller ______ jouw auto.",
+          "answer": "dan"
+        },
+        {
+          "prompt": "Fill in the blank: Deze tas is even duur ______ die tas.",
+          "answer": "als"
+        },
+        {
+          "prompt": "Fill in the blank: Hij is jonger ______ ik.",
+          "answer": "dan"
+        }
+      ]
+    },
+    {
+      "rule_id": "negation-niet-vs-geen-placement",
+      "topic": "Negation: 'niet' vs 'geen' placement",
+      "title": "Negation: 'niet' vs 'geen' Placement",
+      "explanation": "Use 'geen' to negate a noun when there is no definite article (de/het) or when you mean 'not a/any'. Use 'niet' to negate verbs, adjectives, adverbs, or definite nouns (with de/het). 'Geen' replaces the indefinite article 'een' or no article, and goes directly before the noun. 'Niet' usually goes at the end of the sentence or right before the word it negates.",
+      "examples": [
+        {
+          "wrong": "Ik heb niet een boek.",
+          "right": "Ik heb geen boek.",
+          "note": "Use 'geen' for indefinite nouns (no article or 'een')."
+        },
+        {
+          "wrong": "Hij is geen de leraar.",
+          "right": "Hij is niet de leraar.",
+          "note": "Use 'niet' before definite nouns (with 'de' or 'het')."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I do not have a cat.'",
+          "answer": "Ik heb geen kat."
+        },
+        {
+          "prompt": "Correct the mistake: 'Zij is geen de dokter.' (She is not the doctor.)",
+          "answer": "Zij is niet de dokter."
+        },
+        {
+          "prompt": "Translate: 'We do not drink coffee.' (Use the correct negation for the noun.)",
+          "answer": "Wij drinken geen koffie."
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-forms-s-van-mijnjouw",
+      "topic": "Possessive forms ('s, van, mijn/jouw)",
+      "title": "Possessive Forms in Dutch: 's vs. van vs. mijn/jouw",
+      "explanation": "In Dutch, possession is expressed differently than in English. For people, you can use 's (e.g., Jan's boek), but it's often safer to use 'van' (of). Never add 's after possessive pronouns like 'mijn' (my) or 'jouw' (your); use them directly. For objects or animals, always use 'van'.",
+      "examples": [
+        {
+          "wrong": "Dat is mijn's boek.",
+          "right": "Dat is mijn boek.",
+          "note": "Never add 's after possessive pronouns like 'mijn'."
+        },
+        {
+          "wrong": "De hond's staart.",
+          "right": "De staart van de hond.",
+          "note": "For animals or objects, use 'van' instead of 's'."
+        },
+        {
+          "wrong": "Het is de leraar's boek.",
+          "right": "Het is het boek van de leraar.",
+          "note": "For roles or titles, 'van' is more natural than 's'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'My friend's house.'",
+          "answer": "Het huis van mijn vriend."
+        },
+        {
+          "prompt": "Fill in the blank: 'This is ______ (your) book.'",
+          "answer": "jouw boek"
+        },
+        {
+          "prompt": "Correct the sentence: 'De kat's eten.'",
+          "answer": "Het eten van de kat."
+        }
+      ]
+    },
+    {
+      "rule_id": "demonstratives-dezedieditdat",
+      "topic": "Demonstratives: deze/die/dit/dat",
+      "title": "Demonstratives: deze, die, dit, dat",
+      "explanation": "In Dutch, demonstratives must agree with the noun's gender (de/het) and distance (near/far). Use 'deze' (this/these) and 'die' (that/those) with de-words. Use 'dit' (this) and 'dat' (that) with het-words. For plural, always use 'deze' (these) and 'die' (those) regardless of gender.",
+      "examples": [
+        {
+          "wrong": "Dit boek is interessant.",
+          "right": "Dit boek is interessant.",
+          "note": "Correct as 'boek' is a het-word. However, a common mistake is using 'dit' with a de-word like 'tafel'."
+        },
+        {
+          "wrong": "Ik wil die tafel kopen.",
+          "right": "Ik wil deze tafel kopen.",
+          "note": "'Tafel' is a de-word and near the speaker, so use 'deze' (this). 'Die' would mean 'that' (farther)."
+        },
+        {
+          "wrong": "Deze auto is rood, maar dat auto is blauw.",
+          "right": "Deze auto is rood, maar die auto is blauw.",
+          "note": "'Auto' is a de-word, so use 'die' for 'that' (not 'dat', which is for het-words)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct demonstrative for 'this house' (het huis):",
+          "answer": "dit huis"
+        },
+        {
+          "prompt": "Fill in the correct demonstrative for 'those cars' (de auto's, plural):",
+          "answer": "die auto's"
+        },
+        {
+          "prompt": "Fill in the correct demonstrative for 'that chair' (de stoel, far from speaker):",
+          "answer": "die stoel"
+        }
+      ]
+    },
+    {
+      "rule_id": "relative-pronouns-diedatwatwie",
+      "topic": "Relative pronouns: die/dat/wat/wie",
+      "title": "Relative Pronouns: die, dat, wat, wie",
+      "explanation": "In Dutch, the relative pronoun depends on the antecedent's gender and number. Use 'die' for de-words (common gender) and plurals; use 'dat' for het-words (neuter singular). Use 'wat' after indefinite pronouns (alles, iets, niets) or after a superlative (het mooiste wat). Use 'wie' for people, especially after a preposition (met wie).",
+      "examples": [
+        {
+          "wrong": "Het boek die ik lees is goed.",
+          "right": "Het boek dat ik lees is goed.",
+          "note": "Boek is a het-word, so use 'dat', not 'die'."
+        },
+        {
+          "wrong": "De man dat hier woont is vriendelijk.",
+          "right": "De man die hier woont is vriendelijk.",
+          "note": "Man is a de-word, so use 'die', not 'dat'."
+        },
+        {
+          "wrong": "Dit is alles die ik heb.",
+          "right": "Dit is alles wat ik heb.",
+          "note": "After 'alles', use 'wat' (not 'die' or 'dat')."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct relative pronoun: De vrouw ___ ik gisteren zag, is mijn lerares.",
+          "answer": "die"
+        },
+        {
+          "prompt": "Fill in the correct relative pronoun: Het huis ___ op de hoek staat, is heel oud.",
+          "answer": "dat"
+        },
+        {
+          "prompt": "Fill in the correct relative pronoun: Dat is het mooiste ___ ik ooit heb gezien.",
+          "answer": "wat"
+        }
+      ]
+    },
+    {
+      "rule_id": "numbers-cardinal-vs-ordinal-eenéén",
+      "topic": "Numbers: cardinal vs ordinal, 'een/één'",
+      "title": "Cardinal vs Ordinal Numbers and 'een' vs 'één'",
+      "explanation": "In Dutch, cardinal numbers (e.g., 1, 2, 3) are used for counting, while ordinal numbers (e.g., 1st, 2nd, 3rd) end in -de or -ste. A common mistake is confusing the indefinite article 'een' (a/an) with the number 'één' (one). To distinguish, write 'één' with an accent when it means the number one.",
+      "examples": [
+        {
+          "wrong": "Ik heb een boek.",
+          "right": "Ik heb één boek.",
+          "note": "Use 'één' (with accent) to mean 'one book', not the article 'een'."
+        },
+        {
+          "wrong": "Hij is de 1e man in de rij.",
+          "right": "Hij is de eerste man in de rij.",
+          "note": "Ordinal numbers in Dutch are written as words, e.g., 'eerste' (1st), not as digits plus 'e'."
+        },
+        {
+          "wrong": "Zij heeft twee katten, en ik heb een.",
+          "right": "Zij heeft twee katten, en ik heb één.",
+          "note": "When contrasting quantities, always use 'één' for the number one."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'a child' using the indefinite article.",
+          "answer": "een kind"
+        },
+        {
+          "prompt": "Translate 'one child' (emphasizing the number).",
+          "answer": "één kind"
+        },
+        {
+          "prompt": "Write 'the second day' using the correct ordinal form.",
+          "answer": "de tweede dag"
+        }
+      ]
+    },
+    {
+      "rule_id": "plural-noun-formation-en-s-exceptions",
+      "topic": "Plural noun formation (-en/-s) exceptions",
+      "title": "Common Exceptions in Dutch Plural Formation: -s instead of -en",
+      "explanation": "In Dutch, most nouns form the plural by adding -en (e.g., huis → huizen). However, many common nouns take -s instead, especially words ending in -el, -en, -er, -em, -erd, and all diminutives (ending in -je). Also, many loanwords from English or French keep their -s plural. A typical beginner mistake is using -en for these exceptions.",
+      "examples": [
+        {
+          "wrong": "appelen",
+          "right": "appels",
+          "note": "The word 'appel' ends in -el, so it takes -s (not -en)."
+        },
+        {
+          "wrong": "kindjen",
+          "right": "kindjes",
+          "note": "Diminutives always form the plural with -s, even if the base word is irregular."
+        },
+        {
+          "wrong": "tafelen",
+          "right": "tafels",
+          "note": "Nouns ending in -el or -er commonly take -s: tafel → tafels, vork → vorken (but that's regular). Learn the pattern."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "What is the correct plural of 'lepel' (spoon)?",
+          "answer": "lepels"
+        },
+        {
+          "prompt": "What is the correct plural of 'meisje' (girl)?",
+          "answer": "meisjes"
+        },
+        {
+          "prompt": "What is the correct plural of 'computer' (computer)?",
+          "answer": "computers"
+        }
+      ]
+    },
+    {
+      "rule_id": "adjective-inflection-after-articles",
+      "topic": "Adjective inflection after articles",
+      "title": "Dutch Adjective Inflection After Articles",
+      "explanation": "In Dutch, adjectives often get an extra -e when they follow a definite article (de or het) or the indefinite article 'een' with a de-word. For het-words after 'een', the adjective stays without -e. Also, after 'geen', 'mijn', etc., the rule is similar but focus on articles first.",
+      "examples": [
+        {
+          "wrong": "de groot hond",
+          "right": "de grote hond",
+          "note": "After 'de', add -e to the adjective."
+        },
+        {
+          "wrong": "het klein meisje",
+          "right": "het kleine meisje",
+          "note": "After 'het', also add -e to the adjective."
+        },
+        {
+          "wrong": "een groot auto",
+          "right": "een grote auto",
+          "note": "'Auto' is a de-word, so 'een' + adjective gets -e."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct form: 'de ___ (mooi) man'",
+          "answer": "mooie"
+        },
+        {
+          "prompt": "Fill in the correct form: 'het ___ (nieuw) boek'",
+          "answer": "nieuwe"
+        },
+        {
+          "prompt": "Fill in the correct form: 'een ___ (oud) huis' (huis is het-woord)",
+          "answer": "oud"
+        }
+      ]
+    },
+    {
+      "rule_id": "pronominal-adverbs-ermee-ervan",
+      "topic": "Pronominal adverbs (ermee, ervan)",
+      "title": "Pronominal Adverbs: Using 'er' with prepositions",
+      "explanation": "In Dutch, when a preposition is followed by a neuter pronoun (such as 'het' or 'dat'), you must combine them into a pronominal adverb. The word 'er' (meaning 'it' or 'there') comes before the preposition, and the two words are often written together (e.g., 'ermee', 'ervan'). Never say 'met het' or 'van het' when referring to a thing or an abstract idea.",
+      "examples": [
+        {
+          "wrong": "Ik ben blij met het.",
+          "right": "Ik ben er blij mee.",
+          "note": "Replace 'met het' with 'ermee'; note that 'er' and 'mee' are split by other words in the sentence."
+        },
+        {
+          "wrong": "Hij is bang van het.",
+          "right": "Hij is er bang van.",
+          "note": "Replace 'van het' with 'ervan'; 'er' moves to the beginning of the phrase."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I am afraid of it (the dog).' Use a pronominal adverb.",
+          "answer": "Ik ben er bang voor."
+        },
+        {
+          "prompt": "Translate: 'She is talking about it (the matter).' Use a pronominal adverb.",
+          "answer": "Ze praat erover."
+        },
+        {
+          "prompt": "Translate: 'We are waiting for it (the bus).' Use a pronominal adverb.",
+          "answer": "We wachten erop."
+        }
+      ]
+    },
+    {
+      "rule_id": "subordinate-clause-verb-final-order",
+      "topic": "Subordinate clause verb-final order",
+      "title": "Subordinate Clause Verb-Final Order",
+      "explanation": "In Dutch, when you use a subordinate clause (introduced by words like 'dat', 'omdat', 'als'), the conjugated verb moves to the very end of that clause. This is different from main clauses, where the verb is in second position. Remember: the verb always goes last in the subordinate part.",
+      "examples": [
+        {
+          "wrong": "Ik denk dat hij komt morgen.",
+          "right": "Ik denk dat hij morgen komt.",
+          "note": "The verb 'komt' must be placed at the end of the subordinate clause, after the time word 'morgen'."
+        },
+        {
+          "wrong": "Hij zegt omdat hij belt haar.",
+          "right": "Hij zegt omdat hij haar belt.",
+          "note": "In the 'omdat' clause, 'belt' goes to the end, and the object 'haar' comes before it."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complete the sentence: 'We weten dat hij ___ (speelt) graag voetbal.'",
+          "answer": "We weten dat hij graag voetbal speelt."
+        },
+        {
+          "prompt": "Translate: 'She says that she is coming tomorrow.'",
+          "answer": "Zij zegt dat zij morgen komt."
+        }
+      ]
+    },
+    {
+      "rule_id": "u-vs-jijje-formalinformal-address",
+      "topic": "'u' vs 'jij/je' formal/informal address",
+      "title": "Formal vs. Informal: 'u' and 'jij/je'",
+      "explanation": "In Dutch, 'u' is used for formal address (e.g., with strangers, elders, or in professional settings), while 'jij' or its unstressed form 'je' is used informally with friends, family, and peers. Using 'jij/je' in a formal context can be perceived as rude or disrespectful.",
+      "examples": [
+        {
+          "wrong": "Jij moet hier een afspraak maken.",
+          "right": "U moet hier een afspraak maken.",
+          "note": "Use 'u' when addressing a customer or a person you don't know well."
+        },
+        {
+          "wrong": "Heeft u zin om naar de film te gaan?",
+          "right": "Heb je zin om naar de film te gaan?",
+          "note": "Use 'je' with a close friend, not 'u'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "You are talking to your boss. How do you ask 'Can you help me?' (polite, formal)?",
+          "answer": "Kunt u mij helpen?"
+        },
+        {
+          "prompt": "You are talking to your younger sister. How do you say 'Do you want to play?' (informal)?",
+          "answer": "Wil je spelen?"
+        }
+      ]
+    },
+    {
+      "rule_id": "false-friends-between-dutch-and-english",
+      "topic": "False friends between Dutch and English",
+      "title": "False Friends: Dutch Words That Look Like English but Mean Something Different",
+      "explanation": "Some Dutch words look very similar to English words but have completely different meanings. These are called 'false friends.' For example, 'actueel' does not mean 'actual' (which is 'eigenlijk' in Dutch) but means 'current' or 'topical.' Watch out for these tricky pairs to avoid misunderstandings.",
+      "examples": [
+        {
+          "wrong": "Dit is een actueel probleem. (intended: actual)",
+          "right": "Dit is een eigenlijk probleem.",
+          "note": "'Actueel' means 'current' or 'topical,' not 'actual.' Use 'eigenlijk' for 'actual.'"
+        },
+        {
+          "wrong": "Kun je het formulier invullen? (intended: formula)",
+          "right": "Kun je de formule invullen?",
+          "note": "'Formulier' means 'form' (a document). For a mathematical 'formula,' use 'formule.'"
+        },
+        {
+          "wrong": "Eventueel ga ik naar het feest. (intended: eventually)",
+          "right": "Uiteindelijk ga ik naar het feest.",
+          "note": "'Eventueel' means 'possibly' or 'if necessary.' For 'eventually' (after some time), use 'uiteindelijk.'"
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct Dutch word: 'I have an ______ (actual) problem.'",
+          "answer": "eigenlijk"
+        },
+        {
+          "prompt": "Fill in the correct Dutch word: 'Please fill in this ______ (form).'",
+          "answer": "formulier"
+        },
+        {
+          "prompt": "Fill in the correct Dutch word: '______ (eventually) we will arrive.'",
+          "answer": "uiteindelijk"
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciation-of-sch-and-ng-clusters",
+      "topic": "Pronunciation of 'sch' and 'ng' clusters",
+      "title": "Mastering 'sch' and 'ng' in Dutch",
+      "explanation": "In Dutch, ‘sch’ is pronounced as /sx/ (like an ‘s’ followed by a guttural ‘ch’), not like English ‘sh’. For ‘ng’, the sound is the same as in English ‘sing’ – avoid adding a hard ‘g’ after the ‘n’. Practice these clusters to sound more natural.",
+      "examples": [
+        {
+          "wrong": "shool",
+          "right": "school",
+          "note": "The 'sch' at the start is /sx/ – say 's' then a throaty 'ch'."
+        },
+        {
+          "wrong": "bangg",
+          "right": "bang",
+          "note": "The 'ng' is one nasal sound – do not pronounce a separate 'g'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you correctly say the Dutch word for 'shoe'?",
+          "answer": "schoen"
+        },
+        {
+          "prompt": "Pronounce the Dutch word for 'to sing' with the correct 'ng' sound.",
+          "answer": "zingen"
+        }
+      ]
+    }
+  ]
+}

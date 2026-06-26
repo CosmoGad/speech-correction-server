@@ -1,0 +1,868 @@
+{
+  "learning": "pl",
+  "interface": "en",
+  "generated_at": "2026-06-26T12:35:03.735198+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "przypadki",
+      "topic": "Przypadki",
+      "title": "Using Polish Cases Correctly",
+      "explanation": "Polish has seven cases that change the endings of nouns, pronouns, and adjectives. A common mistake is using the wrong case after prepositions or verbs. For example, the preposition \"do\" (to) always requires the genitive case, and the verb \"mieć\" (to have) takes the accusative case for the object.",
+      "examples": [
+        {
+          "wrong": "Idę do sklep.",
+          "right": "Idę do sklepu.",
+          "note": "After \"do\" (to), use the genitive case: \"sklepu\" instead of \"sklep\" (nominative)."
+        },
+        {
+          "wrong": "Mam książka.",
+          "right": "Mam książkę.",
+          "note": "The verb \"mieć\" (have) requires the direct object in the accusative case: \"książkę\" (not nominative \"książka\")."
+        },
+        {
+          "wrong": "Rozmawiam z chłopak.",
+          "right": "Rozmawiam z chłopakiem.",
+          "note": "The preposition \"z\" (with) takes the instrumental case: \"chłopakiem\" instead of \"chłopak\" (nominative)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: I am going to the doctor (lekarz).",
+          "answer": "Idę do lekarza."
+        },
+        {
+          "prompt": "Translate: She has a cat (kot).",
+          "answer": "Ona ma kota."
+        },
+        {
+          "prompt": "Translate: I am talking with a friend (przyjaciel).",
+          "answer": "Rozmawiam z przyjacielem."
+        }
+      ]
+    },
+    {
+      "rule_id": "aspekty-czasownikowe",
+      "topic": "Aspekty czasownikowe",
+      "title": "Polish Verb Aspects: Perfective vs Imperfective",
+      "explanation": "In Polish, verbs have two aspects: imperfective (for ongoing, repeated, or incomplete actions) and perfective (for completed actions). A common mistake is using the wrong aspect, e.g., saying 'czytałem' when you mean 'I finished reading' (should be 'przeczytałem'). Choose the aspect based on whether the action is seen as a whole/completed or as a process.",
+      "examples": [
+        {
+          "wrong": "Wczoraj czytałem książkę.",
+          "right": "Wczoraj przeczytałem książkę.",
+          "note": "Use perfective 'przeczytałem' to say you finished reading the book; 'czytałem' means you were reading (without completion)."
+        },
+        {
+          "wrong": "On napisał list przez cały dzień.",
+          "right": "On pisał list przez cały dzień.",
+          "note": "For an action that lasted a period of time („przez cały dzień”), use imperfective 'pisał', not perfective 'napisał'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complete: 'Wczoraj _____ (przeczytać / czytać) całą książkę.' (I finished reading the whole book yesterday.)",
+          "answer": "przeczytałem"
+        },
+        {
+          "prompt": "Fill in: 'On _____ (pisał / napisał) list w tej chwili.' (He is writing the letter right now.)",
+          "answer": "pisał"
+        },
+        {
+          "prompt": "Choose the correct form: 'Dzisiaj _____ (kupić / kupować) mleko w sklepie.' (I bought milk at the store today – completed.)",
+          "answer": "kupiłem"
+        }
+      ]
+    },
+    {
+      "rule_id": "przyimki",
+      "topic": "Przyimki",
+      "title": "Prepositions 'w' vs 'na' for Locations",
+      "explanation": "In Polish, use 'w' (in) for cities, countries, continents, and most indoor spaces. Use 'na' (on) for islands, open areas (like beaches), and some events. A common mistake is using 'na' instead of 'w' for cities and countries.",
+      "examples": [
+        {
+          "wrong": "Mieszkam na Paryżu.",
+          "right": "Mieszkam w Paryżu.",
+          "note": "Cities always take 'w', not 'na'."
+        },
+        {
+          "wrong": "Jestem na Polsce.",
+          "right": "Jestem w Polsce.",
+          "note": "Most countries take 'w' (exceptions like 'na Ukrainie' are rare)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'I am in London' in Polish?",
+          "answer": "Jestem w Londynie."
+        },
+        {
+          "prompt": "Correct this sentence: 'Ona pracuje na Warszawie.'",
+          "answer": "Ona pracuje w Warszawie."
+        },
+        {
+          "prompt": "Fill in the blank: 'Mój brat mieszka ______ Hiszpanii.' (in Spain)",
+          "answer": "w"
+        }
+      ]
+    },
+    {
+      "rule_id": "liczebniki",
+      "topic": "Liczebniki",
+      "title": "Polish Numerals (5+ require Genitive Plural)",
+      "explanation": "After numerals 5 and above, the noun must be in genitive plural. For numerals 2-4, use nominative plural (with gender agreement for '2': masculine 'dwa', feminine 'dwie', neuter 'dwa'). A common mistake is using the nominative singular after higher numerals.",
+      "examples": [
+        {
+          "wrong": "Mam pięć książka.",
+          "right": "Mam pięć książek.",
+          "note": "After 'pięć' (5), 'książka' changes to genitive plural 'książek'."
+        },
+        {
+          "wrong": "Widzę trzy kot.",
+          "right": "Widzę trzy koty.",
+          "note": "After 'trzy' (3), 'kot' becomes nominative plural 'koty' (not genitive)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank: Mam cztery ___ (jabłko).",
+          "answer": "jabłka"
+        },
+        {
+          "prompt": "Fill in the blank: Kupuję sześć ___ (banan).",
+          "answer": "bananów"
+        },
+        {
+          "prompt": "Fill in the blank: On ma dwie ___ (siostra).",
+          "answer": "siostry"
+        }
+      ]
+    },
+    {
+      "rule_id": "samogłoski-nosowe",
+      "topic": "Samogłoski nosowe",
+      "title": "Polish Nasal Vowels: ą and ę",
+      "explanation": "Polish has two nasal vowels: 'ą' (like French 'on') and 'ę' (like French 'in'). A common mistake is to pronounce them as a vowel plus 'n' or 'm' (e.g., 'kont' instead of 'kąt'). Practice keeping the nasal sound on the vowel, not adding a separate consonant.",
+      "examples": [
+        {
+          "wrong": "kont",
+          "right": "kąt",
+          "note": "The word for 'angle' is 'kąt', not 'kont'. Keep the nasal on the vowel."
+        },
+        {
+          "wrong": "pienkny",
+          "right": "piękny",
+          "note": "'Beautiful' is spelled with 'ę', not 'en'. The vowel is nasal, not a separate 'n'."
+        },
+        {
+          "wrong": "menso",
+          "right": "mięso",
+          "note": "'Meat' uses 'ę' (nasal e), not 'en'. The sound is smooth and nasal."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complete the Polish word for 'duck' (it has a nasal vowel): k...",
+          "answer": "kączka"
+        },
+        {
+          "prompt": "Write the correct Polish spelling for 'tooth' (nasal vowel needed): z...",
+          "answer": "ząb"
+        },
+        {
+          "prompt": "Fill in the missing letter: 'r__ka' (hand) — which nasal vowel?",
+          "answer": "ę"
+        }
+      ]
+    },
+    {
+      "rule_id": "spółgłoski-szumiące",
+      "topic": "Spółgłoski szumiące",
+      "title": "Polish Hushing Consonants: sz, cz, ż, dż",
+      "explanation": "In Polish, 'spółgłoski szumiące' (hushing consonants) like sz, cz, ż, and dż are pronounced with the tongue curled back, giving them a 'buzzy' sound. A common mistake is to replace them with the softer English equivalents (e.g., 'sh' for 'sz') or with the non-hushing Polish consonants (s, c, z, dz). Focus on keeping your tongue tense and retracted for a correct retroflex articulation.",
+      "examples": [
+        {
+          "wrong": "safa",
+          "right": "szafa",
+          "note": "'sz' is like English 'sh' but with the tongue curled further back; 'safa' would mean something else."
+        },
+        {
+          "wrong": "cesc",
+          "right": "cześć",
+          "note": "'cz' is a hard 'ch' (like in 'chip') but with tongue position similar to 'sz'; 'cesc' is not a word."
+        },
+        {
+          "wrong": "zona",
+          "right": "żona",
+          "note": "'ż' is the voiced version of 'sz', like the 'zh' in 'measure'; 'zona' would be pronounced with a soft 'z'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the correct Polish spelling for 'hello' (the word that sounds like 'cheshch').",
+          "answer": "cześć"
+        },
+        {
+          "prompt": "Write the correct Polish word for 'wardrobe' (the one that has 'sz' at the beginning, not 's').",
+          "answer": "szafa"
+        },
+        {
+          "prompt": "Write the correct Polish word for 'wife' (the one that ends with 'żona' not 'zona').",
+          "answer": "żona"
+        }
+      ]
+    },
+    {
+      "rule_id": "akcent",
+      "topic": "Akcent",
+      "title": "Polish Accent: Stress on the Penultimate Syllable",
+      "explanation": "In Polish, stress almost always falls on the penultimate (second-to-last) syllable. This is very different from English, where stress can be on any syllable. For most words, simply count from the end and stress the second vowel group.",
+      "examples": [
+        {
+          "wrong": "TElefon",
+          "right": "teLEfon",
+          "note": "English speakers often stress the first syllable, but Polish requires stress on the second syllable (penultimate)."
+        },
+        {
+          "wrong": "KOMPuter",
+          "right": "komPUter",
+          "note": "The word 'computer' is commonly misstressed on the first syllable; in Polish the stress is on 'pu'."
+        },
+        {
+          "wrong": "UNIwersytet",
+          "right": "uniwerSYtet",
+          "note": "The stress is on 'sy', the second-to-last syllable of a five-syllable word."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the stress in the word: 'TElefon' (write the entire word with the stressed vowel capitalized).",
+          "answer": "teLEfon"
+        },
+        {
+          "prompt": "Write 'restauracja' with the correct Polish stress (capitalize the stressed vowel).",
+          "answer": "restauRAcja"
+        }
+      ]
+    },
+    {
+      "rule_id": "gender-agreement-of-adjectives",
+      "topic": "Gender agreement of adjectives",
+      "title": "Gender Agreement of Adjectives in Polish",
+      "explanation": "In Polish, adjectives must match the gender of the noun they describe in the singular nominative. Masculine adjectives typically end in -y or -i, feminine in -a, and neuter in -e. A common mistake is using the masculine form with a feminine or neuter noun.",
+      "examples": [
+        {
+          "wrong": "nowy książka",
+          "right": "nowa książka",
+          "note": "Książka is feminine, so the adjective must be nowa, not nowy."
+        },
+        {
+          "wrong": "stary okno",
+          "right": "stare okno",
+          "note": "Okno is neuter, so the adjective must be stare, not stary."
+        },
+        {
+          "wrong": "dobry kawa",
+          "right": "dobra kawa",
+          "note": "Kawa is feminine, so the adjective must be dobra, not dobry."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complete the adjective form: '___ (nowy) samochód' (car, masculine).",
+          "answer": "nowy"
+        },
+        {
+          "prompt": "Complete the adjective form: '___ (stary) książka' (book, feminine).",
+          "answer": "stara"
+        },
+        {
+          "prompt": "Complete the adjective form: '___ (mały) okno' (window, neuter).",
+          "answer": "małe"
+        }
+      ]
+    },
+    {
+      "rule_id": "verb-conjugation-endings",
+      "topic": "Verb conjugation endings",
+      "title": "Verb Conjugation Endings: Don't Forget to Change the Ending!",
+      "explanation": "In Polish, verbs must change their endings to match the person and number of the subject. A common mistake is using the infinitive form (ending in -ć) instead of the conjugated form. For example, with first person singular (I), drop -ć and add -ę; with third person plural (they), drop -ć and add -ą.",
+      "examples": [
+        {
+          "wrong": "Ja robić zadanie.",
+          "right": "Ja robię zadanie.",
+          "note": "For 'I', remove -ć from the infinitive robić and add -ę."
+        },
+        {
+          "wrong": "Oni pracować w biurze.",
+          "right": "Oni pracują w biurze.",
+          "note": "For 'they' (masculine personal), remove -ć from pracować and add -ą."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'I speak Polish'? (infinitive: mówić)",
+          "answer": "Ja mówię po polsku."
+        },
+        {
+          "prompt": "How do you say 'They (men) read a book'? (infinitive: czytać)",
+          "answer": "Oni czytają książkę."
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-pronoun-się-placement",
+      "topic": "Reflexive pronoun 'się' placement",
+      "title": "Where to Put 'się' in Polish Sentences",
+      "explanation": "In Polish, the reflexive pronoun 'się' usually appears after the first stressed word in a sentence. For simple statements with an explicit subject, it typically goes right before the verb (e.g., 'Ja się myję'), not after it. Avoid placing 'się' at the end of a sentence or after an object.",
+      "examples": [
+        {
+          "wrong": "Ja myję się.",
+          "right": "Ja się myję.",
+          "note": "With a subject, 'się' comes before the verb, not after."
+        },
+        {
+          "wrong": "Ona uczy polskiego się.",
+          "right": "Ona uczy się polskiego.",
+          "note": "'się' follows directly after the verb, not after the object."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'I am washing myself' (use subject).",
+          "answer": "Ja się myję."
+        },
+        {
+          "prompt": "Translate 'She is learning Polish'.",
+          "answer": "Ona uczy się polskiego."
+        },
+        {
+          "prompt": "Correct the word order: 'On myje się twarz' (context: 'He is washing his face' – reflexive verb 'myć się' not needed here).",
+          "answer": "On myje twarz."
+        }
+      ]
+    },
+    {
+      "rule_id": "double-negation-with-nie",
+      "topic": "Double negation with 'nie'",
+      "title": "Double Negation with 'nie'",
+      "explanation": "In Polish, when you use a negative word like 'nikt' (nobody), 'nic' (nothing), or 'nigdy' (never), you must also add 'nie' before the verb. This is called double negation, and it is required in Polish, even though English uses only one negative.",
+      "examples": [
+        {
+          "wrong": "Nikogo widzę.",
+          "right": "Nikogo nie widzę.",
+          "note": "The verb 'widzę' must be preceded by 'nie' because 'nikogo' is a negative word."
+        },
+        {
+          "wrong": "Nic mam.",
+          "right": "Nic nie mam.",
+          "note": "Always add 'nie' before the verb when using 'nic' (nothing)."
+        },
+        {
+          "wrong": "Nigdy byłem w Polsce.",
+          "right": "Nigdy nie byłem w Polsce.",
+          "note": "Use 'nie' with past tense verbs too when 'nigdy' (never) is present."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'I don't see anyone' in Polish?",
+          "answer": "Nikogo nie widzę."
+        },
+        {
+          "prompt": "Translate: 'I have nothing.'",
+          "answer": "Nic nie mam."
+        },
+        {
+          "prompt": "Say: 'I never go there.'",
+          "answer": "Nigdy tam nie idę."
+        }
+      ]
+    },
+    {
+      "rule_id": "predicate-nominative-vs-instrumental",
+      "topic": "Predicate nominative vs instrumental",
+      "title": "Predicate Nominative vs Instrumental",
+      "explanation": "In Polish, after the verb 'być' (to be), when the predicate is a noun, it usually takes the instrumental case, not the nominative as in English. For example, 'I am a student' is 'Jestem studentem' (instrumental). The exception is when the subject is 'to' (this/that) – then the nominative is used (e.g., 'To jest student'). For personal subjects (ja, ty, on, etc.), always use the instrumental.",
+      "examples": [
+        {
+          "wrong": "Jestem student.",
+          "right": "Jestem studentem.",
+          "note": "After 'jestem' (I am), use the instrumental case for nouns."
+        },
+        {
+          "wrong": "Ona jest lekarz.",
+          "right": "Ona jest lekarzem.",
+          "note": "Similarly for 'ona jest' (she is) – instrumental 'lekarzem'."
+        },
+        {
+          "wrong": "My jesteśmy nauczyciele.",
+          "right": "My jesteśmy nauczycielami.",
+          "note": "Plural also uses instrumental: 'nauczycielami' (not 'nauczyciele')."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank: 'On jest ____' (a doctor).",
+          "answer": "lekarzem"
+        },
+        {
+          "prompt": "Fill in the blank: 'Ty jesteś ____' (a student).",
+          "answer": "studentem"
+        },
+        {
+          "prompt": "Fill in the blank: 'Wy jesteście ____' (teachers).",
+          "answer": "nauczycielami"
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-pronoun-swój-vs-jegojej",
+      "topic": "Possessive pronoun 'swój' vs 'jego/jej'",
+      "title": "Possessive Pronouns: 'swój' vs 'jego/jej'",
+      "explanation": "In Polish, 'swój' is a reflexive possessive pronoun that must refer back to the subject of the sentence. Use 'jego' (his) or 'jej' (her) only when the possessor is a different person from the subject. A common mistake is using 'jego/jej' instead of 'swój' when the possessor is the same as the subject.",
+      "examples": [
+        {
+          "wrong": "Jan zjadł jego obiad.",
+          "right": "Jan zjadł swój obiad.",
+          "note": "'Jego' would imply someone else's lunch; 'swój' correctly shows Jan ate his own."
+        },
+        {
+          "wrong": "Maria pisze jej pracę.",
+          "right": "Maria pisze swoją pracę.",
+          "note": "'Jej' means another woman's work; 'swoją' shows Maria is writing her own."
+        },
+        {
+          "wrong": "Kupiliśmy ich dom.",
+          "right": "Kupiliśmy swój dom.",
+          "note": "'Ich' means someone else's house; 'swój' means our own house (subject = 'my')."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank: 'Kasia kupiła ______ samochód.' (Kasia bought her own car.)",
+          "answer": "swój"
+        },
+        {
+          "prompt": "Fill in the blank: 'Oni zaprosili ______ przyjaciół.' (They invited their own friends.)",
+          "answer": "swoich"
+        },
+        {
+          "prompt": "Fill in the blank: 'Tomek czyta ______ książkę.' (Tomek is reading his own book.)",
+          "answer": "swoją"
+        }
+      ]
+    },
+    {
+      "rule_id": "comparative-and-superlative-formation",
+      "topic": "Comparative and superlative formation",
+      "title": "Comparative and Superlative: Synthetic vs. Analytic Forms",
+      "explanation": "In Polish, many adjectives form the comparative by adding -szy/-sza/-sze (e.g., ładny → ładniejszy) and the superlative by adding naj- (e.g., najładniejszy). Other adjectives use the analytic forms bardziej (more) and najbardziej (most) instead (e.g., interesujący → bardziej interesujący → najbardziej interesujący). A common mistake is using the analytic form with adjectives that require a synthetic form, or vice versa.",
+      "examples": [
+        {
+          "wrong": "To jest bardziej piękny obraz.",
+          "right": "To jest piękniejszy obraz.",
+          "note": "'Piękny' takes the synthetic comparative: piękniejszy (not bardziej piękny)."
+        },
+        {
+          "wrong": "Ona jest najwięcej dobra w klasie.",
+          "right": "Ona jest najlepsza w klasie.",
+          "note": "'Dobry' has irregular forms: lepszy (comparative) and najlepszy (superlative). Avoid 'najbardziej dobry' or 'najwięcej dobra'."
+        },
+        {
+          "wrong": "To jest najbardziej interesująca książka.",
+          "right": "To jest najbardziej interesująca książka.",
+          "note": "This is actually correct! 'Interesujący' uses analytic forms. The common mistake is thinking it must be synthetic."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the mistake: 'On jest bardziej wysoki od mnie.'",
+          "answer": "On jest wyższy ode mnie."
+        },
+        {
+          "prompt": "Fill in the blank with the correct superlative form of 'drogi' (expensive): 'To jest ______ samochód w salonie.'",
+          "answer": "najdroższy"
+        }
+      ]
+    },
+    {
+      "rule_id": "future-tense-perfective-vs-imperfective",
+      "topic": "Future tense: perfective vs imperfective",
+      "title": "Future Tense: Perfective vs Imperfective",
+      "explanation": "In Polish, the future tense is formed differently depending on verb aspect. Perfective verbs (completed actions) use a simple future form that looks like the present tense. Imperfective verbs (ongoing, habitual, or repeated actions) require the auxiliary 'być' (conjugated as 'będę', 'będziesz', etc.) followed by the infinitive. Never use 'będę' with a perfective verb.",
+      "examples": [
+        {
+          "wrong": "Jutro będę napisać list.",
+          "right": "Jutro napiszę list.",
+          "note": "Perfective verbs do not combine with 'będę'. Use the simple future form."
+        },
+        {
+          "wrong": "Przez godzinę napiszę list.",
+          "right": "Przez godzinę będę pisać list.",
+          "note": "Use the imperfective future ('będę' + infinitive) for actions that take time or are ongoing."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complete: Jutro ___ (pójść – perfective) do kina.",
+          "answer": "pójdę"
+        },
+        {
+          "prompt": "Complete: Codziennie ___ (czytać – imperfective) gazetę.",
+          "answer": "będę czytać"
+        },
+        {
+          "prompt": "Complete: W przyszłym tygodniu ___ (kupić – perfective) nowy samochód.",
+          "answer": "kupię"
+        }
+      ]
+    },
+    {
+      "rule_id": "conditional-mood-with-by",
+      "topic": "Conditional mood with 'by'",
+      "title": "Using the Conditional Mood with 'by' Correctly",
+      "explanation": "In Polish, the conditional mood is formed by adding the particle 'by' (with person endings) to the past tense or using it as a separate word. A common mistake is placing 'by' incorrectly or using it with the wrong verb form. Remember: 'by' comes directly after the verb or subject, and the verb must be in the past tense (third person singular/plural form).",
+      "examples": [
+        {
+          "wrong": "Ja bym chciał jeść.",
+          "right": "Chciałbym jeść.",
+          "note": "'Bym' is attached to the verb 'chciał', not used separately."
+        },
+        {
+          "wrong": "Oni by poszli do kina.",
+          "right": "Poszliby do kina.",
+          "note": "The conditional particle 'by' is attached to the past tense verb 'poszli'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I would like to read a book.' (use 'czytać' - to read, 'książkę' - book)",
+          "answer": "Chciałbym czytać książkę."
+        },
+        {
+          "prompt": "Correct the mistake: 'Ona by pisała list.' (She would write a letter)",
+          "answer": "Pisałaby list."
+        }
+      ]
+    },
+    {
+      "rule_id": "imperative-mood-formation",
+      "topic": "Imperative mood formation",
+      "title": "Imperative Mood Formation in Polish",
+      "explanation": "In Polish, the imperative for informal singular (ty) is often formed by taking the third person singular present tense or removing the infinitive ending -ć. For plural informal (wy), add -cie to the singular imperative. For formal (pan/pani), use the third person singular present. A common mistake is using the infinitive instead of the correct imperative form.",
+      "examples": [
+        {
+          "wrong": "Czytać książkę!",
+          "right": "Czytaj książkę!",
+          "note": "For verbs like czytać, the singular imperative is formed by removing -ć and adding -j (third person singular present 'czyta' + j)."
+        },
+        {
+          "wrong": "Mówić po polsku!",
+          "right": "Mów po polsku!",
+          "note": "For verbs ending in -ić like mówić, the singular imperative is often the stem without any ending (third person singular 'mówi' minus -i gives 'mów')."
+        },
+        {
+          "wrong": "Nie robić tego!",
+          "right": "Nie rób tego!",
+          "note": "Negative imperatives use 'nie' followed by the positive imperative form (here 'rób' from robić, which changes the stem vowel)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the correct imperative (ty form) for 'to speak' (mówić).",
+          "answer": "Mów"
+        },
+        {
+          "prompt": "Write the correct imperative (wy form) for 'to read' (czytać).",
+          "answer": "Czytajcie"
+        },
+        {
+          "prompt": "Write the correct negative imperative (ty form) for 'to do' (robić).",
+          "answer": "Nie rób"
+        }
+      ]
+    },
+    {
+      "rule_id": "motion-verbs-iść-vs-chodzić",
+      "topic": "Motion verbs: iść vs chodzić",
+      "title": "Motion Verbs: iść vs chodzić",
+      "explanation": "Use 'iść' when talking about a single, current movement toward a destination. Use 'chodzić' for repeated actions, habits, or the ability to walk. A common mistake is using 'chodzić' for a single trip you are making right now.",
+      "examples": [
+        {
+          "wrong": "Idę do sklepu codziennie.",
+          "right": "Chodzę do sklepu codziennie.",
+          "note": "Because 'codziennie' implies a repeated habit, use 'chodzę'."
+        },
+        {
+          "wrong": "Chodzę teraz do szkoły.",
+          "right": "Idę teraz do szkoły.",
+          "note": "'Teraz' indicates a single current action, so use 'idę'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank: On (iść/chodzić) do pracy o 8 rano każdego dnia.",
+          "answer": "chodzi"
+        },
+        {
+          "prompt": "Fill in the blank: Gdzie ty (iść/chodzić) w tej chwili?",
+          "answer": "idziesz"
+        }
+      ]
+    },
+    {
+      "rule_id": "verbs-of-placing-kłaść-stawiać-etc",
+      "topic": "Verbs of placing: kłaść, stawiać, etc.",
+      "title": "Verbs of Placing: kłaść, stawiać, wieszać",
+      "explanation": "In Polish, different verbs are used depending on the position or orientation of the object being placed. 'kłaść' means to put something flat (like a book on a table), 'stawiać' means to put something upright (like a bottle on a shelf), and 'wieszać' means to hang something (like a coat on a hook). Using the wrong verb is a common mistake for English speakers, as English often uses the generic 'put'.",
+      "examples": [
+        {
+          "wrong": "Kładę butelkę na stole.",
+          "right": "Stawiam butelkę na stole.",
+          "note": "A bottle should be placed upright, so use 'stawiam' (I am putting upright) instead of 'kładę' (I am laying flat)."
+        },
+        {
+          "wrong": "Stawiam książkę na półce.",
+          "right": "Kładę książkę na półce.",
+          "note": "A book is typically laid flat on a shelf, so use 'kładę' instead of 'stawiam'."
+        },
+        {
+          "wrong": "Kładę płaszcz na wieszaku.",
+          "right": "Wieszam płaszcz na wieszaku.",
+          "note": "A coat is hung on a hanger, so use 'wieszam' (I am hanging) instead of 'kładę' (I am laying flat)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complete the sentence: 'On ______ szklankę na stole.' (He is placing a glass on the table.)",
+          "answer": "stawia"
+        },
+        {
+          "prompt": "Complete the sentence: 'Ona ______ zdjęcie na ścianie.' (She is hanging a picture on the wall.)",
+          "answer": "wiesza"
+        },
+        {
+          "prompt": "Complete the sentence: 'Dziecko ______ zabawkę na podłodze.' (The child is putting a toy on the floor.)",
+          "answer": "kładzie"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-to-as-subject-vs-pronoun",
+      "topic": "Use of 'to' as subject vs pronoun",
+      "title": "Using 'to' as a Demonstrative vs. a Pronoun",
+      "explanation": "In Polish, 'to' can mean 'this' or 'that' when pointing something out (demonstrative subject). However, as a pronoun meaning 'it', it must match the gender of the noun it replaces: 'on' for masculine, 'ona' for feminine, and 'ono' for neuter. A common mistake is using 'to' as a pronoun for all genders, which is incorrect.",
+      "examples": [
+        {
+          "wrong": "Gdzie jest książka? To jest na stole.",
+          "right": "Gdzie jest książka? Ona jest na stole.",
+          "note": "Książka is feminine, so the correct pronoun is 'ona' (she/it), not 'to'."
+        },
+        {
+          "wrong": "To jest mój samochód. To jest czerwony.",
+          "right": "To jest mój samochód. On jest czerwony.",
+          "note": "Samochód is masculine, so after introducing it, use 'on' (he/it) for the second sentence."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How would you say 'Where is the key? It is on the table.' (key = klucz, masculine)",
+          "answer": "Gdzie jest klucz? On jest na stole."
+        },
+        {
+          "prompt": "Translate: 'This is a good idea. It is simple.' (idea = pomysł, masculine)",
+          "answer": "To jest dobry pomysł. On jest prosty."
+        },
+        {
+          "prompt": "Fill in: 'Mam kota. _____ jest czarny.' (use the correct pronoun for kot, masculine)",
+          "answer": "On"
+        }
+      ]
+    },
+    {
+      "rule_id": "relative-pronouns-który-vs-jaki",
+      "topic": "Relative pronouns 'który' vs 'jaki'",
+      "title": "Relative Pronouns: 'który' vs 'jaki'",
+      "explanation": "Use 'który' (which) when you need to identify a specific person or thing from a group, like in 'the book which I read'. Use 'jaki' (what kind of) when you describe a quality or type, like in 'a book such as…' or 'what kind of…'. In many contexts, 'jaki' is more general and often used in exclamations or after 'taki'.",
+      "examples": [
+        {
+          "wrong": "To jest dom, jaki kupiłem.",
+          "right": "To jest dom, który kupiłem.",
+          "note": "Here you specify a particular house (the one I bought). Use 'który'."
+        },
+        {
+          "wrong": "Nie wiem, który to ma smak.",
+          "right": "Nie wiem, jaki to ma smak.",
+          "note": "You're asking about the kind of taste, not identifying a specific taste among options. Use 'jaki'."
+        },
+        {
+          "wrong": "Mam przyjaciela, jakiego zawsze chciałeś poznać.",
+          "right": "Mam przyjaciela, którego zawsze chciałeś poznać.",
+          "note": "You mean a specific friend you wanted to meet. Use 'którego' (genitive of 'który')."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank with the correct pronoun (który/jaki) in Polish: 'I'm looking for a book ___ has a red cover.'",
+          "answer": "który"
+        },
+        {
+          "prompt": "Fill in the blank: 'Tell me ___ color you like best.' (asking for a kind of color)",
+          "answer": "jaki"
+        },
+        {
+          "prompt": "Fill in the blank: 'The girl ___ lives next door is my sister.'",
+          "answer": "która"
+        }
+      ]
+    },
+    {
+      "rule_id": "question-word-czy",
+      "topic": "Question word 'czy'",
+      "title": "Using 'czy' in Polish Yes/No Questions",
+      "explanation": "In Polish, yes/no questions are formed by adding the word 'czy' at the beginning of a statement, rather than by changing word order as in English. Many English learners either forget to use 'czy' or mistakenly insert it into wh-questions (like 'co', 'kto', 'gdzie'). Remember: use 'czy' only for questions expecting a yes or no answer.",
+      "examples": [
+        {
+          "wrong": "Jesteś zmęczony?",
+          "right": "Czy jesteś zmęczony?",
+          "note": "Without 'czy', this is an informal intonation-based question; formal Polish requires 'czy'."
+        },
+        {
+          "wrong": "Czy gdzie idziesz?",
+          "right": "Gdzie idziesz?",
+          "note": "Do not use 'czy' with question words like 'gdzie', 'co', or 'kto'."
+        },
+        {
+          "wrong": "Czy ona ma kota?",
+          "right": "Czy ona ma kota?",
+          "note": "This is already correct! 'Czy' + statement forms a proper yes/no question."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Ask 'Do you speak English?'",
+          "answer": "Czy mówisz po angielsku?"
+        },
+        {
+          "prompt": "Ask 'Is the train late?'",
+          "answer": "Czy pociąg się spóźnia?"
+        },
+        {
+          "prompt": "Ask 'Does she like pizza?'",
+          "answer": "Czy ona lubi pizzę?"
+        }
+      ]
+    },
+    {
+      "rule_id": "adverbs-bardzo-vs-dużo-vs-wiele",
+      "topic": "Adverbs: 'bardzo' vs 'dużo' vs 'wiele'",
+      "title": "Common Mistake: 'bardzo' vs 'dużo' vs 'wiele'",
+      "explanation": "'Bardzo' means 'very' and modifies adjectives or adverbs (e.g., bardzo dobry = very good). 'Dużo' means 'a lot / many' and is used with nouns in the genitive plural (e.g., dużo pieniędzy = a lot of money). 'Wiele' is a more formal synonym for 'dużo' and also means 'many' (e.g., wiele osób = many people). A common mistake is using 'bardzo' when you need a quantity word like 'dużo' or 'wiele'.",
+      "examples": [
+        {
+          "wrong": "Mam bardzo książek.",
+          "right": "Mam dużo książek.",
+          "note": "'Bardzo' cannot modify a noun (książek). Use 'dużo' to express 'a lot of books'."
+        },
+        {
+          "wrong": "To jest dużo dobre.",
+          "right": "To jest bardzo dobre.",
+          "note": "'Dużo' means 'a lot' (quantity), not 'very'. For intensifying an adjective, use 'bardzo'."
+        },
+        {
+          "wrong": "On ma wiele dobry samochód.",
+          "right": "On ma bardzo dobry samochód.",
+          "note": "'Wiele' means 'many' (plural), not 'very'. Use 'bardzo' before the adjective 'dobry'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the sentence: 'Ona jest dużo miła.'",
+          "answer": "Ona jest bardzo miła."
+        },
+        {
+          "prompt": "Fill in the blank with 'bardzo', 'dużo', or 'wiele': 'W sklepie jest _______ ludzi.' (meaning 'many people')",
+          "answer": "dużo"
+        },
+        {
+          "prompt": "Fill in the blank: 'To zadanie jest _______ trudne.' (meaning 'very difficult')",
+          "answer": "bardzo"
+        }
+      ]
+    },
+    {
+      "rule_id": "expressing-age-and-temperature-mieć-vs-być",
+      "topic": "Expressing age and temperature: mieć vs być",
+      "title": "Expressing Age and Temperature: mieć vs być",
+      "explanation": "In Polish, age is expressed using the verb 'mieć' (to have) – you 'have' a certain number of years. Temperature, however, uses 'być' (to be) – the temperature 'is' a number of degrees. English speakers often mistakenly use 'być' for age or 'mieć' for temperature.",
+      "examples": [
+        {
+          "wrong": "Jestem 25 lat.",
+          "right": "Mam 25 lat.",
+          "note": "Age always uses 'mieć', not 'być'."
+        },
+        {
+          "wrong": "Temperatura ma 30 stopni.",
+          "right": "Temperatura jest 30 stopni.",
+          "note": "Temperature always uses 'być', not 'mieć'."
+        },
+        {
+          "wrong": "Ona jest 18 lat.",
+          "right": "Ona ma 18 lat.",
+          "note": "Even in third person, age uses 'mieć'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I am 30 years old.'",
+          "answer": "Mam 30 lat."
+        },
+        {
+          "prompt": "Translate: 'The temperature is 25 degrees.'",
+          "answer": "Temperatura jest 25 stopni."
+        },
+        {
+          "prompt": "Correct this Polish sentence: 'On jest 40 lat.'",
+          "answer": "On ma 40 lat."
+        }
+      ]
+    },
+    {
+      "rule_id": "verb-agreement-with-numerals-jest-vs-są",
+      "topic": "Verb agreement with numerals (jest vs są)",
+      "title": "Verb Agreement with Numerals: 'jest' vs 'są'",
+      "explanation": "In Polish, the verb form depends on the numeral. With numerals 2, 3, and 4 (or numbers ending in these digits), use the plural verb 'są'. With numerals 5 and above, use the singular verb 'jest'. A common mistake is using 'jest' with 2-4, so remember to match the plural.",
+      "examples": [
+        {
+          "wrong": "Dwa koty jest w ogrodzie.",
+          "right": "Dwa koty są w ogrodzie.",
+          "note": "After 'dwa' (2), use 'są' (plural)."
+        },
+        {
+          "wrong": "Trzy książki jest na stole.",
+          "right": "Trzy książki są na stole.",
+          "note": "After 'trzy' (3), use 'są'."
+        },
+        {
+          "wrong": "Pięć psów są w parku.",
+          "right": "Pięć psów jest w parku.",
+          "note": "After 'pięć' (5+), use 'jest' (singular)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank with 'jest' or 'są': Dwa chłopców ___ w szkole.",
+          "answer": "są"
+        },
+        {
+          "prompt": "Fill in the blank: Pięć jabłek ___ na stole.",
+          "answer": "jest"
+        },
+        {
+          "prompt": "Fill in the blank: Cztery samochody ___ zaparkowane.",
+          "answer": "są"
+        }
+      ]
+    }
+  ]
+}

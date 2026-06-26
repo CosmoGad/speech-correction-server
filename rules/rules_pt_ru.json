@@ -1,0 +1,894 @@
+{
+  "learning": "pt",
+  "interface": "ru",
+  "generated_at": "2026-06-26T12:31:18.361480+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "artigos",
+      "topic": "Artigos",
+      "title": "Употребление определенных артиклей в португальском языке",
+      "explanation": "В португальском языке определенные артикли (o, a, os, as) используются гораздо чаще, чем в русском. Они обязательны перед существительными в общих утверждениях, а также перед именами людей в разговорной речи. Ошибка возникает, когда русскоязычные учащиеся опускают артикль, следуя логике родного языка.",
+      "examples": [
+        {
+          "wrong": "Brasil é lindo.",
+          "right": "O Brasil é lindo.",
+          "note": "Названия стран в португальском обычно требуют определенного артикля."
+        },
+        {
+          "wrong": "Meu carro é azul.",
+          "right": "O meu carro é azul.",
+          "note": "Перед притяжательным местоимением в португальском часто ставится артикль (за некоторыми исключениями)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на португальский: 'Бразилия большая'.",
+          "answer": "O Brasil é grande."
+        },
+        {
+          "prompt": "Переведите на португальский: 'Моя книга интересная'.",
+          "answer": "O meu livro é interessante."
+        },
+        {
+          "prompt": "Переведите на португальский: 'Солнце светит'.",
+          "answer": "O sol brilha."
+        }
+      ]
+    },
+    {
+      "rule_id": "tempos-verbais",
+      "topic": "Tempos verbais",
+      "title": "Ошибка в временах: Использование pretérito perfeito вместо imperfeito для привычных действий в прошлом",
+      "explanation": "В португальском языке для описания повторяющихся или привычных действий в прошлом используется pretérito imperfeito (например, 'jogava', 'ía'). Pretérito perfeito (например, 'joguei', 'fui') обозначает однократное завершённое действие. Русскоязычные учащиеся часто путают эти времена из-за влияния вида глаголов.",
+      "examples": [
+        {
+          "wrong": "Quando eu era pequeno, eu brinquei no parque todos os dias.",
+          "right": "Quando eu era pequeno, eu brincava no parque todos os dias.",
+          "note": "brinquei — однократное действие, brincava — повторяющееся."
+        },
+        {
+          "wrong": "Antigamente, nós fomos à praia todo verão.",
+          "right": "Antigamente, nós íamos à praia todo verão.",
+          "note": "fomos — конкретный случай, íamos — привычка."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на португальский: 'Когда я был ребенком, я часто играл в футбол.' (используйте правильное время)",
+          "answer": "Quando eu era criança, eu jogava futebol frequentemente."
+        },
+        {
+          "prompt": "Исправьте предложение: 'Antigamente, Maria cozinhou o jantar todas as noites.'",
+          "answer": "Antigamente, Maria cozinhava o jantar todas as noites."
+        }
+      ]
+    },
+    {
+      "rule_id": "preposições",
+      "topic": "Preposições",
+      "title": "Ошибки с предлогами при обозначении направления (a, para, em)",
+      "explanation": "В португальском языке для указания направления движения с глаголами типа 'ir' (идти) используются предлоги 'a' или 'para', но не 'em'. Использование 'em' (или его сочетаний 'no', 'na') для направления — распространённая ошибка русскоговорящих. Например, правильно: 'Vou ao mercado' (я иду на рынок), а не 'Vou no mercado'.",
+      "examples": [
+        {
+          "wrong": "Vou no cinema.",
+          "right": "Vou ao cinema.",
+          "note": "Глагол 'ir' требует предлога 'a' (или 'para'), а не 'em'. 'Ao' = a + o (определённый артикль мужского рода)."
+        },
+        {
+          "wrong": "Ela vai na escola.",
+          "right": "Ela vai à escola.",
+          "note": "С существительными женского рода используется 'à' = a + a (предлог + артикль)."
+        },
+        {
+          "wrong": "Nós vamos em Paris.",
+          "right": "Nós vamos para Paris.",
+          "note": "С названиями городов часто употребляется 'para', особенно в разговорной речи."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильный предлог с артиклем: Eu vou _____ cinema.",
+          "answer": "ao"
+        },
+        {
+          "prompt": "Исправьте ошибку: Ele vai na praia.",
+          "answer": "Ele vai à praia."
+        },
+        {
+          "prompt": "Выберите правильный вариант: Nós vamos (no / ao) teatro.",
+          "answer": "ao"
+        }
+      ]
+    },
+    {
+      "rule_id": "conjugação",
+      "topic": "Conjugação",
+      "title": "Ошибки в спряжении глаголов",
+      "explanation": "В португальском языке глаголы изменяются по лицам и числам. Распространённая ошибка — путать окончания, например, использовать форму третьего лица единственного числа вместо первого лица. Запомните: для каждого подлежащего есть своё окончание.",
+      "examples": [
+        {
+          "wrong": "Eu fala português.",
+          "right": "Eu falo português.",
+          "note": "Глагол 'falar' в первом лице единственного числа (eu) требует окончания -o."
+        },
+        {
+          "wrong": "Você falam bem.",
+          "right": "Você fala bem.",
+          "note": "С местоимением 'você' (вежливое 'ты') всегда используется форма третьего лица единственного числа."
+        },
+        {
+          "wrong": "Nós fala espanhol.",
+          "right": "Nós falamos espanhol.",
+          "note": "Для 'nós' ('мы') окончание глагола — -mos."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Как правильно сказать по-португальски: «Я говорю по-португальски»?",
+          "answer": "Eu falo português."
+        },
+        {
+          "prompt": "Как правильно сказать: «Вы (вежливая форма) говорите по-английски?»",
+          "answer": "Você fala inglês?"
+        },
+        {
+          "prompt": "Как правильно сказать: «Мы говорим по-испански»?",
+          "answer": "Nós falamos espanhol."
+        }
+      ]
+    },
+    {
+      "rule_id": "vogais-nasais",
+      "topic": "Vogais nasais",
+      "title": "Носовые гласные в португальском языке",
+      "explanation": "В португальском языке существуют носовые гласные, которые произносятся с прохождением воздуха через нос. Они обозначаются тильдой (ã, õ) или сочетанием гласной с буквой m или n в конце слога. Русскоязычным учащимся важно не заменять носовые гласные обычными, так как это меняет смысл слова.",
+      "examples": [
+        {
+          "wrong": "pao",
+          "right": "pão",
+          "note": "В русском нет носового «ао»; нужно произносить с носовым оттенком."
+        },
+        {
+          "wrong": "bem (с обычной «е»)",
+          "right": "bem",
+          "note": "Буква «m» в конце слова указывает на носовой звук, не читается как русская «м»."
+        },
+        {
+          "wrong": "mae",
+          "right": "mãe",
+          "note": "Тильда над «a» обозначает носовой звук, не путайте с дифтонгом «ae»."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите правильное португальское слово для «хлеб» (с носовым звуком).",
+          "answer": "pão"
+        },
+        {
+          "prompt": "Напишите правильное португальское слово для «хорошо» (носовой звук).",
+          "answer": "bem"
+        },
+        {
+          "prompt": "Напишите правильное португальское слово для «мать» (с тильдой).",
+          "answer": "mãe"
+        }
+      ]
+    },
+    {
+      "rule_id": "sotaque",
+      "topic": "Sotaque",
+      "title": "Ошибка: путаница между 'sotaque' и 'acento'",
+      "explanation": "В португальском языке слово 'sotaque' означает произносительный акцент (региональный или иностранный), а не ударение или диакритический знак. Для обозначения графического ударения (значка над гласной) или тонического ударения используется слово 'acento' или выражение 'sílaba tônica'. Многие русскоговорящие ошибочно используют 'sotaque' в значении 'ударение'.",
+      "examples": [
+        {
+          "wrong": "Coloque o sotaque na letra 'e'.",
+          "right": "Coloque o acento na letra 'e'.",
+          "note": "'Sotaque' относится к манере речи, а не к значку ударения."
+        },
+        {
+          "wrong": "Não sei qual é o sotaque dessa palavra.",
+          "right": "Não sei qual é a sílaba tônica dessa palavra.",
+          "note": "Для указания на ударный слог используйте 'sílaba tônica', а не 'sotaque'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильное слово (sotaque или acento): 'O ____ da palavra 'avó' está no 'o'.'",
+          "answer": "O acento da palavra 'avó' está no 'o'."
+        },
+        {
+          "prompt": "Как правильно: 'Ela fala com um _____ estrangeiro' (sotaque/acento)?",
+          "answer": "Ela fala com um sotaque estrangeiro."
+        },
+        {
+          "prompt": "Исправьте предложение: 'O sotaque gráfico é importante.'",
+          "answer": "O acento gráfico é importante."
+        }
+      ]
+    },
+    {
+      "rule_id": "entonação",
+      "topic": "Entonação",
+      "title": "Интонация в вопросах португальского языка",
+      "explanation": "В португальском языке интонация играет ключевую роль в разграничении типов вопросов. В общих вопросах (на которые можно ответить «да» или «нет») интонация повышается в конце. В специальных вопросах (с вопросительными словами: onde, como, qual и т.д.) интонация, наоборот, понижается. Русскоязычные учащиеся часто переносят свои интонационные привычки, что может приводить к недопониманию.",
+      "examples": [
+        {
+          "wrong": "Você gosta de café.",
+          "right": "Você gosta de café?",
+          "note": "В русском вопросительная интонация часто понижается, а в португальском — повышается."
+        },
+        {
+          "wrong": "Onde você mora? (с восходящей интонацией)",
+          "right": "Onde você mora? (с нисходящей интонацией)",
+          "note": "В португальском специальные вопросы произносятся с понижением тона, в отличие от русского."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Преобразуйте утверждение в общий вопрос, изменив интонацию и пунктуацию: 'Você gosta de música brasileira.'",
+          "answer": "Você gosta de música brasileira?"
+        },
+        {
+          "prompt": "Измените интонацию так, чтобы предложение 'Você fala inglês?' стало утверждением.",
+          "answer": "Você fala inglês."
+        },
+        {
+          "prompt": "Определите, какая интонация (восходящая или нисходящая) используется в специальном вопросе 'Quantos anos você tem?' и запишите её по-португальски.",
+          "answer": "descendente"
+        }
+      ]
+    },
+    {
+      "rule_id": "ser-vs-estar-usage",
+      "topic": "Ser vs Estar usage",
+      "title": "Ser vs Estar: основное правило",
+      "explanation": "Глагол 'ser' используется для постоянных характеристик (национальность, профессия, внешность). Глагол 'estar' — для временных состояний (эмоции, местонахождение, погода). Запомните: 'ser' — суть, 'estar' — положение.",
+      "examples": [
+        {
+          "wrong": "Ele é cansado.",
+          "right": "Ele está cansado.",
+          "note": "Усталость — временное состояние, поэтому нужен 'estar'."
+        },
+        {
+          "wrong": "Ela está brasileira.",
+          "right": "Ela é brasileira.",
+          "note": "Национальность — постоянный признак, используем 'ser'."
+        },
+        {
+          "wrong": "O livro é na mesa.",
+          "right": "O livro está na mesa.",
+          "note": "Местонахождение — временное, нужен 'estar'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Выберите правильный глагол: 'ser' или 'estar'. Он ___ médico.",
+          "answer": "É"
+        },
+        {
+          "prompt": "Выберите правильный глагол: 'ser' или 'estar'. Мы ___ em casa.",
+          "answer": "estamos"
+        },
+        {
+          "prompt": "Выберите правильный глагол: 'ser' или 'estar'. Сегодня ___ frio.",
+          "answer": "está"
+        }
+      ]
+    },
+    {
+      "rule_id": "gender-agreement-of-nouns",
+      "topic": "Gender agreement of nouns",
+      "title": "Согласование рода существительных в португальском",
+      "explanation": "В португальском языке существительные имеют род (мужской или женский). Прилагательные, артикли и местоимения должны согласовываться с родом существительного. Обычно слова, оканчивающиеся на -o, мужского рода, а на -a — женского, но есть много исключений. Запомните: неодушевлённые предметы тоже имеют род!",
+      "examples": [
+        {
+          "wrong": "o casa",
+          "right": "a casa",
+          "note": "Слово 'casa' (дом) женского рода, несмотря на окончание -a, поэтому артикль должен быть 'a', а не 'o'."
+        },
+        {
+          "wrong": "menino bonita",
+          "right": "menino bonito",
+          "note": "Прилагательное 'bonito' (красивый) должно согласовываться по роду с существительным 'menino' (мальчик, мужской род). Окончание -o."
+        },
+        {
+          "wrong": "a problema",
+          "right": "o problema",
+          "note": "Слово 'problema' (проблема) мужского рода, хотя оканчивается на -a. Это исключение."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильную форму артикля: ___ flor (цветок).",
+          "answer": "a flor"
+        },
+        {
+          "prompt": "Согласуйте прилагательное: A cidade é muito _____ (grande).",
+          "answer": "grande"
+        },
+        {
+          "prompt": "Выберите верный артикль: ___ livro (книга).",
+          "answer": "o livro"
+        }
+      ]
+    },
+    {
+      "rule_id": "plural-formation-rules",
+      "topic": "Plural formation rules",
+      "title": "Правила образования множественного числа в португальском языке",
+      "explanation": "В португальском языке множественное число обычно образуется добавлением -s. Однако у слов на -ão возможны три варианта: -ãos, -ães, -ões. Слова на -l меняют -l на -is (например, papel → papéis). Запомните наиболее частые случаи, так как ошибки здесь очень распространены среди начинающих.",
+      "examples": [
+        {
+          "wrong": "cãos",
+          "right": "cães",
+          "note": "Слово 'cão' (собака) во множественном числе становится 'cães', а не 'cãos'."
+        },
+        {
+          "wrong": "papels",
+          "right": "papéis",
+          "note": "Слово 'papel' (бумага) во множественном числе — 'papéis', а не 'papels'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите множественное число слова 'mão' (рука).",
+          "answer": "mãos"
+        },
+        {
+          "prompt": "Напишите множественное число слова 'hotel' (отель).",
+          "answer": "hotéis"
+        },
+        {
+          "prompt": "Напишите множественное число слова 'leão' (лев).",
+          "answer": "leões"
+        }
+      ]
+    },
+    {
+      "rule_id": "personal-object-pronouns",
+      "topic": "Personal object pronouns",
+      "title": "Личные объектные местоимения в португальском",
+      "explanation": "В португальском для прямого дополнения (кого? что?) используются специальные объектные местоимения (o, a, os, as, me, te, se, nos, vos), а не формы подлежащего (ele, ela, eu и т.д.). Они обычно ставятся перед глаголом (в бразильском варианте) или после него с дефисом (в европейском). Русскоязычные часто ошибочно используют 'ele' вместо 'o'.",
+      "examples": [
+        {
+          "wrong": "Eu vi ele.",
+          "right": "Eu o vi.",
+          "note": "После глагола 'vi' используйте 'o' (его), а не 'ele'."
+        },
+        {
+          "wrong": "Ela chamou eu.",
+          "right": "Ela me chamou.",
+          "note": "Объектное местоимение 'me' (меня) ставится перед глаголом."
+        },
+        {
+          "wrong": "Nós encontramos ela.",
+          "right": "Nós a encontramos.",
+          "note": "Для 'ela' (её) используйте 'a'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Исправьте ошибку: Eu vi ela.",
+          "answer": "Eu a vi."
+        },
+        {
+          "prompt": "Как сказать 'Он позвонил мне' (в бразильском варианте)?",
+          "answer": "Ele me ligou."
+        },
+        {
+          "prompt": "Заполните пропуск: Nós ___ (eles) vimos.",
+          "answer": "Nós os vimos."
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-verb-pronouns",
+      "topic": "Reflexive verb pronouns",
+      "title": "Местоимения возвратных глаголов в португальском",
+      "explanation": "В португальском языке возвратные глаголы требуют специальных местоимений (me, te, se, nos, vos), которые обычно ставятся перед глаголом в утвердительных предложениях. Русские часто ошибочно опускают эти местоимения или ставят их после глагола. Запомните: без местоимения возвратный смысл теряется.",
+      "examples": [
+        {
+          "wrong": "Eu levanto cedo.",
+          "right": "Eu me levanto cedo.",
+          "note": "Глагол 'levantar-se' (вставать) всегда требует 'me' для первого лица."
+        },
+        {
+          "wrong": "Ele chama João.",
+          "right": "Ele se chama João.",
+          "note": "Глагол 'chamar-se' (зваться) обязательно использует 'se'."
+        },
+        {
+          "wrong": "Nós vestimos rápido.",
+          "right": "Nós nos vestimos rápido.",
+          "note": "Глагол 'vestir-se' (одеваться) требует 'nos' для первого лица множественного числа."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите правильную форму: 'Я просыпаюсь в 7 утра.'",
+          "answer": "Eu me acordo às 7 da manhã."
+        },
+        {
+          "prompt": "Исправьте предложение: 'Eles sentam na cadeira.' (они садятся)",
+          "answer": "Eles se sentam na cadeira."
+        },
+        {
+          "prompt": "Переведите: 'Мы называемся Мария и Жуан.'",
+          "answer": "Nós nos chamamos Maria e João."
+        }
+      ]
+    },
+    {
+      "rule_id": "false-cognates-false-friends",
+      "topic": "False cognates (false friends)",
+      "title": "Ложные друзья переводчика (False Cognates)",
+      "explanation": "Ложные друзья переводчика — это слова, которые звучат похоже в русском и португальском, но имеют разные значения. Например, португальское 'tio' означает 'дядя', а не 'тётя' (правильно 'tia'). Важно запомнить такие пары, чтобы избежать недоразумений.",
+      "examples": [
+        {
+          "wrong": "Meu tio é minha mãe.",
+          "right": "Minha tia é minha mãe.",
+          "note": "Слово 'tio' в португальском — 'дядя', а 'tia' — 'тётя'. Не путайте с русским 'тётя'."
+        },
+        {
+          "wrong": "O balcão do prédio tem uma bela vista.",
+          "right": "A sacada do prédio tem uma bela vista.",
+          "note": "Португальское 'balcão' — 'стойка' или 'прилавок', а не 'балкон'. Для балкона используйте 'sacada'."
+        },
+        {
+          "wrong": "O céu está sino.",
+          "right": "O céu está azul.",
+          "note": "Португальское 'sino' — 'колокол', а 'синий' по-португальски — 'azul'. Похоже на русское 'синий', но значение другое."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Исправьте ошибку в предложении: 'O céu está sino.'",
+          "answer": "O céu está azul."
+        },
+        {
+          "prompt": "Исправьте ошибку в предложении: 'Meu tio é minha avó.'",
+          "answer": "Minha tia é minha avó."
+        },
+        {
+          "prompt": "Исправьте ошибку в предложении: 'O balcão do apartamento é grande e tem vista para o mar.'",
+          "answer": "A sacada do apartamento é grande e tem vista para o mar."
+        }
+      ]
+    },
+    {
+      "rule_id": "subjunctive-mood-usage",
+      "topic": "Subjunctive mood usage",
+      "title": "Использование сослагательного наклонения (Subjuntivo) в португальском",
+      "explanation": "В португальском после выражений сомнения, желания, необходимости (например, espero que, talvez, é importante que) используется сослагательное наклонение (subjuntivo), а не изъявительное (indicativo). В русском языке такого строгого правила нет, поэтому часто делают ошибку, ставя глагол в индикатив. Запомните: после que в таких конструкциях — subjuntivo.",
+      "examples": [
+        {
+          "wrong": "Espero que ele vem.",
+          "right": "Espero que ele venha.",
+          "note": "После 'espero que' всегда subjuntivo, даже если действие кажется реальным."
+        },
+        {
+          "wrong": "Talvez ele está em casa.",
+          "right": "Talvez ele esteja em casa.",
+          "note": "Слово 'talvez' (возможно) требует subjuntivo, хотя в русском мы используем изъявительное наклонение."
+        },
+        {
+          "wrong": "É importante que você estuda.",
+          "right": "É importante que você estude.",
+          "note": "После выражений 'é importante que', 'é necessário que' всегда subjuntivo."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Заполните пропуск правильной формой глагола: 'Duvido que ele ______ (saber) a resposta.'",
+          "answer": "saiba"
+        },
+        {
+          "prompt": "Исправьте ошибку в предложении: 'É possível que ela chega tarde.'",
+          "answer": "É possível que ela chegue tarde."
+        },
+        {
+          "prompt": "Заполните пропуск: 'Peço que você ______ (fazer) isso agora.'",
+          "answer": "faça"
+        }
+      ]
+    },
+    {
+      "rule_id": "imperative-mood-commands",
+      "topic": "Imperative mood commands",
+      "title": "Повелительное наклонение: tu (ты) и você (Вы)",
+      "explanation": "В португальском языке повелительное наклонение (команды) имеет разные формы для неформального обращения на 'ты' (tu) и формального на 'Вы' (você). Частая ошибка — использовать инфинитив вместо повелительной формы или путать формы tu и você. Запомните: для tu часто используется форма третьего лица единственного числа настоящего времени, а для você — форма сослагательного наклонения. В отрицательной форме для обоих лиц используется сослагательное наклонение.",
+      "examples": [
+        {
+          "wrong": "Falar comigo!",
+          "right": "Fala comigo!",
+          "note": "Ошибка: использован инфинитив. Для команды на 'ты' (tu) нужно использовать форму настоящего времени 'fala'."
+        },
+        {
+          "wrong": "Fala mais devagar!",
+          "right": "Fale mais devagar!",
+          "note": "Ошибка: форма tu (fala) использована для вежливого обращения. Для você нужно 'fale' (сослагательное наклонение)."
+        },
+        {
+          "wrong": "Não fala!",
+          "right": "Não fales!",
+          "note": "Ошибка: в отрицательной команде на 'ты' нужно сослагательное наклонение 'fales', а не изъявительное 'fala'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Как сказать «Говори!» (неформально, ты)?",
+          "answer": "Fala!"
+        },
+        {
+          "prompt": "Как сказать «Не говори!» (формально, você)?",
+          "answer": "Não fale!"
+        },
+        {
+          "prompt": "Заполните пропуск: «___ (comer, você) mais devagar!»",
+          "answer": "Coma"
+        }
+      ]
+    },
+    {
+      "rule_id": "prepositionarticle-contractions",
+      "topic": "Preposition+article contractions",
+      "title": "Слияние предлогов с артиклями в португальском языке",
+      "explanation": "В португальском языке некоторые предлоги (de, em, a, por) сливаются с определёнными артиклями (o, a, os, as) в одно слово. Например, 'de + o = do', 'em + a = na'. Русскоязычные учащиеся часто ошибочно пишут их раздельно (например, 'de o' вместо 'do'). Это важное правило, которое нужно запомнить.",
+      "examples": [
+        {
+          "wrong": "Ele é de o Brasil.",
+          "right": "Ele é do Brasil.",
+          "note": "'De o' не существует — пишем 'do'."
+        },
+        {
+          "wrong": "Eu moro em a cidade.",
+          "right": "Eu moro na cidade.",
+          "note": "'Em a' сливается в 'na'."
+        },
+        {
+          "wrong": "Vou a o mercado.",
+          "right": "Vou ao mercado.",
+          "note": "'A o' превращается в 'ao'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Заполните правильную форму: 'Ele veio ___ (de + o) carro.'",
+          "answer": "do"
+        },
+        {
+          "prompt": "Заполните: 'Ela está ___ (em + a) escola.'",
+          "answer": "na"
+        },
+        {
+          "prompt": "Заполните: 'Fui ___ (a + o) cinema.'",
+          "answer": "ao"
+        }
+      ]
+    },
+    {
+      "rule_id": "open-vs-closed-vowel-distinction",
+      "topic": "Open vs closed vowel distinction",
+      "title": "Открытые и закрытые гласные: различие между é/ó и ê/ô",
+      "explanation": "В португальском языке открытые (é, ó) и закрытые (ê, ô) гласные различают смысл слов. Например, 'avô' (дедушка) — закрытое ô, а 'avó' (бабушка) — открытое ó. Носители русского языка часто путают эти звуки, что ведёт к ошибкам в понимании.",
+      "examples": [
+        {
+          "wrong": "Meu avó é idoso.",
+          "right": "Meu avô é idoso.",
+          "note": "Ошибка: использовано открытое ó вместо закрытого ô. 'Avô' — дедушка (закрытое), 'avó' — бабушка (открытое)."
+        },
+        {
+          "wrong": "Ele pode ir ontem.",
+          "right": "Ele pôde ir ontem.",
+          "note": "Ошибка: 'pode' (настоящее время, открытое ó) использовано вместо 'pôde' (прошедшее время, закрытое ô)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте пропущенную букву (с акцентом или без): 'Моя бабушка' — 'minha av_'.",
+          "answer": "avó"
+        },
+        {
+          "prompt": "Заполните пропуск: 'Он смог прийти вчера' — 'Ele ____ vir ontem.'",
+          "answer": "pôde"
+        },
+        {
+          "prompt": "Какое слово обозначает 'жажда' и произносится с открытым e? Напишите его:",
+          "answer": "sede"
+        }
+      ]
+    },
+    {
+      "rule_id": "impersonal-se-constructions",
+      "topic": "Impersonal 'se' constructions",
+      "title": "Безличные конструкции с частицей 'se' в португальском языке",
+      "explanation": "В португальском языке безличная частица 'se' используется для обозначения действий без конкретного субъекта. Глагол всегда стоит в единственном числе третьего лица, независимо от объекта. Частая ошибка — использование глагола во множественном числе. Например: 'Fala-se português' (правильно), а не 'Falam-se português'.",
+      "examples": [
+        {
+          "wrong": "Falam-se inglês aqui.",
+          "right": "Fala-se inglês aqui.",
+          "note": "Глагол должен быть в единственном числе, даже если речь идёт об одном языке."
+        },
+        {
+          "wrong": "Vendem-se casa.",
+          "right": "Vende-se casa.",
+          "note": "В безличной конструкции 'se' глагол не согласуется с объектом."
+        },
+        {
+          "wrong": "Precisam-se de funcionários.",
+          "right": "Precisa-se de funcionários.",
+          "note": "Глагол 'precisar' требует предлога 'de', но 'se' остаётся безличным, поэтому глагол в единственном числе."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на португальский: 'Здесь говорят по-французски' (используя безличное se).",
+          "answer": "Fala-se francês aqui."
+        },
+        {
+          "prompt": "Исправьте ошибку: 'Falam-se português no Brasil.'",
+          "answer": "Fala-se português no Brasil."
+        },
+        {
+          "prompt": "Заполните пропуск: '___ (precisar) de voluntários.' (используйте безличное se).",
+          "answer": "Precisa-se de voluntários."
+        }
+      ]
+    },
+    {
+      "rule_id": "word-order-in-questions",
+      "topic": "Word order in questions",
+      "title": "Порядок слов в вопросах в португальском языке",
+      "explanation": "В португальском языке вопросительные слова (onde, como, quem и т.д.) обычно ставятся в начало предложения. Для вопросов без вопросительного слова порядок слов часто такой же, как в утверждении, но с вопросительной интонацией (например, 'Você gosta?'). Основная ошибка русскоговорящих — ставить вопросительное слово в конец, как в русском.",
+      "examples": [
+        {
+          "wrong": "Você vai onde?",
+          "right": "Onde você vai?",
+          "note": "В русском 'Ты идешь куда?' — вопросительное слово в конце. В португальском оно должно быть в начале."
+        },
+        {
+          "wrong": "Isso é o quê?",
+          "right": "O que é isso?",
+          "note": "Вопросительное слово 'o que' стоит в начале, а не в конце."
+        },
+        {
+          "wrong": "Ela foi com quem?",
+          "right": "Com quem ela foi?",
+          "note": "Предлог ставится перед вопросительным словом в начале."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на португальский: 'Куда ты идешь?'",
+          "answer": "Onde você vai?"
+        },
+        {
+          "prompt": "Переведите: 'Что это?' (используя o que)",
+          "answer": "O que é isso?"
+        },
+        {
+          "prompt": "Спросите по-португальски: 'С кем она разговаривает?'",
+          "answer": "Com quem ela fala?"
+        }
+      ]
+    },
+    {
+      "rule_id": "já-vs-ainda-alreadystill",
+      "topic": "Já vs ainda (already/still)",
+      "title": "Já vs ainda: разница между «уже» и «всё еще»",
+      "explanation": "В португальском языке «já» означает «уже» (действие завершено или произошло раньше), а «ainda» — «всё еще» (действие продолжается или еще не произошло). Путаница возникает, когда русские студенты используют «já» в отрицательных предложениях вместо «ainda» или наоборот. Запомните: «já» = уже (свершилось), «ainda» = еще (не свершилось или продолжается).",
+      "examples": [
+        {
+          "wrong": "Eu já não terminei o trabalho.",
+          "right": "Eu ainda não terminei o trabalho.",
+          "note": "В русском «ещё не» — используем «ainda não», а не «já não»."
+        },
+        {
+          "wrong": "Você ainda chegou?",
+          "right": "Você já chegou?",
+          "note": "В вопросе о свершившемся факте (ты уже пришёл?) нужно «já», а не «ainda»."
+        },
+        {
+          "wrong": "Ele já está dormindo? — Sim, já.",
+          "right": "Ele já está dormindo? — Sim, já.",
+          "note": "Этот пример верный, но часто путают с «ainda»: «Ainda está dormindo?» (всё ещё спит?) — разные смыслы."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на португальский: «Я ещё не поел». (используйте нужное слово)",
+          "answer": "Eu ainda não comi."
+        },
+        {
+          "prompt": "Переведите на португальский: «Ты уже купил билеты?»",
+          "answer": "Você já comprou os ingressos?"
+        },
+        {
+          "prompt": "Завершите предложение: Ele ___ está no trabalho? (Он всё ещё на работе?)",
+          "answer": "ainda"
+        }
+      ]
+    },
+    {
+      "rule_id": "ter-vs-haver-haveexist",
+      "topic": "Ter vs haver (have/exist)",
+      "title": "Разница между ter и haver",
+      "explanation": "В португальском языке глагол 'ter' означает 'иметь' и используется для обладания. Глагол 'haver' в безличной форме означает 'существовать, иметься' (аналог русского 'есть/имеется'). Не путайте их: в значении 'где-то есть что-то' используйте 'haver', а не 'ter'.",
+      "examples": [
+        {
+          "wrong": "Tem muitos livros na mesa.",
+          "right": "Há muitos livros na mesa.",
+          "note": "Здесь говорится о существовании книг на столе, поэтому нужно 'haver'."
+        },
+        {
+          "wrong": "Eu há um carro.",
+          "right": "Eu tenho um carro.",
+          "note": "Здесь речь об обладании ('у меня есть машина'), поэтому 'ter'."
+        },
+        {
+          "wrong": "Tem um problema.",
+          "right": "Há um problema.",
+          "note": "В значении 'существует проблема' нужно 'haver'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильную форму: ___ muitos alunos na sala.",
+          "answer": "Há"
+        },
+        {
+          "prompt": "Вставьте правильную форму: Eu ___ dois irmãos.",
+          "answer": "tenho"
+        },
+        {
+          "prompt": "Вставьте правильную форму: Não ___ nada para fazer.",
+          "answer": "há"
+        }
+      ]
+    },
+    {
+      "rule_id": "muito-as-adjective-vs-adverb",
+      "topic": "Muito as adjective vs adverb",
+      "title": "Muito: прилагательное или наречие?",
+      "explanation": "В португальском слово 'muito' может быть как прилагательным (согласуется с существительным в роде и числе), так и наречием (неизменяемо, стоит перед прилагательным или глаголом). Ошибка: русскоязычные часто используют форму 'muita' перед прилагательным мужского рода (например, 'muita bom') – это неправильно, так как перед прилагательным нужна неизменяемая форма 'muito'.",
+      "examples": [
+        {
+          "wrong": "Ela é muita bonita.",
+          "right": "Ela é muito bonita.",
+          "note": "Перед прилагательным 'bonita' нужно наречие 'muito' (неизменяемое), а не прилагательное 'muita'."
+        },
+        {
+          "wrong": "Tem muitas pessoas muito simpáticas.",
+          "right": "Tem muitas pessoas muito simpáticas.",
+          "note": "Здесь 'muitas' – прилагательное (согласуется с 'pessoas'), а 'muito' – наречие (перед прилагательным 'simpáticas'). Оба слова в одном предложении корректны."
+        },
+        {
+          "wrong": "Ele trabalha muito duro.",
+          "right": "Ele trabalha muito duro.",
+          "note": "Этот пример верный: 'muito' – наречие, усиливающее значение 'duro' (тяжело). Ошибки нет, но показано правильное употребление."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Заполните пропуск: Этот фильм ______ interessante. (очень интересный)",
+          "answer": "muito"
+        },
+        {
+          "prompt": "Исправьте ошибку: Nós temos muita amigos.",
+          "answer": "Nós temos muitos amigos."
+        },
+        {
+          "prompt": "Выберите правильную форму: Ela canta ______ bem. (muito / muita)",
+          "answer": "muito"
+        }
+      ]
+    },
+    {
+      "rule_id": "diminutives-and-augmentatives",
+      "topic": "Diminutives and augmentatives",
+      "title": "Уменьшительные и увеличительные суффиксы в португальском",
+      "explanation": "В португальском языке уменьшительные формы обычно образуются с помощью суффиксов -inho/-inha, а увеличительные — с помощью -ão/-ona. Важно помнить, что при добавлении суффикса может меняться ударение и написание (например, café → cafezinho). Не используйте прилагательные 'pequeno' или 'grande' для образования таких форм — это частая ошибка русскоговорящих.",
+      "examples": [
+        {
+          "wrong": "cafézinho",
+          "right": "cafezinho",
+          "note": "При добавлении суффикса -inho ударение смещается, поэтому графический акцент на 'e' исчезает."
+        },
+        {
+          "wrong": "casa grande",
+          "right": "casarão",
+          "note": "Увеличительная форма 'casa' образуется суффиксом -ão, а не прилагательным 'grande'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите уменьшительную форму слова 'café' (маленький кофе).",
+          "answer": "cafezinho"
+        },
+        {
+          "prompt": "Напишите увеличительную форму слова 'casa' (большой дом).",
+          "answer": "casarão"
+        },
+        {
+          "prompt": "Исправьте ошибку: 'cafézinho' (напишите правильный вариант).",
+          "answer": "cafezinho"
+        }
+      ]
+    },
+    {
+      "rule_id": "obrigado-vs-obrigada-gender",
+      "topic": "Obrigado vs obrigada gender",
+      "title": "Ошибка: obrigado vs obrigada (род)",
+      "explanation": "Слова obrigado и obrigada согласуются с родом говорящего, а не с тем, кого благодарят. Мужчины говорят obrigado, женщины — obrigada. Эта ошибка часто встречается у русскоговорящих, так как в русском языке слово «спасибо» не меняется по родам.",
+      "examples": [
+        {
+          "wrong": "Eu, como homem, digo obrigada.",
+          "right": "Eu, como homem, digo obrigado.",
+          "note": "Говорящий — мужчина, поэтому нужно использовать мужскую форму."
+        },
+        {
+          "wrong": "Ela disse obrigado.",
+          "right": "Ela disse obrigada.",
+          "note": "Говорящий — женщина (ela), поэтому форма женская."
+        },
+        {
+          "wrong": "Obrigado pela ajuda, Maria.",
+          "right": "Obrigada pela ajuda, Maria.",
+          "note": "Если говорит женщина, даже обращаясь к мужчине, она использует obrigada."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Как скажет мужчина, благодаря за помощь? (Напишите правильное слово в начале фразы.)",
+          "answer": "Obrigado pela ajuda."
+        },
+        {
+          "prompt": "Как скажет женщина, говоря спасибо другу? (Напишите полную фразу с обращением.)",
+          "answer": "Obrigada, amigo."
+        },
+        {
+          "prompt": "Если мужчина говорит «спасибо большущее» — как будет по-португальски?",
+          "answer": "Muito obrigado."
+        }
+      ]
+    },
+    {
+      "rule_id": "object-pronoun-placement",
+      "topic": "Object pronoun placement",
+      "title": "Место объектных местоимений в португальском языке",
+      "explanation": "В португальском языке объектные местоимения (me, te, o, a, lhe, nos, vos, os, as, lhes) обычно ставятся перед глаголом, а не после, как в русском. Например, 'я тебя вижу' переводится как 'Eu te vejo', а не 'Eu vejo te'. Запомните: в утвердительных предложениях местоимение идёт перед глаголом.",
+      "examples": [
+        {
+          "wrong": "Eu vejo te",
+          "right": "Eu te vejo",
+          "note": "Местоимение 'te' должно стоять перед глаголом 'vejo'."
+        },
+        {
+          "wrong": "Ela chama me",
+          "right": "Ela me chama",
+          "note": "Местоимение 'me' ставится перед глаголом 'chama'."
+        },
+        {
+          "wrong": "Nós convidamos vos",
+          "right": "Nós vos convidamos",
+          "note": "Местоимение 'vos' должно быть перед глаголом 'convidamos'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на португальский: 'Я тебя люблю' (используя правильный порядок слов).",
+          "answer": "Eu te amo"
+        },
+        {
+          "prompt": "Исправьте ошибку: 'Ela vê o' (она его видит).",
+          "answer": "Ela o vê"
+        },
+        {
+          "prompt": "Напишите предложение 'Она меня зовет' по-португальски.",
+          "answer": "Ela me chama"
+        }
+      ]
+    }
+  ]
+}

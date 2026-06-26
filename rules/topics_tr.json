@@ -1,0 +1,105 @@
+{
+  "learning": "tr",
+  "topics": [
+    {
+      "rule_id": "ekler",
+      "title": "Ekler"
+    },
+    {
+      "rule_id": "zamanlar",
+      "title": "Zamanlar"
+    },
+    {
+      "rule_id": "edatlar",
+      "title": "Edatlar"
+    },
+    {
+      "rule_id": "çekim",
+      "title": "Çekim"
+    },
+    {
+      "rule_id": "ünlü-uyumu",
+      "title": "Ünlü uyumu"
+    },
+    {
+      "rule_id": "vurgu",
+      "title": "Vurgu"
+    },
+    {
+      "rule_id": "tonlama",
+      "title": "Tonlama"
+    },
+    {
+      "rule_id": "sov-word-order",
+      "title": "SOV word order"
+    },
+    {
+      "rule_id": "evidential-past-tense",
+      "title": "Evidential past tense"
+    },
+    {
+      "rule_id": "accusative-case-marking",
+      "title": "Accusative case marking"
+    },
+    {
+      "rule_id": "plural-after-numbers",
+      "title": "Plural after numbers"
+    },
+    {
+      "rule_id": "possessive-pronoun-overuse",
+      "title": "Possessive pronoun overuse"
+    },
+    {
+      "rule_id": "genitive-possessive-construction",
+      "title": "Genitive-possessive construction"
+    },
+    {
+      "rule_id": "varyok-with-possession",
+      "title": "Var/yok with possession"
+    },
+    {
+      "rule_id": "causative-verb-forms",
+      "title": "Causative verb forms"
+    },
+    {
+      "rule_id": "passive-voice-usage",
+      "title": "Passive voice usage"
+    },
+    {
+      "rule_id": "negation-with-değil-vs-ma",
+      "title": "Negation with değil vs -ma"
+    },
+    {
+      "rule_id": "dativelocativeablative-cases",
+      "title": "Dative/locative/ablative cases"
+    },
+    {
+      "rule_id": "ile-vs-ve-conjunction",
+      "title": "Ile vs ve conjunction"
+    },
+    {
+      "rule_id": "relative-clause-formation",
+      "title": "Relative clause formation"
+    },
+    {
+      "rule_id": "compound-verbs-with-etmekolmak",
+      "title": "Compound verbs with etmek/olmak"
+    },
+    {
+      "rule_id": "subject-pronoun-dropping",
+      "title": "Subject pronoun dropping"
+    },
+    {
+      "rule_id": "question-suffix-placement",
+      "title": "Question suffix placement"
+    },
+    {
+      "rule_id": "numbers-and-counters",
+      "title": "Numbers and counters"
+    },
+    {
+      "rule_id": "deda-particle-vs-locative",
+      "title": "De/da particle vs locative"
+    }
+  ]
+}

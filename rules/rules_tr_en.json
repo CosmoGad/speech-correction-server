@@ -1,0 +1,869 @@
+{
+  "learning": "tr",
+  "interface": "en",
+  "generated_at": "2026-06-26T12:45:33.981876+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "ekler",
+      "topic": "Ekler",
+      "title": "Locative Suffix: -de / -da / -te / -ta",
+      "explanation": "The locative suffix shows location (at, in, on). It follows vowel harmony: use -de after front vowels (e, i, ö, ü) and -da after back vowels (a, ı, o, u). Also, after voiceless consonants (p, ç, t, k, ş, s, h, f), the suffix starts with -t instead of -d (te/ta). A common mistake is forgetting to change d to t or applying wrong vowel harmony.",
+      "examples": [
+        {
+          "wrong": "kitapda",
+          "right": "kitapta",
+          "note": "Because 'p' is voiceless, the suffix becomes -ta, not -da."
+        },
+        {
+          "wrong": "okulde",
+          "right": "okulda",
+          "note": "Vowel harmony: 'u' is a back vowel, so suffix must be -da, not -de."
+        },
+        {
+          "wrong": "işde",
+          "right": "işte",
+          "note": "'ş' is voiceless, so suffix becomes -te."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the correct Turkish form of 'kitap' with the locative suffix (in the book).",
+          "answer": "kitapta"
+        },
+        {
+          "prompt": "Write the correct Turkish form of 'okul' with the locative suffix (at school).",
+          "answer": "okulda"
+        },
+        {
+          "prompt": "Write the correct Turkish form of 'iş' with the locative suffix (at work).",
+          "answer": "işte"
+        }
+      ]
+    },
+    {
+      "rule_id": "zamanlar",
+      "topic": "Zamanlar",
+      "title": "Present Continuous vs. Present Simple (Şimdiki Zaman vs. Geniş Zaman)",
+      "explanation": "In Turkish, use the present continuous tense (-iyor) for actions happening right now or around the moment of speaking. Use the present simple tense (-r, -ar, -er) for habitual actions, routines, and general truths. A common mistake is mixing these: using the present simple for ongoing actions or the present continuous for habits.",
+      "examples": [
+        {
+          "wrong": "Şu anda kahve içerim.",
+          "right": "Şu anda kahve içiyorum.",
+          "note": "Use present continuous for actions in progress at the moment of speaking."
+        },
+        {
+          "wrong": "Her sabah koşuyorum.",
+          "right": "Her sabah koşarım.",
+          "note": "Use present simple for daily routines and habits."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate into Turkish: 'I am reading a book now.'",
+          "answer": "Şu anda kitap okuyorum."
+        },
+        {
+          "prompt": "Translate into Turkish: 'I drink tea every morning.'",
+          "answer": "Her sabah çay içerim."
+        }
+      ]
+    },
+    {
+      "rule_id": "edatlar",
+      "topic": "Edatlar",
+      "title": "Using 'için' with Pronouns",
+      "explanation": "In Turkish, the postposition 'için' (for) requires the preceding noun or pronoun to be in the genitive case. For personal pronouns, you must use the genitive forms: benim, senin, onun, bizim, sizin, onların. Using the nominative (ben, sen, etc.) is a common mistake made by English speakers.",
+      "examples": [
+        {
+          "wrong": "Ben için çalışıyorum.",
+          "right": "Benim için çalışıyorum.",
+          "note": "Personal pronouns require genitive case before 'için'."
+        },
+        {
+          "wrong": "Sen için aldım.",
+          "right": "Senin için aldım.",
+          "note": "Same rule applies for 'sen'."
+        },
+        {
+          "wrong": "O için yaptım.",
+          "right": "Onun için yaptım.",
+          "note": "'O' becomes 'onun' before 'için'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank: _____ (I) için kitap aldı.",
+          "answer": "Benim"
+        },
+        {
+          "prompt": "Fill in the blank: _____ (you - informal) için yemek yaptım.",
+          "answer": "Senin"
+        },
+        {
+          "prompt": "Fill in the blank: _____ (he/she) için geldi.",
+          "answer": "Onun"
+        }
+      ]
+    },
+    {
+      "rule_id": "çekim",
+      "topic": "Çekim",
+      "title": "Possessive Suffixes (İyelik Ekleri) in Turkish",
+      "explanation": "In Turkish, when you say 'my,' 'your,' or 'his/her,' you must add a possessive suffix to the noun. A common mistake is to forget this suffix and just use the pronoun alone. The suffix changes based on the person (ben, sen, o) and vowel harmony.",
+      "examples": [
+        {
+          "wrong": "Benim araba",
+          "right": "Benim arabam",
+          "note": "The suffix -m (with vowel harmony) is added to 'araba' for 'my car'."
+        },
+        {
+          "wrong": "Senin ev",
+          "right": "Senin evin",
+          "note": "For 'your house,' add -in to 'ev' (because ev ends in a consonant, use -in)."
+        },
+        {
+          "wrong": "Onun kitap",
+          "right": "Onun kitabı",
+          "note": "For 'his/her book,' use -ı (and note the consonant mutation: p becomes b)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write 'my school' in Turkish.",
+          "answer": "Benim okulum"
+        },
+        {
+          "prompt": "Write 'your pencil' in Turkish (singular informal).",
+          "answer": "Senin kalemin"
+        },
+        {
+          "prompt": "Write 'his/her garden' in Turkish.",
+          "answer": "Onun bahçesi"
+        }
+      ]
+    },
+    {
+      "rule_id": "ünlü-uyumu",
+      "topic": "Ünlü uyumu",
+      "title": "Vowel Harmony (Ünlü Uyumu)",
+      "explanation": "Turkish vowel harmony means that vowels in suffixes must match the last vowel of the root word based on two features: front/back (e, i, ö, ü vs. a, ı, o, u) and rounded/unrounded. For beginners, focus on the major rule: if the last vowel is a back vowel (a, ı, o, u), the suffix vowel must also be back; if it is a front vowel (e, i, ö, ü), the suffix vowel must be front. This applies to common suffixes like plural -ler/-lar, locative -de/-da, and ablative -den/-dan.",
+      "examples": [
+        {
+          "wrong": "kitapler",
+          "right": "kitaplar",
+          "note": "Kitap has back vowel 'a', so the plural suffix must be -lar, not -ler."
+        },
+        {
+          "wrong": "evda",
+          "right": "evde",
+          "note": "Ev has front vowel 'e', so the locative suffix must be -de, not -da."
+        },
+        {
+          "wrong": "okulde",
+          "right": "okulda",
+          "note": "Okul has back vowel 'u', so the locative suffix must be -da, not -de."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Make the plural of 'kitap' (book).",
+          "answer": "kitaplar"
+        },
+        {
+          "prompt": "Make the locative of 'okul' (school).",
+          "answer": "okulda"
+        },
+        {
+          "prompt": "Make the ablative of 'ev' (house).",
+          "answer": "evden"
+        }
+      ]
+    },
+    {
+      "rule_id": "vurgu",
+      "topic": "Vurgu",
+      "title": "Common Turkish Stress (Vurgu) Mistake",
+      "explanation": "In Turkish, the stress (vurgu) typically falls on the last syllable of a word. English speakers often mistakenly stress the first syllable, which can make the word sound unnatural. Remembering to stress the final syllable will improve your pronunciation.",
+      "examples": [
+        {
+          "wrong": "Kİtap",
+          "right": "kiTAP",
+          "note": "The word 'kitap' (book) should be stressed on the last syllable 'tap'."
+        },
+        {
+          "wrong": "Okul",
+          "right": "oKUL",
+          "note": "The word 'okul' (school) should be stressed on the last syllable 'kul'."
+        },
+        {
+          "wrong": "GÜzel",
+          "right": "güZEL",
+          "note": "The word 'güzel' (beautiful) should be stressed on the last syllable 'zel'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How would you correctly pronounce 'elma' (apple) in terms of stress?",
+          "answer": "elMA"
+        },
+        {
+          "prompt": "What is the correct stress for 'araba' (car)?",
+          "answer": "araBA"
+        },
+        {
+          "prompt": "Correct the stress: 'PEncere' (window) – wrong stress on first syllable.",
+          "answer": "pencerE"
+        }
+      ]
+    },
+    {
+      "rule_id": "tonlama",
+      "topic": "Tonlama",
+      "title": "Turkish Intonation (Tonlama) in Questions",
+      "explanation": "In Turkish, intonation patterns differ from English for questions. Yes/no questions require the suffix -mi (with vowel harmony) and a rising tone on the suffix. Wh-questions (using words like ne, nerede, kim) use a falling or steady tone at the end, similar to statements. Using English rising intonation on all questions can make your speech sound unnatural.",
+      "examples": [
+        {
+          "wrong": "Sen öğrenci? (with rising tone)",
+          "right": "Sen öğrenci misin? (rising on -misin)",
+          "note": "Always use the question suffix -mi for yes/no questions; intonation alone is not enough."
+        },
+        {
+          "wrong": "Nereye gidiyorsun? (with rising ending)",
+          "right": "Nereye gidiyorsun? (with falling ending)",
+          "note": "Wh-questions keep a flat or falling intonation, not rising."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Say 'Is this a pen?' in Turkish with correct question suffix and intonation.",
+          "answer": "Bu bir kalem mi?"
+        },
+        {
+          "prompt": "Say 'Where do you live?' in Turkish with correct intonation.",
+          "answer": "Nerede yaşıyorsun?"
+        },
+        {
+          "prompt": "Ask 'Are they coming?' in Turkish.",
+          "answer": "Onlar geliyor mu?"
+        }
+      ]
+    },
+    {
+      "rule_id": "sov-word-order",
+      "topic": "SOV word order",
+      "title": "Turkish Word Order: Subject-Object-Verb (SOV)",
+      "explanation": "In Turkish, the verb always comes at the end of a sentence, unlike English where it follows the subject directly. The correct order is Subject - Object - Verb (SOV). A common mistake English speakers make is placing the verb before the object (SVO), which sounds unnatural in Turkish.",
+      "examples": [
+        {
+          "wrong": "Ben yerim elma.",
+          "right": "Ben elma yerim.",
+          "note": "Wrong: verb 'yerim' placed after subject. Right: object 'elma' comes before verb."
+        },
+        {
+          "wrong": "O okuyor kitap.",
+          "right": "O kitap okuyor.",
+          "note": "Wrong: verb 'okuyor' before object. Right: object 'kitap' before verb."
+        },
+        {
+          "wrong": "Ali içiyor su.",
+          "right": "Ali su içiyor.",
+          "note": "Wrong: verb 'içiyor' before object. Right: object 'su' before verb."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I drink tea.' (Use 'ben' and 'çay')",
+          "answer": "Ben çay içerim."
+        },
+        {
+          "prompt": "Translate: 'She writes a letter.' (Use 'o' and 'mektup')",
+          "answer": "O mektup yazar."
+        },
+        {
+          "prompt": "Translate: 'We watch a movie.' (Use 'biz' and 'film')",
+          "answer": "Biz film izleriz."
+        }
+      ]
+    },
+    {
+      "rule_id": "evidential-past-tense",
+      "topic": "Evidential past tense",
+      "title": "Evidential Past Tense (-miş)",
+      "explanation": "Turkish uses the evidential past tense (-miş) to describe events you didn't witness firsthand—things you heard, inferred, or learned indirectly. English has no such distinction, so learners often mistakenly use the definite past (-di) for all past actions. Remember: if you didn’t see it happen, use -miş.",
+      "examples": [
+        {
+          "wrong": "Ali dün geldi.",
+          "right": "Ali dün gelmiş.",
+          "note": "If you didn't see Ali arrive but heard about it, use -miş, not -di."
+        },
+        {
+          "wrong": "Yemek çok güzel oldu.",
+          "right": "Yemek çok güzel olmuş.",
+          "note": "When you taste the food and infer it was made well, use -miş for the inferred past."
+        },
+        {
+          "wrong": "Ahmet hasta oldu.",
+          "right": "Ahmet hasta olmuş.",
+          "note": "If someone told you Ahmet is sick, use -miş to indicate reported information."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "You see your friend's shoes are wet. Infer that it rained. (use -miş)",
+          "answer": "Yağmur yağmış."
+        },
+        {
+          "prompt": "Your mother tells you that your brother came home. Report this.",
+          "answer": "Kardeşim eve gelmiş."
+        },
+        {
+          "prompt": "You find out that the movie started late (hearsay).",
+          "answer": "Film geç başlamış."
+        }
+      ]
+    },
+    {
+      "rule_id": "accusative-case-marking",
+      "topic": "Accusative case marking",
+      "title": "Accusative Case Marking in Turkish",
+      "explanation": "In Turkish, direct objects that are definite (specific or known) must take the accusative suffix -(y)İ, where İ changes according to vowel harmony (ı, i, u, ü). A common mistake is omitting this suffix when the object is definite, especially in sentences like 'I see the book' instead of 'I see the book' with the suffix. Remember: if the object is a specific person, thing, or includes a possessive or demonstrative, you need accusative.",
+      "examples": [
+        {
+          "wrong": "Kitap okuyorum.",
+          "right": "Kitabı okuyorum.",
+          "note": "'Kitap' (book) is indefinite here; but if you mean a specific book, use accusative 'kitabı'. The example shows the common error of omitting the suffix for a definite object."
+        },
+        {
+          "wrong": "Ali elma yedi.",
+          "right": "Ali elmayı yedi.",
+          "note": "Without accusative, 'elma' could mean 'an apple' (indefinite). With 'elmayı', it's the specific apple."
+        },
+        {
+          "wrong": "Ben araba gördüm.",
+          "right": "Ben arabayı gördüm.",
+          "note": "If you saw a particular car (e.g., your neighbor's car), you need the accusative suffix. Without it, it could mean 'I saw a car' (any car)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'I read the newspaper' into Turkish, using accusative case.",
+          "answer": "Gazeteyi okuyorum."
+        },
+        {
+          "prompt": "Correct this sentence: 'O, kalem alacak.' (He/She will buy the pen.)",
+          "answer": "O, kalemi alacak."
+        },
+        {
+          "prompt": "Fill in the blank with the correct form: 'Ben ______ (araba) sürüyorum.' (I am driving the car.)",
+          "answer": "arabayı"
+        }
+      ]
+    },
+    {
+      "rule_id": "plural-after-numbers",
+      "topic": "Plural after numbers",
+      "title": "Plural After Numbers in Turkish",
+      "explanation": "In Turkish, when you use a number with a noun, the noun must stay in its singular form. You do not add a plural suffix like -ler or -lar. This is different from English, where we say 'five books' with a plural noun. Think of the number as already indicating quantity.",
+      "examples": [
+        {
+          "wrong": "üç elmalar",
+          "right": "üç elma",
+          "note": "Say 'three apples' as 'üç elma', not 'üç elmalar'."
+        },
+        {
+          "wrong": "on öğrenciler",
+          "right": "on öğrenci",
+          "note": "For 'ten students', use the singular 'öğrenci' after the number."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'two cats' in Turkish? Use the singular noun.",
+          "answer": "iki kedi"
+        },
+        {
+          "prompt": "Write 'seven books' correctly in Turkish.",
+          "answer": "yedi kitap"
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-pronoun-overuse",
+      "topic": "Possessive pronoun overuse",
+      "title": "Avoid Overusing Possessive Pronouns",
+      "explanation": "In Turkish, possessive suffixes attached to nouns already indicate ownership. Adding separate possessive pronouns (e.g., benim, senin) before the noun is often redundant and sounds unnatural. Use them only for emphasis, contrast, or clarity, not as a default.",
+      "examples": [
+        {
+          "wrong": "Benim arabam kırmızı.",
+          "right": "Arabam kırmızı.",
+          "note": "The suffix -am in 'arabam' already means 'my car'. Adding 'benim' is unnecessary unless you want to stress 'my car' vs. someone else's."
+        },
+        {
+          "wrong": "Senin kitabın nerede?",
+          "right": "Kitabın nerede?",
+          "note": "'Kitabın' means 'your book'. The pronoun 'senin' is redundant in everyday questions."
+        },
+        {
+          "wrong": "Onun evi büyük.",
+          "right": "Evi büyük.",
+          "note": "'Evi' (his/her house) already contains the ownership. Only add 'onun' if you need to clarify who you mean."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'My pencil is on the table.' without using an extra possessive pronoun.",
+          "answer": "Kalemim masanın üzerinde."
+        },
+        {
+          "prompt": "Correct the mistake: 'Benim annem çok iyi.'",
+          "answer": "Annem çok iyi."
+        },
+        {
+          "prompt": "How would you say 'Your bag is beautiful' in a natural way?",
+          "answer": "Çantan güzel."
+        }
+      ]
+    },
+    {
+      "rule_id": "genitive-possessive-construction",
+      "topic": "Genitive-possessive construction",
+      "title": "Genitive-Possessive Construction",
+      "explanation": "In Turkish, when showing possession, the possessor takes a genitive suffix (-ın/in/un/ün) and the possessed noun takes a possessive suffix ( -(s)ı/i/u/ü, etc.). A common mistake is to add only the genitive suffix and forget the possessive suffix on the owned item.",
+      "examples": [
+        {
+          "wrong": "Ahmet'in araba",
+          "right": "Ahmet'in arabası",
+          "note": "After the genitive possessor, the owned noun must get a possessive suffix."
+        },
+        {
+          "wrong": "Kadının çanta",
+          "right": "Kadının çantası",
+          "note": "The same rule applies: 'woman's bag' needs both suffixes."
+        },
+        {
+          "wrong": "Öğrencinin defter",
+          "right": "Öğrencinin defteri",
+          "note": "Drop the final consonant? No, 'defter' becomes 'defteri' (adding -i)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the correct possessive form: 'My school'",
+          "answer": "Benim okulum"
+        },
+        {
+          "prompt": "Write the correct possessive form: 'Ali's book'",
+          "answer": "Ali'nin kitabı"
+        },
+        {
+          "prompt": "Write the correct possessive form: 'The girl's cat'",
+          "answer": "Kızın kedisi"
+        }
+      ]
+    },
+    {
+      "rule_id": "varyok-with-possession",
+      "topic": "Var/yok with possession",
+      "title": "Var/Yok with Possession: Don't Forget the Suffix!",
+      "explanation": "In Turkish, to express possession using 'var' (there is) or 'yok' (there is not), the possessed noun must carry a possessive suffix that matches the owner. Simply saying 'Benim kitap var' is incorrect because the noun lacks the suffix. Always add the appropriate possessive ending: e.g., 'Benim kitabım var' (I have a book).",
+      "examples": [
+        {
+          "wrong": "Benim araba var.",
+          "right": "Benim arabam var.",
+          "note": "Add the possessive suffix -ım for first person singular (ben)."
+        },
+        {
+          "wrong": "Senin kalem yok.",
+          "right": "Senin kalemin yok.",
+          "note": "Add -in for second person singular (sen)."
+        },
+        {
+          "wrong": "Onun ev var.",
+          "right": "Onun evi var.",
+          "note": "Add -i for third person singular (o)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the mistake: 'Benim araba var.'",
+          "answer": "Benim arabam var."
+        },
+        {
+          "prompt": "Correct the mistake: 'Onun bilgisayar yok.'",
+          "answer": "Onun bilgisayarı yok."
+        }
+      ]
+    },
+    {
+      "rule_id": "causative-verb-forms",
+      "topic": "Causative verb forms",
+      "title": "Causative Verb Forms: Making Someone Do Something",
+      "explanation": "In Turkish, to express that you cause someone else to do an action, you add -dır/-dir/-dur/-dür or -tır/-tir/-tur/-tür to the verb stem. A common mistake is using the simple verb (e.g., 'yapmak') instead of the causative form (e.g., 'yaptırmak') when the subject is not the doer.",
+      "examples": [
+        {
+          "wrong": "Arabayı yıkadım.",
+          "right": "Arabayı yıkattım.",
+          "note": "The first says 'I washed the car' (I did it myself); the second says 'I had the car washed' (someone else did it)."
+        },
+        {
+          "wrong": "Mektubu yazdı.",
+          "right": "Mektubu yazdırdı.",
+          "note": "The wrong version means 'He wrote the letter'; the right version means 'He had the letter written (by someone else).'"
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'I made the children eat' (the children are eating because you caused them)?",
+          "answer": "Çocuklara yemek yedirdim."
+        },
+        {
+          "prompt": "Translate: 'She had the room cleaned (by someone).'",
+          "answer": "Odayı temizletti."
+        }
+      ]
+    },
+    {
+      "rule_id": "passive-voice-usage",
+      "topic": "Passive voice usage",
+      "title": "Turkish Passive Voice: Common Mistakes",
+      "explanation": "In Turkish, passive voice is formed by adding suffixes like -il, -in, or -n to the verb stem. A common mistake is using the wrong suffix, especially with verbs ending in vowels or the letter 'l'. For vowel-ending stems, use -n; for verbs ending in 'l', use -in instead of -il.",
+      "examples": [
+        {
+          "wrong": "Kitap okuldu.",
+          "right": "Kitap okundu.",
+          "note": "'Oku' ends with a vowel, so the passive suffix is -n, not -il."
+        },
+        {
+          "wrong": "Hediye alıldı.",
+          "right": "Hediye alındı.",
+          "note": "Verbs ending in 'l' take the suffix -in, not -il (e.g., al- + -in = alın)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the passive form: 'Mektup yazıldı.' (Is it correct? If not, fix it.)",
+          "answer": "Mektup yazıldı. (Correct as is; no change needed.)"
+        },
+        {
+          "prompt": "Fix the passive mistake: 'Yemek pişirildi.' (The verb 'pişir' ends with 'r'. What should it be?)",
+          "answer": "Yemek pişirildi. (Correct; the suffix -il is used for stems ending in consonants other than 'l'.)"
+        }
+      ]
+    },
+    {
+      "rule_id": "negation-with-değil-vs-ma",
+      "topic": "Negation with değil vs -ma",
+      "title": "Negation with değil vs -ma",
+      "explanation": "Use 'değil' to negate nouns, adjectives, or locations (e.g., 'O bir öğretmen değil' = 'He is not a teacher'). Use the suffix '-ma/-me' to negate verbs (e.g., 'Gelmiyorum' = 'I am not coming'). Do not mix them: 'değil' never attaches to verbs, and '-ma/-me' is only for verbs.",
+      "examples": [
+        {
+          "wrong": "O gelmiyor değil.",
+          "right": "O gelmiyor.",
+          "note": "For verbs, use -ma/-me on the verb itself, not 'değil'."
+        },
+        {
+          "wrong": "Bu kitap güzel değil mi?",
+          "right": "Bu kitap güzel değil.",
+          "note": "'değil' is correct for adjectives; just remove the question form for a statement."
+        },
+        {
+          "wrong": "Ben öğrenci değilim miyim?",
+          "right": "Ben öğrenci değilim.",
+          "note": "For nouns, use 'değil' + personal suffix; avoid adding extra question endings in a statement."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'He is not a doctor.'",
+          "answer": "O bir doktor değil."
+        },
+        {
+          "prompt": "Translate: 'I am not going.'",
+          "answer": "Gitmiyorum."
+        },
+        {
+          "prompt": "Translate: 'This is not big.'",
+          "answer": "Bu büyük değil."
+        }
+      ]
+    },
+    {
+      "rule_id": "dativelocativeablative-cases",
+      "topic": "Dative/locative/ablative cases",
+      "title": "Dative, Locative, and Ablative Cases in Turkish",
+      "explanation": "Turkish uses three location-related cases: dative (-e/-a, meaning 'to' or 'towards'), locative (-de/-da, meaning 'in', 'on', 'at'), and ablative (-den/-dan, meaning 'from' or 'out of'). A common mistake is using the wrong suffix—for example, saying 'evde gidiyorum' (locative) instead of 'eve gidiyorum' (dative) when saying 'I am going home'. Remember: use dative for direction, locative for position, and ablative for origin.",
+      "examples": [
+        {
+          "wrong": "Evde gidiyorum.",
+          "right": "Eve gidiyorum.",
+          "note": "For expressing direction (going to), use dative case -e/-a, not locative -de/-da."
+        },
+        {
+          "wrong": "Kitap masadan duruyor.",
+          "right": "Kitap masada duruyor.",
+          "note": "Use locative case -de/-da to indicate where something is located (on the table), not ablative -den/-dan."
+        },
+        {
+          "wrong": "Okuldan geliyorum.",
+          "right": "Okuldan geliyorum.",
+          "note": "This is actually correct! Ablative is used for coming from somewhere. Just a reminder not to mix with dative/locative."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank with the correct case suffix: 'Ben İstanbul___ yaşıyorum.' (I live in Istanbul.)",
+          "answer": "İstanbul'da"
+        },
+        {
+          "prompt": "Fill in the blank: 'Yarın Ankara___ gideceğiz.' (We will go to Ankara tomorrow.)",
+          "answer": "Ankara'ya"
+        },
+        {
+          "prompt": "Fill in the blank: 'Ali ev___ çıktı.' (Ali left the house.)",
+          "answer": "evden"
+        }
+      ]
+    },
+    {
+      "rule_id": "ile-vs-ve-conjunction",
+      "topic": "Ile vs ve conjunction",
+      "title": "Ile vs Ve: When to Use Which",
+      "explanation": "In Turkish, 've' means 'and' and is used to list separate items or actions. 'ile' (or its suffix form -(y)le) means 'with' and connects two nouns that are together in an action. A common mistake is using 've' where 'ile' is needed to show accompaniment (e.g., 'I went with my friend'). Remember: if the two nouns are doing something together, use 'ile'; if you're just listing them, use 've'.",
+      "examples": [
+        {
+          "wrong": "Ali ve Ayşe geldi.",
+          "right": "Ali, Ayşe'yle geldi.",
+          "note": "If the meaning is 'Ali came together with Ayşe', use 'ile' (attached as -'yle) instead of 've'."
+        },
+        {
+          "wrong": "Ben ve arkadaşım sinemaya gittim.",
+          "right": "Ben arkadaşımla sinemaya gittim.",
+          "note": "When you and someone else do an action together, attach 'ile' to the second noun (arkadaşım + la)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I went to the park with my sister.'",
+          "answer": "Kız kardeşimle parka gittim."
+        },
+        {
+          "prompt": "Fill in the blank with 've' or 'ile' (attached appropriately): 'Ahmet ____ Mehmet okula gitti.' (They went together)",
+          "answer": "Ahmet, Mehmet'le okula gitti."
+        }
+      ]
+    },
+    {
+      "rule_id": "relative-clause-formation",
+      "topic": "Relative clause formation",
+      "title": "Turkish Relative Clauses: Don't Use 'ki'",
+      "explanation": "In Turkish, relative clauses are formed by adding suffixes like -en/-an (for subject) or -dığı/-diği (for object) to the verb, not by using 'ki' or relative pronouns. The clause comes before the noun it modifies.",
+      "examples": [
+        {
+          "wrong": "Adam ki geliyor arkadaşım.",
+          "right": "Gelen adam arkadaşım.",
+          "note": "Subject relative: '-en' on verb. 'The man who is coming is my friend.'"
+        },
+        {
+          "wrong": "Kitap ki okudum çok güzel.",
+          "right": "Okuduğum kitap çok güzel.",
+          "note": "Object relative: '-diğim' on verb. 'The book I read is very beautiful.'"
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: The girl who is dancing.",
+          "answer": "Dans eden kız"
+        },
+        {
+          "prompt": "Translate: The car that we saw.",
+          "answer": "Gördüğümüz araba"
+        },
+        {
+          "prompt": "Translate: The teacher who teaches Turkish.",
+          "answer": "Türkçe öğreten öğretmen"
+        }
+      ]
+    },
+    {
+      "rule_id": "compound-verbs-with-etmekolmak",
+      "topic": "Compound verbs with etmek/olmak",
+      "title": "Compound Verbs with etmek and olmak",
+      "explanation": "In Turkish, many compound verbs are formed by pairing a noun or adjective with the auxiliary verbs 'etmek' (to do/make) or 'olmak' (to become/be). A common mistake is using the wrong auxiliary or writing them as one word. Use 'etmek' with nouns (e.g., yardım etmek) and 'olmak' with adjectives (e.g., mutlu olmak). Always write these two words separately.",
+      "examples": [
+        {
+          "wrong": "Yardımetmek",
+          "right": "Yardım etmek",
+          "note": "Compound verbs with etmek/olmak are always written as two separate words."
+        },
+        {
+          "wrong": "Mutlu etmek",
+          "right": "Mutlu olmak",
+          "note": "Use 'olmak' with adjectives to mean 'to be/become (adjective)'."
+        },
+        {
+          "wrong": "Teşekkür olmak",
+          "right": "Teşekkür etmek",
+          "note": " 'Teşekkür' is a noun, so it takes 'etmek'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'to help' in Turkish?",
+          "answer": "Yardım etmek"
+        },
+        {
+          "prompt": "Which auxiliary verb should be used with the adjective 'mutlu'?",
+          "answer": "olmak"
+        },
+        {
+          "prompt": "Correct the mistake: 'Teşekkür olmak'.",
+          "answer": "Teşekkür etmek"
+        }
+      ]
+    },
+    {
+      "rule_id": "subject-pronoun-dropping",
+      "topic": "Subject pronoun dropping",
+      "title": "Dropping Subject Pronouns in Turkish",
+      "explanation": "In Turkish, the verb ending already tells you who the subject is, so subject pronouns like 'ben' (I), 'sen' (you), 'o' (he/she/it) are usually omitted. Keeping them is not grammatically wrong but sounds unnatural and redundant unless you want to emphasize or contrast the subject. Native speakers only use subject pronouns for clarity or emphasis.",
+      "examples": [
+        {
+          "wrong": "Ben okula gidiyorum.",
+          "right": "Okula gidiyorum.",
+          "note": "The verb ending '-um' already means 'I', so 'ben' is unnecessary."
+        },
+        {
+          "wrong": "Sen çok güzelsin.",
+          "right": "Çok güzelsin.",
+          "note": "The ending '-sin' indicates 'you', so drop 'sen' in everyday speech."
+        },
+        {
+          "wrong": "O kitap okuyor.",
+          "right": "Kitap okuyor.",
+          "note": "'O' is only needed if you’re emphasizing who is reading. Normally the verb ending shows third person."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'I am coming' without using a subject pronoun.",
+          "answer": "Geliyorum."
+        },
+        {
+          "prompt": "Correct this Turkish sentence: 'Ben İstanbul'da yaşıyorum.'",
+          "answer": "İstanbul'da yaşıyorum."
+        },
+        {
+          "prompt": "Translate 'You (singular) are very kind' without a subject pronoun.",
+          "answer": "Çok naziksin."
+        }
+      ]
+    },
+    {
+      "rule_id": "question-suffix-placement",
+      "topic": "Question suffix placement",
+      "title": "Question Suffix Placement in Turkish",
+      "explanation": "In Turkish, the question suffix (-mi, -mı, -mu, -mü) attaches to the word or verb stem being questioned and must be followed by the appropriate personal suffix (if any). A common mistake is placing the suffix at the very end of the sentence or omitting the personal suffix after it.",
+      "examples": [
+        {
+          "wrong": "Sen geliyorsun mu?",
+          "right": "Sen geliyor musun?",
+          "note": "With verbs in the present continuous, the question suffix goes between the tense suffix (-iyor) and the personal ending (-sun)."
+        },
+        {
+          "wrong": "Sen öğrenci mi?",
+          "right": "Sen öğrenci misin?",
+          "note": "When questioning a noun predicate, add the personal suffix after -mi (e.g., -sin, -sınız)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the sentence: 'O kitap okuyor mu?' (intended: 'Is he reading a book?')",
+          "answer": "O kitap okuyor mu? (correct as is – but if you meant 'Is he reading a book?' vs 'Is it a book he is reading?', then note: 'O kitap okuyor mu?' is fine for yes/no question. No change needed. Alternative: provide a different prompt.)"
+        },
+        {
+          "prompt": "Translate: 'Are you a student?'",
+          "answer": "Sen öğrenci misin?"
+        },
+        {
+          "prompt": "Correct: 'Biz geliyoruz mu?'",
+          "answer": "Biz geliyor muyuz?"
+        }
+      ]
+    },
+    {
+      "rule_id": "numbers-and-counters",
+      "topic": "Numbers and counters",
+      "title": "Numbers and Counters in Turkish",
+      "explanation": "In Turkish, after a number, the noun always stays singular—never add the plural suffix (-ler/-lar). You can optionally use the counter 'tane' (meaning 'piece') after the number for emphasis, but the noun still remains singular. For example, 'üç kitap' (three books) is correct, while 'üç kitaplar' is wrong.",
+      "examples": [
+        {
+          "wrong": "beş arabalar",
+          "right": "beş araba",
+          "note": "After the number 'beş' (five), 'araba' stays singular."
+        },
+        {
+          "wrong": "iki elmalar",
+          "right": "iki elma",
+          "note": "No plural suffix after numbers; 'elma' remains singular."
+        },
+        {
+          "wrong": "dört tane çiçekler",
+          "right": "dört tane çiçek",
+          "note": "Even with the counter 'tane', the noun 'çiçek' does not take a plural suffix."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'three books' in Turkish? (without using a counter)",
+          "answer": "üç kitap"
+        },
+        {
+          "prompt": "Correct this Turkish phrase: 'beş masalar'.",
+          "answer": "beş masa"
+        },
+        {
+          "prompt": "Write 'seven apples' in Turkish using the counter 'tane'.",
+          "answer": "yedi tane elma"
+        }
+      ]
+    },
+    {
+      "rule_id": "deda-particle-vs-locative",
+      "topic": "De/da particle vs locative",
+      "title": "De/Da: Suffix or Separate Word?",
+      "explanation": "The locative suffix -de/-da is attached directly to a noun to mean 'in' or 'at' (e.g., okulda = at school). The particle de/da is a separate word meaning 'also' or 'too' (e.g., Ali de = Ali too). A common mistake is writing them together or confusing which one to use. Remember: if you mean 'also', write it as a separate word; if you mean a location, attach it to the noun.",
+      "examples": [
+        {
+          "wrong": "Evdede kitap var.",
+          "right": "Evde de kitap var.",
+          "note": "'Evde' (at home) is the locative; 'de' (also) is written separately."
+        },
+        {
+          "wrong": "Okuldada öğrenci var.",
+          "right": "Okulda da öğrenci var.",
+          "note": "'Okulda' (at school) is the locative; 'da' (also) is a separate particle."
+        },
+        {
+          "wrong": "Arkadaşımdageldi.",
+          "right": "Arkadaşım da geldi.",
+          "note": "'Arkadaşım' (my friend) has no locative; 'da' (also) is a separate word."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the correct Turkish for 'I am also at home.'",
+          "answer": "Ben de evdeyim."
+        },
+        {
+          "prompt": "Combine these two sentences using the particle de/da: 'Ali geldi. Ayşe geldi.'",
+          "answer": "Ali de Ayşe de geldi."
+        },
+        {
+          "prompt": "Translate: 'There is also a book in the room.'",
+          "answer": "Odada da kitap var."
+        }
+      ]
+    }
+  ]
+}

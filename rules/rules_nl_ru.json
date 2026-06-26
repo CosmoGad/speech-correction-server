@@ -1,0 +1,890 @@
+{
+  "learning": "nl",
+  "interface": "ru",
+  "generated_at": "2026-06-26T13:02:21.773947+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "lidwoorden",
+      "topic": "Lidwoorden",
+      "title": "Артикли в нидерландском языке: de, het, een",
+      "explanation": "В нидерландском языке артикли обязательны. Определённый артикль 'de' используется для слов мужского и женского рода, 'het' — для среднего рода. Неопределённый артикль 'een' — для всех родов. Ошибка: русские часто опускают артикли или путают de/het.",
+      "examples": [
+        {
+          "wrong": "Ik zie man.",
+          "right": "Ik zie de man.",
+          "note": "Слово 'man' мужского рода, нужен артикль 'de'."
+        },
+        {
+          "wrong": "Dit is mooi huis.",
+          "right": "Dit is een mooi huis.",
+          "note": "Перед существительным с прилагательным нужен неопределённый артикль 'een'."
+        },
+        {
+          "wrong": "Hij heeft kat.",
+          "right": "Hij heeft de kat.",
+          "note": "Слово 'kat' женского рода (в нидерландском), нужен 'de'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильный артикль: __ hond (собака, de-woord)",
+          "answer": "de"
+        },
+        {
+          "prompt": "Вставьте правильный артикль: __ boek (книга, het-woord)",
+          "answer": "het"
+        },
+        {
+          "prompt": "Вставьте правильный артикль: __ appel (яблоко, de-woord)",
+          "answer": "de"
+        }
+      ]
+    },
+    {
+      "rule_id": "werkwoordstijden",
+      "topic": "Werkwoordstijden",
+      "title": "Использование zijn в перфекте для глаголов движения и состояния",
+      "explanation": "В голландском языке вспомогательный глагол zijn используется в перфекте (voltooid tegenwoordige tijd) для глаголов движения (gaan, komen, fietsen) и изменения состояния (worden, blijven, gebeuren). Русские часто ошибочно используют hebben с такими глаголами, но правильная форма – ik ben gegaan, а не ik heb gegaan.",
+      "examples": [
+        {
+          "wrong": "Ik heb naar school gefietst.",
+          "right": "Ik ben naar school gefietst.",
+          "note": "Fietsen — глагол движения, поэтому требуется zijn."
+        },
+        {
+          "wrong": "Hij heeft thuis gebleven.",
+          "right": "Hij is thuis gebleven.",
+          "note": "Blijven — глагол состояния, тоже требует zijn."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на голландский в перфекте: «Я пошёл в магазин».",
+          "answer": "Ik ben naar de winkel gegaan."
+        },
+        {
+          "prompt": "Исправьте ошибку: «Zij heeft naar het museum geweest».",
+          "answer": "Zij is naar het museum geweest."
+        },
+        {
+          "prompt": "Напишите правильную форму перфекта для предложения: «Hij wordt arts».",
+          "answer": "Hij is arts geworden."
+        }
+      ]
+    },
+    {
+      "rule_id": "voorzetsels",
+      "topic": "Voorzetsels",
+      "title": "Типичная ошибка: предлоги после глаголов",
+      "explanation": "В нидерландском языке многие глаголы требуют определённого предлога, который часто не совпадает с русским. Например, глагол 'wachten' (ждать) требует предлога 'op', а не 'voor', как можно было бы подумать по аналогии с русским 'ждать для' или 'ждать кого-то'. Запомните правильные пары, чтобы избежать ошибок.",
+      "examples": [
+        {
+          "wrong": "Ik wacht voor de bus.",
+          "right": "Ik wacht op de bus.",
+          "note": "Глагол 'wachten' всегда используется с предлогом 'op', а не 'voor'."
+        },
+        {
+          "wrong": "Hij denkt over zijn moeder.",
+          "right": "Hij denkt aan zijn moeder.",
+          "note": "Когда речь идёт о мыслях о ком-то (вспоминать, думать о человеке), используется 'denken aan'. 'Denken over' означает 'размышлять о чём-то'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите: 'Я жду поезд.' (используйте правильный предлог)",
+          "answer": "Ik wacht op de trein."
+        },
+        {
+          "prompt": "Переведите: 'Она думает о своём друге.' (думает о человеке)",
+          "answer": "Zij denkt aan haar vriend."
+        },
+        {
+          "prompt": "Исправьте ошибку: 'Wij wachten voor het antwoord.'",
+          "answer": "Wij wachten op het antwoord."
+        }
+      ]
+    },
+    {
+      "rule_id": "woordvolgorde",
+      "topic": "Woordvolgorde",
+      "title": "Порядок слов в голландском: глагол на втором месте",
+      "explanation": "В главном предложении (hoofdzin) глагол всегда стоит на втором месте. Если вы ставите в начало предложения обстоятельство (время, место), то подлежащее переходит на место после глагола. Это называется инверсия.",
+      "examples": [
+        {
+          "wrong": "Vandaag ik ga naar de markt.",
+          "right": "Vandaag ga ik naar de markt.",
+          "note": "После обстоятельства 'vandaag' глагол 'ga' идёт сразу, затем подлежащее 'ik'."
+        },
+        {
+          "wrong": "Morgen wij hebben een afspraak.",
+          "right": "Morgen hebben wij een afspraak.",
+          "note": "То же правило: глагол 'hebben' ставится на второе место, подлежащее после."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Исправьте порядок слов: 'Gisteren ik heb een boek gekocht.'",
+          "answer": "Gisteren heb ik een boek gekocht."
+        },
+        {
+          "prompt": "Напишите правильно: 'Vanavond we gaan naar de film.'",
+          "answer": "Vanavond gaan we naar de film."
+        }
+      ]
+    },
+    {
+      "rule_id": "uitspraak-van-de-g",
+      "topic": "Uitspraak van de g",
+      "title": "Произношение буквы 'g' в нидерландском",
+      "explanation": "В нидерландском языке буква 'g' произносится как мягкий горловой звук, похожий на русское 'х', но менее резкий. Он образуется в задней части горла, как лёгкое шипение. Не произносите её как твёрдое 'г' (как в русском 'город') или английское 'g'.",
+      "examples": [
+        {
+          "wrong": "goud",
+          "right": "goud",
+          "note": "Произносите 'g' горлом, а не как 'г' в слове 'гора'."
+        },
+        {
+          "wrong": "groen",
+          "right": "groen",
+          "note": "Следите, чтобы 'g' в начале слова была мягкой, без твёрдого призвука."
+        },
+        {
+          "wrong": "geluk",
+          "right": "geluk",
+          "note": "Попрактикуйте звук перед гласной 'e' – он должен быть таким же горловым."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на нидерландский: 'золото'. Напишите слово и произнесите его с правильным 'g'.",
+          "answer": "goud"
+        },
+        {
+          "prompt": "Переведите на нидерландский: 'зелёный'. Обратите внимание на произношение первой буквы.",
+          "answer": "groen"
+        },
+        {
+          "prompt": "Переведите на нидерландский: 'счастье'. Убедитесь, что 'g' звучит мягко и горлово.",
+          "answer": "geluk"
+        }
+      ]
+    },
+    {
+      "rule_id": "klinkers",
+      "topic": "Klinkers",
+      "title": "Гласные в нидерландском: долгие и краткие",
+      "explanation": "В нидерландском языке гласные могут быть краткими и долгими. Краткая гласная обычно стоит в закрытом слоге (заканчивается на согласную), а долгая — если гласная удвоена или стоит в открытом слоге. Русскоязычные часто путают пары слов, различающиеся только долготой гласной.",
+      "examples": [
+        {
+          "wrong": "Hij draagt een peet.",
+          "right": "Hij draagt een pet.",
+          "note": "Ошибка: 'peet' — крестный отец, 'pet' — кепка. Краткая 'e'."
+        },
+        {
+          "wrong": "Ik heb een bot.",
+          "right": "Ik heb een boot.",
+          "note": "Ошибка: 'bot' — кость, 'boot' — лодка. Долгая 'oo'."
+        },
+        {
+          "wrong": "De man is helder.",
+          "right": "De maan is helder.",
+          "note": "Ошибка: 'man' — мужчина, 'maan' — луна. Долгая 'aa'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Как будет по-нидерландски 'луна'?",
+          "answer": "maan"
+        },
+        {
+          "prompt": "Как будет по-нидерландски 'кость'?",
+          "answer": "bot"
+        },
+        {
+          "prompt": "Как будет по-нидерландски 'кепка'?",
+          "answer": "pet"
+        }
+      ]
+    },
+    {
+      "rule_id": "intonatie",
+      "topic": "Intonatie",
+      "title": "Интонация в нидерландском: частые ошибки",
+      "explanation": "В нидерландском языке интонация играет важную роль: в утвердительных предложениях тон понижается к концу, а в вопросах (особенно да/нет) – повышается на последнем слоге. Русскоязычные часто переносят русскую интонацию, что звучит неестественно. Например, не повышайте тон в середине предложения, а только на самом конце вопроса.",
+      "examples": [
+        {
+          "wrong": "Hij komt morgen?",
+          "right": "Hij komt morgen.",
+          "note": "В утверждении тон должен падать, а не подниматься. Вопросительный знак здесь ошибочен — это не вопрос."
+        },
+        {
+          "wrong": "Kom jij morgen.",
+          "right": "Kom jij morgen?",
+          "note": "В вопросе тон повышается в конце, особенно на последнем слове. Не используйте понижающую интонацию."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вы хотите спросить, придет ли ваш друг завтра. Напишите правильный вопрос с повышающейся интонацией (используйте вопросительный знак).",
+          "answer": "Kom jij morgen?"
+        },
+        {
+          "prompt": "Скажите утверждение: 'Он приходит сегодня' с правильной понижающейся интонацией.",
+          "answer": "Hij komt vandaag."
+        },
+        {
+          "prompt": "Как спросить: 'Ты идешь?' с правильной интонацией (повышение на конце)?",
+          "answer": "Ga je?"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-er-existentialpronoun",
+      "topic": "Use of 'er' (existential/pronoun)",
+      "title": "Использование 'er' в нидерландском языке (существительное/местоимение)",
+      "explanation": "В нидерландском языке 'er' часто используется как формальное подлежащее в безличных конструкциях (например, 'er is' — 'есть, имеется') и как местоимение для указания на место или предмет. Русскоязычные часто забывают ставить 'er' или путают его с 'daar'. Запомните: в конструкциях типа 'есть/имеется' всегда нужно 'er', если подлежащее неопределённое. Также 'er' заменяет обстоятельства места и неопределённые предметы при указании количества.",
+      "examples": [
+        {
+          "wrong": "Is een kat in de tuin.",
+          "right": "Er is een kat in de tuin.",
+          "note": "В конструкциях 'есть/имеется' обязательно ставится 'er'."
+        },
+        {
+          "wrong": "Ik heb twee broers. Ik heb twee.",
+          "right": "Ik heb twee broers. Ik heb er twee.",
+          "note": "При указании количества неопределённых предметов используйте 'er' перед числительным."
+        },
+        {
+          "wrong": "Hij woont in Rotterdam. Hij woont al jaren.",
+          "right": "Hij woont in Rotterdam. Hij woont er al jaren.",
+          "note": "Для замены обстоятельства места (там) используйте 'er'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на нидерландский: 'На столе есть книга.'",
+          "answer": "Er ligt een boek op tafel."
+        },
+        {
+          "prompt": "Ответьте на вопрос 'Heb je appels?' утвердительно, указав, что у вас их три.",
+          "answer": "Ja, ik heb er drie."
+        },
+        {
+          "prompt": "Замените 'in Amsterdam' на 'er' в предложении 'Ik woon in Amsterdam en ik werk in Amsterdam.'",
+          "answer": "Ik woon in Amsterdam en ik werk er."
+        }
+      ]
+    },
+    {
+      "rule_id": "diminutive-formation-je-tje-pje",
+      "topic": "Diminutive formation (-je, -tje, -pje)",
+      "title": "Образование уменьшительной формы в нидерландском: суффиксы -je, -tje, -pje",
+      "explanation": "В нидерландском языке для образования уменьшительной формы обычно добавляют -je. Однако если слово заканчивается на l, n, r или w, то используется -tje. А если слово заканчивается на m, то добавляется -pje. Это правило помогает избежать типичных ошибок.",
+      "examples": [
+        {
+          "wrong": "manje",
+          "right": "mannetje",
+          "note": "Слово 'man' заканчивается на n, поэтому нужно -tje, а не -je."
+        },
+        {
+          "wrong": "boomje",
+          "right": "boompje",
+          "note": "Слово 'boom' заканчивается на m, поэтому нужно -pje."
+        },
+        {
+          "wrong": "lampje (правильно именно так, пример корректный, но для демонстрации другого случая) ладно, возьмём другое",
+          "right": "boekje",
+          "note": "Слово 'boek' заканчивается на k (согласный, не l/m/n/r/w), поэтому используется -je."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Образуйте уменьшительную форму от слова 'bel' (звонок).",
+          "answer": "belletje"
+        },
+        {
+          "prompt": "Образуйте уменьшительную форму от слова 'stoel' (стул).",
+          "answer": "stoeltje"
+        },
+        {
+          "prompt": "Образуйте уменьшительную форму от слова 'raam' (окно).",
+          "answer": "raampje"
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-verbs-and-zich",
+      "topic": "Reflexive verbs and 'zich'",
+      "title": "Возвратные глаголы и 'zich'",
+      "explanation": "В нидерландском языке возвратные глаголы требуют местоимения 'zich' для третьего лица единственного и множественного числа. Частая ошибка — пропускать 'zich' или использовать его с невозвратными глаголами. Запомните: если действие направлено на самого себя, нужно возвратное местоимение.",
+      "examples": [
+        {
+          "wrong": "Hij wast de handen.",
+          "right": "Hij wast zich de handen.",
+          "note": "Глагол 'wassen' (мыть) требует 'zich', когда речь о мытье собственных рук."
+        },
+        {
+          "wrong": "Zij herinnert de afspraak.",
+          "right": "Zij herinnert zich de afspraak.",
+          "note": "Глагол 'herinneren' (помнить) всегда возвратный — нужно 'zich'."
+        },
+        {
+          "wrong": "Wij voelen goed.",
+          "right": "Wij voelen ons goed.",
+          "note": "С местоимением 'wij' 'zich' меняется на 'ons' (аналогично: 'jullie' → 'je', 'ik' → 'me')."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на нидерландский: 'Он моет руки.' (используйте возвратный глагол)",
+          "answer": "Hij wast zich de handen."
+        },
+        {
+          "prompt": "Исправьте ошибку: 'Ik herinner het adres.'",
+          "answer": "Ik herinner me het adres."
+        },
+        {
+          "prompt": "Заполните пропуск: 'Zij ___________ (zich schamen) voor haar fout.'",
+          "answer": "Zij schaamt zich voor haar fout."
+        }
+      ]
+    },
+    {
+      "rule_id": "separable-prefix-verbs-placement",
+      "topic": "Separable prefix verbs placement",
+      "title": "Отделяемые приставки: позиция в предложении",
+      "explanation": "В голландском языке у глаголов с отделяемой приставкой (например, opbellen — звонить, aankomen — прибывать) в главном предложении приставка отделяется и уходит в конец. В придаточном предложении приставка остаётся слитно с глаголом. Русскоязычные часто путают эти правила из-за другого порядка слов.",
+      "examples": [
+        {
+          "wrong": "Ik opbel hem.",
+          "right": "Ik bel hem op.",
+          "note": "В главном предложении приставка (op) ставится в конец, а основа глагола (bel) — на второе место."
+        },
+        {
+          "wrong": "Ik weet dat ik bel hem op.",
+          "right": "Ik weet dat ik hem opbel.",
+          "note": "В придаточном предложении (после dat) приставка не отделяется: глагол пишется слитно."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Поставьте правильный порядок слов в главном предложении: (она / звонит / мне / завтра) — используя глагол opbellen.",
+          "answer": "Zij belt mij morgen op."
+        },
+        {
+          "prompt": "Поставьте правильный порядок слов в придаточном предложении: (я знаю, что / она / мне / завтра / звонит) — используя глагол opbellen.",
+          "answer": "Ik weet dat zij mij morgen opbelt."
+        }
+      ]
+    },
+    {
+      "rule_id": "modal-verbs-meanings-and-usage",
+      "topic": "Modal verbs: meanings and usage",
+      "title": "Модальные глаголы: значения и употребление",
+      "explanation": "В нидерландском языке модальные глаголы имеют чёткие значения. 'Kunnen' обозначает физическую возможность или умение (мочь), а 'mogen' — разрешение (можно). 'Moeten' означает долженствование (надо), а 'willen' — желание (хотеть). Ошибка возникает, когда их путают, особенно в отрицательных предложениях.",
+      "examples": [
+        {
+          "wrong": "Ik mag niet zwemmen (ik ben te moe).",
+          "right": "Ik kan niet zwemmen (ik ben te moe).",
+          "note": "Здесь говорится о физической невозможности (устал), поэтому нужен 'kan', а не 'mag'."
+        },
+        {
+          "wrong": "Je moet een taart?",
+          "right": "Wil je een taart?",
+          "note": "Вопрос о желании — используйте 'willen', а не 'moeten' (должен)."
+        },
+        {
+          "wrong": "Hij kan naar het feest komen (zijn moeder heeft het gezegd).",
+          "right": "Hij mag naar het feest komen (zijn moeder heeft het gezegd).",
+          "note": "Разрешение даёт мать — используйте 'mag' (может, ему разрешено), а не 'kan' (способен)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на нидерландский: «Я не умею готовить».",
+          "answer": "Ik kan niet koken."
+        },
+        {
+          "prompt": "Переведите на нидерландский: «Ты хочешь чай?»",
+          "answer": "Wil je thee?"
+        },
+        {
+          "prompt": "Переведите на нидерландский: «Можно мне войти?»",
+          "answer": "Mag ik binnenkomen?"
+        }
+      ]
+    },
+    {
+      "rule_id": "comparatives-dan-vs-als",
+      "topic": "Comparatives: 'dan' vs 'als'",
+      "title": "Сравнительная степень: dan vs als",
+      "explanation": "В нидерландском языке при сравнении двух объектов (больше, меньше, лучше и т.д.) используется слово 'dan' (аналог русского 'чем'). После конструкции 'zo...als' (такой же...как) используется 'als'. Самая распространённая ошибка русскоговорящих — использование 'als' вместо 'dan' в сравнительных предложениях.",
+      "examples": [
+        {
+          "wrong": "Mijn auto is sneller als jouw auto.",
+          "right": "Mijn auto is sneller dan jouw auto.",
+          "note": "В сравнительной степени (sneller) нужно dan, а не als."
+        },
+        {
+          "wrong": "Zij is even lang dan ik.",
+          "right": "Zij is even lang als ik.",
+          "note": "Конструкция 'even...' требует als, а не dan."
+        },
+        {
+          "wrong": "Hij heeft meer boeken als ik.",
+          "right": "Hij heeft meer boeken dan ik.",
+          "note": "Слова meer/minder тоже требуют dan."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Заполните пропуск: 'Jij bent groter ___ ik.'",
+          "answer": "Jij bent groter dan ik."
+        },
+        {
+          "prompt": "Заполните пропуск: 'Hij is even slim ___ zijn broer.'",
+          "answer": "Hij is even slim als zijn broer."
+        },
+        {
+          "prompt": "Заполните пропуск: 'Dit huis is duurder ___ dat huis.'",
+          "answer": "Dit huis is duurder dan dat huis."
+        }
+      ]
+    },
+    {
+      "rule_id": "negation-niet-vs-geen-placement",
+      "topic": "Negation: 'niet' vs 'geen' placement",
+      "title": "Отрицание в нидерландском: 'niet' vs 'geen'",
+      "explanation": "В нидерландском языке для отрицания используются два слова: 'niet' и 'geen'. 'Geen' ставится перед неопределённым существительным (с 'een' или без артикля) и заменяет 'een' — оно означает 'никакой, ни одного'. 'Niet' используется для отрицания глаголов, прилагательных, наречий, а также определённых существительных (с 'de'/'het') и обстоятельств. Проще: если в русском можно сказать 'нет' + существительное (нет книги), скорее всего, нужно 'geen'; в остальных случаях — 'niet'.",
+      "examples": [
+        {
+          "wrong": "Ik heb niet een auto.",
+          "right": "Ik heb geen auto.",
+          "note": "Перед неопределённым существительным (auto) ставим 'geen' вместо 'niet een'."
+        },
+        {
+          "wrong": "Hij leest geen het boek.",
+          "right": "Hij leest het boek niet.",
+          "note": "Перед определённым существительным (het boek) используем 'niet', а 'geen' не подходит."
+        },
+        {
+          "wrong": "Zij heeft geen honger.",
+          "right": "Zij heeft geen honger.",
+          "note": "'Geen' также используется с абстрактными существительными без артикля (honger) — это правильный вариант."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите: 'У меня нет времени.' (время = tijd, без артикля)",
+          "answer": "Ik heb geen tijd."
+        },
+        {
+          "prompt": "Переведите: 'Я не вижу этот дом.' (дом = het huis)",
+          "answer": "Ik zie het huis niet."
+        },
+        {
+          "prompt": "Переведите: 'Она не пьёт кофе.' (кофе = koffie, неопределённый)",
+          "answer": "Zij drinkt geen koffie."
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-forms-s-van-mijnjouw",
+      "topic": "Possessive forms ('s, van, mijn/jouw)",
+      "title": "Притяжательные формы: 's, van, mijn/jouw",
+      "explanation": "В нидерландском языке притяжательные формы зависят от типа существительного. Для имён собственных (людей) используется 's: Jan's boek. Для всех остальных существительных используйте оборот с van: de auto van de man. Личные притяжательные местоимения (mijn, jouw, zijn, haar и т.д.) ставятся перед существительным без предлогов.",
+      "examples": [
+        {
+          "wrong": "Dat is de boek van Jan.",
+          "right": "Dat is Jan's boek.",
+          "note": "Для имён собственных используйте 's, а не van."
+        },
+        {
+          "wrong": "Het meisje's fiets.",
+          "right": "De fiets van het meisje.",
+          "note": "Для неодушевлённых и нарицательных существительных используйте van."
+        },
+        {
+          "wrong": "Dat is mij fiets.",
+          "right": "Dat is mijn fiets.",
+          "note": "Притяжательное местоимение 'mijn' (мой), а не 'mij' (меня)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите: 'Книга Анны' (имя Anna).",
+          "answer": "Anna's boek."
+        },
+        {
+          "prompt": "Переведите: 'Машина мужчины'.",
+          "answer": "De auto van de man."
+        },
+        {
+          "prompt": "Переведите: 'Это моя сумка'.",
+          "answer": "Dat is mijn tas."
+        }
+      ]
+    },
+    {
+      "rule_id": "demonstratives-dezedieditdat",
+      "topic": "Demonstratives: deze/die/dit/dat",
+      "title": "Указательные местоимения: deze/die/dit/dat",
+      "explanation": "В нидерландском языке указательные местоимения зависят от рода (de/het) и расстояния. 'Deze' и 'dit' используются для близких предметов (здесь), 'die' и 'dat' — для далеких (там). 'Deze' и 'die' ставятся перед словами с артиклем 'de' (общий род), а 'dit' и 'dat' — перед словами с 'het' (средний род). Для множественного числа всегда используются 'deze' (близко) и 'die' (далеко).",
+      "examples": [
+        {
+          "wrong": "Dit auto is rood.",
+          "right": "Deze auto is rood.",
+          "note": "Ошибка в роде: 'auto' — слово с артиклем 'de', поэтому используется 'deze' (близко), а не 'dit'."
+        },
+        {
+          "wrong": "Die boek hier is nieuw.",
+          "right": "Dit boek hier is nieuw.",
+          "note": "Ошибка в расстоянии: книга находится рядом (hier), поэтому нужно 'dit' (для слов с 'het'), а не 'die' (для далеких)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Заполните пропуск: '___ boek (эта книга, рядом) ligt op tafel.'",
+          "answer": "Dit"
+        },
+        {
+          "prompt": "Заполните пропуск: '___ fiets (тот велосипед, далеко) is van mij.'",
+          "answer": "Die"
+        },
+        {
+          "prompt": "Выберите правильное слово: '___ auto (эта машина, рядом) is snel.' — Deze/Die",
+          "answer": "Deze"
+        }
+      ]
+    },
+    {
+      "rule_id": "relative-pronouns-diedatwatwie",
+      "topic": "Relative pronouns: die/dat/wat/wie",
+      "title": "Относительные местоимения: die, dat, wat, wie",
+      "explanation": "В нидерландском языке выбор относительного местоимения зависит от рода и числа существительного, а также от того, относится ли оно к человеку или предмету. Для слов общего рода (de-слова) и множественного числа используйте 'die'. Для среднего рода (het-слова) в единственном числе — 'dat'. После неопределённых местоимений (alles, iets, niets, veel, weinig) и для целых предложений используйте 'wat'. Для людей после предлогов — 'wie'.",
+      "examples": [
+        {
+          "wrong": "De man dat ik zie.",
+          "right": "De man die ik zie.",
+          "note": "Слово 'man' — de-слово, поэтому используем 'die', а не 'dat'."
+        },
+        {
+          "wrong": "Het kind die speelt.",
+          "right": "Het kind dat speelt.",
+          "note": "Слово 'kind' — het-слово, поэтому нужно 'dat'."
+        },
+        {
+          "wrong": "Alles die hij zegt is waar.",
+          "right": "Alles wat hij zegt is waar.",
+          "note": "После 'alles' используем 'wat'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильное относительное местоимение: De vrouw ___ daar loopt.",
+          "answer": "die"
+        },
+        {
+          "prompt": "Вставьте правильное относительное местоимение: Het boek ___ ik lees.",
+          "answer": "dat"
+        },
+        {
+          "prompt": "Вставьте правильное относительное местоимение: De mensen ___ we gisteren zagen.",
+          "answer": "die"
+        }
+      ]
+    },
+    {
+      "rule_id": "numbers-cardinal-vs-ordinal-eenéén",
+      "topic": "Numbers: cardinal vs ordinal, 'een/één'",
+      "title": "Числительные: количественные и порядковые, 'een' vs 'één'",
+      "explanation": "В нидерландском языке 'een' без ударения — это неопределенный артикль ('какой-то, один из'), а 'één' с ударением — числительное 'один'. Порядковые числительные (eerste, tweede, derde...) отвечают на вопрос 'который?'. Частая ошибка — путать артикль 'een' с числительным 'één' или использовать 'een' вместо порядкового числительного.",
+      "examples": [
+        {
+          "wrong": "Ik heb een hond.",
+          "right": "Ik heb één hond.",
+          "note": "Если вы хотите сказать, что у вас именно одна собака (а не две), используйте 'één' с ударением."
+        },
+        {
+          "wrong": "Dit is mijn een auto.",
+          "right": "Dit is mijn eerste auto.",
+          "note": "Порядковое числительное 'первый' — 'eerste', не путайте с 'een'."
+        },
+        {
+          "wrong": "Hij is de een die wint.",
+          "right": "Hij is de eerste die wint.",
+          "note": "Для указания порядка (первый, второй) используйте порядковые числительные, а не 'een'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите: 'У меня одна книга.' (Используйте числительное 'один')",
+          "answer": "Ik heb één boek."
+        },
+        {
+          "prompt": "Переведите: 'Это мой первый день.'",
+          "answer": "Dit is mijn eerste dag."
+        },
+        {
+          "prompt": "Заполните пропуск: 'Hij is de _____ (первый) die aankomt.'",
+          "answer": "eerste"
+        }
+      ]
+    },
+    {
+      "rule_id": "plural-noun-formation-en-s-exceptions",
+      "topic": "Plural noun formation (-en/-s) exceptions",
+      "title": "Исключения в образовании множественного числа (-en/-s)",
+      "explanation": "В нидерландском языке множественное число обычно образуется с помощью окончаний -en или -s. Однако существуют исключения: слова, оканчивающиеся на -a, -o, -i, -u, -y (часто заимствованные), а также уменьшительно-ласкательные формы (с -je) всегда принимают -s. Кроме того, многие слова на -el, -em, -en, -er, -aar, -oor также образуют множественное число с -s. Частая ошибка — добавлять -en к таким словам.",
+      "examples": [
+        {
+          "wrong": "meisjen",
+          "right": "meisjes",
+          "note": "Уменьшительные формы всегда на -s."
+        },
+        {
+          "wrong": "autoos",
+          "right": "auto's",
+          "note": "Заимствованные слова на -o требуют -s с апострофом."
+        },
+        {
+          "wrong": "tafelen",
+          "right": "tafels",
+          "note": "Слова на -el обычно оканчиваются на -s."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите множественное число от слова \"pizza\".",
+          "answer": "pizza's"
+        },
+        {
+          "prompt": "Напишите множественное число от слова \"huisje\" (домик).",
+          "answer": "huisjes"
+        },
+        {
+          "prompt": "Напишите множественное число от слова \"café\".",
+          "answer": "cafés"
+        }
+      ]
+    },
+    {
+      "rule_id": "adjective-inflection-after-articles",
+      "topic": "Adjective inflection after articles",
+      "title": "Склонение прилагательных после артиклей",
+      "explanation": "В нидерландском языке прилагательное перед существительным обычно получает окончание -e, если перед ним стоит определенный артикль (de/het) или указательное/притяжательное местоимение. После неопределенного артикля 'een' окончание -e добавляется только в том случае, если существительное является словом с артиклем 'de' (мужского/женского рода). Для слов среднего рода (het-слов) после 'een' окончание -e не ставится. Это распространенная ошибка среди русскоязычных.",
+      "examples": [
+        {
+          "wrong": "de groot hond",
+          "right": "de grote hond",
+          "note": "После определенного артикля 'de' нужно добавить -e к прилагательному."
+        },
+        {
+          "wrong": "het mooi huis",
+          "right": "het mooie huis",
+          "note": "После определенного артикля 'het' также требуется -e."
+        },
+        {
+          "wrong": "een mooie huis",
+          "right": "een mooi huis",
+          "note": "После 'een' с существительным среднего рода ('huis') окончание -e не добавляется."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите: 'большой дом' (средний род, неопределенный артикль 'een')",
+          "answer": "een groot huis"
+        },
+        {
+          "prompt": "Переведите: 'красивая кошка' (определенный артикль 'de')",
+          "answer": "de mooie kat"
+        },
+        {
+          "prompt": "Переведите: 'этот старый автомобиль' (указательное местоимение 'deze')",
+          "answer": "deze oude auto"
+        }
+      ]
+    },
+    {
+      "rule_id": "pronominal-adverbs-ermee-ervan",
+      "topic": "Pronominal adverbs (ermee, ervan)",
+      "title": "Наречные местоимения (ermee, ervan)",
+      "explanation": "В нидерландском языке, когда предлог используется с безродным словом (het, dat, wat), предлог и местоимение сливаются в одно слово — наречное местоимение. Например, 'мет + хет' становится 'ermee', 'ван + хет' становится 'ervan'. Такая форма обязательна, если предлог относится к целому предложению или придаточному с 'het' или 'dat'. Ошибка возникает, когда учащиеся оставляют предлог отдельно.",
+      "examples": [
+        {
+          "wrong": "Ik ben bezig met het.",
+          "right": "Ik ben ermee bezig.",
+          "note": "С глаголом 'bezig zijn met' наречное местоимение 'ermee' ставится перед второй частью глагола."
+        },
+        {
+          "wrong": "Hij heeft last van het.",
+          "right": "Hij heeft ervan last.",
+          "note": "Фраза 'last hebben van' требует наречного местоимения 'ervan' вместо 'van het'."
+        },
+        {
+          "wrong": "Wacht op het antwoord.",
+          "right": "Wacht erop.",
+          "note": "Если местоимение 'het' означает 'это', предлог 'op' становится 'erop'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Замените 'met het' на правильное наречное местоимение: 'Ik begin met het.'",
+          "answer": "Ik begin ermee."
+        },
+        {
+          "prompt": "Сделайте то же самое для 'Hij is bang voor het.'",
+          "answer": "Hij is ervoor bang."
+        },
+        {
+          "prompt": "Переведите фразу 'Она радуется этому' (используйте 'blij zijn met').",
+          "answer": "Ze is ermee blij."
+        }
+      ]
+    },
+    {
+      "rule_id": "subordinate-clause-verb-final-order",
+      "topic": "Subordinate clause verb-final order",
+      "title": "Порядок слов в придаточном предложении: глагол в конце",
+      "explanation": "В нидерландском языке в придаточных предложениях (после слов dat, als, omdat и др.) глагол всегда перемещается в конец предложения. Это отличается от главных предложений, где глагол стоит на втором месте. Запомните: все глаголы (включая модальные и вспомогательные) должны оказаться в конце придаточной части.",
+      "examples": [
+        {
+          "wrong": "Ik weet dat hij komt morgen.",
+          "right": "Ik weet dat hij morgen komt.",
+          "note": "Глагол 'komt' должен стоять в конце придаточного предложения, а не после подлежащего."
+        },
+        {
+          "wrong": "Hij zegt dat hij kan zwemmen goed.",
+          "right": "Hij zegt dat hij goed kan zwemmen.",
+          "note": "Модальный глагол 'kan' и основной глагол 'zwemmen' оба перемещаются в конец."
+        },
+        {
+          "wrong": "Omdat hij is ziek, blijft hij thuis.",
+          "right": "Omdat hij ziek is, blijft hij thuis.",
+          "note": "В придаточном с 'omdat' глагол 'is' идет в конец."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переделайте главное предложение в придаточное с 'dat': 'Hij komt morgen.' (Начните с 'Ik denk ...')",
+          "answer": "Ik denk dat hij morgen komt."
+        },
+        {
+          "prompt": "Исправьте ошибку: 'Zij zegt dat ze gaat naar school.'",
+          "answer": "Zij zegt dat ze naar school gaat."
+        },
+        {
+          "prompt": "Поставьте глагол в правильное место: 'Omdat hij wil eten een appel.'",
+          "answer": "Omdat hij een appel wil eten."
+        }
+      ]
+    },
+    {
+      "rule_id": "u-vs-jijje-formalinformal-address",
+      "topic": "'u' vs 'jij/je' formal/informal address",
+      "title": "Формальное и неформальное обращение: u vs jij/je",
+      "explanation": "В нидерландском языке 'u' используется для вежливого обращения к незнакомым людям, пожилым или начальству. 'jij' (или его редуцированная форма 'je') — для друзей, семьи и ровесников. Ошибка в выборе может быть расценена как грубость или излишняя фамильярность.",
+      "examples": [
+        {
+          "wrong": "Hoe gaat het met je?",
+          "right": "Hoe gaat het met u?",
+          "note": "Вежливое обращение к клиенту или начальнику."
+        },
+        {
+          "wrong": "Wilt u koffie?",
+          "right": "Wil jij koffie?",
+          "note": "Неформальная ситуация среди друзей — используйте 'jij'."
+        },
+        {
+          "wrong": "Hoe heet je?",
+          "right": "Hoe heet u?",
+          "note": "При знакомстве с пожилым человеком всегда используйте 'u'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Выберите правильную форму для обращения к своему учителю: ___ (je/u) heeft gelijk.",
+          "answer": "u"
+        },
+        {
+          "prompt": "Как спросить у друга 'как дела?' неформально (одно слово после вопроса)? Вставьте: Hoe gaat het met ___?",
+          "answer": "je"
+        },
+        {
+          "prompt": "Вы хотите заказать кофе в ресторане (вежливо). Заполните: Mag ik ___ (u/jij) de menukaart vragen?",
+          "answer": "u"
+        }
+      ]
+    },
+    {
+      "rule_id": "false-friends-between-dutch-and-english",
+      "topic": "False friends between Dutch and English",
+      "title": "Ложные друзья переводчика: голландский и английский",
+      "explanation": "Некоторые голландские слова похожи на английские, но имеют совершенно другое значение. Например, 'eventueel' не означает 'конечный' (eventual), а 'возможно' или 'при необходимости'. 'Actueel' переводится как 'текущий, актуальный', а не 'фактический' (actual). 'Brief' — это 'письмо', а не 'краткий' (brief). Запомните эти различия, чтобы избежать ошибок.",
+      "examples": [
+        {
+          "wrong": "Deze informatie is eventueel.",
+          "right": "Deze informatie is actueel.",
+          "note": "Слово 'eventueel' значит 'возможно', а не 'окончательный'. Для значения 'актуальный' используйте 'actueel'."
+        },
+        {
+          "wrong": "Ik heb een brief document.",
+          "right": "Ik heb een kort document.",
+          "note": "'Brief' в голландском — это 'письмо', а не 'краткий'. Для 'краткий' используйте 'kort'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Как сказать 'возможно' по-голландски? (подсказка: это ложный друг английского 'eventual')",
+          "answer": "eventueel"
+        },
+        {
+          "prompt": "Как сказать 'письмо' (корреспонденция) по-голландски? (подсказка: это ложный друг английского 'brief')",
+          "answer": "brief"
+        },
+        {
+          "prompt": "Как сказать 'текущий, актуальный' по-голландски? (подсказка: это ложный друг английского 'actual')",
+          "answer": "actueel"
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciation-of-sch-and-ng-clusters",
+      "topic": "Pronunciation of 'sch' and 'ng' clusters",
+      "title": "Произношение сочетаний 'sch' и 'ng' в нидерландском языке",
+      "explanation": "Сочетание 'sch' произносится как [sχ] – звук, похожий на русское 'с' с последующим гортанным 'х' (как в слове 'хлеб', но более глухим). Никогда не читайте его как русское 'ш' или 'сч'. Сочетание 'ng' образует единый носовой звук [ŋ] (как в английском 'sing'), а не раздельное [n] + [g]. Старайтесь не добавлять звук 'г' после 'н'.",
+      "examples": [
+        {
+          "wrong": "schip",
+          "right": "schip",
+          "note": "Ошибочно произносят как [ʃip] (с 'ш'), правильно – [sχɪp]."
+        },
+        {
+          "wrong": "zingen",
+          "right": "zingen",
+          "note": "Ошибочно произносят как [zɪnɣən] (с раздельными 'н' и 'г'), правильно – [zɪŋən]."
+        },
+        {
+          "wrong": "geschenk",
+          "right": "geschenk",
+          "note": "Буквы 'sch' в середине слова также дают [sχ], не 'ш'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Как по-голландски 'корабль'? (обратите внимание на произношение 'sch')",
+          "answer": "schip"
+        },
+        {
+          "prompt": "Напишите слово 'петь' по-голландски (содержит 'ng').",
+          "answer": "zingen"
+        },
+        {
+          "prompt": "Какое слово означает 'писать' и содержит 'sch' в начале?",
+          "answer": "schrijven"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,886 @@
+{
+  "learning": "pl",
+  "interface": "ru",
+  "generated_at": "2026-06-26T12:40:29.083004+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "przypadki",
+      "topic": "Przypadki",
+      "title": "Ошибка в использовании родительного падежа после отрицания",
+      "explanation": "В польском языке после отрицания (например, «nie ma», «nie widzę», «nie lubię») существительное должно стоять в родительном падеже, а не в именительном или винительном. Это отличается от русского, где после «нет» используется родительный падеж, но после отрицательных глаголов — винительный. Запомните: если в предложении есть отрицание, прямой объект всегда ставится в родительном падеже.",
+      "examples": [
+        {
+          "wrong": "Nie ma książka.",
+          "right": "Nie ma książki.",
+          "note": "После «nie ma» нужно родительный падеж (książki), а не именительный (książka)."
+        },
+        {
+          "wrong": "Nie widzę pies.",
+          "right": "Nie widzę psa.",
+          "note": "Глагол «widzieć» с отрицанием требует родительного падежа (psa), а не именительного (pies)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильную форму слова «kawa»: Nie piję ________.",
+          "answer": "kawy"
+        },
+        {
+          "prompt": "Вставьте правильную форму слова «student»: Nie ma ________ w klasie.",
+          "answer": "studenta"
+        }
+      ]
+    },
+    {
+      "rule_id": "aspekty-czasownikowe",
+      "topic": "Aspekty czasownikowe",
+      "title": "Аспекты глаголов: совершенный и несовершенный вид",
+      "explanation": "В польском языке, как и в русском, глаголы имеют два вида: совершенный (dokonany) и несовершенный (niedokonany). Основное правило: несовершенный вид используется для описания процессов, повторяющихся действий или состояний, а совершенный — для однократных завершённых действий. Частая ошибка русскоязычных — использование совершенного вида там, где в польском требуется несовершенный (например, в отрицательных конструкциях с 'не надо' или при выражении длительности).",
+      "examples": [
+        {
+          "wrong": "Nie przeczytam tej książki.",
+          "right": "Nie czytam tej książki.",
+          "note": "Если вы имеете в виду, что сейчас не читаете (процесс), используйте несовершенный вид «czytam». «Przeczytam» означает 'не прочитаю (вообще никогда)'."
+        },
+        {
+          "wrong": "Codziennie napiszę list.",
+          "right": "Codziennie piszę list.",
+          "note": "Для повторяющихся действий (каждый день) нужен несовершенный вид «piszę». «Napiszę» — однократное завершённое действие."
+        },
+        {
+          "wrong": "On już zrobił to zadanie przez godzinę.",
+          "right": "On już robił to zadanie przez godzinę.",
+          "note": "С указанием длительности (przez godzinę) используйте несовершенный вид «robił», так как действие было в процессе."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите: 'Я ещё не прочитал эту книгу (но планирую)'. Какой вид глагола 'czytać' нужно использовать?",
+          "answer": "Jeszcze nie przeczytałem tej książki."
+        },
+        {
+          "prompt": "Вставьте правильную форму глагола 'pisać' / 'napisać': 'Вчера я ________ письмо и отправил его.'",
+          "answer": "napisałem"
+        },
+        {
+          "prompt": "Исправьте ошибку: 'Po śniadaniu zawsze piję kawę i czytam gazetę.' (Здесь правильный вид? Если нет, исправьте.)",
+          "answer": "Po śniadaniu zawsze piję kawę i czytam gazetę. (Всё верно — несовершенный вид для повторяющихся действий.)"
+        }
+      ]
+    },
+    {
+      "rule_id": "przyimki",
+      "topic": "Przyimki",
+      "title": "Приставки w и na: типичные ошибки",
+      "explanation": "В польском языке выбор предлога w или na зависит от типа места. Для помещений (работа, школа) используется w, а для открытых пространств или учреждений (университет, стадион) — na. Русскоязычные часто ошибаются, так как в русском языке 'на работе' звучит привычно, а 'в университете' — наоборот.",
+      "examples": [
+        {
+          "wrong": "Jestem na pracy.",
+          "right": "Jestem w pracy.",
+          "note": "Польское слово praca обозначает место работы — помещение, поэтому нужен предлог w."
+        },
+        {
+          "wrong": "Studiuję w uniwersytecie.",
+          "right": "Studiuję na uniwersytecie.",
+          "note": "Университет в польском языке — это открытое учреждение, поэтому используется na."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильный предлог: 'Ona jest _____ pracy.'",
+          "answer": "w pracy"
+        },
+        {
+          "prompt": "Вставьте правильный предлог: 'Studiuję _____ uniwersytecie.'",
+          "answer": "na uniwersytecie"
+        },
+        {
+          "prompt": "Вставьте правильный предлог: 'Dzieci są _____ szkole.'",
+          "answer": "w szkole"
+        }
+      ]
+    },
+    {
+      "rule_id": "liczebniki",
+      "topic": "Liczebniki",
+      "title": "Ошибка в употреблении числительных: именительный vs родительный падеж после liczebników",
+      "explanation": "В польском языке после числительных 2, 3, 4 (и составных, оканчивающихся на них, кроме 12, 13, 14) существительное стоит в именительном падеже множественного числа. После числительных 5 и выше (а также 0, 11–19 и т.д.) требуется родительный падеж множественного числа. Русскоязычные часто ошибочно ставят родительный падеж после 2, 3, 4.",
+      "examples": [
+        {
+          "wrong": "Mam dwa samochoda.",
+          "right": "Mam dwa samochody.",
+          "note": "После числительного 'dwa' (2) нужно именительное множественное 'samochody', а не родительное 'samochoda'."
+        },
+        {
+          "wrong": "On ma dwa psów.",
+          "right": "On ma dwa psy.",
+          "note": "Числительное 'dwa' требует именительного падежа множественного числа ('psy'), а не родительного ('psów')."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на польский: У меня два яблока.",
+          "answer": "Mam dwa jabłka."
+        },
+        {
+          "prompt": "Переведите: Она видит четыре кота.",
+          "answer": "Ona widzi cztery koty."
+        },
+        {
+          "prompt": "Переведите: У нас пять собак.",
+          "answer": "Mamy pięć psów."
+        }
+      ]
+    },
+    {
+      "rule_id": "samogłoski-nosowe",
+      "topic": "Samogłoski nosowe",
+      "title": "Носовые гласные ą и ę",
+      "explanation": "В польском языке есть две носовые гласные: ą (произносится как французское 'on') и ę (как французское 'in'). Русскоязычные часто опускают носовой оттенок или заменяют их на обычные гласные, что приводит к ошибкам в написании и произношении. Эти гласные обозначаются диакритическим знаком (огонек) и могут менять значение слова.",
+      "examples": [
+        {
+          "wrong": "sa",
+          "right": "są",
+          "note": "Не забывайте огонек над a — это носовая гласная ą."
+        },
+        {
+          "wrong": "bede",
+          "right": "będę",
+          "note": "Слово 'będę' содержит две носовые гласные: ę и ą."
+        },
+        {
+          "wrong": "imie",
+          "right": "imię",
+          "note": "Существительное 'имя' в польском пишется с ę на конце, а не e."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите правильную форму глагола 'быть' в 1-м лице единственного числа будущего времени.",
+          "answer": "będę"
+        },
+        {
+          "prompt": "Как пишется польское слово 'имя'?",
+          "answer": "imię"
+        },
+        {
+          "prompt": "Заполните пропуск: Oni s__ (они есть).",
+          "answer": "są"
+        }
+      ]
+    },
+    {
+      "rule_id": "spółgłoski-szumiące",
+      "topic": "Spółgłoski szumiące",
+      "title": "Польские шипящие согласные (sz, cz, ż/rz, dż)",
+      "explanation": "В польском языке шипящие согласные (sz, cz, ż/rz, dż) произносятся твёрже и более «свистяще», чем русские ш, ч, ж, дж. Например, польское sz похоже на русское «ш», но язык опущен ниже; cz — твёрже русского «ч»; ż/rz — звонкий аналог sz; dż — как английское j в «jump». Частая ошибка — замена польского czy (ли) на русское чи.",
+      "examples": [
+        {
+          "wrong": "Czy to jest twój dom?",
+          "right": "Czy to jest twój dom?",
+          "note": "Правильное произношение: [чы], а не [чи]. Буква 'c' перед 'z' даёт твёрдый звук."
+        },
+        {
+          "wrong": "Szkoła",
+          "right": "Szkoła",
+          "note": "Произносится [шкоўа], а не [школа]. Язык более плоский, чем в русском."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Как правильно написать польское слово, обозначающее 'что'?",
+          "answer": "Co"
+        },
+        {
+          "prompt": "Вставьте пропущенную букву: _-ena (имя) – правильное написание?",
+          "answer": "Żeńa (правильно: Żeńa, но по-польски 'Ż' перед 'e' не смягчается: Żenia)"
+        },
+        {
+          "prompt": "Выберите правильный вариант: 'czwartek' или 'ćwartek'?",
+          "answer": "Czwartek"
+        }
+      ]
+    },
+    {
+      "rule_id": "akcent",
+      "topic": "Akcent",
+      "title": "Ударение в польском языке: правило и типичные ошибки",
+      "explanation": "В польском языке ударение почти всегда падает на предпоследний слог (penultima). Это отличается от русского, где ударение может быть на любом слоге. Главная ошибка русскоговорящих — переносить привычное ударение из русского в польские слова.",
+      "examples": [
+        {
+          "wrong": "múzyka",
+          "right": "muzýka",
+          "note": "В русском 'музыка' с ударением на первый слог, а в польском — на предпоследний (второй)."
+        },
+        {
+          "wrong": "télefon",
+          "right": "teléfon",
+          "note": "Русское 'телефон' имеет ударение на третьем слоге, польское — на втором."
+        },
+        {
+          "wrong": "oknó",
+          "right": "ókno",
+          "note": "В русском 'окно' ударение на последний слог, в польском — на первый."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Поставьте правильное ударение в слове 'muzyka' (запишите слово с ударением).",
+          "answer": "muzýka"
+        },
+        {
+          "prompt": "Как правильно произнести 'telefon' по-польски? Напишите с ударением.",
+          "answer": "teléfon"
+        },
+        {
+          "prompt": "Укажите верное ударение в слове 'okno'.",
+          "answer": "ókno"
+        }
+      ]
+    },
+    {
+      "rule_id": "gender-agreement-of-adjectives",
+      "topic": "Gender agreement of adjectives",
+      "title": "Согласование прилагательных по роду в польском языке",
+      "explanation": "В польском языке прилагательные изменяются по родам (мужской, женский, средний). Частая ошибка русскоязычных — использование мужского окончания (-y/-i) с существительными женского или среднего рода. Запомните: для женского рода окончание -a, для среднего -e, для мужского -y/-i.",
+      "examples": [
+        {
+          "wrong": "dobry kobieta",
+          "right": "dobra kobieta",
+          "note": "Существительное 'kobieta' (женщина) женского рода, поэтому прилагательное должно быть 'dobra' (добрая), а не 'dobry'."
+        },
+        {
+          "wrong": "nowy mieszkanie",
+          "right": "nowe mieszkanie",
+          "note": "Существительное 'mieszkanie' (квартира) среднего рода, прилагательное принимает окончание -e: 'nowe'."
+        },
+        {
+          "wrong": "stary książka",
+          "right": "stara książka",
+          "note": "Существительное 'książka' (книга) женского рода, поэтому правильно 'stara' (старая)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильную форму прилагательного 'ładny' (красивый) с существительным 'dziewczyna' (девушка).",
+          "answer": "ładna dziewczyna"
+        },
+        {
+          "prompt": "Исправьте ошибку: 'ciekawy książka' (интересная книга).",
+          "answer": "ciekawa książka"
+        },
+        {
+          "prompt": "Выберите правильное окончание для прилагательного 'mały' (маленький) с существительным 'dziecko' (ребёнок, средний род).",
+          "answer": "małe dziecko"
+        }
+      ]
+    },
+    {
+      "rule_id": "verb-conjugation-endings",
+      "topic": "Verb conjugation endings",
+      "title": "Окончания глаголов в настоящем времени: 1-е и 2-е лицо единственного числа",
+      "explanation": "В польском языке окончания глаголов в 1-м и 2-м лице единственного числа различаются. Для большинства глаголов 1-е лицо оканчивается на -ę (или -am для группы -ać), а 2-е на -esz (или -asz). Частая ошибка — путать эти окончания, например, использовать -esz вместо -ę для 'я'.",
+      "examples": [
+        {
+          "wrong": "Ja piszesz list.",
+          "right": "Ja piszę list.",
+          "note": "Глагол 'pisać' в 1-м лице: piszę, а не piszesz."
+        },
+        {
+          "wrong": "Ja czytasz książkę.",
+          "right": "Ja czytam książkę.",
+          "note": "Глаголы на -ać (czytać) в 1-м лице имеют окончание -am, во 2-м -asz."
+        },
+        {
+          "wrong": "Ja myślisz o tobie.",
+          "right": "Ja myślę o tobie.",
+          "note": "Глагол 'myśleć' в 1-м лице: myślę, а не myślisz."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Я (пить) ... kawę.",
+          "answer": "piję"
+        },
+        {
+          "prompt": "Ты (покупать) ... chleb.",
+          "answer": "kupujesz"
+        },
+        {
+          "prompt": "Я (говорить) ... po polsku.",
+          "answer": "mówię"
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-pronoun-się-placement",
+      "topic": "Reflexive pronoun 'się' placement",
+      "title": "Место возвратного местоимения 'się' в польском предложении",
+      "explanation": "В польском языке возвратное местоимение 'się' обычно ставится после первого ударного слова в предложении (чаще всего после глагола) и не прикрепляется к нему, как русское '-ся'. Оно не должно стоять в конце предложения, если это не единственное слово. Например: 'Myję się' (а не 'Myję się' в конце), но в более длинных предложениях 'się' перемещается после глагола.",
+      "examples": [
+        {
+          "wrong": "On obudził wcześnie się.",
+          "right": "On obudził się wcześnie.",
+          "note": "Się ставится после глагола, а не в конце."
+        },
+        {
+          "wrong": "Oni spotkali w parku się.",
+          "right": "Oni spotkali się w parku.",
+          "note": "Się стоит сразу после глагола, перед остальными словами."
+        },
+        {
+          "wrong": "Musisz uczyć polskiego się.",
+          "right": "Musisz uczyć się polskiego.",
+          "note": "После глагола 'uczyć' (учиться) 'się' идет перед дополнением."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на польский: 'Я моюсь сейчас.'",
+          "answer": "Myję się teraz."
+        },
+        {
+          "prompt": "Исправьте ошибку: 'Ona czesze włosy się.'",
+          "answer": "Ona czesze się włosy."
+        },
+        {
+          "prompt": "Вставьте 'się' в нужное место: 'Ona uczy polskiego.'",
+          "answer": "Ona uczy się polskiego."
+        }
+      ]
+    },
+    {
+      "rule_id": "double-negation-with-nie",
+      "topic": "Double negation with 'nie'",
+      "title": "Двойное отрицание с 'nie' в польском языке",
+      "explanation": "В польском языке, как и в русском, при использовании отрицательных местоимений (никто, ничего, никогда и т.д.) глагол также должен стоять с частицей 'nie'. Это называется двойным отрицанием. Ошибка возникает, когда учащиеся опускают это 'nie' под влиянием других языков.",
+      "examples": [
+        {
+          "wrong": "Nikt przyszedł.",
+          "right": "Nikt nie przyszedł.",
+          "note": "В польском обязательно 'nie' после отрицательного подлежащего."
+        },
+        {
+          "wrong": "Nic wiem.",
+          "right": "Nic nie wiem.",
+          "note": "Глагол 'wiem' требует отрицания."
+        },
+        {
+          "wrong": "Nigdy jem mięsa.",
+          "right": "Nigdy nie jem mięsa.",
+          "note": "После 'nigdy' нужно 'nie'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Исправьте ошибку: 'Nikt chce jeść.' (Никто хочет есть)",
+          "answer": "Nikt nie chce jeść."
+        },
+        {
+          "prompt": "Напишите правильно: 'Я ничего не вижу' по-польски.",
+          "answer": "Nic nie widzę."
+        },
+        {
+          "prompt": "Исправьте: 'Ona nigdy pływa w morzu.' (Она никогда не плавает в море)",
+          "answer": "Ona nigdy nie pływa w morzu."
+        }
+      ]
+    },
+    {
+      "rule_id": "predicate-nominative-vs-instrumental",
+      "topic": "Predicate nominative vs instrumental",
+      "title": "Именительный или творительный падеж после глагола 'być'",
+      "explanation": "В польском языке после глагола 'być' (быть) в настоящем времени используется именительный падеж, а в прошедшем и будущем – творительный. Это часто вызывает трудности у русскоязычных, так как в русском языке творительный падеж используется и в настоящем (например, 'он является врачом'). Запомните: настоящее время – именительный (без окончаний -em, -ą), прошедшее и будущее – творительный.",
+      "examples": [
+        {
+          "wrong": "On jest dobrym lekarzem.",
+          "right": "On jest dobry lekarz.",
+          "note": "В настоящем времени после 'jest' нужно использовать именительный падеж: 'dobry lekarz', а не творительный."
+        },
+        {
+          "wrong": "To jest domem.",
+          "right": "To jest dom.",
+          "note": "Слово 'dom' в именительном падеже, так как сказуемое в настоящем времени."
+        },
+        {
+          "wrong": "Byłem student.",
+          "right": "Byłem studentem.",
+          "note": "В прошедшем времени после 'byłem' нужно творительный падеж: 'studentem'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на польский: 'Она – хорошая учительница' (в настоящем времени).",
+          "answer": "Ona jest dobra nauczycielka."
+        },
+        {
+          "prompt": "Исправьте ошибку: 'On był dyrektor'.",
+          "answer": "On był dyrektorem."
+        },
+        {
+          "prompt": "Как правильно: 'To jest muzeum' или 'To jest muzeumem'?",
+          "answer": "To jest muzeum."
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-pronoun-swój-vs-jegojej",
+      "topic": "Possessive pronoun 'swój' vs 'jego/jej'",
+      "title": "Притяжательные местоимения: swój vs jego/jej",
+      "explanation": "В польском языке местоимение 'swój' (свой) используется, когда обладатель совпадает с подлежащим предложения. 'Jego' (его) и 'jej' (её) относятся к другому лицу, не к подлежащему. 'Swój' изменяется по роду, числу и падежу в соответствии с объектом обладания.",
+      "examples": [
+        {
+          "wrong": "On bierze jego książkę.",
+          "right": "On bierze swoją książkę.",
+          "note": "Ошибка: 'jego' относится к кому-то другому, но 'on' берёт свою же книгу. Правильно: swoją."
+        },
+        {
+          "wrong": "Mama mówi do jej córki.",
+          "right": "Mama mówi do swojej córki.",
+          "note": "Ошибка: 'jej' означает, что дочь принадлежит кому-то другому, но мама говорит со своей дочерью. Правильно: swojej."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Заполните пропуск: On czyta (свою) książkę.",
+          "answer": "swoją"
+        },
+        {
+          "prompt": "Заполните пропуск: Ona zostawiła (его) telefon w domu.",
+          "answer": "jego"
+        }
+      ]
+    },
+    {
+      "rule_id": "comparative-and-superlative-formation",
+      "topic": "Comparative and superlative formation",
+      "title": "Сравнительная и превосходная степень прилагательных в польском языке",
+      "explanation": "В польском языке сравнительная и превосходная степени обычно образуются с помощью суффиксов (например, -szy, -ejszy) и приставки naj-, а не с помощью слов bardziej (более) и najbardziej (самый). Использование bardziej/najbardziej с прилагательными, которые имеют синтетические формы, является типичной ошибкой для русскоязычных. Запомните: ładny → ładniejszy → najładniejszy (а не bardziej ładny).",
+      "examples": [
+        {
+          "wrong": "To jest bardziej ładny obraz.",
+          "right": "To jest ładniejszy obraz.",
+          "note": "Вместо bardziej ładny (более красивый) используйте синтетическую форму ładniejszy."
+        },
+        {
+          "wrong": "To jest najbardziej dobry samochód.",
+          "right": "To jest najlepszy samochód.",
+          "note": "Прилагательное dobry (хороший) имеет исключение: сравнительная степень lepszy, превосходная — najlepszy."
+        },
+        {
+          "wrong": "Ona jest bardziej wysoką dziewczyną.",
+          "right": "Ona jest wyższą dziewczyną.",
+          "note": "Для przyлагательного wysoki (высокий) правильная сравнительная степень — wyższy."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Образуйте сравнительную степень от прилагательного „szybki” (быстрый) в форме мужского рода единственного числа.",
+          "answer": "szybszy"
+        },
+        {
+          "prompt": "Образуйте превосходную степень от прилагательного „stary” (старый) в форме мужского рода единственного числа.",
+          "answer": "najstarszy"
+        },
+        {
+          "prompt": "Исправьте ошибку: „To jest najbardziej interesująca książka” (Это самая интересная книга).",
+          "answer": "To jest najciekawsza książka"
+        }
+      ]
+    },
+    {
+      "rule_id": "future-tense-perfective-vs-imperfective",
+      "topic": "Future tense: perfective vs imperfective",
+      "title": "Будущее время: совершенный и несовершенный вид",
+      "explanation": "В польском языке будущее время для глаголов несовершенного вида образуется с помощью вспомогательного глагола 'będę' + инфинитив (np. będę czytać). Для совершенного вида используется форма будущего времени без вспомогательного глагола (np. przeczytam). Ошибка часто возникает, когда путают эти формы: если действие длительное или повторяющееся — нужен несовершенный вид, если однократное и завершённое — совершенный.",
+      "examples": [
+        {
+          "wrong": "Jutro przeczytam książkę przez cały dzień.",
+          "right": "Jutro będę czytać książkę przez cały dzień.",
+          "note": "Здесь действие длительное, поэтому нужен несовершенный вид (będę czytać)."
+        },
+        {
+          "wrong": "W przyszłym tygodniu będę napisać list.",
+          "right": "W przyszłym tygodniu napiszę list.",
+          "note": "Действие однократное и завершённое — используем совершенный вид (napiszę)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на польский: «Я буду готовить ужин каждый вечер».",
+          "answer": "Będę gotować obiad każdego wieczoru."
+        },
+        {
+          "prompt": "Переведите на польский: «Завтра я позвоню тебе».",
+          "answer": "Jutro zadzwonię do ciebie."
+        }
+      ]
+    },
+    {
+      "rule_id": "conditional-mood-with-by",
+      "topic": "Conditional mood with 'by'",
+      "title": "Условное наклонение с частицей 'by' в польском языке",
+      "explanation": "В польском языке условное наклонение образуется с помощью частицы 'by', которая может быть отдельным словом (bym, byś, by...) или присоединяться к глаголу. Главное правило: 'by' ставится после глагола или после первого слова в предложении, а не перед глаголом, как в русском. Например, русское 'я бы сделал' переводится как 'zrobiłbym' (а не 'by zrobiłem').",
+      "examples": [
+        {
+          "wrong": "Ja by poszedł",
+          "right": "Poszedłbym",
+          "note": "В польском 'by' либо прикрепляется к глаголу, либо используется отдельно с личным окончанием (bym, byś, by...). Нельзя ставить 'by' перед глаголом без окончания."
+        },
+        {
+          "wrong": "Ona by kupiła",
+          "right": "Ona kupiłaby",
+          "note": "Правильно: 'kupiłaby' (глагол + by с окончанием)."
+        },
+        {
+          "wrong": "My by chcieli",
+          "right": "Chcielibyśmy",
+          "note": "В 1 лице множественного числа добавляется 'śmy' к глаголу."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Как правильно сказать по-польски 'Я бы прочитал'?",
+          "answer": "Przeczytałbym"
+        },
+        {
+          "prompt": "Исправьте ошибку: 'On by zobaczył'.",
+          "answer": "On zobaczyłby"
+        },
+        {
+          "prompt": "Переведите: 'Они бы пришли'.",
+          "answer": "Oni przyszliby"
+        }
+      ]
+    },
+    {
+      "rule_id": "imperative-mood-formation",
+      "topic": "Imperative mood formation",
+      "title": "Образование повелительного наклонения",
+      "explanation": "Польский императив (повелительное наклонение) образуется от основы настоящего времени, а не от инфинитива. Частая ошибка русскоговорящих — использовать инфинитив вместо императива. Например, вместо \"Rób!\" (делай) говорят \"Robić!\". Запомните: для глаголов на -ać часто добавляется -aj (czytać → czytaj), для -ić и -eć — основа без -i/-e (mówić → mów).",
+      "examples": [
+        {
+          "wrong": "Robić to!",
+          "right": "Rób to!",
+          "note": "Не используй инфинитив! Императив от \"robić\" — \"rób\" (от основы 3-го лица \"robi\")."
+        },
+        {
+          "wrong": "Czytać gazetę!",
+          "right": "Czytaj gazetę!",
+          "note": "У глаголов на -ać в императиве добавляется -aj: czytać → czytaj."
+        },
+        {
+          "wrong": "Mówić po polsku!",
+          "right": "Mów po polsku!",
+          "note": "У глаголов на -ić императив часто совпадает с основой 3-го лица без -i: mówić → mów."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Скажите по-польски: «Пиши письмо!» (от глагола pisać)",
+          "answer": "Pisz list!"
+        },
+        {
+          "prompt": "Скажите по-польски: «Открой окно!» (от глагола otworzyć)",
+          "answer": "Otwórz okno!"
+        },
+        {
+          "prompt": "Скажите по-польски: «Покупай хлеб!» (от глагола kupować)",
+          "answer": "Kupuj chleb!"
+        }
+      ]
+    },
+    {
+      "rule_id": "motion-verbs-iść-vs-chodzić",
+      "topic": "Motion verbs: iść vs chodzić",
+      "title": "Глаголы движения: iść и chodzić",
+      "explanation": "В польском языке, как и в русском, различают определённое и неопределённое движение. Глагол 'iść' обозначает однонаправленное действие в данный момент (сейчас куда-то идти). Глагол 'chodzić' обозначает многократное, привычное действие или способность (ходить вообще). Ошибка возникает, когда эти глаголы путают в настоящем времени.",
+      "examples": [
+        {
+          "wrong": "Idę do szkoły codziennie.",
+          "right": "Chodzę do szkoły codziennie.",
+          "note": "Для регулярного действия нужно использовать 'chodzić'."
+        },
+        {
+          "wrong": "Chodzę teraz do sklepu.",
+          "right": "Idę teraz do sklepu.",
+          "note": "Для конкретного действия в данный момент нужно 'iść'."
+        },
+        {
+          "wrong": "On idzie na spacery.",
+          "right": "On chodzi na spacery.",
+          "note": "Привычка выражается глаголом 'chodzić'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите: 'Я иду в кино сейчас'.",
+          "answer": "Idę do kina."
+        },
+        {
+          "prompt": "Переведите: 'Я хожу в кино каждую неделю'.",
+          "answer": "Chodzę do kina co tydzień."
+        },
+        {
+          "prompt": "Заполните пропуск: 'On ___ do pracy pieszo (обычно)'.",
+          "answer": "chodzi"
+        }
+      ]
+    },
+    {
+      "rule_id": "verbs-of-placing-kłaść-stawiać-etc",
+      "topic": "Verbs of placing: kłaść, stawiać, etc.",
+      "title": "Глаголы размещения: kłaść, stawiać и другие",
+      "explanation": "В польском языке выбор глагола зависит от того, как предмет располагается: вертикально (stawiać) или горизонтально (kłaść). Русскоязычные часто путают их, используя kłaść для предметов, которые нужно ставить, или наоборот. Запомните: если предмет стоит на основании (стакан, ваза, книга вертикально) — stawiać; если лежит плашмя (книга на столе, одежда в шкафу) — kłaść.",
+      "examples": [
+        {
+          "wrong": "Kładę szklankę na stole.",
+          "right": "Stawiam szklankę na stole.",
+          "note": "Стакан ставят вертикально, поэтому нужен глагол stawiać."
+        },
+        {
+          "wrong": "Stawiam książkę na półce.",
+          "right": "Kładę książkę na półce.",
+          "note": "Если книга лежит плашмя, используйте kłaść."
+        },
+        {
+          "wrong": "Kładę wazon na komodzie.",
+          "right": "Stawiam wazon na komodzie.",
+          "note": "Ваза ставится на основание, поэтому stawiać."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Как сказать по-польски: «Я ставлю тарелку на стол» (тарелка стоит на дне)?",
+          "answer": "Stawiam talerz na stole."
+        },
+        {
+          "prompt": "Переведите: «Я кладу рубашку в шкаф» (рубашка лежит).",
+          "answer": "Kładę koszulę do szafy."
+        },
+        {
+          "prompt": "Выберите правильный глагол: «Я ___ бутылку на пол» (бутылка стоит вертикально).",
+          "answer": "Stawiam"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-to-as-subject-vs-pronoun",
+      "topic": "Use of 'to' as subject vs pronoun",
+      "title": "Использование 'to' как подлежащего и местоимения",
+      "explanation": "В польском языке 'to' (это) используется как подлежащее только для среднего рода или в указательных конструкциях. Для мужского (on) и женского (ona) рода конкретных лиц или предметов нужно использовать личные местоимения, а не 'to'. Ошибка возникает, когда русское 'это' переносится на все ситуации без учёта рода.",
+      "examples": [
+        {
+          "wrong": "To jest dobry",
+          "right": "On jest dobry",
+          "note": "Говоря о конкретном мужчине, используйте 'on', а не 'to'."
+        },
+        {
+          "wrong": "To jest piękna",
+          "right": "Ona jest piękna",
+          "note": "Для известного лица женского пола ставьте 'ona'."
+        },
+        {
+          "wrong": "To jest duży stół? (о столе мужского рода)",
+          "right": "Czy on jest duży?",
+          "note": "Если речь о ранее упомянутом предмете мужского рода, используйте 'on'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильное местоимение: (о мужчине) ___ jest wysoki.",
+          "answer": "On"
+        },
+        {
+          "prompt": "Вставьте правильное местоимение: (о женщине) ___ jest sympatyczna.",
+          "answer": "Ona"
+        },
+        {
+          "prompt": "Вставьте правильное местоимение: (о нейтральном предмете, например, окно) ___ jest duże.",
+          "answer": "To"
+        }
+      ]
+    },
+    {
+      "rule_id": "relative-pronouns-który-vs-jaki",
+      "topic": "Relative pronouns 'który' vs 'jaki'",
+      "title": "Относительные местоимения 'który' и 'jaki'",
+      "explanation": "Местоимение 'który' (который) используется для указания на конкретный, известный предмет или лицо из множества (какой именно?). 'Jaki' (какой) описывает качество, характеристику или тип, но не выделяет конкретный объект. Ошибка возникает, когда вместо 'który' ставят 'jaki' в определительных придаточных предложениях.",
+      "examples": [
+        {
+          "wrong": "To jest książka, **jaką** czytałem wczoraj.",
+          "right": "To jest książka, **którą** czytałem wczoraj.",
+          "note": "Здесь речь о конкретной книге (которую я читал вчера), поэтому нужен 'który'."
+        },
+        {
+          "wrong": "Szukam osoby, **jaka** zna polski.",
+          "right": "Szukam osoby, **która** zna polski.",
+          "note": "Говорится об определённом человеке (том, кто знает польский), а не о типе."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильное относительное местоимение: 'Mam samochód, ___ kupiłem w zeszłym roku.'",
+          "answer": "który"
+        },
+        {
+          "prompt": "Вставьте правильное местоимение: 'Spotkałem dziewczynę, ___ ma niebieskie oczy.'",
+          "answer": "która"
+        },
+        {
+          "prompt": "Выберите верный вариант: 'To jest film, (jaki / który) polecałeś.'",
+          "answer": "który"
+        }
+      ]
+    },
+    {
+      "rule_id": "question-word-czy",
+      "topic": "Question word 'czy'",
+      "title": "Вопросительное слово 'czy'",
+      "explanation": "В польском языке для образования общего вопроса (на который можно ответить 'да' или 'нет') в начале предложения обязательно ставится слово 'czy'. Русские часто пропускают его, опираясь только на интонацию, но в польском это считается ошибкой. Запомните: любой общий вопрос начинается с 'czy'.",
+      "examples": [
+        {
+          "wrong": "Masz kota?",
+          "right": "Czy masz kota?",
+          "note": "В русском 'У тебя есть кот?' – без вопросительного слова, в польском нужно 'czy'."
+        },
+        {
+          "wrong": "Jesteś studentem?",
+          "right": "Czy jesteś studentem?",
+          "note": "Сравните: 'Ты студент?' – в польском обязательно 'czy'."
+        },
+        {
+          "wrong": "Lubi pan kawę?",
+          "right": "Czy lubi pan kawę?",
+          "note": "Даже в вежливой форме с 'pan/pani' 'czy' обязательно."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите по-польски общий вопрос 'Ты говоришь по-английски?'",
+          "answer": "Czy mówisz po angielsku?"
+        },
+        {
+          "prompt": "Как спросить 'Она придет завтра?'",
+          "answer": "Czy ona przyjdzie jutro?"
+        },
+        {
+          "prompt": "Составьте вопрос 'Вы любите читать?' (вежливая форма, к мужчине)",
+          "answer": "Czy lubi pan czytać?"
+        }
+      ]
+    },
+    {
+      "rule_id": "adverbs-bardzo-vs-dużo-vs-wiele",
+      "topic": "Adverbs: 'bardzo' vs 'dużo' vs 'wiele'",
+      "title": "Наречия: 'bardzo', 'dużo', 'wiele' – как не запутаться?",
+      "explanation": "Bardzo означает 'очень' и используется с прилагательными и наречиями (например, bardzo dobry – очень хороший). Dużo и wiele означают 'много' и употребляются с существительными (например, dużo pieniędzy – много денег). Dużo – более разговорный вариант, wiele – книжный или формальный. Не используйте bardzo для обозначения количества!",
+      "examples": [
+        {
+          "wrong": "Mam bardzo pieniędzy.",
+          "right": "Mam dużo pieniędzy.",
+          "note": "Bardzo нельзя использовать для количества – нужен dużo или wiele."
+        },
+        {
+          "wrong": "Ona ma bardzo książek.",
+          "right": "Ona ma wiele książek.",
+          "note": "С существительными во множественном числе часто используется wiele (более формально)."
+        },
+        {
+          "wrong": "Jest bardzo ludzi na plaży.",
+          "right": "Jest dużo ludzi na plaży.",
+          "note": "Dużo – самый естественный выбор для разговорной речи."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на польский: 'У меня очень много времени'. Используйте 'dużo'.",
+          "answer": "Mam dużo czasu."
+        },
+        {
+          "prompt": "Исправьте ошибку: 'Ona ma bardzo przyjaciół'.",
+          "answer": "Ona ma dużo przyjaciół."
+        },
+        {
+          "prompt": "Выберите правильное слово: 'To jest ... dobre' (bardzo / dużo) – завершите фразу.",
+          "answer": "bardzo"
+        }
+      ]
+    },
+    {
+      "rule_id": "expressing-age-and-temperature-mieć-vs-być",
+      "topic": "Expressing age and temperature: mieć vs być",
+      "title": "Выражение возраста и температуры: mieć vs być",
+      "explanation": "В польском языке для выражения возраста используется глагол mieć (иметь): 'Mam 10 lat'. Для выражения температуры (погоды) используется глагол być (быть): 'Jest 20 stopni'. Ошибка возникает из-за того, что в русском в обоих случаях используется 'быть'.",
+      "examples": [
+        {
+          "wrong": "Jestem 10 lat.",
+          "right": "Mam 10 lat.",
+          "note": "Возраст — всегда mieć."
+        },
+        {
+          "wrong": "Dzisiaj ma 30 stopni.",
+          "right": "Dzisiaj jest 30 stopni.",
+          "note": "Температура погоды — всегда być."
+        },
+        {
+          "wrong": "Ona jest 25 lat.",
+          "right": "Ona ma 25 lat.",
+          "note": "О возрасте человека — иметь."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Заполните пропуск: 'Ja ___ 8 lat.'",
+          "answer": "mam"
+        },
+        {
+          "prompt": "Заполните пропуск: 'Wczoraj ___ bardzo zimno, tylko 5 stopni.'",
+          "answer": "było"
+        },
+        {
+          "prompt": "Выберите правильный вариант: 'On (jest / ma) 40 lat.'",
+          "answer": "ma"
+        }
+      ]
+    },
+    {
+      "rule_id": "verb-agreement-with-numerals-jest-vs-są",
+      "topic": "Verb agreement with numerals (jest vs są)",
+      "title": "Согласование глагола с числительными: jest vs są",
+      "explanation": "В польском языке с числительными 2, 3, 4 существительное стоит в именительном падеже множественного числа, а глагол — во множественном числе (są). В русском же с этими числительными существительное в родительном падеже единственного числа, а глагол в единственном числе, поэтому русскоговорящие часто ошибочно используют jest вместо są.",
+      "examples": [
+        {
+          "wrong": "Dwa jabłka jest na stole.",
+          "right": "Dwa jabłka są na stole.",
+          "note": "С числительным 'dwa' (2) глагол должен быть во множественном числе."
+        },
+        {
+          "wrong": "Trzy książki jest na półce.",
+          "right": "Trzy książki są na półce.",
+          "note": "С числительным 'trzy' (3) также нужно są."
+        },
+        {
+          "wrong": "Cztery koty jest w domu.",
+          "right": "Cztery koty są w domu.",
+          "note": "И с 'cztery' (4) требуются są."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Заполните пропуск в предложении: 'Na stole ___ dwa talerze.'",
+          "answer": "są"
+        },
+        {
+          "prompt": "Заполните пропуск в предложении: 'W pokoju ___ trzy krzesła.'",
+          "answer": "są"
+        },
+        {
+          "prompt": "Заполните пропуск в предложении: 'Na podwórku ___ cztery psy.'",
+          "answer": "są"
+        }
+      ]
+    }
+  ]
+}

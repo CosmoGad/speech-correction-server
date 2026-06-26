@@ -1,0 +1,891 @@
+{
+  "learning": "it",
+  "interface": "en",
+  "generated_at": "2026-06-26T12:18:00.012229+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "articoli",
+      "topic": "Articoli",
+      "title": "Missing Definite Articles in General Statements",
+      "explanation": "In Italian, you must use the definite article (il, la, i, le) when talking about general categories or expressing likes. English often omits the article here, so beginners commonly forget it. For example, say 'Mi piace la pizza' instead of 'Mi piace pizza'.",
+      "examples": [
+        {
+          "wrong": "Mi piace pizza.",
+          "right": "Mi piace la pizza.",
+          "note": "Use 'la' before feminine singular nouns like 'pizza' when expressing a general like."
+        },
+        {
+          "wrong": "Gatti sono simpatici.",
+          "right": "I gatti sono simpatici.",
+          "note": "Use 'i' for masculine plural nouns in general statements about a category."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I like coffee.'",
+          "answer": "Mi piace il caffè."
+        },
+        {
+          "prompt": "Fill in the blank: '___ cani sono fedeli.' (Dogs are loyal)",
+          "answer": "I cani sono fedeli."
+        },
+        {
+          "prompt": "Correct the mistake: 'Adoro gelato.'",
+          "answer": "Adoro il gelato."
+        }
+      ]
+    },
+    {
+      "rule_id": "concordanza-dei-tempi",
+      "topic": "Concordanza dei tempi",
+      "title": "Tense Agreement (Concordanza dei Tempi)",
+      "explanation": "In Italian, when the main verb is in a past tense (e.g., passato prossimo, imperfetto), the verb in the dependent clause must also be in a past tense (usually imperfetto or trapassato) or the conditional. A common mistake is to keep the present tense, which breaks the temporal logic.",
+      "examples": [
+        {
+          "wrong": "Sapevo che tu sei italiano.",
+          "right": "Sapevo che tu eri italiano.",
+          "note": "The main verb 'sapevo' is past, so the subordinate verb must also be past ('eri') to show the fact was true at that time."
+        },
+        {
+          "wrong": "Ieri ho incontrato Marco che lavora a Roma.",
+          "right": "Ieri ho incontrato Marco che lavorava a Roma.",
+          "note": "The action of working was ongoing at the time of the encounter, so use imperfetto."
+        },
+        {
+          "wrong": "Ho detto che amo la pizza.",
+          "right": "Ho detto che amavo la pizza.",
+          "note": "The statement about loving pizza was made in the past, so the preference should be expressed in the past tense."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complete the sentence with the correct tense: 'Lei mi ha detto che (vivere) a Milano.'",
+          "answer": "viveva"
+        },
+        {
+          "prompt": "Correct the mistake: 'Ho pensato che il film è bello.'",
+          "answer": "era"
+        },
+        {
+          "prompt": "Fill in the blank: 'Non sapevo che tu (essere) malato ieri.'",
+          "answer": "fossi"
+        }
+      ]
+    },
+    {
+      "rule_id": "preposizioni",
+      "topic": "Preposizioni",
+      "title": "Prepositions: 'da' vs 'di' for Origin",
+      "explanation": "In Italian, use 'di' to express where you are from (origin) after the verb 'essere' (to be). Use 'da' to indicate movement from a place after verbs like 'venire' (to come). A common mistake is using 'da' after 'essere' to state origin—for example, saying 'Sono da Roma' instead of the correct 'Sono di Roma'.",
+      "examples": [
+        {
+          "wrong": "Sono da Milano.",
+          "right": "Sono di Milano.",
+          "note": "With 'essere' (to be), use 'di' for origin, not 'da'."
+        },
+        {
+          "wrong": "Vengo di Firenze.",
+          "right": "Vengo da Firenze.",
+          "note": "With 'venire' (to come), use 'da' for movement from a place."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank: 'Io sono ___ Roma.'",
+          "answer": "di"
+        },
+        {
+          "prompt": "Fill in the blank: 'Loro vengono ___ Londra.'",
+          "answer": "da"
+        },
+        {
+          "prompt": "Fill in the blank: 'Marco è ___ Milano, ma adesso vive a Roma.'",
+          "answer": "di"
+        }
+      ]
+    },
+    {
+      "rule_id": "congiuntivo",
+      "topic": "Congiuntivo",
+      "title": "Mastering the Italian Subjunctive (Congiuntivo)",
+      "explanation": "The congiuntivo is a verb mood used to express doubt, uncertainty, wishes, emotions, or opinions. A common mistake is using the indicative (normal verbs) after phrases like 'penso che' or 'è importante che' – but these always require the subjunctive. For beginners, remember: if the main clause shows subjectivity (wanting, thinking, hoping), the dependent verb must be in congiuntivo.",
+      "examples": [
+        {
+          "wrong": "Penso che lui viene domani.",
+          "right": "Penso che lui venga domani.",
+          "note": "After 'penso che' (I think that), the verb must be subjunctive: 'venga' instead of 'viene'."
+        },
+        {
+          "wrong": "È importante che tu studi molto.",
+          "right": "È importante che tu studi molto.",
+          "note": "This is already correct! 'studi' is the subjunctive form. Many learners mistakenly use 'studi' as indicative but it's right here."
+        },
+        {
+          "wrong": "Spero che lui arriva in tempo.",
+          "right": "Spero che lui arrivi in tempo.",
+          "note": "After 'spero che' (I hope that), use the subjunctive 'arrivi' not the indicative 'arriva'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank with the correct subjunctive form of 'fare': Dubito che lui _____ i compiti.",
+          "answer": "faccia"
+        },
+        {
+          "prompt": "Fill in the blank with the correct subjunctive form of 'essere': Voglio che tu _____ felice.",
+          "answer": "sia"
+        },
+        {
+          "prompt": "Fill in the blank with the correct subjunctive form of 'potere': Sebbene lui _____ venire, non è sicuro.",
+          "answer": "possa"
+        }
+      ]
+    },
+    {
+      "rule_id": "consonanti-doppie",
+      "topic": "Consonanti doppie",
+      "title": "Double Consonants (Consonanti Doppie)",
+      "explanation": "In Italian, double consonants are pronounced with a longer, stronger sound than single consonants. Using the wrong number of consonants can change the meaning of a word (e.g., 'fato' = fate, 'fatto' = fact). Always double the consonant when you hear it held longer in speech.",
+      "examples": [
+        {
+          "wrong": "pala",
+          "right": "palla",
+          "note": "Single 'l' means shovel; double 'll' means ball."
+        },
+        {
+          "wrong": "sete",
+          "right": "sette",
+          "note": "Single 't' means thirst; double 'tt' means seven."
+        },
+        {
+          "wrong": "fato",
+          "right": "fatto",
+          "note": "Single 't' means fate; double 'tt' means done/fact."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the correct Italian word for 'year' (double consonant needed).",
+          "answer": "anno"
+        },
+        {
+          "prompt": "What is the Italian word for 'cat' (double 't')?",
+          "answer": "gatto"
+        },
+        {
+          "prompt": "Spell the Italian word that means 'book' (double 'p' and double 'l').",
+          "answer": "libro"
+        }
+      ]
+    },
+    {
+      "rule_id": "accento",
+      "topic": "Accento",
+      "title": "Accent Marks in Italian: Don't Forget Them!",
+      "explanation": "In Italian, accent marks are not just decorative—they change the meaning and pronunciation of words. The most common mistake is confusing 'e' (and) with 'è' (he/she/it is), or forgetting the accent on words like 'perché' (because/why). Always place the accent on the final vowel of stressed words like 'città', 'così', and 'però'.",
+      "examples": [
+        {
+          "wrong": "Lui e alto.",
+          "right": "Lui è alto.",
+          "note": "'e' means 'and'; 'è' with an accent means 'is'."
+        },
+        {
+          "wrong": "Non so perche.",
+          "right": "Non so perché.",
+          "note": "'perché' always has an accent on the final 'e'."
+        },
+        {
+          "wrong": "Vivo in una citta.",
+          "right": "Vivo in una città.",
+          "note": "Words like 'città' (city) end with a stressed 'a' that requires an accent."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank: 'Maria ___ (is) molto simpatica.'",
+          "answer": "è"
+        },
+        {
+          "prompt": "Write the correct Italian word for 'because' in this sentence: '___ (Because) non ho tempo.'",
+          "answer": "Perché"
+        },
+        {
+          "prompt": "Correct the misspelling: 'Vado a casa, pero non ho chiavi.'",
+          "answer": "però"
+        }
+      ]
+    },
+    {
+      "rule_id": "intonazione",
+      "topic": "Intonazione",
+      "title": "Intonation: Statements vs. Questions in Italian",
+      "explanation": "In Italian, the intonation pattern at the end of a sentence changes its meaning. A statement ends with a falling tone, while a yes/no question ends with a rising tone. A common mistake by English speakers is using a rising tone on a statement, which can make it sound like a question.",
+      "examples": [
+        {
+          "wrong": "Sei stanco? (with rising intonation, but meant as a statement)",
+          "right": "Sei stanco.",
+          "note": "Use falling intonation for statements, even if the words are the same as a question."
+        },
+        {
+          "wrong": "Vieni al cinema. (with falling intonation, but meant as a question)",
+          "right": "Vieni al cinema?",
+          "note": "Use rising intonation for yes/no questions. The word order stays the same."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the Italian sentence for 'You speak Italian' as a statement (use correct punctuation).",
+          "answer": "Parli italiano."
+        },
+        {
+          "prompt": "Write the Italian sentence for 'Do you speak Italian?' (use correct punctuation).",
+          "answer": "Parli italiano?"
+        },
+        {
+          "prompt": "You hear someone say 'Andiamo al mare' with falling intonation. Write the sentence with the correct punctuation.",
+          "answer": "Andiamo al mare."
+        }
+      ]
+    },
+    {
+      "rule_id": "imperfetto-vs-passato-prossimo",
+      "topic": "Imperfetto vs passato prossimo",
+      "title": "Imperfetto vs Passato Prossimo: When to Use Which",
+      "explanation": "Use passato prossimo for completed actions or events that happened at a specific point in the past. Use imperfetto for ongoing or habitual actions, descriptions, or background context in the past. A common mistake is using imperfetto for a single completed event or passato prossimo for a repeated action.",
+      "examples": [
+        {
+          "wrong": "Ieri mangiavo la pizza.",
+          "right": "Ieri ho mangiato la pizza.",
+          "note": "Use passato prossimo (ho mangiato) for a single completed action at a specific time."
+        },
+        {
+          "wrong": "Quando ero bambino, ho giocato al parco ogni giorno.",
+          "right": "Quando ero bambino, giocavo al parco ogni giorno.",
+          "note": "Use imperfetto (giocavo) for habitual actions in the past."
+        },
+        {
+          "wrong": "Mentre studiavo, sentivo un rumore.",
+          "right": "Mentre studiavo, ho sentito un rumore.",
+          "note": "Use passato prossimo (ho sentito) for a specific event that interrupts an ongoing action."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complete with the correct tense: Ieri (io) ________ (andare) al cinema.",
+          "answer": "sono andato"
+        },
+        {
+          "prompt": "Complete: Da bambino, (io) ________ (giocare) sempre con i Lego.",
+          "answer": "giocavo"
+        },
+        {
+          "prompt": "Complete: Mentre (loro) ________ (dormire), il telefono ________ (squillare).",
+          "answer": "dormivano, ha squillato"
+        }
+      ]
+    },
+    {
+      "rule_id": "omission-of-subject-pronouns",
+      "topic": "Omission of subject pronouns",
+      "title": "When to Use Subject Pronouns in Italian (Don't Omit Them!)",
+      "explanation": "Italian often omits subject pronouns because verb endings indicate who does the action. However, you must include them when the verb form is ambiguous (e.g., third person singular 'parla' could mean he/she/you formal) or when you want to emphasize or contrast the subject. Omitting them in these cases can cause confusion.",
+      "examples": [
+        {
+          "wrong": "Parla italiano.",
+          "right": "Lui parla italiano.",
+          "note": "Without context, 'parla' could mean 'he speaks', 'she speaks', or 'you speak' (formal). Use 'lui' to specify 'he'."
+        },
+        {
+          "wrong": "Vado al cinema, ma non viene.",
+          "right": "Vado al cinema, ma lui non viene.",
+          "note": "In a contrast, include the pronoun to make clear who is not coming."
+        },
+        {
+          "wrong": "È simpatico.",
+          "right": "Lei è simpatica.",
+          "note": "If referring to a female, you must specify 'lei' because the verb and adjective agree, but the pronoun avoids confusion about the subject's gender."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Make it clear that 'she' speaks English (not just 'parla inglese').",
+          "answer": "Lei parla inglese."
+        },
+        {
+          "prompt": "Emphasize that 'you' (formal, singular) are going to the store, not someone else.",
+          "answer": "Lei va al negozio."
+        },
+        {
+          "prompt": "Correct this ambiguous sentence by adding the appropriate pronoun (context: talking about a male friend): 'Viene stasera.'",
+          "answer": "Lui viene stasera."
+        }
+      ]
+    },
+    {
+      "rule_id": "adjective-agreement-gender-number",
+      "topic": "Adjective agreement gender number",
+      "title": "Adjective Agreement: Gender and Number",
+      "explanation": "In Italian, adjectives must agree in gender (masculine/feminine) and number (singular/plural) with the noun they describe. The typical endings are -o for masculine singular, -a for feminine singular, -i for masculine plural, and -e for feminine plural. A common mistake is using the wrong ending, especially with feminine nouns or plural forms.",
+      "examples": [
+        {
+          "wrong": "Il libro rosso",
+          "right": "Il libro rosso",
+          "note": "Correct: 'libro' is masculine singular, so 'rosso' is correct. (If the mistake were 'rossa' it would be wrong.)"
+        },
+        {
+          "wrong": "La casa bianco",
+          "right": "La casa bianca",
+          "note": "'Casa' is feminine singular, so the adjective must end in -a: 'bianca'."
+        },
+        {
+          "wrong": "I ragazzi alti",
+          "right": "I ragazzi alti",
+          "note": "Correct: 'ragazzi' is masculine plural, so 'alti' is correct. (A common error would be using 'alto' or 'alte'.)"
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'the red car' (car = macchina, feminine singular).",
+          "answer": "La macchina rossa"
+        },
+        {
+          "prompt": "Make the adjective agree: 'I libri (grande)'. (libri = books, masculine plural)",
+          "answer": "I libri grandi"
+        },
+        {
+          "prompt": "Correct the mistake: 'Le ragazze americano' (ragazze = girls, feminine plural).",
+          "answer": "Le ragazze americane"
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-verbs-and-reciprocals",
+      "topic": "Reflexive verbs and reciprocals",
+      "title": "Reflexive vs Reciprocal Verbs",
+      "explanation": "Reflexive verbs indicate an action done to oneself (e.g., 'I wash myself'), while reciprocal verbs indicate an action done mutually (e.g., 'we hug each other'). A common mistake is confusing the reflexive pronouns 'mi, ti, si, ci, vi' with the need for a plural verb and context to show reciprocity. In Italian, the same reflexive pronoun can express both meanings, but the verb must agree with the subject and the context clarifies the intent.",
+      "examples": [
+        {
+          "wrong": "Loro si ama.",
+          "right": "Loro si amano.",
+          "note": "The verb must be plural because the subject 'loro' is plural. 'Si amano' can mean 'they love each other' (reciprocal) or 'they love themselves' (reflexive), depending on context."
+        },
+        {
+          "wrong": "Noi si laviamo le mani.",
+          "right": "Noi ci laviamo le mani.",
+          "note": "For first person plural, use 'ci', not 'si'. 'Ci laviamo' means 'we wash ourselves' (reflexive) or can imply mutual washing only with additional context."
+        },
+        {
+          "wrong": "Maria e Luca si bacia.",
+          "right": "Maria e Luca si baciano.",
+          "note": "With a compound subject (Maria e Luca), use the plural verb form. 'Si baciano' likely means 'they kiss each other' (reciprocal)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'We see each other every day.' (use the reciprocal meaning)",
+          "answer": "Noi ci vediamo ogni giorno."
+        },
+        {
+          "prompt": "Correct the mistake: 'I due amici si parlano' is already correct, but if someone says 'I due amici si parla', what is the right form?",
+          "answer": "I due amici si parlano."
+        }
+      ]
+    },
+    {
+      "rule_id": "piacere-and-similar-verbs",
+      "topic": "Piacere and similar verbs",
+      "title": "Using 'Piacere' and Similar Verbs",
+      "explanation": "In Italian, verbs like 'piacere' (to like) work backwards compared to English: the thing you like is the subject of the verb, and the person who likes it is the indirect object. So you use indirect object pronouns (mi, ti, gli/le, ci, vi, gli) and the verb agrees with the subject (the thing liked), not the person. This rule also applies to verbs like 'mancare' (to miss) and 'servire' (to need).",
+      "examples": [
+        {
+          "wrong": "Io piaccio la pizza.",
+          "right": "Mi piace la pizza.",
+          "note": "Here 'la pizza' is the subject (singular), so we use 'piace'. The pronoun 'mi' means 'to me'."
+        },
+        {
+          "wrong": "Loro piacciono i libri.",
+          "right": "A loro piacciono i libri.",
+          "note": "The subject 'i libri' is plural, so the verb becomes 'piacciono'. 'A loro' emphasizes the indirect object."
+        },
+        {
+          "wrong": "Tu manchi io.",
+          "right": "Mi manchi tu.",
+          "note": "With 'mancare', 'tu' (you) is the subject, and 'mi' (to me) is the object. The verb 'manchi' agrees with 'tu'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: I like cats. (Use the plural subject 'cats'.)",
+          "answer": "Mi piacciono i gatti."
+        },
+        {
+          "prompt": "Translate: Do you (informal) like the movie?",
+          "answer": "Ti piace il film?"
+        },
+        {
+          "prompt": "Translate: We miss our friends. (Use 'mancare'.)",
+          "answer": "Ci mancano i nostri amici."
+        }
+      ]
+    },
+    {
+      "rule_id": "ci-locative-pronoun-usage",
+      "topic": "Ci locative pronoun usage",
+      "title": "Using 'Ci' as a Locative Pronoun (There)",
+      "explanation": "In Italian, the pronoun 'ci' replaces a previously mentioned place introduced by prepositions like 'a', 'in', or 'da' (when meaning 'to/at/in a place'). It corresponds to 'there' or 'to it/at it' in English. A common mistake is using 'lo', 'la', or 'gli' instead of 'ci'. Remember: 'ci' is only for locations, not for people or objects.",
+      "examples": [
+        {
+          "wrong": "Vado a Roma. Lo vado domani.",
+          "right": "Vado a Roma. Ci vado domani.",
+          "note": "‘Lo’ is used for masculine objects, not for places. ‘Ci’ replaces ‘a Roma’."
+        },
+        {
+          "wrong": "Sei a casa? Sì, mi sono.",
+          "right": "Sei a casa? Sì, ci sono.",
+          "note": "‘Mi’ is a reflexive or indirect object pronoun. ‘Ci’ is correct for ‘at home’."
+        },
+        {
+          "wrong": "Penso alla festa. Gli penso molto.",
+          "right": "Penso alla festa. Ci penso molto.",
+          "note": "‘Gli’ means ‘to him’. For things/places introduced by ‘a’, use ‘ci’."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Replace 'a Parigi' with the correct pronoun: 'Vado a Parigi ogni estate. ______ vado ogni estate.'",
+          "answer": "Ci"
+        },
+        {
+          "prompt": "You are asked 'Sei in biblioteca?' Respond 'Yes, I am there' using 'ci'.",
+          "answer": "Sì, ci sono."
+        },
+        {
+          "prompt": "Correct the mistake: 'Vado a Milano. Lo vado spesso.'",
+          "answer": "Vado a Milano. Ci vado spesso."
+        }
+      ]
+    },
+    {
+      "rule_id": "ne-partitive-and-topic-pronoun",
+      "topic": "Ne partitive and topic pronoun",
+      "title": "Understanding 'Ne': Partitive vs. Topic Pronoun",
+      "explanation": "In Italian, 'ne' has two common uses: as a partitive pronoun meaning 'of it/them' (e.g., 'Ne ho due' = 'I have two of them'), and as a topic pronoun meaning 'about it/them' (e.g., 'Ne parliamo' = 'We talk about it'). Learners often confuse them by using 'ne' where a direct object pronoun is needed, or by omitting it when required. Remember: 'ne' replaces a phrase introduced by 'di' (of/about) or a quantity, not a direct object.",
+      "examples": [
+        {
+          "wrong": "Ho due mele. Ho due.",
+          "right": "Ho due mele. Ne ho due.",
+          "note": "Use 'ne' to replace 'di mele' (of apples) when saying how many you have."
+        },
+        {
+          "wrong": "Parlo di Mario. Parlo lo.",
+          "right": "Parlo di Mario. Ne parlo.",
+          "note": "Use 'ne' to replace 'di Mario' (about Mario) when referencing the topic of discussion."
+        },
+        {
+          "wrong": "Voglio del pane. Voglio ne.",
+          "right": "Voglio del pane. Ne voglio.",
+          "note": "Place 'ne' before the conjugated verb, not after."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How would you say 'I have three of them' (referring to books)?",
+          "answer": "Ne ho tre."
+        },
+        {
+          "prompt": "Translate: 'We speak about it' (referring to the problem).",
+          "answer": "Ne parliamo."
+        },
+        {
+          "prompt": "Complete: 'Mangio della pizza. ______ mangio.' (use ne)",
+          "answer": "Ne"
+        }
+      ]
+    },
+    {
+      "rule_id": "auxiliary-essere-vs-avere",
+      "topic": "Auxiliary essere vs avere",
+      "title": "Choosing the Right Auxiliary: 'Essere' vs 'Avere' in Passato Prossimo",
+      "explanation": "In Italian, the passato prossimo (present perfect) is formed with an auxiliary verb: either 'avere' or 'essere'. Use 'avere' for most transitive verbs (verbs that take a direct object) and some intransitive ones. Use 'essere' for verbs of motion, change of state, reflexive/reciprocal verbs, and many intransitive verbs. When using 'essere', the past participle must agree in gender and number with the subject.",
+      "examples": [
+        {
+          "wrong": "Ho andato al mercato.",
+          "right": "Sono andato al mercato.",
+          "note": "'Andare' (to go) is a motion verb, so it takes 'essere'."
+        },
+        {
+          "wrong": "Sono mangiato una mela.",
+          "right": "Ho mangiato una mela.",
+          "note": "'Mangiare' (to eat) is transitive (takes a direct object: una mela), so it takes 'avere'."
+        },
+        {
+          "wrong": "Maria ha diventata alta.",
+          "right": "Maria è diventata alta.",
+          "note": "'Diventare' (to become) is a change-of-state verb, so it takes 'essere', and the participle agrees with the subject (Maria, feminine)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank with the correct auxiliary (ho or sono): 'Ieri io ______ visto un film.'",
+          "answer": "ho"
+        },
+        {
+          "prompt": "Fill in the blank: 'Loro ______ partiti per Roma.' (Hint: partire is a motion verb.)",
+          "answer": "sono"
+        },
+        {
+          "prompt": "Choose the right auxiliary: 'Tu (hai / sei) comprato il pane?'",
+          "answer": "hai"
+        }
+      ]
+    },
+    {
+      "rule_id": "direct-indirect-object-pronouns",
+      "topic": "Direct indirect object pronouns",
+      "title": "Direct vs Indirect Object Pronouns: Lo/Gli, La/Le",
+      "explanation": "Direct object pronouns (lo, la, li, le) answer 'who?' or 'what?' and replace the direct object. Indirect object pronouns (gli, le) answer 'to whom?' or 'for whom?' and replace the indirect object. A common mistake is using 'gli' (for 'to him') instead of 'lo' (for 'him') when the verb takes a direct object.",
+      "examples": [
+        {
+          "wrong": "Gli vedo.",
+          "right": "Lo vedo.",
+          "note": "Use 'lo' because 'vedere' takes a direct object (I see him)."
+        },
+        {
+          "wrong": "Lo do un libro.",
+          "right": "Gli do un libro.",
+          "note": "Use 'gli' because 'dare' takes an indirect object (I give to him a book)."
+        },
+        {
+          "wrong": "Gli chiamo per telefono.",
+          "right": "La chiamo per telefono.",
+          "note": "Use 'la' because 'chiamare' takes a direct object (I call her). For feminine, 'le' is for indirect (to her)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I see her.'",
+          "answer": "La vedo."
+        },
+        {
+          "prompt": "Translate: 'I give to him the keys.'",
+          "answer": "Gli do le chiavi."
+        },
+        {
+          "prompt": "Translate: 'I call him.'",
+          "answer": "Lo chiamo."
+        }
+      ]
+    },
+    {
+      "rule_id": "andare-vs-venire",
+      "topic": "Andare vs venire",
+      "title": "Andare vs Venire: Go vs Come",
+      "explanation": "Use 'andare' when the movement is away from where you are (to go somewhere else). Use 'venire' when the movement is toward where you are or toward the listener (to come). Many learners confuse them, especially when inviting someone: 'Vieni da me?' (Are you coming to my place?) is correct, not 'Andi da me?'.",
+      "examples": [
+        {
+          "wrong": "Domani vado a casa tua.",
+          "right": "Domani vengo a casa tua.",
+          "note": "Since you are moving toward the listener's home, use 'venire' (come), not 'andare' (go)."
+        },
+        {
+          "wrong": "Puoi andare qui?",
+          "right": "Puoi venire qui?",
+          "note": "'Here' is where the speaker is, so use 'venire'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "You are at home and want to tell a friend you will go to the park. (Movement away from you)",
+          "answer": "Vado al parco."
+        },
+        {
+          "prompt": "You invite a friend to your party at your house. (Movement toward you)",
+          "answer": "Vieni alla mia festa?"
+        }
+      ]
+    },
+    {
+      "rule_id": "molto-troppo-tanto-differences",
+      "topic": "Molto troppo tanto differences",
+      "title": "Molto, Troppo, Tanto: Know the Difference",
+      "explanation": "Molto means 'much' or 'very' (neutral quantity), troppo means 'too much' (excess, often negative), and tanto means 'so much' or 'a lot' (emphatic but neutral). In positive statements, molto and tanto can often be used interchangeably, but troppo always implies that something is excessive or beyond what is needed.",
+      "examples": [
+        {
+          "wrong": "Ho troppo sonno.",
+          "right": "Ho molto sonno.",
+          "note": "Use 'molto' for 'very sleepy' (without excess). 'Troppo' means 'too sleepy' (excessive)."
+        },
+        {
+          "wrong": "C'è tanto cibo, non ne posso più.",
+          "right": "C'è troppo cibo, non ne posso più.",
+          "note": "Use 'troppo' when expressing excess (too much food). 'Tanto' is neutral (so much food) and doesn't imply a problem."
+        },
+        {
+          "wrong": "Ho molto amici.",
+          "right": "Ho tanti amici.",
+          "note": "Use 'tanto' (agreeing in gender/number) for 'so many friends' in positive, emphatic statements. 'Molto' is possible but less natural here."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complete the sentence: 'Ho ______ sonno' (I'm very sleepy).",
+          "answer": "molto"
+        },
+        {
+          "prompt": "Complete the sentence: 'Questo vestito è ______ caro per me' (This dress is too expensive for me).",
+          "answer": "troppo"
+        },
+        {
+          "prompt": "Complete the sentence: 'Ho ______ amici' (I have so many friends).",
+          "answer": "tanti"
+        }
+      ]
+    },
+    {
+      "rule_id": "sapere-vs-conoscere",
+      "topic": "Sapere vs conoscere",
+      "title": "Sapere vs Conoscere: Knowing the Difference",
+      "explanation": "In Italian, 'sapere' means to know facts, information, or how to do something (e.g., sapere la risposta, sapere cucinare). 'Conoscere' means to be familiar with or to know people, places, or things personally (e.g., conoscere Maria, conoscere Roma). Remember: sapere + che/come/quando, conoscere + noun/person.",
+      "examples": [
+        {
+          "wrong": "Io conosco la risposta.",
+          "right": "Io so la risposta.",
+          "note": "Use 'sapere' for knowing a fact or answer."
+        },
+        {
+          "wrong": "Lui sa il mio amico Marco.",
+          "right": "Lui conosce il mio amico Marco.",
+          "note": "Use 'conoscere' for being acquainted with a person."
+        },
+        {
+          "wrong": "Noi sappiamo molto bene Parigi.",
+          "right": "Noi conosciamo molto bene Parigi.",
+          "note": "Use 'conoscere' for familiarity with a place."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "I know how to swim.",
+          "answer": "Io so nuotare."
+        },
+        {
+          "prompt": "Do you know Sofia? (informal singular)",
+          "answer": "Conosci Sofia?"
+        },
+        {
+          "prompt": "They know the truth.",
+          "answer": "Loro sanno la verità."
+        }
+      ]
+    },
+    {
+      "rule_id": "potere-vs-riuscire",
+      "topic": "Potere vs riuscire",
+      "title": "Potere vs Riuscire: Two Ways to Say 'Can'",
+      "explanation": "In Italian, 'potere' means 'can' in the sense of having permission or being physically able, while 'riuscire' means 'to succeed in doing something' or 'to manage to do something' with a focus on the outcome or result. Use 'potere' for general ability or permission, and 'riuscire' when you want to emphasize that an action was successfully completed.",
+      "examples": [
+        {
+          "wrong": "Non posso a finire il compito ieri.",
+          "right": "Non sono riuscito a finire il compito ieri.",
+          "note": "Use 'riuscire' (in passato prossimo) to express that you didn't succeed in finishing, not 'potere'."
+        },
+        {
+          "wrong": "Oggi riesco andare al cinema?",
+          "right": "Oggi posso andare al cinema?",
+          "note": "Use 'potere' to ask for permission or if you have the possibility, not 'riuscire'."
+        },
+        {
+          "wrong": "Lui può parlare italiano molto bene.",
+          "right": "Lui riesce a parlare italiano molto bene.",
+          "note": "Use 'riuscire' to emphasize that he succeeds in speaking Italian well, as a learned skill; 'potere' would mean he is allowed or physically able."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I can't (i.e., I don't manage to) open the door.'",
+          "answer": "Non riesco ad aprire la porta."
+        },
+        {
+          "prompt": "Translate: 'Can I (permission) use your phone?'",
+          "answer": "Posso usare il tuo telefono?"
+        },
+        {
+          "prompt": "Translate: 'She managed to pass the exam.'",
+          "answer": "È riuscita a superare l'esame."
+        }
+      ]
+    },
+    {
+      "rule_id": "dovere-vs-avere-bisogno-di",
+      "topic": "Dovere vs avere bisogno di",
+      "title": "Dovere vs Avere Bisogno Di",
+      "explanation": "In Italian, 'dovere' expresses obligation or necessity imposed by an external rule (like 'must' or 'have to'), while 'avere bisogno di' indicates a personal need or requirement (like 'need'). A common mistake is using 'dovere' when you mean a personal need, or vice versa.",
+      "examples": [
+        {
+          "wrong": "Devo andare al bagno.",
+          "right": "Ho bisogno di andare al bagno.",
+          "note": "'Devo' sounds like an obligation, but going to the bathroom is a personal need. Use 'ho bisogno di'."
+        },
+        {
+          "wrong": "Ho bisogno di studiare stasera perché domani ho un esame.",
+          "right": "Devo studiare stasera perché domani ho un esame.",
+          "note": "Studying for an exam is an external obligation, so 'dovere' is correct."
+        },
+        {
+          "wrong": "Devo un po' d'acqua.",
+          "right": "Ho bisogno di un po' d'acqua.",
+          "note": "Water is a personal need, not an obligation. 'Avere bisogno di' expresses the need."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "You feel thirsty. How do you say 'I need water'?",
+          "answer": "Ho bisogno di acqua."
+        },
+        {
+          "prompt": "You have to finish your homework because your teacher expects it. How do you say 'I have to finish my homework'?",
+          "answer": "Devo finire i compiti."
+        },
+        {
+          "prompt": "Your car has no gas. You say 'I need to fill up' (fare benzina).",
+          "answer": "Ho bisogno di fare benzina."
+        }
+      ]
+    },
+    {
+      "rule_id": "relative-pronouns-che-vs-cui",
+      "topic": "Relative pronouns che vs cui",
+      "title": "Relative Pronouns: 'che' vs 'cui'",
+      "explanation": "In Italian, 'che' is used for the subject or direct object (who, that, which). 'Cui' is used after prepositions (to whom, for which, etc.) and often corresponds to 'whom' or 'which' in indirect contexts. A quick test: if you can replace it with 'il quale/la quale' and a preposition is needed, use 'cui'.",
+      "examples": [
+        {
+          "wrong": "La persona che ho parlato ieri.",
+          "right": "La persona con cui ho parlato ieri.",
+          "note": "After the preposition 'con', use 'cui' instead of 'che'."
+        },
+        {
+          "wrong": "Il libro cui ho comprato è interessante.",
+          "right": "Il libro che ho comprato è interessante.",
+          "note": "'Comprare' takes a direct object, so use 'che' (no preposition)."
+        },
+        {
+          "wrong": "La ragazza che ho dato il regalo.",
+          "right": "La ragazza a cui ho dato il regalo.",
+          "note": "The verb 'dare a' requires the preposition 'a' + 'cui'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Choose the correct pronoun: 'Il film ____ (che/cui) ho visto ieri era noioso.'",
+          "answer": "che"
+        },
+        {
+          "prompt": "Fill in the blank: 'La città ____ (che/cui) andiamo in vacanza è bellissima.'",
+          "answer": "cui"
+        },
+        {
+          "prompt": "Complete the sentence: 'Il progetto ____ (che/cui) stiamo lavorando è importante.'",
+          "answer": "cui"
+        }
+      ]
+    },
+    {
+      "rule_id": "stare-vs-essere-usage",
+      "topic": "Stare vs essere usage",
+      "title": "Stare vs Essere: Temporary vs Permanent States",
+      "explanation": "Use 'stare' for temporary conditions, locations, health, and ongoing actions (like 'stare + gerund'). Use 'essere' for permanent qualities, identity, origin, and inherent characteristics. A common mistake is using 'essere' when asking or describing how someone feels.",
+      "examples": [
+        {
+          "wrong": "Come sei?",
+          "right": "Come stai?",
+          "note": "'Come sei?' asks about personality or appearance; use 'Come stai?' for health or mood."
+        },
+        {
+          "wrong": "Io sono bene.",
+          "right": "Io sto bene.",
+          "note": "'Bene' is an adverb that goes with 'stare'; 'essere' requires an adjective (e.g., 'sono buono')."
+        },
+        {
+          "wrong": "Lui è seduto.",
+          "right": "Lui sta seduto.",
+          "note": "Positions are usually temporary, so 'stare' is preferred over 'essere'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'How are you?' (asking about health/state).",
+          "answer": "Come stai?"
+        },
+        {
+          "prompt": "Translate 'I am standing.'",
+          "answer": "Sto in piedi."
+        },
+        {
+          "prompt": "Translate 'He is studying.'",
+          "answer": "Lui sta studiando."
+        }
+      ]
+    },
+    {
+      "rule_id": "double-negatives-non-mai-nessuno",
+      "topic": "Double negatives non mai nessuno",
+      "title": "Double Negatives: Non, Mai, Nessuno",
+      "explanation": "In Italian, double (or even triple) negatives are correct and often required. Unlike English, you must use 'non' with words like 'mai' (never) and 'nessuno' (no one/anyone) to form a negative sentence. The mistake English speakers make is dropping the initial 'non' because they think it’s redundant.",
+      "examples": [
+        {
+          "wrong": "Mai ho visto nessuno.",
+          "right": "Non ho mai visto nessuno.",
+          "note": "Add 'non' before the verb even when 'mai' and 'nessuno' are present."
+        },
+        {
+          "wrong": "Non ho nessuno amico.",
+          "right": "Non ho nessun amico.",
+          "note": "With 'nessuno' before a masculine noun, drop the final -o (nessun). The 'non' stays."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I never eat anything.' Remember the triple negative.",
+          "answer": "Non mangio mai niente."
+        },
+        {
+          "prompt": "Correct the mistake: 'Nessuno ha detto niente.' (This sentence is actually correct, but the prompt is to check if they know it doesn't need a 'non' because 'nessuno' is the subject.) Wait, better prompt: 'Make it negative: I don't see anyone.'",
+          "answer": "Non vedo nessuno."
+        }
+      ]
+    },
+    {
+      "rule_id": "ordinal-numbers-for-dates",
+      "topic": "Ordinal numbers for dates",
+      "title": "Ordinal Numbers for Dates in Italian",
+      "explanation": "In Italian, dates are expressed with cardinal numbers (e.g., 2, 3, 4) rather than ordinal numbers (e.g., second, third, fourth). The only exception is the first day of the month, which uses the ordinal 'primo'. For example, 'Oggi è il 2 marzo' (not 'il secondo marzo'). This rule applies to all months.",
+      "examples": [
+        {
+          "wrong": "Oggi è il secondo gennaio.",
+          "right": "Oggi è il 2 gennaio.",
+          "note": "Use cardinal number '2' (or 'due') for the second day."
+        },
+        {
+          "wrong": "Il terzo maggio è il mio compleanno.",
+          "right": "Il 3 maggio è il mio compleanno.",
+          "note": "Do not use 'terzo'; use '3' (tre) instead."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How would you say 'Today is March 5th' in Italian?",
+          "answer": "Oggi è il 5 marzo."
+        },
+        {
+          "prompt": "Translate 'My birthday is on the first of July.'",
+          "answer": "Il mio compleanno è il primo luglio."
+        },
+        {
+          "prompt": "Write 'We meet on the 12th of April' in Italian.",
+          "answer": "Ci incontriamo il 12 aprile."
+        }
+      ]
+    }
+  ]
+}

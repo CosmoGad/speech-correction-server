@@ -1,0 +1,846 @@
+{
+  "learning": "it",
+  "interface": "ru",
+  "generated_at": "2026-06-26T12:22:09.337494+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "articoli",
+      "topic": "Articoli",
+      "title": "Использование артиклей в итальянском языке",
+      "explanation": "В итальянском языке почти всегда требуется ставить артикль перед существительным. Артикль согласуется с родом и числом. Русские говорящие часто пропускают артикли, что является типичной ошибкой.",
+      "examples": [
+        {
+          "wrong": "Mela è buona.",
+          "right": "La mela è buona.",
+          "note": "Перед существительным женского рода единственного числа нужен определённый артикль 'la'."
+        },
+        {
+          "wrong": "Ho visto gatto.",
+          "right": "Ho visto un gatto.",
+          "note": "Перед неопределённым существительным мужского рода единственного числа нужен артикль 'un'."
+        },
+        {
+          "wrong": "Libri sono interessanti.",
+          "right": "I libri sono interessanti.",
+          "note": "Перед существительным мужского рода множественного числа нужен артикль 'i'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильный артикль: ___ casa è grande.",
+          "answer": "La"
+        },
+        {
+          "prompt": "Вставьте правильный артикль: Ho comprato ___ penna.",
+          "answer": "una"
+        },
+        {
+          "prompt": "Вставьте правильный артикль: ___ ragazzi giocano.",
+          "answer": "I"
+        }
+      ]
+    },
+    {
+      "rule_id": "concordanza-dei-tempi",
+      "topic": "Concordanza dei tempi",
+      "title": "Согласование времен: конъюнктив после глаголов мнения",
+      "explanation": "В итальянском языке после глаголов, выражающих мнение, сомнение или уверенность (penso, credo, ritengo), придаточное предложение требует конъюнктива, а не индикатива. Время конъюнктива зависит от времени главного глагола: настоящее главного – конъюнктив настоящего, прошедшее главного – конъюнктив имперфекта.",
+      "examples": [
+        {
+          "wrong": "Penso che lui viene domani.",
+          "right": "Penso che lui venga domani.",
+          "note": "После 'penso che' требуется congiuntivo presente (venga), а не indicativo presente (viene)."
+        },
+        {
+          "wrong": "Pensavo che lui veniva ieri.",
+          "right": "Pensavo che lui venisse ieri.",
+          "note": "После 'pensavo che' (прошедшее время) требуется congiuntivo imperfetto (venisse), а не indicativo imperfetto (veniva)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Заполните пропуск правильной формой: 'Credo che loro ______ (essere) italiani.'",
+          "answer": "siano"
+        },
+        {
+          "prompt": "Заполните пропуск: 'Non sapevo che tu ______ (avere) un gatto.'",
+          "answer": "avessi"
+        }
+      ]
+    },
+    {
+      "rule_id": "preposizioni",
+      "topic": "Preposizioni",
+      "title": "Предлоги a и in с названиями мест",
+      "explanation": "В итальянском языке выбор предлога зависит от типа места: с городами и маленькими островами используется 'a', а со странами, регионами и большими островами — 'in'. Русскоязычные часто путают эти предлоги, так как в русском языке для обоих случаев используется 'в'.",
+      "examples": [
+        {
+          "wrong": "Vado in Roma.",
+          "right": "Vado a Roma.",
+          "note": "Рим — город, поэтому нужен предлог 'a'."
+        },
+        {
+          "wrong": "Vado a Italia.",
+          "right": "Vado in Italia.",
+          "note": "Италия — страна, поэтому нужен предлог 'in'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Я еду в Париж.",
+          "answer": "Vado a Parigi."
+        },
+        {
+          "prompt": "Мы живём в Испании.",
+          "answer": "Viviamo in Spagna."
+        }
+      ]
+    },
+    {
+      "rule_id": "congiuntivo",
+      "topic": "Congiuntivo",
+      "title": "Congiuntivo (Сослагательное наклонение)",
+      "explanation": "В итальянском языке после выражений, выражающих мнение, сомнение, необходимость или чувство (например, \"penso che\", \"è importante che\", \"voglio che\"), используется congiuntivo, а не indicativo. Русские часто ошибочно ставят глагол в изъявительном наклонении, так как в русском такой обязательности нет.",
+      "examples": [
+        {
+          "wrong": "Penso che lui viene domani.",
+          "right": "Penso che lui venga domani.",
+          "note": "После 'penso che' требуется congiuntivo (venga), а не indicativo (viene)."
+        },
+        {
+          "wrong": "È importante che tu studi molto.",
+          "right": "È importante che tu studi molto.",
+          "note": "Верный вариант: 'studi' — это congiuntivo presente. Ошибка часто в том, что используют 'studi' как indicativo (ты учишься), но здесь форма совпадает; главное — помнить правило."
+        },
+        {
+          "wrong": "Spero che lui ha tempo.",
+          "right": "Spero che lui abbia tempo.",
+          "note": "После 'spero che' всегда congiuntivo (abbia), а не indicativo (ha)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Заполните пропуск правильной формой глагола (congiuntivo): \"Credo che loro ______ (partire) domani.\"",
+          "answer": "partano"
+        },
+        {
+          "prompt": "Исправьте ошибку: \"È possibile che lui arriva tardi.\" Напишите правильное предложение.",
+          "answer": "È possibile che lui arrivi tardi."
+        },
+        {
+          "prompt": "Переведите на итальянский: \"Я хочу, чтобы ты пришёл.\" (используйте congiuntivo)",
+          "answer": "Voglio che tu venga."
+        }
+      ]
+    },
+    {
+      "rule_id": "consonanti-doppie",
+      "topic": "Consonanti doppie",
+      "title": "Двойные согласные в итальянском языке",
+      "explanation": "В итальянском языке двойные согласные произносятся дольше и меняют значение слова. Русские часто их пропускают, что приводит к ошибкам. Важно запомнить, что разница между одной и двойной согласной может изменить смысл.",
+      "examples": [
+        {
+          "wrong": "pala",
+          "right": "palla",
+          "note": "pala — лопата, palla — мяч"
+        },
+        {
+          "wrong": "casa",
+          "right": "cassa",
+          "note": "casa — дом, cassa — ящик"
+        },
+        {
+          "wrong": "fato",
+          "right": "fatto",
+          "note": "fato — судьба, fatto — факт"
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Как пишется слово 'мяч'?",
+          "answer": "palla"
+        },
+        {
+          "prompt": "Как пишется слово 'ящик'?",
+          "answer": "cassa"
+        },
+        {
+          "prompt": "Как пишется слово 'факт'?",
+          "answer": "fatto"
+        }
+      ]
+    },
+    {
+      "rule_id": "accento",
+      "topic": "Accento",
+      "title": "Ошибки в употреблении ударения (accento) в итальянском",
+      "explanation": "В итальянском языке ударение на последнем слоге обязательно обозначается графическим знаком (accento). Чаще всего используется grave (`) на гласных à, è, ì, ò, ù, но на e может быть acute (é), если звук закрытый. Пропуск акцента — распространённая ошибка, особенно в словах типа città, caffè, perché, а также в формах глагола «essere» (è) в отличие от союза e.",
+      "examples": [
+        {
+          "wrong": "La citta e bella.",
+          "right": "La città è bella.",
+          "note": "Пропущены акценты в «città» (город) и «è» (есть/является)."
+        },
+        {
+          "wrong": "Perche non vieni qui?",
+          "right": "Perché non vieni qui?",
+          "note": "В слове «perché» (почему/потому что) обязательно ставится акцент на последнюю e."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите правильный итальянский вариант: «Кофе уже готов» (caffe / caffè).",
+          "answer": "caffè"
+        },
+        {
+          "prompt": "Вставьте пропущенный акцент: «Lui e a casa, e io no.» (должны быть два разных слова).",
+          "answer": "Lui è a casa, e io no."
+        }
+      ]
+    },
+    {
+      "rule_id": "intonazione",
+      "topic": "Intonazione",
+      "title": "Интонация в итальянском: утверждения и вопросы",
+      "explanation": "В итальянском языке интонация в конце предложения различает утверждение и вопрос. В утверждениях голос понижается, в вопросах — повышается. Русскоязычные часто используют одинаковую интонацию, из-за чего утверждения звучат как вопросы или наоборот.",
+      "examples": [
+        {
+          "wrong": "Vado a casa?",
+          "right": "Vado a casa.",
+          "note": "Утверждение с восходящей интонацией звучит как вопрос. Используйте нисходящую интонацию и точку."
+        },
+        {
+          "wrong": "Vieni.",
+          "right": "Vieni?",
+          "note": "Вопрос с нисходящей интонацией звучит как утверждение. Используйте восходящую интонацию и вопросительный знак."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Как правильно произнести утверждение «Я иду домой»?",
+          "answer": "Vado a casa."
+        },
+        {
+          "prompt": "Как правильно произнести вопрос «Ты придешь?»",
+          "answer": "Vieni?"
+        },
+        {
+          "prompt": "Исправьте интонацию: «Lui parla italiano?» (это утверждение).",
+          "answer": "Lui parla italiano."
+        }
+      ]
+    },
+    {
+      "rule_id": "imperfetto-vs-passato-prossimo",
+      "topic": "Imperfetto vs passato prossimo",
+      "title": "Imperfetto vs Passato Prossimo: как не перепутать",
+      "explanation": "Passato prossimo используется для завершённых действий в прошлом (часто с указанием времени). Imperfetto — для описания фона, привычных или длительных действий в прошлом. Ошибка: русские часто используют imperfetto там, где нужно passato prossimo, и наоборот.",
+      "examples": [
+        {
+          "wrong": "Ieri mangiavo la pizza.",
+          "right": "Ieri ho mangiato la pizza.",
+          "note": "Действие завершено, есть указание на время (ieri)."
+        },
+        {
+          "wrong": "Quando ero piccolo, ho mangiato la pizza ogni sabato.",
+          "right": "Quando ero piccolo, mangiavo la pizza ogni sabato.",
+          "note": "Привычное действие в прошлом — imperfetto."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Выберите правильную форму: Вчера я (работал) до 8 вечера.",
+          "answer": "ho lavorato"
+        },
+        {
+          "prompt": "Выберите правильную форму: Когда я был студентом, я (изучал) итальянский.",
+          "answer": "studiavo"
+        }
+      ]
+    },
+    {
+      "rule_id": "omission-of-subject-pronouns",
+      "topic": "Omission of subject pronouns",
+      "title": "Не опускайте подлежащие в итальянском!",
+      "explanation": "В итальянском языке подлежащие (я, ты, он, она и т.д.) часто необходимы, особенно в третьем лице, где формы глаголов одинаковы для мужского и женского рода. В отличие от русского, опущение может сделать предложение двусмысленным или неграмотным. Всегда используйте местоимения, если контекст не ясен.",
+      "examples": [
+        {
+          "wrong": "Parla italiano.",
+          "right": "Lui parla italiano.",
+          "note": "Без местоимения непонятно, кто говорит – он, она или Вы (вежливая форма)."
+        },
+        {
+          "wrong": "È una brava studentessa.",
+          "right": "Lei è una brava studentessa.",
+          "note": "Глагол 'è' одинаков для всех третьих лиц единственного числа; местоимение уточняет род."
+        },
+        {
+          "wrong": "Hanno mangiato.",
+          "right": "Loro hanno mangiato.",
+          "note": "В третьем лице множественного числа опущение тоже часто приводит к непониманию."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на итальянский: 'Он говорит по-итальянски.'",
+          "answer": "Lui parla italiano."
+        },
+        {
+          "prompt": "Переведите на итальянский: 'Они пришли.' (мн.ч., мужской род)",
+          "answer": "Loro sono arrivati."
+        },
+        {
+          "prompt": "Переведите на итальянский: 'Она учится в университете.'",
+          "answer": "Lei studia all'università."
+        }
+      ]
+    },
+    {
+      "rule_id": "adjective-agreement-gender-number",
+      "topic": "Adjective agreement gender number",
+      "title": "Согласование прилагательных в роде и числе",
+      "explanation": "В итальянском языке прилагательное согласуется с существительным в роде (мужской/женский) и числе (единственное/множественное). Окончание прилагательного меняется: -o для мужского рода ед.ч., -a для женского, -i для мужского мн.ч., -e для женского мн.ч. (и для некоторых прилагательных на -e).",
+      "examples": [
+        {
+          "wrong": "Il libro interessante è nuovo.",
+          "right": "Il libro interessante è nuovo.",
+          "note": "Верно: прилагательное 'interessante' оканчивается на -e, поэтому не меняется для мужского рода."
+        },
+        {
+          "wrong": "La casa bianco è grande.",
+          "right": "La casa bianca è grande.",
+          "note": "Ошибка: прилагательное 'bianco' должно быть в женском роде — 'bianca'."
+        },
+        {
+          "wrong": "I libri interessante sono nuovi.",
+          "right": "I libri interessanti sono nuovi.",
+          "note": "Ошибка: прилагательное должно быть во множественном числе мужского рода — 'interessanti'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Исправьте: La macchina rosso è veloce.",
+          "answer": "La macchina rossa è veloce."
+        },
+        {
+          "prompt": "Напишите правильную форму прилагательного: I ragazzi (alto) sono simpatici.",
+          "answer": "alti"
+        },
+        {
+          "prompt": "Исправьте: Le case bianco sono antiche.",
+          "answer": "Le case bianche sono antiche."
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-verbs-and-reciprocals",
+      "topic": "Reflexive verbs and reciprocals",
+      "title": "Возвратные глаголы и взаимное значение",
+      "explanation": "В итальянском языке возвратные глаголы используются как для действий, направленных на себя (я моюсь), так и для взаимных действий (мы моем друг друга). Чтобы избежать двусмысленности, при взаимном значении часто добавляют 'l'un l'altro' (друг друга) или 'a vicenda' (взаимно). Без этих уточнений предложение может быть понято как возвратное (на себя).",
+      "examples": [
+        {
+          "wrong": "Loro si guardano.",
+          "right": "Loro si guardano l'un l'altro.",
+          "note": "Фраза 'Loro si guardano' может означать 'Они смотрят на себя' или 'Они смотрят друг на друга'. Добавление 'l'un l'altro' снимает двусмысленность."
+        },
+        {
+          "wrong": "Noi ci scriviamo ogni giorno.",
+          "right": "Noi ci scriviamo a vicenda ogni giorno.",
+          "note": "Без 'a vicenda' предложение 'Noi ci scriviamo' может быть понято как 'Мы пишем себе (например, в дневник)'. Чтобы ясно обозначить взаимность, используйте 'a vicenda'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на итальянский: 'Они любят друг друга' (используя возвратное местоимение и уточнение).",
+          "answer": "Loro si amano l'un l'altro."
+        },
+        {
+          "prompt": "Исправьте ошибку в предложении: 'Voi vi aiutate?' (хотим спросить 'Вы помогаете друг другу?').",
+          "answer": "Voi vi aiutate a vicenda?"
+        }
+      ]
+    },
+    {
+      "rule_id": "piacere-and-similar-verbs",
+      "topic": "Piacere and similar verbs",
+      "title": "Глагол piacere и похожие глаголы",
+      "explanation": "Глагол piacere означает «нравиться» и требует косвенного дополнения (mi, ti, gli/le, ci, vi, loro). Глагол согласуется с предметом, который нравится, а не с человеком. Например: «Mi piace il gelato» (мороженое нравится мне), но «Mi piacciono i gelati» (мороженые нравятся). Типичная ошибка русскоязычных – говорить «Io piaccio il gelato» вместо «Mi piace il gelato».",
+      "examples": [
+        {
+          "wrong": "Io piaccio il caffè.",
+          "right": "Mi piace il caffè.",
+          "note": "Нельзя переводить «я нравлюсь» прямо; используйте «Mi piace» (мне нравится)."
+        },
+        {
+          "wrong": "Loro piacciono i film.",
+          "right": "A loro piacciono i film.",
+          "note": "Глагол стоит во множественном числе, так как «фильмы» – множественное число. Не забудьте указать «a loro» или просто «gli». Правильно: «Gli piacciono i film»."
+        },
+        {
+          "wrong": "Tu piaci la musica classica.",
+          "right": "Ti piace la musica classica.",
+          "note": "При обращении на «ты» используйте «Ti piace» (тебе нравится), а не «Tu piaci» (ты нравишься)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите: «Мне нравится этот ресторан».",
+          "answer": "Mi piace questo ristorante."
+        },
+        {
+          "prompt": "Заполните пропуск: «A Maria _____ (piacere) i fiori» (Марии нравятся цветы).",
+          "answer": "piacciono"
+        },
+        {
+          "prompt": "Как спросить «Тебе нравится футбол?» (на ты)?",
+          "answer": "Ti piace il calcio?"
+        }
+      ]
+    },
+    {
+      "rule_id": "ci-locative-pronoun-usage",
+      "topic": "Ci locative pronoun usage",
+      "title": "Местоименное использование «ci» (туда, там)",
+      "explanation": "В итальянском языке местоимение «ci» часто заменяет указание на место, уже упомянутое в контексте, и переводится как «туда» или «там». Типичная ошибка русскоговорящих — использовать вместо «ci» наречия «li»/«là» (там, туда) или просто опускать местоимение. Запомните: когда мы говорим о движении к месту или нахождении в нём, «ci» ставится перед глаголом.",
+      "examples": [
+        {
+          "wrong": "Vado là a Roma domani.",
+          "right": "Ci vado a Roma domani.",
+          "note": "Вместо «là» (туда) нужно использовать «ci», если место уже ясно."
+        },
+        {
+          "wrong": "Sei mai stato in Italia? — No, non sono mai stato.",
+          "right": "Sei mai stato in Italia? — No, non ci sono mai stato.",
+          "note": "При ответе на вопрос о месте «ci» обязательно, иначе предложение звучит неполно."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на итальянский: «Я иду на вокзал. — Я тоже туда иду.» (используйте «ci»)",
+          "answer": "Vado alla stazione. — Anch'io ci vado."
+        },
+        {
+          "prompt": "Исправьте ошибку: «Loro vanno là al mare ogni estate.»",
+          "answer": "Loro ci vanno al mare ogni estate."
+        }
+      ]
+    },
+    {
+      "rule_id": "ne-partitive-and-topic-pronoun",
+      "topic": "Ne partitive and topic pronoun",
+      "title": "Местоимение NE: партитив и тема",
+      "explanation": "Местоимение 'ne' заменяет конструкцию 'di + существительное' (например, 'di libri' → 'ne') и используется для указания количества ('ne ho due' – у меня их два). Ошибка: часто его путают с прямыми местоимениями lo/la/li/le (его, её, их) или с ci (об этом, этому). Запомните: 'ne' – это 'из них', 'о них' (после глаголов с предлогом di), а не просто 'его/её/их'.",
+      "examples": [
+        {
+          "wrong": "Hai visto Maria? Sì, ne ho vista.",
+          "right": "Hai visto Maria? Sì, l'ho vista.",
+          "note": "С людьми в роли прямого дополнения используем lo/la/li/le, а не ne."
+        },
+        {
+          "wrong": "Ho comprato un libro. Ne ho comprato.",
+          "right": "Ho comprato un libro. L'ho comprato.",
+          "note": "Когда речь идёт о конкретном предмете (а не о части группы), нужно прямое местоимение lo/la."
+        },
+        {
+          "wrong": "Penso al problema. Ne penso.",
+          "right": "Penso al problema. Ci penso.",
+          "note": "Глагол pensare требует предлога a, поэтому используем ci, а не ne."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильное местоимение: 'Ho mangiato della torta. _____ ho mangiata.' (Я съел кусок торта. Я съел его.)",
+          "answer": "Ne"
+        },
+        {
+          "prompt": "Переведите на итальянский: 'Ты видел Паоло? Да, я его видел.'",
+          "answer": "L'ho visto."
+        },
+        {
+          "prompt": "Замените выделенное на местоимение: 'Loro parlano del film. Loro parlano ______.' (Они говорят о фильме.)",
+          "answer": "ne"
+        }
+      ]
+    },
+    {
+      "rule_id": "auxiliary-essere-vs-avere",
+      "topic": "Auxiliary essere vs avere",
+      "title": "Выбор вспомогательного глагола: essere или avere",
+      "explanation": "В итальянском языке многие глаголы образуют сложные времена (например, passato prossimo) с помощью вспомогательного глагола 'avere', но некоторые глаголы (движения, изменения состояния, возвратные) требуют 'essere'. Запомните: 'essere' всегда используется с возвратными глаголами (mi, ti, si...) и с глаголами, указывающими на перемещение или смену состояния (andare, venire, nascere, partire).",
+      "examples": [
+        {
+          "wrong": "Ho andato al cinema.",
+          "right": "Sono andato al cinema.",
+          "note": "Глагол 'andare' (идти) требует essere."
+        },
+        {
+          "wrong": "Mi ho lavato le mani.",
+          "right": "Mi sono lavato le mani.",
+          "note": "Возвратные глаголы всегда используют essere."
+        },
+        {
+          "wrong": "Ha nato in Russia.",
+          "right": "È nato in Russia.",
+          "note": "Глагол 'nascere' (родиться) — изменение состояния, нужно essere."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Исправьте ошибку: 'Ho venuto a casa tardi.'",
+          "answer": "Sono venuto a casa tardi."
+        },
+        {
+          "prompt": "Исправьте ошибку: 'Ieri ho partito per Roma.'",
+          "answer": "Ieri sono partito per Roma."
+        },
+        {
+          "prompt": "Исправьте ошибку: 'Ci ho divertiti molto.'",
+          "answer": "Ci siamo divertiti molto."
+        }
+      ]
+    },
+    {
+      "rule_id": "direct-indirect-object-pronouns",
+      "topic": "Direct indirect object pronouns",
+      "title": "Прямые и косвенные местоимения-дополнения: ошибки с третьим лицом",
+      "explanation": "В итальянском языке прямые местоимения (lo, la, li, le) отвечают на вопрос «кого? что?», а косвенные (gli, le) — на вопрос «кому?». Русскоязычные часто путают их, особенно в третьем лице единственного числа. Запомните: если действие направлено на объект, используйте lo (м.р.) или la (ж.р.); если объекту — gli (м.р.) или le (ж.р.).",
+      "examples": [
+        {
+          "wrong": "La telefono domani.",
+          "right": "Le telefono domani.",
+          "note": "Глагол 'telefonare' требует косвенного дополнения (звонить кому?), поэтому нужно 'le', а не 'la'."
+        },
+        {
+          "wrong": "Gli vedo ogni giorno.",
+          "right": "Lo vedo ogni giorno.",
+          "note": "Глагол 'vedere' требует прямого дополнения (видеть кого?), поэтому 'lo', а не 'gli'."
+        },
+        {
+          "wrong": "Maria, ieri la ho dato un regalo.",
+          "right": "Maria, ieri le ho dato un regalo.",
+          "note": "Глагол 'dare' требует косвенного дополнения (дать кому?), поэтому 'le'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите правильное местоимение: «Я звоню ей» (telefonare).",
+          "answer": "Le telefono."
+        },
+        {
+          "prompt": "Исправьте ошибку: «La vedo spesso» (имеется в виду «его»).",
+          "answer": "Lo vedo spesso."
+        },
+        {
+          "prompt": "Переведите: «Я даю ей книгу» (dare, libro).",
+          "answer": "Le do il libro."
+        }
+      ]
+    },
+    {
+      "rule_id": "andare-vs-venire",
+      "topic": "Andare vs venire",
+      "title": "Andare vs Venire: идти/ехать vs приходить/приезжать",
+      "explanation": "Глагол andare означает движение от говорящего (или от места, где находится говорящий) в другую точку. Глагол venire означает движение к говорящему (или к месту, где находится говорящий). Русские ученики часто путают их, используя andare вместо venire, когда речь идёт о приближении.",
+      "examples": [
+        {
+          "wrong": "Domani andiamo a casa tua.",
+          "right": "Domani veniamo a casa tua.",
+          "note": "Если вы идёте к собеседнику (к его дому), нужно venire, а не andare."
+        },
+        {
+          "wrong": "Vado da te ora.",
+          "right": "Vengo da te ora.",
+          "note": "Движение к собеседнику — всегда venire, даже если вы ещё в пути."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите: «Ты идёшь ко мне сегодня?» (используй правильный глагол)",
+          "answer": "Vieni da me oggi?"
+        },
+        {
+          "prompt": "Переведите: «Мы едем в Рим на следующей неделе.» (говорящий не в Риме)",
+          "answer": "Andiamo a Roma la settimana prossima."
+        }
+      ]
+    },
+    {
+      "rule_id": "molto-troppo-tanto-differences",
+      "topic": "Molto troppo tanto differences",
+      "title": "Разница между molto, troppo и tanto",
+      "explanation": "В итальянском языке эти три слова часто путают. 'Molto' означает 'очень' или 'много'. 'Troppo' — 'слишком много', 'чрезмерно'. 'Tanto' — 'так много', 'столько'. Используйте 'troppo', когда речь идёт об избытке, 'tanto' — для усиления или количества без указания меры, а 'molto' — в остальных случаях.",
+      "examples": [
+        {
+          "wrong": "Ho troppo fame.",
+          "right": "Ho molta fame.",
+          "note": "Если вы просто очень голодны, используйте 'molto', а не 'troppo' (которое означает 'слишком')."
+        },
+        {
+          "wrong": "Ho mangiato molto.",
+          "right": "Ho mangiato troppo.",
+          "note": "Когда вы имеете в виду, что съели слишком много (чрезмерно), нужно 'troppo'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильное слово: Я очень устал. => Sono ___ stanco.",
+          "answer": "molto"
+        },
+        {
+          "prompt": "Вставьте правильное слово: Здесь слишком много людей. => Qui c'è ___ gente.",
+          "answer": "troppa"
+        },
+        {
+          "prompt": "Вставьте правильное слово: У меня так много дел. => Ho ___ cose da fare.",
+          "answer": "tante"
+        }
+      ]
+    },
+    {
+      "rule_id": "sapere-vs-conoscere",
+      "topic": "Sapere vs conoscere",
+      "title": "Sapere vs Conoscere: как не перепутать",
+      "explanation": "Глагол 'sapere' используется, когда вы знаете факты, информацию или умеете что-то делать (например, 'so nuotare' – умею плавать). Глагол 'conoscere' означает быть знакомым с кем-то или чем-то (люди, места, предметы – 'conosco Roma'). Ошибка возникает, когда 'знать' в русском переводе одинаково, а в итальянском выбирается не тот глагол.",
+      "examples": [
+        {
+          "wrong": "Io so Roma molto bene.",
+          "right": "Io conosco Roma molto bene.",
+          "note": "Говоря о городе, используем 'conoscere' (быть знакомым с местом)."
+        },
+        {
+          "wrong": "Lui conosce che domani piove.",
+          "right": "Lui sa che domani piove.",
+          "note": "Факт о погоде – это информация, поэтому 'sapere'."
+        },
+        {
+          "wrong": "Noi sappiamo il tuo amico Marco.",
+          "right": "Noi conosciamo il tuo amico Marco.",
+          "note": "Людей мы 'знаем' через 'conoscere' (быть знакомыми)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Заполните пропуск: Я знаю, где находится вокзал. (Io ____ dov'è la stazione.)",
+          "answer": "so"
+        },
+        {
+          "prompt": "Заполните пропуск: Ты знаешь эту песню? (Tu ____ questa canzone?)",
+          "answer": "conosci"
+        },
+        {
+          "prompt": "Заполните пропуск: Мы умеем говорить по-итальянски. (Noi ____ parlare italiano.)",
+          "answer": "sappiamo"
+        }
+      ]
+    },
+    {
+      "rule_id": "potere-vs-riuscire",
+      "topic": "Potere vs riuscire",
+      "title": "Potere vs Riuscire: Как не путать",
+      "explanation": "«Potere» означает «мочь» в смысле разрешения или физической возможности, а «riuscire» — «удаваться» (сделать что-то после усилий). Если вы хотите сказать, что вам что-то не удалось, даже если были попытки, используйте «riuscire». Если же речь о запрете или отсутствии возможности, используйте «potere».",
+      "examples": [
+        {
+          "wrong": "Non posso aprire la finestra.",
+          "right": "Non riesco ad aprire la finestra.",
+          "note": "Здесь подразумевается, что пытались, но не получилось — нужно «riuscire»."
+        },
+        {
+          "wrong": "Ieri non ho potuto finire il compito perché ero stanco.",
+          "right": "Ieri non sono riuscito a finire il compito perché ero stanco.",
+          "note": "Если вы пытались, но усталость помешала — используем «riuscire». «Potere» подошло бы, если бы был запрет или внешняя помеха."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на итальянский: «Я не могу открыть дверь, она застряла» (подразумевается, что пробовал, но не вышло).",
+          "answer": "Non riesco ad aprire la porta, è bloccata."
+        },
+        {
+          "prompt": "Переведите: «Мы не можем играть в футбол, поле закрыто» (запрет/обстоятельства).",
+          "answer": "Non possiamo giocare a calcio, il campo è chiuso."
+        },
+        {
+          "prompt": "Переведите: «Ты смог купить билеты?» (имеется в виду, удалось ли).",
+          "answer": "Sei riuscito a comprare i biglietti?"
+        }
+      ]
+    },
+    {
+      "rule_id": "dovere-vs-avere-bisogno-di",
+      "topic": "Dovere vs avere bisogno di",
+      "title": "Dovere vs Avere bisogno di: разница между долженствованием и необходимостью",
+      "explanation": "В итальянском языке 'dovere' выражает обязанность, долг или правило (моральное, юридическое, по ситуации), а 'avere bisogno di' — личную потребность или физическую необходимость. Не путайте: 'devo andare' означает 'я должен идти' (по обязанности), а 'ho bisogno di andare' — 'мне нужно идти' (потому что я хочу или нуждаюсь в этом).",
+      "examples": [
+        {
+          "wrong": "Devo un bicchiere d'acqua.",
+          "right": "Ho bisogno di un bicchiere d'acqua.",
+          "note": "Для физических потребностей (жажда) используйте 'avere bisogno di', а не 'dovere'."
+        },
+        {
+          "wrong": "Ho bisogno di studiare per l'esame.",
+          "right": "Devo studiare per l'esame.",
+          "note": "Если речь о обязанности (экзамен обязателен), лучше 'dovere', хотя 'avere bisogno di' тоже возможно при личной необходимости."
+        },
+        {
+          "wrong": "Devo andare in bagno.",
+          "right": "Ho bisogno di andare in bagno.",
+          "note": "Физиологические потребности всегда выражаются через 'avere bisogno di'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на итальянский: 'Мне нужен врач' (личная потребность).",
+          "answer": "Ho bisogno di un medico."
+        },
+        {
+          "prompt": "Переведите на итальянский: 'Ты должен прийти вовремя' (обязанность).",
+          "answer": "Devi arrivare in tempo."
+        },
+        {
+          "prompt": "Выберите правильный вариант: 'Я должен купить хлеб' (потому что хлеб закончился) — используйте dovere или avere bisogno di? Напишите фразу по-итальянски.",
+          "answer": "Ho bisogno di comprare il pane."
+        }
+      ]
+    },
+    {
+      "rule_id": "relative-pronouns-che-vs-cui",
+      "topic": "Relative pronouns che vs cui",
+      "title": "Относительные местоимения che и cui",
+      "explanation": "Местоимение 'che' используется как подлежащее или прямое дополнение (кто, который, что). Местоимение 'cui' используется после предлогов или как косвенное дополнение (которому, о котором, с которым и т.д.) и часто требует предлога перед собой. Запомните: если после местоимения нужен предлог (a, di, con, per и др.), используйте 'cui', а не 'che'.",
+      "examples": [
+        {
+          "wrong": "La persona che ho parlato.",
+          "right": "La persona con cui ho parlato.",
+          "note": "Глагол 'parlare' требует предлога 'con', поэтому нужно 'cui' с предлогом."
+        },
+        {
+          "wrong": "Il libro che parli.",
+          "right": "Il libro di cui parli.",
+          "note": "Глагол 'parlare' о чём-то — 'parlare di', поэтому используем 'di cui'."
+        },
+        {
+          "wrong": "La ragazza che ho dato un fiore.",
+          "right": "La ragazza a cui ho dato un fiore.",
+          "note": "Глагол 'dare' требует предлога 'a' для указания получателя, поэтому нужно 'a cui'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите: 'Человек, с которым я работаю.'",
+          "answer": "La persona con cui lavoro."
+        },
+        {
+          "prompt": "Выберите правильное местоимение: 'Книга, (che / cui) я купил вчера.'",
+          "answer": "che"
+        },
+        {
+          "prompt": "Заполните пропуск: 'Девушка, __ я написал письмо.' (предлог нужен)",
+          "answer": "a cui"
+        }
+      ]
+    },
+    {
+      "rule_id": "stare-vs-essere-usage",
+      "topic": "Stare vs essere usage",
+      "title": "Глаголы stare и essere: в чём разница?",
+      "explanation": "В итальянском языке 'essere' используется для описания постоянных характеристик, идентичности и происхождения. 'Stare' — для временных состояний, местоположения, положения тела и самочувствия. Запомните: позиция, место, временное состояние — это 'stare', всё остальное — 'essere'.",
+      "examples": [
+        {
+          "wrong": "Lui è seduto sulla sedia.",
+          "right": "Lui sta seduto sulla sedia.",
+          "note": "Положение тела (сидеть) — это stare, а не essere."
+        },
+        {
+          "wrong": "Come sei?",
+          "right": "Come stai?",
+          "note": "Вопрос о самочувствии всегда использует stare."
+        },
+        {
+          "wrong": "Noi siamo a casa.",
+          "right": "Noi stiamo a casa.",
+          "note": "Местоположение в данный момент — используем stare."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Заполните пропуск: Я в порядке. (Io ___ bene.)",
+          "answer": "sto"
+        },
+        {
+          "prompt": "Заполните пропуск: Она — учительница. (Lei ___ insegnante.)",
+          "answer": "è"
+        },
+        {
+          "prompt": "Заполните пропуск: Он сидит на диване. (Lui ___ seduto sul divano.)",
+          "answer": "sta"
+        }
+      ]
+    },
+    {
+      "rule_id": "double-negatives-non-mai-nessuno",
+      "topic": "Double negatives non mai nessuno",
+      "title": "Двойные отрицания: non + mai / nessuno",
+      "explanation": "В итальянском языке двойное отрицание (non в паре с mai или nessuno) является правильным и даже обязательным. В отличие от английского или русского, где два отрицания дают утверждение, итальянское двойное отрицание лишь усиливает отрицание. Например, non…mai означает «никогда», а non…nessuno — «никто». Важно: всегда ставьте non перед глаголом, а второе отрицание — после.",
+      "examples": [
+        {
+          "wrong": "Non ho visto nessuno? (но в вопросе с отрицанием нужно двойное)",
+          "right": "Non ho visto nessuno.",
+          "note": "Фраза «я никого не видел» требует non + nessuno. Без non это ненормативно."
+        },
+        {
+          "wrong": "Mai non vado al cinema.",
+          "right": "Non vado mai al cinema.",
+          "note": "Порядок слов: non ставится перед глаголом, mai — после глагола (или в конце)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите: «Я никогда не ем мясо» (используйте non…mai).",
+          "answer": "Non mangio mai carne."
+        },
+        {
+          "prompt": "Переведите: «Никто не пришёл» (используйте non…nessuno).",
+          "answer": "Non è venuto nessuno."
+        }
+      ]
+    },
+    {
+      "rule_id": "ordinal-numbers-for-dates",
+      "topic": "Ordinal numbers for dates",
+      "title": "Порядковые числительные в датах: основная ошибка",
+      "explanation": "В итальянском языке для обозначения дня месяца (кроме первого) используются количественные числительные (uno, due, tre…), а не порядковые (primo, secondo, terzo…). Исключение: первый день месяца всегда говорится как «il primo» (а не «l’uno»). Например: «Oggi è il 5 marzo» (а не «il 5° marzo»).",
+      "examples": [
+        {
+          "wrong": "Oggi è il 1° gennaio.",
+          "right": "Oggi è il primo gennaio.",
+          "note": "Для первого дня месяца используем «primo», а не «1°»."
+        },
+        {
+          "wrong": "Il 2° aprile è il mio compleanno.",
+          "right": "Il 2 aprile è il mio compleanno.",
+          "note": "Для остальных дней (2, 3, 4...) пишем и говорим количественное числительное, без значка градуса."
+        },
+        {
+          "wrong": "Arrivo il 3° novembre.",
+          "right": "Arrivo il 3 novembre.",
+          "note": "То же правило: число без окончания -°."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Как правильно сказать по-итальянски «1 мая»?",
+          "answer": "il primo maggio"
+        },
+        {
+          "prompt": "Напишите по-итальянски «15 августа» (без ошибки в числе).",
+          "answer": "il 15 agosto"
+        },
+        {
+          "prompt": "Исправьте ошибку: «La festa è il 4° luglio».",
+          "answer": "La festa è il 4 luglio"
+        }
+      ]
+    }
+  ]
+}
