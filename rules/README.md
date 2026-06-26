@@ -67,21 +67,23 @@ python tools/generate_rules.py --learning en --interface en           # full set
 python tools/generate_rules.py --learning el --interface ru --limit 3 # sample
 ```
 
-### Free generation via OpenModel (proven 2026-06-21)
+### Provider
 
-OpenModel serves DeepSeek through the **Anthropic Messages protocol**, not Chat
-Completions. Put this in the server `.env`:
+By default the generator uses the **paid DeepSeek API** (`api.deepseek.com`,
+`DEEPSEEK_API_KEY`, chat completions) — same key the production server uses. No
+extra config needed; just run the commands above.
 
-```
-RULES_API_KEY=<your OpenModel key>
-RULES_API_BASE=https://api.openmodel.ai/v1
-RULES_MODEL=deepseek-v4-flash      # or deepseek-v4-pro
-RULES_API_MODE=messages
-```
+The 600 pre-generated rule sets in this folder are static JSON and need no API
+at runtime. The production server's lazy `/rule` generation and `/resolve-rule`
+also use the paid DeepSeek key — they do NOT depend on any free promo.
 
-(The OpenAI Chat Completions / Responses routes 404 on OpenModel for DeepSeek;
-`GET /v1/models` lists the available ids. The free DeepSeek event runs to
-2026-06-28 — use it for batch generation only, not as a production runtime.)
+> Historical note: the initial batch (2026-06) was generated for free via the
+> **OpenModel** gateway (`RULES_API_BASE=https://api.openmodel.ai/v1`,
+> `RULES_API_MODE=messages`, DeepSeek over the Anthropic Messages protocol). That
+> free event ended **2026-06-28**. The `RULES_API_*` env overrides still let you
+> point the tools at any OpenAI/Anthropic-compatible endpoint, but the default
+> (paid DeepSeek) is what to use now. Remove any stale `RULES_API_*` lines from
+> `.env`.
 
 ## Server endpoint (sketch — not yet wired)
 
