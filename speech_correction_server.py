@@ -13,7 +13,7 @@ from fastapi import FastAPI, HTTPException, Request, Depends, Security
 from fastapi.responses import JSONResponse
 from fastapi.security import APIKeyHeader
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field, field_validator, model_validator
 from typing import Optional, Dict, List
 from langdetect import detect, DetectorFactory
 
@@ -232,6 +232,24 @@ STYLE_INSTRUCTIONS = {
     ),
 }
 
+# Appended (language-agnostic) when the user provides a context/intent. Turns the
+# context into the GOAL: produce the corrected_text from it, even from an empty
+# input, so a stuck learner can write their meaning in their own language and get
+# the right sentence back.
+INTENT_INSTRUCTION = (
+    "INTENT MODE: The context above states what the user is TRYING to say (their "
+    "intended meaning, possibly written in their own language). Treat it as the "
+    "goal. corrected_text MUST express that intended meaning naturally and "
+    "correctly in the target language. If the user's text is empty, very short, "
+    "or only partially expresses the intent, DO NOT answer that there is no text "
+    "to analyze — compose corrected_text yourself from the intended meaning. "
+    "error_analysis should capture the gap between what the user wrote and the "
+    "intended meaning (missing words, wrong choices); if the user wrote nothing it "
+    "may be empty. Make 'alternatives' natural ways to express the same intent, "
+    "and use 'level_appropriate_suggestions' to point out words or phrases the "
+    "user was missing."
+)
+
 
 class CorrectionRequest(BaseModel):
     text: str
@@ -272,7 +290,9 @@ class CorrectionRequest(BaseModel):
     def validate_text(cls, v):
         v = v.strip()
         if not v:
-            raise ValueError("Text cannot be empty")
+            # Empty text is allowed ONLY when an intent/context is provided
+            # (see require_text_or_context). Skip the content checks below.
+            return v
         if len(v) > 1000:
             raise ValueError(f"Text is too long ({len(v)} characters). Maximum allowed is 1000.")
         for pattern in _DANGEROUS_PATTERNS:
@@ -293,6 +313,14 @@ class CorrectionRequest(BaseModel):
             if pattern.search(v):
                 raise ValueError("Potentially dangerous constructs detected in context")
         return v
+
+    @model_validator(mode="after")
+    def require_text_or_context(self):
+        # Intent mode: the user may leave the text empty as long as they say what
+        # they want to express (context). But both can't be empty.
+        if not (self.text or "").strip() and not (self.context or "").strip():
+            raise ValueError("Provide some text or describe what you want to say")
+        return self
 
 
 @lru_cache(maxsize=32)
@@ -346,6 +374,11 @@ def generate_teacher_prompt(request: CorrectionRequest, retry: bool = False) -> 
     style_instruction = STYLE_INSTRUCTIONS.get(request.style, "")
     if style_instruction:
         prompt += f"\n\n{style_instruction}"
+
+    # Intent mode: when the user said what they want to express, make the model
+    # produce/repair the sentence toward that meaning.
+    if request.context:
+        prompt += f"\n\n{INTENT_INSTRUCTION}"
 
     if retry:
         prompt += (
