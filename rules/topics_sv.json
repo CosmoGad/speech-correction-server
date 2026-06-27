@@ -1,0 +1,105 @@
+{
+  "learning": "sv",
+  "topics": [
+    {
+      "rule_id": "artiklar",
+      "title": "Artiklar"
+    },
+    {
+      "rule_id": "verbtider",
+      "title": "Verbtider"
+    },
+    {
+      "rule_id": "prepositioner",
+      "title": "Prepositioner"
+    },
+    {
+      "rule_id": "ordföljd",
+      "title": "Ordföljd"
+    },
+    {
+      "rule_id": "svenska-vokaler",
+      "title": "Svenska vokaler"
+    },
+    {
+      "rule_id": "tonaccent",
+      "title": "Tonaccent"
+    },
+    {
+      "rule_id": "intonation",
+      "title": "Intonation"
+    },
+    {
+      "rule_id": "noun-gender-common-neuter",
+      "title": "Noun gender common neuter"
+    },
+    {
+      "rule_id": "plural-noun-formation-irregular",
+      "title": "Plural noun formation irregular"
+    },
+    {
+      "rule_id": "adjective-agreement-gender-number",
+      "title": "Adjective agreement gender number"
+    },
+    {
+      "rule_id": "comparison-of-adjectives-irregular",
+      "title": "Comparison of adjectives irregular"
+    },
+    {
+      "rule_id": "possessive-pronouns-sin-vs-hans",
+      "title": "Possessive pronouns sin vs hans"
+    },
+    {
+      "rule_id": "reflexive-verbs-sig-placement",
+      "title": "Reflexive verbs sig placement"
+    },
+    {
+      "rule_id": "particle-verbs-phrasal-verbs",
+      "title": "Particle verbs phrasal verbs"
+    },
+    {
+      "rule_id": "subordinate-clause-word-order",
+      "title": "Subordinate clause word order"
+    },
+    {
+      "rule_id": "usage-of-så-conjunction-adverb",
+      "title": "Usage of så conjunction adverb"
+    },
+    {
+      "rule_id": "impersonal-pronoun-man-usage",
+      "title": "Impersonal pronoun man usage"
+    },
+    {
+      "rule_id": "många-vs-mycket-count-mass",
+      "title": "Många vs mycket count mass"
+    },
+    {
+      "rule_id": "liten-vs-små-irregular-adjective",
+      "title": "Liten vs små irregular adjective"
+    },
+    {
+      "rule_id": "numerals-and-ordinal-numbers",
+      "title": "Numerals and ordinal numbers"
+    },
+    {
+      "rule_id": "pronunciation-of-sj-sound",
+      "title": "Pronunciation of sj sound"
+    },
+    {
+      "rule_id": "pronunciation-of-tj-sound",
+      "title": "Pronunciation of tj sound"
+    },
+    {
+      "rule_id": "att-vs-och-pronunciation-distinction",
+      "title": "Att vs och pronunciation distinction"
+    },
+    {
+      "rule_id": "både-och-and-antingen-eller",
+      "title": "Både och and antingen eller"
+    },
+    {
+      "rule_id": "demonstrative-pronouns-den-här",
+      "title": "Demonstrative pronouns den här"
+    }
+  ]
+}

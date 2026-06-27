@@ -1,0 +1,105 @@
+{
+  "learning": "bg",
+  "topics": [
+    {
+      "rule_id": "definite-article",
+      "title": "Definite article"
+    },
+    {
+      "rule_id": "verb-aspect",
+      "title": "Verb aspect"
+    },
+    {
+      "rule_id": "clitic-placement",
+      "title": "Clitic placement"
+    },
+    {
+      "rule_id": "prepositions",
+      "title": "Prepositions"
+    },
+    {
+      "rule_id": "stress",
+      "title": "Stress"
+    },
+    {
+      "rule_id": "vowel-reduction",
+      "title": "Vowel reduction"
+    },
+    {
+      "rule_id": "palatalization",
+      "title": "Palatalization"
+    },
+    {
+      "rule_id": "noun-gender-agreement",
+      "title": "Noun gender agreement"
+    },
+    {
+      "rule_id": "adjective-noun-agreement",
+      "title": "Adjective-noun agreement"
+    },
+    {
+      "rule_id": "past-tense-aorist-vs-imperfect",
+      "title": "Past tense aorist vs imperfect"
+    },
+    {
+      "rule_id": "verb-conjugation-present-tense",
+      "title": "Verb conjugation present tense"
+    },
+    {
+      "rule_id": "plural-formation-of-nouns",
+      "title": "Plural formation of nouns"
+    },
+    {
+      "rule_id": "possessive-pronouns-and-adjectives",
+      "title": "Possessive pronouns and adjectives"
+    },
+    {
+      "rule_id": "question-word-order",
+      "title": "Question word order"
+    },
+    {
+      "rule_id": "use-of-the-vocative-case",
+      "title": "Use of the vocative case"
+    },
+    {
+      "rule_id": "da-constructions-and-subjunctive",
+      "title": "Da-constructions and subjunctive"
+    },
+    {
+      "rule_id": "negation-with-ne-and-nito",
+      "title": "Negation with ne and nito"
+    },
+    {
+      "rule_id": "reflexive-verbs-and-pronouns",
+      "title": "Reflexive verbs and pronouns"
+    },
+    {
+      "rule_id": "comparative-and-superlative-formation",
+      "title": "Comparative and superlative formation"
+    },
+    {
+      "rule_id": "numerals-and-noun-agreement",
+      "title": "Numerals and noun agreement"
+    },
+    {
+      "rule_id": "particle-li-in-questions",
+      "title": "Particle li in questions"
+    },
+    {
+      "rule_id": "conditional-mood-formation",
+      "title": "Conditional mood formation"
+    },
+    {
+      "rule_id": "imperative-mood-forms",
+      "title": "Imperative mood forms"
+    },
+    {
+      "rule_id": "future-tense-with-shte-and-da",
+      "title": "Future tense with shte and da"
+    },
+    {
+      "rule_id": "relative-clauses-with-koito",
+      "title": "Relative clauses with koito"
+    }
+  ]
+}

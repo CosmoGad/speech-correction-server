@@ -1,0 +1,868 @@
+{
+  "learning": "sr",
+  "interface": "en",
+  "generated_at": "2026-06-27T13:19:31.280447+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "падежи",
+      "topic": "падежи",
+      "title": "Don't Forget the Accusative Case for Direct Objects",
+      "explanation": "In Serbian, the direct object (the noun receiving the action) must be in the accusative case, not the nominative. English speakers often forget to change feminine nouns ending in -a to -u, and for animate masculine nouns, add an -a. This is one of the most common mistakes with cases.",
+      "examples": [
+        {
+          "wrong": "Ja vidim kuća.",
+          "right": "Ja vidim kuću.",
+          "note": "Feminine noun 'kuća' changes to 'kuću' in accusative."
+        },
+        {
+          "wrong": "Ona traži Marko.",
+          "right": "Ona traži Marka.",
+          "note": "Animate masculine noun 'Marko' gets an -a in accusative."
+        },
+        {
+          "wrong": "On čita knjiga.",
+          "right": "On čita knjigu.",
+          "note": "Another feminine noun 'knjiga' changes to 'knjigu'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'I drink water' in Serbian? (water = voda)",
+          "answer": "Ja pijem vodu."
+        },
+        {
+          "prompt": "Translate: 'He has a cat.' (cat = mačka)",
+          "answer": "On ima mačku."
+        },
+        {
+          "prompt": "Correct the mistake: 'Vidim Ivan.' (I see Ivan)",
+          "answer": "Vidim Ivana."
+        }
+      ]
+    },
+    {
+      "rule_id": "глаголски-видови",
+      "topic": "глаголски видови",
+      "title": "Serbian Verbal Aspect: Perfective vs. Imperfective",
+      "explanation": "In Serbian, verbs have two aspects: imperfective (for ongoing or repeated actions) and perfective (for completed or one-time actions). English learners often confuse them because English doesn’t have a built-in aspect system. A common mistake is using the perfective where an imperfective is needed, or vice versa.",
+      "examples": [
+        {
+          "wrong": "Juče sam pročitao knjigu kad je on došao.",
+          "right": "Juče sam čitao knjigu kad je on došao.",
+          "note": "Use imperfective 'čitao' to describe an ongoing action interrupted by 'došao' (perfective)."
+        },
+        {
+          "wrong": "Svaki dan popijem kafu.",
+          "right": "Svaki dan pijem kafu.",
+          "note": "Use imperfective 'pijem' for habitual actions; perfective 'popijem' would mean 'drink (and finish)' once."
+        },
+        {
+          "wrong": "On je napisao pismo kada sam ga zvao.",
+          "right": "On je pisao pismo kada sam ga zvao.",
+          "note": "Use imperfective 'pisao' to show the letter was in progress when the call happened."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I am reading a book now.' Use the correct aspect.",
+          "answer": "Sada čitam knjigu."
+        },
+        {
+          "prompt": "Translate: 'Yesterday I read (finished) a book.' Use the correct aspect.",
+          "answer": "Juče sam pročitao knjigu."
+        },
+        {
+          "prompt": "Fill in the blank: 'On ________ (piše / napiše) pismo svaki dan.'",
+          "answer": "piše"
+        }
+      ]
+    },
+    {
+      "rule_id": "акценат",
+      "topic": "акценат",
+      "title": "Correct Stress in Serbian Words",
+      "explanation": "In Serbian, every word has a stressed syllable, but the stress is not indicated in writing. Misplacing the stress can make words sound unnatural or even change their meaning. A common mistake for English speakers is to stress the wrong syllable, often following English patterns.",
+      "examples": [
+        {
+          "wrong": "школа",
+          "right": "школа",
+          "note": "The correct stress is on the first syllable ('шко'), not on the second ('ко')."
+        },
+        {
+          "wrong": "радио",
+          "right": "радио",
+          "note": "The stress is on the second syllable ('ди'), not on the first ('ра') as in English."
+        },
+        {
+          "wrong": "млеко",
+          "right": "млеко",
+          "note": "Stress the first syllable ('мле'), not the second ('ко')."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you correctly stress the Serbian word for 'school'?",
+          "answer": "школа"
+        },
+        {
+          "prompt": "Which syllable is stressed in the word for 'milk'? Write the word with correct stress.",
+          "answer": "млеко"
+        },
+        {
+          "prompt": "Correct the stress in this word: 'радио' (stressed on the first syllable). What is the correct form?",
+          "answer": "радио"
+        }
+      ]
+    },
+    {
+      "rule_id": "придеви",
+      "topic": "придеви",
+      "title": "Adjective-Noun Gender Agreement in Serbian",
+      "explanation": "In Serbian, adjectives must match the gender (masculine, feminine, or neuter) of the noun they describe. A common mistake is using the default masculine form for all nouns. The adjective ending changes: masculine usually ends in a consonant, feminine adds -a, and neuter adds -o or -e.",
+      "examples": [
+        {
+          "wrong": "lep kuća",
+          "right": "lepa kuća",
+          "note": "\"Kuća\" is feminine, so the adjective must be \"lepa\" (not the masculine \"lep\")."
+        },
+        {
+          "wrong": "lepo čovek",
+          "right": "lep čovek",
+          "note": "\"Čovek\" is masculine, so the adjective is \"lep\" (not the neuter \"lepo\")."
+        },
+        {
+          "wrong": "lepa dete",
+          "right": "lepo dete",
+          "note": "\"Dete\" is neuter, so the adjective is \"lepo\" (not the feminine \"lepa\")."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct form of 'nov' (new) for the feminine noun 'knjiga' (book).",
+          "answer": "nova knjiga"
+        },
+        {
+          "prompt": "Fill in the correct form of 'star' (old) for the neuter noun 'auto' (car).",
+          "answer": "staro auto"
+        },
+        {
+          "prompt": "Fill in the correct form of 'dobar' (good) for the masculine noun 'prijatelj' (friend).",
+          "answer": "dobar prijatelj"
+        }
+      ]
+    },
+    {
+      "rule_id": "меки-сугласници",
+      "topic": "меки сугласници",
+      "title": "Soft Consonants (Меки сугласници)",
+      "explanation": "In Serbian, some consonants have a 'soft' (palatalized) version, pronounced with the tongue raised toward the palate. Mixing them with their 'hard' counterparts is a common mistake and can change meaning. For example, 'ћ' (soft) vs. 'ч' (hard), 'ђ' (soft) vs. 'џ' (hard), and 'љ' (soft) vs. 'л' (hard) are distinct sounds.",
+      "examples": [
+        {
+          "wrong": "куча",
+          "right": "кућа",
+          "note": "Need soft 'ћ' for 'house', not hard 'ч'."
+        },
+        {
+          "wrong": "џак",
+          "right": "ђак",
+          "note": "Soft 'ђ' means 'student'; hard 'џ' means 'sack'."
+        },
+        {
+          "wrong": "лубав",
+          "right": "љубав",
+          "note": "Soft 'љ' is required for 'love'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the Serbian word for 'night' (soft consonant).",
+          "answer": "ноћ"
+        },
+        {
+          "prompt": "Write the Serbian word for 'student' (soft consonant).",
+          "answer": "ђак"
+        },
+        {
+          "prompt": "Write the Serbian word for 'love' (soft consonant).",
+          "answer": "љубав"
+        }
+      ]
+    },
+    {
+      "rule_id": "интонација",
+      "topic": "интонација",
+      "title": "Intonation in Serbian Questions",
+      "explanation": "In Serbian, yes/no questions require a rising intonation on the final syllable, unlike English which often uses a rising pattern at the end. A common mistake is using a flat or falling tone, making the question sound like a statement. Practicing the rise on the last word is key to sounding natural.",
+      "examples": [
+        {
+          "wrong": "Da li si došao.",
+          "right": "Da li si došao?",
+          "note": "The period indicates a flat tone; the question mark implies the necessary rising intonation on 'došao'."
+        },
+        {
+          "wrong": "Jesi li gladan.",
+          "right": "Jesi li gladan?",
+          "note": "Rise on 'gladan' distinguishes a question from a statement."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Convert this statement into a yes/no question with correct intonation: 'Ti si umoran.'",
+          "answer": "Ti si umoran?"
+        },
+        {
+          "prompt": "Add the correct intonation (punctuation) to make this a question: 'Ona voli muziku'",
+          "answer": "Ona voli muziku?"
+        }
+      ]
+    },
+    {
+      "rule_id": "clitic-pronoun-placement",
+      "topic": "Clitic pronoun placement",
+      "title": "Clitic Pronoun Placement in Serbian",
+      "explanation": "In Serbian, clitic pronouns (e.g., ga, je, mu, se) must occupy the second position in a sentence, after the first stressed word or phrase. A common mistake is placing them first or after the verb. Remember: the clitic cannot start a clause.",
+      "examples": [
+        {
+          "wrong": "Ga vidim.",
+          "right": "Vidim ga.",
+          "note": "The clitic 'ga' cannot be first. Move it after the verb."
+        },
+        {
+          "wrong": "Ja video sam je.",
+          "right": "Ja sam je video.",
+          "note": "The auxiliary 'sam' is also a clitic; place it after 'Ja', then the pronoun 'je'."
+        },
+        {
+          "wrong": "Dajem mu knjigu.",
+          "right": "Dajem mu knjigu.",
+          "note": "This is actually correct! 'Mu' is in second position (after 'Dajem'). If you placed it first, it would be wrong."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the clitic placement: 'Se radujem.' (meaning 'I am pleased.')",
+          "answer": "Radujem se."
+        },
+        {
+          "prompt": "Correct the clitic placement: 'Knjigu mu dajem.' (meaning 'I give him the book.')",
+          "answer": "Dajem mu knjigu."
+        },
+        {
+          "prompt": "Correct the clitic placement: 'Je ona lepa.' (meaning 'She is beautiful.')",
+          "answer": "Ona je lepa."
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-se-with-transitive-verbs",
+      "topic": "Reflexive 'se' with transitive verbs",
+      "title": "Using 'se' with Transitive Verbs",
+      "explanation": "In Serbian, many transitive verbs require the reflexive particle 'se' when the subject performs the action on itself. English speakers often forget this 'se' because English does not use it the same way. Remember: if the action is done to oneself, add 'se' after the verb (or before it in certain tenses).",
+      "examples": [
+        {
+          "wrong": "Ja perem.",
+          "right": "Ja perem se.",
+          "note": "'Prati' (to wash) needs 'se' when washing oneself, not just washing something."
+        },
+        {
+          "wrong": "On oblači.",
+          "right": "On oblači se.",
+          "note": "'Oblačiti' (to dress) requires 'se' when dressing oneself; without it, it means dressing someone else."
+        },
+        {
+          "wrong": "Mi brijemo.",
+          "right": "Mi brijemo se.",
+          "note": "'Brijati' (to shave) needs 'se' for shaving oneself."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'I get up' (literally 'I raise myself')?",
+          "answer": "Ja dižem se."
+        },
+        {
+          "prompt": "Translate 'She combs her hair' (meaning combs herself).",
+          "answer": "Ona češlja se."
+        },
+        {
+          "prompt": "How do you say 'We hide' (ourselves)?",
+          "answer": "Mi skrivamo se."
+        }
+      ]
+    },
+    {
+      "rule_id": "verbs-with-required-prepositions",
+      "topic": "Verbs with required prepositions",
+      "title": "Verbs with Required Prepositions",
+      "explanation": "In Serbian, many verbs require specific prepositions that differ from English. For example, 'to wait for' is simply 'čekati' (no preposition), while 'to think about' is 'misliti na' (not 'misliti o'). Using the wrong preposition is a common mistake for English speakers.",
+      "examples": [
+        {
+          "wrong": "Čekam za tebe.",
+          "right": "Čekam te.",
+          "note": "Čekati takes a direct object, no preposition."
+        },
+        {
+          "wrong": "Mislim o tebi.",
+          "right": "Mislim na tebe.",
+          "note": "Misliti na + accusative means 'think of/about'. Misliti o means 'have an opinion about'."
+        },
+        {
+          "wrong": "Tražim za knjigu.",
+          "right": "Tražim knjigu.",
+          "note": "Tražiti takes a direct object, no preposition."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'I am waiting for the bus' in Serbian?",
+          "answer": "Čekam autobus."
+        },
+        {
+          "prompt": "How do you say 'She is thinking about her friend' in Serbian?",
+          "answer": "Ona misli na svoju prijateljicu."
+        },
+        {
+          "prompt": "How do you say 'He is looking for his keys' in Serbian?",
+          "answer": "On traži svoje ključeve."
+        }
+      ]
+    },
+    {
+      "rule_id": "past-tense-auxiliary-agreement",
+      "topic": "Past tense auxiliary agreement",
+      "title": "Past Tense Auxiliary Agreement",
+      "explanation": "In Serbian, the past tense is formed with the present tense of the auxiliary verb 'biti' (sam, si, je, smo, ste, su) plus the past participle. The auxiliary must match the subject in person and number. A common mistake is using 'je' (3rd person singular) for plural subjects or incorrect forms for other persons.",
+      "examples": [
+        {
+          "wrong": "Oni je bio.",
+          "right": "Oni su bili.",
+          "note": "Use 'su' for plural subjects (they). 'Je' is only for singular third person (he/she/it)."
+        },
+        {
+          "wrong": "Mi je radili.",
+          "right": "Mi smo radili.",
+          "note": "Use 'smo' for 'we' (first person plural)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the auxiliary: 'Ja je bio.'",
+          "answer": "Ja sam bio."
+        },
+        {
+          "prompt": "Fill in the correct auxiliary: 'Vi ______ radili.'",
+          "answer": "ste"
+        },
+        {
+          "prompt": "Choose the right auxiliary: 'One (je/su) bile.'",
+          "answer": "su"
+        }
+      ]
+    },
+    {
+      "rule_id": "future-tense-ću-vs-bude",
+      "topic": "Future tense 'ću' vs 'bude'",
+      "title": "Future Tense: 'ću' vs 'bude'",
+      "explanation": "In Serbian, 'ću' is the auxiliary verb for forming the future tense (future I) meaning 'I will'. 'Bude' is the present tense of 'biti' used only in specific constructions like future II or conditional clauses. A common mistake is using 'bude' instead of 'ću' to express simple future actions.",
+      "examples": [
+        {
+          "wrong": "Ja bude doći sutra.",
+          "right": "Ja ću doći sutra.",
+          "note": "Use 'ću' for simple future (I will come). 'Bude' is not used here."
+        },
+        {
+          "wrong": "On bude raditi.",
+          "right": "On će raditi.",
+          "note": "'Će' is the third-person singular form of the auxiliary. 'Bude' would be incorrect."
+        },
+        {
+          "wrong": "Mi budemo putovati.",
+          "right": "Mi ćemo putovati.",
+          "note": "For 'we will travel', use 'ćemo' (first person plural)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I will buy bread.' (Use correct future auxiliary)",
+          "answer": "Ja ću kupiti hleb."
+        },
+        {
+          "prompt": "Correct this sentence: 'Ti bude učiti srpski.'",
+          "answer": "Ti ćeš učiti srpski."
+        },
+        {
+          "prompt": "Fill in the blank: 'Oni _____ doći u petak.' (use proper future form)",
+          "answer": "će"
+        }
+      ]
+    },
+    {
+      "rule_id": "conditional-bih-forms",
+      "topic": "Conditional 'bih' forms",
+      "title": "Mastering the Conditional 'bih' Forms",
+      "explanation": "In Serbian, the conditional auxiliary changes depending on the subject. The form 'bih' is only used for the first person singular (ja). Common mistakes include using 'bih' for all persons, when it should be 'bi' for second/third singular, 'bismo' for first plural, 'biste' for second plural, and 'bi' for third plural.",
+      "examples": [
+        {
+          "wrong": "Ti bih došao.",
+          "right": "Ti bi došao.",
+          "note": "Use 'bi' for second person singular (ti), not 'bih'."
+        },
+        {
+          "wrong": "Oni bih došli.",
+          "right": "Oni bi došli.",
+          "note": "Use 'bi' for third person plural (oni), not 'bih'."
+        },
+        {
+          "wrong": "Mi bih došli.",
+          "right": "Mi bismo došli.",
+          "note": "Use 'bismo' for first person plural (mi)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct conditional auxiliary: Ja ___ došao.",
+          "answer": "bih"
+        },
+        {
+          "prompt": "Fill in the correct conditional auxiliary: Ti ___ došla.",
+          "answer": "bi"
+        },
+        {
+          "prompt": "Fill in the correct conditional auxiliary: Mi ___ došli.",
+          "answer": "bismo"
+        }
+      ]
+    },
+    {
+      "rule_id": "imperative-mood-irregulars",
+      "topic": "Imperative mood irregulars",
+      "title": "Irregular Imperatives in Serbian: Common Mistakes",
+      "explanation": "In Serbian, some verbs have irregular imperative forms that do not follow the regular pattern of adding -j or -i to the infinitive stem. A common mistake is using the infinitive form instead of the correct imperative. For example, the verb 'ići' (to go) becomes 'idi' (go!), not 'ići'. Learning these irregular forms will help you sound more natural.",
+      "examples": [
+        {
+          "wrong": "Ići ovde!",
+          "right": "Idi ovde!",
+          "note": "The imperative of 'ići' is 'idi' for the singular 'ti' form."
+        },
+        {
+          "wrong": "Doći sutra!",
+          "right": "Dođi sutra!",
+          "note": "The imperative of 'doći' is 'dođi', not the infinitive."
+        },
+        {
+          "wrong": "Reći istinu!",
+          "right": "Reci istinu!",
+          "note": "For 'reći', the imperative is 'reci' (drop the infinitive ending and change the stem)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'Eat!' (informal singular) from the verb 'jesti'?",
+          "answer": "Jedi"
+        },
+        {
+          "prompt": "How do you say 'Take!' (informal singular) from the verb 'uzeti'?",
+          "answer": "Uzmi"
+        },
+        {
+          "prompt": "How do you say 'Be!' (informal singular) from the verb 'biti'?",
+          "answer": "Budi"
+        }
+      ]
+    },
+    {
+      "rule_id": "numbers-declension-of-1-4",
+      "topic": "Numbers: declension of 1-4",
+      "title": "Numbers 1-4: Gender Agreement",
+      "explanation": "In Serbian, the numbers 1 (jedan), 2 (dva/dve), 3 (tri), and 4 (četiri) must agree in gender with the noun they count. A common mistake is using the masculine form for feminine nouns (e.g., 'dva knjige' instead of 'dve knjige'). For 1, use 'jedan' (masculine), 'jedna' (feminine), 'jedno' (neuter); for 2, use 'dva' (masculine/neuter) and 'dve' (feminine); 3 and 4 stay the same for all genders.",
+      "examples": [
+        {
+          "wrong": "Imam dva knjige.",
+          "right": "Imam dve knjige.",
+          "note": "'Knjige' is feminine plural, so use 'dve', not 'dva'."
+        },
+        {
+          "wrong": "To je jedan soba.",
+          "right": "To je jedna soba.",
+          "note": "'Soba' is feminine, so use 'jedna' instead of 'jedan'."
+        },
+        {
+          "wrong": "Vidim tri stolice.",
+          "right": "Vidim tri stolice.",
+          "note": "Correct as is – 'tri' works for all genders."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank with the correct form of '1' (jedan/jedna/jedno): 'Ovo je ___ stolica.'",
+          "answer": "jedna"
+        },
+        {
+          "prompt": "Fill in the blank with the correct form of '2' (dva/dve): 'Imam ___ prijatelja.'",
+          "answer": "dva"
+        },
+        {
+          "prompt": "Fill in the blank with the correct form of '3' (tri): 'Kupila je ___ jabuke.'",
+          "answer": "tri"
+        }
+      ]
+    },
+    {
+      "rule_id": "gender-of-nouns-ending-in-a",
+      "topic": "Gender of nouns ending in -a",
+      "title": "Gender of Nouns Ending in -a",
+      "explanation": "In Serbian, most nouns ending in -a are feminine. However, nouns that refer to male people (e.g., tata 'dad', kolega 'colleague', sudija 'judge') are masculine. This means adjectives, possessive pronouns, and numerals must agree with the masculine gender, not the feminine ending. Always check the meaning to determine the correct gender.",
+      "examples": [
+        {
+          "wrong": "Moj tata je lepa.",
+          "right": "Moj tata je lep.",
+          "note": "Even though 'tata' ends in -a, it is masculine, so use the masculine adjective 'lep'."
+        },
+        {
+          "wrong": "Ovo je moja kolega.",
+          "right": "Ovo je moj kolega.",
+          "note": "'kolega' is masculine, so the possessive must be 'moj' (masculine), not 'moja' (feminine)."
+        },
+        {
+          "wrong": "Vidim jednu sudiju.",
+          "right": "Vidim jednog sudiju.",
+          "note": "Numerals also agree in gender: 'jednog' (masculine accusative) is correct for 'sudija'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complete with the correct possessive: ___ (Moj/Moja) tata je inženjer.",
+          "answer": "Moj"
+        },
+        {
+          "prompt": "Choose the correct adjective: Ona je (dobar/dobra) sudija.",
+          "answer": "dobar"
+        },
+        {
+          "prompt": "Fill in: Ovo je ___ (jedan/jedna) kolega.",
+          "answer": "jedan"
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-svoj-vs-moj",
+      "topic": "Possessive 'svoj' vs 'moj'",
+      "title": "Possessive 'svoj' vs 'moj'",
+      "explanation": "'Svoj' is a reflexive possessive pronoun meaning 'one's own' and must refer back to the subject of the sentence. 'Moj' is a non-reflexive possessive meaning 'my'. A common mistake is using 'moj' when the subject is the same as the possessor, but 'svoj' should be used instead.",
+      "examples": [
+        {
+          "wrong": "Ja volim moju porodicu.",
+          "right": "Ja volim svoju porodicu.",
+          "note": "Use 'svoju' because the subject 'ja' possesses the family."
+        },
+        {
+          "wrong": "On je jeo svoj sendvič.",
+          "right": "On je jeo svoj sendvič.",
+          "note": "This is correct already: 'svoj' matches the subject 'on'."
+        },
+        {
+          "wrong": "Marija je kupila moju knjigu.",
+          "right": "Marija je kupila svoju knjigu.",
+          "note": "If Marija bought her own book, use 'svoju'; 'moju' would mean she bought my book."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in: I wash _____ hands. (my own)",
+          "answer": "svoje"
+        },
+        {
+          "prompt": "Fill in: He loves _____ dog. (his own)",
+          "answer": "svog"
+        },
+        {
+          "prompt": "Fill in: She finished _____ homework. (her own)",
+          "answer": "svoj"
+        }
+      ]
+    },
+    {
+      "rule_id": "demonstratives-ovajtajonaj",
+      "topic": "Demonstratives: ovaj/taj/onaj",
+      "title": "Demonstratives: ovaj, taj, onaj",
+      "explanation": "In Serbian, ovaj means 'this' (close to the speaker), taj means 'that' (close to the listener or already known), and onaj means 'that over there' (far from both). A common mistake is using ovaj for something far or using taj when pointing to something close.",
+      "examples": [
+        {
+          "wrong": "Ovaj sto je tamo daleko.",
+          "right": "Onaj sto je tamo daleko.",
+          "note": "Use onaj for something far away, not ovaj."
+        },
+        {
+          "wrong": "Daj mi onu knjigu koju držiš.",
+          "right": "Daj mi tu knjigu koju držiš.",
+          "note": "Use taj/tu for something near the listener, not onaj."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in: ___ (this, near me) stolica je udobna.",
+          "answer": "Ova"
+        },
+        {
+          "prompt": "Fill in: ___ (that, near you) olovka je tvoja?",
+          "answer": "Ta"
+        },
+        {
+          "prompt": "Fill in: ___ (that over there) planina je visoka.",
+          "answer": "Ona"
+        }
+      ]
+    },
+    {
+      "rule_id": "interrogatives-štakokoji",
+      "topic": "Interrogatives: šta/ko/koji",
+      "title": "Choosing the Right Question Word: Šta, Ko, Koji",
+      "explanation": "In Serbian, 'šta' means 'what' and is used for things or general information. 'Ko' means 'who' and is only for people. 'Koji' means 'which' and is used when you are choosing from a known set of options (it agrees in gender and number with the noun it refers to).",
+      "examples": [
+        {
+          "wrong": "Šta je taj čovek?",
+          "right": "Ko je taj čovek?",
+          "note": "Use 'ko' for people, not 'šta'."
+        },
+        {
+          "wrong": "Koja knjiga želiš?",
+          "right": "Koju knjigu želiš?",
+          "note": "'Koji' must agree in case (accusative feminine singular here)."
+        },
+        {
+          "wrong": "Ko je ovo? (pointing to a cat)",
+          "right": "Šta je ovo? (pointing to a cat)",
+          "note": "Use 'šta' for animals/objects, 'ko' for people."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'Who is calling?'",
+          "answer": "Ko zove?"
+        },
+        {
+          "prompt": "Translate: 'What is this book about?'",
+          "answer": "O čemu je ova knjiga?"
+        },
+        {
+          "prompt": "Translate: 'Which dress do you like?' (dress = haljina, feminine singular)",
+          "answer": "Koju haljinu voliš?"
+        }
+      ]
+    },
+    {
+      "rule_id": "conjunctions-aalinegopa",
+      "topic": "Conjunctions: a/ali/nego/pa",
+      "title": "Choosing the Right Conjunction: a, ali, nego, pa",
+      "explanation": "In Serbian, these four conjunctions are often confused. Use 'ali' for a direct, strong contrast (like 'but'). Use 'a' for a milder contrast or to add new information. Use 'nego' after a negative statement to mean 'but rather'. Use 'pa' to show sequence or result ('and then', 'and so').",
+      "examples": [
+        {
+          "wrong": "Želeo sam da dođem, a nisam mogao.",
+          "right": "Želeo sam da dođem, ali nisam mogao.",
+          "note": "Use 'ali' for a strong contrast or obstacle; 'a' would be too weak here."
+        },
+        {
+          "wrong": "Bio je umoran, pa je nastavio da radi.",
+          "right": "Bio je umoran, ali je nastavio da radi.",
+          "note": "Use 'ali' to express 'although he was tired, he continued'; 'pa' would mean 'so he continued' (result)."
+        },
+        {
+          "wrong": "Nisam gladan, ali sam žedan.",
+          "right": "Nisam gladan, nego sam žedan.",
+          "note": "After a negative clause, use 'nego' (not 'ali') to say 'but rather'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank with the correct conjunction: 'Nisam video film, ____ sam čitao knjigu.' (after negation)",
+          "answer": "Nisam video film, nego sam čitao knjigu."
+        },
+        {
+          "prompt": "Fill in the blank: 'Prvo sam se probudio, ____ sam doručkovao.' (sequence of actions)",
+          "answer": "Prvo sam se probudio, pa sam doručkovao."
+        },
+        {
+          "prompt": "Fill in the blank: 'Ona voli kafu, ____ on voli čaj.' (mild contrast / adding info)",
+          "answer": "Ona voli kafu, a on voli čaj."
+        }
+      ]
+    },
+    {
+      "rule_id": "comparative-of-adverbs",
+      "topic": "Comparative of adverbs",
+      "title": "Comparative of Adverbs: A Common Mistake",
+      "explanation": "In Serbian, the comparative of adverbs is formed with a single word (e.g., brzo → brže), not by adding 'više' (more). Another common error is using the adjective form (which agrees in gender/number) instead of the adverb when describing an action. Remember: adverbs are invariable.",
+      "examples": [
+        {
+          "wrong": "On govori više glasno.",
+          "right": "On govori glasnije.",
+          "note": "Do not use 'više' + adverb; use the synthetic comparative form."
+        },
+        {
+          "wrong": "Ona trči brža.",
+          "right": "Ona trči brže.",
+          "note": "Adverbs do not change for gender; use the neuter comparative ending."
+        },
+        {
+          "wrong": "Oni pevaju više dobro.",
+          "right": "Oni pevaju bolje.",
+          "note": "Irregular adverbs like 'dobro' have a special comparative form: 'bolje'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complete with the comparative: On uči (mnogo) ______.",
+          "answer": "više"
+        },
+        {
+          "prompt": "Complete with the comparative: Ona priča (glasno) ______.",
+          "answer": "glasnije"
+        },
+        {
+          "prompt": "Complete with the comparative: Oni rade (dobro) ______.",
+          "answer": "bolje"
+        }
+      ]
+    },
+    {
+      "rule_id": "verbs-of-motion-prefixes",
+      "topic": "Verbs of motion prefixes",
+      "title": "Verbs of Motion Prefixes: Doći vs. Otići, Ući vs. Izići",
+      "explanation": "In Serbian, prefixes attached to verbs of motion change the direction or type of movement. Common pairs are 'do-' (arrive/come) vs. 'od-' (depart/go away), and 'u-' (enter) vs. 'iz-' (exit). English often uses the same verb 'go' or 'come' without these distinctions, which leads to mistakes.",
+      "examples": [
+        {
+          "wrong": "Otišao sam kući.",
+          "right": "Došao sam kući.",
+          "note": "'Doći' means to arrive/come, while 'otići' means to leave/go away. Use 'doći' when arriving at a place."
+        },
+        {
+          "wrong": "Došao sam iz škole.",
+          "right": "Otišao sam iz škole.",
+          "note": "Use 'otići' when leaving a place, not 'doći'."
+        },
+        {
+          "wrong": "Ušao sam iz sobe.",
+          "right": "Izašao sam iz sobe.",
+          "note": "'Ući' means to enter, 'izići' means to exit. The prefix 'iz-' indicates movement out of a place."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'He came home'?",
+          "answer": "Došao je kući."
+        },
+        {
+          "prompt": "How do you say 'She left the room'?",
+          "answer": "Izašla je iz sobe."
+        },
+        {
+          "prompt": "How do you say 'I went to the store' (meaning I departed from home and went there)?",
+          "answer": "Otišao sam u prodavnicu."
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-li-in-yesno-questions",
+      "topic": "Use of 'li' in yes/no questions",
+      "title": "Forming Yes/No Questions with 'li'",
+      "explanation": "In Serbian, you cannot simply raise your intonation to turn a statement into a yes/no question. Instead, you must add the particle 'li' after the verb (or the auxiliary verb). The most common pattern is 'Da li' + subject + verb, but you can also attach 'li' directly to the verb (e.g., 'Jesi li...'). Remember that 'li' always comes right after the first verb in the question.",
+      "examples": [
+        {
+          "wrong": "Ti si student?",
+          "right": "Da li si student?",
+          "note": "The statement 'Ti si student' becomes a question by adding 'Da li' at the beginning. 'Da li' is the standard, neutral way to form yes/no questions."
+        },
+        {
+          "wrong": "On voli kafu?",
+          "right": "Da li on voli kafu?",
+          "note": "Again, simply adding a question mark is incorrect. Use 'Da li' before the subject and verb."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Ask 'Are you going to the store?' using 'Da li'.",
+          "answer": "Da li ideš u prodavnicu?"
+        },
+        {
+          "prompt": "Ask 'Does she speak English?' using 'Da li'.",
+          "answer": "Da li ona govori engleski?"
+        }
+      ]
+    },
+    {
+      "rule_id": "double-negation-in-serbian",
+      "topic": "Double negation in Serbian",
+      "title": "Double Negation in Serbian",
+      "explanation": "In Serbian, when a sentence is negative, all relevant words (like 'no one', 'nothing', 'never') must also be in a negative form. This is called double (or multiple) negation. Unlike English, Serbian requires every negative element to appear as a negative word, not just one.",
+      "examples": [
+        {
+          "wrong": "Niko nije došao.",
+          "right": "Niko nije došao.",
+          "note": "Actually this is correct Serbian—both 'niko' (no one) and 'nije' (is not) are negative. A common mistake: using 'Neko nije došao' (someone didn't come) instead of the proper double negative."
+        },
+        {
+          "wrong": "Ne znam ništa.",
+          "right": "Ne znam ništa.",
+          "note": "This is correct. A typical error is 'Ne znam nešto' (I don't know something) instead of using 'ništa' (nothing)."
+        },
+        {
+          "wrong": "Nikad neću zaboraviti.",
+          "right": "Nikad neću zaboraviti.",
+          "note": "Correct. Wrong would be 'Nikad ću zaboraviti' (I will never forget) without the negative auxiliary 'neću'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'Nobody called me.' (Use double negation)",
+          "answer": "Niko me nije zvao."
+        },
+        {
+          "prompt": "Translate: 'I never go there.' (Use double negation)",
+          "answer": "Nikad ne idem tamo."
+        },
+        {
+          "prompt": "Translate: 'I don't see anything.' (Use double negation)",
+          "answer": "Ne vidim ništa."
+        }
+      ]
+    },
+    {
+      "rule_id": "word-order-in-subordinate-clauses",
+      "topic": "Word order in subordinate clauses",
+      "title": "Word Order in Subordinate Clauses",
+      "explanation": "In Serbian, the verb in a subordinate clause usually comes at the end of the clause, unlike English where it follows the subject. This is a common mistake for English speakers. Remember to place the verb last after conjunctions like 'da' (that), 'kada' (when), or 'ako' (if).",
+      "examples": [
+        {
+          "wrong": "Znam da on voli kafu.",
+          "right": "Znam da on kafu voli.",
+          "note": "The verb 'voli' moves to the end after 'da'."
+        },
+        {
+          "wrong": "Kada sam došao, ona je spavala.",
+          "right": "Kada sam došao, ona spavala je.",
+          "note": "In the 'kada' clause, the auxiliary 'je' goes after the main verb 'spavala'."
+        },
+        {
+          "wrong": "Ako on hoće da ide, idemo.",
+          "right": "Ako on da ide hoće, idemo.",
+          "note": "Both verbs in the 'ako' clause follow the end-of-clause rule: 'hoće' after 'da ide'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I think that she reads books.' (Use 'Mislim da...')",
+          "answer": "Mislim da ona knjige čita."
+        },
+        {
+          "prompt": "Correct the word order: 'Kada on dolazi, mi smo srećni.'",
+          "answer": "Kada on dolazi, mi srećni smo."
+        },
+        {
+          "prompt": "Finish the sentence: 'Ako ti (to radiš)....' (Place the verb correctly.)",
+          "answer": "Ako ti to radiš."
+        }
+      ]
+    }
+  ]
+}

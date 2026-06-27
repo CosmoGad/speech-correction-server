@@ -1,0 +1,873 @@
+{
+  "learning": "cs",
+  "interface": "en",
+  "generated_at": "2026-06-27T13:53:35.681701+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "cases",
+      "topic": "Cases",
+      "title": "Mastering Czech Cases: Nominative vs. Accusative",
+      "explanation": "In Czech, nouns change their endings depending on their role in the sentence. A common mistake is using the dictionary form (nominative) when the noun is a direct object. After verbs like 'vidět' (to see) or 'mít' (to have), the object must be in the accusative case.",
+      "examples": [
+        {
+          "wrong": "Vidím pes.",
+          "right": "Vidím psa.",
+          "note": "After 'vidět', the masculine animate noun 'pes' changes to accusative 'psa'."
+        },
+        {
+          "wrong": "Mám kniha.",
+          "right": "Mám knihu.",
+          "note": "Feminine nouns like 'kniha' get -u ending in accusative."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct accusative form: Vidím ______ (kočka).",
+          "answer": "kočku"
+        },
+        {
+          "prompt": "Fill in the correct accusative form: Mám ______ (stůl).",
+          "answer": "stůl"
+        }
+      ]
+    },
+    {
+      "rule_id": "verb-aspect",
+      "topic": "Verb aspect",
+      "title": "Mastering Czech Verb Aspect",
+      "explanation": "Czech verbs have two aspects: imperfective (ongoing, repeated, habitual) and perfective (completed, single). English often uses the same tense for both, so you must choose the correct aspect based on context. Use imperfective for actions in progress or habits, and perfective for completed or one-time actions.",
+      "examples": [
+        {
+          "wrong": "Každý den přečtu knihu.",
+          "right": "Každý den čtu knihu.",
+          "note": "Use imperfective for habitual actions."
+        },
+        {
+          "wrong": "Včera jsem psal dopis a dokončil ho.",
+          "right": "Včera jsem napsal dopis.",
+          "note": "Use perfective for completed past actions."
+        },
+        {
+          "wrong": "Teď napíšu dopis.",
+          "right": "Teď píšu dopis.",
+          "note": "Use imperfective for actions in progress."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'I always eat breakfast' (habitual)?",
+          "answer": "Vždycky snídám."
+        },
+        {
+          "prompt": "How do you say 'I wrote a letter yesterday (and finished it)'?",
+          "answer": "Včera jsem napsal dopis."
+        },
+        {
+          "prompt": "How do you say 'I am reading a book right now'?",
+          "answer": "Teď čtu knihu."
+        }
+      ]
+    },
+    {
+      "rule_id": "word-order",
+      "topic": "Word order",
+      "title": "Word Order with Reflexive 'se'",
+      "explanation": "In Czech, the reflexive pronoun 'se' (or 'si') is a clitic that must be placed directly after the finite verb (or auxiliary) in main clauses. A common mistake is to put it after the main verb or in the wrong position. Remember: 'se' comes before the past participle in compound tenses.",
+      "examples": [
+        {
+          "wrong": "Dnes jsem učil se.",
+          "right": "Dnes jsem se učil.",
+          "note": "In past tense, 'se' goes after the auxiliary 'jsem', not after the main verb."
+        },
+        {
+          "wrong": "Já mám se rád.",
+          "right": "Já se mám rád.",
+          "note": "In present tense, 'se' follows the conjugated verb directly, not after the object."
+        },
+        {
+          "wrong": "Učím česky se.",
+          "right": "Učím se česky.",
+          "note": "'se' must come immediately after the verb, before the object."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Rewrite the sentence correctly: 'Včera jsem koupil si knihu.'",
+          "answer": "Včera jsem si koupil knihu."
+        },
+        {
+          "prompt": "Correct the word order: 'Ona má se ráda.'",
+          "answer": "Ona se má ráda."
+        },
+        {
+          "prompt": "Put the words in correct order: 'se / učíme / česky / my'",
+          "answer": "My se učíme česky."
+        }
+      ]
+    },
+    {
+      "rule_id": "diacritics",
+      "topic": "Diacritics",
+      "title": "Diacritics: Small Marks, Big Differences",
+      "explanation": "In Czech, diacritics are not optional—they change the meaning and pronunciation of words. A missing čárka (acute accent) or háček (caron) can turn a word into a completely different one. Always include them when writing Czech.",
+      "examples": [
+        {
+          "wrong": "rad",
+          "right": "rád",
+          "note": "Without the acute accent, 'rad' means 'advice', not 'glad'."
+        },
+        {
+          "wrong": "byt",
+          "right": "být",
+          "note": "The acute accent on 'ý' differentiates the verb 'to be' from the noun 'apartment'."
+        },
+        {
+          "wrong": "drat",
+          "right": "drát",
+          "note": "Without the acute accent, 'drat' means 'to tear', not 'wire'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the correct form of the word meaning 'glad' (missing acute accent in 'rad').",
+          "answer": "rád"
+        },
+        {
+          "prompt": "Correct the diacritics in the word 'dom' so that it means 'house'.",
+          "answer": "dům"
+        },
+        {
+          "prompt": "Write the word for 'to be' with the correct long 'y'.",
+          "answer": "být"
+        }
+      ]
+    },
+    {
+      "rule_id": "consonant-clusters",
+      "topic": "Consonant clusters",
+      "title": "Mastering Czech Consonant Clusters",
+      "explanation": "Czech often groups consonants without vowels between them, which can feel unnatural for English speakers. A common mistake is inserting a vowel (like 'e' or 'u') into clusters. Practice pronouncing each consonant in sequence without adding extra sounds.",
+      "examples": [
+        {
+          "wrong": "kerek",
+          "right": "krk",
+          "note": "Say all three consonants without any vowel in between."
+        },
+        {
+          "wrong": "perst",
+          "right": "prst",
+          "note": "Keep the 'r' directly before 's' without inserting a vowel."
+        },
+        {
+          "wrong": "smer't",
+          "right": "smrt",
+          "note": "Pronounce 'm' and 'r' consecutively without a vowel."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "An English speaker says 'kerek' for 'neck'. What is the correct Czech word?",
+          "answer": "krk"
+        },
+        {
+          "prompt": "Correct the mistake: 'perst' should be written as...",
+          "answer": "prst"
+        },
+        {
+          "prompt": "Write the Czech word for 'death' without inserting any vowel between consonants.",
+          "answer": "smrt"
+        }
+      ]
+    },
+    {
+      "rule_id": "ř-sound",
+      "topic": "ř sound",
+      "title": "Mastering the Czech 'ř' Sound",
+      "explanation": "The Czech 'ř' is a unique sound that does not exist in English. It is a blend of a rolled 'r' and the 'zh' sound (like in 'measure'). To pronounce it, place your tongue as if for a rolled 'r' but vibrate it while pushing air over the sides, similar to a soft 'rzh'. Common mistakes include substituting a plain 'r' or 'zh', which can change the meaning of words.",
+      "examples": [
+        {
+          "wrong": "reka",
+          "right": "řeka",
+          "note": "'řeka' means 'river'; saying 'reka' would be incorrect and might be misunderstood."
+        },
+        {
+          "wrong": "dvere",
+          "right": "dveře",
+          "note": "'dveře' means 'door'; dropping the hook changes the word."
+        },
+        {
+          "wrong": "treci",
+          "right": "třetí",
+          "note": "'třetí' means 'third'; the 'ř' is essential for the correct pronunciation."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you write 'three' (the number) in Czech?",
+          "answer": "tři"
+        },
+        {
+          "prompt": "Translate 'stool' (as in a seat) into Czech.",
+          "answer": "stolička"
+        },
+        {
+          "prompt": "Write the Czech word for 'good' (masculine singular).",
+          "answer": "dobrý"
+        }
+      ]
+    },
+    {
+      "rule_id": "vowel-length",
+      "topic": "Vowel length",
+      "title": "Mastering Czech Vowel Length: Short vs. Long",
+      "explanation": "In Czech, vowel length (short vs. long) changes the meaning of words. A long vowel is marked with an acute accent (´) and is pronounced about twice as long as a short vowel. Ignoring this distinction can lead to confusion, e.g., 'byt' (apartment) vs. 'být' (to be).",
+      "examples": [
+        {
+          "wrong": "mam rad pivo",
+          "right": "mám rád pivo",
+          "note": "Missing long vowels on 'mám' and 'rád' changes the meaning; 'mam' is not a word, 'rad' means 'gladly' but 'rád' means 'like'."
+        },
+        {
+          "wrong": "bydlim v dome",
+          "right": "bydlím v domě",
+          "note": "Short 'i' and 'e' in 'bydlim' and 'dome' are incorrect; 'bydlím' = I live, 'domě' = in a house (locative case)."
+        },
+        {
+          "wrong": "je to dobre",
+          "right": "je to dobré",
+          "note": "Short final 'e' instead of long 'é' in 'dobré' changes meaning from 'good' (correct) to an ungrammatical form."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct word: 'I have a cat' – 'Já ___ (mít) kočku.' Use the proper vowel length.",
+          "answer": "mám"
+        },
+        {
+          "prompt": "Choose the right form: 'He is a doctor' – 'On je ___ (lékař/lékar).'",
+          "answer": "lékař"
+        },
+        {
+          "prompt": "Correct the mistake: 'Chci jit ven' (I want to go out) – what is the right spelling of 'jit'?",
+          "answer": "jít"
+        }
+      ]
+    },
+    {
+      "rule_id": "gender-agreement-of-adjectives",
+      "topic": "Gender agreement of adjectives",
+      "title": "Gender Agreement of Adjectives in Czech",
+      "explanation": "In Czech, adjectives must agree in gender (masculine, feminine, neuter) with the noun they describe. A common mistake is using the masculine form for feminine or neuter nouns. For feminine nouns, adjectives often end in -á or -í; for neuter, they often end in -é or -í. Pay attention to noun gender to choose the correct adjective ending.",
+      "examples": [
+        {
+          "wrong": "velký žena",
+          "right": "velká žena",
+          "note": "'Žena' is feminine, so 'velký' (masculine) changes to 'velká'."
+        },
+        {
+          "wrong": "malý auto",
+          "right": "malé auto",
+          "note": "'Auto' is neuter, so 'malý' (masculine) becomes 'malé'."
+        },
+        {
+          "wrong": "nový kniha",
+          "right": "nová kniha",
+          "note": "'Kniha' is feminine, requiring 'nová' instead of 'nový'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct form of 'starý' (old) for 'dům' (house, masculine):",
+          "answer": "starý dům"
+        },
+        {
+          "prompt": "Fill in the correct form of 'krásný' (beautiful) for 'město' (city, neuter):",
+          "answer": "krásné město"
+        },
+        {
+          "prompt": "Fill in the correct form of 'dobrý' (good) for 'škola' (school, feminine):",
+          "answer": "dobrá škola"
+        }
+      ]
+    },
+    {
+      "rule_id": "past-tense-verb-endings",
+      "topic": "Past tense verb endings",
+      "title": "Past Tense Verb Endings: Gender and Number Agreement",
+      "explanation": "In Czech, the past tense is formed by adding a suffix to the verb stem that matches the subject's gender (masculine, feminine, neuter) and number (singular, plural). A common mistake for English speakers is using the masculine singular ending for all subjects. For example, 'on' (he) takes -l, 'ona' (she) takes -la, 'ono' (it) takes -lo, and plural forms -li (masculine animate), -ly (feminine or masculine inanimate), -la (neuter).",
+      "examples": [
+        {
+          "wrong": "Ona šel do školy.",
+          "right": "Ona šla do školy.",
+          "note": "'šel' is masculine singular; 'šla' is feminine singular for 'she went'."
+        },
+        {
+          "wrong": "Děti hrálo venku.",
+          "right": "Děti hrály venku.",
+          "note": "'hrálo' is neuter singular; 'hrály' is plural (feminine/neuter or masculine inanimate) for 'the children played'."
+        },
+        {
+          "wrong": "My viděli to auto.",
+          "right": "My viděli to auto.",
+          "note": "This one is correct! 'Viděli' is masculine animate plural, matching 'my' (we, mixed or male group)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the past tense verb: 'Ona (být) doma.' (She was at home.)",
+          "answer": "Ona byla doma."
+        },
+        {
+          "prompt": "Fill in the correct past tense form: 'Ty (číst) knihu.' (You [singular, female] read a book.)",
+          "answer": "Ty četla knihu."
+        },
+        {
+          "prompt": "Choose the right ending: 'Můj bratr (hrát) fotbal.' (My brother played football.)",
+          "answer": "Můj bratr hrál fotbal."
+        }
+      ]
+    },
+    {
+      "rule_id": "present-tense-conjugation",
+      "topic": "Present tense conjugation",
+      "title": "Present Tense Conjugation: Don't Forget the Endings",
+      "explanation": "In Czech, present tense verbs must change their endings to match the subject (já, ty, on/ona/ono, my, vy, oni). A common mistake for English speakers is using the infinitive form instead of the conjugated form. Always add the correct personal ending to the verb stem.",
+      "examples": [
+        {
+          "wrong": "Já mluvit.",
+          "right": "Já mluvím.",
+          "note": "The infinitive 'mluvit' is used; the correct first-person ending is -ím."
+        },
+        {
+          "wrong": "On mluvit.",
+          "right": "On mluví.",
+          "note": "Third-person singular requires the ending -í, not the infinitive."
+        },
+        {
+          "wrong": "My mluvit.",
+          "right": "My mluvíme.",
+          "note": "First-person plural needs the ending -íme."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "I speak.",
+          "answer": "Já mluvím."
+        },
+        {
+          "prompt": "You (singular informal) speak.",
+          "answer": "Ty mluvíš."
+        },
+        {
+          "prompt": "They speak.",
+          "answer": "Oni mluví."
+        }
+      ]
+    },
+    {
+      "rule_id": "prepositions-s-and-z",
+      "topic": "Prepositions s and z",
+      "title": "Czech Prepositions: S vs. Z",
+      "explanation": "Use 's' (with) when talking about accompaniment or togetherness, and it requires the instrumental case. Use 'z' (from, out of) when indicating origin, material, or movement from inside, and it requires the genitive case. A common mistake is using 's' where 'z' is needed, especially with verbs of movement.",
+      "examples": [
+        {
+          "wrong": "Jdu s školy.",
+          "right": "Jdu ze školy.",
+          "note": "Use 'z' (or 'ze' before certain consonants) for 'from' a place."
+        },
+        {
+          "wrong": "Piju kávu s mlékem.",
+          "right": "Piju kávu s mlékem.",
+          "note": "This is correct: 's' means 'with' (coffee with milk)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "I came from the cinema. Fill in the correct preposition: Přišel ___ kina.",
+          "answer": "z"
+        },
+        {
+          "prompt": "She went there with her friend. Fill in: Šla tam ___ svou kamarádkou.",
+          "answer": "s"
+        }
+      ]
+    },
+    {
+      "rule_id": "prepositions-v-and-do",
+      "topic": "Prepositions v and do",
+      "title": "Prepositions 'v' and 'do'",
+      "explanation": "In Czech, 'v' means 'in' (location inside a place) or 'on' (for dates/days), while 'do' means 'into' or 'to' (movement toward a place). English speakers often mistakenly use 'v' for direction; if you are going somewhere, use 'do' followed by the genitive case.",
+      "examples": [
+        {
+          "wrong": "Jdu v obchod.",
+          "right": "Jdu do obchodu.",
+          "note": "Direction (going to) requires 'do' + genitive, not 'v' + locative."
+        },
+        {
+          "wrong": "Kniha je do stolu.",
+          "right": "Kniha je v stole.",
+          "note": "Location (the book is on/in the table) uses 'v' + locative."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I am going to the cinema.' (use 'do')",
+          "answer": "Jdu do kina."
+        },
+        {
+          "prompt": "Translate: 'The keys are in the car.' (use 'v')",
+          "answer": "Klíče jsou v autě."
+        }
+      ]
+    },
+    {
+      "rule_id": "double-negation",
+      "topic": "Double negation",
+      "title": "Double Negation in Czech",
+      "explanation": "Unlike English, Czech uses double (or even triple) negation for negative statements. When you use words like 'nic' (nothing), 'nikdo' (nobody), or 'nikdy' (never), you must also negate the verb. Using only one negative (as in English) is a common mistake.",
+      "examples": [
+        {
+          "wrong": "Mám nic.",
+          "right": "Nemám nic.",
+          "note": "The verb 'mám' (I have) must be negated to 'nemám' (I don't have) when using 'nic' (nothing)."
+        },
+        {
+          "wrong": "Nikdo přišel.",
+          "right": "Nikdo nepřišel.",
+          "note": "The verb 'přišel' (came) must be negated to 'nepřišel' (didn't come) after 'nikdo' (nobody)."
+        },
+        {
+          "wrong": "Nikdy jdu do kina.",
+          "right": "Nikdy nejdu do kina.",
+          "note": "With 'nikdy' (never), the verb 'jdu' (I go) changes to 'nejdu' (I don't go)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I see nobody.' (Use 'nikdo' and 'vidět' - to see)",
+          "answer": "Nevidím nikoho."
+        },
+        {
+          "prompt": "Correct the sentence: 'Nic dělám.' (I am doing nothing.)",
+          "answer": "Nedělám nic."
+        },
+        {
+          "prompt": "Complete: 'Nikdy _____ kávu.' (I never drink coffee - 'pít' = to drink)",
+          "answer": "Nikdy nepiju kávu."
+        }
+      ]
+    },
+    {
+      "rule_id": "conditional-mood-bych-bys-by",
+      "topic": "Conditional mood (bych, bys, by)",
+      "title": "The Conditional Mood: 'bych', 'bys', 'by'",
+      "explanation": "In Czech, the conditional mood is formed using a special 'by' auxiliary that changes depending on the subject. The common mistake is using 'by' for all persons. Remember: 'bych' for 'I', 'bys' for 'you' (informal singular), 'by' for he/she/it/they, 'bychom' for 'we', and 'byste' for you (formal/plural). The auxiliary is followed by the past participle of the main verb.",
+      "examples": [
+        {
+          "wrong": "Já by chtěl.",
+          "right": "Já bych chtěl.",
+          "note": "Use 'bych' for first person singular (I)."
+        },
+        {
+          "wrong": "Ty by šel.",
+          "right": "Ty bys šel.",
+          "note": "Use 'bys' for second person singular informal (you)."
+        },
+        {
+          "wrong": "My by jedli.",
+          "right": "My bychom jedli.",
+          "note": "Use 'bychom' for first person plural (we)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct conditional auxiliary: 'I would study.'",
+          "answer": "Já bych studoval."
+        },
+        {
+          "prompt": "Translate: 'You (informal) would help.'",
+          "answer": "Ty bys pomohl."
+        },
+        {
+          "prompt": "Complete: 'We would go to the cinema.'",
+          "answer": "My bychom šli do kina."
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-pronouns-se-vs-si",
+      "topic": "Reflexive pronouns se vs si",
+      "title": "Reflexive pronouns: se vs si",
+      "explanation": "In Czech, 'se' is used as the accusative reflexive pronoun (for actions done to oneself directly, or with inherently reflexive verbs). 'Si' is the dative reflexive pronoun (for actions done for oneself, or with verbs that require an indirect object). A common mistake is using 'se' where 'si' is needed, especially with verbs like 'myslet' (to think) or 'sednout' (to sit).",
+      "examples": [
+        {
+          "wrong": "Myslím se, že je to pravda.",
+          "right": "Myslím si, že je to pravda.",
+          "note": "'Myslet si' means 'to think/opine' and always takes 'si', never 'se'."
+        },
+        {
+          "wrong": "Sednu se na židli.",
+          "right": "Sednu si na židli.",
+          "note": "'Sednout si' means 'to sit down' (for oneself). 'Sednout se' would be incorrect."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct reflexive pronoun: 'Umyju ___ ruce.' (I wash my hands.)",
+          "answer": "si"
+        },
+        {
+          "prompt": "Fill in the correct reflexive pronoun: 'Dítě se směje, ale já ___ myslím, že to není vtipné.' (The child is laughing, but I think it's not funny.)",
+          "answer": "si"
+        }
+      ]
+    },
+    {
+      "rule_id": "comparative-and-superlative-forms",
+      "topic": "Comparative and superlative forms",
+      "title": "Comparative and Superlative: Synthetic vs. Analytic Forms",
+      "explanation": "In Czech, most adjectives form comparatives and superlatives using suffixes like -ší and the prefix nej-, not by adding words like 'více' (more) or 'nejvíce' (most). For example, saying 'více dobrý' is incorrect – the correct comparative is 'lepší'. Similarly, 'nejvíce dobrý' is wrong; use 'nejlepší'. This synthetic pattern applies to most common adjectives, though some longer ones may use analytic forms.",
+      "examples": [
+        {
+          "wrong": "více dobrý",
+          "right": "lepší",
+          "note": "Use the irregular comparative form of 'dobrý'."
+        },
+        {
+          "wrong": "nejvíce dobrý",
+          "right": "nejlepší",
+          "note": "Use the irregular superlative with the nej- prefix."
+        },
+        {
+          "wrong": "více starý",
+          "right": "starší",
+          "note": "Regular comparative with -ší suffix."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'more beautiful' (hezký) into Czech.",
+          "answer": "hezčí"
+        },
+        {
+          "prompt": "Translate 'the youngest' (mladý) into Czech.",
+          "answer": "nejmladší"
+        },
+        {
+          "prompt": "Correct the mistake: 'více velký' (big).",
+          "answer": "větší"
+        }
+      ]
+    },
+    {
+      "rule_id": "modal-verb-usage",
+      "topic": "Modal verb usage",
+      "title": "Modal Verbs: 'Must' vs 'Should'",
+      "explanation": "In Czech, 'muset' expresses a strong obligation (must), while 'mít' expresses a weaker recommendation (should). English learners often use 'muset' in situations where a recommendation is more appropriate, leading to overly forceful statements.",
+      "examples": [
+        {
+          "wrong": "Musíš navštívit lékaře.",
+          "right": "Měl bys navštívit lékaře.",
+          "note": "Use 'mít' (with 'by') for advice or recommendations, not 'muset'."
+        },
+        {
+          "wrong": "Musíme jít brzy.",
+          "right": "Měli bychom jít brzy.",
+          "note": "For suggestions, use 'mít' in conditional form; 'muset' is for necessity."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'You should study more' into Czech.",
+          "answer": "Měl bys víc studovat."
+        },
+        {
+          "prompt": "Translate 'I must finish this work' into Czech.",
+          "answer": "Musím dokončit tuto práci."
+        },
+        {
+          "prompt": "Fill in the blank: 'This is a great film, you _____ see it.' (recommendation)",
+          "answer": "měl bys"
+        }
+      ]
+    },
+    {
+      "rule_id": "numeral-agreement-dva-tři-pět",
+      "topic": "Numeral agreement (dva, tři, pět)",
+      "title": "Numeral Agreement: Dva, Tři, Pět",
+      "explanation": "In Czech, numerals 2, 3, and 4 require the noun to be in the nominative plural (or genitive singular for masculine animate). Numerals 5 and above require the genitive plural. A common mistake is to use the genitive plural after 2, 3, 4, so pay attention to the form of the noun.",
+      "examples": [
+        {
+          "wrong": "dva knih",
+          "right": "dvě knihy",
+          "note": "After 'dvě' (feminine form of 2), use nominative plural 'knihy', not genitive plural 'knih'."
+        },
+        {
+          "wrong": "pět stoly",
+          "right": "pět stolů",
+          "note": "After 'pět' (5), use genitive plural 'stolů', not nominative plural 'stoly'."
+        },
+        {
+          "wrong": "tři jablka",
+          "right": "tři jablka",
+          "note": "After 'tři' (3), neuter noun 'jablko' stays in nominative plural 'jablka' – this is actually correct, so no change here. (Error example replaced) Actually correct: tři jablka. Let's fix: 'tři jablek' is wrong, right is 'tři jablka'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct form of 'stůl' (table) after 'dva'.",
+          "answer": "dva stoly"
+        },
+        {
+          "prompt": "Fill in the correct form of 'kniha' (book) after 'pět'.",
+          "answer": "pět knih"
+        },
+        {
+          "prompt": "Fill in the correct form of 'jablko' (apple) after 'dvě'.",
+          "answer": "dvě jablka"
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-adjectives",
+      "topic": "Possessive adjectives",
+      "title": "Possessive Adjectives: His vs. Her and Gender Agreement",
+      "explanation": "In Czech, possessive adjectives must agree with the gender of the possessed noun (masculine, feminine, neuter, plural). For 'his' use 'jeho' (invariable), and for 'her' use 'její' (which also adjusts to the noun's case/gender). A common mistake is using 'můj' (masculine) with feminine nouns, or confusing 'jeho' and 'její' based on the possessor's gender.",
+      "examples": [
+        {
+          "wrong": "To je jeho kniha.",
+          "right": "To je její kniha.",
+          "note": "Use 'její' when the possessor is female; 'jeho' is only for a male possessor."
+        },
+        {
+          "wrong": "Můj kniha je nová.",
+          "right": "Moje kniha je nová.",
+          "note": "The adjective must match the noun's gender: 'moje' for feminine (kniha), 'můj' for masculine."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'This is her bag.' (bag = taška, feminine)",
+          "answer": "To je její taška."
+        },
+        {
+          "prompt": "Fill in the blank: '___ (my) dům je starý.' (dům = house, masculine)",
+          "answer": "Můj"
+        },
+        {
+          "prompt": "Correct the mistake: 'To je jeho pero.' if the possessor is a girl. (pero = pen, neuter)",
+          "answer": "To je její pero."
+        }
+      ]
+    },
+    {
+      "rule_id": "relative-pronouns-který-jenž",
+      "topic": "Relative pronouns (který, jenž)",
+      "title": "Relative Pronouns: který vs. jenž",
+      "explanation": "In Czech, 'který' is the everyday relative pronoun meaning 'who', 'which', or 'that'. 'Jenž' is a formal, literary equivalent that must agree in gender with the noun it refers to (jenž for masculine, jež for feminine/neuter). Avoid using 'jenž' in casual conversation, and always match its gender correctly.",
+      "examples": [
+        {
+          "wrong": "Koupil jsem nový telefon, jenž je velmi rychlý.",
+          "right": "Koupil jsem nový telefon, který je velmi rychlý.",
+          "note": "Use 'který' in everyday speech; 'jenž' sounds overly formal here."
+        },
+        {
+          "wrong": "To je dívka, jenž mi pomohla.",
+          "right": "To je dívka, jež mi pomohla.",
+          "note": "For feminine nouns like 'dívka', use 'jež' instead of 'jenž'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct relative pronoun (informal context): 'To je muž, ___ pracuje v bance.'",
+          "answer": "který"
+        },
+        {
+          "prompt": "Fill in the correct form of jenž (formal context, feminine noun): 'To je kniha, ___ leží na stole.'",
+          "answer": "jež"
+        },
+        {
+          "prompt": "Fill in the correct relative pronoun (informal context): 'Viděl jsem film, ___ byl velmi zajímavý.'",
+          "answer": "který"
+        }
+      ]
+    },
+    {
+      "rule_id": "declension-of-foreign-loanwords",
+      "topic": "Declension of foreign loanwords",
+      "title": "Declension of Foreign Loanwords in Czech",
+      "explanation": "Many foreign loanwords in Czech must be declined according to the same rules as native words, based on their gender and ending. A common mistake is leaving them in the nominative form in all cases, instead of using the correct case ending. For example, in locations or after prepositions, you need to use the locative or other appropriate case.",
+      "examples": [
+        {
+          "wrong": "Jdu do hotel.",
+          "right": "Jdu do hotelu.",
+          "note": "'Hotel' is masculine, so genitive (after 'do') requires the ending -u."
+        },
+        {
+          "wrong": "Bydlím v auto.",
+          "right": "Bydlím v autě.",
+          "note": "'Auto' is neuter; locative (after 'v') uses the ending -ě."
+        },
+        {
+          "wrong": "Jsme v restaurace.",
+          "right": "Jsme v restauraci.",
+          "note": "'Restaurace' is feminine; locative requires the ending -i."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct case: Jdu do ____ (kino).",
+          "answer": "kina"
+        },
+        {
+          "prompt": "Fill in the correct case: Mluvím o ____ (hotel).",
+          "answer": "hotelu"
+        },
+        {
+          "prompt": "Fill in the correct case: Bydlím v ____ (restaurace).",
+          "answer": "restauraci"
+        }
+      ]
+    },
+    {
+      "rule_id": "animate-vs-inanimate-masculine-nouns",
+      "topic": "Animate vs inanimate masculine nouns",
+      "title": "Animate vs Inanimate Masculine Nouns in Accusative",
+      "explanation": "In Czech, masculine nouns are either animate (living beings) or inanimate (objects). This distinction matters in the accusative case: animate nouns add -a (e.g., vidím psa), while inanimate nouns keep the nominative form (e.g., vidím stůl). A common mistake is using the animate ending for inanimate nouns or vice versa.",
+      "examples": [
+        {
+          "wrong": "Vidím stroma.",
+          "right": "Vidím strom.",
+          "note": "Strom (tree) is inanimate, so accusative stays 'strom' – do not add -a."
+        },
+        {
+          "wrong": "Vidím pes.",
+          "right": "Vidím psa.",
+          "note": "Pes (dog) is animate, so accusative ends with -a: 'psa' not 'pes'."
+        },
+        {
+          "wrong": "Mám bratr.",
+          "right": "Mám bratra.",
+          "note": "Bratr (brother) is animate, so accusative is 'bratra'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Choose the correct accusative form: 'Vidím ___' (pes).",
+          "answer": "psa"
+        },
+        {
+          "prompt": "Fill in the accusative: 'Koupím ___' (stůl).",
+          "answer": "stůl"
+        },
+        {
+          "prompt": "Which is correct? 'Potkám kamarád' or 'Potkám kamaráda'?",
+          "answer": "Potkám kamaráda"
+        }
+      ]
+    },
+    {
+      "rule_id": "plural-noun-endings",
+      "topic": "Plural noun endings",
+      "title": "Plural of Feminine Nouns Ending in -a",
+      "explanation": "In Czech, feminine nouns ending in -a in the singular form their plural by changing -a to -y. A common mistake for English speakers is to use -i instead of -y. Remember: for these nouns, the plural ending is always -y, not -i.",
+      "examples": [
+        {
+          "wrong": "knihi",
+          "right": "knihy",
+          "note": "Kniha (book) is a feminine noun; its plural is knihy."
+        },
+        {
+          "wrong": "ženi",
+          "right": "ženy",
+          "note": "Žena (woman) becomes ženy in plural. Do not use -i."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "What is the plural of 'máma' (mom)?",
+          "answer": "mámy"
+        },
+        {
+          "prompt": "Correct the mistake: 'Viděl jsem dvě velké knihi.'",
+          "answer": "knihy"
+        }
+      ]
+    },
+    {
+      "rule_id": "voicedvoiceless-consonant-assimilation",
+      "topic": "Voiced/voiceless consonant assimilation",
+      "title": "Voiced and Voiceless Consonant Assimilation in Czech",
+      "explanation": "In Czech, consecutive consonants affect each other: a voiced consonant becomes voiceless before a voiceless consonant, and vice versa. This happens both within words and across word boundaries. English speakers often skip this change, making speech sound unnatural.",
+      "examples": [
+        {
+          "wrong": "kdo",
+          "right": "gdo",
+          "note": "The 'k' (voiceless) becomes 'g' (voiced) because the following 'd' is voiced."
+        },
+        {
+          "wrong": "odpověď",
+          "right": "otpověď",
+          "note": "The 'd' (voiced) becomes 't' (voiceless) before the voiceless 'p'."
+        },
+        {
+          "wrong": "v Praze",
+          "right": "f Praze",
+          "note": "The 'v' (voiced) becomes 'f' (voiceless) before the voiceless 'p'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you correctly pronounce the word for 'who' (kdo)?",
+          "answer": "gdo"
+        },
+        {
+          "prompt": "How do you correctly pronounce the phrase 'in Prague' (v Praze)?",
+          "answer": "f Praze"
+        },
+        {
+          "prompt": "How do you correctly pronounce the word for 'answer' (odpověď)?",
+          "answer": "otpověď"
+        }
+      ]
+    },
+    {
+      "rule_id": "soft-i-vs-hard-y-after-d-t-n",
+      "topic": "Soft i vs hard y after d, t, n",
+      "title": "Soft i vs hard y after d, t, n",
+      "explanation": "In Czech, after the consonants d, t, and n, you almost always write the soft vowel i (or í) instead of the hard y (or ý). Exceptions exist (like 'ty', 'my', 'by'), but in most native words, i is correct.",
+      "examples": [
+        {
+          "wrong": "dývat",
+          "right": "dívat",
+          "note": "The verb 'to watch' is spelled with i."
+        },
+        {
+          "wrong": "tycho",
+          "right": "ticho",
+          "note": "The word for 'silence' uses i."
+        },
+        {
+          "wrong": "nýzký",
+          "right": "nízký",
+          "note": "The word for 'low' uses i."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the missing vowel (short or long): d__tě (child)",
+          "answer": "í"
+        },
+        {
+          "prompt": "Fill in the missing vowel: t__cho (silence)",
+          "answer": "i"
+        },
+        {
+          "prompt": "Fill in the missing vowel: n__zký (low)",
+          "answer": "í"
+        }
+      ]
+    }
+  ]
+}

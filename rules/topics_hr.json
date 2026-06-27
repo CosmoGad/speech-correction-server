@@ -1,0 +1,105 @@
+{
+  "learning": "hr",
+  "topics": [
+    {
+      "rule_id": "cases",
+      "title": "Cases"
+    },
+    {
+      "rule_id": "verb-aspect",
+      "title": "Verb aspect"
+    },
+    {
+      "rule_id": "word-order",
+      "title": "Word order"
+    },
+    {
+      "rule_id": "diacritics",
+      "title": "Diacritics"
+    },
+    {
+      "rule_id": "čć-distinction",
+      "title": "č/ć distinction"
+    },
+    {
+      "rule_id": "vowel-length",
+      "title": "Vowel length"
+    },
+    {
+      "rule_id": "pitch-accent",
+      "title": "Pitch accent"
+    },
+    {
+      "rule_id": "reflexive-verbs-with-se",
+      "title": "Reflexive verbs with se"
+    },
+    {
+      "rule_id": "reflexive-possessive-svoj-usage",
+      "title": "Reflexive possessive svoj usage"
+    },
+    {
+      "rule_id": "conjunctions-i-a-pa",
+      "title": "Conjunctions i a pa"
+    },
+    {
+      "rule_id": "impersonal-treba-vs-morati",
+      "title": "Impersonal treba vs morati"
+    },
+    {
+      "rule_id": "demonstrative-pronouns-ovo-to-ono",
+      "title": "Demonstrative pronouns ovo to ono"
+    },
+    {
+      "rule_id": "soft-consonants-lj-nj-pronunciation",
+      "title": "Soft consonants lj nj pronunciation"
+    },
+    {
+      "rule_id": "syllabic-r-pronunciation",
+      "title": "Syllabic r pronunciation"
+    },
+    {
+      "rule_id": "auxiliary-verb-biti-forms",
+      "title": "Auxiliary verb biti forms"
+    },
+    {
+      "rule_id": "number-agreement-2-4-vs-5",
+      "title": "Number agreement 2-4 vs 5+"
+    },
+    {
+      "rule_id": "question-particle-li-placement",
+      "title": "Question particle li placement"
+    },
+    {
+      "rule_id": "double-negation-rules",
+      "title": "Double negation rules"
+    },
+    {
+      "rule_id": "comparative-and-superlative-adjectives",
+      "title": "Comparative and superlative adjectives"
+    },
+    {
+      "rule_id": "imperative-verb-commands",
+      "title": "Imperative verb commands"
+    },
+    {
+      "rule_id": "possession-imati-vs-biti",
+      "title": "Possession imati vs biti"
+    },
+    {
+      "rule_id": "interrogative-pronouns-tko-što",
+      "title": "Interrogative pronouns tko što"
+    },
+    {
+      "rule_id": "preposition-s-vs-sa",
+      "title": "Preposition s vs sa"
+    },
+    {
+      "rule_id": "da-clauses-vs-infinitive",
+      "title": "Da clauses vs infinitive"
+    },
+    {
+      "rule_id": "causal-conjunctions-jer-zato-što",
+      "title": "Causal conjunctions jer zato što"
+    }
+  ]
+}

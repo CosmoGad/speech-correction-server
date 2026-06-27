@@ -1,0 +1,841 @@
+{
+  "learning": "sv",
+  "interface": "en",
+  "generated_at": "2026-06-27T05:08:18.605029+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "artiklar",
+      "topic": "Artiklar",
+      "title": "Swedish Articles: Definite vs Indefinite",
+      "explanation": "In Swedish, the indefinite article is a separate word (en/ett), while the definite article is a suffix attached to the noun. A common mistake is to use both (e.g., 'en katten') or to forget the suffix. Instead, use 'en katt' for 'a cat' and 'katten' for 'the cat'.",
+      "examples": [
+        {
+          "wrong": "en katten",
+          "right": "katten",
+          "note": "Do not combine the indefinite article with the definite suffix."
+        },
+        {
+          "wrong": "en hus",
+          "right": "ett hus",
+          "note": "Swedish has two genders: en (common) and ett (neuter). Learn the noun's gender."
+        },
+        {
+          "wrong": "boken är röd",
+          "right": "boken är röd",
+          "note": "Actually correct – but note the definite suffix '-en' on 'bok' (book) gives 'boken'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'a car' in Swedish?",
+          "answer": "en bil"
+        },
+        {
+          "prompt": "How do you say 'the car' in Swedish?",
+          "answer": "bilen"
+        },
+        {
+          "prompt": "How do you say 'a house' in Swedish?",
+          "answer": "ett hus"
+        }
+      ]
+    },
+    {
+      "rule_id": "verbtider",
+      "topic": "Verbtider",
+      "title": "Verbtider: Past Tense vs. Perfect Tense",
+      "explanation": "In Swedish, the simple past tense (preteritum) describes a completed action in the past. The perfect tense (perfekt) uses 'har' plus the supine form to connect the past to the present. A common mistake is using the past tense instead of the supine after 'har'.",
+      "examples": [
+        {
+          "wrong": "Jag har gick till affären.",
+          "right": "Jag har gått till affären.",
+          "note": "After 'har', use the supine form ('gått'), not the past tense ('gick')."
+        },
+        {
+          "wrong": "Han har åt frukost.",
+          "right": "Han har ätit frukost.",
+          "note": "The supine of 'äta' is 'ätit', not the past tense 'åt'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank with the correct past tense form: 'Jag ____ (springa) igår.'",
+          "answer": "Jag sprang igår."
+        },
+        {
+          "prompt": "Fill in the blank with the correct perfect tense form: 'Vi ____ (se) filmen redan.'",
+          "answer": "Vi har sett filmen redan."
+        },
+        {
+          "prompt": "Fill in the blank: 'Hon har ____ (skriva) ett brev.'",
+          "answer": "Hon har skrivit ett brev."
+        }
+      ]
+    },
+    {
+      "rule_id": "prepositioner",
+      "topic": "Prepositioner",
+      "title": "Common Mistakes: Time Prepositions 'i' and 'på'",
+      "explanation": "In Swedish, use 'på' for days of the week and for parts of the day (morning, afternoon, evening) when speaking generally. Use 'i' for months and years. A common mistake is to use 'i' where 'på' is needed, influenced by English 'in' or 'on'.",
+      "examples": [
+        {
+          "wrong": "Jag studerar i måndag.",
+          "right": "Jag studerar på måndag.",
+          "note": "Use 'på' for days of the week."
+        },
+        {
+          "wrong": "Jag joggar i morgonen.",
+          "right": "Jag joggar på morgonen.",
+          "note": "Use 'på' for parts of the day (morning, afternoon, evening)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complete: 'Jag tränar ___ måndag.' (I train on Monday)",
+          "answer": "på"
+        },
+        {
+          "prompt": "Complete: 'Vi går upp ___ morgonen.' (We get up in the morning)",
+          "answer": "på"
+        },
+        {
+          "prompt": "Complete: '___ januari har vi lov.' (In January we have a holiday)",
+          "answer": "i"
+        }
+      ]
+    },
+    {
+      "rule_id": "ordföljd",
+      "topic": "Ordföljd",
+      "title": "Swedish Word Order: The V2 Rule",
+      "explanation": "In Swedish main clauses, the verb must always be in the second position. If you start a sentence with something other than the subject (like a time adverb), the subject moves after the verb. This is a common mistake for English speakers who keep the subject first.",
+      "examples": [
+        {
+          "wrong": "Idag jag går till skolan.",
+          "right": "Idag går jag till skolan.",
+          "note": "Because 'idag' comes first, the verb 'går' must be second, then the subject 'jag'."
+        },
+        {
+          "wrong": "Igår jag såg en film.",
+          "right": "Igår såg jag en film.",
+          "note": "Same rule: adverb first, verb second, subject third."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'Tomorrow I will eat breakfast.' (use 'imorgon')",
+          "answer": "Imorgon äter jag frukost."
+        },
+        {
+          "prompt": "Correct the word order: 'På måndag jag har ett möte.'",
+          "answer": "På måndag har jag ett möte."
+        }
+      ]
+    },
+    {
+      "rule_id": "svenska-vokaler",
+      "topic": "Svenska vokaler",
+      "title": "Long vs Short Vowels in Swedish",
+      "explanation": "In Swedish, vowel length is crucial for meaning. A long vowel is followed by a single consonant, while a short vowel is followed by a double consonant (or a consonant cluster). English speakers often ignore this distinction, leading to misunderstandings.",
+      "examples": [
+        {
+          "wrong": "matt",
+          "right": "mat",
+          "note": "The double 't' in 'matt' makes the 'a' short (like 'matt' in English). 'mat' has a long 'a' (like 'maat')."
+        },
+        {
+          "wrong": "sill",
+          "right": "sil",
+          "note": "'sill' has a short 'i' (like 'sill' in English). 'sil' has a long 'i' (like 'seel')."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the Swedish word for 'food' (with a long vowel).",
+          "answer": "mat"
+        },
+        {
+          "prompt": "Write the Swedish word for 'herring' (with a short vowel).",
+          "answer": "sill"
+        }
+      ]
+    },
+    {
+      "rule_id": "tonaccent",
+      "topic": "Tonaccent",
+      "title": "Swedish Pitch Accent: Tonaccent",
+      "explanation": "Swedish has two pitch patterns on two-syllable words called accent 1 (acute) and accent 2 (grave). Using the wrong pitch can change the meaning. For example, 'anden' with accent 1 means 'the duck', while 'anden' with accent 2 means 'the spirit'. English speakers often ignore this distinction, leading to confusion.",
+      "examples": [
+        {
+          "wrong": "anden",
+          "right": "anden",
+          "note": "Accent 1 (falling pitch on first syllable) means 'the duck'."
+        },
+        {
+          "wrong": "anden",
+          "right": "anden",
+          "note": "Accent 2 (double-peaked pitch) means 'the spirit'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "You are describing the Christmas figure who brings presents. Write the Swedish word.",
+          "answer": "tomten"
+        },
+        {
+          "prompt": "You are talking about a small piece of land. Write the Swedish word.",
+          "answer": "tomten"
+        }
+      ]
+    },
+    {
+      "rule_id": "intonation",
+      "topic": "Intonation",
+      "title": "Swedish Intonation: Statements vs. Questions",
+      "explanation": "In Swedish, the pitch of your voice changes the meaning of a sentence. Statements should end with a falling intonation, while yes/no questions should end with a rising intonation. A common mistake for English speakers is using the wrong intonation, which can confuse listeners.",
+      "examples": [
+        {
+          "wrong": "Jag heter Anna?",
+          "right": "Jag heter Anna.",
+          "note": "Using a rising tone at the end of a statement makes it sound like a question. Always use falling intonation for statements."
+        },
+        {
+          "wrong": "Kommer du.",
+          "right": "Kommer du?",
+          "note": "A yes/no question needs a rising intonation. A falling tone turns it into a statement or sounds uncertain."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How would you say 'My name is Erik' as a statement with correct intonation? (Write the sentence with proper punctuation.)",
+          "answer": "Jag heter Erik."
+        },
+        {
+          "prompt": "How would you ask 'Are you coming?' with correct intonation? (Write the sentence with proper punctuation.)",
+          "answer": "Kommer du?"
+        },
+        {
+          "prompt": "Write a yes/no question of your own in Swedish with correct intonation.",
+          "answer": "Har du en katt?"
+        }
+      ]
+    },
+    {
+      "rule_id": "noun-gender-common-neuter",
+      "topic": "Noun gender common neuter",
+      "title": "Noun Gender: Common vs Neuter",
+      "explanation": "Swedish nouns have two genders: common (en-words) and neuter (ett-words). The indefinite article 'en' is used with common nouns, and 'ett' with neuter nouns. This also affects the definite suffix: common nouns add '-en', neuter nouns add '-et'.",
+      "examples": [
+        {
+          "wrong": "ett bok",
+          "right": "en bok",
+          "note": "'Bok' (book) is a common noun, so it takes 'en'."
+        },
+        {
+          "wrong": "en hus",
+          "right": "ett hus",
+          "note": "'Hus' (house) is a neuter noun, so it takes 'ett'."
+        },
+        {
+          "wrong": "boken är stor",
+          "right": "huset är stort",
+          "note": "Adjectives also agree: 'stor' for common, 'stort' for neuter."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct indefinite article: ___ stol (chair)",
+          "answer": "en"
+        },
+        {
+          "prompt": "Fill in the correct indefinite article: ___ äpple (apple)",
+          "answer": "ett"
+        },
+        {
+          "prompt": "Complete the definite form: barn (child) becomes barn___",
+          "answer": "et"
+        }
+      ]
+    },
+    {
+      "rule_id": "plural-noun-formation-irregular",
+      "topic": "Plural noun formation irregular",
+      "title": "Irregular Plural Nouns in Swedish",
+      "explanation": "Unlike English, many Swedish nouns form their plural by changing a vowel or adding an unexpected ending. For example, 'en man' becomes 'män' (not 'manar'). Memorizing these common irregular forms will help you avoid frequent mistakes.",
+      "examples": [
+        {
+          "wrong": "manar",
+          "right": "män",
+          "note": "en man → män (vowel change from a to ä)"
+        },
+        {
+          "wrong": "handar",
+          "right": "händer",
+          "note": "en hand → händer (vowel change and -er ending)"
+        },
+        {
+          "wrong": "boker",
+          "right": "böcker",
+          "note": "en bok → böcker (vowel change from o to ö and -er ending)"
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the plural of 'en fot' (a foot).",
+          "answer": "fötter"
+        },
+        {
+          "prompt": "Write the plural of 'en mus' (a mouse).",
+          "answer": "möss"
+        },
+        {
+          "prompt": "Write the plural of 'en tand' (a tooth).",
+          "answer": "tänder"
+        }
+      ]
+    },
+    {
+      "rule_id": "adjective-agreement-gender-number",
+      "topic": "Adjective agreement gender number",
+      "title": "Adjective Agreement: Gender and Number",
+      "explanation": "In Swedish, adjectives must agree with the noun in gender (common or neuter) and number (singular or plural). For common gender singular, use the base form (e.g., 'stor'). For neuter singular, add -t (e.g., 'stort'). For plural (any gender), add -a (e.g., 'stora'). A common mistake is forgetting to change the ending when switching from common to neuter or from singular to plural.",
+      "examples": [
+        {
+          "wrong": "en stor hus",
+          "right": "ett stort hus",
+          "note": "Hus is neuter (ett-word), so the adjective must end in -t."
+        },
+        {
+          "wrong": "ett stor bil",
+          "right": "en stor bil",
+          "note": "Bil is common (en-word), so use the base form 'stor'."
+        },
+        {
+          "wrong": "stor bilar",
+          "right": "stora bilar",
+          "note": "Bilar is plural, so the adjective must end in -a."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct form of 'fin' (nice) for 'a nice house' (ett-word).",
+          "answer": "ett fint hus"
+        },
+        {
+          "prompt": "Fill in the correct form of 'gammal' (old) for 'old cars' (plural).",
+          "answer": "gamla bilar"
+        },
+        {
+          "prompt": "Fill in the correct form of 'röd' (red) for 'a red flower' (en-word).",
+          "answer": "en röd blomma"
+        }
+      ]
+    },
+    {
+      "rule_id": "comparison-of-adjectives-irregular",
+      "topic": "Comparison of adjectives irregular",
+      "title": "Irregular Comparisons: Avoiding Common Mistakes",
+      "explanation": "In Swedish, some common adjectives have irregular comparative and superlative forms. Instead of adding -are/-ast, they change completely, e.g., 'bra' becomes 'bättre' (better) and 'bäst' (best). Using regular endings like 'braare' is a frequent error. Memorizing these irregular forms will make your Swedish sound more natural.",
+      "examples": [
+        {
+          "wrong": "Den här filmen är braare.",
+          "right": "Den här filmen är bättre.",
+          "note": "Use 'bättre' instead of adding -are to 'bra'."
+        },
+        {
+          "wrong": "Han är dåligast i laget.",
+          "right": "Han är sämst i laget.",
+          "note": "'Dålig' becomes 'sämre' (worse) and 'sämst' (worst)."
+        },
+        {
+          "wrong": "Det är mycketare vatten.",
+          "right": "Det är mer vatten.",
+          "note": "'Mycket' (much) uses 'mer' (more) and 'mest' (most), not -are."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'She is the best singer.' using the correct superlative of 'bra'.",
+          "answer": "Hon är den bästa sångaren."
+        },
+        {
+          "prompt": "Correct the sentence: 'Min bil är gammalare än din.'",
+          "answer": "Min bil är äldre än din."
+        },
+        {
+          "prompt": "Write the comparative form of 'liten' to say 'a smaller house'.",
+          "answer": "ett mindre hus"
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-pronouns-sin-vs-hans",
+      "topic": "Possessive pronouns sin vs hans",
+      "title": "Sin vs Hans: Possessive Pronouns",
+      "explanation": "Use 'sin' when the owner is the subject of the same clause (reflexive possessive). Use 'hans' when the owner is a different person (non-reflexive). For example: 'Han äter sin lunch' (he eats his own lunch) vs 'Han äter hans lunch' (he eats another man's lunch).",
+      "examples": [
+        {
+          "wrong": "Peter tog hans bil.",
+          "right": "Peter tog sin bil.",
+          "note": "Peter is the subject and owner, so 'sin' is needed."
+        },
+        {
+          "wrong": "Hon gav sin boken till Erik.",
+          "right": "Hon gav hans bok till Erik.",
+          "note": "The book belongs to Erik (not the subject), so use 'hans'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct pronoun: 'Johan läser _____ bok.' (Johan reads his own book)",
+          "answer": "sin"
+        },
+        {
+          "prompt": "Fill in the correct pronoun: 'Anna ser _____ hund.' (Anna sees another man's dog)",
+          "answer": "hans"
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-verbs-sig-placement",
+      "topic": "Reflexive verbs sig placement",
+      "title": "Placing 'sig' in Swedish Reflexive Verbs",
+      "explanation": "In Swedish, the reflexive pronoun 'sig' always comes directly after the verb it belongs to. This rule applies in all tenses and with modal verbs. A common mistake is placing 'sig' before the verb or after an auxiliary verb, as in English word order.",
+      "examples": [
+        {
+          "wrong": "Han sig tvättar.",
+          "right": "Han tvättar sig.",
+          "note": "'Sig' must follow the verb, not precede it."
+        },
+        {
+          "wrong": "Han har sig tvättat.",
+          "right": "Han har tvättat sig.",
+          "note": "In the perfect tense, 'sig' goes after the past participle, not after the auxiliary 'har'."
+        },
+        {
+          "wrong": "Han kan sig tvätta.",
+          "right": "Han kan tvätta sig.",
+          "note": "With modal verbs, 'sig' follows the main verb in infinitive form."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "He is shaving himself.",
+          "answer": "Han rakar sig."
+        },
+        {
+          "prompt": "She has dressed herself.",
+          "answer": "Hon har klätt sig."
+        },
+        {
+          "prompt": "They can wash themselves.",
+          "answer": "De kan tvätta sig."
+        }
+      ]
+    },
+    {
+      "rule_id": "particle-verbs-phrasal-verbs",
+      "topic": "Particle verbs phrasal verbs",
+      "title": "Particle Verbs: Pronoun Placement",
+      "explanation": "In Swedish, particle verbs consist of a verb and a particle (like 'av', 'upp', 'ner'). When the object is a personal pronoun (mig, dig, honom, henne, den, det, oss, er, dem), the pronoun must go between the verb and the particle. English speakers often place the pronoun after the particle, which is incorrect in Swedish.",
+      "examples": [
+        {
+          "wrong": "Stäng av den.",
+          "right": "Stäng den av.",
+          "note": "With the pronoun 'den', it comes between the verb 'Stäng' and the particle 'av'."
+        },
+        {
+          "wrong": "Jag ska plocka upp dig.",
+          "right": "Jag ska plocka dig upp.",
+          "note": "Same rule: 'dig' is placed between 'plocka' and 'upp'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Replace 'TV:n' with the pronoun 'den' in the sentence 'Slå på TV:n.'",
+          "answer": "Slå den på."
+        },
+        {
+          "prompt": "Correct the word order: 'Kan du skriva ner det?' (use the pronoun 'det')",
+          "answer": "Kan du skriva det ner?"
+        },
+        {
+          "prompt": "Translate: 'Can you pick me up at 5?'",
+          "answer": "Kan du plocka mig upp klockan 5?"
+        }
+      ]
+    },
+    {
+      "rule_id": "subordinate-clause-word-order",
+      "topic": "Subordinate clause word order",
+      "title": "Subordinate Clause Word Order",
+      "explanation": "In Swedish main clauses, the verb always comes second. But in subordinate clauses (starting with 'att', 'om', 'när', etc.), the verb moves after the subject and any sentence adverbs like 'inte' or 'alltid'. This is a common mistake for English speakers who keep the main clause order.",
+      "examples": [
+        {
+          "wrong": "Jag tror att han kommer inte.",
+          "right": "Jag tror att han inte kommer.",
+          "note": "The negation 'inte' goes before the verb in a subordinate clause."
+        },
+        {
+          "wrong": "Hon säger att hon har alltid varit snäll.",
+          "right": "Hon säger att hon alltid har varit snäll.",
+          "note": "Adverbs like 'alltid' come before the verb in subordinate clauses."
+        },
+        {
+          "wrong": "Vi undrar om de vill inte åka.",
+          "right": "Vi undrar om de inte vill åka.",
+          "note": "In 'om' clauses, the same rule applies: adverb before verb."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I think that she is not at home.'",
+          "answer": "Jag tror att hon inte är hemma."
+        },
+        {
+          "prompt": "Translate: 'He says that he often drinks coffee.'",
+          "answer": "Han säger att han ofta dricker kaffe."
+        },
+        {
+          "prompt": "Translate: 'We know that they never eat meat.'",
+          "answer": "Vi vet att de aldrig äter kött."
+        }
+      ]
+    },
+    {
+      "rule_id": "usage-of-så-conjunction-adverb",
+      "topic": "Usage of så conjunction adverb",
+      "title": "Using 'så' as Conjunction and Adverb",
+      "explanation": "Swedish 'så' can mean 'so' (therefore) as a conjunction, e.g., 'Jag var trött, så jag gick hem.' But for 'so...that' (adverb + result), use 'så...att' not 'så...så'. Also, avoid using 'så att' when you mean 'so' (therefore); 'så att' is only for purpose ('so that').",
+      "examples": [
+        {
+          "wrong": "Det var så roligt så jag skrattade.",
+          "right": "Det var så roligt att jag skrattade.",
+          "note": "Use 'att' after the adjective for 'so...that' – not a second 'så'."
+        },
+        {
+          "wrong": "Jag var hungrig, så att jag åt.",
+          "right": "Jag var hungrig, så jag åt.",
+          "note": "Use only 'så' (without 'att') when meaning 'therefore' or 'so' as a result."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I was so tired that I fell asleep.'",
+          "answer": "Jag var så trött att jag somnade."
+        },
+        {
+          "prompt": "Translate: 'She was late, so she missed the bus.'",
+          "answer": "Hon var sen, så hon missade bussen."
+        }
+      ]
+    },
+    {
+      "rule_id": "impersonal-pronoun-man-usage",
+      "topic": "Impersonal pronoun man usage",
+      "title": "Using the Impersonal Pronoun 'man' in Swedish",
+      "explanation": "In Swedish, 'man' is an impersonal pronoun meaning 'one', 'you' (general), or 'people'. It is not referring to a male person. English speakers often mistakenly use 'du' (you) or 'en' (one, but less common) in impersonal contexts where 'man' is required.",
+      "examples": [
+        {
+          "wrong": "Om du vill lära sig svenska, måste du öva.",
+          "right": "Om man vill lära sig svenska, måste man öva.",
+          "note": "Use 'man' instead of 'du' for a general statement about anyone."
+        },
+        {
+          "wrong": "En kan inte äta för mycket godis.",
+          "right": "Man kan inte äta för mycket godis.",
+          "note": "'En' is not used as an impersonal pronoun in standard Swedish; 'man' is correct."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'One should always be polite.'",
+          "answer": "Man ska alltid vara artig."
+        },
+        {
+          "prompt": "Fill in the blank: '___ kan aldrig vara för försiktig.' (One can never be too careful.)",
+          "answer": "Man"
+        }
+      ]
+    },
+    {
+      "rule_id": "många-vs-mycket-count-mass",
+      "topic": "Många vs mycket count mass",
+      "title": "Många vs Mycket: Count vs Mass Nouns",
+      "explanation": "Use 'många' with countable nouns (things you can count, like apples or books) and 'mycket' with uncountable nouns (things you can't count individually, like water or time). A common mistake is using 'mycket' with plural countable nouns or 'många' with uncountable nouns.",
+      "examples": [
+        {
+          "wrong": "Jag har mycket böcker.",
+          "right": "Jag har många böcker.",
+          "note": "'Böcker' is countable plural, so use 'många'."
+        },
+        {
+          "wrong": "Det finns många vatten i glaset.",
+          "right": "Det finns mycket vatten i glaset.",
+          "note": "'Vatten' is uncountable, so use 'mycket'."
+        },
+        {
+          "wrong": "Hon äter många socker.",
+          "right": "Hon äter mycket socker.",
+          "note": "'Socker' is uncountable, so use 'mycket'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I have many friends.'",
+          "answer": "Jag har många vänner."
+        },
+        {
+          "prompt": "Fill in the blank with 'många' or 'mycket': 'Det finns ___ tid kvar.'",
+          "answer": "mycket"
+        },
+        {
+          "prompt": "Correct the mistake: 'Han dricker många kaffe.'",
+          "answer": "Han dricker mycket kaffe."
+        }
+      ]
+    },
+    {
+      "rule_id": "liten-vs-små-irregular-adjective",
+      "topic": "Liten vs små irregular adjective",
+      "title": "Liten vs Små: The Irregular Adjective",
+      "explanation": "In Swedish, 'liten' (small) is irregular. Use 'liten' for singular common gender nouns (en-words) and 'litet' for singular neuter nouns (ett-words). For all plural nouns, use 'små' regardless of gender.",
+      "examples": [
+        {
+          "wrong": "De är liten hundar.",
+          "right": "De är små hundar.",
+          "note": "'Hundar' is plural, so you must use 'små', not 'liten'."
+        },
+        {
+          "wrong": "Det är en små bok.",
+          "right": "Det är en liten bok.",
+          "note": "'Bok' is singular common gender, so use 'liten'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct form: 'Jag har två _____ katter.' (small)",
+          "answer": "små"
+        },
+        {
+          "prompt": "Fill in the correct form: 'Det är en _____ stol.' (small)",
+          "answer": "liten"
+        }
+      ]
+    },
+    {
+      "rule_id": "numerals-and-ordinal-numbers",
+      "topic": "Numerals and ordinal numbers",
+      "title": "Cardinal vs. Ordinal Numbers in Swedish",
+      "explanation": "In Swedish, cardinal numbers (like 'tre' for three) indicate quantity, while ordinal numbers (like 'tredje' for third) indicate order or position. A common mistake is using cardinal numbers for dates, floors, or rankings. Remember: for dates (e.g., 'den tredje maj') and sequence, always use the ordinal form.",
+      "examples": [
+        {
+          "wrong": "Jag bor på tre våningen.",
+          "right": "Jag bor på tredje våningen.",
+          "note": "Use 'tredje' (third) for floor numbers, not 'tre' (three)."
+        },
+        {
+          "wrong": "Mötet är den tre april.",
+          "right": "Mötet är den tredje april.",
+          "note": "Dates require ordinal numbers: 'tredje' instead of 'tre'."
+        },
+        {
+          "wrong": "Han kom i mål som två.",
+          "right": "Han kom i mål som andra.",
+          "note": "'Andra' (second) for ranking, not 'två' (two)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the Swedish ordinal for 'first' to complete: Jag var ____ i kön.",
+          "answer": "första"
+        },
+        {
+          "prompt": "Fill in the correct ordinal for 'fifth': Det är den ____ december.",
+          "answer": "femte"
+        },
+        {
+          "prompt": "Translate 'She lives on the second floor' into Swedish using the correct ordinal.",
+          "answer": "Hon bor på andra våningen."
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciation-of-sj-sound",
+      "topic": "Pronunciation of sj sound",
+      "title": "Mastering the Swedish 'sj' Sound",
+      "explanation": "The Swedish 'sj' sound is a voiceless fricative that doesn't exist in English. It's produced with the tongue raised towards the soft palate, creating a 'hushing' sound similar to a soft 'sh' but with more friction. This sound appears in spellings like 'sj', 'skj', 'stj', and 'sch'. English speakers often mistakenly use a plain 'sh' or 'sk' sound, but with practice you can get it right.",
+      "examples": [
+        {
+          "wrong": "shoo",
+          "right": "sju",
+          "note": "Think of a 'hwoo' sound, not English 'shoo'."
+        },
+        {
+          "wrong": "shorta",
+          "right": "skjorta",
+          "note": "The 'skj' is pronounced as 'sj', not 'sh'."
+        },
+        {
+          "wrong": "st-yarna",
+          "right": "stjärna",
+          "note": "The 'stj' also becomes the 'sj' sound, not a 'st' + 'y'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say the number 7 in Swedish? Say it with the correct 'sj' sound.",
+          "answer": "sju"
+        },
+        {
+          "prompt": "Pronounce the Swedish word for 'shirt', focusing on the 'sj' sound.",
+          "answer": "skjorta"
+        },
+        {
+          "prompt": "Say the Swedish word for 'star' aloud, ensuring the 'stj' is pronounced as 'sj'.",
+          "answer": "stjärna"
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciation-of-tj-sound",
+      "topic": "Pronunciation of tj sound",
+      "title": "Mastering the Swedish 'tj' Sound",
+      "explanation": "The Swedish 'tj' is a soft, hissing sound like the 'ch' in German 'ich' or the 'sh' in 'she' but with your tongue closer to the roof of your mouth. English speakers often mistakenly pronounce it as the hard 'ch' in 'church' or as a 't' followed by a 'y' sound. To get it right, start with an 'sh' sound and then push your tongue forward a little.",
+      "examples": [
+        {
+          "wrong": "choo-go",
+          "right": "tjugo",
+          "note": "The word for 'twenty' (tjugo). Say it like 'shoo-go' with a soft 'sh'."
+        },
+        {
+          "wrong": "chena",
+          "right": "tjena",
+          "note": "Informal 'hi' (tjena). Think of a soft 'shena'."
+        },
+        {
+          "wrong": "tchay-na",
+          "right": "tjäna",
+          "note": "To 'earn' or 'serve' (tjäna). Pronounce like 'shena' with a faint y-glide."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'twenty' in Swedish?",
+          "answer": "tjugo"
+        },
+        {
+          "prompt": "What is the Swedish word for the informal greeting 'hi'?",
+          "answer": "tjena"
+        },
+        {
+          "prompt": "Write the Swedish word that means 'to earn' and starts with the tj sound.",
+          "answer": "tjäna"
+        }
+      ]
+    },
+    {
+      "rule_id": "att-vs-och-pronunciation-distinction",
+      "topic": "Att vs och pronunciation distinction",
+      "title": "Att vs Och: Pronunciation Distinction",
+      "explanation": "Swedish 'att' (meaning 'to') ends with a 't' sound, like the 't' in 'hat'. 'Och' (meaning 'and') ends with a 'k' sound, like the 'k' in 'lock'. Many English speakers mistakenly pronounce both as a weak 'oh' sound, but the final consonant is key to telling them apart.",
+      "examples": [
+        {
+          "wrong": "Jag vill äta och dricka.",
+          "right": "Jag vill äta att dricka.",
+          "note": "Wrong: 'och' sounds like 'ok' but here it should be 'att' (to) with a clear 't'."
+        },
+        {
+          "wrong": "Han försöker att lära sig svenska och engelska.",
+          "right": "Han försöker och lära sig svenska att engelska?",
+          "note": "This example is messy - let me clarify: Actually the common mistake is swapping the words. Correct: 'Han försöker lära sig svenska och engelska' (and) vs 'Han försöker att lära sig svenska' (to). Focus on pronunciation: 'och' /ɔk/ vs 'att' /at/."
+        },
+        {
+          "wrong": "Jag gillar att sjunga och dansa.",
+          "right": "Jag gillar att sjunga och dansa.",
+          "note": "Both words are correct here, but pronounce 'att' with a t and 'och' with a k: 'att' [at] and 'och' [ɔk]."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'to eat' in Swedish? (write the word and pronounce it correctly)",
+          "answer": "att äta (pronounced with a t sound at the end of 'att')"
+        },
+        {
+          "prompt": "How do you say 'and drink' in Swedish? (write the phrase)",
+          "answer": "och dricka (pronounced with a k sound at the end of 'och')"
+        },
+        {
+          "prompt": "Fill in the blank with the correct word (att or och): 'Jag vill läsa ___ skriva.'",
+          "answer": "och"
+        }
+      ]
+    },
+    {
+      "rule_id": "både-och-and-antingen-eller",
+      "topic": "Både och and antingen eller",
+      "title": "Både och vs. Antingen eller",
+      "explanation": "Use 'både...och' to say 'both...and' when listing two things that are both true or included. Use 'antingen...eller' to say 'either...or' when only one of two options is possible. A common mistake is mixing them up, like saying 'både...eller' or 'antingen...och'.",
+      "examples": [
+        {
+          "wrong": "Jag vill ha både kaffe eller te.",
+          "right": "Jag vill ha både kaffe och te.",
+          "note": "Use 'och' (and) with 'både' (both)."
+        },
+        {
+          "wrong": "Du kan välja antingen kaffe och te.",
+          "right": "Du kan välja antingen kaffe eller te.",
+          "note": "Use 'eller' (or) with 'antingen' (either)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I want both apples and oranges.'",
+          "answer": "Jag vill ha både äpplen och apelsiner."
+        },
+        {
+          "prompt": "Translate: 'You can either come today or tomorrow.'",
+          "answer": "Du kan komma antingen idag eller imorgon."
+        }
+      ]
+    },
+    {
+      "rule_id": "demonstrative-pronouns-den-här",
+      "topic": "Demonstrative pronouns den här",
+      "title": "Using 'den här' vs 'det här' Correctly",
+      "explanation": "In Swedish, demonstrative pronouns must agree with the gender of the noun. 'Den här' is used for common gender nouns (en-words), while 'det här' is used for neuter gender nouns (ett-words). For plural nouns, use 'de här' regardless of gender.",
+      "examples": [
+        {
+          "wrong": "Den här äpple är gott.",
+          "right": "Det här äpplet är gott.",
+          "note": "'Äpple' is a neuter noun (ett-äpple), so you must use 'det här'."
+        },
+        {
+          "wrong": "Det här stolen är ny.",
+          "right": "Den här stolen är ny.",
+          "note": "'Stol' is a common gender noun (en-stol), so you need 'den här'."
+        },
+        {
+          "wrong": "Den här böckerna är mina.",
+          "right": "De här böckerna är mina.",
+          "note": "'Böcker' is plural, so use 'de här' regardless of the singular gender."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'This book (en bok) is interesting.'",
+          "answer": "Den här boken är intressant."
+        },
+        {
+          "prompt": "Translate: 'This house (ett hus) is big.'",
+          "answer": "Det här huset är stort."
+        },
+        {
+          "prompt": "Translate: 'These cars (en bil, plural) are fast.'",
+          "answer": "De här bilarna är snabba."
+        }
+      ]
+    }
+  ]
+}

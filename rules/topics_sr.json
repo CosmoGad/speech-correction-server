@@ -1,0 +1,101 @@
+{
+  "learning": "sr",
+  "topics": [
+    {
+      "rule_id": "падежи",
+      "title": "падежи"
+    },
+    {
+      "rule_id": "глаголски-видови",
+      "title": "глаголски видови"
+    },
+    {
+      "rule_id": "акценат",
+      "title": "акценат"
+    },
+    {
+      "rule_id": "придеви",
+      "title": "придеви"
+    },
+    {
+      "rule_id": "меки-сугласници",
+      "title": "меки сугласници"
+    },
+    {
+      "rule_id": "интонација",
+      "title": "интонација"
+    },
+    {
+      "rule_id": "clitic-pronoun-placement",
+      "title": "Clitic pronoun placement"
+    },
+    {
+      "rule_id": "reflexive-se-with-transitive-verbs",
+      "title": "Reflexive 'se' with transitive verbs"
+    },
+    {
+      "rule_id": "verbs-with-required-prepositions",
+      "title": "Verbs with required prepositions"
+    },
+    {
+      "rule_id": "past-tense-auxiliary-agreement",
+      "title": "Past tense auxiliary agreement"
+    },
+    {
+      "rule_id": "future-tense-ću-vs-bude",
+      "title": "Future tense 'ću' vs 'bude'"
+    },
+    {
+      "rule_id": "conditional-bih-forms",
+      "title": "Conditional 'bih' forms"
+    },
+    {
+      "rule_id": "imperative-mood-irregulars",
+      "title": "Imperative mood irregulars"
+    },
+    {
+      "rule_id": "numbers-declension-of-1-4",
+      "title": "Numbers: declension of 1-4"
+    },
+    {
+      "rule_id": "gender-of-nouns-ending-in-a",
+      "title": "Gender of nouns ending in -a"
+    },
+    {
+      "rule_id": "possessive-svoj-vs-moj",
+      "title": "Possessive 'svoj' vs 'moj'"
+    },
+    {
+      "rule_id": "demonstratives-ovajtajonaj",
+      "title": "Demonstratives: ovaj/taj/onaj"
+    },
+    {
+      "rule_id": "interrogatives-štakokoji",
+      "title": "Interrogatives: šta/ko/koji"
+    },
+    {
+      "rule_id": "conjunctions-aalinegopa",
+      "title": "Conjunctions: a/ali/nego/pa"
+    },
+    {
+      "rule_id": "comparative-of-adverbs",
+      "title": "Comparative of adverbs"
+    },
+    {
+      "rule_id": "verbs-of-motion-prefixes",
+      "title": "Verbs of motion prefixes"
+    },
+    {
+      "rule_id": "use-of-li-in-yesno-questions",
+      "title": "Use of 'li' in yes/no questions"
+    },
+    {
+      "rule_id": "double-negation-in-serbian",
+      "title": "Double negation in Serbian"
+    },
+    {
+      "rule_id": "word-order-in-subordinate-clauses",
+      "title": "Word order in subordinate clauses"
+    }
+  ]
+}

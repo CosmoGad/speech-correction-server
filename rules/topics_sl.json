@@ -1,0 +1,105 @@
+{
+  "learning": "sl",
+  "topics": [
+    {
+      "rule_id": "cases",
+      "title": "Cases"
+    },
+    {
+      "rule_id": "dual-number",
+      "title": "Dual number"
+    },
+    {
+      "rule_id": "verb-aspect",
+      "title": "Verb aspect"
+    },
+    {
+      "rule_id": "word-order",
+      "title": "Word order"
+    },
+    {
+      "rule_id": "pitch-accent",
+      "title": "Pitch accent"
+    },
+    {
+      "rule_id": "vowel-reduction",
+      "title": "Vowel reduction"
+    },
+    {
+      "rule_id": "vowel-length",
+      "title": "Vowel length"
+    },
+    {
+      "rule_id": "noun-gender-assignment",
+      "title": "Noun gender assignment"
+    },
+    {
+      "rule_id": "definite-vs-indefinite-adjective-forms",
+      "title": "Definite vs indefinite adjective forms"
+    },
+    {
+      "rule_id": "reflexive-pronoun-se-usage",
+      "title": "Reflexive pronoun 'se' usage"
+    },
+    {
+      "rule_id": "possession-imam-vs-mi-je",
+      "title": "Possession: 'imam' vs 'mi je'"
+    },
+    {
+      "rule_id": "double-negation-nikoli-ne",
+      "title": "Double negation (nikoli ne ...)"
+    },
+    {
+      "rule_id": "conditional-mood-bi-past-participle",
+      "title": "Conditional mood (bi + past participle)"
+    },
+    {
+      "rule_id": "imperative-mood-formation",
+      "title": "Imperative mood formation"
+    },
+    {
+      "rule_id": "comparative-and-superlative-adjective-irregularities",
+      "title": "Comparative and superlative adjective irregularities"
+    },
+    {
+      "rule_id": "supine-vs-infinitive-after-motion-verbs",
+      "title": "Supine vs infinitive after motion verbs"
+    },
+    {
+      "rule_id": "pronunciation-of-sibilants-č-š-ž-vs-c-s-z",
+      "title": "Pronunciation of sibilants (č, š, ž vs c, s, z)"
+    },
+    {
+      "rule_id": "palatal-consonants-lj-nj-rj",
+      "title": "Palatal consonants (lj, nj, rj)"
+    },
+    {
+      "rule_id": "preposition-s-vs-z-voicing-assimilation",
+      "title": "Preposition 's' vs 'z' (voicing assimilation)"
+    },
+    {
+      "rule_id": "adjective-vs-adverb-usage",
+      "title": "Adjective vs adverb usage"
+    },
+    {
+      "rule_id": "diminutive-noun-formation",
+      "title": "Diminutive noun formation"
+    },
+    {
+      "rule_id": "pronunciation-of-l-as-w-at-syllable-end",
+      "title": "Pronunciation of 'l' as [w] at syllable end"
+    },
+    {
+      "rule_id": "verb-conjugation-patterns-present-tense",
+      "title": "Verb conjugation patterns (present tense)"
+    },
+    {
+      "rule_id": "future-tense-formation-bom-l-participle",
+      "title": "Future tense formation (bom + l-participle)"
+    },
+    {
+      "rule_id": "optative-naj-for-wishescommands",
+      "title": "Optative 'naj' for wishes/commands"
+    }
+  ]
+}

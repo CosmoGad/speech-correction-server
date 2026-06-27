@@ -1,0 +1,105 @@
+{
+  "learning": "ro",
+  "topics": [
+    {
+      "rule_id": "articles",
+      "title": "Articles"
+    },
+    {
+      "rule_id": "gender-agreement",
+      "title": "Gender agreement"
+    },
+    {
+      "rule_id": "verb-conjugation",
+      "title": "Verb conjugation"
+    },
+    {
+      "rule_id": "prepositions",
+      "title": "Prepositions"
+    },
+    {
+      "rule_id": "diphthongs",
+      "title": "Diphthongs"
+    },
+    {
+      "rule_id": "ăâ-sounds",
+      "title": "ă/â sounds"
+    },
+    {
+      "rule_id": "stress",
+      "title": "Stress"
+    },
+    {
+      "rule_id": "plural-formation-for-neuter-nouns",
+      "title": "Plural formation for neuter nouns"
+    },
+    {
+      "rule_id": "personal-accusative-with-pe",
+      "title": "Personal accusative with 'pe'"
+    },
+    {
+      "rule_id": "possessive-pronouns-alaaiale",
+      "title": "Possessive pronouns al/a/ai/ale"
+    },
+    {
+      "rule_id": "subjunctive-mood-să-verb",
+      "title": "Subjunctive mood (să + verb)"
+    },
+    {
+      "rule_id": "conditional-mood-așaiar",
+      "title": "Conditional mood (aș/ai/ar...)"
+    },
+    {
+      "rule_id": "future-tense-forms-voi-vs-o-să",
+      "title": "Future tense forms (voi vs o să)"
+    },
+    {
+      "rule_id": "imperfect-tense-vs-perfect-compus",
+      "title": "Imperfect tense vs perfect compus"
+    },
+    {
+      "rule_id": "numeral-agreement-ordinal-vs-cardinal",
+      "title": "Numeral agreement (ordinal vs cardinal)"
+    },
+    {
+      "rule_id": "reflexive-verbs-and-pronouns",
+      "title": "Reflexive verbs and pronouns"
+    },
+    {
+      "rule_id": "double-negation-nunimeni",
+      "title": "Double negation (nu...nimeni)"
+    },
+    {
+      "rule_id": "comparative-and-superlative-adjectives",
+      "title": "Comparative and superlative adjectives"
+    },
+    {
+      "rule_id": "genitive-case-with-luial-etc",
+      "title": "Genitive case with lui/al etc."
+    },
+    {
+      "rule_id": "vocative-case-usage",
+      "title": "Vocative case usage"
+    },
+    {
+      "rule_id": "relative-pronouns-ce-vs-care-vs-cine",
+      "title": "Relative pronouns ce vs care vs cine"
+    },
+    {
+      "rule_id": "pronunciation-of-ț-ts-sound",
+      "title": "Pronunciation of 'ț' (ts sound)"
+    },
+    {
+      "rule_id": "pronunciation-of-ș-sh-vs-s",
+      "title": "Pronunciation of 'ș' (sh) vs s"
+    },
+    {
+      "rule_id": "use-of-de-with-quantity-expressions",
+      "title": "Use of 'de' with quantity expressions"
+    },
+    {
+      "rule_id": "use-of-să-vs-că-in-clauses",
+      "title": "Use of 'să' vs 'că' in clauses"
+    }
+  ]
+}

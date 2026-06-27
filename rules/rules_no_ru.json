@@ -1,0 +1,868 @@
+{
+  "learning": "no",
+  "interface": "ru",
+  "generated_at": "2026-06-27T05:26:58.469234+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "artikler",
+      "topic": "Artikler",
+      "title": "Артикли в норвежском языке (en, ei, et)",
+      "explanation": "В норвежском существительные имеют три рода: мужской, женский и средний. Неопределённый артикль зависит от рода: en (м.), ei (ж.), et (ср.). Определённая форма образуется добавлением суффикса к существительному. Самая частая ошибка русских — пропуск артикля или путаница в роде.",
+      "examples": [
+        {
+          "wrong": "Jeg har hund.",
+          "right": "Jeg har en hund.",
+          "note": "Забыт неопределённый артикль en (мужской род)."
+        },
+        {
+          "wrong": "Ei hus er stort.",
+          "right": "Et hus er stort.",
+          "note": "Слово 'hus' среднего рода, поэтому нужен артикль et, а не ei."
+        },
+        {
+          "wrong": "Hus er gammelt.",
+          "right": "Huset er gammelt.",
+          "note": "Определённая форма: к существительному добавляется суффикс -et (средний род)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на норвежский: 'У меня есть книга' (неопределённая форма).",
+          "answer": "Jeg har en bok."
+        },
+        {
+          "prompt": "Вставьте правильный неопределённый артикль: '____ eple er rødt.' (eple — средний род)",
+          "answer": "Et"
+        },
+        {
+          "prompt": "Переведите на норвежский: 'Кошка на столе' (оба слова в определённой форме).",
+          "answer": "Katten er på bordet."
+        }
+      ]
+    },
+    {
+      "rule_id": "verbformer",
+      "topic": "Verbformer",
+      "title": "Ошибка в формах глаголов: инфинитив и настоящее время",
+      "explanation": "В норвежском языке настоящее время глаголов обычно образуется добавлением -r к основе. После модальных глаголов (kan, må, vil, skal) используется инфинитив без частицы å. Русскоязычные часто путают эти формы, например, добавляют -r после модального глагола или забывают -r в настоящем времени.",
+      "examples": [
+        {
+          "wrong": "Jeg kan spiser",
+          "right": "Jeg kan spise",
+          "note": "После модального глагола kan (могу) нужно использовать инфинитив без окончания -r."
+        },
+        {
+          "wrong": "Han spise middag",
+          "right": "Han spiser middag",
+          "note": "В настоящем времени добавляем -r к основе глагола spise."
+        },
+        {
+          "wrong": "Vi må går",
+          "right": "Vi må gå",
+          "note": "После модального глагола må (должны) используем инфинитив без -r."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Заполните пропуск: Jeg ___ (spise) epler. (настоящее время)",
+          "answer": "spiser"
+        },
+        {
+          "prompt": "Исправьте ошибку: 'Hun kan snakker norsk.'",
+          "answer": "Hun kan snakke norsk."
+        },
+        {
+          "prompt": "Выберите правильную форму: De ___ (gå) til skolen hver dag. (настоящее время)",
+          "answer": "går"
+        }
+      ]
+    },
+    {
+      "rule_id": "preposisjoner",
+      "topic": "Preposisjoner",
+      "title": "Предлоги i и på: страны и города",
+      "explanation": "В норвежском языке предлог «i» используется для большинства стран и городов, а «på» — для островов и некоторых особых мест (например, «på sykehus»). Частая ошибка русскоязычных — использовать «på» с такими странами, как Norge или Russland. Запомните: «i Norge», «i Moskva», но «på Island», «på Krim».",
+      "examples": [
+        {
+          "wrong": "Jeg bor på Norge.",
+          "right": "Jeg bor i Norge.",
+          "note": "Страны обычно требуют предлог i, кроме случаев, когда это остров (Island, Krim)."
+        },
+        {
+          "wrong": "Han er på Oslo.",
+          "right": "Han er i Oslo.",
+          "note": "Города всегда употребляются с предлогом i."
+        },
+        {
+          "wrong": "De reiser på Russland.",
+          "right": "De reiser i Russland.",
+          "note": "Даже большие страны – i, если это не островное государство."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Заполните пропуск: Jeg bor ___ Norge.",
+          "answer": "i"
+        },
+        {
+          "prompt": "Исправьте ошибку: Vi bor på Sverige.",
+          "answer": "Vi bor i Sverige."
+        },
+        {
+          "prompt": "Выберите правильный предлог: Han er ___ Moskva.",
+          "answer": "i"
+        }
+      ]
+    },
+    {
+      "rule_id": "setningsstruktur",
+      "topic": "Setningsstruktur",
+      "title": "Порядок слов в норвежском предложении (Setningsstruktur)",
+      "explanation": "В норвежском языке в главном предложении глагол всегда стоит на втором месте, даже если предложение начинается с обстоятельства (например, времени или места). В русском языке порядок слов более свободный, поэтому норвежцы часто ошибаются, ставя глагол в конец или на третье место. Запомните: первое слово или группа слов, затем глагол, затем остальное.",
+      "examples": [
+        {
+          "wrong": "I går jeg gikk til skolen.",
+          "right": "I går gikk jeg til skolen.",
+          "note": "Наречие 'i går' стоит на первом месте, поэтому глагол 'gikk' должен идти сразу после него, а не после подлежащего 'jeg'."
+        },
+        {
+          "wrong": "Om sommeren vi reiser til Norge.",
+          "right": "Om sommeren reiser vi til Norge.",
+          "note": "Обстоятельство времени 'om sommeren' в начале требует инверсии: глагол 'reiser' перед подлежащим 'vi'."
+        },
+        {
+          "wrong": "Nå han spiser middag.",
+          "right": "Nå spiser han middag.",
+          "note": "То же правило: после 'nå' глагол 'spiser' ставится перед подлежащим 'han'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на норвежский: 'Вчера я купил книгу' (используйте правильный порядок слов).",
+          "answer": "I går kjøpte jeg en bok."
+        },
+        {
+          "prompt": "Исправьте ошибку: 'Hver dag han leser avisen.'",
+          "answer": "Hver dag leser han avisen."
+        },
+        {
+          "prompt": "Составьте предложение со словом 'nå' (сейчас): 'Nå ... jeg ... lekser.' (глагол - 'gjør', подлежащее - 'jeg')",
+          "answer": "Nå gjør jeg lekser."
+        }
+      ]
+    },
+    {
+      "rule_id": "tonem",
+      "topic": "Tonem",
+      "title": "Тонемы в норвежском языке: как не перепутать значения",
+      "explanation": "В норвежском языке существует два типа тонем (мелодических ударений): тонем 1 (простое, низко-высокое) и тонем 2 (двойное, высоко-низкое). Для русскоязычных это непривычно, но важно, так как тонемы различают слова. Например, 'bønder' (фермеры) и 'bønner' (бобы) звучат по-разному из-за тонемы. Ошибка может привести к непониманию. Запоминайте тонемы вместе со словом.",
+      "examples": [
+        {
+          "wrong": "Jeg spiser bønder.",
+          "right": "Jeg spiser bønner.",
+          "note": "Слово 'bønder' имеет тонем 1 (фермеры), а 'bønner' — тонем 2 (бобы). Если вы скажете 'bønder' вместо 'bønner', вас поймут неправильно."
+        },
+        {
+          "wrong": "Han landet i går.",
+          "right": "Han landet i går.",
+          "note": "Слово 'landet' пишется одинаково, но тонем 1 — 'страна', тонем 2 — 'приземлился'. Важно произносить с правильной тонемой. В данном контексте (глагол) нужен тонем 2."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Какое слово (bønder или bønner) имеет тонем 1? Напишите его.",
+          "answer": "bønder"
+        },
+        {
+          "prompt": "Для значения 'бобы' напишите правильное слово с тонемой 2.",
+          "answer": "bønner"
+        },
+        {
+          "prompt": "Для значения 'руки' напишите слово 'hender' — с тонемой 1 или 2? (напишите слово)",
+          "answer": "hender"
+        }
+      ]
+    },
+    {
+      "rule_id": "uttale-av-vokaler",
+      "topic": "Uttale av vokaler",
+      "title": "Произношение гласной 'y' в норвежском языке",
+      "explanation": "В норвежском языке гласная 'y' произносится с округлёнными губами, как немецкое 'ü' или французское 'u'. Русские часто заменяют её на 'и' или 'ю', что приводит к ошибкам. Важно помнить, что 'y' может быть как долгим, так и кратким, и его произношение отличается от 'i'.",
+      "examples": [
+        {
+          "wrong": "lis",
+          "right": "lys",
+          "note": "Слово 'lys' (свет) произносится с округлёнными губами, а не как 'лис'."
+        },
+        {
+          "wrong": "fisikk",
+          "right": "fysikk",
+          "note": "В слове 'fysikk' (физика) первый звук — 'y', а не 'i'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильную гласную: 'l_s' (свет). Напишите слово целиком.",
+          "answer": "lys"
+        },
+        {
+          "prompt": "Как пишется слово 'физика' по-норвежски?",
+          "answer": "fysikk"
+        }
+      ]
+    },
+    {
+      "rule_id": "intonasjon",
+      "topic": "Intonasjon",
+      "title": "Интонация в норвежском: два тона",
+      "explanation": "В норвежском языке значение слова может меняться в зависимости от интонации (тонов 1 и 2). Русскоязычные часто не обращают на это внимания, что ведёт к недопониманию. Например, слово «tanke» с тоном 1 означает 'мысль', а с тоном 2 – 'бак'. Важно различать эти интонационные рисунки.",
+      "examples": [
+        {
+          "wrong": "Jeg har en tanke. (с тоном 2)",
+          "right": "Jeg har en tanke. (с тоном 1)",
+          "note": "Слово 'tanke' с тоном 1 – 'мысль', с тоном 2 – 'бак'. Произносите правильно в зависимости от смысла."
+        },
+        {
+          "wrong": "Vi spiser bønner. (с тоном 2)",
+          "right": "Vi spiser bønner. (с тоном 1)",
+          "note": "Слово 'bønner' с тоном 1 – 'бобы', с тоном 2 – 'молитвы'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Какое слово 'tanke' произносится с тоном 1 (мысль)?",
+          "answer": "tanke"
+        },
+        {
+          "prompt": "Произнесите слово 'bønner' так, чтобы оно означало 'молитвы' (тон 2).",
+          "answer": "bønner"
+        }
+      ]
+    },
+    {
+      "rule_id": "noun-gender-agreement",
+      "topic": "Noun gender agreement",
+      "title": "Согласование рода существительных в норвежском языке",
+      "explanation": "В норвежском языке существительные делятся на три рода: мужской (en), женский (ei) и средний (et). Прилагательные и артикли должны согласовываться с родом существительного. Частая ошибка — использование формы прилагательного среднего рода (с окончанием -t) для существительных мужского или женского рода.",
+      "examples": [
+        {
+          "wrong": "et grønn tre",
+          "right": "et grønt tre",
+          "note": "Существительное «tre» среднего рода, поэтому прилагательное «grønn» принимает окончание -t: «grønt»."
+        },
+        {
+          "wrong": "ei liten stol",
+          "right": "en liten stol",
+          "note": "Существительное «stol» мужского рода, поэтому используется артикль «en» (не «ei»). Форма «liten» совпадает для мужского и женского рода."
+        },
+        {
+          "wrong": "en stor hus",
+          "right": "et stort hus",
+          "note": "Существительное «hus» среднего рода, поэтому нужен артикль «et» и форма прилагательного «stort» (с -t)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите правильную форму с артиклем и прилагательным: большой дом (дом — средний род)",
+          "answer": "et stort hus"
+        },
+        {
+          "prompt": "Напишите правильную форму с артиклем и прилагательным: маленькая книга (книга — женский род)",
+          "answer": "ei lita bok"
+        },
+        {
+          "prompt": "Напишите правильную форму с артиклем и прилагательным: новый стул (стул — мужской род)",
+          "answer": "en ny stol"
+        }
+      ]
+    },
+    {
+      "rule_id": "adjective-inflection-after-definite-nouns",
+      "topic": "Adjective inflection after definite nouns",
+      "title": "Склонение прилагательных после определенных существительных",
+      "explanation": "В норвежском языке, когда существительное стоит в определенной форме (с артиклем den/det/de или с определенным окончанием), прилагательное тоже принимает определенную форму, обычно с окончанием -e. Например: 'en stor bok' (большая книга) -> 'den store boka' (та большая книга). Не путайте: не говорите 'den stor boka', а 'den store boka'.",
+      "examples": [
+        {
+          "wrong": "den stor bilen",
+          "right": "den store bilen",
+          "note": "После 'den' нужно окончание -e у прилагательного 'stor'."
+        },
+        {
+          "wrong": "det rød huset",
+          "right": "det røde huset",
+          "note": "Средний род: прилагательное 'rød' становится 'røde'."
+        },
+        {
+          "wrong": "de grønn bøkene",
+          "right": "de grønne bøkene",
+          "note": "Множественное число: прилагательное 'grønn' становится 'grønne'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите правильную форму: 'den (stor) bilen'",
+          "answer": "store"
+        },
+        {
+          "prompt": "Напишите правильную форму: 'det (rød) huset'",
+          "answer": "røde"
+        },
+        {
+          "prompt": "Напишите правильную форму: 'de (grønn) bøkene'",
+          "answer": "grønne"
+        }
+      ]
+    },
+    {
+      "rule_id": "word-order-in-subordinate-clauses",
+      "topic": "Word order in subordinate clauses",
+      "title": "Порядок слов в придаточных предложениях",
+      "explanation": "В норвежском языке в придаточных предложениях (после союзов «at», «når», «fordi» и др.) порядок слов отличается от главного. В придаточном предложении подлежащее стоит сразу после союза, а глагол — после подлежащего (или после наречий, как «ikke»). Ошибка возникает, когда по аналогии с русским ставят глагол на второе место.",
+      "examples": [
+        {
+          "wrong": "Jeg vet at kommer han.",
+          "right": "Jeg vet at han kommer.",
+          "note": "В придаточном после «at» подлежащее «han» идет сразу, затем глагол «kommer»."
+        },
+        {
+          "wrong": "Han sier at ikke han liker kaffe.",
+          "right": "Han sier at han ikke liker kaffe.",
+          "note": "Отрицание «ikke» ставится перед глаголом, но после подлежащего."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите: «Я думаю, что она придет». Используйте «at».",
+          "answer": "Jeg tror at hun kommer."
+        },
+        {
+          "prompt": "Составьте правильное предложение: «Она сказала, что он не читает книги».",
+          "answer": "Hun sa at han ikke leser bøker."
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-passive-voice",
+      "topic": "Use of passive voice",
+      "title": "Ошибка: чрезмерное использование пассивного залога в норвежском",
+      "explanation": "В норвежском языке пассивный залог используется реже, чем в английском. Частая ошибка — прямое копирование английской конструкции с 'bli' + причастие. Вместо этого предпочитайте активный залог, если исполнитель действия известен, или используйте s-пассив (например, 'bygges'), когда исполнитель не важен.",
+      "examples": [
+        {
+          "wrong": "Bilen ble kjørt av meg.",
+          "right": "Jeg kjørte bilen.",
+          "note": "Если субъект известен, активный залог звучит естественнее."
+        },
+        {
+          "wrong": "Døren blir lukket av henne hver kveld.",
+          "right": "Hun lukker døren hver kveld.",
+          "note": "Для повседневных действий используйте активный залог."
+        },
+        {
+          "wrong": "Boken ble lest av meg i går.",
+          "right": "Jeg leste boken i går.",
+          "note": "Избегайте 'bli'-пассива, когда действие совершает конкретное лицо."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Исправьте предложение: 'Brevet ble skrevet av ham.'",
+          "answer": "Han skrev brevet."
+        },
+        {
+          "prompt": "Замените пассив на актив: 'Kaffen blir drukket av oss.'",
+          "answer": "Vi drikker kaffen."
+        },
+        {
+          "prompt": "Перепишите в активном залоге: 'Huset blir malt av dem.'",
+          "answer": "De maler huset."
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-verbs-and-pronouns",
+      "topic": "Reflexive verbs and pronouns",
+      "title": "Возвратные глаголы и местоимения в норвежском языке",
+      "explanation": "В норвежском языке многие глаголы требуют возвратного местоимения «seg» (для себя), чтобы показать, что действие направлено на субъект. Русскоязычные часто забывают ставить «seg» или используют его с невозвратными глаголами. Запомните: «seg» нужно с глаголами как «å glede seg» (радоваться), «å kjenne seg» (чувствовать себя), «å sette seg» (садиться), но не с глаголами, где действие не на себя (например, «å vaske» без «seg» означает мыть что-то, а не мыться).",
+      "examples": [
+        {
+          "wrong": "Jeg gleder til ferien.",
+          "right": "Jeg gleder meg til ferien.",
+          "note": "Глагол «å glede» требует возвратного местоимения «meg» для значения «радоваться»."
+        },
+        {
+          "wrong": "Hun kjenner syk.",
+          "right": "Hun kjenner seg syk.",
+          "note": "«Å kjenne seg» означает «чувствовать себя»; без «seg» смысл меняется."
+        },
+        {
+          "wrong": "Han setter på stolen.",
+          "right": "Han setter seg på stolen.",
+          "note": "«Å sette seg» – садиться; просто «sette» значит «ставить»."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Она радуется лету.",
+          "answer": "Hun gleder seg til sommeren."
+        },
+        {
+          "prompt": "Мы чувствуем себя уставшими.",
+          "answer": "Vi føler oss slitne."
+        },
+        {
+          "prompt": "Ты моешься?",
+          "answer": "Vasker du deg?"
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-constructions-with-sinsisittsine",
+      "topic": "Possessive constructions with sin/si/sitt/sine",
+      "title": "Притяжательные конструкции с sin/si/sitt/sine",
+      "explanation": "В норвежском языке слова sin/si/sitt/sine используются, когда обладатель является подлежащим в предложении (означают «свой»). Выбор формы зависит от рода и числа существительного: sin (мужской), si (женский), sitt (средний), sine (множественное число). Ошибка часто возникает, когда вместо sin используют hans/hennes/dens — это допустимо только если обладатель не является подлежащим.",
+      "examples": [
+        {
+          "wrong": "Han tar på seg hans jakke.",
+          "right": "Han tar på seg sin jakke.",
+          "note": "Подлежащее «он» — нужно sin (свою), а не hans (его)."
+        },
+        {
+          "wrong": "Hun elsker hennes mann.",
+          "right": "Hun elsker sin mann.",
+          "note": "Подлежащее «она» — sin (своего), а не hennes (её)."
+        },
+        {
+          "wrong": "De liker deres barn.",
+          "right": "De liker sine barn.",
+          "note": "Подлежащее «они» — sine (своих), а не deres (их)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Заполните пропуск правильной формой: «Han leser ___ bok.»",
+          "answer": "sin"
+        },
+        {
+          "prompt": "Исправьте ошибку: «Hun vasker hennes hender.»",
+          "answer": "Hun vasker sine hender."
+        },
+        {
+          "prompt": "Выберите правильный вариант: «Gutten tar på seg (sin / hans) lue.»",
+          "answer": "sin"
+        }
+      ]
+    },
+    {
+      "rule_id": "compound-word-formation-and-spelling",
+      "topic": "Compound word formation and spelling",
+      "title": "Образование и правописание сложных слов в норвежском языке",
+      "explanation": "В норвежском языке сложные слова всегда пишутся слитно, в отличие от русского или английского, где возможны пробелы. Запомните: если два слова образуют одно понятие, они объединяются в одно слово. Например, «зубной врач» будет одним словом «tannlege», а не «tann lege».",
+      "examples": [
+        {
+          "wrong": "tann lege",
+          "right": "tannlege",
+          "note": "Слово «зубной врач» пишется слитно, так как это единое понятие."
+        },
+        {
+          "wrong": "hånd ball",
+          "right": "håndball",
+          "note": "Виды спорта часто являются сложными словами: «ручной мяч» → håndball."
+        },
+        {
+          "wrong": "sol nedgang",
+          "right": "solnedgang",
+          "note": "Явления природы: «закат солнца» → solnedgang."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите правильное сложное слово для «снеговик» (по-норвежски).",
+          "answer": "snømann"
+        },
+        {
+          "prompt": "Напишите правильное сложное слово для «школьный двор» (по-норвежски).",
+          "answer": "skolegård"
+        },
+        {
+          "prompt": "Напишите правильное сложное слово для «морепродукты» (по-норвежски).",
+          "answer": "sjømat"
+        }
+      ]
+    },
+    {
+      "rule_id": "modal-verb-usage-and-placement",
+      "topic": "Modal verb usage and placement",
+      "title": "Использование модальных глаголов: порядок слов и отрицание",
+      "explanation": "В норвежском языке модальные глаголы (kan, må, skal, vil) всегда занимают второе место в утвердительных предложениях (подлежащее + модальный глагол + ... + основной глагол в конце). В вопросах модальный глагол ставится на первое место. Отрицательная частица 'ikke' помещается сразу после модального глагола, перед основным. Кроме того, после модального глагола основной глагол используется в инфинитиве без частицы 'å'.",
+      "examples": [
+        {
+          "wrong": "Jeg ikke kan spise.",
+          "right": "Jeg kan ikke spise.",
+          "note": "Отрицание 'ikke' ставится после модального глагола, а не перед ним."
+        },
+        {
+          "wrong": "Han kan komme?",
+          "right": "Kan han komme?",
+          "note": "В вопросах модальный глагол выносится на первое место."
+        },
+        {
+          "wrong": "Hun vil ikke har kaffe.",
+          "right": "Hun vil ikke ha kaffe.",
+          "note": "После модальных глаголов (kan, må, skal, vil) основной глагол стоит в инфинитиве без 'å'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Исправьте порядок слов: 'Jeg ikke kan komme i morgen.'",
+          "answer": "Jeg kan ikke komme i morgen."
+        },
+        {
+          "prompt": "Поставьте вопрос к предложению: 'Du må hjelpe meg.'",
+          "answer": "Må du hjelpe meg?"
+        },
+        {
+          "prompt": "Исправьте ошибку: 'Han skal ikke gjør det.'",
+          "answer": "Han skal ikke gjøre det."
+        }
+      ]
+    },
+    {
+      "rule_id": "strong-and-weak-verb-past-tense",
+      "topic": "Strong and weak verb past tense",
+      "title": "Сильные и слабые глаголы в прошедшем времени",
+      "explanation": "В норвежском языке слабые глаголы образуют прошедшее время с помощью окончаний -et или -te (например, 'spise' → 'spiste'). Сильные глаголы меняют гласную в корне и не добавляют этих окончаний (например, 'skrive' → 'skrev'). Русскоязычные студенты часто ошибочно применяют слабое окончание к сильным глаголам.",
+      "examples": [
+        {
+          "wrong": "Jeg skrivet det.",
+          "right": "Jeg skrev det.",
+          "note": "Глагол 'skrive' — сильный, в прошедшем времени меняет 'i' на 'e'."
+        },
+        {
+          "wrong": "Han drikket kaffe.",
+          "right": "Han drakk kaffe.",
+          "note": "Глагол 'drikke' — сильный, меняет 'i' на 'a'."
+        },
+        {
+          "wrong": "Vi finnet boka.",
+          "right": "Vi fant boka.",
+          "note": "Глагол 'finne' — сильный, меняет 'i' на 'a'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите прошедшее время глагола 'å skrive' (писать):",
+          "answer": "skrev"
+        },
+        {
+          "prompt": "Напишите прошедшее время глагола 'å drikke' (пить):",
+          "answer": "drakk"
+        },
+        {
+          "prompt": "Напишите прошедшее время глагола 'å finne' (находить):",
+          "answer": "fant"
+        }
+      ]
+    },
+    {
+      "rule_id": "plural-forms-of-nouns",
+      "topic": "Plural forms of nouns",
+      "title": "Множественное число существительных",
+      "explanation": "В норвежском языке множественное число образуется по-разному в зависимости от рода. У существительных мужского и женского рода в неопределённой форме обычно добавляется -er (en bil → biler). У существительных среднего рода форма не меняется (et hus → hus). Определённая форма множественного числа для всех родов оканчивается на -ene (bilene, husene). Распространённая ошибка – использовать английское окончание -s.",
+      "examples": [
+        {
+          "wrong": "to bils",
+          "right": "to biler",
+          "note": "У слов мужского рода во множественном числе добавляется -er, а не -s."
+        },
+        {
+          "wrong": "flere huser",
+          "right": "flere hus",
+          "note": "Средний род не меняет форму в неопределённом множественном числе."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите множественное число (неопределённая форма) от слова 'en jente':",
+          "answer": "jenter"
+        },
+        {
+          "prompt": "Напишите множественное число (неопределённая форма) от слова 'et bord':",
+          "answer": "bord"
+        },
+        {
+          "prompt": "Напишите множественное число (определённая форма) от слова 'en stol':",
+          "answer": "stolene"
+        }
+      ]
+    },
+    {
+      "rule_id": "definite-vs-indefinite-suffixes",
+      "topic": "Definite vs indefinite suffixes",
+      "title": "Определенный и неопределенный суффикс в норвежском языке",
+      "explanation": "В норвежском языке определенность выражается суффиксами, добавляемыми к существительному (-en, -et, -a). Неопределенная форма использует артикль (en, et, ei) без суффикса. Распространенная ошибка — использовать артикль и суффикс одновременно, либо забывать суффикс, когда речь идет о конкретном предмете.",
+      "examples": [
+        {
+          "wrong": "En katten",
+          "right": "En katt (или Katten)",
+          "note": "Нельзя сочетать неопределенный артикль и определенный суффикс. Используйте либо артикль без суффикса, либо суффикс без артикля."
+        },
+        {
+          "wrong": "Hund er stor.",
+          "right": "Hunden er stor.",
+          "note": "Если вы говорите о конкретной собаке, нужно добавить определенный суффикс -en."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите определенную форму слова «en stol» (стул).",
+          "answer": "stolen"
+        },
+        {
+          "prompt": "Переведите на норвежский: «Я читаю книгу (неопределенная)».",
+          "answer": "Jeg leser en bok."
+        },
+        {
+          "prompt": "Исправьте ошибку: «Ei jenta er søt».",
+          "answer": "Ei jente er søt."
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-det-as-formal-subject",
+      "topic": "Use of 'det' as formal subject",
+      "title": "Использование 'det' как формального подлежащего",
+      "explanation": "В норвежском языке формальное подлежащее 'det' обязательно используется в безличных конструкциях (погода, время, расстояние, состояния) и в конструкциях с 'er' + прилагательное/существительное. В русском языке такого обязательного элемента нет, поэтому ученики часто его пропускают. Всегда ставьте 'det' в начале предложения, если нет реального подлежащего.",
+      "examples": [
+        {
+          "wrong": "Er kaldt i dag.",
+          "right": "Det er kaldt i dag.",
+          "note": "Без 'det' предложение звучит неграмотно. В русском мы говорим 'Холодно', но по-норвежски нужно 'Det er kaldt'."
+        },
+        {
+          "wrong": "Blir mørkt nå.",
+          "right": "Det blir mørkt nå.",
+          "note": "Глагол 'blir' без 'det' не может стоять в начале безличного предложения."
+        },
+        {
+          "wrong": "Er en bok på bordet.",
+          "right": "Det er en bok på bordet.",
+          "note": "Конструкция 'есть/имеется' требует 'det' перед глаголом."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите предложение 'Сегодня идёт дождь' по-норвежски, используя 'det'.",
+          "answer": "Det regner i dag."
+        },
+        {
+          "prompt": "Как сказать 'Здесь много людей'? (используйте 'det').",
+          "answer": "Det er mange mennesker her."
+        },
+        {
+          "prompt": "Переведите: 'Было поздно, когда они пришли' — с 'det' в безличной части.",
+          "answer": "Det var sent da de kom."
+        }
+      ]
+    },
+    {
+      "rule_id": "comparative-and-superlative-adjectives",
+      "topic": "Comparative and superlative adjectives",
+      "title": "Сравнительная и превосходная степень прилагательных в норвежском языке",
+      "explanation": "В норвежском языке для коротких прилагательных (один слог) сравнительная степень образуется с окончанием -ere, а превосходная – с -est. Для длинных прилагательных (два и более слога) используются слова mer (более) и mest (самый). Типичная ошибка русскоязычных – использование mer/mest с короткими прилагательными или добавление -ere/-est к длинным.",
+      "examples": [
+        {
+          "wrong": "mer høy",
+          "right": "høyere",
+          "note": "Прилагательное 'høy' короткое, поэтому используем окончание -ere."
+        },
+        {
+          "wrong": "interessanter",
+          "right": "mer interessant",
+          "note": "Прилагательное 'interessant' длинное (три слога), поэтому используется mer."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Заполните пропуск: Denne boka er _____ (интересная) enn den der. (сравнительная степень)",
+          "answer": "mer interessant"
+        },
+        {
+          "prompt": "Заполните пропуск: Dette huset er _____ (высокий) i byen. (превосходная степень)",
+          "answer": "høyest"
+        },
+        {
+          "prompt": "Заполните пропуск: Rommet mitt er _____ (большой) enn ditt. (сравнительная степень)",
+          "answer": "større"
+        }
+      ]
+    },
+    {
+      "rule_id": "prepositions-of-time-and-place",
+      "topic": "Prepositions of time and place",
+      "title": "Предлоги времени и места: i vs på",
+      "explanation": "В норвежском языке предлоги 'i' и 'på' часто путают. Для дней недели (понедельник, вторник и т.д.) используется 'på', а для месяцев, seasons и городов — 'i'. Также 'i' употребляется перед названиями стран и городов, а 'på' — для островов, некоторых мест (например, 'på jobb' — на работе) и с частями суток ('på morgenen', но 'i morges'). Запомните основные случаи, чтобы избежать типичных ошибок.",
+      "examples": [
+        {
+          "wrong": "Jeg kommer i mandag.",
+          "right": "Jeg kommer på mandag.",
+          "note": "Для дней недели используем 'på', а не 'i'."
+        },
+        {
+          "wrong": "Han bor på Oslo.",
+          "right": "Han bor i Oslo.",
+          "note": "Для городов и стран используем 'i', а не 'på'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильный предлог: 'Vi ses ____ fredag.'",
+          "answer": "Vi ses på fredag."
+        },
+        {
+          "prompt": "Вставьте правильный предлог: 'Hun bor ____ Bergen.'",
+          "answer": "Hun bor i Bergen."
+        }
+      ]
+    },
+    {
+      "rule_id": "conjunctions-and-sentence-connectors",
+      "topic": "Conjunctions and sentence connectors",
+      "title": "Союзы и связки: «fordi» и «derfor» — порядок слов",
+      "explanation": "В норвежском языке после союза «fordi» (потому что) в придаточной части используется прямой порядок слов: подлежащее + сказуемое. После наречия «derfor» (поэтому) в главном предложении — обратный порядок: сказуемое + подлежащее. Частая ошибка — путать эти конструкции и ставить глагол на второе место после «fordi» или забывать инверсию после «derfor».",
+      "examples": [
+        {
+          "wrong": "Jeg er trøtt fordi har jeg jobbet mye.",
+          "right": "Jeg er trøtt fordi jeg har jobbet mye.",
+          "note": "После «fordi» подлежащее («jeg») стоит перед сказуемым («har jobbet»)."
+        },
+        {
+          "wrong": "Han er snill, derfor han er populær.",
+          "right": "Han er snill, derfor er han populær.",
+          "note": "После «derfor» сказуемое («er») ставится перед подлежащим («han»)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Исправьте ошибку в предложении: «Jeg liker ham fordi er han snill.»",
+          "answer": "Jeg liker ham fordi han er snill."
+        },
+        {
+          "prompt": "Исправьте ошибку: «Hun var sulten, derfor hun spiste mye.»",
+          "answer": "Hun var sulten, derfor spiste hun mye."
+        }
+      ]
+    },
+    {
+      "rule_id": "double-definite-construction",
+      "topic": "Double definite construction",
+      "title": "Двойное определённое склонение (Double definite construction) в норвежском",
+      "explanation": "В норвежском языке, если вы используете определённый артикль (den, det, de), существительное также принимает определённый суффикс (-en, -a, -et, -ene). Однако нельзя использовать неопределённый артикль (en, ei, et) вместе с определённым суффиксом. Русскоязычные часто ошибаются, говоря, например, «en huset» вместо правильного «et hus» (неопределённое) или «huset» (определённое).",
+      "examples": [
+        {
+          "wrong": "en huset",
+          "right": "et hus",
+          "note": "Неопределённый артикль требует неопределённой формы существительного."
+        },
+        {
+          "wrong": "ei jenta",
+          "right": "jenta",
+          "note": "Либо определённая форма без артикля, либо неопределённая с артиклем (ei jente)."
+        },
+        {
+          "wrong": "et eplet",
+          "right": "eplet",
+          "note": "То же правило: «et eplet» неверно; правильно «eplet» (определённое) или «et eple» (неопределённое)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Исправьте ошибку, используя неопределённую форму: «en katten» → напишите правильный вариант с неопределённым артиклем.",
+          "answer": "en katt"
+        },
+        {
+          "prompt": "Исправьте ошибку, используя определённую форму без артикля: «et eplet» → напишите правильный вариант.",
+          "answer": "eplet"
+        },
+        {
+          "prompt": "Исправьте ошибку, используя определённый артикль: «en boken» → напишите правильный вариант с артиклем den/det/de.",
+          "answer": "den boken"
+        }
+      ]
+    },
+    {
+      "rule_id": "negation-with-ikke-placement",
+      "topic": "Negation with 'ikke' placement",
+      "title": "Отрицание с 'ikke': правильное место в предложении",
+      "explanation": "В норвежском языке отрицательная частица 'ikke' ставится после глагола в главном предложении. Распространённая ошибка — ставить 'ikke' перед глаголом, как в русском языке. Запомните: в утвердительном предложении 'ikke' стоит сразу после глагола, а не перед ним.",
+      "examples": [
+        {
+          "wrong": "Jeg ikke liker kaffe.",
+          "right": "Jeg liker ikke kaffe.",
+          "note": "В русском 'не' ставится перед глаголом, но в норвежском — после."
+        },
+        {
+          "wrong": "Han ikke kommer i dag.",
+          "right": "Han kommer ikke i dag.",
+          "note": "Глагол 'kommer' стоит перед 'ikke'."
+        },
+        {
+          "wrong": "Vi ikke har tid.",
+          "right": "Vi har ikke tid.",
+          "note": "Даже в коротких предложениях правило остаётся тем же."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите по-норвежски: 'Я не говорю по-норвежски'.",
+          "answer": "Jeg snakker ikke norsk."
+        },
+        {
+          "prompt": "Как сказать: 'Она не читает книгу'?",
+          "answer": "Hun leser ikke boken."
+        },
+        {
+          "prompt": "Переведите: 'Мы не едим мясо'.",
+          "answer": "Vi spiser ikke kjøtt."
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-en-vs-ett-in-neuter-nouns",
+      "topic": "Use of 'en' vs 'ett' in neuter nouns",
+      "title": "Использование 'en' vs 'ett' с существительными среднего рода",
+      "explanation": "В норвежском языке существительные имеют три рода: мужской, женский и средний. Для среднего рода используется неопределённый артикль 'ett', а не 'en'. Запомните: если существительное среднего рода, всегда ставьте 'ett', а не 'en'.",
+      "examples": [
+        {
+          "wrong": "en hus",
+          "right": "ett hus",
+          "note": "Слово 'hus' (дом) — среднего рода, поэтому нужно 'ett'."
+        },
+        {
+          "wrong": "en bord",
+          "right": "ett bord",
+          "note": "Слово 'bord' (стол) — среднего рода."
+        },
+        {
+          "wrong": "en barn",
+          "right": "ett barn",
+          "note": "Слово 'barn' (ребёнок) — среднего рода."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Выберите правильный артикль для слова 'eple' (яблоко):",
+          "answer": "ett eple"
+        },
+        {
+          "prompt": "Как правильно сказать 'комната' с неопределённым артиклем?",
+          "answer": "ett rom"
+        },
+        {
+          "prompt": "Исправьте ошибку: 'en vindu' (окно).",
+          "answer": "ett vindu"
+        }
+      ]
+    }
+  ]
+}

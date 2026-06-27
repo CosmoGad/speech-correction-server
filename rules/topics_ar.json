@@ -1,0 +1,105 @@
+{
+  "learning": "ar",
+  "topics": [
+    {
+      "rule_id": "حروف-الجر",
+      "title": "حروف الجر"
+    },
+    {
+      "rule_id": "الأزمنة",
+      "title": "الأزمنة"
+    },
+    {
+      "rule_id": "الجنس-المذكر-والمؤنث",
+      "title": "الجنس (المذكر والمؤنث)"
+    },
+    {
+      "rule_id": "الإعراب",
+      "title": "الإعراب"
+    },
+    {
+      "rule_id": "الحركات-الفتحة-الضمة-الكسرة",
+      "title": "الحركات (الفتحة، الضمة، الكسرة)"
+    },
+    {
+      "rule_id": "التنوين",
+      "title": "التنوين"
+    },
+    {
+      "rule_id": "النبرة",
+      "title": "النبرة"
+    },
+    {
+      "rule_id": "definite-article-al-usage",
+      "title": "Definite article al- usage"
+    },
+    {
+      "rule_id": "idafa-construction-errors",
+      "title": "Idafa construction errors"
+    },
+    {
+      "rule_id": "hamza-spelling-rules",
+      "title": "Hamza spelling rules"
+    },
+    {
+      "rule_id": "dual-noun-agreement",
+      "title": "Dual noun agreement"
+    },
+    {
+      "rule_id": "sound-vs-broken-plurals",
+      "title": "Sound vs broken plurals"
+    },
+    {
+      "rule_id": "subject-verb-agreement-in-number",
+      "title": "Subject-verb agreement in number"
+    },
+    {
+      "rule_id": "mood-marking-indicativesubjunctivejussive",
+      "title": "Mood marking (indicative/subjunctive/jussive)"
+    },
+    {
+      "rule_id": "relative-pronouns-choice",
+      "title": "Relative pronouns choice"
+    },
+    {
+      "rule_id": "demonstrative-pronoun-proximity",
+      "title": "Demonstrative pronoun proximity"
+    },
+    {
+      "rule_id": "kana-and-its-sisters",
+      "title": "Kana and its sisters"
+    },
+    {
+      "rule_id": "inna-and-its-sisters",
+      "title": "Inna and its sisters"
+    },
+    {
+      "rule_id": "vocative-particles-ya-ayyuha",
+      "title": "Vocative particles (ya, ayyuha)"
+    },
+    {
+      "rule_id": "cardinal-number-gender-agreement",
+      "title": "Cardinal number gender agreement"
+    },
+    {
+      "rule_id": "ordinal-number-formation",
+      "title": "Ordinal number formation"
+    },
+    {
+      "rule_id": "comparative-and-superlative-patterns",
+      "title": "Comparative and superlative patterns"
+    },
+    {
+      "rule_id": "negative-particles-la-lam-lan-ma",
+      "title": "Negative particles (la, lam, lan, ma)"
+    },
+    {
+      "rule_id": "root-and-pattern-derivation",
+      "title": "Root and pattern derivation"
+    },
+    {
+      "rule_id": "sun-and-moon-letters-pronunciation",
+      "title": "Sun and moon letters pronunciation"
+    }
+  ]
+}

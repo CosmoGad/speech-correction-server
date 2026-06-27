@@ -1,0 +1,843 @@
+{
+  "learning": "ur",
+  "interface": "en",
+  "generated_at": "2026-06-27T04:44:50.122436+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "حروف-جار",
+      "topic": "حروف جار",
+      "title": "Common Postposition Mistakes: Using 'کو' (ko) Correctly",
+      "explanation": "In Urdu, the postposition 'کو' (ko) is used for indirect objects and direct objects of certain verbs. Many English speakers mistakenly use 'کو' where 'سے' (se – with, from) or 'میں' (mein – in) is required. For example, after verbs like 'پیار کرنا' (to love) or 'ملنا' (to meet), you need 'سے', not 'کو'. After 'دلچسپی ہونا' (to be interested), use 'میں'.",
+      "examples": [
+        {
+          "wrong": "مجھے تم کو پیار ہے۔",
+          "right": "مجھے تم سے پیار ہے۔",
+          "note": "The verb 'پیار کرنا' (to love) requires the postposition 'سے', not 'کو'."
+        },
+        {
+          "wrong": "وہ اس کو ملتا ہے۔",
+          "right": "وہ اس سے ملتا ہے۔",
+          "note": "'ملنا' (to meet) always takes 'سے' (with)."
+        },
+        {
+          "wrong": "مجھے اس کو دلچسپی ہے۔",
+          "right": "مجھے اس میں دلچسپی ہے۔",
+          "note": "'دلچسپی ہونا' (to be interested) requires 'میں' (in)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank: 'I am interested in this book.' — مجھے اس کتاب ___ دلچسپی ہے۔",
+          "answer": "میں"
+        },
+        {
+          "prompt": "Fill in the blank: 'He meets his teacher.' — وہ اپنے استاد ___ ملتا ہے۔",
+          "answer": "سے"
+        },
+        {
+          "prompt": "Fill in the blank: 'Give this book to me.' — یہ کتاب مجھ ___ دو۔",
+          "answer": "کو"
+        }
+      ]
+    },
+    {
+      "rule_id": "افعال-کے-زمانے",
+      "topic": "افعال کے زمانے",
+      "title": "Avoiding Common Verb Tense Mistakes in Urdu",
+      "explanation": "A common mistake is using the present tense for past actions, especially with the verb 'کرنا' (to do) or other verbs. In Urdu, the verb must change to reflect the correct time: use past tense forms like 'کیا' or 'آیا' for completed actions, and future forms with 'گا/گی/گے' for future actions. Always match the verb tense with the time marker.",
+      "examples": [
+        {
+          "wrong": "میں کل کھانا کھاتا ہوں",
+          "right": "میں نے کل کھانا کھایا",
+          "note": "Use past tense for completed past actions; 'کھاتا ہوں' is present habitual."
+        },
+        {
+          "wrong": "وہ کل آتا ہے",
+          "right": "وہ کل آیا",
+          "note": "For a single past action, use the past tense 'آیا' (came) instead of present 'آتا ہے'."
+        },
+        {
+          "wrong": "ہم کل پارک جاتے ہیں",
+          "right": "ہم کل پارک گئے",
+          "note": "Use 'گئے' (went) for past tense of 'جانا' (to go) when referring to a past event."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'She drank water yesterday' into Urdu.",
+          "answer": "اس نے کل پانی پیا"
+        },
+        {
+          "prompt": "Correct the sentence: 'میں کل کتاب پڑھتا ہوں'.",
+          "answer": "میں نے کل کتاب پڑھی"
+        },
+        {
+          "prompt": "Write 'He will come tomorrow' in Urdu.",
+          "answer": "وہ کل آئے گا"
+        }
+      ]
+    },
+    {
+      "rule_id": "جملے-کی-ساخت",
+      "topic": "جملے کی ساخت",
+      "title": "Urdu Sentence Structure: Subject-Object-Verb",
+      "explanation": "In Urdu, the verb always comes at the end of the sentence, unlike English where it follows the subject. This means the correct word order is Subject-Object-Verb (SOV). Beginners often mistakenly place the verb before the object, following English patterns.",
+      "examples": [
+        {
+          "wrong": "میں کھاتا ہوں سیب۔",
+          "right": "میں سیب کھاتا ہوں۔",
+          "note": "The verb 'khaata hoon' must come after the object 'seb'."
+        },
+        {
+          "wrong": "وہ پڑھتا ہے کتاب۔",
+          "right": "وہ کتاب پڑھتا ہے۔",
+          "note": "Object 'kitaab' must come before the verb 'parhta hai'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Arrange these words into a correct Urdu sentence: 'وہ', 'پانی', 'پیتا ہے'.",
+          "answer": "وہ پانی پیتا ہے۔"
+        },
+        {
+          "prompt": "Correct the word order in this sentence: 'میں لکھتا ہوں خط'.",
+          "answer": "میں خط لکھتا ہوں۔"
+        }
+      ]
+    },
+    {
+      "rule_id": "اسم-کی-اقسام",
+      "topic": "اسم کی اقسام",
+      "title": "Noun Genders in Urdu",
+      "explanation": "In Urdu, every noun has a gender (masculine or feminine). Adjectives and verbs must agree with the gender of the noun. A common mistake is using a masculine adjective with a feminine noun or vice versa.",
+      "examples": [
+        {
+          "wrong": "یہ کتاب اچھا ہے۔",
+          "right": "یہ کتاب اچھی ہے۔",
+          "note": "کتاب (book) is feminine, so the adjective اچھا (good) must become اچھی."
+        },
+        {
+          "wrong": "وہ لڑکا بڑی ہے۔",
+          "right": "وہ لڑکا بڑا ہے۔",
+          "note": "لڑکا (boy) is masculine, so the adjective بڑی (big) must become بڑا."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the adjective in this Urdu sentence: 'یہ میز بڑا ہے.'",
+          "answer": "بڑی"
+        },
+        {
+          "prompt": "Correct the adjective in this Urdu sentence: 'یہ لڑکی لمبا ہے.'",
+          "answer": "لمبی"
+        }
+      ]
+    },
+    {
+      "rule_id": "حرکات-کی-ادائیگی",
+      "topic": "حرکات کی ادائیگی",
+      "title": "Pronouncing Urdu Short Vowels (Harakat) Correctly",
+      "explanation": "A common mistake among learners is ignoring or mixing up the three short vowels – zabar (a), zer (i), and pesh (u). These vowels are crucial for meaning; changing one can turn a word into a completely different one. Always pronounce them clearly, especially at the beginning and end of syllables.",
+      "examples": [
+        {
+          "wrong": "بَل",
+          "right": "بِل",
+          "note": "The first word uses zabar (a) but should use zer (i) to mean 'bill' – 'bal' means 'strength'."
+        },
+        {
+          "wrong": "پَل",
+          "right": "پُل",
+          "note": "The first word uses zabar (a) but should use pesh (u) to mean 'bridge' – 'pal' means 'moment'."
+        },
+        {
+          "wrong": "دَل",
+          "right": "دِل",
+          "note": "Zabar vs zer changes the meaning from 'group' (dal) to 'heart' (dil)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the Urdu word for 'book' with the correct short vowel on the first letter.",
+          "answer": "کِتاب"
+        },
+        {
+          "prompt": "Write the Urdu word for 'house' with the correct short vowel on the first letter.",
+          "answer": "گھَر"
+        },
+        {
+          "prompt": "Write the Urdu word for 'bridge' with the correct short vowel on the first letter.",
+          "answer": "پُل"
+        }
+      ]
+    },
+    {
+      "rule_id": "تشدید",
+      "topic": "تشدید",
+      "title": "Understanding Tasdeed (تشدید) – Doubling Consonants in Urdu",
+      "explanation": "Tasdeed (تشدید) is a small diacritic mark (ـّ) placed over a letter to show that the consonant is doubled (emphasized). Missing or misplacing tasdeed can completely change the meaning of a word. For example, without tasdeed, 'لرکا' is incorrect, but with it, 'لڑکا' means 'boy'.",
+      "examples": [
+        {
+          "wrong": "لرکا",
+          "right": "لڑکا",
+          "note": "The word for 'boy' requires a doubled 'r' sound, indicated by tasdeed on ray."
+        },
+        {
+          "wrong": "لرکی",
+          "right": "لڑکی",
+          "note": "Similarly, 'girl' has a doubled 'r' – without tasdeed it is not a valid word."
+        },
+        {
+          "wrong": "گھنتی",
+          "right": "گھنٹی",
+          "note": "The word for 'bell' has a doubled noon (نّ) – missing tasdeed changes the pronunciation and spelling."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the correct Urdu word for 'boy' with the proper tasdeed.",
+          "answer": "لڑکا"
+        },
+        {
+          "prompt": "The spelling 'لرکی' is missing a tasdeed. Write the correct word for 'girl'.",
+          "answer": "لڑکی"
+        },
+        {
+          "prompt": "Correct the following spelling by adding the missing tasdeed: 'گھنتی' (meaning 'bell').",
+          "answer": "گھنٹی"
+        }
+      ]
+    },
+    {
+      "rule_id": "لہجہ",
+      "topic": "لہجہ",
+      "title": "Mastering the Accent: Distinguishing Similar Sounds in Urdu (لہجہ)",
+      "explanation": "A common mistake for English learners is confusing Urdu letters that sound similar but have distinct pronunciations, such as 'ق' (qaf) vs 'ک' (kaf) or 'ع' (ain) vs 'ا' (alif). These differences affect the meaning and natural flow of words. Pay attention to the deep, guttural 'q' and the soft throat sound of 'ain'.",
+      "examples": [
+        {
+          "wrong": "کلم",
+          "right": "قلم",
+          "note": "Use the deep 'q' sound from the back of the throat, not the 'k'."
+        },
+        {
+          "wrong": "آلی",
+          "right": "علی",
+          "note": "The 'ain' is a voiced pharyngeal sound, not a simple vowel."
+        },
+        {
+          "wrong": "سبر",
+          "right": "صبر",
+          "note": "The 'ص' is an emphatic 's' with a heavier, deeper sound."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the correct Urdu spelling for the word meaning 'pen' (using ق).",
+          "answer": "قلم"
+        },
+        {
+          "prompt": "Which letter is used in the name 'Ali' - ع or ا? Write the correct name.",
+          "answer": "علی"
+        },
+        {
+          "prompt": "Choose the correct word for 'morning' - صبح or سُبح? Write the correct one.",
+          "answer": "صبح"
+        }
+      ]
+    },
+    {
+      "rule_id": "noun-gender-agreement-with-adjectives",
+      "topic": "Noun gender agreement with adjectives",
+      "title": "Noun Gender Agreement with Adjectives",
+      "explanation": "In Urdu, adjectives must match the gender of the noun they describe. For singular nouns, masculine adjectives typically end in 'a' (e.g., bara, chota), while feminine adjectives end in 'i' (e.g., bari, choti). A common mistake is using the wrong adjective ending for the noun's gender.",
+      "examples": [
+        {
+          "wrong": "یہ کتاب اچھا ہے۔",
+          "right": "یہ کتاب اچھی ہے۔",
+          "note": "'کتاب' (kitaab) is feminine, so the adjective must be 'اچھی' (acchi), not 'اچھا' (accha)."
+        },
+        {
+          "wrong": "وہ گھر چھوٹی ہے۔",
+          "right": "وہ گھر چھوٹا ہے۔",
+          "note": "'گھر' (ghar) is masculine, so the adjective must be 'چھوٹا' (chota), not 'چھوٹی' (choti)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the adjective: 'یہ لڑکی لمبا ہے۔' (This girl is tall.)",
+          "answer": "یہ لڑکی لمبی ہے۔"
+        },
+        {
+          "prompt": "Fill in the blank with the correct adjective: 'وہ ________ (big) آدمی ہے۔' (That man is big.)",
+          "answer": "وہ بڑا آدمی ہے۔"
+        }
+      ]
+    },
+    {
+      "rule_id": "verb-subject-agreement-singularplural",
+      "topic": "Verb-subject agreement singular/plural",
+      "title": "Verb-Subject Agreement: Singular vs. Plural",
+      "explanation": "In Urdu, the verb must agree with the subject in number (and gender). A common mistake is using a singular verb with a plural subject. For present tense, singular subjects take singular verb forms (e.g., ہے, تا ہے) and plural subjects take plural forms (e.g., ہیں, تے ہیں). Always match the verb ending to the subject.",
+      "examples": [
+        {
+          "wrong": "لڑکے جاتا ہے۔",
+          "right": "لڑکے جاتے ہیں۔",
+          "note": "The subject 'لڑکے' (boys) is plural, so the verb must be plural 'جاتے ہیں' instead of singular 'جاتا ہے'."
+        },
+        {
+          "wrong": "وہ کتاب پڑھتا ہے۔",
+          "right": "وہ کتاب پڑھتے ہیں۔",
+          "note": "When 'وہ' means 'they' (plural), use 'پڑھتے ہیں' not 'پڑھتا ہے' (singular)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct verb form: 'بچے کھیلتا ہے / کھیلتے ہیں'? (Children play.)",
+          "answer": "بچے کھیلتے ہیں۔"
+        },
+        {
+          "prompt": "Correct this sentence: 'عورت گاتا ہے۔' (The woman sings.)",
+          "answer": "عورت گاتی ہے۔"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-ne-in-past-transitive-verbs",
+      "topic": "Use of ne in past transitive verbs",
+      "title": "Using 'ne' with Past Transitive Verbs",
+      "explanation": "In Urdu, when a verb is transitive (takes a direct object) and is in the past tense, the subject must be marked with the postposition 'ne'. English speakers often omit this particle. For example, 'I ate' becomes 'میں نے کھایا', not 'میں کھایا'. Intransitive verbs (e.g., 'go', 'come') do not use 'ne'.",
+      "examples": [
+        {
+          "wrong": "میں کھانا کھایا۔",
+          "right": "میں نے کھانا کھایا۔",
+          "note": "The verb 'to eat' is transitive; the subject needs 'ne'."
+        },
+        {
+          "wrong": "وہ کتاب پڑھی۔",
+          "right": "اُس نے کتاب پڑھی۔",
+          "note": "Use 'ne' with the subject 'us' (he/she) for past transitive verbs."
+        },
+        {
+          "wrong": "ہم خط لکھا۔",
+          "right": "ہم نے خط لکھا۔",
+          "note": "Plural subjects also require 'ne' with transitive verbs in the past."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I saw the house.'",
+          "answer": "میں نے گھر دیکھا۔"
+        },
+        {
+          "prompt": "Translate: 'She made tea.'",
+          "answer": "اُس نے چائے بنائی۔"
+        },
+        {
+          "prompt": "Translate: 'They bought a car.'",
+          "answer": "اُنہوں نے گاڑی خریدی۔"
+        }
+      ]
+    },
+    {
+      "rule_id": "direct-vs-oblique-case-usage",
+      "topic": "Direct vs oblique case usage",
+      "title": "Direct vs Oblique Case in Urdu",
+      "explanation": "In Urdu, nouns change form depending on their grammatical role. The direct case is used for the subject or direct object without a postposition. The oblique case is used before postpositions like 'ko' (to), 'se' (from/with), 'mein' (in), and 'ke/ki' (of). A common mistake is using the direct case instead of the oblique case before these postpositions.",
+      "examples": [
+        {
+          "wrong": "لڑکا کو کتاب دو۔",
+          "right": "لڑکے کو کتاب دو۔",
+          "note": "'لڑکا' (boy) is direct; before 'ko' it must become oblique 'لڑکے'."
+        },
+        {
+          "wrong": "وہ میرے بھائی کے ساتھ آیا۔",
+          "right": "وہ میرے بھائی کے ساتھ آیا۔",
+          "note": "This is correct; but note that 'بھائی' (brother) is oblique because of 'کے ساتھ'. A common error would be 'میرا بھائی کے ساتھ'."
+        },
+        {
+          "wrong": "استاد نے طالب علم کو پکارا۔",
+          "right": "استاد نے طالب علم کو پکارا۔",
+          "note": "'طالب علم' (student) is the same in direct and oblique for this masculine noun ending in consonant, but for feminine 'طالبہ' would become 'طالبہ' (same) or 'طالبہ کو'? Actually feminine often unchanged. Keep simple: use clear masculine example."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank: '_______ ko pani do.' (Give water to the boy.) Use the oblique case of 'لڑکا'.",
+          "answer": "لڑکے"
+        },
+        {
+          "prompt": "Fill in the blank: 'Yeh kitaab _______ ki hai.' (This book belongs to the teacher.) Use the oblique case of 'استاد'.",
+          "answer": "استاد"
+        },
+        {
+          "prompt": "Fill in the blank: 'Main _______ se mila.' (I met the girl.) Use the oblique case of 'لڑکی'.",
+          "answer": "لڑکی"
+        }
+      ]
+    },
+    {
+      "rule_id": "aap-vs-tum-vs-tu-formality",
+      "topic": "Aap vs tum vs tu formality",
+      "title": "Understanding 'Aap', 'Tum', and 'Tu' in Urdu",
+      "explanation": "In Urdu, the pronoun you changes based on formality and respect. 'Aap' (آپ) is the formal and polite form used for elders, strangers, or in professional settings. 'Tum' (تم) is informal, used with friends, peers, or those younger. 'Tu' (تو) is very intimate or even rude, typically used only with close family, children, or in poetry.",
+      "examples": [
+        {
+          "wrong": "تم کیسے ہیں؟",
+          "right": "آپ کیسے ہیں؟",
+          "note": "Use 'aap' when asking a boss or elder 'how are you?'"
+        },
+        {
+          "wrong": "آپ کہاں جا رہے ہو؟",
+          "right": "تم کہاں جا رہے ہو؟",
+          "note": "Use 'tum' with a close friend for 'where are you going?'"
+        },
+        {
+          "wrong": "تو یہ کرو گے؟",
+          "right": "تم یہ کرو گے؟",
+          "note": "Avoid 'tu' with an acquaintance; use 'tum' for 'will you do this?'"
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How would you politely ask a teacher 'What is your name?'",
+          "answer": "آپ کا نام کیا ہے؟"
+        },
+        {
+          "prompt": "How would you casually ask your friend 'Where are you going?'",
+          "answer": "تم کہاں جا رہے ہو؟"
+        },
+        {
+          "prompt": "If a child is misbehaving, how might a parent say 'You sit down' (using an intimate tone)?",
+          "answer": "تو بیٹھ جا۔"
+        }
+      ]
+    },
+    {
+      "rule_id": "compound-verbs-verb-combinations",
+      "topic": "Compound verbs verb combinations",
+      "title": "Common Mistakes with Compound Verbs: Pasand and Zaroorat",
+      "explanation": "In Urdu, words like 'pasand' (liking) and 'zaroorat' (need) are nouns that combine with the verb 'hona' (to be), not 'karna' (to do). A common mistake for English speakers is to use 'karna' as in 'I like' or 'I need'. Instead, use the structure 'mujhe ... hai' for 'I like/need'.",
+      "examples": [
+        {
+          "wrong": "میں اس کتاب کو پسند کرتا ہوں۔",
+          "right": "مجھے یہ کتاب پسند ہے۔",
+          "note": "Use 'hai' (from hona) with 'pasand', not 'karta hoon' (from karna)."
+        },
+        {
+          "wrong": "میں مدد ضرورت کرتا ہوں۔",
+          "right": "مجھے مدد کی ضرورت ہے۔",
+          "note": "'Zaroorat' requires the possessive 'ki' and the verb 'hai' (hona)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I like this movie.'",
+          "answer": "مجھے یہ فلم پسند ہے۔"
+        },
+        {
+          "prompt": "Translate: 'Do you need water?'",
+          "answer": "کیا آپ کو پانی کی ضرورت ہے؟"
+        }
+      ]
+    },
+    {
+      "rule_id": "ka-vs-ki-vs-ke-possessive",
+      "topic": "Ka vs ki vs ke possessive",
+      "title": "Ka vs Ki vs Ke: Possessive in Urdu",
+      "explanation": "In Urdu, the possessive particle (ka/ki/ke) must agree with the gender and number of the thing being possessed, not the owner. Use 'ka' for masculine singular nouns, 'ki' for feminine nouns (singular or plural), and 'ke' for masculine plural nouns. This is a common mistake for English speakers because English uses a fixed 'apostrophe s'.",
+      "examples": [
+        {
+          "wrong": "احمد کا کتاب",
+          "right": "احمد کی کتاب",
+          "note": "'کتاب' (book) is feminine, so we use 'کی' not 'کا'."
+        },
+        {
+          "wrong": "لڑکی کا گھر",
+          "right": "لڑکی کا گھر",
+          "note": "This is correct – 'گھر' (house) is masculine singular, so 'کا' is fine. But a common mistake is to use 'کی' here."
+        },
+        {
+          "wrong": "استاد کی گھر",
+          "right": "استاد کے گھر",
+          "note": "'گھر' is plural here (houses) and masculine, so 'کے' is needed. 'کی' is for feminine possessed nouns."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank: 'بچہ ______ کھلونا' (the child's toy – toy is masculine singular).",
+          "answer": "کا"
+        },
+        {
+          "prompt": "Fill in the blank: 'ماں ______ محبت' (mother's love – love is feminine).",
+          "answer": "کی"
+        },
+        {
+          "prompt": "Fill in the blank: 'لڑکے ______ دوست' (the boys' friends – friends is masculine plural).",
+          "answer": "کے"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-bhi-vs-hi",
+      "topic": "Use of bhi vs hi",
+      "title": "Common Mistake: 'bhi' vs 'hi'",
+      "explanation": "In Urdu, 'bhi' means 'also' or 'too' (adds something), while 'hi' means 'only', 'just', or is used for emphasis (limits or highlights). A frequent mistake is using 'bhi' when you need to emphasize that someone/something is the sole one, or using 'hi' when you mean 'also'. Remember: 'bhi' includes, 'hi' excludes or stresses.",
+      "examples": [
+        {
+          "wrong": "وہ بھی آیا ہے۔",
+          "right": "وہ ہی آیا ہے۔",
+          "note": "Use 'hi' to mean 'He is the one who came' (emphasis), not 'also'."
+        },
+        {
+          "wrong": "میں ہی کھانا کھاؤں گا۔",
+          "right": "میں بھی کھانا کھاؤں گا۔",
+          "note": "Use 'bhi' to mean 'I will also eat', not 'only I will eat'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate to Urdu: 'She also went to the market.'",
+          "answer": "وہ بھی بازار گئی۔"
+        },
+        {
+          "prompt": "Translate to Urdu: 'This is exactly what I wanted.' (emphasis)",
+          "answer": "یہ ہی میں چاہتا تھا۔"
+        }
+      ]
+    },
+    {
+      "rule_id": "plural-formation-of-nouns",
+      "topic": "Plural formation of nouns",
+      "title": "Plural Formation of Urdu Nouns",
+      "explanation": "In Urdu, nouns do not become plural by simply adding 's' or 'es' as in English. Instead, most masculine nouns form plurals by adding ے (e.g., لڑکا → لڑکے) and feminine nouns often add ں or ین (e.g., لڑکی → لڑکیاں). Some nouns have irregular or broken plurals. Avoid directly translating English plural rules into Urdu.",
+      "examples": [
+        {
+          "wrong": "کتابیں",
+          "right": "کتابیں",
+          "note": "Wait, this is actually correct for feminine plural? Let me correct: The common mistake is using English pattern. For example, wrong: لڑکوs (larkos) correct: لڑکے (larke). I'll use a better example."
+        },
+        {
+          "wrong": "لڑکوs",
+          "right": "لڑکے",
+          "note": "Adding 's' to a masculine noun like 'لڑکا' (boy) is wrong; the correct plural is 'لڑکے' (boys)."
+        },
+        {
+          "wrong": "عورتs",
+          "right": "عورتیں",
+          "note": "For feminine nouns like 'عورت' (woman), the plural is 'عورتیں' (women), not by adding 's'."
+        },
+        {
+          "wrong": "بچہs",
+          "right": "بچے",
+          "note": "'بچہ' (child) becomes 'بچے' (children); the suffix -ے is used, not -s."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you write the plural of 'استاد' (teacher, masculine)?",
+          "answer": "اساتذہ"
+        },
+        {
+          "prompt": "Convert 'فلم' (film, feminine) to its plural form.",
+          "answer": "فلمیں"
+        },
+        {
+          "prompt": "What is the correct plural of 'مرد' (man)?",
+          "answer": "مرد"
+        }
+      ]
+    },
+    {
+      "rule_id": "conditional-sentences-agarto",
+      "topic": "Conditional sentences agar/to",
+      "title": "Conditional Sentences with Agar/To",
+      "explanation": "In Urdu, 'agar' means 'if' and starts the condition clause. The word 'to' (meaning 'then') is optional in the result clause, but it should never appear immediately after 'agar'. A common mistake is inserting 'to' after 'agar', which is incorrect.",
+      "examples": [
+        {
+          "wrong": "Agar to barish hoti hai, to main ghar rehta hoon.",
+          "right": "Agar barish hoti hai, to main ghar rehta hoon.",
+          "note": "Remove 'to' after 'agar' – it is not part of the condition."
+        },
+        {
+          "wrong": "Agar to aap aayein, main khush hoonga.",
+          "right": "Agar aap aayein, to main khush hoonga.",
+          "note": "'To' can appear in the result clause, but never right after 'agar'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'If you study, you will pass.'",
+          "answer": "Agar aap parhte hain, to aap kamyab ho jayenge."
+        },
+        {
+          "prompt": "Correct the mistake: 'Agar to woh jayega, to hum bhi jayenge.'",
+          "answer": "Agar woh jayega, to hum bhi jayenge."
+        }
+      ]
+    },
+    {
+      "rule_id": "relative-pronouns-jo-jis-jin",
+      "topic": "Relative pronouns jo jis jin",
+      "title": "Relative Pronouns: Jo, Jis, Jin",
+      "explanation": "Urdu relative pronouns change form depending on number and case. Use 'jo' for direct case (subject or direct object) in both singular and plural. Use 'jis' for singular oblique (after postpositions like 'ne', 'ko', 'se', 'mein') and 'jin' for plural oblique. A common mistake is using 'jo' in all situations, ignoring the oblique forms.",
+      "examples": [
+        {
+          "wrong": "یہ وہ آدمی ہے جو نے مجھے کتاب دی۔",
+          "right": "یہ وہ آدمی ہے جس نے مجھے کتاب دی۔",
+          "note": "After the postposition 'ne', use the oblique singular 'jis' instead of 'jo'."
+        },
+        {
+          "wrong": "وہ لوگ جو نے یہ کام کیا۔",
+          "right": "وہ لوگ جن نے یہ کام کیا۔",
+          "note": "For plural oblique (with 'ne'), use 'jin'."
+        },
+        {
+          "wrong": "یہ وہ گھر ہے جو میں رہتا ہوں۔",
+          "right": "یہ وہ گھر ہے جس میں میں رہتا ہوں۔",
+          "note": "The postposition 'mein' requires the oblique form 'jis' for singular."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank with the correct relative pronoun (jo/jis/jin): 'یہ وہ قلم ہے _____ سے میں لکھتا ہوں۔'",
+          "answer": "جس"
+        },
+        {
+          "prompt": "Correct the mistake: 'وہ لڑکی جو کو میں نے دیکھا۔'",
+          "answer": "وہ لڑکی جس کو میں نے دیکھا۔"
+        },
+        {
+          "prompt": "Choose the correct form: 'یہ وہ کتابیں ہیں (جو / جن) کے بارے میں ہم نے بات کی۔'",
+          "answer": "جن"
+        }
+      ]
+    },
+    {
+      "rule_id": "word-order-with-negation-nahi",
+      "topic": "Word order with negation nahi",
+      "title": "Position of 'Nahi' in Negative Sentences",
+      "explanation": "In Urdu, the negation word 'nahi' (not) is placed immediately before the main verb, not at the end of the sentence like in English. A common mistake is translating English word order directly, resulting in phrases like 'Main jaata hoon nahi'. Instead, the correct structure is 'Main nahi jaata' (I do not go). Remember: 'nahi' always comes just before the verb, even if the verb is compound.",
+      "examples": [
+        {
+          "wrong": "وہ کھانا کھاتا ہے نہیں۔",
+          "right": "وہ کھانا نہیں کھاتا۔",
+          "note": "The wrong example has 'nahi' at the end; the correct sentence places 'nahi' before the verb 'khaata'."
+        },
+        {
+          "wrong": "میں کتاب پڑھ رہا ہوں نہیں۔",
+          "right": "میں کتاب نہیں پڑھ رہا۔",
+          "note": "In compound tenses, 'nahi' comes before the main verb 'parh' (read), not after the auxiliary 'hoon'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct this sentence: 'وہ کل آئے گا نہیں۔' (He will not come tomorrow).",
+          "answer": "وہ کل نہیں آئے گا۔"
+        },
+        {
+          "prompt": "Translate to Urdu using correct word order: 'I do not like tea.'",
+          "answer": "مجھے چائے نہیں پسند ہے۔"
+        }
+      ]
+    },
+    {
+      "rule_id": "present-vs-past-participles-as-adjectives",
+      "topic": "Present vs past participles as adjectives",
+      "title": "Present vs Past Participles as Adjectives",
+      "explanation": "In Urdu, present participles (like 'khulta' – opening) describe ongoing actions, while past participles (like 'khula' – open) describe completed states. A common mistake is using the present participle when the past participle is needed for a resulting condition. For fixed states, always use the past participle.",
+      "examples": [
+        {
+          "wrong": "مَیں نے خُلْتا دروازہ دیکھا",
+          "right": "مَیں نے خُلا دروازہ دیکھا",
+          "note": "'Khulta darwaza' means 'opening door' (action in progress), but 'khula darwaza' means 'open door' (resultant state). Use past participle for the completed state."
+        },
+        {
+          "wrong": "یہ جَلْتا گھر ہے",
+          "right": "یہ جَلا گھر ہے",
+          "note": "'Jalta ghar' means 'burning house' (on fire now), while 'jala ghar' means 'burnt house' (after fire). Use past participle to describe the result."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate into Urdu: 'the broken glass' (use the correct participle for 'broken' meaning shattered).",
+          "answer": "ٹوٹا ہوا شیشہ"
+        },
+        {
+          "prompt": "Fill in the blank with the correct participle: 'یہ ___ (written) کتاب ہے۔'",
+          "answer": "لکھی ہوئی"
+        },
+        {
+          "prompt": "Correct the mistake: 'وہ پَھٹتا کرتا پہنے ہوئے ہے۔' (He is wearing a torn shirt.)",
+          "answer": "وہ پَھٹا کرتا پہنے ہوئے ہے۔"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-ho-vs-hai-in-present-tense",
+      "topic": "Use of ho vs hai in present tense",
+      "title": "Mastering 'ho' vs 'hai' in Urdu Present Tense",
+      "explanation": "In Urdu, 'hai' (ہے) is used with singular third-person subjects like 'yeh' (this) and 'woh' (that/he/she). 'Ho' (ہو) is used with the informal 'you' plural form 'tum' (you). Avoid using 'ho' for third-person singular; use 'hai' instead.",
+      "examples": [
+        {
+          "wrong": "وہ ہو",
+          "right": "وہ ہے",
+          "note": "'Woh' (he/she/it) requires 'hai', not 'ho'."
+        },
+        {
+          "wrong": "تم ہے",
+          "right": "تم ہو",
+          "note": "'Tum' (you informal) requires 'ho', not 'hai'."
+        },
+        {
+          "wrong": "یہ ہو",
+          "right": "یہ ہے",
+          "note": "For 'yeh' (this), use 'hai'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'He is a doctor.'",
+          "answer": "وہ ڈاکٹر ہے۔"
+        },
+        {
+          "prompt": "Translate: 'You (informal) are my brother.'",
+          "answer": "تم میرے بھائی ہو۔"
+        },
+        {
+          "prompt": "Translate: 'This is a pen.'",
+          "answer": "یہ قلم ہے۔"
+        }
+      ]
+    },
+    {
+      "rule_id": "transitive-vs-intransitive-verb-forms",
+      "topic": "Transitive vs intransitive verb forms",
+      "title": "Transitive vs Intransitive Verbs in Urdu",
+      "explanation": "In Urdu, transitive verbs (like 'kholna' - to open something) require a direct object and the subject takes 'ne'. Intransitive verbs (like 'khulna' - to open by itself) do not take an object and the subject is in the nominative case. A common mistake is using the intransitive form when a transitive action is meant, or vice versa.",
+      "examples": [
+        {
+          "wrong": "Maine darwaza khula.",
+          "right": "Maine darwaza khola.",
+          "note": "'Khulna' is intransitive (door opens itself), 'kholna' is transitive (someone opens it)."
+        },
+        {
+          "wrong": "Usne ghar jal gaya.",
+          "right": "Usne ghar jalaya.",
+          "note": "'Jalna' is intransitive (burn), 'jalana' is transitive (set on fire)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'The door opened by itself' using the intransitive verb.",
+          "answer": "Darwaza khula."
+        },
+        {
+          "prompt": "Translate 'I opened the door' using the transitive verb.",
+          "answer": "Maine darwaza khola."
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciation-of-retroflex-vs-dental-consonants",
+      "topic": "Pronunciation of retroflex vs dental consonants",
+      "title": "Retroflex vs Dental Consonants in Urdu",
+      "explanation": "Urdu has two sets of ‘t’, ‘d’, and ‘r’ sounds: dental (tongue touches teeth, as in English) and retroflex (tongue curls back to the roof of the mouth). Mixing them changes the word meaning. Practice curling your tongue for retroflex letters: ٹ, ڈ, ڑ.",
+      "examples": [
+        {
+          "wrong": "تال",
+          "right": "ٹال",
+          "note": "Using dental 'ت' instead of retroflex 'ٹ' changes 'tāl' (rhythm) to the intended 'ṭāl' (postpone)."
+        },
+        {
+          "wrong": "دال",
+          "right": "ڈال",
+          "note": "Using dental 'د' instead of retroflex 'ڈ' changes 'dāl' (lentils) to the intended 'ḍāl' (put)."
+        },
+        {
+          "wrong": "برا",
+          "right": "بڑا",
+          "note": "Using dental 'ر' instead of retroflex 'ڑ' changes 'burā' (bad) to the intended 'baṛā' (big)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Which consonant (retroflex or dental) should start the Urdu word for 'postpone'? Write the correct word in Urdu.",
+          "answer": "ٹال"
+        },
+        {
+          "prompt": "The word for 'big' is often misspelled as 'برا'. Write the correct retroflex version.",
+          "answer": "بڑا"
+        },
+        {
+          "prompt": "You hear the word meaning 'put' – should you use dental 'د' or retroflex 'ڈ'? Write the correct word.",
+          "answer": "ڈال"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-ko-as-object-marker",
+      "topic": "Use of ko as object marker",
+      "title": "Using 'ko' as an Object Marker in Urdu",
+      "explanation": "In Urdu, 'ko' is attached to the direct object to indicate that it is specific or definite—often required with people, names, or specific items. A common mistake is omitting 'ko' where it is needed or using it with indefinite objects. Remember: if the object is a person, a name, or a definite thing (e.g., 'the book'), you must add 'ko'.",
+      "examples": [
+        {
+          "wrong": "میں کتاب پڑھتا ہوں",
+          "right": "میں کتاب کو پڑھتا ہوں",
+          "note": "The object 'book' is specific, so 'ko' is needed. Without 'ko', the sentence sounds like 'I read a book' (indefinite)."
+        },
+        {
+          "wrong": "وہ احمد دیکھتا ہے",
+          "right": "وہ احمد کو دیکھتا ہے",
+          "note": "Proper names (Ahmed) always require 'ko' as the object marker."
+        },
+        {
+          "wrong": "اس نے ایک لڑکی کو دیکھا",
+          "right": "اس نے ایک لڑکی دیکھی",
+          "note": "When the object is indefinite ('a girl'), do NOT use 'ko'. Here 'ko' is wrong because it's not specific."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'I see the teacher' in Urdu?",
+          "answer": "میں استاد کو دیکھتا ہوں"
+        },
+        {
+          "prompt": "Correct this sentence: 'وہ پانی پیتا ہے' if the water is specific (the water).",
+          "answer": "وہ پانی کو پیتا ہے"
+        },
+        {
+          "prompt": "Translate: 'She bought a book' (indefinite, no 'ko').",
+          "answer": "اس نے ایک کتاب خریدی"
+        }
+      ]
+    },
+    {
+      "rule_id": "infinitive-vs-imperative-mood",
+      "topic": "Infinitive vs imperative mood",
+      "title": "Infinitive vs Imperative in Urdu",
+      "explanation": "In Urdu, the infinitive form of a verb ends with نا (na) and means \"to do\" something (e.g., کرنا = to do). The imperative mood is a command or request and removes the نا ending (e.g., کر = do!). A common mistake is using the infinitive when a command is needed.",
+      "examples": [
+        {
+          "wrong": "آپ یہ کام کرنا۔",
+          "right": "آپ یہ کام کریں۔",
+          "note": "\"کرنا\" is the infinitive (to do); use the imperative \"کریں\" (do, polite) for a command."
+        },
+        {
+          "wrong": "وہاں بیٹھنا۔",
+          "right": "وہاں بیٹھو۔",
+          "note": "\"بیٹھنا\" means \"to sit\"; \"بیٹھو\" is the imperative (sit! - informal)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you command someone (informal) to 'eat'? (infinitive: کھانا)",
+          "answer": "کھا"
+        },
+        {
+          "prompt": "How do you politely ask someone to 'come'? (infinitive: آنا)",
+          "answer": "آئیے"
+        }
+      ]
+    }
+  ]
+}

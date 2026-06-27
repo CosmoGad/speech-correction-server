@@ -1,0 +1,105 @@
+{
+  "learning": "sk",
+  "topics": [
+    {
+      "rule_id": "cases",
+      "title": "Cases"
+    },
+    {
+      "rule_id": "verb-aspect",
+      "title": "Verb aspect"
+    },
+    {
+      "rule_id": "word-order",
+      "title": "Word order"
+    },
+    {
+      "rule_id": "diacritics",
+      "title": "Diacritics"
+    },
+    {
+      "rule_id": "vowel-length",
+      "title": "Vowel length"
+    },
+    {
+      "rule_id": "äô-sounds",
+      "title": "ä/ô sounds"
+    },
+    {
+      "rule_id": "soft-consonants",
+      "title": "Soft consonants"
+    },
+    {
+      "rule_id": "gender-agreement-of-adjectives",
+      "title": "Gender agreement of adjectives"
+    },
+    {
+      "rule_id": "declension-of-numerals-1-4",
+      "title": "Declension of numerals 1-4"
+    },
+    {
+      "rule_id": "reflexive-pronoun-placement",
+      "title": "Reflexive pronoun placement"
+    },
+    {
+      "rule_id": "conditional-mood-with-by",
+      "title": "Conditional mood with 'by'"
+    },
+    {
+      "rule_id": "imperative-verb-formation",
+      "title": "Imperative verb formation"
+    },
+    {
+      "rule_id": "comparative-and-superlative-adjectives",
+      "title": "Comparative and superlative adjectives"
+    },
+    {
+      "rule_id": "possessive-pronoun-declension",
+      "title": "Possessive pronoun declension"
+    },
+    {
+      "rule_id": "double-negation-usage",
+      "title": "Double negation usage"
+    },
+    {
+      "rule_id": "past-tense-auxiliary-byť",
+      "title": "Past tense auxiliary 'byť'"
+    },
+    {
+      "rule_id": "motion-verbs-and-prefixes",
+      "title": "Motion verbs and prefixes"
+    },
+    {
+      "rule_id": "verbal-nouns-formation",
+      "title": "Verbal nouns formation"
+    },
+    {
+      "rule_id": "word-stress-on-first-syllable",
+      "title": "Word stress on first syllable"
+    },
+    {
+      "rule_id": "pronunciation-ch-vs-h",
+      "title": "Pronunciation 'ch' vs 'h'"
+    },
+    {
+      "rule_id": "pronunciation-dz-and-dž",
+      "title": "Pronunciation 'dz' and 'dž'"
+    },
+    {
+      "rule_id": "relative-pronouns-čo-vs-ktorý",
+      "title": "Relative pronouns 'čo' vs 'ktorý'"
+    },
+    {
+      "rule_id": "subject-verb-agreement-je-vs-sú",
+      "title": "Subject-verb agreement 'je' vs 'sú'"
+    },
+    {
+      "rule_id": "use-of-prepositions-do-vs-na",
+      "title": "Use of prepositions 'do' vs 'na'"
+    },
+    {
+      "rule_id": "future-tense-with-budem",
+      "title": "Future tense with 'budem'"
+    }
+  ]
+}

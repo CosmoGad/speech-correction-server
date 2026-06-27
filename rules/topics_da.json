@@ -1,0 +1,177 @@
+{
+  "learning": "da",
+  "topics": [
+    {
+      "rule_id": "artikler",
+      "title": "Artikler"
+    },
+    {
+      "rule_id": "tider",
+      "title": "Tider"
+    },
+    {
+      "rule_id": "præpositioner",
+      "title": "Præpositioner"
+    },
+    {
+      "rule_id": "udsagnsordets-form",
+      "title": "Udsagnsordets form"
+    },
+    {
+      "rule_id": "stød",
+      "title": "Stød"
+    },
+    {
+      "rule_id": "udtale-af-vokaler",
+      "title": "Udtale af vokaler"
+    },
+    {
+      "rule_id": "intonation",
+      "title": "Intonation"
+    },
+    {
+      "rule_id": "word-order-after-adverbs",
+      "title": "Word order after adverbs"
+    },
+    {
+      "rule_id": "main-vs-subordinate-clause-order",
+      "title": "Main vs subordinate clause order"
+    },
+    {
+      "rule_id": "modal-verb-usage-and-meaning",
+      "title": "Modal verb usage and meaning"
+    },
+    {
+      "rule_id": "adjective-gendernumber-agreement",
+      "title": "Adjective gender/number agreement"
+    },
+    {
+      "rule_id": "definite-vs-indefinite-adjective-endings",
+      "title": "Definite vs indefinite adjective endings"
+    },
+    {
+      "rule_id": "irregular-plural-noun-formation",
+      "title": "Irregular plural noun formation"
+    },
+    {
+      "rule_id": "possessive-pronouns-sinsitsine",
+      "title": "Possessive pronouns sin/sit/sine"
+    },
+    {
+      "rule_id": "reflexive-verbs-and-pronouns",
+      "title": "Reflexive verbs and pronouns"
+    },
+    {
+      "rule_id": "passive-voice-blive-vs-s",
+      "title": "Passive voice blive vs -s"
+    },
+    {
+      "rule_id": "relative-pronouns-der-vs-som",
+      "title": "Relative pronouns der vs som"
+    },
+    {
+      "rule_id": "conjunctions-og-men-for-så",
+      "title": "Conjunctions og men for så"
+    },
+    {
+      "rule_id": "question-formation-and-inversion",
+      "title": "Question formation and inversion"
+    },
+    {
+      "rule_id": "telling-time-halv-kvart",
+      "title": "Telling time halv kvart"
+    },
+    {
+      "rule_id": "cardinal-and-ordinal-numbers",
+      "title": "Cardinal and ordinal numbers"
+    },
+    {
+      "rule_id": "pronunciation-of-soft-d",
+      "title": "Pronunciation of soft d"
+    },
+    {
+      "rule_id": "pronunciation-of-uvular-r",
+      "title": "Pronunciation of uvular r"
+    },
+    {
+      "rule_id": "false-friends-false-cognates",
+      "title": "False friends false cognates"
+    },
+    {
+      "rule_id": "compound-word-formation-stress",
+      "title": "Compound word formation stress"
+    },
+    {
+      "rule_id": "double-definite-construction",
+      "title": "Double definite construction"
+    },
+    {
+      "rule_id": "expletive-subject-der-vs-det",
+      "title": "Expletive subject der vs det"
+    },
+    {
+      "rule_id": "indirect-question-word-order",
+      "title": "Indirect question word order"
+    },
+    {
+      "rule_id": "infinitive-at-vs-conjunction-at",
+      "title": "Infinitive at vs conjunction at"
+    },
+    {
+      "rule_id": "temporal-conjunctions-da-vs-når",
+      "title": "Temporal conjunctions da vs når"
+    },
+    {
+      "rule_id": "causal-conjunctions-fordi-vs-derfor",
+      "title": "Causal conjunctions fordi vs derfor"
+    },
+    {
+      "rule_id": "verb-pair-confusion-liggelægge",
+      "title": "Verb pair confusion ligge/lægge"
+    },
+    {
+      "rule_id": "auxiliary-verb-choice-in-perfect-tense",
+      "title": "Auxiliary verb choice in perfect tense"
+    },
+    {
+      "rule_id": "modal-particles-da-jo-dog",
+      "title": "Modal particles da jo dog"
+    },
+    {
+      "rule_id": "indefinite-pronouns-nogen-nogle",
+      "title": "Indefinite pronouns nogen nogle"
+    },
+    {
+      "rule_id": "quantifiers-mange-meget",
+      "title": "Quantifiers mange meget"
+    },
+    {
+      "rule_id": "demonstrative-pronouns-denne-den-det",
+      "title": "Demonstrative pronouns denne den det"
+    },
+    {
+      "rule_id": "interrogative-pronouns-hvad-hvilken",
+      "title": "Interrogative pronouns hvad hvilken"
+    },
+    {
+      "rule_id": "correlative-conjunctions-bådeog-enteneller",
+      "title": "Correlative conjunctions både...og enten...eller"
+    },
+    {
+      "rule_id": "conditional-conjunctions-om-vs-hvis",
+      "title": "Conditional conjunctions om vs hvis"
+    },
+    {
+      "rule_id": "time-expressions-siden-vs-for",
+      "title": "Time expressions siden vs for"
+    },
+    {
+      "rule_id": "adverbs-allerede-vs-endnu",
+      "title": "Adverbs allerede vs endnu"
+    },
+    {
+      "rule_id": "comparative-quantifiers-mere-vs-flere",
+      "title": "Comparative quantifiers mere vs flere"
+    }
+  ]
+}

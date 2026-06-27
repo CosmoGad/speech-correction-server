@@ -1,0 +1,901 @@
+{
+  "learning": "hr",
+  "interface": "en",
+  "generated_at": "2026-06-27T14:59:21.482354+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "cases",
+      "topic": "Cases",
+      "title": "Understanding Croatian Cases",
+      "explanation": "Croatian uses seven grammatical cases (nominative, genitive, dative, accusative, vocative, locative, instrumental) that change noun endings based on their role in a sentence. Unlike English, which relies on word order, Croatian requires you to modify the noun itself. The most common beginner mistake is forgetting to change the ending from the nominative (dictionary) form when the noun is the object.",
+      "examples": [
+        {
+          "wrong": "Vidim kuća.",
+          "right": "Vidim kuću.",
+          "note": "'Kuća' (house) is the object, so it needs the accusative case ending '-u' instead of nominative '-a'."
+        },
+        {
+          "wrong": "Dajem knjiga Ivan.",
+          "right": "Dajem knjigu Ivanu.",
+          "note": "Both 'knjiga' (book) and 'Ivan' need case changes: book becomes accusative 'knjigu', Ivan becomes dative 'Ivanu'."
+        },
+        {
+          "wrong": "Idem u škola.",
+          "right": "Idem u školu.",
+          "note": "After prepositions like 'u' (into), the noun takes the accusative case for movement, so 'škola' becomes 'školu'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct accusative form: 'Gledam ___ (film).'",
+          "answer": "film"
+        },
+        {
+          "prompt": "Fill in the correct dative form: 'Dajem ___ (majka).'",
+          "answer": "majci"
+        },
+        {
+          "prompt": "Fill in the correct instrumental form: 'Pišem ___ (olovka).'",
+          "answer": "olovkom"
+        }
+      ]
+    },
+    {
+      "rule_id": "verb-aspect",
+      "topic": "Verb aspect",
+      "title": "Verb Aspect: Perfective vs Imperfective",
+      "explanation": "In Croatian, verbs have two aspects: imperfective (for ongoing, repeated, or habitual actions) and perfective (for completed, one-time actions). English speakers often confuse them because English doesn't mark this distinction on verbs. Think of imperfective as 'was doing' or 'does (habitually)', and perfective as 'did (and finished)'.",
+      "examples": [
+        {
+          "wrong": "Jučer sam čitao knjigu.",
+          "right": "Jučer sam pročitao knjigu.",
+          "note": "Use perfective 'pročitao' when you finished reading the whole book; imperfective 'čitao' means you were reading but may not have finished."
+        },
+        {
+          "wrong": "Svaki dan popijem kavu.",
+          "right": "Svaki dan pijem kavu.",
+          "note": "Habitual actions use imperfective 'pijem', not perfective 'popijem' which implies a single completed event."
+        },
+        {
+          "wrong": "Kad sam ušao, on je pojeo ručak.",
+          "right": "Kad sam ušao, on je jeo ručak.",
+          "note": "Use imperfective 'jeo' for an action in progress when another event occurred; perfective 'pojeo' means he had already finished eating."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'Yesterday I was writing a letter (but didn’t finish).'",
+          "answer": "Jučer sam pisao pismo."
+        },
+        {
+          "prompt": "Translate: 'Yesterday I wrote (and finished) a letter.'",
+          "answer": "Jučer sam napisao pismo."
+        },
+        {
+          "prompt": "Say 'Every morning I drink coffee' using the correct aspect.",
+          "answer": "Svako jutro pijem kavu."
+        }
+      ]
+    },
+    {
+      "rule_id": "word-order",
+      "topic": "Word order",
+      "title": "Word Order: Short Pronouns (Clitics)",
+      "explanation": "In Croatian, short object pronouns (like ga, ju, me, te) usually occupy the second position in a sentence, immediately after the first stressed word or phrase—not after the verb as in English. Placing them after the verb is a common mistake English speakers make.",
+      "examples": [
+        {
+          "wrong": "Ja vidim ga.",
+          "right": "Ja ga vidim.",
+          "note": "The pronoun 'ga' moves before the verb because it follows the first word 'Ja'."
+        },
+        {
+          "wrong": "On čita ju.",
+          "right": "On ju čita.",
+          "note": "Similarly, 'ju' comes before the verb, after the subject 'On'."
+        },
+        {
+          "wrong": "Gdje vidiš ga?",
+          "right": "Gdje ga vidiš?",
+          "note": "In questions, the pronoun still goes after the first word (Gdje), not after the verb."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the word order: Ja vidim ga.",
+          "answer": "Ja ga vidim."
+        },
+        {
+          "prompt": "Correct the word order: On čita ju.",
+          "answer": "On ju čita."
+        },
+        {
+          "prompt": "Correct the word order: Gdje vidiš ga?",
+          "answer": "Gdje ga vidiš?"
+        }
+      ]
+    },
+    {
+      "rule_id": "diacritics",
+      "topic": "Diacritics",
+      "title": "Don't Skip the Diacritics: Why č, ć, š, ž, đ Matter",
+      "explanation": "In Croatian, diacritics are not optional – they change the meaning of words. A common mistake is omitting them or confusing similar letters like č (hard ch) and ć (soft ch). Always use the correct diacritic to avoid misunderstandings, such as mixing up 'kuća' (house) with 'kuca' (he knocks).",
+      "examples": [
+        {
+          "wrong": "kuca",
+          "right": "kuća",
+          "note": "Without the diacritic, 'kuca' means 'he knocks'; with 'ć' it becomes 'house'."
+        },
+        {
+          "wrong": "sto",
+          "right": "što",
+          "note": "Omitting the caron on 's' changes the meaning from 'what' to 'hundred'."
+        },
+        {
+          "wrong": "zena",
+          "right": "žena",
+          "note": "Without the diacritic, 'zena' is not a word; 'žena' means 'woman'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the Croatian word for 'house' with correct diacritics.",
+          "answer": "kuća"
+        },
+        {
+          "prompt": "What is the correct spelling of 'what' in Croatian?",
+          "answer": "što"
+        },
+        {
+          "prompt": "Correct the misspelling: 'zena'.",
+          "answer": "žena"
+        }
+      ]
+    },
+    {
+      "rule_id": "čć-distinction",
+      "topic": "č/ć distinction",
+      "title": "č vs ć: The Hard and Soft 'ch'",
+      "explanation": "In Croatian, 'č' and 'ć' are two distinct sounds that change word meanings. 'č' is like the 'ch' in 'chat' (hard), while 'ć' is softer, like the 'ch' in 'cheese'. Pronouncing or writing them incorrectly is a common mistake for learners.",
+      "examples": [
+        {
+          "wrong": "kuča",
+          "right": "kuća",
+          "note": "'House' always uses 'ć', not 'č'."
+        },
+        {
+          "wrong": "prića",
+          "right": "priča",
+          "note": "'Story' is spelled with 'č', not 'ć'."
+        },
+        {
+          "wrong": "sreča",
+          "right": "sreća",
+          "note": "'Happiness' is written with 'ć'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complete the word for 'happiness': sre_a",
+          "answer": "sreća"
+        },
+        {
+          "prompt": "Complete the word for 'key': klju_",
+          "answer": "ključ"
+        },
+        {
+          "prompt": "Complete the word for 'story': pri_a",
+          "answer": "priča"
+        }
+      ]
+    },
+    {
+      "rule_id": "vowel-length",
+      "topic": "Vowel length",
+      "title": "Vowel Length in Croatian",
+      "explanation": "In Croatian, vowel length is phonemic: short and long vowels can change word meaning entirely. English speakers often overlook this distinction, leading to misunderstandings. Long vowels are marked with a diacritic (e.g., ȃ, ȗ) in dictionaries, but often omitted in writing. Learning minimal pairs helps master this feature.",
+      "examples": [
+        {
+          "wrong": "Kup je na stolu.",
+          "right": "Kȕp je na stolu.",
+          "note": "Short 'u' means 'cup'; long 'u' means 'heap'."
+        },
+        {
+          "wrong": "Imam jedan sat.",
+          "right": "Imam jedan sȃt.",
+          "note": "Short 'a' in 'sat' means 'hour'; long 'a' means 'clock/watch'."
+        },
+        {
+          "wrong": "Pada grad.",
+          "right": "Pada grȃd.",
+          "note": "Short 'a' in 'grad' means 'city'; long 'a' means 'hail'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate into Croatian: 'The cup is on the table.' (cup = short vowel)",
+          "answer": "Kȕp je na stolu."
+        },
+        {
+          "prompt": "Translate into Croatian: 'I have one clock.' (clock = long vowel)",
+          "answer": "Imam jedan sȃt."
+        },
+        {
+          "prompt": "Translate into Croatian: 'Hail is falling.' (hail = long vowel)",
+          "answer": "Pada grȃd."
+        }
+      ]
+    },
+    {
+      "rule_id": "pitch-accent",
+      "topic": "Pitch accent",
+      "title": "Pitch Accent in Croatian: Minimal Pairs",
+      "explanation": "Croatian uses pitch accent (rising or falling, long or short) to distinguish words that are otherwise spelled the same. English speakers often ignore these tonal differences, leading to misunderstandings. Focus on the length and pitch movement of the stressed syllable to avoid common errors.",
+      "examples": [
+        {
+          "wrong": "Imam pȃs.",
+          "right": "Imam pȁs.",
+          "note": "pȃs (long falling) means 'belt'; pȁs (short falling) means 'dog'."
+        },
+        {
+          "wrong": "Grȁd je velik.",
+          "right": "Grȃd je velik.",
+          "note": "grȁd (short falling) means 'hail'; grȃd (long falling) means 'city'."
+        },
+        {
+          "wrong": "Kȕp je na stolu.",
+          "right": "Kȗp je na stolu.",
+          "note": "kȕp (short falling) means 'heap'; kȗp (long falling) means 'cup'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "You hear 'Ovo je moj pȃs.' but you mean 'dog'. How should you say it?",
+          "answer": "Ovo je moj pȁs."
+        },
+        {
+          "prompt": "Rewrite 'Grad je star.' to mean 'The city is old.' instead of 'The hail is old.'",
+          "answer": "Grȃd je star."
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-verbs-with-se",
+      "topic": "Reflexive verbs with se",
+      "title": "Reflexive Verbs with 'se': Common Mistakes",
+      "explanation": "In Croatian, many verbs require the reflexive pronoun 'se' to indicate that the subject performs an action on itself. The pronoun 'se' always stays in the same form regardless of the subject, but it must be placed correctly after the verb or auxiliary. A frequent mistake is omitting 'se' entirely or using it in the wrong position.",
+      "examples": [
+        {
+          "wrong": "Ja zovem Ivan.",
+          "right": "Ja zovem se Ivan.",
+          "note": "The verb 'zvati se' (to be called) requires 'se' to mean 'I am called Ivan'. Without 'se', it means 'I am calling Ivan'."
+        },
+        {
+          "wrong": "On budi rano.",
+          "right": "On budi se rano.",
+          "note": "'Buditi se' means 'to wake up'. Without 'se' it would mean 'he wakes someone up', not himself."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'She washes herself' into Croatian using the verb 'umivati'.",
+          "answer": "Ona umiva se."
+        },
+        {
+          "prompt": "How do you say 'I am getting dressed' using the verb 'odijevati'?",
+          "answer": "Ja odijevam se."
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-possessive-svoj-usage",
+      "topic": "Reflexive possessive svoj usage",
+      "title": "Using the Reflexive Possessive 'svoj' Correctly",
+      "explanation": "In Croatian, when the possessor is the same as the subject of the sentence, you must use the reflexive possessive 'svoj' (my own, your own, his/her own, etc.) instead of the regular possessive like 'moj' (my) or 'njegov' (his). English often uses 'his', 'her', or 'their' regardless, which leads learners to incorrectly use 'njegov' or 'njezin' instead of 'svoj'. The key is to check whether the possessor is the subject of the verb.",
+      "examples": [
+        {
+          "wrong": "On je uzeo njegovu knjigu.",
+          "right": "On je uzeo svoju knjigu.",
+          "note": "Since 'on' is the subject and the book belongs to him, use 'svoju' (reflexive) not 'njegovu' (his)."
+        },
+        {
+          "wrong": "Marija voli njezinog psa.",
+          "right": "Marija voli svog psa.",
+          "note": "Marija is the subject and the dog is hers, so use 'svog' (from svoj) instead of 'njezinog'."
+        },
+        {
+          "wrong": "Vidjeli smo njihove roditelje.",
+          "right": "Vidjeli smo svoje roditelje.",
+          "note": "If 'we' (mi) are the subject and the parents belong to us, use 'svoje' not 'njihove'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank: 'Ivana je prodala _____ auto.' (her own car)",
+          "answer": "svoj"
+        },
+        {
+          "prompt": "Correct the mistake: 'Oni su došli sa njihovom djecom.'",
+          "answer": "Oni su došli sa svojom djecom."
+        },
+        {
+          "prompt": "Translate into Croatian: 'He lost his (own) wallet.'",
+          "answer": "Izgubio je svoj novčanik."
+        }
+      ]
+    },
+    {
+      "rule_id": "conjunctions-i-a-pa",
+      "topic": "Conjunctions i a pa",
+      "title": "Choosing Between 'i', 'a', and 'pa'",
+      "explanation": "'i' means 'and' for simple addition or listing. 'a' means 'and' but introduces a contrast or different information (like 'while' or 'as for'). 'pa' means 'and then' or 'so' for a sequence or cause-effect. Don't use 'i' when you need to show contrast or a natural sequence.",
+      "examples": [
+        {
+          "wrong": "Volim plivanje, i moj brat voli trčanje.",
+          "right": "Volim plivanje, a moj brat voli trčanje.",
+          "note": "'i' would imply both like swimming; 'a' shows contrast between two different preferences."
+        },
+        {
+          "wrong": "Ustao sam, i otišao u kuhinju.",
+          "right": "Ustao sam, pa otišao u kuhinju.",
+          "note": "'pa' shows sequence (first I got up, then went to kitchen), while 'i' just adds actions without order."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in: 'Ona je pametna, ____ on je marljiv.' (contrast: she is smart, while he is hardworking)",
+          "answer": "a"
+        },
+        {
+          "prompt": "Fill in: 'Sjeo sam, ____ počeo jesti.' (sequence: I sat down, then started eating)",
+          "answer": "pa"
+        },
+        {
+          "prompt": "Fill in: 'Kupio sam kruh ____ mlijeko.' (simple addition: bought bread and milk)",
+          "answer": "i"
+        }
+      ]
+    },
+    {
+      "rule_id": "impersonal-treba-vs-morati",
+      "topic": "Impersonal treba vs morati",
+      "title": "Impersonal 'treba' vs 'morati'",
+      "explanation": "In Croatian, 'treba' is an impersonal verb that only exists in the third person singular form. It means 'it is necessary' or 'one should' and is followed by 'da' + present tense or an infinitive. For personal obligations or needs (like 'I must'), you must use the conjugated forms of 'morati' (moram, moraš, mora, etc.). A common mistake is using 'trebati' as a personal verb (e.g., 'ja trebam'), which is incorrect in standard Croatian.",
+      "examples": [
+        {
+          "wrong": "Ja trebam završiti posao.",
+          "right": "Moram završiti posao.",
+          "note": "Use 'morati' for a personal obligation ('I must')."
+        },
+        {
+          "wrong": "Ti trebaš doći.",
+          "right": "Treba da dođeš.",
+          "note": "'Treba' stays impersonal; use 'da' + verb for 'you should'."
+        },
+        {
+          "wrong": "Oni trebaju učiti.",
+          "right": "Oni moraju učiti.",
+          "note": "For 'they must', conjugate 'morati' (moraju)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'I must study' in Croatian?",
+          "answer": "Moram učiti."
+        },
+        {
+          "prompt": "How do you say 'One should eat healthy' using 'treba'?",
+          "answer": "Treba jesti zdravo."
+        },
+        {
+          "prompt": "How do you say 'You (singular) must go home' in Croatian?",
+          "answer": "Moraš ići kući."
+        }
+      ]
+    },
+    {
+      "rule_id": "demonstrative-pronouns-ovo-to-ono",
+      "topic": "Demonstrative pronouns ovo to ono",
+      "title": "Demonstrative Pronouns: ovo, to, ono",
+      "explanation": "In Croatian, the demonstrative pronouns 'ovo' (this), 'to' (that), and 'ono' (that over there) are used for neuter gender nouns only. A common mistake is using them for masculine or feminine nouns. Remember: for masculine nouns use 'ovaj', 'taj', 'onaj'; for feminine use 'ova', 'ta', 'ona'; for neuter use 'ovo', 'to', 'ono'. Always match the pronoun to the gender of the noun.",
+      "examples": [
+        {
+          "wrong": "Ovo je stol.",
+          "right": "Ovaj je stol.",
+          "note": "'Stol' (table) is masculine, so use 'ovaj' not 'ovo'."
+        },
+        {
+          "wrong": "To je knjiga.",
+          "right": "Ta je knjiga.",
+          "note": "'Knjiga' (book) is feminine, so use 'ta' not 'to'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank with the correct demonstrative pronoun for 'this chair (stolica)' (feminine).",
+          "answer": "Ova"
+        },
+        {
+          "prompt": "Fill in the blank with the correct demonstrative pronoun for 'that dog (pas)' (masculine) that is close to you.",
+          "answer": "Taj"
+        }
+      ]
+    },
+    {
+      "rule_id": "soft-consonants-lj-nj-pronunciation",
+      "topic": "Soft consonants lj nj pronunciation",
+      "title": "Pronouncing Soft Consonants lj and nj",
+      "explanation": "In Croatian, the pairs \"lj\" and \"nj\" are not two separate sounds but single, soft consonants. They are pronounced like the \"lli\" in \"million\" (for lj) and the \"ny\" in \"canyon\" (for nj). Avoid splitting them into an L/J or N/J sound.",
+      "examples": [
+        {
+          "wrong": "ljeto",
+          "right": "ljeto",
+          "note": "Say \"lye-to\" like the 'lli' in 'billiard', not 'lee-eh-to'."
+        },
+        {
+          "wrong": "konj",
+          "right": "konj",
+          "note": "Say \"kony\" like 'canyon', not 'cone-ya'."
+        },
+        {
+          "wrong": "polje",
+          "right": "polje",
+          "note": "Say \"polye\" with a soft 'ly' sound, not 'pol-yeh'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you correctly pronounce the Croatian word for 'love'? (Write it in Croatian.)",
+          "answer": "ljubav"
+        },
+        {
+          "prompt": "Say the word for 'deer' in Croatian with the correct soft consonant.",
+          "answer": "jelena"
+        },
+        {
+          "prompt": "Pronounce the word 'field' in Croatian (it contains lj).",
+          "answer": "polje"
+        }
+      ]
+    },
+    {
+      "rule_id": "syllabic-r-pronunciation",
+      "topic": "Syllabic r pronunciation",
+      "title": "Mastering the Syllabic R in Croatian",
+      "explanation": "In Croatian, the letter 'r' can act as a vowel, forming its own syllable without any other vowel. This happens in words like 'vrt' (garden) and 'krk' (island). English speakers often mistakenly insert a vowel sound before or after the 'r', making it sound like 'vurt' or 'kerk'. Instead, you should pronounce the 'r' as a clear, rolled sound that sustains on its own.",
+      "examples": [
+        {
+          "wrong": "vurt",
+          "right": "vrt",
+          "note": "No 'u' before the 'r'; just roll the 'r' as the only vowel sound."
+        },
+        {
+          "wrong": "kerk",
+          "right": "krk",
+          "note": "Avoid adding an 'e' before the 'r'; the 'r' is the sole vowel here."
+        },
+        {
+          "wrong": "turg",
+          "right": "trg",
+          "note": "In 'trg' (square), pronounce the 'r' as a prolonged trill without any extra vowel."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'garden' in Croatian? Spell it correctly.",
+          "answer": "vrt"
+        },
+        {
+          "prompt": "Pronounce the Croatian word for 'square' (a town square). Write it as it should be spelled.",
+          "answer": "trg"
+        },
+        {
+          "prompt": "What is the correct spelling of the Croatian island name that sounds like 'kerk' but shouldn't have the 'e'?",
+          "answer": "krk"
+        }
+      ]
+    },
+    {
+      "rule_id": "auxiliary-verb-biti-forms",
+      "topic": "Auxiliary verb biti forms",
+      "title": "Correct Forms of the Auxiliary Verb 'biti'",
+      "explanation": "In Croatian, the auxiliary verb 'biti' (to be) must be conjugated in the present tense: sam, si, je, smo, ste, su. A common mistake is using the infinitive 'biti' instead of the correct conjugated form, or confusing 'je' (third person singular) with 'su' (third person plural). Always use the short form that matches the subject.",
+      "examples": [
+        {
+          "wrong": "Ja biti student.",
+          "right": "Ja sam student.",
+          "note": "Use 'sam' for first person singular, not the infinitive."
+        },
+        {
+          "wrong": "Oni je prijatelji.",
+          "right": "Oni su prijatelji.",
+          "note": "'Je' is for singular, 'su' for plural subjects."
+        },
+        {
+          "wrong": "Mi biti sretni.",
+          "right": "Mi smo sretni.",
+          "note": "'Smo' is used for first person plural."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct form of 'biti' for 'Ti (you singular) ___ gladan.'",
+          "answer": "si"
+        },
+        {
+          "prompt": "Correct the mistake: 'Ona su lijepa.'",
+          "answer": "Ona je lijepa."
+        },
+        {
+          "prompt": "Complete: 'Vi (you plural) ___ iz Hrvatske.'",
+          "answer": "ste"
+        }
+      ]
+    },
+    {
+      "rule_id": "number-agreement-2-4-vs-5",
+      "topic": "Number agreement 2-4 vs 5+",
+      "title": "Number Agreement: 2-4 vs 5+ in Croatian",
+      "explanation": "In Croatian, after numbers 2, 3, and 4 (and any number ending with them, except 11-14), nouns take the genitive singular form. After numbers 5 and above (including 0, numbers ending with 5-9 or 0, and 11-14), nouns take the genitive plural form. This rule applies regardless of gender, though for feminine and neuter nouns the genitive singular often looks like the nominative plural.",
+      "examples": [
+        {
+          "wrong": "dva psi",
+          "right": "dva psa",
+          "note": "\"Psi\" is nominative plural, but after 2 we need genitive singular (psa)."
+        },
+        {
+          "wrong": "pet psa",
+          "right": "pet pasa",
+          "note": "\"Psa\" is genitive singular, but after 5 we need genitive plural (pasa)."
+        },
+        {
+          "wrong": "tri stolovi",
+          "right": "tri stola",
+          "note": "\"Stolovi\" is nominative plural, but after 3 we use genitive singular (stola)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in: Vidim ___ (2, auto).",
+          "answer": "dva auta"
+        },
+        {
+          "prompt": "Fill in: Ona ima ___ (5, knjiga).",
+          "answer": "pet knjiga"
+        },
+        {
+          "prompt": "Fill in: Kupili smo ___ (4, stol).",
+          "answer": "četiri stola"
+        }
+      ]
+    },
+    {
+      "rule_id": "question-particle-li-placement",
+      "topic": "Question particle li placement",
+      "title": "Question Particle 'li' Placement",
+      "explanation": "In Croatian yes/no questions, the particle 'li' must directly follow the verb (or auxiliary verb), not the subject. A common mistake is to place 'li' after the subject as in English. Always put the verb first with 'li' attached.",
+      "examples": [
+        {
+          "wrong": "Ti li si student?",
+          "right": "Jesi li ti student?",
+          "note": "The auxiliary 'jesi' (are you) takes 'li', not the subject 'ti'."
+        },
+        {
+          "wrong": "On li je došao?",
+          "right": "Je li on došao?",
+          "note": "'Je' (is/has) is the auxiliary, so 'li' follows it directly."
+        },
+        {
+          "wrong": "Vi li volite čaj?",
+          "right": "Volite li vi čaj?",
+          "note": "The main verb 'volite' (you like) comes first with 'li'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate into Croatian: 'Are you from Split?' (using formal 'you')",
+          "answer": "Jeste li vi iz Splita?"
+        },
+        {
+          "prompt": "Turn 'She works here' into a yes/no question.",
+          "answer": "Radi li ona ovdje?"
+        },
+        {
+          "prompt": "Correct the mistake: 'Ana li je doma?'",
+          "answer": "Je li Ana doma?"
+        }
+      ]
+    },
+    {
+      "rule_id": "double-negation-rules",
+      "topic": "Double negation rules",
+      "title": "Double Negation in Croatian – It’s Required, Not a Mistake",
+      "explanation": "Unlike English, where double negatives cancel each other out, Croatian requires them. When the verb is negated (using 'ne' or a negative verb form), any accompanying indefinite words (like 'something', 'someone', 'ever') must also take their negative form ('ništa', 'nikoga', 'nikad'). Using a positive indefinite after a negation is a common error.",
+      "examples": [
+        {
+          "wrong": "Nemam išta.",
+          "right": "Nemam ništa.",
+          "note": "After a negated verb, use 'ništa' (nothing) instead of 'išta' (anything)."
+        },
+        {
+          "wrong": "Ne znam nekoga tu.",
+          "right": "Ne znam nikoga tu.",
+          "note": "After 'ne znam' (I don't know), use 'nikoga' (nobody) instead of 'nekoga' (somebody)."
+        },
+        {
+          "wrong": "Nikad neću ići tamo.",
+          "right": "Nikad neću ići tamo. (This is actually correct! But common mistake: 'Nikad ću ići tamo' without the verb negation.)",
+          "note": "When 'nikad' (never) is used, the verb must still be negated: 'neću' not 'ću'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I don't want anything.'",
+          "answer": "Ne želim ništa."
+        },
+        {
+          "prompt": "Correct this sentence: 'Ona nikad jede meso.' (She never eats meat.)",
+          "answer": "Ona nikad ne jede meso."
+        },
+        {
+          "prompt": "Fill in the blank: 'On _____ (nema / ima) nikakvih problema.' (He has no problems.)",
+          "answer": "nema"
+        }
+      ]
+    },
+    {
+      "rule_id": "comparative-and-superlative-adjectives",
+      "topic": "Comparative and superlative adjectives",
+      "title": "Comparative and Superlative Adjectives in Croatian",
+      "explanation": "In Croatian, comparatives are formed by adding the suffix -iji or -ji to the adjective stem, while superlatives add the prefix naj- to the comparative form. For example, 'velik' (big) becomes 'veći' (bigger) and 'najveći' (biggest). Some adjectives have irregular forms, such as 'dobar' (good) → 'bolji' (better) → 'najbolji' (best). Avoid using 'više' (more) and 'najviše' (most) with adjectives; these are used only with adverbs or nouns.",
+      "examples": [
+        {
+          "wrong": "On je više visok.",
+          "right": "On je viši.",
+          "note": "Do not use 'više' with adjectives; use the -iji/-ji suffix instead."
+        },
+        {
+          "wrong": "Ovo je najviše dobra knjiga.",
+          "right": "Ovo je najbolja knjiga.",
+          "note": "For irregular adjectives like 'dobar', use the special comparative/superlative forms (bolji, najbolji)."
+        },
+        {
+          "wrong": "Ona je više pametna od mene.",
+          "right": "Ona je pametnija od mene.",
+          "note": "Add the appropriate suffix: -iji for masculine, -ija for feminine, -ije for neuter."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complete the sentence: 'Moj auto je ____ (brz) od tvoga.' (My car is faster than yours.)",
+          "answer": "brži"
+        },
+        {
+          "prompt": "Translate: 'She is the smartest student.'",
+          "answer": "Ona je najpametnija učenica."
+        },
+        {
+          "prompt": "Fill in: 'Ovo je ____ (dobar) film koji sam gledao.' (This is the best movie I have seen.)",
+          "answer": "najbolji"
+        }
+      ]
+    },
+    {
+      "rule_id": "imperative-verb-commands",
+      "topic": "Imperative verb commands",
+      "title": "Imperative Verb Commands (Formal vs. Informal)",
+      "explanation": "In Croatian, the imperative mood has different forms for informal singular (ti), informal plural (vi), and formal (Vi). A common mistake among English speakers is using the infinitive form instead of the correct imperative. For regular verbs, drop the infinitive ending -ti and add -j (for -ati verbs) or -i/-ite (for -iti verbs), with adjustments for consonant groups.",
+      "examples": [
+        {
+          "wrong": "Ići ovdje!",
+          "right": "Dođi ovdje!",
+          "note": "Infinitive 'ići' is replaced by the imperative 'dođi' (informal singular 'ti')."
+        },
+        {
+          "wrong": "Ustajati!",
+          "right": "Ustanite!",
+          "note": "Infinitive 'ustajati' is wrong; use 'ustanite' (formal/plural 'vi')."
+        },
+        {
+          "wrong": "Piti vodu!",
+          "right": "Pij vodu!",
+          "note": "Infinitive 'piti' becomes 'pij' for informal singular 'ti'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "You (informal singular) go! (ići)",
+          "answer": "Idi!"
+        },
+        {
+          "prompt": "You (plural informal) speak! (govoriti)",
+          "answer": "Govorite!"
+        },
+        {
+          "prompt": "You (formal) come! (doći)",
+          "answer": "Dođite!"
+        }
+      ]
+    },
+    {
+      "rule_id": "possession-imati-vs-biti",
+      "topic": "Possession imati vs biti",
+      "title": "Possession: Using 'imati' vs 'biti'",
+      "explanation": "In Croatian, to express possession of a state or feeling (e.g., cold, hunger), use the verb 'biti' (to be) with a dative pronoun, not 'imati' (to have). A common mistake is directly translating English 'I have [feeling]' with 'imati'. Instead, say '[feeling] mi je' (it is [feeling] to me). For physical objects, 'imati' is correct.",
+      "examples": [
+        {
+          "wrong": "Imam hladno.",
+          "right": "Hladno mi je.",
+          "note": "Use 'biti' + dative for feeling cold, not 'imati'."
+        },
+        {
+          "wrong": "Imam glad.",
+          "right": "Gladan sam.",
+          "note": "For hunger, use 'biti' + adjective (gladan), not 'imati' + noun."
+        },
+        {
+          "wrong": "Imam vruće.",
+          "right": "Vruće mi je.",
+          "note": "Same rule for heat: 'vruće mi je' – it is hot to me."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'I am cold' into Croatian.",
+          "answer": "Hladno mi je."
+        },
+        {
+          "prompt": "How do you say 'I am thirsty' in Croatian? (thirsty = žedan)",
+          "answer": "Žedan sam."
+        },
+        {
+          "prompt": "Correct this sentence: 'Imam toplo.' (It should use 'biti').",
+          "answer": "Toplo mi je."
+        }
+      ]
+    },
+    {
+      "rule_id": "interrogative-pronouns-tko-što",
+      "topic": "Interrogative pronouns tko što",
+      "title": "Interrogative Pronouns: tko (who) vs. što (what)",
+      "explanation": "In Croatian, 'tko' is used to ask about people (like English 'who'), while 'što' is used for things and abstract concepts (like English 'what'). A common mistake is using 'tko' for objects or 'što' for people. Remember: if the answer is a person, use 'tko'; if it's a thing, use 'što'.",
+      "examples": [
+        {
+          "wrong": "Tko je ovo? (pointing at a book)",
+          "right": "Što je ovo?",
+          "note": "Use 'što' for objects; 'tko' is only for persons."
+        },
+        {
+          "wrong": "Što je došao?",
+          "right": "Tko je došao?",
+          "note": "When asking about a person who arrived, use 'tko'."
+        },
+        {
+          "wrong": "Tko je tvoj omiljeni film?",
+          "right": "Što je tvoj omiljeni film?",
+          "note": "A film is a thing, not a person, so use 'što'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'Who is your teacher?'",
+          "answer": "Tko je tvoj učitelj?"
+        },
+        {
+          "prompt": "Ask 'What is that?' (pointing to a car)",
+          "answer": "Što je to?"
+        },
+        {
+          "prompt": "Fill in the blank: '______ je najbolji prijatelj?' (meaning 'Who is the best friend?')",
+          "answer": "Tko"
+        }
+      ]
+    },
+    {
+      "rule_id": "preposition-s-vs-sa",
+      "topic": "Preposition s vs sa",
+      "title": "Preposition 's' vs 'sa'",
+      "explanation": "Use 's' before most consonants and all vowels (e.g., s prijateljem, s Ivanom). Use 'sa' only before words starting with s, š, z, or ž (e.g., sa sestrom, sa šalicom). Avoid using 'sa' before other consonants, as this is a common mistake.",
+      "examples": [
+        {
+          "wrong": "Idem sa bratom.",
+          "right": "Idem s bratom.",
+          "note": "Brat starts with 'b', not s/š/z/ž, so use 's'."
+        },
+        {
+          "wrong": "Razgovaram sa majkom.",
+          "right": "Razgovaram s majkom.",
+          "note": "Majka starts with 'm', so 's' is correct."
+        },
+        {
+          "wrong": "Pijem kavu sa mlijekom.",
+          "right": "Pijem kavu s mlijekom.",
+          "note": "Mlijeko starts with 'm', so use 's'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in: Idem ___ prijateljem (with a friend).",
+          "answer": "s"
+        },
+        {
+          "prompt": "Fill in: Razgovaram ___ šeficom (with the boss).",
+          "answer": "sa"
+        },
+        {
+          "prompt": "Fill in: Volim kavu ___ mlijekom (with milk).",
+          "answer": "s"
+        }
+      ]
+    },
+    {
+      "rule_id": "da-clauses-vs-infinitive",
+      "topic": "Da clauses vs infinitive",
+      "title": "Da Clauses vs Infinitive: Same Subject?",
+      "explanation": "In Croatian, use the infinitive when the subject of the main verb and the second verb are the same. Use 'da' + present tense when the subjects are different. A common mistake is using 'da' with modal verbs (morati, moći, htjeti) even when the subject is the same.",
+      "examples": [
+        {
+          "wrong": "Moram da idem.",
+          "right": "Moram ići.",
+          "note": "After modal verbs, always use infinitive when the subject is the same."
+        },
+        {
+          "wrong": "Želim da idem.",
+          "right": "Želim ići.",
+          "note": "With verbs like željeti, voljeti, planirati, use infinitive for the same subject."
+        },
+        {
+          "wrong": "Želim ti doći.",
+          "right": "Želim da ti dođeš.",
+          "note": "When the subject of the second verb is different, use 'da' + present tense."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "I have to go (same subject).",
+          "answer": "Moram ići."
+        },
+        {
+          "prompt": "I want to go (same subject).",
+          "answer": "Želim ići."
+        },
+        {
+          "prompt": "I want you to go (different subject).",
+          "answer": "Želim da ideš."
+        }
+      ]
+    },
+    {
+      "rule_id": "causal-conjunctions-jer-zato-što",
+      "topic": "Causal conjunctions jer zato što",
+      "title": "Causal Conjunctions: jer vs. zato što",
+      "explanation": "In Croatian, 'jer' and 'zato što' both mean 'because,' but they are used differently. 'Jer' is a simple conjunction placed in the middle of a sentence without a comma. 'Zato što' is a compound conjunction that can start a sentence or follow a main clause, usually with a comma before it. A common mistake is using 'jer' at the beginning of a sentence or combining both conjunctions.",
+      "examples": [
+        {
+          "wrong": "Jer sam gladan, idem jesti.",
+          "right": "Zato što sam gladan, idem jesti. / Idem jesti jer sam gladan.",
+          "note": "Do not start a sentence with 'jer'. Use 'zato što' at the beginning or place 'jer' after the main clause."
+        },
+        {
+          "wrong": "Ne mogu spavati jer zato što je bučno.",
+          "right": "Ne mogu spavati jer je bučno. / Ne mogu spavati zato što je bučno.",
+          "note": "Use only one conjunction—'jer' or 'zato što'—not both together."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "I am staying home because it is raining. (use 'jer')",
+          "answer": "Ostajem doma jer pada kiša."
+        },
+        {
+          "prompt": "Because I have a headache, I won't go. (use 'zato što' at the beginning)",
+          "answer": "Zato što me boli glava, neću ići."
+        },
+        {
+          "prompt": "He is happy because he passed the exam. (choose the correct conjunction)",
+          "answer": "Sretan je jer je položio ispit."
+        }
+      ]
+    }
+  ]
+}

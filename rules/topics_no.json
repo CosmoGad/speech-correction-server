@@ -1,0 +1,105 @@
+{
+  "learning": "no",
+  "topics": [
+    {
+      "rule_id": "artikler",
+      "title": "Artikler"
+    },
+    {
+      "rule_id": "verbformer",
+      "title": "Verbformer"
+    },
+    {
+      "rule_id": "preposisjoner",
+      "title": "Preposisjoner"
+    },
+    {
+      "rule_id": "setningsstruktur",
+      "title": "Setningsstruktur"
+    },
+    {
+      "rule_id": "tonem",
+      "title": "Tonem"
+    },
+    {
+      "rule_id": "uttale-av-vokaler",
+      "title": "Uttale av vokaler"
+    },
+    {
+      "rule_id": "intonasjon",
+      "title": "Intonasjon"
+    },
+    {
+      "rule_id": "noun-gender-agreement",
+      "title": "Noun gender agreement"
+    },
+    {
+      "rule_id": "adjective-inflection-after-definite-nouns",
+      "title": "Adjective inflection after definite nouns"
+    },
+    {
+      "rule_id": "word-order-in-subordinate-clauses",
+      "title": "Word order in subordinate clauses"
+    },
+    {
+      "rule_id": "use-of-passive-voice",
+      "title": "Use of passive voice"
+    },
+    {
+      "rule_id": "reflexive-verbs-and-pronouns",
+      "title": "Reflexive verbs and pronouns"
+    },
+    {
+      "rule_id": "possessive-constructions-with-sinsisittsine",
+      "title": "Possessive constructions with sin/si/sitt/sine"
+    },
+    {
+      "rule_id": "compound-word-formation-and-spelling",
+      "title": "Compound word formation and spelling"
+    },
+    {
+      "rule_id": "modal-verb-usage-and-placement",
+      "title": "Modal verb usage and placement"
+    },
+    {
+      "rule_id": "strong-and-weak-verb-past-tense",
+      "title": "Strong and weak verb past tense"
+    },
+    {
+      "rule_id": "plural-forms-of-nouns",
+      "title": "Plural forms of nouns"
+    },
+    {
+      "rule_id": "definite-vs-indefinite-suffixes",
+      "title": "Definite vs indefinite suffixes"
+    },
+    {
+      "rule_id": "use-of-det-as-formal-subject",
+      "title": "Use of 'det' as formal subject"
+    },
+    {
+      "rule_id": "comparative-and-superlative-adjectives",
+      "title": "Comparative and superlative adjectives"
+    },
+    {
+      "rule_id": "prepositions-of-time-and-place",
+      "title": "Prepositions of time and place"
+    },
+    {
+      "rule_id": "conjunctions-and-sentence-connectors",
+      "title": "Conjunctions and sentence connectors"
+    },
+    {
+      "rule_id": "double-definite-construction",
+      "title": "Double definite construction"
+    },
+    {
+      "rule_id": "negation-with-ikke-placement",
+      "title": "Negation with 'ikke' placement"
+    },
+    {
+      "rule_id": "use-of-en-vs-ett-in-neuter-nouns",
+      "title": "Use of 'en' vs 'ett' in neuter nouns"
+    }
+  ]
+}

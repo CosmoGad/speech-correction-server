@@ -1,0 +1,850 @@
+{
+  "learning": "el",
+  "interface": "en",
+  "generated_at": "2026-06-27T13:32:47.164569+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "articles",
+      "topic": "Articles",
+      "title": "Don’t Forget the Definite Article!",
+      "explanation": "In Greek, the definite article (ο, η, το) is used much more often than in English. You must use it with proper names, general statements, and abstract nouns — even where English omits it. Omitting the article is a common mistake for English speakers.",
+      "examples": [
+        {
+          "wrong": "Γιώργος είναι εδώ.",
+          "right": "Ο Γιώργος είναι εδώ.",
+          "note": "In Greek, use the definite article before personal names."
+        },
+        {
+          "wrong": "Άνθρωπος είναι θνητός.",
+          "right": "Ο άνθρωπος είναι θνητός.",
+          "note": "General statements about a category need the article."
+        },
+        {
+          "wrong": "Ελλάδα είναι ωραία χώρα.",
+          "right": "Η Ελλάδα είναι ωραία χώρα.",
+          "note": "Country names usually require the definite article."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the missing article: ___ μητέρα μου είναι γιατρός.",
+          "answer": "Η"
+        },
+        {
+          "prompt": "Correct this sentence: Κόσμος είναι όμορφος.",
+          "answer": "Ο κόσμος είναι όμορφος."
+        },
+        {
+          "prompt": "Add the needed article: Θέλω να δω ___ Αλέξανδρο.",
+          "answer": "τον"
+        }
+      ]
+    },
+    {
+      "rule_id": "noun-cases",
+      "topic": "Noun cases",
+      "title": "Mastering Greek Noun Cases: Nominative vs. Accusative",
+      "explanation": "In Greek, nouns change form depending on their role in a sentence. The nominative case is used for the subject (who does the action), while the accusative case is used for the direct object (who receives the action). A common mistake is using the nominative form for both, especially with masculine nouns that have distinct endings (e.g., -ος vs -ο, -ας vs -α).",
+      "examples": [
+        {
+          "wrong": "Ο άντρας βλέπει ο σκύλος.",
+          "right": "Ο άντρας βλέπει τον σκύλο.",
+          "note": "Use accusative 'τον σκύλο' for the object (the dog receives the action)."
+        },
+        {
+          "wrong": "Η γυναίκα αγαπάει ο άντρας.",
+          "right": "Η γυναίκα αγαπάει τον άντρα.",
+          "note": "The man ('ο άντρας' → 'τον άντρα') is the object of love."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'The teacher sees the student.' (Use ο δάσκαλος for teacher and ο μαθητής for student.)",
+          "answer": "Ο δάσκαλος βλέπει τον μαθητή."
+        },
+        {
+          "prompt": "Correct this sentence: 'Ο Γιάννης ακούει η μουσική.' (Γιάννης = John, μουσική = music)",
+          "answer": "Ο Γιάννης ακούει τη μουσική."
+        }
+      ]
+    },
+    {
+      "rule_id": "gender-agreement",
+      "topic": "Gender agreement",
+      "title": "Gender Agreement in Greek: Making Adjectives Match Nouns",
+      "explanation": "In Greek, every noun has a gender: masculine, feminine, or neuter. Adjectives must agree with the noun in gender, number, and case. A common mistake is using the wrong adjective ending for the noun's gender, e.g., using a masculine adjective with a feminine noun.",
+      "examples": [
+        {
+          "wrong": "ο μεγάλος σπίτι",
+          "right": "το μεγάλο σπίτι",
+          "note": "'σπίτι' (house) is neuter, so the adjective must be neuter: 'μεγάλο'."
+        },
+        {
+          "wrong": "η ωραίος γυναίκα",
+          "right": "η ωραία γυναίκα",
+          "note": "'γυναίκα' (woman) is feminine, so the adjective must be feminine: 'ωραία'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Choose the correct adjective to complete the sentence: '___ μικρός άνδρας' (the small man) - fill in the missing article.",
+          "answer": "ο"
+        },
+        {
+          "prompt": "Correct the adjective in this phrase: 'το όμορφη παιδί' (the beautiful child).",
+          "answer": "το όμορφο παιδί"
+        }
+      ]
+    },
+    {
+      "rule_id": "verb-conjugation",
+      "topic": "Verb conjugation",
+      "title": "Matching Verb Endings to the Subject",
+      "explanation": "In Greek present tense, the verb ending must change according to the subject (I, you, he/she/it, we, you plural, they). A common mistake is using the 'I' form (-ω) for all subjects. Learn the basic endings: -ω, -εις, -ει, -ουμε, -ετε, -ουν.",
+      "examples": [
+        {
+          "wrong": "Αυτός γράφω",
+          "right": "Αυτός γράφει",
+          "note": "For he/she/it, drop the -ω and add -ει."
+        },
+        {
+          "wrong": "Εμείς τρέχω",
+          "right": "Εμείς τρέχουμε",
+          "note": "For we, use -ουμε instead of -ω."
+        },
+        {
+          "wrong": "Εσύ μιλάω",
+          "right": "Εσύ μιλάς",
+          "note": "For you (singular), use -ας (if the stem ends in -α) or -εις for most verbs."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I speak'",
+          "answer": "Εγώ μιλάω"
+        },
+        {
+          "prompt": "Translate: 'She reads'",
+          "answer": "Αυτή διαβάζει"
+        },
+        {
+          "prompt": "Translate: 'We learn'",
+          "answer": "Εμείς μαθαίνουμε"
+        }
+      ]
+    },
+    {
+      "rule_id": "stress-placement",
+      "topic": "Stress placement",
+      "title": "Stress Placement in Greek",
+      "explanation": "In Greek, every word has a stress (τόνος) marked by an acute accent (´) over the stressed vowel. The stress can fall on any of the last three syllables, but it must be written correctly. A common mistake for English speakers is to place the stress on the first syllable when it should be on the second or third, or to omit the accent entirely.",
+      "examples": [
+        {
+          "wrong": "πάραθυρο",
+          "right": "παράθυρο",
+          "note": "The word for 'window' is stressed on the second syllable, not the first."
+        },
+        {
+          "wrong": "καλημερά",
+          "right": "καλημέρα",
+          "note": "The greeting 'good morning' is stressed on the second syllable (μέ), not the last."
+        },
+        {
+          "wrong": "εύχαριστο",
+          "right": "ευχαριστώ",
+          "note": "'Thank you' is stressed on the final syllable (στώ), not the first."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the correct form of the word for 'balcony' (wrong: μπαλκόνι) with stress on the correct syllable.",
+          "answer": "μπαλκόνι"
+        },
+        {
+          "prompt": "Correct the stress in the word 'ηταν' (meaning 'it was') by adding the proper accent.",
+          "answer": "ήταν"
+        },
+        {
+          "prompt": "Place the correct stress on the word for 'thank you' to make it proper Greek.",
+          "answer": "ευχαριστώ"
+        }
+      ]
+    },
+    {
+      "rule_id": "vowel-sounds",
+      "topic": "Vowel sounds",
+      "title": "Common Spelling Confusion: 'αι' vs 'ε'",
+      "explanation": "In Modern Greek, the digraph 'αι' and the single letter 'ε' are both pronounced as the vowel /e/ (like the 'e' in 'pet'). This leads to frequent spelling mistakes. You must learn which words use 'αι' and which use 'ε' individually, as there is no rule of thumb.",
+      "examples": [
+        {
+          "wrong": "κε",
+          "right": "και",
+          "note": "The word for 'and' is spelled with 'αι', not 'ε'."
+        },
+        {
+          "wrong": "πεδί",
+          "right": "παιδί",
+          "note": "The word for 'child' uses 'αι', not 'ε'."
+        },
+        {
+          "wrong": "μαίρα",
+          "right": "μέρα",
+          "note": "The word for 'day' uses 'ε', not 'αι'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the Greek word for 'and':",
+          "answer": "και"
+        },
+        {
+          "prompt": "Which spelling is correct for 'child'? (παιδί or πεδί)",
+          "answer": "παιδί"
+        },
+        {
+          "prompt": "Write the Greek word for 'day':",
+          "answer": "μέρα"
+        }
+      ]
+    },
+    {
+      "rule_id": "γχ-consonants",
+      "topic": "γ/χ consonants",
+      "title": "Mastering the Greek γ and χ Consonants",
+      "explanation": "In Greek, γ is a voiced sound (like the 'g' in 'go' but softer, or like the 'y' in 'yes' when before ε/ι), while χ is a voiceless sound (like the 'ch' in Scottish 'loch'). A common mistake is using the English 'ch' sound for γ or confusing the two. Remember: γ uses your vocal cords; χ is just air.",
+      "examples": [
+        {
+          "wrong": "εγω (with χ)",
+          "right": "εγώ",
+          "note": "The word for 'I' uses γ (gamma), not χ. Pronounce it like 'eh-ghO' with a soft g."
+        },
+        {
+          "wrong": "χέρι (with γ)",
+          "right": "χέρι",
+          "note": "The word for 'hand' uses χ (chi). Think of the 'ch' in 'Bach'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you correctly write the word for 'milk'? (Hint: starts with a sound like the Scottish 'loch', not like 'go')",
+          "answer": "γάλα"
+        },
+        {
+          "prompt": "Write the word for 'and' (the conjunction) using the correct consonant (voiced, soft g/y sound).",
+          "answer": "και"
+        }
+      ]
+    },
+    {
+      "rule_id": "subjunctive-mood-with-να",
+      "topic": "Subjunctive mood with να",
+      "title": "Using the Subjunctive Mood with να",
+      "explanation": "In Greek, the subjunctive mood is formed with the particle να + a verb in the subjunctive form (often the same as the present or aorist stem). A common mistake is omitting να or using the wrong verb form (like the future with θα). Remember: after verbs like θέλω (want), μπορώ (can), πρέπει (must), and in clauses expressing purpose or necessity, always use να.",
+      "examples": [
+        {
+          "wrong": "Θέλω πάω σινεμά.",
+          "right": "Θέλω να πάω σινεμά.",
+          "note": "You must include να after θέλω to express desire."
+        },
+        {
+          "wrong": "Πρέπει θα διαβάζεις.",
+          "right": "Πρέπει να διαβάζεις.",
+          "note": "Use να (not θα) after πρέπει to express obligation."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I can speak Greek.' (Use μπορώ + να + verb)",
+          "answer": "Μπορώ να μιλάω ελληνικά."
+        },
+        {
+          "prompt": "Translate: 'She wants to buy a book.' (Use θέλει + να + verb)",
+          "answer": "Θέλει να αγοράσει ένα βιβλίο."
+        }
+      ]
+    },
+    {
+      "rule_id": "future-tense-with-θα",
+      "topic": "Future tense with θα",
+      "title": "Future Tense with θα – Use the Dependent Form",
+      "explanation": "In Greek, the future tense is formed by the particle θα followed by the dependent (subjunctive) form of the verb, not the present tense. Many learners mistakenly use the present tense after θα. Always use the dependent form to express a future action.",
+      "examples": [
+        {
+          "wrong": "Θα τρώω αργότερα.",
+          "right": "Θα φάω αργότερα.",
+          "note": "τρώω is present; the dependent form φάω is correct for future."
+        },
+        {
+          "wrong": "Αύριο θα πηγαίνω στην παραλία.",
+          "right": "Αύριο θα πάω στην παραλία.",
+          "note": "πηγαίνω is present; the dependent form πάω is needed."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I will drink coffee.' (Use the verb πίνω – dependent form)",
+          "answer": "Θα πιώ καφέ."
+        },
+        {
+          "prompt": "Correct the mistake: 'Θα διαβάζω το βιβλίο αύριο.'",
+          "answer": "Θα διαβάσω το βιβλίο αύριο."
+        }
+      ]
+    },
+    {
+      "rule_id": "weak-pronoun-placement",
+      "topic": "Weak pronoun placement",
+      "title": "Weak Pronoun Placement: Before the Verb",
+      "explanation": "In Greek, weak personal pronouns (e.g., με, σε, τον, την, το, μας, σας, τους, μου, σου, του, της) usually go immediately before the verb in affirmative sentences. A common mistake for English speakers is to place them after the verb, like in English. Remember: in declarative clauses, the pronoun precedes the verb.",
+      "examples": [
+        {
+          "wrong": "Βλέπω τον.",
+          "right": "Τον βλέπω.",
+          "note": "'τον' (him) should come before the verb 'βλέπω' (I see)."
+        },
+        {
+          "wrong": "Αγαπώ σε.",
+          "right": "Σε αγαπώ.",
+          "note": "'σε' (you) is a weak pronoun and must be placed before the verb."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'I read it' (the book) into Greek using the weak pronoun 'το'.",
+          "answer": "Το διαβάζω."
+        },
+        {
+          "prompt": "Correct the mistake: 'Λέω του' (I tell him).",
+          "answer": "Του λέω."
+        }
+      ]
+    },
+    {
+      "rule_id": "existence-είμαι-vs-έχω",
+      "topic": "Existence: είμαι vs έχω",
+      "title": "Existence & Age: είμαι vs έχω",
+      "explanation": "In Greek, use είμαι (I am) for age: 'Είμαι 20 χρονών' (I am 20 years old), not έχω. For existence ('there is/are'), use the third person singular of έχω (έχει) + noun: 'Έχει ένα βιβλίο' (There is a book), not είμαι. This reverses the English pattern for 'there is' and age.",
+      "examples": [
+        {
+          "wrong": "Έχω 30 χρόνια.",
+          "right": "Είμαι 30 χρονών.",
+          "note": "Age uses είμαι, like English 'I am'."
+        },
+        {
+          "wrong": "Είναι πολύς κόσμος στο πάρτι.",
+          "right": "Έχει πολύ κόσμο στο πάρτι.",
+          "note": "Existence uses έχει (third person of έχω)."
+        },
+        {
+          "wrong": "Είναι ένας καφές;",
+          "right": "Έχει έναν καφέ;",
+          "note": "For 'Is there a coffee?', use έχει."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'I am 25 years old' using the correct verb.",
+          "answer": "Είμαι 25 χρονών."
+        },
+        {
+          "prompt": "Translate 'There is a problem.' using the correct verb.",
+          "answer": "Έχει ένα πρόβλημα."
+        },
+        {
+          "prompt": "Correct this sentence: 'Στο σπίτι είναι μία γάτα.' (In the house is a cat)",
+          "answer": "Στο σπίτι έχει μία γάτα."
+        }
+      ]
+    },
+    {
+      "rule_id": "aorist-vs-imperfect-aspect",
+      "topic": "Aorist vs imperfect aspect",
+      "title": "Aorist vs Imperfect: Telling Apart Completed and Ongoing Past Actions",
+      "explanation": "In Greek, the aorist tense expresses a completed action in the past (e.g., 'I did'), while the imperfect expresses an ongoing or repeated action (e.g., 'I was doing' or 'I used to do'). A common mistake is using the aorist for habitual or continuous past actions, or using the imperfect for single, completed events. Choose the tense based on whether the action is seen as a whole (aorist) or as unfolding (imperfect).",
+      "examples": [
+        {
+          "wrong": "Χθες όλη μέρα έγραψα το γράμμα.",
+          "right": "Χθες όλη μέρα έγραφα το γράμμα.",
+          "note": "Use imperfect for actions that lasted or were in progress over a period."
+        },
+        {
+          "wrong": "Όταν ήμουν μικρός, πήγα στο σχολείο με τα πόδια.",
+          "right": "Όταν ήμουν μικρός, πήγαινα στο σχολείο με τα πόδια.",
+          "note": "For repeated or habitual past actions, use imperfect, not aorist."
+        },
+        {
+          "wrong": "Χθες έγραφα το γράμμα σε ένα λεπτό.",
+          "right": "Χθες έγραψα το γράμμα σε ένα λεπτό.",
+          "note": "Use aorist for actions completed within a specific, short timeframe."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How would you say 'I was reading when you called' (ongoing interrupted by a single event)?",
+          "answer": "Διάβαζα όταν με πήρες τηλέφωνο."
+        },
+        {
+          "prompt": "How would you say 'Every summer we went to the beach' (habitual past)?",
+          "answer": "Κάθε καλοκαίρι πηγαίναμε στην παραλία."
+        },
+        {
+          "prompt": "How would you say 'Yesterday I finished the project' (single completed action)?",
+          "answer": "Χθες τελείωσα το πρότζεκτ."
+        }
+      ]
+    },
+    {
+      "rule_id": "perfect-tense-formation",
+      "topic": "Perfect tense formation",
+      "title": "Perfect Tense Formation: Using έχω + Perfect Participle",
+      "explanation": "In Greek, the perfect tense is formed by conjugating the verb έχω (to have) and adding the perfect participle. The perfect participle is a fixed form, often ending in -ει for active verbs (e.g., γράψει from γράφω). A common mistake is to use the aorist stem without the correct ending. Remember: only έχω changes according to the subject; the participle always stays the same.",
+      "examples": [
+        {
+          "wrong": "Έχω γράψα",
+          "right": "Έχω γράψει",
+          "note": "The perfect participle of γράφω is γράψει, not γράψα."
+        },
+        {
+          "wrong": "Έχεις διαβάσα",
+          "right": "Έχεις διαβάσει",
+          "note": "Similarly, διαβάζω becomes διαβάσει in the perfect."
+        },
+        {
+          "wrong": "Έχουμε πιεί; (actually correct? No, let's use a different verb) – using aorist: 'Έχουμε ήπια'",
+          "right": "Έχουμε πιει",
+          "note": "The perfect participle of πίνω is πιει (from aorist stem ήπια)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank with the correct perfect tense form: 'We have eaten' – Εμείς ______ (τρώω).",
+          "answer": "έχουμε φάει"
+        },
+        {
+          "prompt": "Fill in the blank: 'She has read the book' – Αυτή ______ (διαβάζω) το βιβλίο.",
+          "answer": "έχει διαβάσει"
+        },
+        {
+          "prompt": "Fill in the blank: 'You (singular) have come' – Εσύ ______ (έρχομαι).",
+          "answer": "έχεις έρθει"
+        }
+      ]
+    },
+    {
+      "rule_id": "passive-voice-endings",
+      "topic": "Passive voice endings",
+      "title": "Passive Voice Endings in Greek Present Tense",
+      "explanation": "In Greek, the passive voice has distinct endings for the present tense: -ομαι, -εσαι, -εται, -όμαστε, -εστε, -ονται. A frequent mistake is using active endings (like -ω) when the passive is required. Remember: if the subject receives the action, use the passive form.",
+      "examples": [
+        {
+          "wrong": "Το φαγητό μαγειρεύω.",
+          "right": "Το φαγητό μαγειρεύεται.",
+          "note": "The active ending -ω is used with the wrong subject. In passive, the verb must end in -εται to match 'to food' (it is cooked)."
+        },
+        {
+          "wrong": "Ο καφές πίνω.",
+          "right": "Ο καφές πίνεται.",
+          "note": "Again, active -ω is incorrect. The passive ending -εται shows that the coffee is being drunk."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'The letter is written' in Greek using the correct passive form of γράφω.",
+          "answer": "Το γράμμα γράφεται."
+        },
+        {
+          "prompt": "Fill in the blank: Η πόρτα _______ (ανοίγω) κάθε πρωί.",
+          "answer": "ανοίγεται"
+        },
+        {
+          "prompt": "Correct the mistake: 'Το βιβλίο διαβάζω από τον μαθητή.'",
+          "answer": "Το βιβλίο διαβάζεται από τον μαθητή."
+        }
+      ]
+    },
+    {
+      "rule_id": "imperative-mood-forms",
+      "topic": "Imperative mood forms",
+      "title": "Mastering the Greek Imperative: Singular vs. Plural",
+      "explanation": "In Greek, the imperative mood changes form depending on whether you're addressing one person (singular) or more than one (plural). A common mistake is using the singular form for a group or the plural for an individual. For negative commands, always use 'μην' with the subjunctive (not the imperative).",
+      "examples": [
+        {
+          "wrong": "Γράψε το γράμμα.",
+          "right": "Γράψτε το γράμμα.",
+          "note": "Use the -τε ending for plural commands when addressing more than one person."
+        },
+        {
+          "wrong": "Μην γράφεις.",
+          "right": "Μην γράψεις.",
+          "note": "For negative commands, use 'μην' + subjunctive (verb in subjunctive mood), not the imperative."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Tell your friend (singular) to 'write the letter'.",
+          "answer": "Γράψε το γράμμα."
+        },
+        {
+          "prompt": "Tell your friends (plural) to 'take the book'.",
+          "answer": "Πάρτε το βιβλίο."
+        },
+        {
+          "prompt": "Give a negative command to one person: 'Don't write'.",
+          "answer": "Μην γράψεις."
+        }
+      ]
+    },
+    {
+      "rule_id": "comparative-degree-formation",
+      "topic": "Comparative degree formation",
+      "title": "Comparative Degree Formation: Common Mistakes",
+      "explanation": "In Greek, the comparative degree is usually formed by adding 'πιο' before the adjective (e.g., πιο μεγάλος). Some common adjectives have a special synthetic form ending in -τερος (e.g., μεγαλύτερος from μεγάλος). A common mistake is using both 'πιο' and the synthetic ending together (e.g., 'πιο μεγαλύτερος') or incorrectly applying the synthetic form to all adjectives. Also, memorize irregular comparatives like καλός → καλύτερος (not *πιο καλός).",
+      "examples": [
+        {
+          "wrong": "αυτό το βιβλίο είναι πιο μεγαλύτερο",
+          "right": "αυτό το βιβλίο είναι μεγαλύτερο",
+          "note": "Do not combine πιο with the synthetic -τερος form."
+        },
+        {
+          "wrong": "αυτή η ταινία είναι πιο καλή",
+          "right": "αυτή η ταινία είναι καλύτερη",
+          "note": "καλός has an irregular comparative: καλύτερος."
+        },
+        {
+          "wrong": "το σπίτι είναι ενδιαφέροντερο",
+          "right": "το σπίτι είναι πιο ενδιαφέρον",
+          "note": "For adjectives without a synthetic form, use πιο."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the following sentence: 'Αυτή η ιδέα είναι πιο καλύτερη από εκείνη.'",
+          "answer": "Αυτή η ιδέα είναι καλύτερη από εκείνη."
+        },
+        {
+          "prompt": "Correct: 'Το μάθημα είναι πιο ενδιαφέροντερο σήμερα.'",
+          "answer": "Το μάθημα είναι πιο ενδιαφέρον σήμερα."
+        },
+        {
+          "prompt": "Correct: 'Αυτός ο δρόμος είναι πιο μακρύτερος.'",
+          "answer": "Αυτός ο δρόμος είναι μακρύτερος."
+        }
+      ]
+    },
+    {
+      "rule_id": "definite-article-with-names",
+      "topic": "Definite article with names",
+      "title": "Definite Article with Names",
+      "explanation": "In Greek, when you use a person's name as the subject of a sentence, you must always include the definite article (ο for masculine, η for feminine) before the name. This differs from English, where we never say 'the John' or 'the Maria'. Omitting the article is a common mistake for English speakers.",
+      "examples": [
+        {
+          "wrong": "Γιάννης ήρθε.",
+          "right": "Ο Γιάννης ήρθε.",
+          "note": "The masculine article 'ο' is required before 'Γιάννης' as the subject."
+        },
+        {
+          "wrong": "Μαρία είναι εδώ.",
+          "right": "Η Μαρία είναι εδώ.",
+          "note": "Use the feminine article 'η' before 'Μαρία'."
+        },
+        {
+          "wrong": "Αλέξανδρος είναι ψηλός.",
+          "right": "Ο Αλέξανδρος είναι ψηλός.",
+          "note": "Masculine names always take 'ο' in the nominative."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complete with the correct article: ____ Πέτρος είναι δάσκαλος.",
+          "answer": "Ο"
+        },
+        {
+          "prompt": "Correct the mistake: 'Ελένη αγαπάει τον σκύλο.'",
+          "answer": "Η Ελένη αγαπάει τον σκύλο."
+        },
+        {
+          "prompt": "Write the phrase correctly: 'Νίκος και Σοφία είναι φίλοι.'",
+          "answer": "Ο Νίκος και η Σοφία είναι φίλοι."
+        }
+      ]
+    },
+    {
+      "rule_id": "relative-pronouns-που-vs-ο-οποίος",
+      "topic": "Relative pronouns που vs ο οποίος",
+      "title": "Relative Pronouns: που vs ο οποίος",
+      "explanation": "The relative pronoun 'που' is invariable and used for both subjects and objects, but it cannot follow a preposition. When you need a relative pronoun after a preposition, or for emphasis or clarity (especially with people), use 'ο οποίος', which declines for gender, number, and case.",
+      "examples": [
+        {
+          "wrong": "Ο άνδρας με που μίλησα είναι γιατρός.",
+          "right": "Ο άνδρας με τον οποίο μίλησα είναι γιατρός.",
+          "note": "After the preposition 'με' (with), you must use the declined form 'τον οποίο' instead of 'που'."
+        },
+        {
+          "wrong": "Το βιβλίο που έγραψα είναι ενδιαφέρον.",
+          "right": "Το βιβλίο που έγραψα είναι ενδιαφέρον.",
+          "note": "Here 'που' is correct because it is the object of the verb and there is no preposition."
+        },
+        {
+          "wrong": "Η γυναίκα που ο γιος της είναι εδώ.",
+          "right": "Η γυναίκα της οποίας ο γιος είναι εδώ.",
+          "note": "For possession, use the genitive form 'της οποίας' instead of 'που' with a possessive pronoun."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank: 'Το παιδί ______ είδα χθες.' (The child I saw yesterday - use the appropriate relative pronoun)",
+          "answer": "που"
+        },
+        {
+          "prompt": "Fill in the blank: 'Ο φίλος ______ ταξιδεύω είναι από την Ιταλία.' (The friend with whom I travel is from Italy - use the correct form after a preposition)",
+          "answer": "με τον οποίο"
+        },
+        {
+          "prompt": "Fill in the blank: 'Η καθηγήτρια ______ μαθήματα είναι δύσκολα.' (The professor whose lessons are difficult - use the genitive form)",
+          "answer": "της οποίας"
+        }
+      ]
+    },
+    {
+      "rule_id": "vocative-case-usage",
+      "topic": "Vocative case usage",
+      "title": "Using the Vocative Case in Greek",
+      "explanation": "In Greek, when directly addressing someone, you must use the vocative case instead of the nominative. For masculine nouns ending in -ος, the vocative changes to -ε (e.g., Γιώργος → Γιώργο); for other endings, it often matches the nominative or has specific forms. Using the nominative when calling someone is a common mistake and sounds unnatural.",
+      "examples": [
+        {
+          "wrong": "Γιώργος, έλα εδώ!",
+          "right": "Γιώργο, έλα εδώ!",
+          "note": "The name Γιώργος (George) changes to Γιώργο in the vocative."
+        },
+        {
+          "wrong": "Κύριος, μπορώ να ρωτήσω;",
+          "right": "Κύριε, μπορώ να ρωτήσω;",
+          "note": "Κύριος (mister/sir) becomes Κύριε when addressing someone."
+        },
+        {
+          "wrong": "Μαρία, έλα εδώ!",
+          "right": "Μαρία, έλα εδώ!",
+          "note": "For feminine names like Μαρία, the vocative is the same as the nominative."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'Teacher, can you help me?' using the correct vocative form of δάσκαλος (teacher, masculine)?",
+          "answer": "Δάσκαλε, μπορείς να με βοηθήσεις;"
+        },
+        {
+          "prompt": "Address your friend named Νίκος: 'Nikos, come here!'",
+          "answer": "Νίκο, έλα εδώ!"
+        },
+        {
+          "prompt": "Call a waiter politely: 'Waiter, the bill please.' (waiter = σερβιτόρος, masculine)",
+          "answer": "Σερβιτόρε, τον λογαριασμό παρακαλώ."
+        }
+      ]
+    },
+    {
+      "rule_id": "conditional-sentences",
+      "topic": "Conditional sentences",
+      "title": "Common Mistakes in Greek Conditional Sentences (Type 2 and Type 3)",
+      "explanation": "In Greek, the second conditional (unreal present) uses 'αν' + imperfect tense in the if-clause, and 'θα' + imperfect in the main clause. A common mistake is using the present tense in both parts. For the third conditional (unreal past), the if-clause takes 'αν' + pluperfect and the main clause uses 'θα' + pluperfect; learners often incorrectly use present or future tenses. Remember: the tense in the if-clause must match the time of the unreal situation.",
+      "examples": [
+        {
+          "wrong": "Αν είμαι πλούσιος, θα ταξιδεύω.",
+          "right": "Αν ήμουν πλούσιος, θα ταξίδευα.",
+          "note": "Use imperfect (ήμουν, ταξίδευα) for an unreal present condition, not present tense."
+        },
+        {
+          "wrong": "Αν μελετάω, θα περάσω.",
+          "right": "Αν είχα μελετήσει, θα είχα περάσει.",
+          "note": "For an unreal past condition, use pluperfect (είχα μελετήσει) in both clauses with 'θα'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "If he had money, he would buy a house. (unreal present)",
+          "answer": "Αν είχε λεφτά, θα αγόραζε ένα σπίτι."
+        },
+        {
+          "prompt": "If we had left earlier, we would have caught the train. (unreal past)",
+          "answer": "Αν είχαμε φύγει νωρίτερα, θα είχαμε προλάβει το τρένο."
+        }
+      ]
+    },
+    {
+      "rule_id": "πως-vs-ότι-for-that",
+      "topic": "Πως vs ότι for 'that'",
+      "title": "Πως vs Ότι: When to Use 'That' in Greek",
+      "explanation": "In Greek, both 'ότι' and 'πως' can mean 'that', but they're not the same. Use 'ότι' (the standard form) after verbs of thinking, saying, or knowing (e.g., λέω, νομίζω, ξέρω). Use 'πως' for 'how' or after perception verbs like βλέπω (see) or ακούω (hear). Beginners often overuse 'πως' because it resembles English 'how' – stick with 'ότι' for reported statements.",
+      "examples": [
+        {
+          "wrong": "Νομίζω πως είναι ωραίο.",
+          "right": "Νομίζω ότι είναι ωραίο.",
+          "note": "After νομίζω (I think), always use ότι, not πως."
+        },
+        {
+          "wrong": "Λέει πως θα έρθει.",
+          "right": "Λέει ότι θα έρθει.",
+          "note": "After λέω (he/she says), ότι is the formal and correct choice."
+        },
+        {
+          "wrong": "Ξέρω πως έχεις δίκιο.",
+          "right": "Ξέρω ότι έχεις δίκιο.",
+          "note": "After ξέρω (I know), use ότι to mean 'that'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'She says that she is tired.'",
+          "answer": "Λέει ότι είναι κουρασμένη."
+        },
+        {
+          "prompt": "Translate: 'He thinks that we are ready.'",
+          "answer": "Νομίζει ότι είμαστε έτοιμοι."
+        },
+        {
+          "prompt": "Translate: 'I know that you are here.'",
+          "answer": "Ξέρω ότι είσαι εδώ."
+        }
+      ]
+    },
+    {
+      "rule_id": "diphthong-αυευ-pronunciation",
+      "topic": "Diphthong αυ/ευ pronunciation",
+      "title": "Pronunciation of Greek Diphthongs αυ and ευ",
+      "explanation": "The Greek diphthongs αυ and ευ are not always pronounced as \"av\" and \"ev\". They change depending on the next sound: before a vowel or a voiced consonant (β, γ, δ, ζ, λ, μ, ν, ρ) they are pronounced \"av\" and \"ev\"; before a voiceless consonant (κ, π, τ, χ, φ, θ, σ, ξ, ψ) they are pronounced \"af\" and \"ef\". This is a common mistake for English speakers who tend to use only one pronunciation.",
+      "examples": [
+        {
+          "wrong": "αυτοκίνητο (af-tο-kí-ni-to)",
+          "right": "αυτοκίνητο (av-to-kí-ni-to)",
+          "note": "Before 'τ' (voiceless) would be 'af', but here the 'υ' is part of diphthong? Wait, correct: Before voiced consonant? Actually 'τ' is voiceless, so correct is 'af'? Let me re-evaluate: 'αυτοκίνητο' - the 'υ' is followed by 'τ' (voiceless), so pronunciation is 'af'. But the example should show a common mistake. I'll adjust: common mistake is saying 'av' when it should be 'af' or vice versa. Better to use a word where the following sound is voiced vs voiceless. Let's do: word 'εύκολος' - easy. Wrong: 'ev-kolos' (should be 'ef' because 'κ' is voiceless). So wrong: εύκολος (ev-ko-los), right: εύκολος (ef-ko-los). Note: 'κ' is voiceless, so use 'ef'. Another: 'αύριο' - tomorrow. Wrong: 'af-rio' (should be 'av' because 'ρ' is voiced). So wrong: αύριο (af-rio), right: αύριο (av-rio). Note: 'ρ' is voiced, so 'av'. Third example: 'ευχαριστώ' - thank you. Wrong: 'ev-kha-ri-sto'? Actually 'χ' is voiceless, so should be 'ef'. Wrong: ευχαριστώ (ev-χα-ρι-στώ), right: ευχαριστώ (ef-χα-ρι-στώ). Note: 'χ' is voiceless."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you pronounce the αυ in 'αυλή' (courtyard)? (Remember: λ is a voiced consonant.)",
+          "answer": "αυλή (av-λή)"
+        },
+        {
+          "prompt": "How do you pronounce the ευ in 'ευτυχία' (happiness)? (Remember: τ is a voiceless consonant.)",
+          "answer": "ευτυχία (ef-τυ-χί-α)"
+        },
+        {
+          "prompt": "Which pronunciation (av/af or ev/ef) is correct for the first syllable of 'αύρα' (breeze)? (The following ρ is voiced.)",
+          "answer": "αύρα (av-ra)"
+        }
+      ]
+    },
+    {
+      "rule_id": "double-consonant-sounds",
+      "topic": "Double consonant sounds",
+      "title": "Double Consonants in Greek: Pronouncing Them Correctly",
+      "explanation": "In Greek, double consonants (like μμ, νν, κκ) are pronounced as geminates — you hold the sound longer than a single consonant. This is different from English, where double letters often don't change the sound. Learning to lengthen these sounds will make your Greek speech more natural and accurate.",
+      "examples": [
+        {
+          "wrong": "γράμα",
+          "right": "γράμμα",
+          "note": "The double μμ makes the 'm' sound noticeably longer, like 'gram-ma' instead of 'gra-ma'."
+        },
+        {
+          "wrong": "σάκος",
+          "right": "σάκκος",
+          "note": "Double κκ gives a prolonged 'k' sound — say 'sak-kos' not 'sa-kos'."
+        },
+        {
+          "wrong": "Άνα",
+          "right": "Άννα",
+          "note": "The double νν lengthens the 'n' sound — pronounce 'An-na'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the correct Greek word for 'letter' (it has a double consonant):",
+          "answer": "γράμμα"
+        },
+        {
+          "prompt": "Fill in the missing double consonant in σά___ος (sack):",
+          "answer": "κκ"
+        },
+        {
+          "prompt": "Correct the spelling: 'θάλασα' (sea) should have a double consonant:",
+          "answer": "θάλασσα"
+        }
+      ]
+    },
+    {
+      "rule_id": "article-with-abstract-nouns",
+      "topic": "Article with abstract nouns",
+      "title": "Using the Definite Article with Abstract Nouns in Greek",
+      "explanation": "In Greek, abstract nouns (e.g., love, happiness, knowledge) almost always require the definite article (ο, η, το) when used in a general sense. This differs from English, where the article is often omitted. Always include the article when referring to the concept as a whole.",
+      "examples": [
+        {
+          "wrong": "Αγάπη είναι σημαντική.",
+          "right": "Η αγάπη είναι σημαντική.",
+          "note": "In English, 'Love is important' has no article, but Greek requires 'Η'."
+        },
+        {
+          "wrong": "Ζωή είναι όμορφη.",
+          "right": "Η ζωή είναι όμορφη.",
+          "note": "Abstract concept 'life' needs the article in Greek."
+        },
+        {
+          "wrong": "Γνώση είναι δύναμη.",
+          "right": "Η γνώση είναι δύναμη.",
+          "note": "Knowledge is power - Greek uses 'Η'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'Happiness is a choice' into Greek, using the correct article.",
+          "answer": "Η ευτυχία είναι μια επιλογή."
+        },
+        {
+          "prompt": "Correct the mistake: 'Ελευθερία είναι δικαίωμα.' (Freedom is a right)",
+          "answer": "Η ελευθερία είναι δικαίωμα."
+        },
+        {
+          "prompt": "Write 'Patience is a virtue' in Greek with the article.",
+          "answer": "Η υπομονή είναι αρετή."
+        }
+      ]
+    },
+    {
+      "rule_id": "formal-plural-polite-address",
+      "topic": "Formal plural polite address",
+      "title": "Formal Plural Polite Address",
+      "explanation": "In Greek, to address one person formally (e.g., a stranger, elder, or superior), you use the second person plural forms (εσείς and the corresponding verb endings) instead of the singular (εσύ). A common mistake is using the singular or mixing singular and plural forms incorrectly. Remember: the adjective or noun describing the person stays singular (e.g., είστε καλός, not είστε καλοί) when referring to one individual politely.",
+      "examples": [
+        {
+          "wrong": "Πώς είσαι;",
+          "right": "Πώς είστε;",
+          "note": "Use the plural verb 'είστε' (you are) for polite singular address."
+        },
+        {
+          "wrong": "Εσύ είσαι ο κύριος Γιάννης;",
+          "right": "Εσείς είστε ο κύριος Γιάννης;",
+          "note": "Replace 'εσύ' with 'εσείς' and change the verb to plural."
+        },
+        {
+          "wrong": "Θα έρθεις αύριο;",
+          "right": "Θα έρθετε αύριο;",
+          "note": "The verb 'έρχομαι' (to come) takes the plural form 'έρθετε' for polite address."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How would you formally ask 'What is your name?' to a professor?",
+          "answer": "Πώς σας λένε;"
+        },
+        {
+          "prompt": "Translate formally: 'Can you help me?' (to a shop assistant).",
+          "answer": "Μπορείτε να με βοηθήσετε;"
+        },
+        {
+          "prompt": "Ask 'Do you speak English?' politely to a stranger.",
+          "answer": "Μιλάτε αγγλικά;"
+        }
+      ]
+    }
+  ]
+}

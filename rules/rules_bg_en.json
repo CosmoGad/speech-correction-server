@@ -1,0 +1,863 @@
+{
+  "learning": "bg",
+  "interface": "en",
+  "generated_at": "2026-06-27T14:45:49.553534+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "definite-article",
+      "topic": "Definite article",
+      "title": "Using the Definite Article in Bulgarian",
+      "explanation": "In Bulgarian, the definite article is attached to the end of a noun as a suffix, not placed before it like in English. For masculine singular nouns, it is usually -ът or -я (depending on the ending), for feminine it is -та, and for neuter it is -то. A common mistake is to omit the article entirely or to use it in the wrong position.",
+      "examples": [
+        {
+          "wrong": "Книга е интересна.",
+          "right": "Книгата е интересна.",
+          "note": "Add the feminine definite suffix -та to 'книга' (book) to mean 'the book'."
+        },
+        {
+          "wrong": "Виждам дете.",
+          "right": "Виждам детето.",
+          "note": "Neuter nouns take -то for the definite form: 'детето' means 'the child'."
+        },
+        {
+          "wrong": "Учител дойде.",
+          "right": "Учителят дойде.",
+          "note": "Masculine nouns ending in a consonant usually take -ът: 'учителят' means 'the teacher'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'the house' in Bulgarian? (house = къща)",
+          "answer": "къщата"
+        },
+        {
+          "prompt": "Translate: 'The boy is smart.' (boy = момче, smart = умен)",
+          "answer": "Момчето е умно."
+        },
+        {
+          "prompt": "Fill in the missing definite article: 'Това е _____ (стол - chair).'",
+          "answer": "столът"
+        }
+      ]
+    },
+    {
+      "rule_id": "verb-aspect",
+      "topic": "Verb aspect",
+      "title": "Mastering Bulgarian Verb Aspect: Perfective vs. Imperfective",
+      "explanation": "In Bulgarian, verbs come in pairs: imperfective (for ongoing, repeated, or habitual actions) and perfective (for completed, single, or one-time actions). English speakers often misuse these because English doesn't have a direct equivalent. Remember: imperfective answers 'what was happening?' and perfective answers 'what happened?'",
+      "examples": [
+        {
+          "wrong": "Вчера четох книга.",
+          "right": "Вчера прочетох книга.",
+          "note": "\"Четох\" is imperfective (I was reading), but for a completed action yesterday use the perfective \"прочетох\"."
+        },
+        {
+          "wrong": "Всеки ден прочитам вестник.",
+          "right": "Всеки ден чета вестник.",
+          "note": "\"Прочитам\" is perfective (I read it once), but for a habitual action (every day) use the imperfective \"чета\"."
+        },
+        {
+          "wrong": "Тя написа писмо в момента.",
+          "right": "Тя пише писмо в момента.",
+          "note": "\"Написа\" is perfective (she wrote), but \"в момента\" (right now) describes an ongoing action, so use the imperfective \"пише\"."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'I was cooking dinner when he arrived.' Use the correct aspect for the ongoing action.",
+          "answer": "Аз готвех вечеря, когато той пристигна."
+        },
+        {
+          "prompt": "You want to say 'I have already finished this book.' Which aspect for 'finished'?",
+          "answer": "Вече прочетох тази книга."
+        },
+        {
+          "prompt": "Describe a daily routine: 'Every morning I drink coffee.'",
+          "answer": "Всяка сутрин пия кафе."
+        }
+      ]
+    },
+    {
+      "rule_id": "clitic-placement",
+      "topic": "Clitic placement",
+      "title": "Clitic Placement in Bulgarian",
+      "explanation": "In Bulgarian, short unstressed pronouns (clitics) like 'го' (him), 'я' (her), 'ме' (me) must come immediately after the first stressed word or phrase in the sentence, not after the verb. They cannot start a sentence and follow a strict order: first the auxiliary 'съм' (am) in its short form, then reflexive 'се', then indirect object, then direct object. Avoid placing them at the end.",
+      "examples": [
+        {
+          "wrong": "Аз видях го вчера.",
+          "right": "Аз го видях вчера.",
+          "note": "The direct object clitic 'го' must come right after the subject 'Аз', before the verb."
+        },
+        {
+          "wrong": "Тя даде му книгата.",
+          "right": "Тя му даде книгата.",
+          "note": "The indirect object clitic 'му' should be placed before the verb, not after."
+        },
+        {
+          "wrong": "Дадох го на Петър.",
+          "right": "Дадох го на Петър.",
+          "note": "This is correct. If the first word is the verb, the clitic follows it directly – but if there is a subject or other constituent, it must come after that, not after the verb."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct this sentence: 'Аз искам я да дойде.' (I want her to come.)",
+          "answer": "Аз я искам да дойде."
+        },
+        {
+          "prompt": "Rearrange the clitics in the correct order: 'Той се е обадил.' is correct. But what about 'Той е се обадил.'? Fix it.",
+          "answer": "Той се е обадил."
+        },
+        {
+          "prompt": "Fix the clitic placement: 'Тя каза ми истината.' (She told me the truth.)",
+          "answer": "Тя ми каза истината."
+        }
+      ]
+    },
+    {
+      "rule_id": "prepositions",
+      "topic": "Prepositions",
+      "title": "Using 'в' and 'на' for Places",
+      "explanation": "In Bulgarian, the preposition 'в' means 'in' or 'into' and is used for enclosed spaces like rooms or buildings. The preposition 'на' means 'on' or 'at' and is used for surfaces or specific locations like work or school. A common mistake is mixing them up by directly translating English prepositions.",
+      "examples": [
+        {
+          "wrong": "Аз съм на училище.",
+          "right": "Аз съм в училище.",
+          "note": "Use 'в' when you are inside a building."
+        },
+        {
+          "wrong": "Книгата е в масата.",
+          "right": "Книгата е на масата.",
+          "note": "Use 'на' for surfaces like a table."
+        },
+        {
+          "wrong": "Тя е на стаята.",
+          "right": "Тя е в стаята.",
+          "note": "Use 'в' for enclosed spaces like a room."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: The cat is on the chair.",
+          "answer": "Котката е на стола."
+        },
+        {
+          "prompt": "Translate: The students are in the classroom.",
+          "answer": "Учениците са в класната стая."
+        },
+        {
+          "prompt": "Translate: The book is on the desk.",
+          "answer": "Книгата е на бюрото."
+        }
+      ]
+    },
+    {
+      "rule_id": "stress",
+      "topic": "Stress",
+      "title": "Mastering Bulgarian Word Stress",
+      "explanation": "In Bulgarian, word stress can fall on any syllable and often differs from English patterns. A common mistake is placing stress on the first syllable, as English speakers tend to do. Learning the correct stress is essential because it can change meaning or make your speech sound unnatural.",
+      "examples": [
+        {
+          "wrong": "бАща",
+          "right": "бащА",
+          "note": "The word for 'father' is stressed on the second syllable, not the first."
+        },
+        {
+          "wrong": "грАдина",
+          "right": "градИна",
+          "note": "'Garden' has stress on the second syllable – avoid putting it on the first."
+        },
+        {
+          "wrong": "учИлище",
+          "right": "учИлище",
+          "note": "This example is correct: 'school' is stressed on the second syllable. (No common mistake here, but reinforces the pattern.)"
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'water' in Bulgarian? (Think about the correct stress.)",
+          "answer": "водА"
+        },
+        {
+          "prompt": "Say 'boy' in Bulgarian with the right stress.",
+          "answer": "момчЕ"
+        },
+        {
+          "prompt": "What is the correct way to say 'teacher' (teacher - masculine) with stress?",
+          "answer": "учитЕл"
+        }
+      ]
+    },
+    {
+      "rule_id": "vowel-reduction",
+      "topic": "Vowel reduction",
+      "title": "Vowel Reduction in Unstressed Syllables",
+      "explanation": "In Bulgarian, unstressed vowels are often reduced to a shorter, weaker sound. The letter 'a' becomes 'ъ' (like 'uh'), 'o' becomes 'u' (like 'oo'), and 'e' becomes 'i' (like 'ee'). English speakers commonly pronounce each vowel as written, which sounds unnatural.",
+      "examples": [
+        {
+          "wrong": "мляко",
+          "right": "мляку",
+          "note": "The final 'о' is unstressed and reduces to 'у'. The correct spelling is 'мляко', but it is pronounced 'мляку'."
+        },
+        {
+          "wrong": "каза",
+          "right": "казъ",
+          "note": "The final 'а' is unstressed and reduces to 'ъ'. The correct spelling is 'каза', but it is pronounced 'казъ'."
+        },
+        {
+          "wrong": "пиша",
+          "right": "пишъ",
+          "note": "The final 'а' is unstressed and reduces to 'ъ'. The correct spelling is 'пиша', but it is pronounced 'пишъ'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How is the word 'мляко' actually pronounced in fast, natural speech? Write the reduced pronunciation using Bulgarian letters.",
+          "answer": "мляку"
+        },
+        {
+          "prompt": "Correct the mispronunciation: if a learner says 'каза' with a full final 'а', what should they say instead? Give the reduced pronunciation.",
+          "answer": "казъ"
+        },
+        {
+          "prompt": "Write the reduced pronunciation of 'пиша' (the final vowel is unstressed).",
+          "answer": "пишъ"
+        }
+      ]
+    },
+    {
+      "rule_id": "palatalization",
+      "topic": "Palatalization",
+      "title": "Understanding Palatalization in Bulgarian",
+      "explanation": "In Bulgarian, consonants can be 'soft' (palatalized) when followed by the vowels е, и, ю, я or the soft sign ь. English speakers often omit this softening, which can change the meaning of a word. The softening affects the consonant sound by raising the tongue toward the hard palate.",
+      "examples": [
+        {
+          "wrong": "бал",
+          "right": "бял",
+          "note": "Using 'а' instead of 'я' results in a hard consonant and a different word ('ball' instead of 'white')."
+        },
+        {
+          "wrong": "лула",
+          "right": "люля",
+          "note": "'лула' means 'pipe', while 'люля' with palatalized 'л' means 'to rock'."
+        },
+        {
+          "wrong": "тул",
+          "right": "тюл",
+          "note": "The soft sign (ь) after т is necessary; without it, the word is not recognized (tulle)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the Bulgarian word for 'white' (with a soft б).",
+          "answer": "бял"
+        },
+        {
+          "prompt": "Write the Bulgarian verb meaning 'to rock' (with a soft л).",
+          "answer": "люля"
+        },
+        {
+          "prompt": "Write the correct Bulgarian spelling for 'tulle' (with palatalized т).",
+          "answer": "тюл"
+        }
+      ]
+    },
+    {
+      "rule_id": "noun-gender-agreement",
+      "topic": "Noun gender agreement",
+      "title": "Noun Gender Agreement in Bulgarian",
+      "explanation": "In Bulgarian, every noun has a gender: masculine, feminine, or neuter. Adjectives, demonstratives, and possessive pronouns must match the gender of the noun they modify. English speakers often forget to change the ending of the adjective or the form of 'this' (този/тази/това) to agree with the noun.",
+      "examples": [
+        {
+          "wrong": "Този книга е интересна.",
+          "right": "Тази книга е интересна.",
+          "note": "Книга (book) is feminine, so you must use тази, not този."
+        },
+        {
+          "wrong": "Големи къща.",
+          "right": "Голяма къща.",
+          "note": "Къща (house) is feminine, so the adjective must end in -а (голяма), not -и."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the sentence: Това ябълка е червена. (Think about the gender of ябълка.)",
+          "answer": "Тази ябълка е червена."
+        },
+        {
+          "prompt": "Fill in the correct form of the adjective: Малък/Малка/Малко столче (stool, neuter).",
+          "answer": "Малко столче"
+        }
+      ]
+    },
+    {
+      "rule_id": "adjective-noun-agreement",
+      "topic": "Adjective-noun agreement",
+      "title": "Adjective-Noun Agreement in Bulgarian: Gender & Number",
+      "explanation": "In Bulgarian, adjectives must agree with the noun they modify in gender (masculine, feminine, neuter) and number (singular/plural). A common mistake is using the masculine singular form for all nouns. For feminine nouns, the adjective typically ends in -а (or -я), for neuter in -о (or -е), and for plural in -и (with some variations).",
+      "examples": [
+        {
+          "wrong": "красив къща",
+          "right": "красива къща",
+          "note": "Къща (house) is feminine, so the adjective must end in -а."
+        },
+        {
+          "wrong": "голям дете",
+          "right": "голямо дете",
+          "note": "Дете (child) is neuter, so the adjective ends in -о."
+        },
+        {
+          "wrong": "нов книга",
+          "right": "нова книга",
+          "note": "Книга (book) is feminine, so use нова."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the adjective in this phrase: 'добър учителка' (учителка is feminine).",
+          "answer": "добра учителка"
+        },
+        {
+          "prompt": "What is the correct form of 'малък' for 'дете' (neuter)? Write the full phrase.",
+          "answer": "малко дете"
+        },
+        {
+          "prompt": "Fix the adjective-noun agreement: 'нов книга'.",
+          "answer": "нова книга"
+        }
+      ]
+    },
+    {
+      "rule_id": "past-tense-aorist-vs-imperfect",
+      "topic": "Past tense aorist vs imperfect",
+      "title": "Past Tense: Aorist vs Imperfect",
+      "explanation": "In Bulgarian, the aorist (минало свършено време) is used for completed actions in the past, often a single event. The imperfect (минало несвършено време) describes ongoing, repeated, or background actions. A common mistake is confusing these two, such as using aorist for habitual actions or imperfect for completed ones.",
+      "examples": [
+        {
+          "wrong": "Винаги станах рано.",
+          "right": "Винаги ставах рано.",
+          "note": "Use imperfect for habitual actions ('always got up'). Aorist would mean a single completed event."
+        },
+        {
+          "wrong": "Вчера четох книга, когато той влезе.",
+          "right": "Вчера четях книга, когато той влезе.",
+          "note": "Use imperfect for the ongoing action ('was reading') and aorist for the interrupting event ('came in')."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'Yesterday I was reading a book.'",
+          "answer": "Вчера четях книга."
+        },
+        {
+          "prompt": "Fill in the blank with the correct form: 'When I called him, he (sleep) — use imperfect.'",
+          "answer": "спеше"
+        },
+        {
+          "prompt": "Complete: 'Every summer we (go) to the beach.' — use imperfect for habitual action.",
+          "answer": "ходехме"
+        }
+      ]
+    },
+    {
+      "rule_id": "verb-conjugation-present-tense",
+      "topic": "Verb conjugation present tense",
+      "title": "Present Tense Verb Conjugation: Common Endings Mistakes",
+      "explanation": "In Bulgarian, verbs change endings depending on the subject (аз, ти, той/тя/то, ние, вие, те). A common mistake is using the first person singular ending (-я or -а) for the third person singular. For most verbs, third person singular ends in -и or -е, not -я. Also, be careful with the first person plural ending (-м) — it's often confused with the third person plural (-т).",
+      "examples": [
+        {
+          "wrong": "Той работя.",
+          "right": "Той работи.",
+          "note": "Third person singular of -я verbs takes -и, not -я."
+        },
+        {
+          "wrong": "Ние работи.",
+          "right": "Ние работим.",
+          "note": "First person plural ends in -м, not the third person singular -и."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the verb in parentheses: Той (чета) книга.",
+          "answer": "чете"
+        },
+        {
+          "prompt": "Correct the verb in parentheses: Ние (говоря) български.",
+          "answer": "говорим"
+        }
+      ]
+    },
+    {
+      "rule_id": "plural-formation-of-nouns",
+      "topic": "Plural formation of nouns",
+      "title": "Plural Formation of Nouns in Bulgarian",
+      "explanation": "Bulgarian nouns form plurals differently depending on their gender. Masculine nouns often add -и or -ове, feminine nouns add -и, and neuter nouns add -а or -та. Be aware of consonant changes, e.g., к becomes ц before -и.",
+      "examples": [
+        {
+          "wrong": "столи",
+          "right": "столове",
+          "note": "Masculine nouns ending in a consonant often take -ове, not -и."
+        },
+        {
+          "wrong": "ученики",
+          "right": "ученици",
+          "note": "Masculine nouns ending in -к change к to ц before adding -и."
+        },
+        {
+          "wrong": "момча",
+          "right": "момчета",
+          "note": "Neuter nouns often take -та in the plural, not -а."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "What is the correct plural of 'град' (city)?",
+          "answer": "градове"
+        },
+        {
+          "prompt": "What is the correct plural of 'жена' (woman)?",
+          "answer": "жени"
+        },
+        {
+          "prompt": "What is the correct plural of 'дете' (child)?",
+          "answer": "деца"
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-pronouns-and-adjectives",
+      "topic": "Possessive pronouns and adjectives",
+      "title": "Possessive Pronouns vs. Possessive Adjectives in Bulgarian",
+      "explanation": "In Bulgarian, possessive adjectives (e.g., 'мой', 'моя', 'мое') come before a noun and agree with its gender and number. Possessive pronouns (same forms) are used without a noun and also agree with the gender/number of the implied object. A common mistake is using the wrong gender form or confusing the adjective with the pronoun.",
+      "examples": [
+        {
+          "wrong": "Това е мой книга.",
+          "right": "Това е моя книга.",
+          "note": "'Книга' is feminine, so the possessive adjective must be 'моя', not 'мой'."
+        },
+        {
+          "wrong": "Тази книга е мой.",
+          "right": "Тази книга е моя.",
+          "note": "When the possessive stands alone (pronoun), it must still match the gender of the noun it replaces - here feminine."
+        },
+        {
+          "wrong": "Това е моя.",
+          "right": "Това е моя.",
+          "note": "This can be confusing: 'моя' as a pronoun is correct for a feminine object, but English speakers might wrongly use 'мой'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'This is my phone.' (phone = телефон, masculine)",
+          "answer": "Това е мой телефон."
+        },
+        {
+          "prompt": "Translate: 'This phone is mine.' (use possessive pronoun)",
+          "answer": "Този телефон е мой."
+        },
+        {
+          "prompt": "Translate: 'These are my books.' (books = книги, plural)",
+          "answer": "Това са мои книги."
+        }
+      ]
+    },
+    {
+      "rule_id": "question-word-order",
+      "topic": "Question word order",
+      "title": "Question Word Order in Bulgarian",
+      "explanation": "In Bulgarian, question words (like какво, къде, кога) come first, followed immediately by the verb, then the subject or other elements. Unlike English, you do not need auxiliary verbs or subject-verb inversion; the word order is simply question word + verb + rest.",
+      "examples": [
+        {
+          "wrong": "Къде гарата е?",
+          "right": "Къде е гарата?",
+          "note": "The verb 'е' comes right after the question word, not after the subject."
+        },
+        {
+          "wrong": "Какво ти искаш?",
+          "right": "Какво искаш?",
+          "note": "Subject pronouns are usually omitted; if included, they follow the verb: 'Какво искаш ти?'"
+        },
+        {
+          "wrong": "Защо тя плаче?",
+          "right": "Защо плаче тя?",
+          "note": "The subject 'тя' goes after the verb, not before it."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate into Bulgarian: 'Where are you going?'",
+          "answer": "Къде отиваш?"
+        },
+        {
+          "prompt": "Translate into Bulgarian: 'What does she want?'",
+          "answer": "Какво иска тя?"
+        },
+        {
+          "prompt": "Correct the sentence: 'Кога той заминава?'",
+          "answer": "Кога заминава той?"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-the-vocative-case",
+      "topic": "Use of the vocative case",
+      "title": "Using the Vocative Case in Bulgarian",
+      "explanation": "When you directly address someone in Bulgarian, you must use the vocative case—not the nominative. For masculine names ending in a consonant, add -е (e.g., Иван → Иване). For feminine names ending in -а, change the ending to -о (e.g., Мария → Марийо). Some nouns, like приятел, also have a distinct vocative form (приятелю).",
+      "examples": [
+        {
+          "wrong": "Иван, ела тук!",
+          "right": "Иване, ела тук!",
+          "note": "Иван becomes Иване in the vocative."
+        },
+        {
+          "wrong": "Мария, как си?",
+          "right": "Марийо, как си?",
+          "note": "Мария becomes Марийо when addressing her directly."
+        },
+        {
+          "wrong": "Приятел, помогни ми!",
+          "right": "Приятелю, помогни ми!",
+          "note": "Приятел becomes приятелю in the vocative."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How would you call out to a man named Ivan?",
+          "answer": "Иване"
+        },
+        {
+          "prompt": "How would you address a woman named Maria?",
+          "answer": "Марийо"
+        },
+        {
+          "prompt": "How would you address a male friend (приятел)?",
+          "answer": "Приятелю"
+        }
+      ]
+    },
+    {
+      "rule_id": "da-constructions-and-subjunctive",
+      "topic": "Da-constructions and subjunctive",
+      "title": "Mastering 'da' for Subjunctive in Bulgarian",
+      "explanation": "In Bulgarian, the subjunctive mood is formed by the particle 'да' followed by the present tense verb. English speakers often forget to include 'да' or incorrectly use the infinitive instead. Always use 'да' before the verb to express wishes, obligations, or possibilities.",
+      "examples": [
+        {
+          "wrong": "Искам отида.",
+          "right": "Искам да отида.",
+          "note": "The verb 'отида' needs 'да' after 'искам' (to want)."
+        },
+        {
+          "wrong": "Трябва уча повече.",
+          "right": "Трябва да уча повече.",
+          "note": "'Трябва' (must) always requires 'да' before the verb."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I need to buy bread.'",
+          "answer": "Трябва да купя хляб."
+        },
+        {
+          "prompt": "Translate: 'She hopes to come tomorrow.'",
+          "answer": "Тя се надява да дойде утре."
+        }
+      ]
+    },
+    {
+      "rule_id": "negation-with-ne-and-nito",
+      "topic": "Negation with ne and nito",
+      "title": "Using 'ne' and 'nito' for Negation",
+      "explanation": "In Bulgarian, when negating a verb with 'не', use 'нито' (not 'не') before nouns or pronouns to mean 'no/any'. This is a common mistake because English uses 'not any' while Bulgarian uses double negation with 'нито'.",
+      "examples": [
+        {
+          "wrong": "Той не яде не месо.",
+          "right": "Той не яде нито месо.",
+          "note": "After 'не яде', use 'нито' instead of 'не' to say 'no meat'."
+        },
+        {
+          "wrong": "Нямам не пари.",
+          "right": "Нямам нито пари.",
+          "note": "With 'нямам' (I don't have), use 'нито' to express 'no money'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank: Тя не говори ___ дума.",
+          "answer": "нито"
+        },
+        {
+          "prompt": "Fill in the blank: Аз нямам ___ приятели.",
+          "answer": "нито"
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-verbs-and-pronouns",
+      "topic": "Reflexive verbs and pronouns",
+      "title": "Reflexive Verbs: Don't Forget 'се'",
+      "explanation": "In Bulgarian, many verbs need the reflexive pronoun 'се' when the action is done to oneself. English speakers often leave it out because English uses separate words like 'myself' or no reflexive at all. Always add 'се' before the verb when you do something to yourself.",
+      "examples": [
+        {
+          "wrong": "Аз мия.",
+          "right": "Аз се мия.",
+          "note": "Without 'се', 'мия' means 'I wash (something/someone else)'."
+        },
+        {
+          "wrong": "Той облича.",
+          "right": "Той се облича.",
+          "note": "'Облича' alone means 'he dresses someone else'; add 'се' for 'he dresses himself'."
+        },
+        {
+          "wrong": "Ние чувстваме.",
+          "right": "Ние се чувстваме.",
+          "note": "'Чувстваме' means 'we feel (something)'; 'се чувстваме' means 'we feel (ourselves, e.g., well)'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I wake up.' (use reflexive verb 'събуждам')",
+          "answer": "Аз се събуждам."
+        },
+        {
+          "prompt": "Translate: 'You (singular) get dressed.' (use reflexive verb 'обличам')",
+          "answer": "Ти се обличаш."
+        },
+        {
+          "prompt": "Translate: 'She feels happy.' (use reflexive verb 'чувствам')",
+          "answer": "Тя се чувства щастлива."
+        }
+      ]
+    },
+    {
+      "rule_id": "comparative-and-superlative-formation",
+      "topic": "Comparative and superlative formation",
+      "title": "Comparative and Superlative in Bulgarian",
+      "explanation": "In Bulgarian, comparatives are formed by adding the prefix 'по-' before the adjective (e.g., голям → по-голям). Superlatives add 'най-' and usually require a definite article on the adjective (e.g., най-големият). Common mistakes include using the adverb 'по-добре' instead of the adjective 'по-добър', omitting the definite article in superlatives, and doubling the 'по-' prefix.",
+      "examples": [
+        {
+          "wrong": "Той е по-добре от нея.",
+          "right": "Той е по-добър от нея.",
+          "note": "Use the adjective 'по-добър' (better) not the adverb 'по-добре' (better, as in 'feeling better') when comparing a quality."
+        },
+        {
+          "wrong": "Това е най-голям град.",
+          "right": "Това е най-големият град.",
+          "note": "Superlatives usually take a definite article on the adjective (here -ят for masculine)."
+        },
+        {
+          "wrong": "Тя е по-по-красива.",
+          "right": "Тя е по-красива.",
+          "note": "Only one 'по-' prefix is needed for the comparative form."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'This is the best book.'",
+          "answer": "Това е най-добрата книга."
+        },
+        {
+          "prompt": "Fill in the blank with the correct comparative: 'Моята кола е _____ (бърз) от твоята.'",
+          "answer": "по-бърза"
+        },
+        {
+          "prompt": "Correct the mistake: 'Той е най-добър играч.'",
+          "answer": "Той е най-добрият играч."
+        }
+      ]
+    },
+    {
+      "rule_id": "numerals-and-noun-agreement",
+      "topic": "Numerals and noun agreement",
+      "title": "Numerals and Noun Agreement in Bulgarian",
+      "explanation": "In Bulgarian, the form of the noun after numerals changes: after 1, use the singular; after 2, 3, 4, use the special 'count form' (for masculine inanimate nouns, ends in -а); after 5 and above, use the regular plural. This mistake is most common with masculine inanimate nouns, as the count and plural forms differ.",
+      "examples": [
+        {
+          "wrong": "Два столове са в стаята.",
+          "right": "Два стола са в стаята.",
+          "note": "After 2, use the count form 'стола', not the plural 'столове'."
+        },
+        {
+          "wrong": "Пет стола са на масата.",
+          "right": "Пет столове са на масата.",
+          "note": "After 5, use the regular plural 'столове', not the count form."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'two pencils' into Bulgarian.",
+          "answer": "два молива"
+        },
+        {
+          "prompt": "Translate 'five pencils' into Bulgarian.",
+          "answer": "пет моливи"
+        },
+        {
+          "prompt": "Translate 'one chair' into Bulgarian.",
+          "answer": "един стол"
+        }
+      ]
+    },
+    {
+      "rule_id": "particle-li-in-questions",
+      "topic": "Particle li in questions",
+      "title": "Using the Particle 'li' in Yes/No Questions",
+      "explanation": "In Bulgarian, yes/no questions are formed by placing the particle 'li' immediately after the verb or the word being questioned. Unlike English, which uses auxiliary inversion (e.g., 'Do you speak?'), Bulgarian simply attaches 'li' to the verb. Omitting 'li' is a common mistake for English learners, making the sentence sound like a statement rather than a question.",
+      "examples": [
+        {
+          "wrong": "Ти говориш български?",
+          "right": "Говориш ли български?",
+          "note": "The particle 'li' comes right after the verb 'говориш' (you speak). Without 'li', the sentence is just a statement with rising intonation, which is incorrect in standard Bulgarian."
+        },
+        {
+          "wrong": "Тя е учителка?",
+          "right": "Тя учителка ли е?",
+          "note": "When questioning a noun or adjective (here 'учителка' – teacher), 'li' follows that word, and the verb 'е' (is) comes after 'li'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate this question correctly: 'Do you want coffee?' using 'li'.",
+          "answer": "Искаш ли кафе?"
+        },
+        {
+          "prompt": "Correct the following question: 'Той е студент?' by adding 'li' in the right place.",
+          "answer": "Той студент ли е?"
+        }
+      ]
+    },
+    {
+      "rule_id": "conditional-mood-formation",
+      "topic": "Conditional mood formation",
+      "title": "Forming the Conditional Mood in Bulgarian",
+      "explanation": "The conditional mood in Bulgarian expresses actions that would happen under a condition. It is formed using the auxiliary verb 'бих' (or its forms би, бихме, бихте, биха) plus the past active participle (ending in -л). A common mistake is using 'ще' (future tense marker) instead of 'бих', or incorrectly conjugating the auxiliary.",
+      "examples": [
+        {
+          "wrong": "Аз ще отида, ако имам време.",
+          "right": "Аз бих отишъл, ако имах време.",
+          "note": "Use 'бих' + past participle for conditional, not 'ще' for future."
+        },
+        {
+          "wrong": "Той бих направи това.",
+          "right": "Той би направил това.",
+          "note": "'бих' is only for first person singular; use 'би' for third person singular."
+        },
+        {
+          "wrong": "Ние бихме отидем.",
+          "right": "Ние бихме отишли.",
+          "note": "The main verb must be in the past active participle form (e.g., отишли)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'We would help you.'",
+          "answer": "Ние бихме ви помогнали."
+        },
+        {
+          "prompt": "Correct the sentence: 'Аз бих отида на море.'",
+          "answer": "Аз бих отишъл/а на море."
+        },
+        {
+          "prompt": "Fill in the blank: 'Той ___ (come) навреме, ако можеше.'",
+          "answer": "Той би дошъл навреме, ако можеше."
+        }
+      ]
+    },
+    {
+      "rule_id": "imperative-mood-forms",
+      "topic": "Imperative mood forms",
+      "title": "Imperative Mood: Singular vs. Plural/Formal",
+      "explanation": "In Bulgarian, the imperative mood has different forms for singular (informal 'ти') and plural/formal ('вие'/'Вие'). A common mistake is using the singular form when addressing more than one person or using the plural form when addressing one person. To form the singular imperative, drop the '-те' from the plural form or add '-и'/'‑й' to the verb stem.",
+      "examples": [
+        {
+          "wrong": "Говорите!",
+          "right": "Говори!",
+          "note": "'Говорите' is plural or formal; use 'Говори' for a single informal person."
+        },
+        {
+          "wrong": "Пиши!",
+          "right": "Пишете!",
+          "note": "'Пиши' is singular informal; use 'Пишете' when addressing multiple people or formally."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Tell your friend (singular) to speak.",
+          "answer": "Говори!"
+        },
+        {
+          "prompt": "Tell a group of people to write.",
+          "answer": "Пишете!"
+        },
+        {
+          "prompt": "Tell your boss (formal) to read.",
+          "answer": "Четете!"
+        }
+      ]
+    },
+    {
+      "rule_id": "future-tense-with-shte-and-da",
+      "topic": "Future tense with shte and da",
+      "title": "Future Tense: Don't Use 'да' After 'ще'",
+      "explanation": "In Bulgarian, the future tense is formed with the particle 'ще' (shte) followed directly by the present tense form of the verb. A common mistake is inserting 'да' (da) between 'ще' and the verb, which is incorrect—'ще' already carries the future meaning, so 'да' is unnecessary.",
+      "examples": [
+        {
+          "wrong": "Аз ще да отида на кино.",
+          "right": "Аз ще отида на кино.",
+          "note": "Remove 'да' after 'ще'; the verb 'отида' stays in present perfective form."
+        },
+        {
+          "wrong": "Той ще да дойде утре.",
+          "right": "Той ще дойде утре.",
+          "note": "The future of 'дойде' (comes) is simply 'ще дойде'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct this sentence: 'Ние ще да учим испански.'",
+          "answer": "Ние ще учим испански."
+        },
+        {
+          "prompt": "Correct this sentence: 'Тя ще да купи хляб.'",
+          "answer": "Тя ще купи хляб."
+        },
+        {
+          "prompt": "Correct this sentence: 'Те ще да играят футбол.'",
+          "answer": "Те ще играят футбол."
+        }
+      ]
+    },
+    {
+      "rule_id": "relative-clauses-with-koito",
+      "topic": "Relative clauses with koito",
+      "title": "Using 'koito' correctly in relative clauses",
+      "explanation": "In Bulgarian, the relative pronoun 'koito' must agree with its antecedent in gender (masculine, feminine, neuter) and number (singular, plural). It also takes the case required by its role in the relative clause—nominative for subjects, accusative for direct objects. Common mistakes include using the wrong gender/number form or forgetting the accusative case for objects.",
+      "examples": [
+        {
+          "wrong": "Това е мъжът, който го видях.",
+          "right": "Това е мъжът, когото видях.",
+          "note": "When the relative pronoun is the direct object, use 'когото' (masculine accusative) instead of 'който' (nominative)."
+        },
+        {
+          "wrong": "Това са жените, който работят.",
+          "right": "Това са жените, които работят.",
+          "note": "For plural antecedents of any gender, use 'които' (not the singular 'който')."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complete with the correct form of 'koito': Това е детето, _____ играе в градината. (neuter singular, subject)",
+          "answer": "което"
+        },
+        {
+          "prompt": "Complete with the correct form of 'koito': Това е колегата, _____ срещнах вчера. (masculine singular, direct object)",
+          "answer": "когото"
+        },
+        {
+          "prompt": "Complete with the correct form of 'koito': Това са книгите, _____ купих. (plural, direct object)",
+          "answer": "които"
+        }
+      ]
+    }
+  ]
+}

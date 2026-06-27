@@ -1,0 +1,105 @@
+{
+  "learning": "el",
+  "topics": [
+    {
+      "rule_id": "articles",
+      "title": "Articles"
+    },
+    {
+      "rule_id": "noun-cases",
+      "title": "Noun cases"
+    },
+    {
+      "rule_id": "gender-agreement",
+      "title": "Gender agreement"
+    },
+    {
+      "rule_id": "verb-conjugation",
+      "title": "Verb conjugation"
+    },
+    {
+      "rule_id": "stress-placement",
+      "title": "Stress placement"
+    },
+    {
+      "rule_id": "vowel-sounds",
+      "title": "Vowel sounds"
+    },
+    {
+      "rule_id": "γχ-consonants",
+      "title": "γ/χ consonants"
+    },
+    {
+      "rule_id": "subjunctive-mood-with-να",
+      "title": "Subjunctive mood with να"
+    },
+    {
+      "rule_id": "future-tense-with-θα",
+      "title": "Future tense with θα"
+    },
+    {
+      "rule_id": "weak-pronoun-placement",
+      "title": "Weak pronoun placement"
+    },
+    {
+      "rule_id": "existence-είμαι-vs-έχω",
+      "title": "Existence: είμαι vs έχω"
+    },
+    {
+      "rule_id": "aorist-vs-imperfect-aspect",
+      "title": "Aorist vs imperfect aspect"
+    },
+    {
+      "rule_id": "perfect-tense-formation",
+      "title": "Perfect tense formation"
+    },
+    {
+      "rule_id": "passive-voice-endings",
+      "title": "Passive voice endings"
+    },
+    {
+      "rule_id": "imperative-mood-forms",
+      "title": "Imperative mood forms"
+    },
+    {
+      "rule_id": "comparative-degree-formation",
+      "title": "Comparative degree formation"
+    },
+    {
+      "rule_id": "definite-article-with-names",
+      "title": "Definite article with names"
+    },
+    {
+      "rule_id": "relative-pronouns-που-vs-ο-οποίος",
+      "title": "Relative pronouns που vs ο οποίος"
+    },
+    {
+      "rule_id": "vocative-case-usage",
+      "title": "Vocative case usage"
+    },
+    {
+      "rule_id": "conditional-sentences",
+      "title": "Conditional sentences"
+    },
+    {
+      "rule_id": "πως-vs-ότι-for-that",
+      "title": "Πως vs ότι for 'that'"
+    },
+    {
+      "rule_id": "diphthong-αυευ-pronunciation",
+      "title": "Diphthong αυ/ευ pronunciation"
+    },
+    {
+      "rule_id": "double-consonant-sounds",
+      "title": "Double consonant sounds"
+    },
+    {
+      "rule_id": "article-with-abstract-nouns",
+      "title": "Article with abstract nouns"
+    },
+    {
+      "rule_id": "formal-plural-polite-address",
+      "title": "Formal plural polite address"
+    }
+  ]
+}

@@ -1,0 +1,878 @@
+{
+  "learning": "fa",
+  "interface": "en",
+  "generated_at": "2026-06-27T04:55:20.075161+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "حروف-اضافه",
+      "topic": "حروف اضافه",
+      "title": "Prepositions: 'In' vs 'To'",
+      "explanation": "In Persian, the preposition 'به' (to) is used for movement toward a place, not for being at a location. To express being at a place, use 'در' (in/at) or colloquially 'توی'. Using 'به' for static location is a common mistake.",
+      "examples": [
+        {
+          "wrong": "من به خانه هستم.",
+          "right": "من در خانه هستم.",
+          "note": "Use 'در' for being at a place, not 'به' which indicates direction."
+        },
+        {
+          "wrong": "او به ایران زندگی می کند.",
+          "right": "او در ایران زندگی می کند.",
+          "note": "Living somewhere requires 'در', not 'به'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How would you say 'I work at the office'?",
+          "answer": "من در اداره کار می کنم."
+        },
+        {
+          "prompt": "Correct this sentence: 'کتاب به کیف است.'",
+          "answer": "کتاب در کیف است."
+        }
+      ]
+    },
+    {
+      "rule_id": "زمانهای-فعل",
+      "topic": "زمان‌های فعل",
+      "title": "Don't Use Present Tense for Past Actions",
+      "explanation": "In Persian, past actions must be expressed using past tense verbs, not present tense. The present tense (with the prefix می‌) is only for current or habitual actions. A common mistake is to use present tense forms when talking about yesterday or last week.",
+      "examples": [
+        {
+          "wrong": "دیروز من می‌روم به مدرسه.",
+          "right": "دیروز من رفتم به مدرسه.",
+          "note": "دیروز (yesterday) requires the past simple, not present."
+        },
+        {
+          "wrong": "او دیشب کتاب می‌خواند.",
+          "right": "او دیشب کتاب خواند.",
+          "note": "می‌خواند is present progressive; for a completed past action use خواند."
+        },
+        {
+          "wrong": "ما هفته پیش فیلم می‌بینیم.",
+          "right": "ما هفته پیش فیلم دیدیم.",
+          "note": "می‌بینیم is present; since it's last week, use the past simple دیدیم."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'Yesterday I ate an apple' in Persian?",
+          "answer": "دیروز من یک سیب خوردم."
+        },
+        {
+          "prompt": "Correct this sentence: 'او دیشب می‌خوابد' (you want to say 'He slept last night').",
+          "answer": "او دیشب خوابید."
+        },
+        {
+          "prompt": "Translate: 'Last week they went to the park'.",
+          "answer": "هفته پیش آنها به پارک رفتند."
+        }
+      ]
+    },
+    {
+      "rule_id": "جمع-بستن",
+      "topic": "جمع بستن",
+      "title": "Common Pluralization Mistake: Redundant Plural with Numbers",
+      "explanation": "In Persian, when a number is used before a noun, the noun must stay singular. Adding plural suffixes like 'ها' or 'ان' after a number is incorrect. This rule applies to all nouns, whether animate or inanimate.",
+      "examples": [
+        {
+          "wrong": "سه کتاب ها",
+          "right": "سه کتاب",
+          "note": "After numbers, nouns remain singular."
+        },
+        {
+          "wrong": "پنج دانش آموزان",
+          "right": "پنج دانش آموز",
+          "note": "Same rule for animate nouns (humans)."
+        },
+        {
+          "wrong": "دو گربه ها",
+          "right": "دو گربه",
+          "note": "Animals also stay singular after numbers."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'four cars' in Persian?",
+          "answer": "چهار ماشین"
+        },
+        {
+          "prompt": "Correct this: 'ده سگ ها'",
+          "answer": "ده سگ"
+        },
+        {
+          "prompt": "Translate 'two friends' (using the word دوست)",
+          "answer": "دو دوست"
+        }
+      ]
+    },
+    {
+      "rule_id": "نقش-کلمات-در-جمله",
+      "topic": "نقش کلمات در جمله",
+      "title": "Word Roles in Persian: Subject-Object-Verb Order",
+      "explanation": "In Persian, the standard sentence structure is Subject + Object + Verb, unlike English's Subject + Verb + Object. Additionally, definite direct objects take the suffix 'را' (pronounced 'râ'). Misplacing the verb or forgetting 'را' are common mistakes for English learners.",
+      "examples": [
+        {
+          "wrong": "من می‌خورم سیب.",
+          "right": "من سیب می‌خورم.",
+          "note": "The verb must come after the object."
+        },
+        {
+          "wrong": "من کتاب می‌خوانم. (meaning 'the book')",
+          "right": "من کتاب را می‌خوانم.",
+          "note": "Use 'را' after a definite direct object."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'I eat an apple' into Persian with correct word order.",
+          "answer": "من سیب می‌خورم."
+        },
+        {
+          "prompt": "Correct the word order: 'من می‌بینم او را.'",
+          "answer": "من او را می‌بینم."
+        },
+        {
+          "prompt": "Add the object marker if needed: 'من ماشین می‌خرم' (I buy the car).",
+          "answer": "من ماشین را می‌خرم."
+        }
+      ]
+    },
+    {
+      "rule_id": "تلفظ-حروف-صدادار",
+      "topic": "تلفظ حروف صدادار",
+      "title": "Long vs. Short Vowels in Persian",
+      "explanation": "Persian distinguishes between short and long vowel sounds. A common error for English speakers is to pronounce long vowels (like آ as in 'father') as short vowels (like َ as in 'cat'), which can change the meaning of a word. Focus on holding the long vowel sound longer and more open.",
+      "examples": [
+        {
+          "wrong": "در",
+          "right": "دار",
+          "note": "The word for 'have' (as in 'I have') requires the long vowel آ, not the short vowel in 'در' (meaning 'in' or 'door')."
+        },
+        {
+          "wrong": "من",
+          "right": "مان",
+          "note": "The word for 'us' uses the long vowel آ (مـان), not the short vowel in 'من' (meaning 'I')."
+        },
+        {
+          "wrong": "کش",
+          "right": "کیش",
+          "note": "The word for 'island' uses the long vowel ی (ـیـ), while 'کش' with short vowel means 'pull'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the Persian word for 'water' (it starts with a long vowel).",
+          "answer": "آب"
+        },
+        {
+          "prompt": "Fill in the blank: The word for 'moon' is _____.",
+          "answer": "ماه"
+        },
+        {
+          "prompt": "Correct the spelling: شر (intended meaning 'lion, milk').",
+          "answer": "شیر"
+        }
+      ]
+    },
+    {
+      "rule_id": "تشدید",
+      "topic": "تشدید",
+      "title": "Mastering Tashdid (تشديد) – The Double Consonant Mark",
+      "explanation": "Tashdid ( ّ ) is a diacritical mark that doubles a consonant, changing both pronunciation and meaning. A common mistake is omitting it where needed, especially in words like 'but' (امّا) and 'child' (بچّه). Remember: tashdid sits above the doubled letter.",
+      "examples": [
+        {
+          "wrong": "اما",
+          "right": "امّا",
+          "note": "Without tashdid, this would be read as 'ama' (a different word)."
+        },
+        {
+          "wrong": "بچه",
+          "right": "بچّه",
+          "note": "Omitting the tashdid changes the pronunciation to 'bache' (short) instead of 'bachcheh'."
+        },
+        {
+          "wrong": "تشکر",
+          "right": "تشکّر",
+          "note": "The correct spelling has tashdid on the kaf to show the double consonant 'kk'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the correct Persian spelling for the conjunction meaning 'but'.",
+          "answer": "امّا"
+        },
+        {
+          "prompt": "Which letter needs a tashdid in the word for 'child'? Write the full correct word.",
+          "answer": "بچّه"
+        },
+        {
+          "prompt": "Fix the spelling error in this word: 'تشکر' (as in 'thank you').",
+          "answer": "تشکّر"
+        }
+      ]
+    },
+    {
+      "rule_id": "آهنگ-جمله",
+      "topic": "آهنگ جمله",
+      "title": "Sentence Intonation in Persian (آهنگ جمله)",
+      "explanation": "In Persian, intonation patterns differ from English. Yes/no questions end with a sharp rising intonation on the last syllable, while statements and wh-questions use a falling intonation. A common mistake is using English intonation, which can make questions sound like statements or vice versa.",
+      "examples": [
+        {
+          "wrong": "تو کتاب داری.",
+          "right": "تو کتاب داری؟",
+          "note": "Using a period (falling intonation) turns this into a statement. For a yes/no question, the voice must rise at the end, shown by a question mark."
+        },
+        {
+          "wrong": "او آمد",
+          "right": "او آمد؟",
+          "note": "The same words can be a statement (falling) or a question (rising). In Persian, the intonation alone distinguishes them, so always use rising intonation for yes/no questions."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "You want to ask if someone has a book. Write the Persian question with correct intonation (use punctuation to show it).",
+          "answer": "تو کتاب داری؟"
+        },
+        {
+          "prompt": "You want to ask where the library is. Write the Persian wh-question with the correct intonation pattern (wh-questions use falling intonation).",
+          "answer": "کتابخانه کجاست؟"
+        }
+      ]
+    },
+    {
+      "rule_id": "word-order-flexibility-limits",
+      "topic": "Word order flexibility limits",
+      "title": "Limits of Word Order Flexibility in Persian",
+      "explanation": "Persian follows a strict Subject-Object-Verb (SOV) order in standard declarative sentences. While minor shifts are allowed for emphasis, the verb must always appear at the end of the clause. A common mistake is placing the verb before the object or moving time expressions incorrectly.",
+      "examples": [
+        {
+          "wrong": "من می‌خورم سیب",
+          "right": "من سیب می‌خورم",
+          "note": "The verb 'می‌خورم' must come after the object 'سیب' in standard Persian."
+        },
+        {
+          "wrong": "کتاب خواند او",
+          "right": "او کتاب خواند",
+          "note": "Subject 'او' must precede the object 'کتاب' in neutral word order."
+        },
+        {
+          "wrong": "من می‌روم به مدرسه هر روز",
+          "right": "من هر روز به مدرسه می‌روم",
+          "note": "Time expressions like 'هر روز' should be placed before the verb, not after."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'I read a book' using correct Persian word order.",
+          "answer": "من کتاب می‌خوانم"
+        },
+        {
+          "prompt": "Correct the order in this sentence: 'او می‌نویسد نامه' (He writes a letter).",
+          "answer": "او نامه می‌نویسد"
+        },
+        {
+          "prompt": "Arrange these words into a correct Persian sentence: صبحانه / می‌خورم / من (breakfast / eat / I).",
+          "answer": "من صبحانه می‌خورم"
+        }
+      ]
+    },
+    {
+      "rule_id": "direct-object-marker-ra-usage",
+      "topic": "Direct object marker 'ra' usage",
+      "title": "Using the Direct Object Marker 'را' (râ) in Persian",
+      "explanation": "In Persian, definite direct objects (specific, known items) must be marked with the suffix 'را'. English speakers often omit it or use it with indefinite objects. The marker attaches after the object, and if the object is indefinite (e.g., with 'یک' or no special marker), 'را' is not used.",
+      "examples": [
+        {
+          "wrong": "من کتاب خواندم",
+          "right": "من کتاب را خواندم",
+          "note": "Without 'را', the sentence means 'I read a book' (indefinite). With 'را', it means 'I read the book' (definite)."
+        },
+        {
+          "wrong": "او نامه نوشت",
+          "right": "او نامه را نوشت",
+          "note": "Use 'را' when the object is a specific letter, not just any letter."
+        },
+        {
+          "wrong": "من این غذا دوست دارم",
+          "right": "من این غذا را دوست دارم",
+          "note": "Demonstratives like 'این' make the object definite, so 'را' is required."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I bought the car.' (car = ماشین)",
+          "answer": "من ماشین را خریدم"
+        },
+        {
+          "prompt": "Correct the mistake: 'او دوست خود دید' (He saw his friend – assume the friend is specific).",
+          "answer": "او دوست خود را دید"
+        },
+        {
+          "prompt": "Add 'را' if needed: 'من یک سیب خوردم' (I ate an apple – note: 'یک' makes it indefinite).",
+          "answer": "من یک سیب خوردم"
+        }
+      ]
+    },
+    {
+      "rule_id": "ezafe-construction-rules",
+      "topic": "Ezafe construction rules",
+      "title": "Ezafe Construction: The Linking 'e'",
+      "explanation": "In Persian, when a noun is followed by an adjective, a possessive pronoun, or another noun in a descriptive phrase, you must add an unstressed “e” (ezafe, written as ‌ِ or as a short vowel) to the end of the first noun. This rule is often called the ezafe construction. Beginners frequently omit this linking sound or add it incorrectly.",
+      "examples": [
+        {
+          "wrong": "کتاب خوب",
+          "right": "کتابِ خوب",
+          "note": "Without the ezafe, the phrase sounds incomplete. The ‘e’ links the noun 'ketâb' (book) to the adjective 'khub' (good)."
+        },
+        {
+          "wrong": "دوست من",
+          "right": "دوستِ من",
+          "note": "Possessive pronouns also require the ezafe on the first noun. 'Dust' (friend) needs an 'e' before 'man' (my)."
+        },
+        {
+          "wrong": "خانه بزرگ",
+          "right": "خانه‌ی بزرگ",
+          "note": "With words ending in a vowel (like 'khâneh'), the ezafe is written as a ی (ye) and sounds like 'ye'. Wrong: missing the linking sound."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the correct Persian phrase for 'beautiful flower' (using 'gol' for flower and 'zibâ' for beautiful).",
+          "answer": "گلِ زیبا"
+        },
+        {
+          "prompt": "Write the correct Persian phrase for 'my car' (using 'mâshin' for car).",
+          "answer": "ماشینِ من"
+        },
+        {
+          "prompt": "Write the correct Persian phrase for 'the door of the house' (using 'dar' for door and 'khâneh' for house).",
+          "answer": "درِ خانه"
+        }
+      ]
+    },
+    {
+      "rule_id": "indefinite-marker-ye-placement",
+      "topic": "Indefinite marker 'ye' placement",
+      "title": "Indefinite Marker 'ye' Placement",
+      "explanation": "In Persian, the indefinite marker is a suffix '-i' (written as 'ye' after vowels) that attaches directly to the noun. It is never a separate word. Common mistakes include placing it before the noun or incorrectly after a possessive suffix.",
+      "examples": [
+        {
+          "wrong": "ye ketab",
+          "right": "ketabi",
+          "note": "The marker must be attached to the noun as a suffix, not a separate word."
+        },
+        {
+          "wrong": "dustami",
+          "right": "dusti az man",
+          "note": "When using a possessive, put the indefinite marker on the noun itself, not on the possessive suffix."
+        },
+        {
+          "wrong": "ye daneshamuz-e khoob",
+          "right": "daneshamuz-e khoobi",
+          "note": "If an adjective follows, the indefinite suffix goes on the adjective, not on the noun."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'a chair' in Persian?",
+          "answer": "sandali"
+        },
+        {
+          "prompt": "Correct the mistake: 'ye rang' (a color)",
+          "answer": "rangi"
+        },
+        {
+          "prompt": "How do you say 'a big house' in Persian?",
+          "answer": "khane-ye bozorgi"
+        }
+      ]
+    },
+    {
+      "rule_id": "informal-vs-formal-register-shifts",
+      "topic": "Informal vs formal register shifts",
+      "title": "Informal vs Formal Register in Persian",
+      "explanation": "In Persian, the informal register is used with friends and family, while the formal register is used in writing, speeches, or when addressing strangers or elders. A common mistake is mixing these registers, especially by using informal pronouns (تو) and verb endings in formal contexts. To shift to formal, replace 'تو' with 'شما' and use the full verb endings like 'هستید' instead of 'هستی'.",
+      "examples": [
+        {
+          "wrong": "تو چطوری؟",
+          "right": "شما چطور هستید؟",
+          "note": "Use 'شما' and the formal verb ending 'هستید' instead of the informal 'تو' and 'هستی'."
+        },
+        {
+          "wrong": "می‌خوام برم",
+          "right": "می‌خواهم بروم",
+          "note": "Informal shortens 'می‌خواهم' to 'می‌خوام' and 'بروم' to 'برم'; formal uses full forms."
+        },
+        {
+          "wrong": "کتابتو به من بده",
+          "right": "کتابتان را به من بدهید",
+          "note": "Informal uses possessive '-تو' and imperative 'بده'; formal uses '-تان' and 'بدهید'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How would you say 'How are you?' in formal Persian?",
+          "answer": "شما چطور هستید؟"
+        },
+        {
+          "prompt": "Change this informal sentence to formal: 'می‌خوام برم'",
+          "answer": "می‌خواهم بروم"
+        },
+        {
+          "prompt": "Make this command formal: 'بشین' (sit down)",
+          "answer": "بشینید"
+        }
+      ]
+    },
+    {
+      "rule_id": "subject-pronoun-omission-patterns",
+      "topic": "Subject pronoun omission patterns",
+      "title": "When to Omit Subject Pronouns in Persian",
+      "explanation": "In Persian, subject pronouns like 'man' (I), 'to' (you), and 'u' (he/she) are often left out because the verb ending already tells you who is doing the action. English speakers frequently add them unnecessarily, creating a redundant sentence. Only include the pronoun when you want to emphasize the subject or when the context might be unclear.",
+      "examples": [
+        {
+          "wrong": "من کتاب می‌خوانم",
+          "right": "کتاب می‌خوانم",
+          "note": "The verb 'می‌خوانم' already means 'I read'. Adding 'من' is redundant unless you want to stress 'I' (not you)."
+        },
+        {
+          "wrong": "تو به مدرسه می‌روی",
+          "right": "به مدرسه می‌روی",
+          "note": "The verb 'می‌روی' shows second person singular; omit 'تو' in a neutral statement."
+        },
+        {
+          "wrong": "او دانشجو است",
+          "right": "دانشجو است",
+          "note": "The verb 'است' already indicates third person singular; 'او' is not needed unless contrasting with another person."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'I am a teacher' into Persian, but use the correct omission pattern.",
+          "answer": "معلم هستم"
+        },
+        {
+          "prompt": "How would you say 'You (singular) go to the park' without the pronoun?",
+          "answer": "به پارک می‌روی"
+        },
+        {
+          "prompt": "Say 'She reads a book' in Persian, omitting the subject pronoun.",
+          "answer": "کتاب می‌خواند"
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-enclitics-vs-separate-pronouns",
+      "topic": "Possessive enclitics vs separate pronouns",
+      "title": "Possessive Enclitics vs Separate Pronouns",
+      "explanation": "In Persian, possession can be shown by attaching enclitics (like -am, -at, -ash) directly to the noun or by using separate possessive pronouns (like man, to, u) after the noun. A common mistake is placing the separate pronoun before the noun or using both a separate pronoun and an enclitic together. Remember: the possessive pronoun always comes after the noun, and you should choose either the enclitic or the separate pronoun, not both.",
+      "examples": [
+        {
+          "wrong": "من کتاب",
+          "right": "کتاب من",
+          "note": "The possessive pronoun 'man' should follow the noun, not precede it."
+        },
+        {
+          "wrong": "کتاب منم",
+          "right": "کتاب من",
+          "note": "Do not combine both the separate pronoun 'man' and the enclitic '-am'. Use one or the other."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the possessive in this sentence: 'این من کتاب است.'",
+          "answer": "این کتاب من است."
+        },
+        {
+          "prompt": "Write 'my book' using only an enclitic (no separate pronoun).",
+          "answer": "کتابم"
+        }
+      ]
+    },
+    {
+      "rule_id": "comparative-and-superlative-formation",
+      "topic": "Comparative and superlative formation",
+      "title": "Comparative and Superlative Formation",
+      "explanation": "In Persian, the comparative is formed by adding the suffix -tar (تر) to the adjective, and the superlative by adding -tarin (ترین). A common mistake is using the same suffix for both, or incorrectly placing the superlative after the noun. Also, remember that in comparatives, the word az (از) means 'than'.",
+      "examples": [
+        {
+          "wrong": "او بلندترترین است.",
+          "right": "او بلندترین است.",
+          "note": "Double suffixes are wrong; superlative needs only -tarin (ترین)."
+        },
+        {
+          "wrong": "این کتاب خوب‌تر از آن است.",
+          "right": "این کتاب بهتر از آن است.",
+          "note": "The adjective 'good' has an irregular comparative: better = بهتر (behtar)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'This is the biggest house.'",
+          "answer": "این بزرگ‌ترین خانه است."
+        },
+        {
+          "prompt": "Correct the sentence: 'Ali از من بلندترتر است.'",
+          "answer": "علی از من بلندتر است."
+        }
+      ]
+    },
+    {
+      "rule_id": "spoken-vs-written-verb-forms",
+      "topic": "Spoken vs written verb forms",
+      "title": "Spoken vs Written Verb Forms in Persian",
+      "explanation": "In Persian, verbs often have distinct forms for writing and everyday speech. Written forms are more formal, while spoken forms drop syllables or change vowels for easier pronunciation. A common mistake is using the written form in conversation, which can sound stilted or unnatural.",
+      "examples": [
+        {
+          "wrong": "من میروم",
+          "right": "من میرم",
+          "note": "For 'I go', drop the syllable 'av' in spoken form."
+        },
+        {
+          "wrong": "من میخواهم",
+          "right": "من میخوام",
+          "note": "For 'I want', shorten 'mikhaham' to 'mikham' in speech."
+        },
+        {
+          "wrong": "دارم میروم",
+          "right": "دارم میرم",
+          "note": "In present continuous, the main verb also uses the spoken form."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'I go' in spoken Persian?",
+          "answer": "من میرم"
+        },
+        {
+          "prompt": "Say 'I want' the way a native speaker would in conversation.",
+          "answer": "من میخوام"
+        },
+        {
+          "prompt": "Change this written sentence to spoken: 'دارم میخوانم'.",
+          "answer": "دارم میخونم"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-mi-for-present-and-past",
+      "topic": "Use of 'mi-' for present and past",
+      "title": "When to use 'mi-' in Present and Past",
+      "explanation": "In Persian, the prefix 'mi-' is used for the present tense (e.g., 'mi-ravam' - I go) and for the past imperfective (e.g., 'mi-raftam' - I was going). It is never used for the simple past. A common mistake is adding 'mi-' to simple past verbs or omitting it from present tense verbs.",
+      "examples": [
+        {
+          "wrong": "دیروز به سینما می‌رفتم.",
+          "right": "دیروز به سینما رفتم.",
+          "note": "The wrong sentence uses 'mi-', which makes it past imperfective (I was going). The correct simple past has no 'mi-'."
+        },
+        {
+          "wrong": "من کتاب خوانم.",
+          "right": "من کتاب می‌خوانم.",
+          "note": "The wrong sentence omits 'mi-', which is required for present tense."
+        },
+        {
+          "wrong": "وقتی او آمد، من غذا خوردم.",
+          "right": "وقتی او آمد، من غذا می‌خوردم.",
+          "note": "The wrong sentence uses simple past for an ongoing action. The correct form uses 'mi-' for past imperfective (I was eating)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'Every day I eat breakfast' into Persian using the correct present tense form.",
+          "answer": "من هر روز صبحانه می‌خورم."
+        },
+        {
+          "prompt": "Translate 'Yesterday, I was studying when the phone rang' using past imperfective.",
+          "answer": "دیروز وقتی تلفن زنگ زد، من درس می‌خواندم."
+        },
+        {
+          "prompt": "Translate 'Last night, I watched a movie' (simple past) into Persian.",
+          "answer": "دیشب من فیلم دیدم."
+        }
+      ]
+    },
+    {
+      "rule_id": "subjunctive-mood-with-be-prefix",
+      "topic": "Subjunctive mood with 'be-' prefix",
+      "title": "Using the Subjunctive Mood with 'be-' Prefix",
+      "explanation": "In Persian, the subjunctive mood is used after verbs of wanting, necessity, doubt, or possibility. It is formed by adding the prefix 'be-' to the present stem of the verb. A common mistake is using the indicative instead of the subjunctive after words like 'می‌خواهم' (I want) or 'باید' (must). Always use the subjunctive in these contexts.",
+      "examples": [
+        {
+          "wrong": "من می‌خواهم که می‌روم.",
+          "right": "من می‌خواهم که بروم.",
+          "note": "After 'می‌خواهم که' (I want that), use the subjunctive 'بروم' (I go) instead of the indicative 'می‌روم'."
+        },
+        {
+          "wrong": "باید می‌روم.",
+          "right": "باید بروم.",
+          "note": "'باید' (must) always requires the subjunctive; 'بروم' is correct, not 'می‌روم'."
+        },
+        {
+          "wrong": "شاید می‌آید.",
+          "right": "شاید بیاید.",
+          "note": "'شاید' (maybe) expresses possibility and takes the subjunctive 'بیاید' (he comes), not the indicative 'می‌آید'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'I want to eat' using the correct subjunctive form.",
+          "answer": "من می‌خواهم بخورم."
+        },
+        {
+          "prompt": "Complete: 'You must study' (use 'باید' and 'خواندن').",
+          "answer": "باید بخوانی."
+        },
+        {
+          "prompt": "How do you say 'Maybe he speaks Persian' correctly?",
+          "answer": "شاید فارسی بگوید."
+        }
+      ]
+    },
+    {
+      "rule_id": "conjunction-ke-as-relative-and-complementizer",
+      "topic": "Conjunction 'ke' as relative and complementizer",
+      "title": "Using 'Ke' Correctly: Relative Clause and Complementizer",
+      "explanation": "In Persian, 'ke' has two main roles: as a relative pronoun (that/which/who) and as a complementizer (that) after verbs of thinking, saying, etc. A common mistake is omitting the indefinite marker '-i' before 'ke' in relative clauses, or forgetting 'ke' after verbs. For relative clauses, the noun must have an '-i' (or 'yek') before 'ke' – even if the English noun seems definite. For complement clauses, use 'ke' after verbs like گفت (said), فکر کرد (thought), etc. in formal writing and speech.",
+      "examples": [
+        {
+          "wrong": "کتاب که خریدم",
+          "right": "کتابی که خریدم",
+          "note": "In Persian relative clauses, the noun needs the indefinite marker '-i' before 'ke', even for specific items."
+        },
+        {
+          "wrong": "فکر می‌کنم او آمد",
+          "right": "فکر می‌کنم که او آمد",
+          "note": "Use 'ke' after verbs of thinking or saying to introduce the complement clause, especially in formal contexts."
+        },
+        {
+          "wrong": "مرد که آمد را دیدم",
+          "right": "مردی که آمد را دیدم",
+          "note": "The same '-i' rule applies to people; without it the sentence sounds incomplete."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I saw the girl that you know.' (use 'ke')",
+          "answer": "دختری که می‌شناسی را دیدم."
+        },
+        {
+          "prompt": "Complete: 'He said that he is tired.' (use 'ke')",
+          "answer": "او گفت که خسته است."
+        },
+        {
+          "prompt": "Correct the sentence: 'This is the house that I bought.' (the house = خانه)",
+          "answer": "این خانه‌ای است که خریدم."
+        }
+      ]
+    },
+    {
+      "rule_id": "counting-and-number-agreement-with-nouns",
+      "topic": "Counting and number agreement with nouns",
+      "title": "Counting and Number Agreement with Nouns",
+      "explanation": "In Persian, after any number (including 1, 2, etc.), the noun must remain in its singular form. Do not add the plural suffix -ها. For example, 'five books' is 'پنج کتاب', not 'پنج کتاب‌ها'. This rule applies regardless of the number.",
+      "examples": [
+        {
+          "wrong": "من سه کتاب‌ها دارم.",
+          "right": "من سه کتاب دارم.",
+          "note": "After the number 'سه' (three), the noun 'کتاب' stays singular."
+        },
+        {
+          "wrong": "او یک سیب‌ها خرید.",
+          "right": "او یک سیب خرید.",
+          "note": "After 'یک' (one), use the singular noun 'سیب', not 'سیب‌ها'."
+        },
+        {
+          "wrong": "ما ده دانشجوها دیدیم.",
+          "right": "ما ده دانشجو دیدیم.",
+          "note": "After 'ده' (ten), the noun 'دانشجو' remains singular."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate to Persian: 'I have two cats.'",
+          "answer": "من دو گربه دارم."
+        },
+        {
+          "prompt": "Correct the mistake: 'او هفت گل‌ها خرید.'",
+          "answer": "او هفت گل خرید."
+        },
+        {
+          "prompt": "Fill in the blank (use singular noun): 'او ___ (خواهر) دارد.' (three sisters)",
+          "answer": "او سه خواهر دارد."
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-khod-and-its-usage",
+      "topic": "Reflexive 'khod' and its usage",
+      "title": "Using 'khod' (self) Correctly in Persian",
+      "explanation": "The Persian word 'khod' means 'self' and is used for reflexive actions, similar to 'myself', 'yourself', etc. in English. A common mistake is placing 'khod' after the verb or using it with a possessive suffix when it should stand alone. Remember: 'khod' usually comes before the verb and does not need an extra possessive pronoun.",
+      "examples": [
+        {
+          "wrong": "من خودم را می‌بینم خودم.",
+          "right": "من خودم را می‌بینم.",
+          "note": "Do not repeat 'khod' after the verb. 'Khod' appears once, before the verb, as part of the object."
+        },
+        {
+          "wrong": "او خودش را شست خودش.",
+          "right": "او خودش را شست.",
+          "note": "Same rule: 'khod' with a possessive suffix (e.g., 'khodesh') is used only once before the verb."
+        },
+        {
+          "wrong": "من کتاب را برای خودم خریدم.",
+          "right": "من کتاب را برای خودم خریدم.",
+          "note": "This is actually correct! Just an example to show correct usage: 'khodam' (myself) as the object of the preposition 'for'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I hurt myself.' (Use 'khodam' correctly.)",
+          "answer": "من خودم را زخمی کردم."
+        },
+        {
+          "prompt": "Correct the sentence: 'او خودش را دید خودش.'",
+          "answer": "او خودش را دید."
+        },
+        {
+          "prompt": "Fill in the blank: 'ما ______ را می‌شناسیم.' (We know ourselves.)",
+          "answer": "خودمان"
+        }
+      ]
+    },
+    {
+      "rule_id": "double-negative-negation",
+      "topic": "Double negative negation",
+      "title": "Avoiding Double Negatives in Persian",
+      "explanation": "In Persian, you only need one negative marker per clause. Using both 'نه' (no/not) and a negated verb (with 'نـ') creates a double negative, which is incorrect and can change the meaning. Instead, use the negated verb alone without 'نه'.",
+      "examples": [
+        {
+          "wrong": "من نه نمی‌روم",
+          "right": "من نمی‌روم",
+          "note": "'نه' is redundant before a negated verb; just say 'نمی‌روم'."
+        },
+        {
+          "wrong": "او نه چیزی نخورد",
+          "right": "او چیزی نخورد",
+          "note": "Drop 'نه'; the verb 'نخورد' already carries negation."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'I don't want' correctly in Persian (without double negative)?",
+          "answer": "من نمی‌خواهم"
+        },
+        {
+          "prompt": "Correct this sentence: 'او نه کتاب نخواند'",
+          "answer": "او کتاب نخواند"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-hast-vs-ast-for-is",
+      "topic": "Use of 'hast' vs 'ast' for 'is'",
+      "title": "Using 'hast' vs 'ast' for 'is'",
+      "explanation": "In Persian, the verb 'is' is usually 'ast' (است) after consonants and 'st' (ست) after vowels. The form 'hast' (هست) is stronger, often used for emphasis or existential meaning ('there is'). A common mistake is to overuse 'hast' like English 'is', but standard Persian prefers 'ast'.",
+      "examples": [
+        {
+          "wrong": "او دانشجو هست.",
+          "right": "او دانشجو است.",
+          "note": "'ast' is the normal way to say 'is a student'."
+        },
+        {
+          "wrong": "این کتاب هست.",
+          "right": "این کتاب است.",
+          "note": "'hast' would mean 'this book exists', not 'this is a book'. Use 'ast' for identification."
+        },
+        {
+          "wrong": "کتاب روی میز هست.",
+          "right": "کتاب روی میز است.",
+          "note": "For location, use 'ast'. 'hast' would imply the book's existence, not position."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'She is a doctor'?",
+          "answer": "او دکتر است."
+        },
+        {
+          "prompt": "How do you say 'This is a pen'?",
+          "answer": "این خودکار است."
+        },
+        {
+          "prompt": "Translate: 'The cat is on the chair'.",
+          "answer": "گربه روی صندلی است."
+        }
+      ]
+    },
+    {
+      "rule_id": "imperative-verb-forms-and-politeness",
+      "topic": "Imperative verb forms and politeness",
+      "title": "Polite Commands: Formal vs. Informal Imperatives in Persian",
+      "explanation": "In Persian, the imperative verb form changes depending on politeness level. The informal imperative (e.g., 'bekon' – 'do!') is used with close friends or family, while the formal imperative (e.g., 'bekonid' – 'please do') adds '-id' to the verb stem and is required in polite or respectful situations. A common mistake is using the informal form when addressing strangers, elders, or in formal contexts.",
+      "examples": [
+        {
+          "wrong": "بشین (beshin – 'sit!')",
+          "right": "بشینید (beshinid – 'please sit')",
+          "note": "Use '-id' ending for polite commands. 'Beshin' is too direct for a guest or superior."
+        },
+        {
+          "wrong": "بیا (biyā – 'come!')",
+          "right": "بیایید (biyāyid – 'please come')",
+          "note": "Adding '-yid' to the stem makes the request polite and respectful."
+        },
+        {
+          "wrong": "بده (bedeh – 'give!')",
+          "right": "بدهید (bedehid – 'please give')",
+          "note": "Polite form uses '-id' (or '-yid' after vowels). For very formal situations, use 'lotfan' (please) before the verb."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How would you politely tell someone to 'come in'? (Use the formal imperative)",
+          "answer": "بفرمایید (befarmāyid)"
+        },
+        {
+          "prompt": "You want to ask a teacher politely to 'write' something. Give the correct formal imperative.",
+          "answer": "بنویسید (benevisid)"
+        },
+        {
+          "prompt": "Tell a shopkeeper to 'show' you an item in a polite way.",
+          "answer": "نشان بدهید (neshān bedehid)"
+        }
+      ]
+    },
+    {
+      "rule_id": "time-expressions-and-tense-matching",
+      "topic": "Time expressions and tense matching",
+      "title": "Matching Time Expressions with the Correct Tense",
+      "explanation": "In Persian, the tense of the verb must match the time expression. A common mistake is using the present tense for past events (e.g., saying 'I go yesterday') or the past tense for future events. Remember: use past tense with words like دیروز (yesterday), present tense for habits with هر روز (every day), and future or present tense with فردا (tomorrow).",
+      "examples": [
+        {
+          "wrong": "دیروز من به بازار می‌روم.",
+          "right": "دیروز من به بازار رفتم.",
+          "note": "دیروز (yesterday) requires past tense."
+        },
+        {
+          "wrong": "فردا کتاب خواندم.",
+          "right": "فردا کتاب می‌خوانم.",
+          "note": "فردا (tomorrow) requires present or future tense."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct this sentence: دیروز من فیلم می‌بینم.",
+          "answer": "دیروز من فیلم دیدم."
+        },
+        {
+          "prompt": "Correct this sentence: فردا او به پارک رفت.",
+          "answer": "فردا او به پارک می‌رود."
+        },
+        {
+          "prompt": "Correct this sentence: هر روز من دیروز بیدار شدم.",
+          "answer": "هر روز من بیدار می‌شوم."
+        }
+      ]
+    }
+  ]
+}

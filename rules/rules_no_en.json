@@ -1,0 +1,896 @@
+{
+  "learning": "no",
+  "interface": "en",
+  "generated_at": "2026-06-27T05:19:37.647010+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "artikler",
+      "topic": "Artikler",
+      "title": "Norwegian Articles: Indefinite vs. Definite",
+      "explanation": "Norwegian nouns have three genders: masculine (en), feminine (ei), and neuter (et). The definite form is a suffix added to the noun (e.g., -en, -a, -et), not a separate word. A common mistake is using an indefinite article together with the definite suffix (e.g., 'en boken') or using the wrong gender article (e.g., 'en hus' for neuter).",
+      "examples": [
+        {
+          "wrong": "en boken",
+          "right": "boken",
+          "note": "Use either the indefinite article before the noun or the definite suffix, but not both."
+        },
+        {
+          "wrong": "en hus",
+          "right": "et hus",
+          "note": "'Hus' is a neuter noun, so it requires the article 'et'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct indefinite article: ___ hus.",
+          "answer": "et"
+        },
+        {
+          "prompt": "Correct the sentence: 'en boken er rød.'",
+          "answer": "Boken er rød."
+        },
+        {
+          "prompt": "Which is correct: 'en stol' or 'et stol'?",
+          "answer": "en stol"
+        }
+      ]
+    },
+    {
+      "rule_id": "verbformer",
+      "topic": "Verbformer",
+      "title": "Using Infinitive vs. Present Tense After Verbs",
+      "explanation": "A common mistake for English speakers is forgetting when to use 'å' (to) before the infinitive. After modal verbs like 'kan', 'vil', 'må', and 'skal', use the infinitive WITHOUT 'å'. After other verbs like 'liker', 'elsker', or 'hater', use 'å' + infinitive. Do not use the present tense after these verbs.",
+      "examples": [
+        {
+          "wrong": "Jeg kan å svømme.",
+          "right": "Jeg kan svømme.",
+          "note": "Modal verbs take the bare infinitive (no 'å')."
+        },
+        {
+          "wrong": "Jeg liker spise fisk.",
+          "right": "Jeg liker å spise fisk.",
+          "note": "After 'liker', you need 'å' before the infinitive."
+        },
+        {
+          "wrong": "Han må å gå.",
+          "right": "Han må gå.",
+          "note": "'Må' is a modal verb, so no 'å'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct form: Jeg liker ___ (spise) fisk.",
+          "answer": "å spise"
+        },
+        {
+          "prompt": "Fill in: Hun kan ___ (snakke) norsk.",
+          "answer": "snakke"
+        },
+        {
+          "prompt": "Fill in: Vi må ___ (lære) mer.",
+          "answer": "lære"
+        }
+      ]
+    },
+    {
+      "rule_id": "preposisjoner",
+      "topic": "Preposisjoner",
+      "title": "Common Preposition Mistakes: Adjectives and Prepositions",
+      "explanation": "In Norwegian, certain adjectives and verbs require specific prepositions that often differ from English. For example, 'interessert i' means 'interested in', but you cannot use 'på' or 'av'. Memorize these combinations to avoid errors.",
+      "examples": [
+        {
+          "wrong": "Jeg er interessert på bøker.",
+          "right": "Jeg er interessert i bøker.",
+          "note": "Use 'i' after 'interessert', not 'på'."
+        },
+        {
+          "wrong": "Hun er redd av mørket.",
+          "right": "Hun er redd for mørket.",
+          "note": "Use 'for' after 'redd', not 'av'."
+        },
+        {
+          "wrong": "Han er flink på å spille fotball.",
+          "right": "Han er flink til å spille fotball.",
+          "note": "Use 'til' after 'flink', often followed by 'å' + infinitive."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'I am good at cooking' in Norwegian?",
+          "answer": "Jeg er flink til å lage mat."
+        },
+        {
+          "prompt": "Translate 'She is afraid of spiders'.",
+          "answer": "Hun er redd for edderkopper."
+        },
+        {
+          "prompt": "Fill in the missing preposition: 'Jeg er interessert ___ musikk.'",
+          "answer": "i"
+        }
+      ]
+    },
+    {
+      "rule_id": "setningsstruktur",
+      "topic": "Setningsstruktur",
+      "title": "Norwegian Word Order: The V2 Rule",
+      "explanation": "In Norwegian main clauses, the verb must always be the second element. If a sentence starts with something other than the subject (e.g., an adverb or an object), the subject moves after the verb. English speakers often mistakenly keep the subject before the verb.",
+      "examples": [
+        {
+          "wrong": "I dag jeg spiser frokost.",
+          "right": "I dag spiser jeg frokost.",
+          "note": "\"I dag\" (today) is first, so the verb \"spiser\" comes second, followed by the subject \"jeg\"."
+        },
+        {
+          "wrong": "Ofte han går på tur.",
+          "right": "Ofte går han på tur.",
+          "note": "Same pattern with the adverb \"ofte\" (often) – verb before subject."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the sentence: 'Nå jeg må gå.'",
+          "answer": "Nå må jeg gå."
+        },
+        {
+          "prompt": "Correct the sentence: 'I morgen vi skal reise.'",
+          "answer": "I morgen skal vi reise."
+        }
+      ]
+    },
+    {
+      "rule_id": "tonem",
+      "topic": "Tonem",
+      "title": "Mastering Norwegian Tonem (Pitch Accent)",
+      "explanation": "Norwegian uses two distinct pitch patterns (tonem 1 and tonem 2) to differentiate words that are spelled identically. For example, 'bønder' (farmers) and 'bønner' (beans) are only distinguished by tone. Beginners often ignore this pitch difference, leading to confusion. Focus on the rising-falling (tonem 1) vs. double-peak (tonem 2) melodies.",
+      "examples": [
+        {
+          "wrong": "bønner",
+          "right": "bønder",
+          "note": "When you mean 'farmers', use tonem 2. Saying 'bønner' (tonem 1) means 'beans'."
+        },
+        {
+          "wrong": "tanken",
+          "right": "tanken",
+          "note": "The same spelling can mean 'the tank' (tonem 1) or 'the thought' (tonem 2). Use the correct tone to convey your meaning."
+        },
+        {
+          "wrong": "landet",
+          "right": "landet",
+          "note": "Same spelling, different tone. 'Landet' with tonem 1 means 'the country'; with tonem 2 it means 'landed'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "What tonem does the word 'bønner' (beans) have?",
+          "answer": "tonem 1"
+        },
+        {
+          "prompt": "What tonem does the word 'bønder' (farmers) have?",
+          "answer": "tonem 2"
+        },
+        {
+          "prompt": "Write the Norwegian word for 'the country' (which is a homograph with 'landet' meaning 'landed', but with tonem 1).",
+          "answer": "landet"
+        }
+      ]
+    },
+    {
+      "rule_id": "uttale-av-vokaler",
+      "topic": "Uttale av vokaler",
+      "title": "Norwegian Vowel Pronunciation: y, ø, and å",
+      "explanation": "English speakers often confuse Norwegian vowels that don’t exist in English. The vowel 'y' is like the French 'u' (lips rounded), not like 'ee'. 'ø' is like a rounded 'e' (as in 'burn' without the r). 'å' is like the 'aw' in 'law', not 'oh'. Practice these sounds to avoid common mispronunciations.",
+      "examples": [
+        {
+          "wrong": "bi",
+          "right": "by",
+          "note": "'by' means 'town'. The vowel 'y' is rounded, not like 'i' in 'bi' (bee)."
+        },
+        {
+          "wrong": "sel",
+          "right": "søl",
+          "note": "'søl' means 'spill'. The vowel 'ø' is rounded like a French 'eu'."
+        },
+        {
+          "wrong": "lo",
+          "right": "lå",
+          "note": "'lå' means 'song'. The vowel 'å' is like 'aw' in 'law', not 'o' in 'lo' (laughed)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Which word has the correct 'y' sound for 'town'? 'bi' or 'by'?",
+          "answer": "by"
+        },
+        {
+          "prompt": "Choose the correct spelling for 'beer': 'el' or 'øl'?",
+          "answer": "øl"
+        },
+        {
+          "prompt": "What is the Norwegian word for 'song' with the correct vowel?",
+          "answer": "lå"
+        }
+      ]
+    },
+    {
+      "rule_id": "intonasjon",
+      "topic": "Intonasjon",
+      "title": "Norwegian Intonation: Pitch Accents (Tonem 1 and 2)",
+      "explanation": "Norwegian uses two pitch accents, tonem 1 (rising-falling) and tonem 2 (falling-rising), to distinguish words that otherwise look the same. English speakers often ignore these tones, leading to misunderstandings. Mastering these patterns is key to sounding natural and being understood correctly.",
+      "examples": [
+        {
+          "wrong": "bønner",
+          "right": "bønder",
+          "note": "bønder (farmers) uses tonem 1; bønner (beans) uses tonem 2. Saying one with the other's pitch changes the meaning."
+        },
+        {
+          "wrong": "tanker",
+          "right": "tanker",
+          "note": "For 'tanks' (vehicles) use tonem 1; for 'thoughts' use tonem 2. The spelling is identical, so pitch is crucial."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "You want to say 'I eat beans.' Which word for 'beans' has tonem 2?",
+          "answer": "bønner"
+        },
+        {
+          "prompt": "Which word means 'tanks' (military) and has tonem 1?",
+          "answer": "tanker"
+        },
+        {
+          "prompt": "What is the correct word for 'farmers' (using tonem 1)?",
+          "answer": "bønder"
+        }
+      ]
+    },
+    {
+      "rule_id": "noun-gender-agreement",
+      "topic": "Noun gender agreement",
+      "title": "Noun Gender Agreement in Norwegian",
+      "explanation": "Norwegian nouns have three genders: masculine, feminine, and neuter. Adjectives and determiners (like 'en', 'ei', 'et') must agree with the noun's gender. A common mistake is using the wrong article or adjective form, especially mixing up neuter and common gender endings.",
+      "examples": [
+        {
+          "wrong": "Et stor bil.",
+          "right": "En stor bil.",
+          "note": "'Bil' is masculine, so it takes 'en' and the adjective remains 'stor' (common gender form)."
+        },
+        {
+          "wrong": "Ei stort dør.",
+          "right": "Ei stor dør.",
+          "note": "'Dør' is feminine, so it takes 'ei' and the adjective uses the common form 'stor', not the neuter 'stort'."
+        },
+        {
+          "wrong": "En stort hus.",
+          "right": "Et stort hus.",
+          "note": "'Hus' is neuter, so it takes 'et' and the adjective gets a -t ending ('stort')."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct indefinite article: ___ stor bil.",
+          "answer": "En"
+        },
+        {
+          "prompt": "Correct the sentence: 'Et stor jente.'",
+          "answer": "Ei stor jente."
+        },
+        {
+          "prompt": "Choose the correct adjective form: 'Et (stor/stort) eple.'",
+          "answer": "stort"
+        }
+      ]
+    },
+    {
+      "rule_id": "adjective-inflection-after-definite-nouns",
+      "topic": "Adjective inflection after definite nouns",
+      "title": "Adjective Inflection After Definite Nouns",
+      "explanation": "In Norwegian, when a noun is in its definite form (with the suffix -en/-et/-ene or preceded by den/det/de), the adjective must also be in its definite form, which typically adds an -e ending. This applies to both singular and plural. For example, 'en stor bil' becomes 'den store bilen'.",
+      "examples": [
+        {
+          "wrong": "den stor bilen",
+          "right": "den store bilen",
+          "note": "The adjective 'stor' must end in -e after definite article 'den'."
+        },
+        {
+          "wrong": "det rød huset",
+          "right": "det røde huset",
+          "note": "Neuter nouns also require the -e ending on the adjective."
+        },
+        {
+          "wrong": "de vakker blomstene",
+          "right": "de vakre blomstene",
+          "note": "Plural definite nouns use 'de' and the adjective takes an -e ending."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the correct Norwegian phrase for 'the old house' (neuter).",
+          "answer": "det gamle huset"
+        },
+        {
+          "prompt": "Correct the mistake: 'den fin stolen' (the nice chair).",
+          "answer": "den fine stolen"
+        },
+        {
+          "prompt": "Write 'the red cars' (plural definite) in Norwegian.",
+          "answer": "de røde bilene"
+        }
+      ]
+    },
+    {
+      "rule_id": "word-order-in-subordinate-clauses",
+      "topic": "Word order in subordinate clauses",
+      "title": "Word Order in Subordinate Clauses: The 'ikke' Trap",
+      "explanation": "In Norwegian main clauses, the verb comes second and 'ikke' goes after the verb (e.g., 'Jeg spiser ikke'). But in subordinate clauses (introduced by words like 'at', 'fordi', 'hvis', 'når'), the verb moves to the end and 'ikke' must come before the verb. A common mistake is keeping the main clause order. Remember: in a subordinate clause, place 'ikke' directly before the verb.",
+      "examples": [
+        {
+          "wrong": "Jeg tror at han kommer ikke.",
+          "right": "Jeg tror at han ikke kommer.",
+          "note": "In the 'at' clause, 'ikke' must come before the verb 'kommer'."
+        },
+        {
+          "wrong": "Fordi jeg er ikke sulten, spiser jeg ikke.",
+          "right": "Fordi jeg ikke er sulten, spiser jeg ikke.",
+          "note": "In the 'fordi' clause, 'ikke' precedes the verb 'er'."
+        },
+        {
+          "wrong": "Hvis du vil ikke, kan vi droppe det.",
+          "right": "Hvis du ikke vil, kan vi droppe det.",
+          "note": "In the 'hvis' clause, 'ikke' goes before the verb 'vil'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the word order in this sentence: 'Han sa at hun kommer ikke i morgen.'",
+          "answer": "Han sa at hun ikke kommer i morgen."
+        },
+        {
+          "prompt": "Fix the subordinate clause: 'Jeg blir glad når du ringer ikke.'",
+          "answer": "Jeg blir glad når du ikke ringer."
+        },
+        {
+          "prompt": "Rewrite the sentence: 'Selv om han er ikke rik, er han snill.'",
+          "answer": "Selv om han ikke er rik, er han snill."
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-passive-voice",
+      "topic": "Use of passive voice",
+      "title": "Avoid Overusing Passive Voice in Norwegian",
+      "explanation": "Norwegian has two passive forms: 'bli' + past participle (specific action) and -s ending (general/impersonal). English speakers often overuse the 'bli' passive, translating English passive directly, but Norwegian prefers active voice when the subject is known, or the -s passive for general statements. Use active voice to sound more natural.",
+      "examples": [
+        {
+          "wrong": "Jeg ble gitt en gave.",
+          "right": "Jeg fikk en gave.",
+          "note": "Norwegian uses active verbs like 'få' (to receive) instead of 'bli gitt' (was given)."
+        },
+        {
+          "wrong": "Døren blir lukket av meg.",
+          "right": "Jeg lukker døren.",
+          "note": "Use active when the subject performs the action: 'I close the door.'"
+        },
+        {
+          "wrong": "Det blir sagt at han er syk.",
+          "right": "Det sies at han er syk.",
+          "note": "For general statements, use the -s passive ('sies') instead of 'bli sagt'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'The letter was written by John.' Use natural Norwegian.",
+          "answer": "John skrev brevet."
+        },
+        {
+          "prompt": "Rewrite this sentence to avoid passive: 'Bilen blir vasket av meg.'",
+          "answer": "Jeg vasker bilen."
+        },
+        {
+          "prompt": "Correct the passive: 'Det blir antatt at han kommer.' (Use -s passive)",
+          "answer": "Det antas at han kommer."
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-verbs-and-pronouns",
+      "topic": "Reflexive verbs and pronouns",
+      "title": "Reflexive Verbs and Pronouns: Don't Forget the 'Seg'!",
+      "explanation": "In Norwegian, many verbs that describe actions you do to yourself must be used with a reflexive pronoun (like 'meg', 'deg', 'seg', 'oss', 'dere'). English often omits this pronoun, but Norwegian does not. Forgetting it is a common mistake – for example, saying 'Jeg vasker' to mean 'I wash myself' is incorrect; you need 'Jeg vasker meg'.",
+      "examples": [
+        {
+          "wrong": "Jeg vasker.",
+          "right": "Jeg vasker meg.",
+          "note": "'Å vaske' means to wash something else; 'å vaske seg' means to wash oneself."
+        },
+        {
+          "wrong": "Han skynder.",
+          "right": "Han skynder seg.",
+          "note": "'Å skynde' is almost never used alone; it always requires a reflexive pronoun."
+        },
+        {
+          "wrong": "Hun legger.",
+          "right": "Hun legger seg.",
+          "note": "'Å legge' means to lay something down; 'å legge seg' means to lie down (oneself)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'I wash myself' in Norwegian?",
+          "answer": "Jeg vasker meg"
+        },
+        {
+          "prompt": "Translate: He hurries (himself).",
+          "answer": "Han skynder seg"
+        },
+        {
+          "prompt": "Which is correct: 'Vi morer' or 'Vi morer oss'?",
+          "answer": "Vi morer oss"
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-constructions-with-sinsisittsine",
+      "topic": "Possessive constructions with sin/si/sitt/sine",
+      "title": "Reflexive Possessives: sin, si, sitt, sine",
+      "explanation": "In Norwegian, when the possessor is the subject of the sentence (third person singular or plural), you must use the reflexive possessive sin/si/sitt/sine instead of hans/hennes/deres. The form agrees with the gender and number of the object owned: sin for masculine/feminine, sitt for neuter, and sine for plural. English speakers often mistakenly use the non-reflexive forms.",
+      "examples": [
+        {
+          "wrong": "Han tok hans bok.",
+          "right": "Han tok sin bok.",
+          "note": "Use 'sin' because the subject 'han' owns the book."
+        },
+        {
+          "wrong": "Hun elsker hennes katt.",
+          "right": "Hun elsker sin katt.",
+          "note": "The subject 'hun' owns the cat, so 'sin' replaces 'hennes'."
+        },
+        {
+          "wrong": "De spiste deres mat.",
+          "right": "De spiste sin mat.",
+          "note": "For plural objects, use 'sine': 'De spiste sine epler.' But with singular 'mat', 'sin' is correct."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'He washed his (own) car.'",
+          "answer": "Han vasket sin bil."
+        },
+        {
+          "prompt": "Correct the sentence: 'Hun tok hennes veske.' (She took her own bag)",
+          "answer": "Hun tok sin veske."
+        },
+        {
+          "prompt": "Fill in the blank: 'Barnet leker med ___ leketøy.' (The child plays with its own toy - neuter)",
+          "answer": "sitt"
+        }
+      ]
+    },
+    {
+      "rule_id": "compound-word-formation-and-spelling",
+      "topic": "Compound word formation and spelling",
+      "title": "Norwegian Compound Words: One Word, Not Two",
+      "explanation": "In Norwegian, compound words are always written as a single word, not separated by spaces. This is a common mistake for English speakers because English often uses spaces (e.g., 'teacher room'). For example, 'lærer' (teacher) + 'rom' (room) becomes 'lærerrom' (teacher's office), not 'lærer rom'. Remember to write compounds as one unit even if the result looks long.",
+      "examples": [
+        {
+          "wrong": "kjøkken bord",
+          "right": "kjøkkenbord",
+          "note": "'Kitchen table' – no space between 'kjøkken' and 'bord'."
+        },
+        {
+          "wrong": "sol skjerm",
+          "right": "solskjerm",
+          "note": "'Sunshade' – put them together into one word."
+        },
+        {
+          "wrong": "bok hylle",
+          "right": "bokhylle",
+          "note": "'Bookshelf' – always compound as one word."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you write 'school bus' (skole + buss) correctly as one word?",
+          "answer": "skolebuss"
+        },
+        {
+          "prompt": "What is the correct compound for 'football player' (fotball + spiller)?",
+          "answer": "fotballspiller"
+        },
+        {
+          "prompt": "Combine 'glass' (glass) and 'dør' (door) into one word for 'glass door'.",
+          "answer": "glassdør"
+        }
+      ]
+    },
+    {
+      "rule_id": "modal-verb-usage-and-placement",
+      "topic": "Modal verb usage and placement",
+      "title": "Modal Verb Placement in Norwegian",
+      "explanation": "In Norwegian, modal verbs (kan, må, vil, skal, bør) come directly after the subject in main clauses, and the main verb follows in its infinitive form without 'å'. For negatives, 'ikke' goes between the modal and the main verb. In questions, the modal verb comes first.",
+      "examples": [
+        {
+          "wrong": "Jeg snakke kan norsk.",
+          "right": "Jeg kan snakke norsk.",
+          "note": "The modal verb must be placed immediately after the subject, before the main verb."
+        },
+        {
+          "wrong": "Du kan å snakke norsk.",
+          "right": "Du kan snakke norsk.",
+          "note": "Modal verbs are followed by the infinitive without 'å'."
+        },
+        {
+          "wrong": "Jeg må ikke gjør det.",
+          "right": "Jeg må ikke gjøre det.",
+          "note": "After a modal verb and 'ikke', the main verb stays in the infinitive (not present tense)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I can swim.'",
+          "answer": "Jeg kan svømme."
+        },
+        {
+          "prompt": "Make a question: 'Can you help me?'",
+          "answer": "Kan du hjelpe meg?"
+        },
+        {
+          "prompt": "Complete the sentence: 'Han ___ (skal, reise) til Oslo.'",
+          "answer": "Han skal reise til Oslo."
+        }
+      ]
+    },
+    {
+      "rule_id": "strong-and-weak-verb-past-tense",
+      "topic": "Strong and weak verb past tense",
+      "title": "Strong vs Weak Verbs in Past Tense",
+      "explanation": "In Norwegian, verbs are divided into strong and weak groups based on how they form the past tense. Weak verbs add endings like -et, -te, or -de (e.g., 'snakke' → 'snakket'), while strong verbs change their vowel (e.g., 'skrive' → 'skrev'). A common mistake is using weak endings on strong verbs, like 'skrivet' instead of 'skrev'.",
+      "examples": [
+        {
+          "wrong": "Jeg skrivet en e-post i går.",
+          "right": "Jeg skrev en e-post i går.",
+          "note": "'Skrive' is a strong verb; the past tense changes the vowel to 'e', not adding '-et'."
+        },
+        {
+          "wrong": "Hun badet i sjøen i fjor.",
+          "right": "Hun badet i sjøen i fjor.",
+          "note": "Actually, 'bade' is a weak verb, so 'badet' is correct. This example is intentionally correct to contrast the mistake. Choose a different wrong example? Let me correct: Replace with a real common mistake: 'Han spranget fort' instead of 'Han sprang fort'."
+        },
+        {
+          "wrong": "Han spranget fort.",
+          "right": "Han sprang fort.",
+          "note": "'Springe' is a strong verb; the past tense is 'sprang', not 'spranget'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complete the past tense of the strong verb 'å drikke' (to drink): I går ____ jeg kaffe.",
+          "answer": "drakk"
+        },
+        {
+          "prompt": "Choose the correct past tense of 'å snakke' (weak): Hun ____ med læreren i går. (snakket / snakket? Actually both are same. Use a different verb: 'Hun ____ (å kaste) ballen.'",
+          "answer": "kastet"
+        },
+        {
+          "prompt": "Correct this sentence: 'Vi leset boken i går.'",
+          "answer": "Vi leste boken i går."
+        }
+      ]
+    },
+    {
+      "rule_id": "plural-forms-of-nouns",
+      "topic": "Plural forms of nouns",
+      "title": "Plural Nouns: Don't Add -s!",
+      "explanation": "In Norwegian, nouns do not form plurals by adding -s like in English. Instead, they use endings such as -er, -e, or -r, and some nouns have no change. For example, masculine nouns often take -er, feminine nouns take -r, and neuter nouns may take -er or stay the same. Avoid the common mistake of adding an English -s.",
+      "examples": [
+        {
+          "wrong": "boks",
+          "right": "bøker",
+          "note": "'Bok' (book) becomes 'bøker' (books), not 'boks'."
+        },
+        {
+          "wrong": "appelsins",
+          "right": "appelsiner",
+          "note": "'Appelsin' (orange) adds -er, not -s."
+        },
+        {
+          "wrong": "huses",
+          "right": "hus",
+          "note": "'Hus' (house) stays the same in the plural; no ending is added."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'cars' in Norwegian? (bil)",
+          "answer": "biler"
+        },
+        {
+          "prompt": "What is the plural of 'jente' (girl)?",
+          "answer": "jenter"
+        },
+        {
+          "prompt": "Form the plural of 'eple' (apple).",
+          "answer": "epler"
+        }
+      ]
+    },
+    {
+      "rule_id": "definite-vs-indefinite-suffixes",
+      "topic": "Definite vs indefinite suffixes",
+      "title": "Definite vs Indefinite Suffixes in Norwegian",
+      "explanation": "In Norwegian, nouns change form to indicate definiteness. Indefinite nouns use articles (en, ei, et) before the noun, while definite nouns are formed by adding a suffix (-en, -a, -et, -ene) to the noun. A common mistake is using an indefinite article together with a definite suffix, or omitting the suffix when a specific item is meant.",
+      "examples": [
+        {
+          "wrong": "Jeg liker bil.",
+          "right": "Jeg liker bilen.",
+          "note": "Use the definite suffix -en when referring to a specific car (the car)."
+        },
+        {
+          "wrong": "Kan du gi meg bok?",
+          "right": "Kan du gi meg boken?",
+          "note": "Definite form boken is needed for a particular book."
+        },
+        {
+          "wrong": "Hun har en katten.",
+          "right": "Hun har en katt.",
+          "note": "Indefinite article en requires the indefinite noun (no suffix)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I see the house.'",
+          "answer": "Jeg ser huset."
+        },
+        {
+          "prompt": "Translate: 'She has a dog.'",
+          "answer": "Hun har en hund."
+        },
+        {
+          "prompt": "Fix the mistake: 'Han leser en boken.'",
+          "answer": "Han leser en bok."
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-det-as-formal-subject",
+      "topic": "Use of 'det' as formal subject",
+      "title": "Using 'det' as a Formal Subject",
+      "explanation": "In Norwegian, 'det' is often used as a formal (dummy) subject, especially with weather, time, and existence. English learners sometimes drop 'det' or use it incorrectly. Always include 'det' when there's no obvious real subject – think of it as the Norwegian equivalent of 'it' or 'there' in similar structures.",
+      "examples": [
+        {
+          "wrong": "Er kaldt i dag.",
+          "right": "Det er kaldt i dag.",
+          "note": "With weather expressions, 'det' is required."
+        },
+        {
+          "wrong": "Kommer en bil.",
+          "right": "Det kommer en bil.",
+          "note": "For 'there comes/is...' use 'det' as the formal subject."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'It is raining.' (Use 'det')",
+          "answer": "Det regner."
+        },
+        {
+          "prompt": "Translate: 'There is a cat on the table.' (Use 'det')",
+          "answer": "Det er en katt på bordet."
+        }
+      ]
+    },
+    {
+      "rule_id": "comparative-and-superlative-adjectives",
+      "topic": "Comparative and superlative adjectives",
+      "title": "Comparative and Superlative Adjectives in Norwegian",
+      "explanation": "In Norwegian, short adjectives usually form the comparative with -ere (or -re for irregulars) and the superlative with -est. For longer adjectives or those ending in -ig, -lig, etc., use mer (more) and mest (most). A common mistake is using mer/mest with short adjectives, or forgetting the definite ending -e in the superlative (e.g., den største).",
+      "examples": [
+        {
+          "wrong": "Dette huset er mer stort.",
+          "right": "Dette huset er større.",
+          "note": "Short adjective 'stor' (big) uses irregular comparative 'større', not 'mer stort'."
+        },
+        {
+          "wrong": "Hun er den best.",
+          "right": "Hun er den beste.",
+          "note": "The definite superlative always adds -e: 'den beste', not 'den best'."
+        },
+        {
+          "wrong": "Filmen er mer morsom.",
+          "right": "Filmen er morsommere.",
+          "note": "Short adjectives like 'morsom' (funny) form comparative with -ere, not 'mer'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'This is the biggest house.'",
+          "answer": "Dette er det største huset."
+        },
+        {
+          "prompt": "Fix the error: 'Han er mer gammel.'",
+          "answer": "Han er eldre."
+        },
+        {
+          "prompt": "Fill in the blank: 'Dette er _____ (good) filmen jeg har sett.'",
+          "answer": "den beste"
+        }
+      ]
+    },
+    {
+      "rule_id": "prepositions-of-time-and-place",
+      "topic": "Prepositions of time and place",
+      "title": "Prepositions of Time and Place: i vs på",
+      "explanation": "In Norwegian, the prepositions 'i' and 'på' are often confused. Use 'i' for months, years, seasons, and larger places like countries and cities. Use 'på' for days of the week, specific dates, and islands or locations where you are 'on' something (e.g., a mountain).",
+      "examples": [
+        {
+          "wrong": "Jeg kommer i mandag.",
+          "right": "Jeg kommer på mandag.",
+          "note": "Use 'på' for days of the week."
+        },
+        {
+          "wrong": "Hun bor på Norge.",
+          "right": "Hun bor i Norge.",
+          "note": "Use 'i' for countries."
+        },
+        {
+          "wrong": "Vi møtes i 5. mai.",
+          "right": "Vi møtes på 5. mai.",
+          "note": "Use 'på' for specific dates."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'I am in Norway' using the correct preposition?",
+          "answer": "Jeg er i Norge."
+        },
+        {
+          "prompt": "How do you say 'See you on Tuesday'?",
+          "answer": "Vi ses på tirsdag."
+        },
+        {
+          "prompt": "How do you say 'In July'?",
+          "answer": "I juli."
+        }
+      ]
+    },
+    {
+      "rule_id": "conjunctions-and-sentence-connectors",
+      "topic": "Conjunctions and sentence connectors",
+      "title": "Conjunctions and Sentence Connectors: 'og' vs 'å' and Inversion",
+      "explanation": "A common mistake is confusing 'og' (and) with 'å' (to, infinitive marker). Use 'å' before verbs in infinitive form, not 'og'. Also, after connectors like 'derfor' (therefore), 'da' (then), or 'så' (so), the verb must come before the subject (inversion), unlike English.",
+      "examples": [
+        {
+          "wrong": "Jeg liker og lese bøker.",
+          "right": "Jeg liker å lese bøker.",
+          "note": "'og' means 'and'; use 'å' before an infinitive verb."
+        },
+        {
+          "wrong": "Jeg er trøtt. Derfor jeg går hjem.",
+          "right": "Jeg er trøtt. Derfor går jeg hjem.",
+          "note": "After 'derfor', the verb ('går') must come before the subject ('jeg')."
+        },
+        {
+          "wrong": "Han studerte hardt, så han bestod eksamen.",
+          "right": "Han studerte hardt, så bestod han eksamen.",
+          "note": "'Så' as a connector meaning 'so' also triggers inversion in the main clause."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complete the sentence with the correct word (og or å): 'Jeg vil ___ spise middag.'",
+          "answer": "å"
+        },
+        {
+          "prompt": "Correct the word order: 'Jeg er sliten. Derfor jeg tar en pause.'",
+          "answer": "Jeg er sliten. Derfor tar jeg en pause."
+        },
+        {
+          "prompt": "Choose the right connector (og or å) and fix the sentence: 'Hun liker og danse.'",
+          "answer": "Hun liker å danse."
+        }
+      ]
+    },
+    {
+      "rule_id": "double-definite-construction",
+      "topic": "Double definite construction",
+      "title": "Double Definite Construction in Norwegian",
+      "explanation": "When a noun is modified by an adjective in Norwegian, you must use both a preposed definite article (den, det, de) and the definite suffix on the noun. For example, 'the big house' becomes 'det store huset'. Leaving out either part is a common mistake.",
+      "examples": [
+        {
+          "wrong": "den store bil",
+          "right": "den store bilen",
+          "note": "The noun 'bil' must get the definite suffix '-en' when the preposed article 'den' is used."
+        },
+        {
+          "wrong": "det huset",
+          "right": "det store huset",
+          "note": "If there is no adjective, you can just say 'huset'. But with an adjective like 'store', you must add 'det' before it."
+        },
+        {
+          "wrong": "de røde biler",
+          "right": "de røde bilene",
+          "note": "For plural nouns, the definite suffix '-ene' is required after the adjective, even though 'de' already indicates definiteness."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'the old man' using the double definite construction. (man = mann)",
+          "answer": "den gamle mannen"
+        },
+        {
+          "prompt": "Correct this sentence: 'jeg liker den nye bok'.",
+          "answer": "jeg liker den nye boken"
+        },
+        {
+          "prompt": "Fill in the missing part: '___ store bilene er mine.' (the big cars)",
+          "answer": "de"
+        }
+      ]
+    },
+    {
+      "rule_id": "negation-with-ikke-placement",
+      "topic": "Negation with 'ikke' placement",
+      "title": "Negation with 'ikke' in Main Clauses",
+      "explanation": "In Norwegian main clauses, the negation word 'ikke' (not) is placed after the conjugated verb, not before it like in English. This applies to simple tenses and also to compound forms where 'ikke' comes between the auxiliary and the main verb. Remember: the verb moves to second position (V2), and 'ikke' follows directly after it.",
+      "examples": [
+        {
+          "wrong": "Jeg ikke liker kaffe.",
+          "right": "Jeg liker ikke kaffe.",
+          "note": "Place 'ikke' after the conjugated verb 'liker' (like), not before it."
+        },
+        {
+          "wrong": "Hun ikke har sett filmen.",
+          "right": "Hun har ikke sett filmen.",
+          "note": "With compound tenses, 'ikke' goes between the auxiliary 'har' and the main verb 'sett'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I do not eat meat.'",
+          "answer": "Jeg spiser ikke kjøtt."
+        },
+        {
+          "prompt": "Correct the sentence: 'De ikke kommer i dag.'",
+          "answer": "De kommer ikke i dag."
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-en-vs-ett-in-neuter-nouns",
+      "topic": "Use of 'en' vs 'ett' in neuter nouns",
+      "title": "Use of 'en' vs 'ett' for Neuter Nouns",
+      "explanation": "Norwegian nouns have three genders: masculine, feminine, and neuter. The indefinite article for neuter nouns is 'ett', not 'en'. Common neuter nouns include 'hus' (house), 'bord' (table), and 'eple' (apple). Using 'en' with a neuter noun is a frequent mistake.",
+      "examples": [
+        {
+          "wrong": "en hus",
+          "right": "ett hus",
+          "note": "'Hus' is a neuter noun, so it takes 'ett'."
+        },
+        {
+          "wrong": "en bord",
+          "right": "ett bord",
+          "note": "'Bord' is neuter, not masculine."
+        },
+        {
+          "wrong": "en eple",
+          "right": "ett eple",
+          "note": "'Eple' is neuter (an apple)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the article: 'en barn' (a child)",
+          "answer": "ett barn"
+        },
+        {
+          "prompt": "Correct the article: 'en vindu' (a window)",
+          "answer": "ett vindu"
+        },
+        {
+          "prompt": "Correct the article: 'en år' (a year)",
+          "answer": "ett år"
+        }
+      ]
+    }
+  ]
+}

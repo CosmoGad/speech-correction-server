@@ -1,0 +1,1503 @@
+{
+  "learning": "da",
+  "interface": "en",
+  "generated_at": "2026-06-27T12:59:33.048112+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "artikler",
+      "topic": "Artikler",
+      "title": "Danish Articles: En vs. Et and Definite Forms",
+      "explanation": "Danish nouns have two grammatical genders: common (using 'en') and neuter (using 'et'). The gender must be memorized for each noun. For the definite form (the), the article is attached as a suffix (-en for common, -et for neuter) instead of using a separate word like 'the'.",
+      "examples": [
+        {
+          "wrong": "en hus",
+          "right": "et hus",
+          "note": "'Hus' (house) is neuter, so it takes 'et'."
+        },
+        {
+          "wrong": "et bog",
+          "right": "en bog",
+          "note": "'Bog' (book) is common, so it takes 'en'."
+        },
+        {
+          "wrong": "det hus",
+          "right": "huset",
+          "note": "Definite form uses a suffix, not a separate word."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct article: ___ bil (car)",
+          "answer": "en bil"
+        },
+        {
+          "prompt": "Fill in the correct article: ___ æble (apple)",
+          "answer": "et æble"
+        },
+        {
+          "prompt": "Write the definite form of 'hus' (house):",
+          "answer": "huset"
+        }
+      ]
+    },
+    {
+      "rule_id": "tider",
+      "topic": "Tider",
+      "title": "Using 'er' instead of 'har' in Perfect Tense",
+      "explanation": "In Danish, some verbs—especially those indicating movement or a change of state—use the auxiliary verb 'er' (is) instead of 'har' (has) to form the perfect tense. English always uses 'have', so learners often mistakenly say 'Jeg har gået' instead of 'Jeg er gået'. Common verbs that take 'er' include 'gå' (go), 'komme' (come), 'rejse' (travel), and 'dø' (die).",
+      "examples": [
+        {
+          "wrong": "Jeg har gået i skole.",
+          "right": "Jeg er gået i skole.",
+          "note": "Because 'gå' indicates movement, use 'er'."
+        },
+        {
+          "wrong": "Han har kommet hjem.",
+          "right": "Han er kommet hjem.",
+          "note": "'Komme' is a movement verb → 'er'."
+        },
+        {
+          "wrong": "Hun har rejst til Danmark.",
+          "right": "Hun er rejst til Danmark.",
+          "note": "'Rejse' means travel, so it takes 'er'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'I have gone to the store' in correct Danish?",
+          "answer": "Jeg er gået til butikken."
+        },
+        {
+          "prompt": "Correct this sentence: 'Vi har kommet for sent.'",
+          "answer": "Vi er kommet for sent."
+        },
+        {
+          "prompt": "Translate 'She has traveled to Copenhagen' into correct Danish.",
+          "answer": "Hun er rejst til København."
+        }
+      ]
+    },
+    {
+      "rule_id": "præpositioner",
+      "topic": "Præpositioner",
+      "title": "Common Mistake: 'for' vs 'til'",
+      "explanation": "In Danish, 'til' means 'to' and indicates direction or destination. 'For' means 'for' or 'in front of'. A frequent error is using 'for' when you should use 'til', especially with movement verbs like 'gå' (go) or 'køre' (drive). Use 'til' when moving toward a place.",
+      "examples": [
+        {
+          "wrong": "Jeg går for skolen.",
+          "right": "Jeg går til skolen.",
+          "note": "'Gå til' means 'go to', while 'gå for' means 'walk past'."
+        },
+        {
+          "wrong": "Vi kører for København.",
+          "right": "Vi kører til København.",
+          "note": "'Køre til' means 'drive to', not 'drive for'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'I am going to the cinema' in Danish?",
+          "answer": "Jeg går til biografen."
+        },
+        {
+          "prompt": "Translate: 'She is going to the hospital'.",
+          "answer": "Hun går til hospitalet."
+        }
+      ]
+    },
+    {
+      "rule_id": "udsagnsordets-form",
+      "topic": "Udsagnsordets form",
+      "title": "Verb Forms: Infinitive vs. Present Tense",
+      "explanation": "In Danish, after modal verbs (like kan, skal, vil, må) and after the word 'at', you must use the infinitive form of the verb, which usually has no ending. The present tense ends in -r. A common mistake is to use the present tense (ending in -r) where the infinitive is needed.",
+      "examples": [
+        {
+          "wrong": "Jeg kan spiser pizza.",
+          "right": "Jeg kan spise pizza.",
+          "note": "After 'kan' (can), the verb must be infinitive 'spise', not present tense 'spiser'."
+        },
+        {
+          "wrong": "Hun elsker at spiser chokolade.",
+          "right": "Hun elsker at spise chokolade.",
+          "note": "After 'at', the verb must be infinitive 'spise', not present tense 'spiser'."
+        },
+        {
+          "wrong": "Vi skal går i biografen.",
+          "right": "Vi skal gå i biografen.",
+          "note": "After 'skal' (shall/must), the verb must be infinitive 'gå', not present 'går'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct verb form: 'Han vil ______ (løbe).'",
+          "answer": "løbe"
+        },
+        {
+          "prompt": "Fill in the correct verb form: 'De har lyst til at ______ (danse).'",
+          "answer": "danse"
+        },
+        {
+          "prompt": "Fill in the correct verb form: 'Jeg må ______ (drikke) vand.'",
+          "answer": "drikke"
+        }
+      ]
+    },
+    {
+      "rule_id": "stød",
+      "topic": "Stød",
+      "title": "The Danish Stød: A Glottal Stop That Changes Meaning",
+      "explanation": "Stød is a unique Danish sound, like a glottal stop or creaky voice, that can distinguish words with identical spellings. English speakers often miss it, leading to confusion. For example, 'får' with stød means 'sheep,' while without it means 'gets.' Pay attention to stød in common words like 'der' (there) vs. 'der' (who/which).",
+      "examples": [
+        {
+          "wrong": "Hun har et får.",
+          "right": "Hun har et får.",
+          "note": "The word 'får' with stød means 'sheep'; without it is the verb 'gets' (here ungrammatical). The spelling is identical, so stød is the only difference."
+        },
+        {
+          "wrong": "Han er der.",
+          "right": "Han er der.",
+          "note": "With stød on 'der', it means 'there' (adverb). Without stød, it would be the relative pronoun 'who/which'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'She has a sheep' in Danish, ensuring correct stød on 'sheep'?",
+          "answer": "Hun har et får."
+        },
+        {
+          "prompt": "Translate 'He is there' using the adverb meaning of 'there' and proper stød.",
+          "answer": "Han er der."
+        }
+      ]
+    },
+    {
+      "rule_id": "udtale-af-vokaler",
+      "topic": "Udtale af vokaler",
+      "title": "Danish Vowel 'y': A Rounded Front Sound",
+      "explanation": "The Danish vowel 'y' is a rounded front vowel, similar to the French 'u' or German 'ü'. English speakers often mispronounce it as the English 'y' in 'sky' (a consonant or diphthong) or as a short 'i' like in 'hit'. To say it correctly, round your lips as if saying 'oo' while saying 'ee' (like in 'see').",
+      "examples": [
+        {
+          "wrong": "synge",
+          "right": "synge",
+          "note": "Do not say 'singe' with an English 'i'. Keep your lips rounded throughout the vowel."
+        },
+        {
+          "wrong": "sky",
+          "right": "sky",
+          "note": "Avoid the English diphthong 'ey' in 'sky'. Danish 'y' is a pure, long rounded vowel."
+        },
+        {
+          "wrong": "ly",
+          "right": "ly",
+          "note": "This word means 'shelter'. The 'y' should not sound like the English word 'lie'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'to sing' in Danish? Write the word.",
+          "answer": "synge"
+        },
+        {
+          "prompt": "What is the Danish word for 'cloud'? Write it.",
+          "answer": "sky"
+        },
+        {
+          "prompt": "The word for 'shelter' in Danish is 'ly'. Now, write the word again to practice its spelling.",
+          "answer": "ly"
+        }
+      ]
+    },
+    {
+      "rule_id": "intonation",
+      "topic": "Intonation",
+      "title": "Danish Intonation: Statements vs. Questions",
+      "explanation": "In Danish, statements always end with falling intonation, while yes/no questions end with rising intonation. English speakers often use rising intonation in statements, which makes them sound like questions. Use a flat or falling pitch to state facts clearly.",
+      "examples": [
+        {
+          "wrong": "Du er fra Danmark?",
+          "right": "Du er fra Danmark.",
+          "note": "A rising tone turns this into a question, not a statement."
+        },
+        {
+          "wrong": "Jeg hedder Peter?",
+          "right": "Jeg hedder Peter.",
+          "note": "Introductions are statements, so use falling intonation."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the Danish sentence 'You are coming tomorrow' as a statement (with correct intonation).",
+          "answer": "Du kommer i morgen."
+        },
+        {
+          "prompt": "Write the Danish sentence 'She is a teacher' as a question (with correct intonation).",
+          "answer": "Hun er lærer?"
+        },
+        {
+          "prompt": "Write the Danish sentence 'That is good' as a statement (with correct intonation).",
+          "answer": "Det er godt."
+        }
+      ]
+    },
+    {
+      "rule_id": "word-order-after-adverbs",
+      "topic": "Word order after adverbs",
+      "title": "Word Order After Adverbs",
+      "explanation": "In Danish main clauses, when an adverb (like 'altid' = always, 'ofte' = often, 'aldrig' = never) comes first, the verb must come before the subject. This is called inversion. In English the subject stays first, so learners often mistakenly keep the subject after the adverb.",
+      "examples": [
+        {
+          "wrong": "Altid han kommer for sent.",
+          "right": "Altid kommer han for sent.",
+          "note": "The verb 'kommer' must come before the subject 'han' after the adverb 'Altid'."
+        },
+        {
+          "wrong": "Ofte vi spiser pizza om fredagen.",
+          "right": "Ofte spiser vi pizza om fredagen.",
+          "note": "After 'Ofte', the verb 'spiser' moves to position 2, before the subject 'vi'."
+        },
+        {
+          "wrong": "Aldrig hun drikker kaffe.",
+          "right": "Aldrig drikker hun kaffe.",
+          "note": "With the adverb 'Aldrig' at the start, the verb 'drikker' must precede the subject 'hun'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the correct Danish sentence starting with the adverb 'Sjældent' (rarely): 'Sjældent / han / spiser / kød'.",
+          "answer": "Sjældent spiser han kød."
+        },
+        {
+          "prompt": "Rewrite this incorrect sentence correctly: 'Nogle gange jeg læser en bog.' (Sometimes I read a book.)",
+          "answer": "Nogle gange læser jeg en bog."
+        },
+        {
+          "prompt": "Form a correct sentence with 'Altid' and the words: 'hun / er / glad'.",
+          "answer": "Altid er hun glad."
+        }
+      ]
+    },
+    {
+      "rule_id": "main-vs-subordinate-clause-order",
+      "topic": "Main vs subordinate clause order",
+      "title": "Main vs Subordinate Clause Word Order",
+      "explanation": "In Danish main clauses, the verb often moves to second position (inversion) when a non-subject element starts the sentence, e.g., 'I går så jeg ham'. However, in subordinate clauses (introduced by words like 'at', 'fordi', 'når', 'om'), the word order is always subject-verb, even after adverbs like 'ikke'. A common mistake from English is to invert the subject and verb in subordinate clauses.",
+      "examples": [
+        {
+          "wrong": "Jeg tror, at i morgen kommer han.",
+          "right": "Jeg tror, at han kommer i morgen.",
+          "note": "After 'at', the subject 'han' must come before the verb 'kommer'; the adverbial 'i morgen' cannot cause inversion."
+        },
+        {
+          "wrong": "Han spurgte, om kom hun ikke?",
+          "right": "Han spurgte, om hun ikke kom.",
+          "note": "In a subordinate clause after 'om', the word order is subject-verb, not verb-subject, even with negation."
+        },
+        {
+          "wrong": "Fordi gik hun hjem.",
+          "right": "Fordi hun gik hjem.",
+          "note": "After 'fordi' (because), the subject must directly follow the conjunction, followed by the verb."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Ret sætningen: 'Jeg er ked af, at i går gik du.'",
+          "answer": "Jeg er ked af, at du gik i går."
+        },
+        {
+          "prompt": "Ret sætningen: 'Han spurgte, om ikke kunne hun hjælpe?'",
+          "answer": "Han spurgte, om hun ikke kunne hjælpe."
+        },
+        {
+          "prompt": "Ret sætningen: 'Fordi har hun ikke tid, kommer hun senere.'",
+          "answer": "Fordi hun ikke har tid, kommer hun senere."
+        }
+      ]
+    },
+    {
+      "rule_id": "modal-verb-usage-and-meaning",
+      "topic": "Modal verb usage and meaning",
+      "title": "Using 'Må' vs 'Kan': Permission vs Ability",
+      "explanation": "In Danish, 'kan' expresses ability (can, be able to), while 'må' expresses permission (may, be allowed to). A common mistake for English speakers is using 'kan' to ask for permission, but in Danish you need 'må' for that. Remember: 'kan' = ability, 'må' = permission.",
+      "examples": [
+        {
+          "wrong": "Kan jeg gå nu?",
+          "right": "Må jeg gå nu?",
+          "note": "'Kan' asks if you are physically able to go; 'må' asks for permission."
+        },
+        {
+          "wrong": "Du kan ikke ryge her.",
+          "right": "Du må ikke ryge her.",
+          "note": "'Kan ikke' means 'cannot' (ability); 'må ikke' means 'must not' (prohibition)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you ask for permission to use the bathroom?",
+          "answer": "Må jeg bruge toilettet?"
+        },
+        {
+          "prompt": "How do you say 'I can speak Danish' (ability)?",
+          "answer": "Jeg kan tale dansk."
+        },
+        {
+          "prompt": "Fill in: Du ___ ikke gå uden at spørge (You are not allowed to go out without asking).",
+          "answer": "må"
+        }
+      ]
+    },
+    {
+      "rule_id": "adjective-gendernumber-agreement",
+      "topic": "Adjective gender/number agreement",
+      "title": "Adjective Agreement: Gender and Number",
+      "explanation": "In Danish, adjectives must match the noun in gender (common or neuter) and number (singular or plural). For indefinite singular, neuter nouns require the adjective to end with -t (e.g., 'et stort hus'). For all definite forms and all plurals, adjectives take the ending -e (e.g., 'den store bil', 'store biler'). Failing to add these endings is a frequent mistake for learners.",
+      "examples": [
+        {
+          "wrong": "et stor hus",
+          "right": "et stort hus",
+          "note": "The noun 'hus' is neuter, so the adjective 'stor' needs the -t ending."
+        },
+        {
+          "wrong": "den rød bil",
+          "right": "den røde bil",
+          "note": "Definite singular forms always require the adjective to end in -e."
+        },
+        {
+          "wrong": "stor biler",
+          "right": "store biler",
+          "note": "Plural nouns (here 'biler') force the adjective to take the -e ending."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the correct form of 'stor' for 'et hus' (neuter, indefinite singular).",
+          "answer": "stort"
+        },
+        {
+          "prompt": "Write the correct form of 'rød' for 'de biler' (plural, definite).",
+          "answer": "røde"
+        },
+        {
+          "prompt": "Write the correct form of 'lille' for 'en bil' (common, indefinite singular). Note: 'lille' is irregular and stays the same here.",
+          "answer": "lille"
+        }
+      ]
+    },
+    {
+      "rule_id": "definite-vs-indefinite-adjective-endings",
+      "topic": "Definite vs indefinite adjective endings",
+      "title": "Definite vs Indefinite Adjective Endings",
+      "explanation": "In Danish, adjectives change depending on whether the noun is indefinite (with 'en' or 'et') or definite (with 'den', 'det', 'de', or a possessive). For indefinite singular, use the base form for common gender (e.g., 'stor') and add -t for neuter (e.g., 'stort'). For indefinite plural and all definite forms, add -e (e.g., 'store'). A common mistake is using the indefinite form with a definite noun.",
+      "examples": [
+        {
+          "wrong": "den stor bil",
+          "right": "den store bil",
+          "note": "With 'den' (definite), the adjective must end in -e: 'store', not 'stor'."
+        },
+        {
+          "wrong": "et rød hus",
+          "right": "et rødt hus",
+          "note": "With 'et' (indefinite neuter), the adjective takes -t: 'rødt', not 'rød' (which is common gender)."
+        },
+        {
+          "wrong": "de gammel huse",
+          "right": "de gamle huse",
+          "note": "With 'de' (definite plural), the adjective must end in -e: 'gamle', not 'gammel' (indefinite common)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct form of 'lille' (small) after 'en': en ____ bil.",
+          "answer": "lille"
+        },
+        {
+          "prompt": "Fill in the correct form of 'stor' (big) with 'det': det ____ hus.",
+          "answer": "store"
+        },
+        {
+          "prompt": "Fill in the correct form of 'ny' (new) with 'de': de ____ bøger.",
+          "answer": "nye"
+        }
+      ]
+    },
+    {
+      "rule_id": "irregular-plural-noun-formation",
+      "topic": "Irregular plural noun formation",
+      "title": "Irregular Plural Nouns in Danish",
+      "explanation": "Some Danish nouns form their plurals irregularly by changing the vowel (umlaut) instead of adding a regular ending like -er or -e. English speakers often mistakenly use a regular ending or forget the vowel change. Learning these common patterns will help you avoid errors.",
+      "examples": [
+        {
+          "wrong": "boger",
+          "right": "bøger",
+          "note": "The vowel changes from 'o' to 'ø'."
+        },
+        {
+          "wrong": "mander",
+          "right": "mænd",
+          "note": "The word 'mand' changes to 'mænd' with a vowel change and no plural ending."
+        },
+        {
+          "wrong": "hånd",
+          "right": "hænder",
+          "note": "The vowel 'å' changes to 'æ', and the suffix -er is added."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the correct plural form of 'bog' (book).",
+          "answer": "bøger"
+        },
+        {
+          "prompt": "Write the correct plural form of 'mand' (man).",
+          "answer": "mænd"
+        },
+        {
+          "prompt": "Write the correct plural form of 'nat' (night).",
+          "answer": "nætter"
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-pronouns-sinsitsine",
+      "topic": "Possessive pronouns sin/sit/sine",
+      "title": "Danish Possessive Pronouns: sin/sit/sine",
+      "explanation": "Use sin/sit/sine when the owner is the subject of the sentence (reflexive possessive). Sin is used with common gender nouns, sit with neuter nouns, and sine with plural nouns. Do not use hans/hendes/dens/deres when the subject possesses itself.",
+      "examples": [
+        {
+          "wrong": "Han elsker hans hund.",
+          "right": "Han elsker sin hund.",
+          "note": "Since 'han' is the subject and owns the dog, use sin (common gender)."
+        },
+        {
+          "wrong": "Hun læser hendes bog.",
+          "right": "Hun læser sin bog.",
+          "note": "The subject 'hun' owns the book, so sin is needed."
+        },
+        {
+          "wrong": "De spiser deres mad.",
+          "right": "De spiser sin mad.",
+          "note": "Note: 'sin' is used for singular objects (mad = common), but the subject is plural. For plural objects use sine: 'De spiser sine æbler.'"
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'Peter loves his (own) car.' (car = common gender: bil)",
+          "answer": "Peter elsker sin bil."
+        },
+        {
+          "prompt": "Translate: 'The children play with their (own) toys.' (toys = plural: legetøj)",
+          "answer": "Pigen læser sin bog."
+        },
+        {
+          "prompt": "Translate: 'The boys clean their (own) room.' (room = common gender: værelse)",
+          "answer": "Hun tager sin taske."
+        },
+        {
+          "prompt": "Translate: 'He eats his (own) apple.' (apple = common gender: æble)",
+          "answer": "Han spiser sit æble.  (Wait, æble is neuter? 'et æble' – neuter. So 'sit æble'. Correct.)"
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-verbs-and-pronouns",
+      "topic": "Reflexive verbs and pronouns",
+      "title": "Reflexive Verbs and Pronouns: Using 'sig' Correctly",
+      "explanation": "In Danish, use a reflexive pronoun when the subject and object of a verb refer to the same person. A common mistake is using 'ham' or 'hende' instead of 'sig' for third-person singular/plural. Remember: 'sig' is the reflexive pronoun for 'han', 'hun', 'det', 'de' (and formal 'De').",
+      "examples": [
+        {
+          "wrong": "Han vasker ham.",
+          "right": "Han vasker sig.",
+          "note": "Here 'han' is washing himself, not another male. Use 'sig' for reflexive action."
+        },
+        {
+          "wrong": "Hun køber en gave til hende.",
+          "right": "Hun køber en gave til sig.",
+          "note": "If she buys a gift for herself, use 'sig' instead of 'hende'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct reflexive pronoun: 'Han ser ___ i spejlet.' (He sees ___ in the mirror.)",
+          "answer": "sig"
+        },
+        {
+          "prompt": "Fill in the correct reflexive pronoun: 'Jeg vasker ___ hver morgen.' (I wash ___ every morning.)",
+          "answer": "mig"
+        },
+        {
+          "prompt": "Fill in the correct reflexive pronoun: 'De klæder ___ på.' (They dress ___.')",
+          "answer": "sig"
+        }
+      ]
+    },
+    {
+      "rule_id": "passive-voice-blive-vs-s",
+      "topic": "Passive voice blive vs -s",
+      "title": "Passive Voice: 'blive' vs '-s' in Danish",
+      "explanation": "Danish has two ways to form the passive: using 'blive' + past participle (like English 'be' + past participle) or adding '-s' to the verb (the synthetic passive). Use 'blive' for specific actions or events, often with a clear agent or change of state. Use the '-s' form for general statements, habitual actions, or when the action is the focus, not the agent.",
+      "examples": [
+        {
+          "wrong": "Døren åbnes af Peter.",
+          "right": "Døren bliver åbnet af Peter.",
+          "note": "For a specific event with an agent, use 'blive + past participle', not the -s form."
+        },
+        {
+          "wrong": "Huset bliver solgt hurtigt her i byen.",
+          "right": "Huset sælges hurtigt her i byen.",
+          "note": "For a general, habitual statement (houses sell quickly), use the -s passive, not 'blive'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'The door is opened (every morning).' Use the correct passive form.",
+          "answer": "Døren åbnes hver morgen."
+        },
+        {
+          "prompt": "Translate: 'The door was opened by the teacher.' Use the correct passive form.",
+          "answer": "Døren blev åbnet af læreren."
+        }
+      ]
+    },
+    {
+      "rule_id": "relative-pronouns-der-vs-som",
+      "topic": "Relative pronouns der vs som",
+      "title": "Relative Pronouns: 'der' vs 'som'",
+      "explanation": "In Danish, 'der' is used only as a subject relative pronoun (meaning 'who/that' as the subject of the clause). 'Som' is more flexible and can be used for both subject and object, but is especially common for objects. A frequent mistake is using 'der' when the pronoun refers to the object of the relative clause.",
+      "examples": [
+        {
+          "wrong": "Manden, der jeg så, er læge.",
+          "right": "Manden, som jeg så, er læge.",
+          "note": "Here 'jeg så' needs an object relative pronoun 'som', not 'der'."
+        },
+        {
+          "wrong": "Bogen, der du læste, var god.",
+          "right": "Bogen, som du læste, var god.",
+          "note": "'du læste' requires an object pronoun; 'som' is correct."
+        },
+        {
+          "wrong": "Kvinden, der kom, hedder Lis.",
+          "right": "Kvinden, der kom, hedder Lis.",
+          "note": "This is correct already – 'der' works because 'kom' has no object; the relative pronoun is the subject."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank: 'Filmen, _____ vi så, var spændende.' (the film we saw was exciting)",
+          "answer": "som"
+        },
+        {
+          "prompt": "Fill in the blank: 'Pigen, _____ bor her, er sød.' (the girl who lives here is sweet)",
+          "answer": "der"
+        },
+        {
+          "prompt": "Fill in the blank: 'Hunden, _____ du fodrede, er min.' (the dog you fed is mine)",
+          "answer": "som"
+        }
+      ]
+    },
+    {
+      "rule_id": "conjunctions-og-men-for-så",
+      "topic": "Conjunctions og men for så",
+      "title": "Conjunctions: og, men, for, så",
+      "explanation": "In Danish, 'og' means 'and', 'men' means 'but', 'for' as a conjunction is rare and formal – use 'fordi' for 'because'. 'Så' means 'so' or 'then', but when connecting two clauses it usually needs 'og' before it ('og så'). A common mistake is using 'for' where 'fordi' is needed, or omitting 'og' before 'så'.",
+      "examples": [
+        {
+          "wrong": "Jeg er træt, for jeg arbejdede meget.",
+          "right": "Jeg er træt, fordi jeg arbejdede meget.",
+          "note": "Use 'fordi' (because) instead of 'for' as a conjunction in modern Danish."
+        },
+        {
+          "wrong": "Han kom hjem, så spiste vi.",
+          "right": "Han kom hjem, og så spiste vi.",
+          "note": "When 'så' means 'then', add 'og' before it to link the clauses."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'She is tired, but she keeps working.'",
+          "answer": "Hun er træt, men hun arbejder videre."
+        },
+        {
+          "prompt": "Translate: 'I'm hungry, so I'll eat now.'",
+          "answer": "Jeg er sulten, og så spiser jeg nu."
+        },
+        {
+          "prompt": "Translate: 'He didn't come because he was sick.'",
+          "answer": "Han kom ikke, fordi han var syg."
+        }
+      ]
+    },
+    {
+      "rule_id": "question-formation-and-inversion",
+      "topic": "Question formation and inversion",
+      "title": "Danish Question Formation and Inversion",
+      "explanation": "In Danish, questions are formed by inverting the subject and verb, meaning the verb always comes before the subject. For wh-questions, the question word comes first, followed by the verb, then the subject. For yes/no questions, the verb starts the sentence. A common mistake is keeping the English subject-verb order.",
+      "examples": [
+        {
+          "wrong": "Hvad du laver?",
+          "right": "Hvad laver du?",
+          "note": "The verb 'laver' must come before the subject 'du' after the question word."
+        },
+        {
+          "wrong": "Du kommer i morgen?",
+          "right": "Kommer du i morgen?",
+          "note": "In yes/no questions, the verb 'kommer' should start the sentence, followed by the subject."
+        },
+        {
+          "wrong": "Hvor hun bor?",
+          "right": "Hvor bor hun?",
+          "note": "Again, after the question word 'hvor', the verb 'bor' precedes the subject 'hun'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate the following yes/no question into Danish, using correct inversion: 'Do you like coffee?'",
+          "answer": "Kan du lide kaffe?"
+        },
+        {
+          "prompt": "Form a wh-question in Danish for: 'Where does Peter live?'",
+          "answer": "Hvor bor Peter?"
+        },
+        {
+          "prompt": "Correct this Danish sentence: 'Hvad du spiser?'",
+          "answer": "Hvad spiser du?"
+        }
+      ]
+    },
+    {
+      "rule_id": "telling-time-halv-kvart",
+      "topic": "Telling time halv kvart",
+      "title": "Telling Time: Avoiding 'Halv Kvart' Mistake",
+      "explanation": "In Danish, 'halv' always means half an hour before the next hour (e.g., 'halv tre' = 2:30). For quarter times, use 'kvart over' (quarter past) or 'kvart i' (quarter to). Never say 'halv kvart' – it is incorrect and confusing.",
+      "examples": [
+        {
+          "wrong": "halv kvart tre",
+          "right": "kvart over to",
+          "note": "For 2:15, say 'kvart over to' (quarter past two)."
+        },
+        {
+          "wrong": "halv kvart fem",
+          "right": "kvart i fem",
+          "note": "For 4:45, say 'kvart i fem' (quarter to five)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 3:30 correctly in Danish?",
+          "answer": "halv fire"
+        },
+        {
+          "prompt": "Translate 'quarter past six' into correct Danish.",
+          "answer": "kvart over seks"
+        },
+        {
+          "prompt": "What is the correct Danish for 'quarter to eight'?",
+          "answer": "kvart i otte"
+        }
+      ]
+    },
+    {
+      "rule_id": "cardinal-and-ordinal-numbers",
+      "topic": "Cardinal and ordinal numbers",
+      "title": "Cardinal vs. Ordinal Numbers in Danish",
+      "explanation": "In Danish, cardinal numbers (e.g., 'tre' = three) tell 'how many,' while ordinal numbers (e.g., 'tredje' = third) indicate position or order. A common mistake is using a cardinal number where an ordinal is needed, especially when stating dates, floors, or rankings. Remember that ordinals often end in '-je' (e.g., 'første', 'anden', 'tredje'), but some have irregular forms like 'første' (first) and 'anden' (second).",
+      "examples": [
+        {
+          "wrong": "Det er den tre gang.",
+          "right": "Det er den tredje gang.",
+          "note": "Use 'tredje' (ordinal) for 'third' when describing position, not 'tre' (cardinal)."
+        },
+        {
+          "wrong": "Jeg bor på anden sal.",
+          "right": "Jeg bor på anden sal.",
+          "note": "Correct! 'Anden' is the ordinal for 'second' (floor). Note: 'anden' is irregular like 'second' in English."
+        },
+        {
+          "wrong": "Kapitel seks er svært.",
+          "right": "Kapitel seks er svært.",
+          "note": "Correct! Here 'seks' is cardinal because it names the chapter number (like 'Chapter Six'), not its order."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'the first of May' (May 1st) in Danish?",
+          "answer": "den første maj"
+        },
+        {
+          "prompt": "Translate: 'He came in second place.'",
+          "answer": "Han kom på andenpladsen."
+        },
+        {
+          "prompt": "Fill in the blank: 'Hun bor på ___ sal' (She lives on the 4th floor).",
+          "answer": "fjerde"
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciation-of-soft-d",
+      "topic": "Pronunciation of soft d",
+      "title": "The Soft D in Danish",
+      "explanation": "The Danish soft d (blødt d) is not pronounced like the English 'd'. Instead, it sounds like the 'th' in the English word 'the', but softer and without your tongue touching your teeth. You will hear it after vowels and in certain positions, such as in 'mad' (food) or 'gade' (street). Avoid using a hard English 'd' sound.",
+      "examples": [
+        {
+          "wrong": "mad",
+          "right": "mad",
+          "note": "The 'd' in 'mad' should sound like the 'th' in 'the', not like the English 'd' in 'dad'."
+        },
+        {
+          "wrong": "gade",
+          "right": "gade",
+          "note": "Pronounce the 'd' softly, similar to the 'th' in 'that' - do not make a hard English 'd' sound."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the Danish word for 'food' and practice the soft d.",
+          "answer": "mad"
+        },
+        {
+          "prompt": "What is the Danish word for 'good' that contains a soft d?",
+          "answer": "god"
+        },
+        {
+          "prompt": "Spell the Danish word for 'street' with a soft d.",
+          "answer": "gade"
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciation-of-uvular-r",
+      "topic": "Pronunciation of uvular r",
+      "title": "Mastering the Danish Uvular R",
+      "explanation": "Unlike the English 'r' (made with the tongue tip near the front of the mouth), the Danish 'r' is a uvular sound produced by vibrating the back of the tongue against the uvula at the top of the throat. It’s similar to the French or German 'r'. Many English speakers say an English-style 'r' instead, which can make words sound unnatural or hard to understand.",
+      "examples": [
+        {
+          "wrong": "rod (with English r)",
+          "right": "rød",
+          "note": "The vowel 'ø' is also tricky – focus first on making a throaty, not tongue-tip, r sound."
+        },
+        {
+          "wrong": "store (with English r)",
+          "right": "stor",
+          "note": "Keep the r in the back of the throat; don't curl your tongue upward."
+        },
+        {
+          "wrong": "mor-gen (with English r)",
+          "right": "morgen",
+          "note": "The 'r' should be a single guttural flick, not a full English r."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Say the Danish word for 'red' using a uvular r.",
+          "answer": "rød"
+        },
+        {
+          "prompt": "Pronounce the Danish word for 'big' (en) with a throaty r.",
+          "answer": "stor"
+        },
+        {
+          "prompt": "How do you say 'morning' in Danish, making sure to use a uvular r?",
+          "answer": "morgen"
+        }
+      ]
+    },
+    {
+      "rule_id": "false-friends-false-cognates",
+      "topic": "False friends false cognates",
+      "title": "False Friends: Danish Words That Trick English Speakers",
+      "explanation": "Some Danish words look or sound like English words but have completely different meanings. These are called 'false friends' and can lead to embarrassing mistakes. Always check the meaning of a familiar-looking word in Danish before using it.",
+      "examples": [
+        {
+          "wrong": "Jeg gav hende en gift.",
+          "right": "Jeg gav hende en gave.",
+          "note": "Gift in Danish means 'poison' or 'married', not a present. Use gave for a gift."
+        },
+        {
+          "wrong": "Eventuelt vil jeg flytte til København.",
+          "right": "Til sidst vil jeg flytte til København.",
+          "note": "Eventuelt means 'possibly' or 'if needed', not 'eventually'. Use til sidst or efterhånden for 'eventually'."
+        },
+        {
+          "wrong": "Jeg kan godt lide art.",
+          "right": "Jeg kan godt lide kunst.",
+          "note": "Art in Danish means 'species' or 'kind'. For paintings and sculptures, use kunst."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'I gave her a present' in Danish? (Be careful with false friends.)",
+          "answer": "Jeg gav hende en gave."
+        },
+        {
+          "prompt": "Fill in the blank: '______ vil jeg rejse til Danmark.' (Meaning: 'Eventually I will travel to Denmark.')",
+          "answer": "Til sidst"
+        },
+        {
+          "prompt": "What is the correct Danish word for 'art' (as in paintings, sculptures, music)?",
+          "answer": "kunst"
+        }
+      ]
+    },
+    {
+      "rule_id": "compound-word-formation-stress",
+      "topic": "Compound word formation stress",
+      "title": "Stress in Danish Compound Words",
+      "explanation": "In Danish, compound words (two words joined together) almost always have the primary stress on the first part. English speakers often incorrectly stress the second part. For example, 'køkkenbord' (kitchen table) should be stressed on 'køkken', not 'bord'. Practice putting the main emphasis on the first syllable.",
+      "examples": [
+        {
+          "wrong": "køkkenBORD",
+          "right": "KØKKENbord",
+          "note": "Stress the first part 'køkken'."
+        },
+        {
+          "wrong": "cykelSTI",
+          "right": "CYKELsti",
+          "note": "Stress the first part 'cykel'."
+        },
+        {
+          "wrong": "skoleGÅRD",
+          "right": "SKOLEgård",
+          "note": "Stress the first part 'skole'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you correctly stress the compound word for 'summer house' (sommer + hus)?",
+          "answer": "SOMMERhus"
+        },
+        {
+          "prompt": "How do you correctly stress the compound word for 'train station' (tog + station)?",
+          "answer": "TOGstation"
+        },
+        {
+          "prompt": "How do you correctly stress the compound word for 'bicycle path' (cykel + sti)?",
+          "answer": "CYKELsti"
+        }
+      ]
+    },
+    {
+      "rule_id": "double-definite-construction",
+      "topic": "Double definite construction",
+      "title": "Double Definite Construction: Don't Add Noun Endings After Adjectives",
+      "explanation": "In Danish, when you use a definite article (den/det/de) with an adjective before a noun, the adjective takes a definite ending (-e), but the noun itself must stay in its indefinite form (no -en, -et, or -ne). Adding both the article and the definite noun suffix is a common mistake called the 'double definite' — the article already makes the noun definite.",
+      "examples": [
+        {
+          "wrong": "den store bilen",
+          "right": "den store bil",
+          "note": "The article 'den' already marks 'bil' as definite, so the suffix '-en' is extra and incorrect."
+        },
+        {
+          "wrong": "det røde huset",
+          "right": "det røde hus",
+          "note": "Same principle: 'det' + 'røde' makes 'hus' definite; no '-et' needed."
+        },
+        {
+          "wrong": "de nye skoene",
+          "right": "de nye sko",
+          "note": "For plural, use 'de' + adjective ending in -e, and the noun stays indefinite (here 'sko' is already plural indefinite)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'the big dog' (en hund)?",
+          "answer": "den store hund"
+        },
+        {
+          "prompt": "How do you say 'the small table' (et bord)?",
+          "answer": "det lille bord"
+        },
+        {
+          "prompt": "How do you say 'the new cars' (biler)?",
+          "answer": "de nye biler"
+        }
+      ]
+    },
+    {
+      "rule_id": "expletive-subject-der-vs-det",
+      "topic": "Expletive subject der vs det",
+      "title": "Expletive Subject: 'der' vs 'det'",
+      "explanation": "In Danish, 'der' is used as an expletive subject to indicate existence ('there is/are'), while 'det' is used for impersonal statements ('it is'). A common mistake is using 'det' for existence. Remember: if you mean 'there is/are', use 'der'; if you mean 'it is', use 'det'.",
+      "examples": [
+        {
+          "wrong": "Det er en kat i haven.",
+          "right": "Der er en kat i haven.",
+          "note": "Use 'der' for 'there is' (existence)."
+        },
+        {
+          "wrong": "Der er koldt i dag.",
+          "right": "Det er koldt i dag.",
+          "note": "Use 'det' for 'it is' (impersonal weather)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: There is a car outside.",
+          "answer": "Der er en bil udenfor."
+        },
+        {
+          "prompt": "Translate: It is raining.",
+          "answer": "Det regner."
+        },
+        {
+          "prompt": "Translate: There are many books on the table.",
+          "answer": "Der er mange bøger på bordet."
+        }
+      ]
+    },
+    {
+      "rule_id": "indirect-question-word-order",
+      "topic": "Indirect question word order",
+      "title": "Indirect Question Word Order in Danish",
+      "explanation": "In Danish, direct questions invert the verb and subject (e.g., 'Hvad hedder du?'). However, in indirect questions (e.g., after 'jeg ved ikke' or 'kan du fortælle mig'), the word order changes to subject–verb, just like a statement. The question word stays, but the verb follows the subject – a common mistake for English speakers who may keep inversion.",
+      "examples": [
+        {
+          "wrong": "Jeg ved ikke, hvad hedder du?",
+          "right": "Jeg ved ikke, hvad du hedder.",
+          "note": "In indirect questions, put the subject ('du') before the verb ('hedder')."
+        },
+        {
+          "wrong": "Kan du fortælle mig, hvor er stationen?",
+          "right": "Kan du fortælle mig, hvor stationen er.",
+          "note": "The verb 'er' comes after the subject 'stationen' in the indirect question."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I don't know what time it is.'",
+          "answer": "Jeg ved ikke, hvad klokken er."
+        },
+        {
+          "prompt": "Make an indirect question from 'Hvem er hun?' after 'Jeg ved ikke...'",
+          "answer": "Jeg ved ikke, hvem hun er."
+        },
+        {
+          "prompt": "Complete: 'Kan du sige mig, ...' (where the toilet is)",
+          "answer": "Kan du sige mig, hvor toilettet er?"
+        }
+      ]
+    },
+    {
+      "rule_id": "infinitive-at-vs-conjunction-at",
+      "topic": "Infinitive at vs conjunction at",
+      "title": "Infinitive 'at' vs Conjunction 'at'",
+      "explanation": "The Danish word 'at' has two distinct roles: as an infinitive marker (like English 'to') and as a conjunction (like English 'that'). The infinitive marker is placed before the base form of a verb (e.g., 'at spise' = to eat), while the conjunction introduces a subordinate clause (e.g., 'Jeg ved, at du kommer' = I know that you come). A common mistake is using the infinitive 'at' after modal verbs (kan, vil, skal, må, bør), which require a bare infinitive. Another frequent error is doubling 'at' when both functions appear in the same sentence.",
+      "examples": [
+        {
+          "wrong": "Jeg vil at spise.",
+          "right": "Jeg vil spise.",
+          "note": "After modal verbs like 'vil', use the bare infinitive without 'at'."
+        },
+        {
+          "wrong": "Jeg sagde at at han var sød.",
+          "right": "Jeg sagde, at han var sød.",
+          "note": "The conjunction 'at' is enough; do not add an extra infinitive 'at'."
+        },
+        {
+          "wrong": "Han elsker at at læse.",
+          "right": "Han elsker at læse.",
+          "note": "Use only one 'at' as the infinitive marker before the main verb."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'I want to eat' in Danish? Remember: after 'vil' you should not use 'at'.",
+          "answer": "Jeg vil spise."
+        },
+        {
+          "prompt": "Translate: 'I think that she is nice.' Use the conjunction 'at'.",
+          "answer": "Jeg tror, at hun er sød."
+        },
+        {
+          "prompt": "Correct the mistake: 'Jeg kan godt lide at at danse.'",
+          "answer": "Jeg kan godt lide at danse."
+        }
+      ]
+    },
+    {
+      "rule_id": "temporal-conjunctions-da-vs-når",
+      "topic": "Temporal conjunctions da vs når",
+      "title": "Da vs. Når – When to Use Which",
+      "explanation": "Use 'da' for a single event in the past (point in time). Use 'når' for repeated, habitual, or future events. If you can replace 'when' with 'whenever' in English, use 'når'.",
+      "examples": [
+        {
+          "wrong": "Da jeg spiser, ser jeg fjernsyn.",
+          "right": "Når jeg spiser, ser jeg fjernsyn.",
+          "note": "Habitual action → use 'når'."
+        },
+        {
+          "wrong": "Når jeg kom hjem, ringede jeg til dig.",
+          "right": "Da jeg kom hjem, ringede jeg til dig.",
+          "note": "Single past event → use 'da'."
+        },
+        {
+          "wrong": "Da jeg bliver stor, vil jeg være læge.",
+          "right": "Når jeg bliver stor, vil jeg være læge.",
+          "note": "Future event → use 'når'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct conjunction: (Da / Når) __ jeg var barn, boede vi i Aarhus.",
+          "answer": "Da"
+        },
+        {
+          "prompt": "Fill in the correct conjunction: (Da / Når) __ jeg er træt, drikker jeg kaffe.",
+          "answer": "Når"
+        },
+        {
+          "prompt": "Fill in the correct conjunction: (Da / Når) __ solen skinner i morgen, tager vi på stranden.",
+          "answer": "Når"
+        }
+      ]
+    },
+    {
+      "rule_id": "causal-conjunctions-fordi-vs-derfor",
+      "topic": "Causal conjunctions fordi vs derfor",
+      "title": "Fordi vs Derfor: Because vs Therefore",
+      "explanation": "Fordi means 'because' and introduces a reason (subordinate clause with verb at the end). Derfor means 'therefore' and introduces a consequence (main clause with verb in second position). English speakers often mix them up because both can translate to 'so' or 'because', but in Danish they are not interchangeable.",
+      "examples": [
+        {
+          "wrong": "Jeg var træt, fordi jeg gik tidligt i seng.",
+          "right": "Jeg var træt, derfor gik jeg tidligt i seng.",
+          "note": "The wrong sentence uses 'fordi' for a result (I was tired because I went to bed early – illogical). Use 'derfor' + inverted word order for consequence."
+        },
+        {
+          "wrong": "Hun fik en gave, fordi hun er glad.",
+          "right": "Hun fik en gave, derfor er hun glad.",
+          "note": "Again, 'fordi' would mean 'because she is happy' (wrong cause). 'Derfor' correctly shows the gift caused her happiness."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'She is happy because she got a gift.'",
+          "answer": "Hun er glad, fordi hun fik en gave."
+        },
+        {
+          "prompt": "Translate: 'She got a gift, so she is happy.'",
+          "answer": "Hun fik en gave, derfor er hun glad."
+        },
+        {
+          "prompt": "Translate: 'I went to bed early because I was tired.'",
+          "answer": "Jeg gik tidligt i seng, fordi jeg var træt."
+        }
+      ]
+    },
+    {
+      "rule_id": "verb-pair-confusion-liggelægge",
+      "topic": "Verb pair confusion ligge/lægge",
+      "title": "Ligge vs. Lægge: Lie vs. Lay",
+      "explanation": "In Danish, 'ligge' means 'to lie' (be in a horizontal position) and never takes an object. 'Lægge' means 'to lay' (put something down) and always requires an object. Think: 'ligge' = you lie down yourself; 'lægge' = you lay something down.",
+      "examples": [
+        {
+          "wrong": "Jeg lægger i sengen.",
+          "right": "Jeg ligger i sengen.",
+          "note": "Use 'ligge' when you are lying down without an object."
+        },
+        {
+          "wrong": "Jeg ligger bogen på bordet.",
+          "right": "Jeg lægger bogen på bordet.",
+          "note": "Use 'lægge' when putting an object down."
+        },
+        {
+          "wrong": "Hunden lægger på gulvet.",
+          "right": "Hunden ligger på gulvet.",
+          "note": "The dog lies on the floor (no object) – use 'ligge'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "I will lay the book on the table.",
+          "answer": "Jeg lægger bogen på bordet."
+        },
+        {
+          "prompt": "The cat is lying on the sofa.",
+          "answer": "Katten ligger i sofaen."
+        },
+        {
+          "prompt": "You need to lay the carpet on the floor.",
+          "answer": "Du skal lægge tæppet på gulvet."
+        }
+      ]
+    },
+    {
+      "rule_id": "auxiliary-verb-choice-in-perfect-tense",
+      "topic": "Auxiliary verb choice in perfect tense",
+      "title": "Choosing 'have' or 'være' in the Perfect Tense",
+      "explanation": "In Danish, the perfect tense is formed with either 'have' (have) or 'være' (be) as the auxiliary verb. Most verbs use 'have', but verbs that indicate a change of state or movement from one place to another require 'være'. This is a common mistake for English speakers because English always uses 'have'.",
+      "examples": [
+        {
+          "wrong": "Jeg har gået i parken.",
+          "right": "Jeg er gået i parken.",
+          "note": "'Gå' (to go/walk) is a movement verb, so use 'er'."
+        },
+        {
+          "wrong": "Han har rejst til London.",
+          "right": "Han er rejst til London.",
+          "note": "'Rejse' (to travel) indicates movement, so use 'er'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct auxiliary: Hun ___ (komme) hjem.",
+          "answer": "er"
+        },
+        {
+          "prompt": "Fill in the correct auxiliary: De ___ (spise) frugten.",
+          "answer": "har"
+        },
+        {
+          "prompt": "Fill in the correct auxiliary: Jeg ___ (sove) i to timer.",
+          "answer": "har"
+        }
+      ]
+    },
+    {
+      "rule_id": "modal-particles-da-jo-dog",
+      "topic": "Modal particles da jo dog",
+      "title": "Using Danish Modal Particles: da, jo, dog",
+      "explanation": "Modal particles like 'da', 'jo', and 'dog' add nuance to sentences but don't translate directly into English. 'Da' expresses surprise or emphasis, 'jo' indicates the listener already knows or agrees, and 'dog' conveys insistence or contradiction. Omitting them is a common mistake, as they make Danish sound natural.",
+      "examples": [
+        {
+          "wrong": "Det er nemt.",
+          "right": "Det er da nemt.",
+          "note": "Adding 'da' shows surprise that it's easy (e.g., after struggling)."
+        },
+        {
+          "wrong": "Hun kommer i morgen.",
+          "right": "Hun kommer jo i morgen.",
+          "note": "'Jo' implies the listener already knows she comes tomorrow."
+        },
+        {
+          "wrong": "Gør det.",
+          "right": "Gør det dog!",
+          "note": "'Dog' adds urgency or insistence: 'Do it already!'"
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct modal particle (da, jo, or dog) to express surprise that the soup is hot: 'Suppen er _____ varm.'",
+          "answer": "da"
+        },
+        {
+          "prompt": "Fill in the particle that shows the listener already knows where the keys are: 'Nøglerne ligger _____ her.'",
+          "answer": "jo"
+        },
+        {
+          "prompt": "Fill in the particle that adds insistence for someone to stop: 'Hold _____ op!'",
+          "answer": "dog"
+        }
+      ]
+    },
+    {
+      "rule_id": "indefinite-pronouns-nogen-nogle",
+      "topic": "Indefinite pronouns nogen nogle",
+      "title": "Indefinite Pronouns: nogen vs nogle",
+      "explanation": "In Danish, 'nogen' is used for 'someone' or 'anyone' (singular, referring to a person) and with uncountable nouns in questions/negations. 'Nogle' is used for 'some' or 'any' with plural countable nouns. A common mistake is using 'nogen' where 'nogle' is needed, especially with plural items.",
+      "examples": [
+        {
+          "wrong": "Jeg har nogen æbler.",
+          "right": "Jeg har nogle æbler.",
+          "note": "Use 'nogle' for plural countable nouns like 'æbler' (apples)."
+        },
+        {
+          "wrong": "Har du set nogle?",
+          "right": "Har du set nogen?",
+          "note": "Use 'nogen' when asking about a person ('anyone')."
+        },
+        {
+          "wrong": "Der er nogen børn i haven.",
+          "right": "Der er nogle børn i haven.",
+          "note": "Use 'nogle' for plural nouns like 'børn' (children)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I have some books.'",
+          "answer": "Jeg har nogle bøger."
+        },
+        {
+          "prompt": "Translate: 'Is there anyone home?'",
+          "answer": "Er der nogen hjemme?"
+        },
+        {
+          "prompt": "Fill in: 'There are some cats.'",
+          "answer": "Der er nogle katte."
+        }
+      ]
+    },
+    {
+      "rule_id": "quantifiers-mange-meget",
+      "topic": "Quantifiers mange meget",
+      "title": "Quantifiers: Mange vs. Meget",
+      "explanation": "Use 'mange' with countable nouns (e.g., apples, books) and 'meget' with uncountable nouns (e.g., water, time). A common mistake is using 'mange' for uncountable nouns or 'meget' for countable ones. Think of 'many' vs. 'much' in English.",
+      "examples": [
+        {
+          "wrong": "Jeg har mange vand.",
+          "right": "Jeg har meget vand.",
+          "note": "Vand (water) is uncountable, so use 'meget'."
+        },
+        {
+          "wrong": "Der er meget bøger på bordet.",
+          "right": "Der er mange bøger på bordet.",
+          "note": "Bøger (books) are countable, so use 'mange'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in: Hun har ___ penge. (penge = money, uncountable)",
+          "answer": "meget"
+        },
+        {
+          "prompt": "Fill in: Vi har ___ æbler. (æbler = apples, countable)",
+          "answer": "mange"
+        },
+        {
+          "prompt": "Fill in: Der er ___ tid. (tid = time, uncountable)",
+          "answer": "meget"
+        }
+      ]
+    },
+    {
+      "rule_id": "demonstrative-pronouns-denne-den-det",
+      "topic": "Demonstrative pronouns denne den det",
+      "title": "Demonstrative Pronouns: Denne, Den, Det (This vs That)",
+      "explanation": "In Danish, 'denne' means 'this' for common gender nouns (en-words), while 'den' means 'that' for common gender nouns. For neuter gender nouns (et-words), use 'det' for 'that'. A common mistake is using 'den' instead of 'denne' for 'this', or mixing up gender agreement.",
+      "examples": [
+        {
+          "wrong": "Den bog er min.",
+          "right": "Denne bog er min.",
+          "note": "Bog is common gender, so use 'denne' for 'this book'."
+        },
+        {
+          "wrong": "Den hus er gammel.",
+          "right": "Det hus er gammelt.",
+          "note": "Hus is neuter, so use 'det' for 'that house' and adjust adjective ending."
+        },
+        {
+          "wrong": "Denne bil er rød? (pointing to a distant car)",
+          "right": "Den bil er rød.",
+          "note": "Use 'den' for 'that' (distant object), not 'denne' (this)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank for 'this' (common gender): ___ kat er sød.",
+          "answer": "Denne"
+        },
+        {
+          "prompt": "Fill in the blank for 'that' (common gender): ___ stol er grim.",
+          "answer": "Den"
+        },
+        {
+          "prompt": "Fill in the blank for 'that' (neuter gender): ___ æble er rødt.",
+          "answer": "Det"
+        }
+      ]
+    },
+    {
+      "rule_id": "interrogative-pronouns-hvad-hvilken",
+      "topic": "Interrogative pronouns hvad hvilken",
+      "title": "Hvad vs. Hvilken: Asking What and Which",
+      "explanation": "Use 'hvad' for general questions about things, ideas, or actions (like 'what'). Use 'hvilken' when you are choosing from a specific set of options (like 'which'). 'Hvilken' changes form: 'hvilket' for neuter nouns and 'hvilke' for plural nouns.",
+      "examples": [
+        {
+          "wrong": "Hvad farve kan du lide?",
+          "right": "Hvilken farve kan du lide?",
+          "note": "Since you are choosing from a specific set of colors, use 'hvilken'."
+        },
+        {
+          "wrong": "Hvilken er din yndlingsmad?",
+          "right": "Hvad er din yndlingsmad?",
+          "note": "Here the question is general ('what is your favorite food?'), so use 'hvad'."
+        },
+        {
+          "wrong": "Hvad bøger læser du?",
+          "right": "Hvilke bøger læser du?",
+          "note": "With plural nouns, use 'hvilke' (the plural form of 'hvilken')."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct word (hvad / hvilken / hvilket / hvilke): ___ tid er det?",
+          "answer": "Hvad"
+        },
+        {
+          "prompt": "Fill in the correct word: ___ hus er dit? (choose among several houses)",
+          "answer": "Hvilket"
+        },
+        {
+          "prompt": "Fill in the correct word: ___ sprog taler du? (general question)",
+          "answer": "Hvad"
+        }
+      ]
+    },
+    {
+      "rule_id": "correlative-conjunctions-bådeog-enteneller",
+      "topic": "Correlative conjunctions både...og enten...eller",
+      "title": "Danish Correlative Conjunctions: både...og and enten...eller",
+      "explanation": "In Danish, \"både...og\" means \"both...and\" and \"enten...eller\" means \"either...or.\" They must connect exactly two equal grammatical elements (nouns, verbs, etc.). A common mistake is using them with more than two items or with incorrect word order—after \"enten,\" the verb often comes before the subject in main clauses.",
+      "examples": [
+        {
+          "wrong": "Jeg kan lide både kaffe, te og juice.",
+          "right": "Jeg kan lide både kaffe og te.",
+          "note": "\"både...og\" only connects two items; for three or more, use simple \"og.\""
+        },
+        {
+          "wrong": "Enten du kommer eller du bliver hjemme.",
+          "right": "Enten kommer du eller du bliver hjemme.",
+          "note": "After \"enten\" in a main clause, the verb typically comes before the subject."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I like both coffee and tea.'",
+          "answer": "Jeg kan lide både kaffe og te."
+        },
+        {
+          "prompt": "Complete the sentence: 'You can either come or stay home.' (start with 'Du kan...')",
+          "answer": "Du kan enten komme eller blive hjemme."
+        },
+        {
+          "prompt": "Correct the word order: 'Enten hun synger eller hun danser.'",
+          "answer": "Enten synger hun eller hun danser."
+        }
+      ]
+    },
+    {
+      "rule_id": "conditional-conjunctions-om-vs-hvis",
+      "topic": "Conditional conjunctions om vs hvis",
+      "title": "Conditional Conjunctions: 'om' vs 'hvis'",
+      "explanation": "In Danish, 'hvis' means 'if' and is used for real conditional clauses (e.g., 'If it rains...'). 'Om' means 'whether' and is used for indirect yes/no questions (e.g., 'I don't know whether...'). A common mistake is using 'om' where 'hvis' is needed.",
+      "examples": [
+        {
+          "wrong": "Om jeg vinder, rejser jeg til Italien.",
+          "right": "Hvis jeg vinder, rejser jeg til Italien.",
+          "note": "'Om' cannot introduce a real condition; use 'hvis' for 'if'."
+        },
+        {
+          "wrong": "Jeg ved ikke, hvis han kommer.",
+          "right": "Jeg ved ikke, om han kommer.",
+          "note": "For indirect yes/no questions ('whether'), use 'om'."
+        },
+        {
+          "wrong": "Hvis du har tid, ved jeg det ikke.",
+          "right": "Om du har tid, ved jeg det ikke.",
+          "note": "When the clause is a reported yes/no question, use 'om'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'If you study, you will pass.'",
+          "answer": "Hvis du studerer, består du."
+        },
+        {
+          "prompt": "Translate: 'I wonder if (whether) she is coming.'",
+          "answer": "Jeg spekulerer på, om hun kommer."
+        }
+      ]
+    },
+    {
+      "rule_id": "time-expressions-siden-vs-for",
+      "topic": "Time expressions siden vs for",
+      "title": "Siden vs For: Time Expressions",
+      "explanation": "Use 'siden' to mean 'since' (a specific point in time, often with a present perfect tense). Use 'for' to mean 'ago' (a duration of time before now, often with a past tense). A common mistake is using 'for' where 'siden' is needed, or vice versa.",
+      "examples": [
+        {
+          "wrong": "Jeg har boet her for 2010.",
+          "right": "Jeg har boet her siden 2010.",
+          "note": "'Siden' is used with a specific point in time (2010) and present perfect tense."
+        },
+        {
+          "wrong": "Jeg kom til Danmark siden to uger.",
+          "right": "Jeg kom til Danmark for to uger siden.",
+          "note": "'For' expresses a duration (two weeks) and 'siden' is part of the phrase 'for ... siden' meaning '... ago'. The verb is in past tense."
+        },
+        {
+          "wrong": "Jeg har ikke set ham for i går.",
+          "right": "Jeg har ikke set ham siden i går.",
+          "note": "Use 'siden' with 'i går' (yesterday) because it's a specific point in time, and the tense is present perfect."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I have known him since 2015.'",
+          "answer": "Jeg har kendt ham siden 2015."
+        },
+        {
+          "prompt": "Translate: 'She moved here three years ago.'",
+          "answer": "Hun flyttede hertil for tre år siden."
+        },
+        {
+          "prompt": "Fill in the blank: 'Vi har ventet ___ en time.' (We have waited for an hour — but careful: is it 'siden' or 'for'?)",
+          "answer": "Vi har ventet i en time."
+        }
+      ]
+    },
+    {
+      "rule_id": "adverbs-allerede-vs-endnu",
+      "topic": "Adverbs allerede vs endnu",
+      "title": "Adverbs 'allerede' vs 'endnu'",
+      "explanation": "'Allerede' means 'already' and is used in positive statements or questions about completed actions. 'Endnu' means 'yet' or 'still' and is used in negative statements or questions about unfinished actions. A common mistake is using 'allerede' in negative sentences where 'endnu' is required.",
+      "examples": [
+        {
+          "wrong": "Har du allerede spist?",
+          "right": "Har du spist endnu?",
+          "note": "In questions about whether something has happened yet, use 'endnu', not 'allerede'."
+        },
+        {
+          "wrong": "Jeg har ikke allerede set filmen.",
+          "right": "Jeg har ikke set filmen endnu.",
+          "note": "In negative sentences, use 'endnu' to mean 'not yet'."
+        },
+        {
+          "wrong": "Er han allerede kommet hjem?",
+          "right": "Er han kommet hjem endnu?",
+          "note": "Ask 'yet' with 'endnu' even if the action might be completed."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate to Danish: 'I haven't finished my homework yet.'",
+          "answer": "Jeg har ikke lavet mine lektier endnu."
+        },
+        {
+          "prompt": "Fill in the blank: 'Har du set den nye film _______?' (yet)",
+          "answer": "endnu"
+        },
+        {
+          "prompt": "Correct the error: 'Jeg har allerede ikke spist morgenmad.'",
+          "answer": "Jeg har ikke spist morgenmad endnu."
+        }
+      ]
+    },
+    {
+      "rule_id": "comparative-quantifiers-mere-vs-flere",
+      "topic": "Comparative quantifiers mere vs flere",
+      "title": "Mere vs Flere: Choosing the Right Danish Quantifier",
+      "explanation": "In Danish, 'mere' is used with uncountable nouns (like water, time, money) to mean 'more', while 'flere' is used with countable plural nouns (like books, people, apples) to mean 'more' or 'several'. A common mistake is using 'mere' for countable nouns – remember: if you can count it, use 'flere'.",
+      "examples": [
+        {
+          "wrong": "Jeg har mere bøger.",
+          "right": "Jeg har flere bøger.",
+          "note": "'Bøger' is countable plural, so use 'flere'."
+        },
+        {
+          "wrong": "Hun drikker flere vand.",
+          "right": "Hun drikker mere vand.",
+          "note": "'Vand' is uncountable, so use 'mere'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "We need more chairs. (chairs = stole, countable)",
+          "answer": "Vi har brug for flere stole."
+        },
+        {
+          "prompt": "I need more sugar. (sugar = sukker, uncountable)",
+          "answer": "Jeg har brug for mere sukker."
+        }
+      ]
+    }
+  ]
+}

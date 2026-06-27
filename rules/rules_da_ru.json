@@ -1,0 +1,1520 @@
+{
+  "learning": "da",
+  "interface": "ru",
+  "generated_at": "2026-06-27T13:09:49.742428+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "artikler",
+      "topic": "Artikler",
+      "title": "Артикли: en и et",
+      "explanation": "В датском языке существительные делятся на два рода: общий (en) и средний (et). В русском артиклей нет, поэтому изучающие часто путают, какой артикль использовать. Необходимо запоминать род каждого существительного вместе с ним.",
+      "examples": [
+        {
+          "wrong": "en hus",
+          "right": "et hus",
+          "note": "Hus (дом) — средний род, нужен артикль et."
+        },
+        {
+          "wrong": "et stol",
+          "right": "en stol",
+          "note": "Stol (стул) — общий род, нужен артикль en."
+        },
+        {
+          "wrong": "en barn",
+          "right": "et barn",
+          "note": "Barn (ребенок) — средний род, нужен артикль et."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите правильный неопределенный артикль для слова 'дом' (hus):",
+          "answer": "et hus"
+        },
+        {
+          "prompt": "Напишите правильный неопределенный артикль для слова 'стул' (stol):",
+          "answer": "en stol"
+        },
+        {
+          "prompt": "Напишите правильный неопределенный артикль для слова 'ребенок' (barn):",
+          "answer": "et barn"
+        }
+      ]
+    },
+    {
+      "rule_id": "tider",
+      "topic": "Tider",
+      "title": "Времена: Прошедшее время (Perfektum vs. Præteritum)",
+      "explanation": "В датском языке простое прошедшее время (præteritum) используется для действий, которые произошли в определённый момент в прошлом (например, 'i går', 'sidste uge'). Перфект (perfektum с 'har' или 'er') используется для действий, не привязанных к конкретному времени, или имеющих связь с настоящим. Распространённая ошибка — использовать перфект с указанием конкретного времени.",
+      "examples": [
+        {
+          "wrong": "I går har jeg set en film.",
+          "right": "I går så jeg en film.",
+          "note": "Не используйте 'har' с указанием конкретного времени ('i går')."
+        },
+        {
+          "wrong": "Sidste år har han rejst til Spanien.",
+          "right": "Sidste år rejste han til Spanien.",
+          "note": "С 'sidste år' нужно простое прошедшее время (præteritum)."
+        },
+        {
+          "wrong": "Har du nogensinde været i København? (правильно!)",
+          "right": "Har du nogensinde været i København?",
+          "note": "Перфект правилен для опыта без указания времени ('nogensinde')."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Исправьте предложение: 'I går har jeg læst en bog.'",
+          "answer": "I går læste jeg en bog."
+        },
+        {
+          "prompt": "Заполните пропуск (выберите правильную форму): 'Han ___ (har spist/spiste) frokost kl. 12.'",
+          "answer": "Han spiste frokost kl. 12."
+        },
+        {
+          "prompt": "Перепишите в нужном времени: 'Jeg har været i biografen i går.'",
+          "answer": "Jeg var i biografen i går."
+        }
+      ]
+    },
+    {
+      "rule_id": "præpositioner",
+      "topic": "Præpositioner",
+      "title": "Предлоги: типичные ошибки русскоговорящих",
+      "explanation": "В датском языке выбор предлога часто не совпадает с русским. Например, для стран используется 'i', а для островов — 'på'. Также глагол 'ждать' требует предлога 'på', а не 'for'. Запомните эти различия.",
+      "examples": [
+        {
+          "wrong": "Jeg bor på Rusland.",
+          "right": "Jeg bor i Rusland.",
+          "note": "Для стран используем 'i', не 'på'."
+        },
+        {
+          "wrong": "Jeg venter for dig.",
+          "right": "Jeg venter på dig.",
+          "note": "Глагол 'vente' (ждать) требует 'på', а не 'for'."
+        },
+        {
+          "wrong": "Jeg glæder mig for ferien.",
+          "right": "Jeg glæder mig til ferien.",
+          "note": "Глагол 'glæde sig' (радоваться) требует 'til'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильный предлог: Jeg bor ___ Danmark.",
+          "answer": "i"
+        },
+        {
+          "prompt": "Вставьте правильный предлог: Hun venter ___ bussen.",
+          "answer": "på"
+        },
+        {
+          "prompt": "Вставьте правильный предлог: Vi glæder os ___ jul.",
+          "answer": "til"
+        }
+      ]
+    },
+    {
+      "rule_id": "udsagnsordets-form",
+      "topic": "Udsagnsordets form",
+      "title": "Форма глагола: инфинитив и настоящее время",
+      "explanation": "В датском языке глагол в настоящем времени обычно оканчивается на -r, независимо от лица и числа. Распространённая ошибка — использование инфинитива (с частицей 'at') вместо спрягаемой формы. Запомните: в настоящем времени частица 'at' не нужна, и глагол получает окончание -r.",
+      "examples": [
+        {
+          "wrong": "Jeg at gå i skole.",
+          "right": "Jeg går i skole.",
+          "note": "Инфинитив 'at gå' заменён на 'går' (настоящее время)."
+        },
+        {
+          "wrong": "Han spise morgenmad.",
+          "right": "Han spiser morgenmad.",
+          "note": "Глагол 'spise' получает окончание -r: 'spiser'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Исправьте предложение: 'Hun at drikke kaffe.'",
+          "answer": "Hun drikker kaffe."
+        },
+        {
+          "prompt": "Поставьте глагол 'bo' в правильную форму: 'De ____ i København.'",
+          "answer": "bor"
+        },
+        {
+          "prompt": "Исправьте: 'Vi at læse bøger.'",
+          "answer": "Vi læser bøger."
+        }
+      ]
+    },
+    {
+      "rule_id": "stød",
+      "topic": "Stød",
+      "title": "Стёд (stød) — гортанная смычка в датском языке",
+      "explanation": "Стёд — это особая гортанная смычка, которая может менять значение слова. В датском языке она обозначается знаком ˀ и произносится как резкий перехват голоса. Для русскоязычных это непривычно, но важно различать пары слов, где стёд — единственное различие.",
+      "examples": [
+        {
+          "wrong": "hun (без стёда)",
+          "right": "hun",
+          "note": "В слове 'hun' (она) стёда нет. В слове 'hund' (собака) стёд есть: 'hund' с гортанной смычкой."
+        },
+        {
+          "wrong": "man (без стёда)",
+          "right": "man",
+          "note": "Слово 'man' (человек, неопределённое местоимение) произносится без стёда, а 'mand' (мужчина) — со стёдом: 'mand'."
+        },
+        {
+          "wrong": "ven (без стёда)",
+          "right": "ven",
+          "note": "Слово 'ven' (друг) — без стёда, а 'vend' (поверни) — со стёдом: 'vend'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Какое из двух слов произносится со стёдом: 'møde' (встреча) или 'mødte' (встретил)?",
+          "answer": "mødte"
+        },
+        {
+          "prompt": "Вставьте правильную форму (со стёдом или без): 'Han er en god ___' (друг).",
+          "answer": "ven"
+        },
+        {
+          "prompt": "Определите, есть ли стёд в слове 'læse' (читать).",
+          "answer": "нет"
+        }
+      ]
+    },
+    {
+      "rule_id": "udtale-af-vokaler",
+      "topic": "Udtale af vokaler",
+      "title": "Произношение датских гласных: различие между долгими и краткими звуками",
+      "explanation": "В датском языке гласные могут быть долгими или краткими, что меняет значение слова. Русскоязычные часто произносят все гласные одинаково коротко, что приводит к непониманию. Например, долгий 'e' звучит как в английском 'bed', а краткий 'e' — как в 'let'. Обращайте внимание на длину и качество звука.",
+      "examples": [
+        {
+          "wrong": "hest",
+          "right": "hest",
+          "note": "Слово 'hest' (лошадь) содержит долгий 'e'. Не смягчайте предшествующий согласный — произносите [heːst], а не [hʲest]."
+        },
+        {
+          "wrong": "by",
+          "right": "by",
+          "note": "В слове 'by' (город) гласный 'y' — долгий, округлённый (как немецкое 'ü'). Не заменяйте на русское 'ы' или 'и'."
+        },
+        {
+          "wrong": "sol",
+          "right": "sol",
+          "note": "Слово 'sol' (солнце) имеет долгий 'o'. Произносите его как [soːl], не как [sol] (короткий звук)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Как правильно произнести слово 'flaske' (бутылка)? Запишите правильное произношение (долгий или краткий гласный).",
+          "answer": "flaske"
+        },
+        {
+          "prompt": "Какое слово звучит дольше: 'dyr' (животное) или 'dyr' (дорогой)? Объясните разницу в произношении.",
+          "answer": "dyr (животное) имеет долгий 'y', dyr (дорогой) - краткий 'y'. Произносится одинаково, но разная длина."
+        }
+      ]
+    },
+    {
+      "rule_id": "intonation",
+      "topic": "Intonation",
+      "title": "Интонация в датском языке: не путайте утверждение с вопросом",
+      "explanation": "В датском языке интонация играет ключевую роль. Утвердительные предложения обычно произносятся с понижением тона в конце, а вопросы — с повышением. Русские часто ошибочно используют восходящую интонацию в утверждениях, что звучит как вопрос.",
+      "examples": [
+        {
+          "wrong": "Du kommer i morgen?",
+          "right": "Du kommer i morgen.",
+          "note": "В утверждении тон падает, в вопросе — поднимается."
+        },
+        {
+          "wrong": "Det er godt?",
+          "right": "Det er godt.",
+          "note": "То же правило: утверждение с понижением, вопрос с повышением."
+        },
+        {
+          "wrong": "Jeg hedder Ivan?",
+          "right": "Jeg hedder Ivan.",
+          "note": "Даже представляясь, не поднимайте тон в конце — это звучит неуверенно."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Скажите утверждение «Я иду домой» с правильной интонацией.",
+          "answer": "Jeg går hjem."
+        },
+        {
+          "prompt": "Скажите вопрос «Ты придешь завтра?» с правильной интонацией.",
+          "answer": "Kommer du i morgen?"
+        },
+        {
+          "prompt": "Исправьте интонацию: «Hun er sød?» (как утверждение).",
+          "answer": "Hun er sød."
+        }
+      ]
+    },
+    {
+      "rule_id": "word-order-after-adverbs",
+      "topic": "Word order after adverbs",
+      "title": "Порядок слов после наречий в датском языке",
+      "explanation": "В датском языке в главном предложении глагол всегда стоит на втором месте. Если предложение начинается с наречия (например, 'i morgen', 'ofte'), то порядок слов меняется: наречие + глагол + подлежащее. Русскоязычные учащиеся часто ошибочно ставят подлежащее перед глаголом, как в русском.",
+      "examples": [
+        {
+          "wrong": "I morgen jeg går i skole.",
+          "right": "I morgen går jeg i skole.",
+          "note": "Наречие 'i morgen' в начале – глагол 'går' идет сразу после него, затем подлежащее 'jeg'."
+        },
+        {
+          "wrong": "Ofte hun læser bøger.",
+          "right": "Ofte læser hun bøger.",
+          "note": "Аналогично: 'ofte' + глагол 'læser' + подлежащее 'hun'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на датский: 'Завтра я иду в кино.' (начало с 'i morgen')",
+          "answer": "I morgen går jeg i biografen."
+        },
+        {
+          "prompt": "Исправьте порядок слов: 'Aldrig han spiser kød.'",
+          "answer": "Aldrig spiser han kød."
+        },
+        {
+          "prompt": "Составьте предложение: 'часто / он / смотрит / телевизор' (начало с 'ofte')",
+          "answer": "Ofte ser han fjernsyn."
+        }
+      ]
+    },
+    {
+      "rule_id": "main-vs-subordinate-clause-order",
+      "topic": "Main vs subordinate clause order",
+      "title": "Порядок слов в главном и придаточном предложении",
+      "explanation": "В датском языке в главном предложении глагол стоит на втором месте (V2). В придаточном предложении (после союзов как 'at', 'fordi', 'da' и т.д.) глагол обычно идёт в конец или стоит после подлежащего, а не на втором месте. Избегайте переноса правила главного предложения в придаточное.",
+      "examples": [
+        {
+          "wrong": "Jeg tror, at han kommer i morgen.",
+          "right": "Jeg tror, at han i morgen kommer.",
+          "note": "В придаточном после 'at' глагол 'kommer' идёт после наречия 'i morgen', а не сразу после подлежащего."
+        },
+        {
+          "wrong": "Hun spørger, fordi hun vil vide det.",
+          "right": "Hun spørger, fordi hun det vil vide.",
+          "note": "В придаточном после 'fordi' глагол 'vil' перемещается в конец (после 'det')."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Исправьте порядок слов: 'Han siger, at han har spist maden.' (в придаточном поставьте глагол в конец)",
+          "answer": "Han siger, at han maden har spist."
+        },
+        {
+          "prompt": "Исправьте: 'Vi bliver hjemme, fordi det regner.' (поместите глагол после подлежащего в придаточном)",
+          "answer": "Vi bliver hjemme, fordi det regner."
+        }
+      ]
+    },
+    {
+      "rule_id": "modal-verb-usage-and-meaning",
+      "topic": "Modal verb usage and meaning",
+      "title": "Ошибки с модальными глаголами: skal, vil, må",
+      "explanation": "В датском языке модальные глаголы имеют строгие значения. Русские студенты часто путают 'skal' (должен, нужно) и 'vil' (хочет, будет). Например, 'Я хочу есть' — это 'Jeg vil spise', а не 'Jeg skal spise' (что значит 'я должен есть'). Глагол 'må' означает 'можно' или 'должен' в зависимости от контекста.",
+      "examples": [
+        {
+          "wrong": "Jeg skal tage til København i morgen.",
+          "right": "Jeg vil tage til København i morgen.",
+          "note": "'Skal' выражает обязанность или план, а не желание. Для желания используйте 'vil'."
+        },
+        {
+          "wrong": "Vil du hjælpe mig?",
+          "right": "Kan du hjælpe mig?",
+          "note": "'Vil' означает 'хочешь', а не 'можешь'. Для просьбы используйте 'kan' (возможность) или 'må' (разрешение)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Он хочет купить машину. Выберите правильный модальный глагол: vil или skal?",
+          "answer": "Han vil købe en bil."
+        },
+        {
+          "prompt": "Ты должен сделать домашнее задание. Заполните пропуск: Du ___ lave lektier.",
+          "answer": "Du skal lave lektier."
+        },
+        {
+          "prompt": "Можно мне войти? Напишите датское предложение с глаголом må.",
+          "answer": "Må jeg komme ind?"
+        }
+      ]
+    },
+    {
+      "rule_id": "adjective-gendernumber-agreement",
+      "topic": "Adjective gender/number agreement",
+      "title": "Согласование прилагательных в роде и числе в датском языке",
+      "explanation": "В датском языке прилагательные изменяются по роду и числу существительного, к которому они относятся. В единственном числе у общего рода используется базовая форма, а у среднего рода — окончание -t. Во множественном числе любого рода добавляется окончание -e.",
+      "examples": [
+        {
+          "wrong": "en stor bil",
+          "right": "en stor bil",
+          "note": "Здесь ошибки нет, но для демонстрации: 'stor' — общий род, единственное число."
+        },
+        {
+          "wrong": "et stort hus",
+          "right": "et stort hus",
+          "note": "Правильно: средний род требует окончания -t: 'stort'."
+        },
+        {
+          "wrong": "store biler",
+          "right": "store biler",
+          "note": "Множественное число: всегда окончание -e: 'store'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите правильную форму прилагательного 'lille' (маленький) для словосочетания 'маленький дом' (средний род, ед. ч.).",
+          "answer": "et lille hus"
+        },
+        {
+          "prompt": "Напишите правильную форму прилагательного 'stor' (большой) для словосочетания 'большие машины' (мн. ч., общий род).",
+          "answer": "store biler"
+        },
+        {
+          "prompt": "Напишите правильную форму прилагательного 'god' (хороший) для словосочетания 'хорошая книга' (общий род, ед. ч.).",
+          "answer": "en god bog"
+        }
+      ]
+    },
+    {
+      "rule_id": "definite-vs-indefinite-adjective-endings",
+      "topic": "Definite vs indefinite adjective endings",
+      "title": "Определенные и неопределенные окончания прилагательных в датском языке",
+      "explanation": "В датском языке прилагательные изменяются в зависимости от того, употребляется ли существительное в неопределенной форме (с en/et) или в определенной (с den/det/de). В неопределенной форме единственного числа общего рода окончание не добавляется (en stor bil), а среднего рода — добавляется -t (et stort hus). В определенной форме (а также после притяжательных местоимений) прилагательное всегда оканчивается на -e (den store bil, det store hus, de store huse). Это правило часто нарушается.",
+      "examples": [
+        {
+          "wrong": "den stor bil",
+          "right": "den store bil",
+          "note": "В определенной форме прилагательное всегда заканчивается на -e, независимо от рода."
+        },
+        {
+          "wrong": "et store hus",
+          "right": "et stort hus",
+          "note": "В неопределенной форме среднего рода прилагательное принимает окончание -t."
+        },
+        {
+          "wrong": "de stor biler",
+          "right": "de store biler",
+          "note": "Во множественном числе (определенном) также используется окончание -e."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Заполните пропуск: 'Det er ___ hus.' (определенная форма, средний род; прилагательное 'stor')",
+          "answer": "store"
+        },
+        {
+          "prompt": "Исправьте ошибку: 'en store bil' – напишите правильный вариант.",
+          "answer": "en stor bil"
+        },
+        {
+          "prompt": "Выберите правильную форму: 'Vi bor i ___ lejlighed.' (определенная форма, общий род; прилагательное 'stor')",
+          "answer": "store"
+        }
+      ]
+    },
+    {
+      "rule_id": "irregular-plural-noun-formation",
+      "topic": "Irregular plural noun formation",
+      "title": "Неправильное образование множественного числа существительных (irregular plural nouns)",
+      "explanation": "В датском языке некоторые существительные образуют множественное число не по правилу (не добавляя -er/-e), а с изменением гласной и/или окончания. Запомните эти слова, так как они часто встречаются. Например, «mand» (мужчина) во множественном числе становится «mænd», а не «mander».",
+      "examples": [
+        {
+          "wrong": "mander",
+          "right": "mænd",
+          "note": "Слово «mand» (мужчина) меняет гласную a на æ и получает окончание -d (mænd). Не добавляйте -er."
+        },
+        {
+          "wrong": "barn",
+          "right": "børn",
+          "note": "Существительное «barn» (ребёнок) во множественном числе меняет корень на «børn». Не используйте форму «barn» для обозначения нескольких детей."
+        },
+        {
+          "wrong": "foder",
+          "right": "fødder",
+          "note": "Слово «fod» (ступня) во множественном числе становится «fødder» с изменением гласной o на ø и добавлением -dder."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите правильную форму множественного числа для слова «mand»:",
+          "answer": "mænd"
+        },
+        {
+          "prompt": "Как будет «дети» (множественное число от «barn»)?",
+          "answer": "børn"
+        },
+        {
+          "prompt": "Напишите множественное число от «fod»:",
+          "answer": "fødder"
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-pronouns-sinsitsine",
+      "topic": "Possessive pronouns sin/sit/sine",
+      "title": "Возвратные притяжательные местоимения sin/sit/sine",
+      "explanation": "В датском языке возвратные притяжательные местоимения sin (общий род), sit (средний род) и sine (множественное число) используются, когда обладатель является подлежащим предложения. Частая ошибка русских — использовать hans/hendes/deres вместо sin/sit/sine, что меняет смысл (указывает на другое лицо). Местоимение согласуется с объектом обладания, а не с обладателем.",
+      "examples": [
+        {
+          "wrong": "Han tager hans bog.",
+          "right": "Han tager sin bog.",
+          "note": "Здесь 'hans' означает книгу другого человека, а 'sin' — его собственную."
+        },
+        {
+          "wrong": "Hun elsker hendes kat.",
+          "right": "Hun elsker sin kat.",
+          "note": "Кошка принадлежит ей самой, поэтому нужно возвратное местоимение sin (общий род, ед.ч.)."
+        },
+        {
+          "wrong": "De ser deres børn.",
+          "right": "De ser sine børn.",
+          "note": "Если это их собственные дети, используем sine; deres может означать чужих детей."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Заполните пропуск (его собственная книга): Han læser ___ bog.",
+          "answer": "sin"
+        },
+        {
+          "prompt": "Выберите правильное возвратное местоимение (она дарит подарок своему другу): Hun giver ___ ven en gave.",
+          "answer": "sin"
+        },
+        {
+          "prompt": "Переведите: «Они любят своих (собственных) детей».",
+          "answer": "De elsker sine børn."
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-verbs-and-pronouns",
+      "topic": "Reflexive verbs and pronouns",
+      "title": "Рефлексивные глаголы и местоимения в датском языке",
+      "explanation": "В датском языке рефлексивные местоимения (mig, dig, sig, os, jer) используются только с определёнными глаголами, когда действие направлено на самого себя. Главная ошибка русскоязычных: использование формы 'sig' для первого и второго лица (например, 'Jeg vasker sig' вместо 'Jeg vasker mig'). Запомните: 'sig' — только для третьего лица (han, hun, den, det, de). Также есть притяжательное рефлексивное 'sin/sit/sine', которое указывает, что предмет принадлежит подлежащему предложения.",
+      "examples": [
+        {
+          "wrong": "Jeg vasker sig om morgenen.",
+          "right": "Jeg vasker mig om morgenen.",
+          "note": "Ошибка: 'sig' используется только для третьего лица. С 'jeg' нужно 'mig'."
+        },
+        {
+          "wrong": "Hun vasker hende.",
+          "right": "Hun vasker sig.",
+          "note": "Правильно: если действие направлено на неё же, нужно 'sig', а не 'hende' (объектная форма)."
+        },
+        {
+          "wrong": "Han tager hans taske.",
+          "right": "Han tager sin taske.",
+          "note": "С притяжательным значением: если предмет принадлежит подлежащему (он сам берёт свою сумку), используйте 'sin', а не 'hans'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на датский: «Она моет себя». Используйте правильное рефлексивное местоимение.",
+          "answer": "Hun vasker sig."
+        },
+        {
+          "prompt": "Исправьте ошибку в предложении: «Vi vasker sig hænderne». (Мы моем руки.)",
+          "answer": "Vi vasker os hænderne."
+        },
+        {
+          "prompt": "Вставьте правильное слово: «Peter elsker _____ (свою) kæreste.» (Питер любит свою девушку.)",
+          "answer": "sin"
+        }
+      ]
+    },
+    {
+      "rule_id": "passive-voice-blive-vs-s",
+      "topic": "Passive voice blive vs -s",
+      "title": "Пассивный залог: blive vs -s",
+      "explanation": "В датском языке пассив образуется двумя способами: с помощью вспомогательного глагола 'blive' (например, 'bliver åbnet') или суффикса '-s' (например, 'åbnes'). '-s' пассив используется для общих утверждений, привычных действий или когда исполнитель не важен. 'blive' пассив — для конкретных событий, действий в процессе или когда исполнитель упоминается. Типичная ошибка: использовать '-s' там, где нужен 'blive'.",
+      "examples": [
+        {
+          "wrong": "Døren åbnes lige nu.",
+          "right": "Døren bliver åbnet lige nu.",
+          "note": "Конкретное действие в моменте требует 'blive'."
+        },
+        {
+          "wrong": "Huset bygges sidste år.",
+          "right": "Huset blev bygget sidste år.",
+          "note": "Прошедшее время конкретного события — 'blive' в прошедшем времени (blev)."
+        },
+        {
+          "wrong": "Jeg bliver set af lægen hver uge.",
+          "right": "Jeg ses af lægen hver uge.",
+          "note": "Регулярное действие — '-s' пассив уместен."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Выберите правильную форму: «Bogen (læses / bliver læst) af mange studerende.» (Книга читается многими студентами — общее утверждение.)",
+          "answer": "læses"
+        },
+        {
+          "prompt": "Как сказать «Дверь только что открыли»? (конкретное действие)",
+          "answer": "Døren blev lige åbnet."
+        },
+        {
+          "prompt": "Выберите правильную форму: «Maden (bliver serveret / serveres) lige om lidt.» (Еду подадут через минуту — конкретное событие.)",
+          "answer": "bliver serveret"
+        }
+      ]
+    },
+    {
+      "rule_id": "relative-pronouns-der-vs-som",
+      "topic": "Relative pronouns der vs som",
+      "title": "Относительные местоимения der и som",
+      "explanation": "В датском языке der используется, когда относительное местоимение является подлежащим придаточного предложения (кто? что?). Som используется, когда оно является дополнением (кого? что?) или стоит после предлога. Не используйте der в роли дополнения – это распространённая ошибка.",
+      "examples": [
+        {
+          "wrong": "Manden der jeg mødte i går",
+          "right": "Manden som jeg mødte i går",
+          "note": "Здесь «jeg mødte» – подлежащее «jeg», а «manden» – дополнение, поэтому нужно som."
+        },
+        {
+          "wrong": "Bogen der jeg læste",
+          "right": "Bogen som jeg læste",
+          "note": "«Bogen» – объект («я прочитал что?»), поэтому som, а не der."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильное слово: «Han er drengen, ___ spiller fodbold.»",
+          "answer": "der"
+        },
+        {
+          "prompt": "Вставьте правильное слово: «Det er kvinden, ___ jeg så i parken.»",
+          "answer": "som"
+        },
+        {
+          "prompt": "Вставьте правильное слово: «Huset, ___ vi bor i, er gammelt.»",
+          "answer": "som"
+        }
+      ]
+    },
+    {
+      "rule_id": "conjunctions-og-men-for-så",
+      "topic": "Conjunctions og men for så",
+      "title": "Союзы og, men, for, så: как не перепутать",
+      "explanation": "Союз 'og' означает 'и', 'men' — 'но', 'for' — 'потому что' (причина), а 'så' — 'поэтому' (следствие). Частая ошибка — путать причину и следствие, используя 'så' вместо 'for' или наоборот. Также путают 'og' и 'men', когда нужно противопоставление.",
+      "examples": [
+        {
+          "wrong": "Jeg er træt, så jeg har sovet dårligt.",
+          "right": "Jeg er træt, for jeg har sovet dårligt.",
+          "note": "'så' указывает на результат, но здесь нужна причина (for)."
+        },
+        {
+          "wrong": "Jeg spiste meget, så jeg var sulten.",
+          "right": "Jeg spiste meget, for jeg var sulten.",
+          "note": "Та же путаница: причина и следствие перепутаны."
+        },
+        {
+          "wrong": "Jeg vil gerne i biografen, og jeg har ikke penge.",
+          "right": "Jeg vil gerne i biografen, men jeg har ikke penge.",
+          "note": "'og' (и) не подходит, нужно противопоставление — 'men' (но)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Выберите правильный союз: Jeg vil gerne i biografen, ___ jeg har ikke penge. (og/men/for/så)",
+          "answer": "men"
+        },
+        {
+          "prompt": "Исправьте ошибку: Han er syg, så han har spist dårlig mad. (подсказка: он болен, потому что съел плохую еду)",
+          "answer": "Han er syg, for han har spist dårlig mad."
+        },
+        {
+          "prompt": "Заполните пропуск: Det er koldt, ___ jeg tager en jakke på. (så/for)",
+          "answer": "så"
+        }
+      ]
+    },
+    {
+      "rule_id": "question-formation-and-inversion",
+      "topic": "Question formation and inversion",
+      "title": "Образование вопросов и инверсия в датском",
+      "explanation": "В датском языке в прямых вопросах (да/нет) глагол ставится на первое место, перед подлежащим. Это называется инверсией. Русские учащиеся часто ошибочно сохраняют порядок слов утвердительного предложения. Запомните: вопрос начинается с глагола, затем идёт подлежащее.",
+      "examples": [
+        {
+          "wrong": "Du kan tale dansk?",
+          "right": "Kan du tale dansk?",
+          "note": "Правильно: глагол 'kan' на первом месте."
+        },
+        {
+          "wrong": "I arbejder i morgen?",
+          "right": "Arbejder I i morgen?",
+          "note": "Глагол 'arbejder' выносится вперёд."
+        },
+        {
+          "wrong": "Hun har en hund?",
+          "right": "Har hun en hund?",
+          "note": "Глагол 'har' становится первым."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на датский: 'Ты говоришь по-датски?' (используя 'tale' и 'dansk')",
+          "answer": "Taler du dansk?"
+        },
+        {
+          "prompt": "Переведите на датский: 'Они придут завтра?' (используя 'komme' и 'i morgen')",
+          "answer": "Kommer de i morgen?"
+        },
+        {
+          "prompt": "Переведите на датский: 'У тебя есть велосипед?' (используя 'have' и 'cykel')",
+          "answer": "Har du en cykel?"
+        }
+      ]
+    },
+    {
+      "rule_id": "telling-time-halv-kvart",
+      "topic": "Telling time halv kvart",
+      "title": "Ошибка 'halv kvart' в датском времени",
+      "explanation": "В датском языке для указания времени используются слова 'halv' (половина) для половины часа до следующего часа, 'kvart over' (четверть после) и 'kvart i' (без четверти). Ошибка 'halv kvart' возникает, когда эти понятия объединяются неправильно. Запомните: используйте либо 'halv' с указанием следующего часа, либо 'kvart over'/'kvart i' с текущим или следующим часом, но не сочетайте их.",
+      "examples": [
+        {
+          "wrong": "Mødet starter klokken halv kvart otte.",
+          "right": "Mødet starter klokken kvart i otte.",
+          "note": "Правильно: 'kvart i otte' для 7:45."
+        },
+        {
+          "wrong": "Vi spiser frokost klokken halv kvart tolv.",
+          "right": "Vi spiser frokost klokken halv tolv.",
+          "note": "Правильно: 'halv tolv' для 11:30."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Исправьте ошибку: 'Klokken er halv kvart fem.'",
+          "answer": "Klokken er kvart i fem."
+        },
+        {
+          "prompt": "Как сказать по-датски 'без четверти восемь' (7:45)?",
+          "answer": "kvart i otte"
+        },
+        {
+          "prompt": "Исправьте: 'Vi mødes klokken halv kvart tolv.'",
+          "answer": "Vi mødes klokken kvart i tolv."
+        }
+      ]
+    },
+    {
+      "rule_id": "cardinal-and-ordinal-numbers",
+      "topic": "Cardinal and ordinal numbers",
+      "title": "Количественные и порядковые числительные в датском языке",
+      "explanation": "В датском языке важно различать количественные числительные (которые отвечают на вопрос «сколько?») и порядковые (которые отвечают на вопрос «который по счёту?»). Частая ошибка — использовать количественное числительное вместо порядкового, особенно при обозначении дат, номеров и очереди.",
+      "examples": [
+        {
+          "wrong": "Jeg bor på to etage.",
+          "right": "Jeg bor på anden etage.",
+          "note": "В этом примере нужен порядковый номер этажа (второй), а не количество (два)."
+        },
+        {
+          "wrong": "Det er min to fødselsdag i år.",
+          "right": "Det er min anden fødselsdag i år.",
+          "note": "Речь идет о втором дне рождении (порядок), а не о двух днях рождениях."
+        },
+        {
+          "wrong": "Vi mødes den to maj.",
+          "right": "Vi mødes den anden maj.",
+          "note": "При указании даты всегда используется порядковое числительное (второе мая)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на датский: «Это мой третий урок» (используйте порядковое числительное).",
+          "answer": "Det er min tredje lektion."
+        },
+        {
+          "prompt": "Как будет по-датски «второй дом слева»?",
+          "answer": "Det andet hus til venstre."
+        },
+        {
+          "prompt": "Заполните пропуск: «Jeg har ___ bøger» (у меня две книги) и «Jeg læser ___ bog» (я читаю вторую книгу).",
+          "answer": "to; anden"
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciation-of-soft-d",
+      "topic": "Pronunciation of soft d",
+      "title": "Произношение мягкого d в датском языке",
+      "explanation": "В датском языке есть два звука d: твёрдый (как в русском) и мягкий (blødt d). Мягкий d произносится как английское th в слове 'the' — кончик языка касается верхних зубов, звук звонкий. Русскоязычные часто заменяют его на твёрдый d, что звучит неестественно. Важно научиться различать эти звуки в таких словах, как 'mad' (еда) или 'bord' (стол).",
+      "examples": [
+        {
+          "wrong": "mad",
+          "right": "mad",
+          "note": "Здесь d произносится мягко, как английское th (ð). Не твёрдый d."
+        },
+        {
+          "wrong": "bord",
+          "right": "bord",
+          "note": "На конце слова d также мягкое. Представьте, что вы говорите 'бо' + английское 'th' (как в 'the')."
+        },
+        {
+          "wrong": "red",
+          "right": "red",
+          "note": "В слове 'red' (красный) мягкий d похож на звук между гласными. Попробуйте сказать 're' и плавно перейти к 'ð'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Произнесите слово 'mad' с правильным мягким d. Запишите его.",
+          "answer": "mad"
+        },
+        {
+          "prompt": "Как правильно произносится слово 'bord'? Напишите его датское написание.",
+          "answer": "bord"
+        },
+        {
+          "prompt": "Попробуйте произнести 'red' так, чтобы d звучало как английское th. Напишите слово.",
+          "answer": "red"
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciation-of-uvular-r",
+      "topic": "Pronunciation of uvular r",
+      "title": "Произношение увулярного R в датском языке",
+      "explanation": "В датском языке звук R произносится в задней части горла, как увулярный (похожий на французское или немецкое R). В отличие от русского раскатистого R, он образуется вибрацией язычка. Частая ошибка русских — замена на твёрдый раскатистый R, что выдаёт акцент.",
+      "examples": [
+        {
+          "wrong": "rrød",
+          "right": "rød",
+          "note": "В слове 'rød' (красный) нужно произносить мягкий увулярный R, а не раскатистый."
+        },
+        {
+          "wrong": "morrrgen",
+          "right": "morgen",
+          "note": "В слове 'morgen' (утро) R также увулярный, не добавляйте лишних вибраций."
+        },
+        {
+          "wrong": "rrør",
+          "right": "rør",
+          "note": "В слове 'rør' (труба) оба R произносятся увулярно, не как в русском."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Как правильно произнести датское слово 'красный'? (напишите слово)",
+          "answer": "rød"
+        },
+        {
+          "prompt": "Какое датское слово означает 'утро' и произносится с увулярным R?",
+          "answer": "morgen"
+        },
+        {
+          "prompt": "Произнесите с правильным R: датское слово 'труба'.",
+          "answer": "rør"
+        }
+      ]
+    },
+    {
+      "rule_id": "false-friends-false-cognates",
+      "topic": "False friends false cognates",
+      "title": "Ложные друзья переводчика: датско-русские лже-когинаты",
+      "explanation": "Некоторые датские слова похожи на русские по написанию или звучанию, но имеют совершенно другое значение. Например, датское 'stol' означает 'стул', а не 'стол', а 'glas' — это 'стакан', а не 'глаз'. Будьте внимательны, чтобы не допустить ошибок в разговоре.",
+      "examples": [
+        {
+          "wrong": "Jeg lægger bogen på stolen.",
+          "right": "Jeg lægger bogen på bordet.",
+          "note": "Датское 'stol' означает 'стул', а не 'стол'. Для 'стола' используйте 'bord'."
+        },
+        {
+          "wrong": "Jeg har noget i mit glas.",
+          "right": "Jeg har noget i mit øje.",
+          "note": "Слово 'glas' переводится как 'стакан', а не 'глаз'. Для 'глаза' используйте 'øje'."
+        },
+        {
+          "wrong": "Der er en mor i byen.",
+          "right": "Der er en pest i byen.",
+          "note": "Датское 'mor' означает 'мать', а не 'чума'. Для 'чумы' используйте 'pest'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Как правильно сказать по-датски 'Я кладу книгу на стол'?",
+          "answer": "Jeg lægger bogen på bordet."
+        },
+        {
+          "prompt": "Переведите на датский: 'У меня что-то в глазу'.",
+          "answer": "Jeg har noget i mit øje."
+        },
+        {
+          "prompt": "Как сказать 'В городе чума' по-датски? (Не путайте с 'mor')",
+          "answer": "Der er pest i byen."
+        }
+      ]
+    },
+    {
+      "rule_id": "compound-word-formation-stress",
+      "topic": "Compound word formation stress",
+      "title": "Ударение в сложных словах датского языка",
+      "explanation": "В датском языке в сложных словах основное ударение всегда падает на первую часть слова. Вторая часть произносится без ударения. Русскоговорящие часто ошибочно ставят ударение на вторую часть, что звучит неестественно или меняет значение.",
+      "examples": [
+        {
+          "wrong": "skoleBOG",
+          "right": "SKOlebog",
+          "note": "Неправильно: ударение на 'bog'. Правильно: ударение на 'skole'."
+        },
+        {
+          "wrong": "havneBY",
+          "right": "HAVneby",
+          "note": "Ошибка: ударение на 'by'. Исправление: ударение на 'havne'."
+        },
+        {
+          "wrong": "arbejdsPLADS",
+          "right": "ARbejdsplads",
+          "note": "Запомните: ударение на 'arbejds', а не на 'plads'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Как правильно произнести слово 'ручка для двери'? Выберите правильный вариант ударения: dørhåndtag или dørhåndtag? (подсказка: ударение на первый слог)",
+          "answer": "DØRhåndtag"
+        },
+        {
+          "prompt": "Исправьте ошибку в слове 'dagligSTUE' (гостиная). Напишите правильный вариант.",
+          "answer": "DAGligstue"
+        },
+        {
+          "prompt": "Какое ударение правильное в слове 'железнодорожный вокзал'? jernbaneSTATION или JERNbanestation?",
+          "answer": "JERNbanestation"
+        }
+      ]
+    },
+    {
+      "rule_id": "double-definite-construction",
+      "topic": "Double definite construction",
+      "title": "Двойное определённое: ошибка с артиклем и окончанием",
+      "explanation": "В датском языке, когда существительное используется с прилагательным в определённой форме, нужно ставить определённый артикль перед прилагательным, но не добавлять окончание к существительному. Например, правильно «den store bil», а не «den store bilen». Если прилагательного нет, то используется только окончание: «bilen».",
+      "examples": [
+        {
+          "wrong": "den store bilen",
+          "right": "den store bil",
+          "note": "Не добавляйте окончание -en, если уже есть артикль den."
+        },
+        {
+          "wrong": "det gamle huset",
+          "right": "det gamle hus",
+          "note": "То же правило для среднего рода: артикль det + прилагательное + существительное без окончания."
+        },
+        {
+          "wrong": "de røde bilerne",
+          "right": "de røde biler",
+          "note": "Во множественном числе тоже артикль de, прилагательное и существительное без окончания -ne."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите правильную форму: большой дом (средний род) с определённым артиклем.",
+          "answer": "det store hus"
+        },
+        {
+          "prompt": "Напишите правильную форму: старые книги (множественное число) с определённым артиклем.",
+          "answer": "de gamle bøger"
+        },
+        {
+          "prompt": "Напишите правильную форму: красная машина (общий род) с определённым артиклем.",
+          "answer": "den røde bil"
+        }
+      ]
+    },
+    {
+      "rule_id": "expletive-subject-der-vs-det",
+      "topic": "Expletive subject der vs det",
+      "title": "Правильное использование der и det в качестве вводного подлежащего",
+      "explanation": "В датском языке вводное подлежащее 'der' используется в конструкциях, обозначающих существование или наличие чего-либо (аналог русского 'есть/имеется'). Вводное подлежащее 'det' используется в безличных конструкциях, когда речь идет о погоде, времени, расстоянии, а также с прилагательными (аналог русского 'это/оно'). Ошибка возникает, когда вместо 'der' употребляют 'det' в экзистенциальных предложениях, и наоборот.",
+      "examples": [
+        {
+          "wrong": "Det er mange mennesker i parken.",
+          "right": "Der er mange mennesker i parken.",
+          "note": "Здесь говорится о наличии людей – нужно 'der'."
+        },
+        {
+          "wrong": "Der er koldt i dag.",
+          "right": "Det er koldt i dag.",
+          "note": "Погода – безличная конструкция, нужно 'det'."
+        },
+        {
+          "wrong": "Det er en bog på bordet.",
+          "right": "Der er en bog på bordet.",
+          "note": "Наличие книги – экзистенциальная конструкция."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильное вводное подлежащее: ___ er mange børn i klassen.",
+          "answer": "Der"
+        },
+        {
+          "prompt": "Вставьте правильное вводное подлежащее: ___ er varmt i sommer.",
+          "answer": "Det"
+        },
+        {
+          "prompt": "Вставьте правильное вводное подлежащее: ___ er en kat under stolen.",
+          "answer": "Der"
+        }
+      ]
+    },
+    {
+      "rule_id": "indirect-question-word-order",
+      "topic": "Indirect question word order",
+      "title": "Порядок слов в косвенных вопросах",
+      "explanation": "В датском языке в косвенных вопросах (например, после 'jeg ved', 'kan du fortælle mig') используется прямой порядок слов: подлежащее стоит перед сказуемым, а не наоборот, как в прямых вопросах. Запомните: в косвенном вопросе глагол не выходит на первое место.",
+      "examples": [
+        {
+          "wrong": "Han spurgte, hvad hedder du?",
+          "right": "Han spurgte, hvad du hedder.",
+          "note": "В прямом вопросе 'hvad hedder du?' глагол (hedder) стоит перед подлежащим (du). В косвенном — подлежащее (du) перед глаголом."
+        },
+        {
+          "wrong": "Jeg ved ikke, hvor bor hun?",
+          "right": "Jeg ved ikke, hvor hun bor.",
+          "note": "То же правило: после 'jeg ved ikke' используем порядок слов как в утверждении (hun bor)."
+        },
+        {
+          "wrong": "Kan du fortælle mig, hvornår kommer toget?",
+          "right": "Kan du fortælle mig, hvornår toget kommer.",
+          "note": "Даже если главное предложение — вопрос, косвенный вопрос внутри сохраняет прямой порядок (toget kommer)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переделайте прямой вопрос в косвенный: начните с 'Jeg ved ikke' + 'Hvad vil han?'",
+          "answer": "Jeg ved ikke, hvad han vil."
+        },
+        {
+          "prompt": "Переделайте: 'Hvor arbejder Peter?' после 'Kan du sige mig'.",
+          "answer": "Kan du sige mig, hvor Peter arbejder?"
+        },
+        {
+          "prompt": "Сделайте косвенный вопрос из 'Hvem er hun?' после 'Han spurgte'.",
+          "answer": "Han spurgte, hvem hun er."
+        }
+      ]
+    },
+    {
+      "rule_id": "infinitive-at-vs-conjunction-at",
+      "topic": "Infinitive at vs conjunction at",
+      "title": "Инфинитивная частица at vs союз at",
+      "explanation": "В датском языке слово 'at' может быть инфинитивной частицей (ставится перед глаголом в инфинитиве, как русский инфинитив без слова 'что') или союзом 'что' (вводит придаточное предложение). Ошибка возникает, когда вместо союза используют инфинитив с at, или наоборот. Запомните: после союза at обязательно идёт спрягаемый глагол, а после инфинитивной частицы — неспрягаемая форма (инфинитив).",
+      "examples": [
+        {
+          "wrong": "Jeg siger at gå.",
+          "right": "Jeg siger, at jeg går.",
+          "note": "Здесь 'at' — союз (что), поэтому после него нужен спрягаемый глагол 'går', а не инфинитив 'gå'."
+        },
+        {
+          "wrong": "Han tror at komme.",
+          "right": "Han tror, at han kommer.",
+          "note": "После союза 'at' (что) требуется полное придаточное с подлежащим и спрягаемым глаголом."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Исправьте ошибку: 'Jeg ved at læse.'",
+          "answer": "Jeg ved, at jeg læser."
+        },
+        {
+          "prompt": "Исправьте ошибку: 'Hun håber at hun vinder.' (в данном предложении верно использовать инфинитив, а не союз)",
+          "answer": "Hun håber at vinde."
+        }
+      ]
+    },
+    {
+      "rule_id": "temporal-conjunctions-da-vs-når",
+      "topic": "Temporal conjunctions da vs når",
+      "title": "Временные союзы da vs når",
+      "explanation": "Используйте «da» для обозначения однократного действия в прошлом. Используйте «når» для повторяющихся действий или действий в настоящем/будущем.",
+      "examples": [
+        {
+          "wrong": "Når jeg var barn, boede jeg i Danmark.",
+          "right": "Da jeg var barn, boede jeg i Danmark.",
+          "note": "«Da» — для конкретного прошлого события (детство)."
+        },
+        {
+          "wrong": "Da jeg kommer hjem, laver jeg mad.",
+          "right": "Når jeg kommer hjem, laver jeg mad.",
+          "note": "«Når» — для повторяющегося или будущего действия."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Заполните пропуск: «... jeg så hende, smilede hun.» (когда я увидел её, она улыбнулась)",
+          "answer": "Da"
+        },
+        {
+          "prompt": "Заполните пропуск: «... det regner, tager jeg en paraply.» (когда идёт дождь, я беру зонт)",
+          "answer": "Når"
+        },
+        {
+          "prompt": "Заполните пропуск: «... vi var i biografen, så vi en god film.» (когда мы были в кино, мы посмотрели хороший фильм)",
+          "answer": "Da"
+        }
+      ]
+    },
+    {
+      "rule_id": "causal-conjunctions-fordi-vs-derfor",
+      "topic": "Causal conjunctions fordi vs derfor",
+      "title": "Союзы причины и следствия: fordi vs derfor",
+      "explanation": "Союз 'fordi' означает 'потому что' и вводит причину (придаточное предложение). Союз 'derfor' означает 'поэтому' и вводит следствие (главное предложение). После 'fordi' порядок слов: подлежащее + … + глагол в конце; после 'derfor' глагол стоит на втором месте (инверсия).",
+      "examples": [
+        {
+          "wrong": "Jeg er træt, derfor jeg har sovet dårligt.",
+          "right": "Jeg er træt, fordi jeg har sovet dårligt.",
+          "note": "Здесь нужна причина (потому что плохо спал), поэтому используем 'fordi'. После 'fordi' глагол 'har' остаётся на втором месте? Нет, в придаточном 'har' уходит в конец: 'fordi jeg har sovet dårligt' – правильно."
+        },
+        {
+          "wrong": "Han havde mange penge, fordi han købte en bil.",
+          "right": "Han havde mange penge, derfor købte han en bil.",
+          "note": "Здесь следствие (купил машину) из-за того, что было много денег. 'Derfor' требует инверсии: глагол 'købte' ставится перед подлежащим 'han'."
+        },
+        {
+          "wrong": "Fordi det regner, vi bliver hjemme.",
+          "right": "Fordi det regner, bliver vi hjemme.",
+          "note": "Если 'fordi' стоит в начале, то в главной части тоже нужна инверсия: глагол 'bliver' ставится перед подлежащим 'vi'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильный союз: 'fordi' или 'derfor'. (Он опоздал, потому что проспал.)",
+          "answer": "Han kom for sent, fordi han sov over sig."
+        },
+        {
+          "prompt": "Исправьте порядок слов: 'Jeg er glad, derfor jeg smiler.'",
+          "answer": "Jeg er glad, derfor smiler jeg."
+        },
+        {
+          "prompt": "Дополните предложение: 'Hun læser meget, ______ hun elsker bøger.' (причина)",
+          "answer": "Hun læser meget, fordi hun elsker bøger."
+        }
+      ]
+    },
+    {
+      "rule_id": "verb-pair-confusion-liggelægge",
+      "topic": "Verb pair confusion ligge/lægge",
+      "title": "Путаница с глаголами ligge и lægge",
+      "explanation": "Глагол 'ligge' означает 'лежать' (быть в горизонтальном положении без объекта), а 'lægge' означает 'класть' (размещать что-то, требует прямого дополнения). Запомните: если можно добавить 'что?' или 'кого?' после глагола — используйте 'lægge', иначе — 'ligge'.",
+      "examples": [
+        {
+          "wrong": "Jeg ligger bogen på bordet.",
+          "right": "Jeg lægger bogen på bordet.",
+          "note": "Ошибка: использован 'ligge' (лежать) вместо 'lægge' (класть). 'Bogen' — прямое дополнение, поэтому нужен 'lægge'."
+        },
+        {
+          "wrong": "Nøglerne lægger i skuffen.",
+          "right": "Nøglerne ligger i skuffen.",
+          "note": "Ошибка: использован 'lægge' (класть), но ключи уже лежат. Нет действия и объекта — верно 'ligge' (лежат)."
+        },
+        {
+          "wrong": "Han ligger sin taske på gulvet.",
+          "right": "Han lægger sin taske på gulvet.",
+          "note": "Ошибка: 'tasten taske' — объект, поэтому нужен переходный глагол 'lægge' (класть), а не 'ligge' (лежать)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Bogen ___ på bordet. (ligger / lægger)",
+          "answer": "ligger"
+        },
+        {
+          "prompt": "Jeg ___ avisen på stolen. (ligger / lægger)",
+          "answer": "lægger"
+        },
+        {
+          "prompt": "Kattekillingen ___ i kurven. (ligger / lægger)",
+          "answer": "ligger"
+        }
+      ]
+    },
+    {
+      "rule_id": "auxiliary-verb-choice-in-perfect-tense",
+      "topic": "Auxiliary verb choice in perfect tense",
+      "title": "Выбор вспомогательного глагола в перфекте: 'har' или 'er'",
+      "explanation": "В датском языке перфект образуется с помощью вспомогательных глаголов 'har' (have) или 'er' (быть). Большинство глаголов используют 'har', но глаголы движения или изменения состояния требуют 'er'. Типичная ошибка — использовать 'har' с такими глаголами. Запомните ключевые глаголы, которые берут 'er': at gå (идти), at komme (приходить), at løbe (бежать), at rejse (путешествовать), at blive (становиться), at dø (умирать) и др. Исключение: глагол 'at være' (быть) использует 'har' (jeg har været).",
+      "examples": [
+        {
+          "wrong": "Jeg har gået i parken.",
+          "right": "Jeg er gået i parken.",
+          "note": "Глагол 'gå' (идти) требует 'er'."
+        },
+        {
+          "wrong": "Hun har kommet fra skole.",
+          "right": "Hun er kommet fra skole.",
+          "note": "Глагол 'komme' (приходить) требует 'er'."
+        },
+        {
+          "wrong": "De har rejst i går.",
+          "right": "De er rejst i går.",
+          "note": "Глагол 'rejse' (путешествовать) требует 'er'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на датский: Я пришёл домой.",
+          "answer": "Jeg er kommet hjem."
+        },
+        {
+          "prompt": "Переведите на датский: Они бежали по улице.",
+          "answer": "De er løbet på gaden."
+        },
+        {
+          "prompt": "Переведите на датский: Он уехал в Копенгаген.",
+          "answer": "Han er rejst til København."
+        }
+      ]
+    },
+    {
+      "rule_id": "modal-particles-da-jo-dog",
+      "topic": "Modal particles da jo dog",
+      "title": "Да-частицы: da, jo, dog",
+      "explanation": "В датском языке есть частицы da, jo и dog, которые добавляют оттенок уверенности, очевидности или контраста. Русскоговорящие часто их пропускают, из-за чего речь звучит неестественно. Da подчеркивает факт или удивление, jo указывает на общеизвестное, а dog выражает противопоставление или уступку.",
+      "examples": [
+        {
+          "wrong": "Det er sandt.",
+          "right": "Det er da sandt.",
+          "note": "Частица da добавляет уверенность или удивление, как русское 'же'."
+        },
+        {
+          "wrong": "Du ved det.",
+          "right": "Du ved jo det.",
+          "note": "Jo подчеркивает, что это очевидно и собеседник уже знает, как 'ведь'."
+        },
+        {
+          "wrong": "Han kom, men han var træt.",
+          "right": "Han kom dog, men han var træt.",
+          "note": "Dog выражает контраст, аналогичное 'всё-таки' или 'однако'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Перепишите предложение, добавив частицу jo для выражения очевидности: 'Du kan lide kaffe.'",
+          "answer": "Du kan jo lide kaffe."
+        },
+        {
+          "prompt": "Добавьте da для усиления утверждения: 'Det er godt.'",
+          "answer": "Det er da godt."
+        },
+        {
+          "prompt": "Замените 'men' на частицу dog, чтобы подчеркнуть контраст: 'Han var træt, men han kom.'",
+          "answer": "Han var træt, dog kom han."
+        }
+      ]
+    },
+    {
+      "rule_id": "indefinite-pronouns-nogen-nogle",
+      "topic": "Indefinite pronouns nogen nogle",
+      "title": "Неопределенные местоимения nogen и nogle",
+      "explanation": "Местоимение nogen используется с неисчисляемыми существительными или в вопросах/отрицаниях (значение 'какой-нибудь, сколько-нибудь'). Местоимение nogle употребляется с исчисляемыми существительными во множественном числе в значении 'несколько, какие-то'. Типичная ошибка — путать их из-за похожего произношения.",
+      "examples": [
+        {
+          "wrong": "Har du nogle tid?",
+          "right": "Har du nogen tid?",
+          "note": "'Tid' — неисчисляемое, нужно nogen."
+        },
+        {
+          "wrong": "Jeg har købt nogen æbler.",
+          "right": "Jeg har købt nogle æbler.",
+          "note": "'Æbler' — исчисляемое мн.ч., нужно nogle."
+        },
+        {
+          "wrong": "Der er nogle vand i flasken.",
+          "right": "Der er nogen vand i flasken.",
+          "note": "'Vand' — неисчисляемое, нужно nogen."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Заполните пропуск: «Jeg har ___ gode venner» (у меня есть несколько хороших друзей).",
+          "answer": "nogle"
+        },
+        {
+          "prompt": "Заполните пропуск: «Er der ___ mælk i køleskabet?» (есть ли немного молока в холодильнике?).",
+          "answer": "nogen"
+        },
+        {
+          "prompt": "Исправьте ошибку: «Vi mangler nogle penge til billetten.» (нам не хватает немного денег на билет).",
+          "answer": "Vi mangler nogen penge til billetten."
+        }
+      ]
+    },
+    {
+      "rule_id": "quantifiers-mange-meget",
+      "topic": "Quantifiers mange meget",
+      "title": "Количественные слова mange и meget",
+      "explanation": "В датском языке слово 'mange' используется с исчисляемыми существительными во множественном числе (например, bøger, huse), а 'meget' — с неисчисляемыми (например, vand, tid). Частая ошибка — путать их, используя 'meget' с исчисляемыми или 'mange' с неисчисляемыми.",
+      "examples": [
+        {
+          "wrong": "Jeg har mange vand.",
+          "right": "Jeg har meget vand.",
+          "note": "Vand — неисчисляемое, поэтому нужно meget."
+        },
+        {
+          "wrong": "Der er meget bøger på bordet.",
+          "right": "Der er mange bøger på bordet.",
+          "note": "Bøger — исчисляемое множественное число, поэтому нужно mange."
+        },
+        {
+          "wrong": "Hun har mange tid.",
+          "right": "Hun har meget tid.",
+          "note": "Tid — неисчисляемое, поэтому meget."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильное слово: «Der er ___ mennesker i parken.» (много людей)",
+          "answer": "mange"
+        },
+        {
+          "prompt": "Вставьте правильное слово: «Jeg drikker ___ kaffe om morgenen.» (много кофе)",
+          "answer": "meget"
+        },
+        {
+          "prompt": "Исправьте ошибку: «Han har meget venner.»",
+          "answer": "Han har mange venner."
+        }
+      ]
+    },
+    {
+      "rule_id": "demonstrative-pronouns-denne-den-det",
+      "topic": "Demonstrative pronouns denne den det",
+      "title": "Указательные местоимения denne, den, det (и dette)",
+      "explanation": "В датском языке есть два набора указательных местоимений: для близких предметов (этот) — denne (общий род) / dette (средний род) и для далёких (тот) — den (общий род) / det (средний род). Частая ошибка — путать den и denne (близко/далеко) или использовать denne с существительными среднего рода (нужно dette).",
+      "examples": [
+        {
+          "wrong": "Jeg vil have den bog.",
+          "right": "Jeg vil have denne bog.",
+          "note": "bog — общего рода, книга рядом — нужно denne (этот), а не den (тот)."
+        },
+        {
+          "wrong": "Denne hus er gammelt.",
+          "right": "Dette hus er gammelt.",
+          "note": "hus — среднего рода, поэтому для 'этот' используем dette, а не denne."
+        },
+        {
+          "wrong": "Det bil er rød.",
+          "right": "Den bil er rød.",
+          "note": "bil — общего рода, для 'тот' (далеко) нужно den, а не det (средний род)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильное слово: ___ (этот) stol er ny. (stol — общий род)",
+          "answer": "Denne"
+        },
+        {
+          "prompt": "Вставьте правильное слово: ___ (тот) hus er stort. (hus — средний род)",
+          "answer": "Det"
+        },
+        {
+          "prompt": "Вставьте правильное слово: ___ (та) bog er gammel. (bog — общий род, далеко)",
+          "answer": "Den"
+        }
+      ]
+    },
+    {
+      "rule_id": "interrogative-pronouns-hvad-hvilken",
+      "topic": "Interrogative pronouns hvad hvilken",
+      "title": "Вопросительные местоимения hvad и hvilken",
+      "explanation": "Используйте hvad (что) для вопросов о неопределённых предметах или сущностях. Используйте hvilken/hvilket/hvilke (какой/какое/какие) при выборе из ограниченного набора известных вариантов. Обратите внимание на род и число: hvilken (общий род), hvilket (средний род), hvilke (множественное число).",
+      "examples": [
+        {
+          "wrong": "Hvad bog kan du lide?",
+          "right": "Hvilken bog kan du lide?",
+          "note": "Здесь подразумевается выбор среди конкретных книг, поэтому нужен hvilken (какой)."
+        },
+        {
+          "wrong": "Hvilken er din yndlingsfarve?",
+          "right": "Hvad er din yndlingsfarve?",
+          "note": "Вопрос о сущности (любимый цвет) без выбора из ограниченного набора — используем hvad (что)."
+        },
+        {
+          "wrong": "Hvad vej skal vi gå?",
+          "right": "Hvilken vej skal vi gå?",
+          "note": "Когда спрашиваем о конкретном пути из нескольких возможных, нужно hvilken (какой)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на датский: «Какую книгу ты читаешь?» (подразумевается выбор из нескольких)",
+          "answer": "Hvilken bog læser du?"
+        },
+        {
+          "prompt": "Переведите на датский: «Что ты читаешь?» (без уточнения)",
+          "answer": "Hvad læser du?"
+        },
+        {
+          "prompt": "Исправьте ошибку: «Hvad bil har du købt?» (есть выбор марок)",
+          "answer": "Hvilken bil har du købt?"
+        }
+      ]
+    },
+    {
+      "rule_id": "correlative-conjunctions-bådeog-enteneller",
+      "topic": "Correlative conjunctions både...og enten...eller",
+      "title": "Союзные пары: både...og (и...и), enten...eller (или...или)",
+      "explanation": "В датском языке для выражения «и то, и другое» используется пара både...og, а для «или то, или другое» — enten...eller. Первая часть ставится перед первым элементом, вторая — перед вторым. Частая ошибка русскоязычных — опускать первую часть (både/enten) или заменять её на обычное og/eller.",
+      "examples": [
+        {
+          "wrong": "Jeg kan lide kaffe og te.",
+          "right": "Jeg kan lide både kaffe og te.",
+          "note": "Здесь нужно både...og, чтобы подчеркнуть, что нравится и то, и другое."
+        },
+        {
+          "wrong": "Du kan vælge rødvin eller hvidvin.",
+          "right": "Du kan vælge enten rødvin eller hvidvin.",
+          "note": "Здесь нужно enten...eller, чтобы указать на выбор одного из двух."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на датский: «Он говорит и по-датски, и по-шведски.»",
+          "answer": "Han taler både dansk og svensk."
+        },
+        {
+          "prompt": "Переведите на датский: «Мы поедем либо на машине, либо на поезде.»",
+          "answer": "Vi tager enten bilen eller toget."
+        }
+      ]
+    },
+    {
+      "rule_id": "conditional-conjunctions-om-vs-hvis",
+      "topic": "Conditional conjunctions om vs hvis",
+      "title": "Условные союзы om и hvis в датском языке",
+      "explanation": "Союз «hvis» используется в условных предложениях ('если'). Союз «om» используется в косвенных вопросах ('ли'). Русские учащиеся часто путают их, используя «om» вместо «hvis» в условиях.",
+      "examples": [
+        {
+          "wrong": "Om jeg har tid, kommer jeg.",
+          "right": "Hvis jeg har tid, kommer jeg.",
+          "note": "Условие — нужно «hvis»."
+        },
+        {
+          "wrong": "Jeg ved ikke, hvis han kommer.",
+          "right": "Jeg ved ikke, om han kommer.",
+          "note": "Косвенный вопрос — нужно «om»."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильный союз: ... du vil med, så sig til.",
+          "answer": "Hvis"
+        },
+        {
+          "prompt": "Вставьте правильный союз: Hun spurgte, ... jeg kunne lide kaffe.",
+          "answer": "om"
+        }
+      ]
+    },
+    {
+      "rule_id": "time-expressions-siden-vs-for",
+      "topic": "Time expressions siden vs for",
+      "title": "Выражения времени: siden и for",
+      "explanation": "В датском языке 'siden' означает 'с' (какого-то момента) и используется с настоящим совершенным временем. 'For' в сочетании с 'siden' (for ... siden) означает 'назад' и используется с прошедшим временем. Не путайте: для длительности в настоящем совершенном времени используется 'i', а не 'for'.",
+      "examples": [
+        {
+          "wrong": "Jeg har været her for klokken 10.",
+          "right": "Jeg har været her siden klokken 10.",
+          "note": "Ошибка: использовано 'for' вместо 'siden'. 'Siden' указывает на начальный момент времени."
+        },
+        {
+          "wrong": "Jeg har ikke set ham for en uge.",
+          "right": "Jeg har ikke set ham siden sidste uge.",
+          "note": "Здесь нужен начальный момент (прошлая неделя), а не продолжительность. Для продолжительности используйте 'i'."
+        },
+        {
+          "wrong": "Jeg så ham siden to dage.",
+          "right": "Jeg så ham for to dage siden.",
+          "note": "В прошедшем времени для 'назад' используется конструкция 'for ... siden'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на датский: 'Я не ел со вчерашнего дня.'",
+          "answer": "Jeg har ikke spist siden i går."
+        },
+        {
+          "prompt": "Переведите на датский: 'Она уехала три часа назад.'",
+          "answer": "Hun rejste for tre timer siden."
+        },
+        {
+          "prompt": "Переведите на датский: 'Мы живем здесь с 2015 года.'",
+          "answer": "Vi har boet her siden 2015."
+        }
+      ]
+    },
+    {
+      "rule_id": "adverbs-allerede-vs-endnu",
+      "topic": "Adverbs allerede vs endnu",
+      "title": "Наречия allerede и endnu",
+      "explanation": "Allerede (уже) используется в утвердительных предложениях, часто с перфектом. Endnu (ещё) употребляется в отрицательных предложениях и вопросах (в значении 'ещё не'). Не путайте их: 'allerede' не подходит для отрицаний, а 'endnu' не используется в утверждениях (кроме случаев со значением 'до сих пор').",
+      "examples": [
+        {
+          "wrong": "Jeg har allerede ikke spist.",
+          "right": "Jeg har endnu ikke spist.",
+          "note": "В отрицательном предложении нужно endnu, а не allerede."
+        },
+        {
+          "wrong": "Er du endnu færdig?",
+          "right": "Er du allerede færdig?",
+          "note": "В вопросе с утвердительным смыслом ('уже готов?') используем allerede."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите: 'Я уже купил билеты.'",
+          "answer": "Jeg har allerede købt billetterne."
+        },
+        {
+          "prompt": "Переведите: 'Она ещё не пришла.'",
+          "answer": "Hun er endnu ikke kommet."
+        }
+      ]
+    },
+    {
+      "rule_id": "comparative-quantifiers-mere-vs-flere",
+      "topic": "Comparative quantifiers mere vs flere",
+      "title": "Сравнительные количественные слова: mere vs flere",
+      "explanation": "В датском языке 'mere' используется с неисчисляемыми существительными (вода, время, кофе), а 'flere' — с исчисляемыми во множественном числе (люди, книги, яблоки). Частая ошибка — употребление 'mere' вместо 'flere' с исчисляемыми существительными.",
+      "examples": [
+        {
+          "wrong": "Jeg har mere bøger.",
+          "right": "Jeg har flere bøger.",
+          "note": "'Bøger' — исчисляемое существительное во множественном числе, поэтому нужно 'flere'."
+        },
+        {
+          "wrong": "Der er mere mennesker i parken.",
+          "right": "Der er flere mennesker i parken.",
+          "note": "'Mennesker' — исчисляемое, требуется 'flere'."
+        },
+        {
+          "wrong": "Kan jeg få flere vand?",
+          "right": "Kan jeg få mere vand?",
+          "note": "'Vand' — неисчисляемое, правильно 'mere'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Заполните пропуск: Vi har ___ tid. (У нас больше времени.)",
+          "answer": "mere"
+        },
+        {
+          "prompt": "Заполните пропуск: Der er ___ æbler i skålen. (В миске больше яблок.)",
+          "answer": "flere"
+        },
+        {
+          "prompt": "Заполните пропуск: Jeg vil gerne have ___ kaffe. (Я хотел бы больше кофе.)",
+          "answer": "mere"
+        }
+      ]
+    }
+  ]
+}

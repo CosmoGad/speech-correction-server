@@ -1,0 +1,105 @@
+{
+  "learning": "cs",
+  "topics": [
+    {
+      "rule_id": "cases",
+      "title": "Cases"
+    },
+    {
+      "rule_id": "verb-aspect",
+      "title": "Verb aspect"
+    },
+    {
+      "rule_id": "word-order",
+      "title": "Word order"
+    },
+    {
+      "rule_id": "diacritics",
+      "title": "Diacritics"
+    },
+    {
+      "rule_id": "consonant-clusters",
+      "title": "Consonant clusters"
+    },
+    {
+      "rule_id": "ř-sound",
+      "title": "ř sound"
+    },
+    {
+      "rule_id": "vowel-length",
+      "title": "Vowel length"
+    },
+    {
+      "rule_id": "gender-agreement-of-adjectives",
+      "title": "Gender agreement of adjectives"
+    },
+    {
+      "rule_id": "past-tense-verb-endings",
+      "title": "Past tense verb endings"
+    },
+    {
+      "rule_id": "present-tense-conjugation",
+      "title": "Present tense conjugation"
+    },
+    {
+      "rule_id": "prepositions-s-and-z",
+      "title": "Prepositions s and z"
+    },
+    {
+      "rule_id": "prepositions-v-and-do",
+      "title": "Prepositions v and do"
+    },
+    {
+      "rule_id": "double-negation",
+      "title": "Double negation"
+    },
+    {
+      "rule_id": "conditional-mood-bych-bys-by",
+      "title": "Conditional mood (bych, bys, by)"
+    },
+    {
+      "rule_id": "reflexive-pronouns-se-vs-si",
+      "title": "Reflexive pronouns se vs si"
+    },
+    {
+      "rule_id": "comparative-and-superlative-forms",
+      "title": "Comparative and superlative forms"
+    },
+    {
+      "rule_id": "modal-verb-usage",
+      "title": "Modal verb usage"
+    },
+    {
+      "rule_id": "numeral-agreement-dva-tři-pět",
+      "title": "Numeral agreement (dva, tři, pět)"
+    },
+    {
+      "rule_id": "possessive-adjectives",
+      "title": "Possessive adjectives"
+    },
+    {
+      "rule_id": "relative-pronouns-který-jenž",
+      "title": "Relative pronouns (který, jenž)"
+    },
+    {
+      "rule_id": "declension-of-foreign-loanwords",
+      "title": "Declension of foreign loanwords"
+    },
+    {
+      "rule_id": "animate-vs-inanimate-masculine-nouns",
+      "title": "Animate vs inanimate masculine nouns"
+    },
+    {
+      "rule_id": "plural-noun-endings",
+      "title": "Plural noun endings"
+    },
+    {
+      "rule_id": "voicedvoiceless-consonant-assimilation",
+      "title": "Voiced/voiceless consonant assimilation"
+    },
+    {
+      "rule_id": "soft-i-vs-hard-y-after-d-t-n",
+      "title": "Soft i vs hard y after d, t, n"
+    }
+  ]
+}

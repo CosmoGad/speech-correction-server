@@ -1,0 +1,105 @@
+{
+  "learning": "fa",
+  "topics": [
+    {
+      "rule_id": "حروف-اضافه",
+      "title": "حروف اضافه"
+    },
+    {
+      "rule_id": "زمانهای-فعل",
+      "title": "زمان‌های فعل"
+    },
+    {
+      "rule_id": "جمع-بستن",
+      "title": "جمع بستن"
+    },
+    {
+      "rule_id": "نقش-کلمات-در-جمله",
+      "title": "نقش کلمات در جمله"
+    },
+    {
+      "rule_id": "تلفظ-حروف-صدادار",
+      "title": "تلفظ حروف صدادار"
+    },
+    {
+      "rule_id": "تشدید",
+      "title": "تشدید"
+    },
+    {
+      "rule_id": "آهنگ-جمله",
+      "title": "آهنگ جمله"
+    },
+    {
+      "rule_id": "word-order-flexibility-limits",
+      "title": "Word order flexibility limits"
+    },
+    {
+      "rule_id": "direct-object-marker-ra-usage",
+      "title": "Direct object marker 'ra' usage"
+    },
+    {
+      "rule_id": "ezafe-construction-rules",
+      "title": "Ezafe construction rules"
+    },
+    {
+      "rule_id": "indefinite-marker-ye-placement",
+      "title": "Indefinite marker 'ye' placement"
+    },
+    {
+      "rule_id": "informal-vs-formal-register-shifts",
+      "title": "Informal vs formal register shifts"
+    },
+    {
+      "rule_id": "subject-pronoun-omission-patterns",
+      "title": "Subject pronoun omission patterns"
+    },
+    {
+      "rule_id": "possessive-enclitics-vs-separate-pronouns",
+      "title": "Possessive enclitics vs separate pronouns"
+    },
+    {
+      "rule_id": "comparative-and-superlative-formation",
+      "title": "Comparative and superlative formation"
+    },
+    {
+      "rule_id": "spoken-vs-written-verb-forms",
+      "title": "Spoken vs written verb forms"
+    },
+    {
+      "rule_id": "use-of-mi-for-present-and-past",
+      "title": "Use of 'mi-' for present and past"
+    },
+    {
+      "rule_id": "subjunctive-mood-with-be-prefix",
+      "title": "Subjunctive mood with 'be-' prefix"
+    },
+    {
+      "rule_id": "conjunction-ke-as-relative-and-complementizer",
+      "title": "Conjunction 'ke' as relative and complementizer"
+    },
+    {
+      "rule_id": "counting-and-number-agreement-with-nouns",
+      "title": "Counting and number agreement with nouns"
+    },
+    {
+      "rule_id": "reflexive-khod-and-its-usage",
+      "title": "Reflexive 'khod' and its usage"
+    },
+    {
+      "rule_id": "double-negative-negation",
+      "title": "Double negative negation"
+    },
+    {
+      "rule_id": "use-of-hast-vs-ast-for-is",
+      "title": "Use of 'hast' vs 'ast' for 'is'"
+    },
+    {
+      "rule_id": "imperative-verb-forms-and-politeness",
+      "title": "Imperative verb forms and politeness"
+    },
+    {
+      "rule_id": "time-expressions-and-tense-matching",
+      "title": "Time expressions and tense matching"
+    }
+  ]
+}

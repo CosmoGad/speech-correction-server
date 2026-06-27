@@ -1,0 +1,883 @@
+{
+  "learning": "sv",
+  "interface": "ru",
+  "generated_at": "2026-06-27T05:13:19.482347+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "artiklar",
+      "topic": "Artiklar",
+      "title": "Артикли в шведском языке: en и ett",
+      "explanation": "В шведском языке существительные имеют два грамматических рода: общий (en) и средний (ett). Артикль ставится перед существительным в неопределенной форме. Русскоязычные часто забывают использовать артикль или путают род. Запомните: с каждым существительным нужно учить его артикль.",
+      "examples": [
+        {
+          "wrong": "Jag har bok.",
+          "right": "Jag har en bok.",
+          "note": "Слово 'bok' (книга) — общего рода, поэтому нужен артикль 'en'."
+        },
+        {
+          "wrong": "Det är äpple.",
+          "right": "Det är ett äpple.",
+          "note": "Слово 'äpple' (яблоко) — среднего рода, артикль 'ett'."
+        },
+        {
+          "wrong": "Jag ser hund.",
+          "right": "Jag ser en hund.",
+          "note": "В русском языке нет артиклей, поэтому их часто опускают."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Как сказать 'у меня есть кошка'? (кошка - katt, общий род)",
+          "answer": "Jag har en katt."
+        },
+        {
+          "prompt": "Как сказать 'это стол'? (стол - bord, средний род)",
+          "answer": "Det är ett bord."
+        },
+        {
+          "prompt": "Заполните пропуск: 'Hon läser ___ tidning.' (tidning - газета, общий род)",
+          "answer": "en"
+        }
+      ]
+    },
+    {
+      "rule_id": "verbtider",
+      "topic": "Verbtider",
+      "title": "Ошибка в употреблении времен: настоящее и прошедшее",
+      "explanation": "В шведском языке важно различать настоящее время (presens) и прошедшее время (preteritum). Русскоязычные часто ошибочно используют настоящее время, когда нужно прошедшее, например, добавляя 'igår' (вчера) к глаголу в настоящем времени. Запомните: если действие произошло в прошлом, глагол должен быть в прошедшем времени.",
+      "examples": [
+        {
+          "wrong": "Jag går till affären igår.",
+          "right": "Jag gick till affären igår.",
+          "note": "'går' (иду) заменено на 'gick' (шел)."
+        },
+        {
+          "wrong": "Han äter frukost imorse.",
+          "right": "Han åt frukost imorse.",
+          "note": "'äter' (ест) -> 'åt' (ел)."
+        },
+        {
+          "wrong": "Vi spelar fotboll förra veckan.",
+          "right": "Vi spelade fotboll förra veckan.",
+          "note": "'spelar' (играем) -> 'spelade' (играли)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Исправьте предложение: 'Jag dricker kaffe igår.'",
+          "answer": "Jag drack kaffe igår."
+        },
+        {
+          "prompt": "Исправьте: 'De köper en bil för två år sedan.'",
+          "answer": "De köpte en bil för två år sedan."
+        },
+        {
+          "prompt": "Исправьте: 'Hon skriver ett brev i morse.'",
+          "answer": "Hon skrev ett brev i morse."
+        }
+      ]
+    },
+    {
+      "rule_id": "prepositioner",
+      "topic": "Prepositioner",
+      "title": "Типичная ошибка: предлоги i и på (в, на)",
+      "explanation": "В шведском языке выбор предлогов i и på зависит от типа места. i используется для стран, городов, комнат и закрытых пространств (например, i Sverige, i rummet). på — для островов, улиц, площадей и открытых поверхностей (på Gotland, på gatan). Русские говорящие часто ошибочно используют i для всех случаев.",
+      "examples": [
+        {
+          "wrong": "Jag bor i Gotland.",
+          "right": "Jag bor på Gotland.",
+          "note": "Gotland — остров, поэтому нужен предлог på."
+        },
+        {
+          "wrong": "De står i gatan.",
+          "right": "De står på gatan.",
+          "note": "Улица — открытая поверхность, используем på."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильный предлог: Vi är ___ Stockholm.",
+          "answer": "i"
+        },
+        {
+          "prompt": "Вставьте правильный предлог: Boken ligger ___ bordet.",
+          "answer": "på"
+        },
+        {
+          "prompt": "Вставьте правильный предлог: Hon bor ___ en ö.",
+          "answer": "på"
+        }
+      ]
+    },
+    {
+      "rule_id": "ordföljd",
+      "topic": "Ordföljd",
+      "title": "Порядок слов в главном предложении (V2-правило)",
+      "explanation": "В шведском языке в главном предложении глагол всегда стоит на втором месте. Даже если предложение начинается с обстоятельства времени или места, глагол всё равно остаётся на втором месте. Не ставьте подлежащее перед глаголом, если перед ним есть другое слово.",
+      "examples": [
+        {
+          "wrong": "Idag jag går till skolan.",
+          "right": "Idag går jag till skolan.",
+          "note": "Обстоятельство 'Idag' вынесено в начало, поэтому подлежащее 'jag' идёт после глагола."
+        },
+        {
+          "wrong": "Jag inte gillar kaffe.",
+          "right": "Jag gillar inte kaffe.",
+          "note": "Отрицание 'inte' ставится после глагола, а не перед ним."
+        },
+        {
+          "wrong": "Du kommer imorgon?",
+          "right": "Kommer du imorgon?",
+          "note": "В вопросе без вопросительного слова глагол идёт первым."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Исправьте порядок слов: 'Imorgon jag ska resa.'",
+          "answer": "Imorgon ska jag resa."
+        },
+        {
+          "prompt": "Перепишите предложение, поставив глагол на второе место: 'Jag inte har tid.'",
+          "answer": "Jag har inte tid."
+        },
+        {
+          "prompt": "Составьте вопрос, начиная с глагола: 'Du äter frukost nu?'",
+          "answer": "Äter du frukost nu?"
+        }
+      ]
+    },
+    {
+      "rule_id": "svenska-vokaler",
+      "topic": "Svenska vokaler",
+      "title": "Шведские гласные: Y, Ö, Å и долгота",
+      "explanation": "В шведском языке гласные различаются по долготе и качеству. Русскоговорящие часто путают звуки Y, Ö, Å с похожими русскими, что меняет смысл слов. Например, 'y' произносится как 'и' с округлёнными губами, 'ö' — как 'ё', но более закрыто, а 'å' — как 'о', но более открыто. Долгота гласного также важна: короткий и долгий звук могут превратить одно слово в другое.",
+      "examples": [
+        {
+          "wrong": "ni",
+          "right": "ny",
+          "note": "Ошибка: произносится как 'ни' вместо 'ню' (новый)."
+        },
+        {
+          "wrong": "ko",
+          "right": "kö",
+          "note": "Ошибка: произносится как 'ко' вместо 'кё' (очередь)."
+        },
+        {
+          "wrong": "kol",
+          "right": "kål",
+          "note": "Ошибка: произносится как 'коль' вместо 'коль' (капуста), но с другим гласным."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите по-шведски слово 'новый' (с правильным гласным).",
+          "answer": "ny"
+        },
+        {
+          "prompt": "Напишите по-шведски слово 'очередь' (с правильным гласным).",
+          "answer": "kö"
+        },
+        {
+          "prompt": "Напишите по-шведски слово 'капуста' (с правильным гласным).",
+          "answer": "kål"
+        }
+      ]
+    },
+    {
+      "rule_id": "tonaccent",
+      "topic": "Tonaccent",
+      "title": "Тональное ударение (Tonaccent)",
+      "explanation": "В шведском языке ударение может быть двух типов: акут (острый) и гравис (тяжёлый). Тип ударения часто меняет значение слова. Ошибка в тональном ударении делает речь неестественной и может привести к недопониманию. Запоминайте пары слов и практикуйте произношение с разной интонацией.",
+      "examples": [
+        {
+          "wrong": "anden (с ударением на первый слог)",
+          "right": "anden (акут)",
+          "note": "anden с акутом — 'утка', с грависом — 'дух'. Произнесите с разной мелодией."
+        },
+        {
+          "wrong": "tomten (с ударением на первый слог)",
+          "right": "tomten (гравис)",
+          "note": "tomten с грависом — 'участок', с акутом — 'домовой'. Разница только в тоне."
+        },
+        {
+          "wrong": "buren (с ударением на первый слог)",
+          "right": "buren (акут)",
+          "note": "buren с акутом — 'клетка', с грависом — 'несённый'. Важно для понимания."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Какое ударение у слова 'and' (утка) в шведском? Напишите слово с правильным типом (акут или гравис).",
+          "answer": "anden (акут)"
+        },
+        {
+          "prompt": "Как правильно произнести слово 'tomt' (участок) с нужным тональным ударением?",
+          "answer": "tomten (гравис)"
+        },
+        {
+          "prompt": "Выберите правильный вариант: 'buren' означает 'клетка'. Какое ударение?",
+          "answer": "buren (акут)"
+        }
+      ]
+    },
+    {
+      "rule_id": "intonation",
+      "topic": "Intonation",
+      "title": "Интонация в шведском: различаем слова по тону",
+      "explanation": "В шведском языке интонация (ударный тон) может полностью изменить значение слова. Самая частая ошибка русскоязычных — путать так называемые «острый» (accent 1) и «тупой» (accent 2) тоны. Например, одно и то же написание 'anden' может означать «утка» (острый тон) или «дух» (тупой тон). Важно привыкнуть слышать и воспроизводить эти различия.",
+      "examples": [
+        {
+          "wrong": "Anden simmar.",
+          "right": "Anden simmar.",
+          "note": "С одинаковым написанием, но разным тоном: первое (с острым тоном) — «утка плывёт», второе (с тупым тоном) — «дух плывёт». Неправильный тон в первом случае выдаёт неверное слово."
+        },
+        {
+          "wrong": "Han är buren.",
+          "right": "Han är buren.",
+          "note": "Слово 'buren': с острым тоном — «он клетка» (существительное), с тупым тоном — «он несён» (причастие). В шведском контекст не всегда спасает, поэтому тон решающий."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Как сказать по-шведски «утка»? Помните, что нужно использовать острый тон (accent 1).",
+          "answer": "anden"
+        },
+        {
+          "prompt": "Как сказать по-шведски «он несён»? Используйте фразу с правильным (тупым) тоном.",
+          "answer": "Han är buren."
+        }
+      ]
+    },
+    {
+      "rule_id": "noun-gender-common-neuter",
+      "topic": "Noun gender common neuter",
+      "title": "Род существительных: общий и средний",
+      "explanation": "В шведском языке существительные делятся на два грамматических рода: общий (en) и средний (ett). Многие слова, которые в русском языке мужского или женского рода, в шведском могут быть среднего, и наоборот. Важно запоминать род каждого существительного вместе с его артиклем, чтобы избежать ошибок.",
+      "examples": [
+        {
+          "wrong": "en hus",
+          "right": "ett hus",
+          "note": "Слово 'hus' (дом) среднего рода, поэтому нужен артикль 'ett'."
+        },
+        {
+          "wrong": "ett flicka",
+          "right": "en flicka",
+          "note": "Слово 'flicka' (девочка) общего рода, используется 'en'."
+        },
+        {
+          "wrong": "en äpple",
+          "right": "ett äpple",
+          "note": "Слово 'äpple' (яблоко) среднего рода, артикль 'ett'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильный артикль: ___ bok (книга)",
+          "answer": "en bok"
+        },
+        {
+          "prompt": "Вставьте правильный артикль: ___ bord (стол)",
+          "answer": "ett bord"
+        },
+        {
+          "prompt": "Вставьте правильный артикль: ___ katt (кошка)",
+          "answer": "en katt"
+        }
+      ]
+    },
+    {
+      "rule_id": "plural-noun-formation-irregular",
+      "topic": "Plural noun formation irregular",
+      "title": "Неправильное образование множественного числа существительных",
+      "explanation": "В шведском языке некоторые существительные образуют множественное число не по правилам (не добавляя -or, -ar, -er). Их нужно запоминать. Например, изменения в корне слова (умлаут) или другие формы.",
+      "examples": [
+        {
+          "wrong": "en man – två maner",
+          "right": "en man – två män",
+          "note": "Слово 'man' (мужчина) во множественном числе меняет гласную: man → män."
+        },
+        {
+          "wrong": "en fot – två fotter",
+          "right": "en fot – två fötter",
+          "note": "Слово 'fot' (нога/ступня) во множественном числе получает умлаут и окончание -er: fot → fötter."
+        },
+        {
+          "wrong": "en bok – två bokar",
+          "right": "en bok – två böcker",
+          "note": "Слово 'bok' (книга) меняет гласную и добавляет -er: bok → böcker."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите правильную форму множественного числа для 'en tand' (зуб).",
+          "answer": "tänder"
+        },
+        {
+          "prompt": "Как будет 'две руки' (en hand)?",
+          "answer": "händer"
+        },
+        {
+          "prompt": "Преобразуйте 'en natt' (ночь) во множественное число.",
+          "answer": "nätter"
+        }
+      ]
+    },
+    {
+      "rule_id": "adjective-agreement-gender-number",
+      "topic": "Adjective agreement gender number",
+      "title": "Согласование прилагательных в роде и числе",
+      "explanation": "В шведском языке прилагательное согласуется с существительным в роде (общий или средний) и числе. В единственном числе для общего рода используется основная форма (например, stor), для среднего – форма с -t (stort). Во множественном числе прилагательное получает окончание -a (stora), независимо от рода.",
+      "examples": [
+        {
+          "wrong": "en stor hus",
+          "right": "ett stort hus",
+          "note": "Слово 'hus' среднего рода, поэтому прилагательное должно быть с -t."
+        },
+        {
+          "wrong": "ett stor bil",
+          "right": "en stor bil",
+          "note": "Слово 'bil' общего рода, поэтому без -t."
+        },
+        {
+          "wrong": "stor bilar",
+          "right": "stora bilar",
+          "note": "Во множественном числе прилагательное всегда с -a."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите: большая книга (en bok) – правильная форма прилагательного?",
+          "answer": "en stor bok"
+        },
+        {
+          "prompt": "Переведите: маленькое яблоко (ett äpple)",
+          "answer": "ett litet äpple"
+        },
+        {
+          "prompt": "Переведите: большие дома (hus, средний род, множественное число)",
+          "answer": "stora hus"
+        }
+      ]
+    },
+    {
+      "rule_id": "comparison-of-adjectives-irregular",
+      "topic": "Comparison of adjectives irregular",
+      "title": "Неправильные степени сравнения прилагательных в шведском",
+      "explanation": "В шведском языке некоторые прилагательные образуют степени сравнения неправильно, а не по общему правилу с -are/-ast. Например, 'bra' (хороший) имеет формы 'bättre' (лучше) и 'bäst' (самый лучший), а не 'braare'. Запомните самые распространённые исключения: bra, dålig, gammal, liten, ung.",
+      "examples": [
+        {
+          "wrong": "Den här filmen är braare än den där.",
+          "right": "Den här filmen är bättre än den där.",
+          "note": "Сравнительная степень от 'bra' — 'bättre', а не 'braare'."
+        },
+        {
+          "wrong": "Han är den dåligaste i laget.",
+          "right": "Han är den sämsta i laget.",
+          "note": "Превосходная степень от 'dålig' — 'sämst', а не 'dåligast'."
+        },
+        {
+          "wrong": "Min lägenhet är mindre än din.",
+          "right": "Min lägenhet är mindre än din.",
+          "note": "Форма 'mindre' правильная, но проверьте — не путайте с 'litenare' (неправильно)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на шведский: 'Этот старый дом — самый старый на улице.' (используйте правильную превосходную степень от 'gammal')",
+          "answer": "Detta gamla hus är äldst på gatan."
+        },
+        {
+          "prompt": "Исправьте ошибку: 'Hon är yngare än sin syster.' Напишите правильный вариант.",
+          "answer": "Hon är yngre än sin syster."
+        },
+        {
+          "prompt": "Заполните пропуск: 'Min hund är __ (хороший) i hela parken.' (превосходная степень)",
+          "answer": "bäst"
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-pronouns-sin-vs-hans",
+      "topic": "Possessive pronouns sin vs hans",
+      "title": "Разница между sin и hans в шведском языке",
+      "explanation": "В шведском языке местоимение 'sin' используется, когда обладатель совпадает с подлежащим предложения (возвратное притяжательное), а 'hans' – когда обладатель другое лицо. По-русски это похоже на разницу между 'свой' и 'его'. Запомните: если хозяин тот же, кто выполняет действие – используйте 'sin'; если хозяин другой – 'hans'.",
+      "examples": [
+        {
+          "wrong": "Han äter hans mat.",
+          "right": "Han äter sin mat.",
+          "note": "Здесь 'он' ест свою (собственную) еду, поэтому нужно 'sin'."
+        },
+        {
+          "wrong": "Hon läser sin bok.",
+          "right": "Hon läser hans bok.",
+          "note": "Если она читает книгу, принадлежащую другому мужчине, то используем 'hans'."
+        },
+        {
+          "wrong": "De tvättar deras bil.",
+          "right": "De tvättar sin bil.",
+          "note": "Они моют свою собственную машину – нужно возвратное 'sin' (для множественного числа форма 'sin' не меняется)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Он любит свою (собственную) кошку. Заполните пропуск: Han älskar _____ katt.",
+          "answer": "sin"
+        },
+        {
+          "prompt": "Она читает книгу другого мужчины. Заполните: Hon läser _____ bok.",
+          "answer": "hans"
+        },
+        {
+          "prompt": "Они продают свой (собственный) дом. Заполните: De säljer _____ hus.",
+          "answer": "sitt"
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-verbs-sig-placement",
+      "topic": "Reflexive verbs sig placement",
+      "title": "Место возвратного местоимения sig в шведском языке",
+      "explanation": "В шведском языке возвратное местоимение sig (себя, -ся) обычно ставится после глагола в главном предложении. В предложениях с модальными глаголами (kan, måste, vill и т.д.) sig ставится после основного глагола в инфинитиве. Не ставьте sig перед глаголом, как в русском языке.",
+      "examples": [
+        {
+          "wrong": "Han sig tvättar.",
+          "right": "Han tvättar sig.",
+          "note": "В главном предложении sig стоит после глагола."
+        },
+        {
+          "wrong": "Han kan sig tvätta.",
+          "right": "Han kan tvätta sig.",
+          "note": "С модальным глаголом sig ставится после инфинитива."
+        },
+        {
+          "wrong": "Hon sig klär på.",
+          "right": "Hon klär på sig.",
+          "note": "С фразовыми глаголами sig также после глагола."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Он моется. (tvätta sig)",
+          "answer": "Han tvättar sig."
+        },
+        {
+          "prompt": "Она может умыться. (kan, tvätta sig)",
+          "answer": "Hon kan tvätta sig."
+        },
+        {
+          "prompt": "Мальчик одевается. (pojken, klä på sig)",
+          "answer": "Pojken klär på sig."
+        }
+      ]
+    },
+    {
+      "rule_id": "particle-verbs-phrasal-verbs",
+      "topic": "Particle verbs phrasal verbs",
+      "title": "Шведские частицеподобные глаголы (partikelverb)",
+      "explanation": "В шведском языке есть глаголы, которые меняют значение в сочетании с частицами (av, upp, ut и т.д.). В главном предложении, если дополнение выражено местоимением, частица ставится после местоимения, а не перед ним. Распространённая ошибка — ставить частицу перед местоимением, как это делается с существительными.",
+      "examples": [
+        {
+          "wrong": "Jag stänger av den.",
+          "right": "Jag stänger den av.",
+          "note": "После местоимения 'den' частица 'av'."
+        },
+        {
+          "wrong": "Han kastar ut dem.",
+          "right": "Han kastar dem ut.",
+          "note": "После местоимения 'dem' частица 'ut'."
+        },
+        {
+          "wrong": "Vi skriver upp det.",
+          "right": "Vi skriver det upp.",
+          "note": "После местоимения 'det' частица 'upp'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Замените существительное 'datorn' на местоимение 'den' в предложении 'Jag stänger av datorn'.",
+          "answer": "Jag stänger den av."
+        },
+        {
+          "prompt": "Какое предложение верно: 'Han kastar ut dem' или 'Han kastar dem ut'?",
+          "answer": "Han kastar dem ut."
+        },
+        {
+          "prompt": "Переведите на шведский: 'Мы записываем это.' (используйте глагол 'skriva upp')",
+          "answer": "Vi skriver det upp."
+        }
+      ]
+    },
+    {
+      "rule_id": "subordinate-clause-word-order",
+      "topic": "Subordinate clause word order",
+      "title": "Порядок слов в придаточных предложениях",
+      "explanation": "В шведском языке в придаточных предложениях (после союзов типа 'att', 'om', 'när') наречия и отрицание 'inte' ставятся перед глаголом, а не после него. Это отличается от главного предложения, где глагол стоит на втором месте. Ошибка возникает, когда учащиеся копируют порядок слов из главного предложения.",
+      "examples": [
+        {
+          "wrong": "Jag vet att han kommer inte.",
+          "right": "Jag vet att han inte kommer.",
+          "note": "В придаточном 'inte' ставится перед 'kommer'."
+        },
+        {
+          "wrong": "Hon sa att de har alltid bråttom.",
+          "right": "Hon sa att de alltid har bråttom.",
+          "note": "Наречие 'alltid' стоит перед глаголом 'har'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на шведский: 'Я думаю, что он не пьет кофе.' (используйте 'att' и 'inte')",
+          "answer": "Jag tror att han inte dricker kaffe."
+        },
+        {
+          "prompt": "Исправьте ошибку: 'Han frågade om vi har redan ätit.'",
+          "answer": "Han frågade om vi redan har ätit."
+        }
+      ]
+    },
+    {
+      "rule_id": "usage-of-så-conjunction-adverb",
+      "topic": "Usage of så conjunction adverb",
+      "title": "Использование 'så' как наречия и союза",
+      "explanation": "Шведское слово 'så' может быть как наречием (означает 'так, очень'), так и союзом (означает 'поэтому'). Как наречие, оно стоит перед прилагательным или наречием: 'Hon är så snäll'. Как союз, оно связывает два предложения, выражая результат: 'Hon är snäll, så jag gillar henne'. Перед существительным с прилагательным не забывайте ставить неопределенный артикль перед 'så'.",
+      "examples": [
+        {
+          "wrong": "Det är så viktigt sak.",
+          "right": "Det är en så viktig sak.",
+          "note": "Перед 'så' нужно использовать неопределенный артикль 'en/ett'."
+        },
+        {
+          "wrong": "Han var trött han gick hem.",
+          "right": "Han var trött, så han gick hem.",
+          "note": "Для выражения результата используйте 'så' как союз между двумя предложениями."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Исправьте предложение: 'Jag har så bra idé.'",
+          "answer": "Jag har en så bra idé."
+        },
+        {
+          "prompt": "Вставьте 'så' в нужное место: 'Det var kallt, ___ vi stannade inne.'",
+          "answer": "så"
+        }
+      ]
+    },
+    {
+      "rule_id": "impersonal-pronoun-man-usage",
+      "topic": "Impersonal pronoun man usage",
+      "title": "Неопределённое местоимение man",
+      "explanation": "В шведском языке для обозначения неопределённого лица (как русское 'можно', 'нужно', или 'говорят, что...') используется местоимение man. Ошибка русскоязычных — заменять его на du (ты) или vi (мы), что звучит неестественно. Man всегда стоит в форме единственного числа, глагол после него — в форме инфинитива без частицы att.",
+      "examples": [
+        {
+          "wrong": "Du måste vara försiktig här.",
+          "right": "Man måste vara försiktig här.",
+          "note": "Вместо 'ты должен' — общее правило: 'нужно быть осторожным'."
+        },
+        {
+          "wrong": "Vi kan inte röka här.",
+          "right": "Man kan inte röka här.",
+          "note": "Вместо 'мы не можем' — общее запрещение: 'здесь нельзя курить'."
+        },
+        {
+          "wrong": "En säger att det blir fint väder.",
+          "right": "Man säger att det blir fint väder.",
+          "note": "En — неопределённый артикль, не местоимение. Правильно: 'говорят, что будет хорошая погода'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильное местоимение (man или другое) вместо пропуска: \"__ får inte parkera här.\"",
+          "answer": "Man"
+        },
+        {
+          "prompt": "Исправьте предложение: \"Du kan köpa biljetter på nätet.\" (сделайте его общим правилом)",
+          "answer": "Man kan köpa biljetter på nätet."
+        }
+      ]
+    },
+    {
+      "rule_id": "många-vs-mycket-count-mass",
+      "topic": "Många vs mycket count mass",
+      "title": "Разница между många и mycket: исчисляемые и неисчисляемые существительные",
+      "explanation": "В шведском языке många используется с исчисляемыми существительными во множественном числе (например, книги, яблоки), а mycket — с неисчисляемыми (например, вода, время, деньги). Запомните: många = много (считаем штуки), mycket = много (вещество или абстракция).",
+      "examples": [
+        {
+          "wrong": "Jag har mycket böcker.",
+          "right": "Jag har många böcker.",
+          "note": "Böcker (книги) — исчисляемое, поэтому нужен många."
+        },
+        {
+          "wrong": "Det finns många vatten i flaskan.",
+          "right": "Det finns mycket vatten i flaskan.",
+          "note": "Vatten (вода) — неисчисляемое, поэтому mycket."
+        },
+        {
+          "wrong": "Han dricker många kaffe.",
+          "right": "Han dricker mycket kaffe.",
+          "note": "Kaffe (кофе) как напиток — неисчисляемое; если имеются в виду чашки кофе, то нужно сказать många koppar kaffe."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Выберите правильное слово: ___ människor (люди).",
+          "answer": "många"
+        },
+        {
+          "prompt": "Вставьте пропущенное слово: Det regnar ___. (идет много дождя)",
+          "answer": "mycket"
+        },
+        {
+          "prompt": "Заполните: Hon har ___ pengar. (много денег)",
+          "answer": "mycket"
+        }
+      ]
+    },
+    {
+      "rule_id": "liten-vs-små-irregular-adjective",
+      "topic": "Liten vs små irregular adjective",
+      "title": "Liten vs små: неправильное прилагательное",
+      "explanation": "В шведском языке прилагательное 'liten' (маленький) имеет неправильные формы. В единственном числе оно склоняется по роду: 'liten' для общего рода (en-слова) и 'litet' для среднего рода (ett-слова). Во множественном числе, независимо от рода, используется форма 'små'.",
+      "examples": [
+        {
+          "wrong": "en liten hus",
+          "right": "ett litet hus",
+          "note": "Слово 'hus' среднего рода (ett), поэтому нужна форма 'litet'."
+        },
+        {
+          "wrong": "små katt",
+          "right": "liten katt",
+          "note": "Если кошка одна (единственное число), нужно использовать 'liten', а не 'små'."
+        },
+        {
+          "wrong": "liten barn",
+          "right": "små barn",
+          "note": "Дети (barn) во множественном числе, поэтому верно 'små'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильную форму: у меня _____ (маленький) собака (en hund).",
+          "answer": "en liten hund"
+        },
+        {
+          "prompt": "Вставьте правильную форму: это _____ (маленький) яблоки (äpplen, множественное число).",
+          "answer": "små äpplen"
+        }
+      ]
+    },
+    {
+      "rule_id": "numerals-and-ordinal-numbers",
+      "topic": "Numerals and ordinal numbers",
+      "title": "Числительные и порядковые числительные",
+      "explanation": "В шведском языке важно различать количественные числительные (ett, två, tre...) и порядковые (första, andra, tredje...). Количественные используются для счёта, а порядковые – для указания порядка или места. Частая ошибка – использование количественного числительного там, где требуется порядковое, например, при указании этажа или даты.",
+      "examples": [
+        {
+          "wrong": "Han kom etta i loppet.",
+          "right": "Han kom första i loppet.",
+          "note": "Слово 'etta' – неформальное существительное, а 'första' – правильное порядковое числительное."
+        },
+        {
+          "wrong": "Vi bor på nummer två.",
+          "right": "Vi bor på andra våningen.",
+          "note": "Для этажей используйте порядковые числительные, а 'nummer två' – это номер дома."
+        },
+        {
+          "wrong": "Jag har tre böcker, den tre är intressant.",
+          "right": "Jag har tre böcker, den tredje är intressant.",
+          "note": "'Tre' – количественное (три книги), а 'tredje' – порядковое (третья)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Как правильно сказать 'второй этаж' по-шведски?",
+          "answer": "andra våningen"
+        },
+        {
+          "prompt": "Заполните пропуск: 'Han kom ___ i tävlingen' (первый).",
+          "answer": "första"
+        },
+        {
+          "prompt": "Как правильно: 'Vi ses den ___ mars' (третье марта)?",
+          "answer": "tredje"
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciation-of-sj-sound",
+      "topic": "Pronunciation of sj sound",
+      "title": "Произношение звука sj в шведском языке",
+      "explanation": "Звук sj (как в слове 'sju') — это глубокий, шипящий звук, похожий на русский 'щ', но с округлёнными губами и более задним положением языка. Русскоязычные часто заменяют его на 'ш' или 'сь', что звучит неестественно. Тренируйтесь произносить его, начиная с 'sju' (семь).",
+      "examples": [
+        {
+          "wrong": "sjö",
+          "right": "sju",
+          "note": "Не путайте со словом 'sjö' (озеро). Звук sj должен быть глубоким и мягким, как 'щ'."
+        },
+        {
+          "wrong": "skuta",
+          "right": "skjuta",
+          "note": "В слове 'skjuta' (стрелять) первый звук — sj, а не твёрдый 'ск'. Избегайте произношения как 'skuta' (шхуна)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Произнесите слово 'семь' с правильным звуком sj:",
+          "answer": "sju"
+        },
+        {
+          "prompt": "Произнесите слово 'стрелять' с правильным звуком sj:",
+          "answer": "skjuta"
+        },
+        {
+          "prompt": "Произнесите слово 'звезда' (stjärna) с правильным звуком sj:",
+          "answer": "stjärna"
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciation-of-tj-sound",
+      "topic": "Pronunciation of tj sound",
+      "title": "Произношение звука tj в шведском",
+      "explanation": "Звук tj в шведском — это глухой палатальный фрикативный, похожий на мягкое 'ч' (как в немецком 'ich') или на 'х' с поднятым языком к нёбу. Русские учащиеся часто заменяют его на 'ш' (звук sj), что является ошибкой. Для правильного произношения держите язык ближе к твёрдому нёбу, а губы растяните, как при улыбке.",
+      "examples": [
+        {
+          "wrong": "sjugo",
+          "right": "tjugo",
+          "note": "Слово 'tjugo' (двадцать) произносится с мягким tj, а не с твёрдым ш."
+        },
+        {
+          "wrong": "sjok",
+          "right": "tjock",
+          "note": "Не путайте 'tjock' (толстый) со словом 'sjok' (кусок) — разница в звуке tj против sj."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Произнесите вслух слово 'tjugo' с правильным звуком tj и запишите его по-шведски.",
+          "answer": "tjugo"
+        },
+        {
+          "prompt": "Какое из слов содержит звук tj? Выберите: 'tjäna', 'sjö', 'skjuta'.",
+          "answer": "tjäna"
+        },
+        {
+          "prompt": "Напишите шведское слово 'услуга' (с правильным произношением tj) по-шведски.",
+          "answer": "tjänst"
+        }
+      ]
+    },
+    {
+      "rule_id": "att-vs-och-pronunciation-distinction",
+      "topic": "Att vs och pronunciation distinction",
+      "title": "Различие в произношении att и och",
+      "explanation": "В шведском языке слова «att» (частица инфинитива или «что») и «och» (союз «и») пишутся похоже, но произносятся по-разному. «Att» произносится с коротким 'а' и мягким 'т' (как английское 'at'), а «och» — с долгим 'о' и звуком 'к' (как 'оук', но с чётким 'к' на конце). Путаница возникает, когда учащиеся заменяют одно слово другим в устной речи.",
+      "examples": [
+        {
+          "wrong": "Jag vill och äta.",
+          "right": "Jag vill att äta.",
+          "note": "Ошибка: вместо 'att' (произносится 'ат') использовано 'och' (произносится 'ок')."
+        },
+        {
+          "wrong": "Jag gillar kaffe att te.",
+          "right": "Jag gillar kaffe och te.",
+          "note": "Здесь нужен союз 'och' ('и'), который звучит как 'ок', а не 'ат'."
+        },
+        {
+          "wrong": "Han sa och han kommer.",
+          "right": "Han sa att han kommer.",
+          "note": "После 'säga' ('сказать') требуется 'att' ('что'), произносимое коротко."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Заполните пропуск: 'Jag måste ___ äta.' (Я должен есть)",
+          "answer": "att"
+        },
+        {
+          "prompt": "Заполните пропуск: 'Jag har en katt ___ en hund.' (У меня есть кошка и собака)",
+          "answer": "och"
+        },
+        {
+          "prompt": "Выберите правильное слово: 'Han sa ___ han inte visste.' (Он сказал, что не знал)",
+          "answer": "att"
+        }
+      ]
+    },
+    {
+      "rule_id": "både-och-and-antingen-eller",
+      "topic": "Både och and antingen eller",
+      "title": "Både och и antingen eller: как не путать",
+      "explanation": "Både ... och используется для выражения «и то, и другое» (оба пункта). Antingen ... eller — для выбора «или то, или другое» (только один из двух). Типичная ошибка — путать союзы: после både нужен och, после antingen — eller.",
+      "examples": [
+        {
+          "wrong": "Jag gillar både kaffe eller te.",
+          "right": "Jag gillar både kaffe och te.",
+          "note": "После både всегда ставится och (а не eller)."
+        },
+        {
+          "wrong": "Antingen vill jag ha kaffe och te.",
+          "right": "Antingen vill jag ha kaffe eller te.",
+          "note": "После antingen всегда ставится eller (а не och)."
+        },
+        {
+          "wrong": "Antingen du och jag kan komma.",
+          "right": "Både du och jag kan komma.",
+          "note": "Для «оба» используем både ... och, для «или — или» — antingen ... eller."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите: «Я люблю и кофе, и чай.»",
+          "answer": "Jag älskar både kaffe och te."
+        },
+        {
+          "prompt": "Переведите: «Я хочу либо кофе, либо чай.»",
+          "answer": "Jag vill ha antingen kaffe eller te."
+        },
+        {
+          "prompt": "Исправьте ошибку: «Både jag eller du är välkomna.»",
+          "answer": "Både jag och du är välkomna."
+        }
+      ]
+    },
+    {
+      "rule_id": "demonstrative-pronouns-den-här",
+      "topic": "Demonstrative pronouns den här",
+      "title": "Указательные местоимения: den här",
+      "explanation": "В шведском языке указательное местоимение 'den här' (этот) используется только с существительными общего рода (en-слова) в единственном числе. После 'den här' существительное обязательно принимает определённую форму (окончание -en/-n). Для среднего рода (ett-слова) используется 'det här', а для множественного числа — 'de här'. Частая ошибка — путать род или забывать определённую форму существительного.",
+      "examples": [
+        {
+          "wrong": "Den här hus är stort.",
+          "right": "Det här huset är stort.",
+          "note": "Слово 'hus' среднего рода, поэтому нужно 'det här' и определённая форма 'huset'."
+        },
+        {
+          "wrong": "Den här flicka är snäll.",
+          "right": "Den här flickan är snäll.",
+          "note": "После 'den här' существительное 'flicka' должно быть в определённой форме: 'flickan'."
+        },
+        {
+          "wrong": "Den här böckerna är intressanta.",
+          "right": "De här böckerna är intressanta.",
+          "note": "Для множественного числа (böckerna) используем 'de här', а не 'den här'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите правильную форму с 'den här' для слова 'bil' (машина).",
+          "answer": "den här bilen"
+        },
+        {
+          "prompt": "Исправьте ошибку: 'Den här äpple är rött.'",
+          "answer": "Det här äpplet är rött."
+        },
+        {
+          "prompt": "Вставьте правильное указательное местоимение: '___ stolar är gamla.' (эти стулья)",
+          "answer": "De här"
+        }
+      ]
+    }
+  ]
+}

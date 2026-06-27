@@ -1,0 +1,105 @@
+{
+  "learning": "ur",
+  "topics": [
+    {
+      "rule_id": "حروف-جار",
+      "title": "حروف جار"
+    },
+    {
+      "rule_id": "افعال-کے-زمانے",
+      "title": "افعال کے زمانے"
+    },
+    {
+      "rule_id": "جملے-کی-ساخت",
+      "title": "جملے کی ساخت"
+    },
+    {
+      "rule_id": "اسم-کی-اقسام",
+      "title": "اسم کی اقسام"
+    },
+    {
+      "rule_id": "حرکات-کی-ادائیگی",
+      "title": "حرکات کی ادائیگی"
+    },
+    {
+      "rule_id": "تشدید",
+      "title": "تشدید"
+    },
+    {
+      "rule_id": "لہجہ",
+      "title": "لہجہ"
+    },
+    {
+      "rule_id": "noun-gender-agreement-with-adjectives",
+      "title": "Noun gender agreement with adjectives"
+    },
+    {
+      "rule_id": "verb-subject-agreement-singularplural",
+      "title": "Verb-subject agreement singular/plural"
+    },
+    {
+      "rule_id": "use-of-ne-in-past-transitive-verbs",
+      "title": "Use of ne in past transitive verbs"
+    },
+    {
+      "rule_id": "direct-vs-oblique-case-usage",
+      "title": "Direct vs oblique case usage"
+    },
+    {
+      "rule_id": "aap-vs-tum-vs-tu-formality",
+      "title": "Aap vs tum vs tu formality"
+    },
+    {
+      "rule_id": "compound-verbs-verb-combinations",
+      "title": "Compound verbs verb combinations"
+    },
+    {
+      "rule_id": "ka-vs-ki-vs-ke-possessive",
+      "title": "Ka vs ki vs ke possessive"
+    },
+    {
+      "rule_id": "use-of-bhi-vs-hi",
+      "title": "Use of bhi vs hi"
+    },
+    {
+      "rule_id": "plural-formation-of-nouns",
+      "title": "Plural formation of nouns"
+    },
+    {
+      "rule_id": "conditional-sentences-agarto",
+      "title": "Conditional sentences agar/to"
+    },
+    {
+      "rule_id": "relative-pronouns-jo-jis-jin",
+      "title": "Relative pronouns jo jis jin"
+    },
+    {
+      "rule_id": "word-order-with-negation-nahi",
+      "title": "Word order with negation nahi"
+    },
+    {
+      "rule_id": "present-vs-past-participles-as-adjectives",
+      "title": "Present vs past participles as adjectives"
+    },
+    {
+      "rule_id": "use-of-ho-vs-hai-in-present-tense",
+      "title": "Use of ho vs hai in present tense"
+    },
+    {
+      "rule_id": "transitive-vs-intransitive-verb-forms",
+      "title": "Transitive vs intransitive verb forms"
+    },
+    {
+      "rule_id": "pronunciation-of-retroflex-vs-dental-consonants",
+      "title": "Pronunciation of retroflex vs dental consonants"
+    },
+    {
+      "rule_id": "use-of-ko-as-object-marker",
+      "title": "Use of ko as object marker"
+    },
+    {
+      "rule_id": "infinitive-vs-imperative-mood",
+      "title": "Infinitive vs imperative mood"
+    }
+  ]
+}

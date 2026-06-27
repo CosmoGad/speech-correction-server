@@ -1,0 +1,105 @@
+{
+  "learning": "hu",
+  "topics": [
+    {
+      "rule_id": "cases",
+      "title": "Cases"
+    },
+    {
+      "rule_id": "vowel-harmony",
+      "title": "Vowel harmony"
+    },
+    {
+      "rule_id": "definiteindefinite-conjugation",
+      "title": "Definite/indefinite conjugation"
+    },
+    {
+      "rule_id": "word-order",
+      "title": "Word order"
+    },
+    {
+      "rule_id": "long-vowels",
+      "title": "Long vowels"
+    },
+    {
+      "rule_id": "stress-on-first-syllable",
+      "title": "Stress on first syllable"
+    },
+    {
+      "rule_id": "gyty-sounds",
+      "title": "gy/ty sounds"
+    },
+    {
+      "rule_id": "use-of-the-definite-article-aaz",
+      "title": "Use of the definite article a/az"
+    },
+    {
+      "rule_id": "vannincs-and-zero-copula",
+      "title": "Van/nincs and zero copula"
+    },
+    {
+      "rule_id": "verb-prefix-separation-and-placement",
+      "title": "Verb prefix separation and placement"
+    },
+    {
+      "rule_id": "the-lak-lek-suffix-i-you-object",
+      "title": "The -lak/-lek suffix (I-you object)"
+    },
+    {
+      "rule_id": "kell-dative-infinitive-structure",
+      "title": "Kell + dative + infinitive structure"
+    },
+    {
+      "rule_id": "tud-vs-ismer-know-how-vs-know",
+      "title": "Tud vs ismer (know how vs know)"
+    },
+    {
+      "rule_id": "már-vs-még-already-vs-still",
+      "title": "Már vs még (already vs still)"
+    },
+    {
+      "rule_id": "is-and-sem-placement-alsoneither",
+      "title": "Is and sem placement (also/neither)"
+    },
+    {
+      "rule_id": "hogy-as-conjunction-vs-question-word",
+      "title": "Hogy as conjunction vs question word"
+    },
+    {
+      "rule_id": "ly-vs-j-spelling-and-pronunciation",
+      "title": "Ly vs j spelling and pronunciation"
+    },
+    {
+      "rule_id": "short-ö-and-ü-vowel-pronunciation",
+      "title": "Short ö and ü vowel pronunciation"
+    },
+    {
+      "rule_id": "comparative-and-superlative-irregulars",
+      "title": "Comparative and superlative irregulars"
+    },
+    {
+      "rule_id": "ez-vs-az-demonstrative-inflections",
+      "title": "Ez vs az demonstrative inflections"
+    },
+    {
+      "rule_id": "formal-vs-informal-address-teön",
+      "title": "Formal vs informal address (te/ön)"
+    },
+    {
+      "rule_id": "postpositions-vs-case-suffixes",
+      "title": "Postpositions vs case suffixes"
+    },
+    {
+      "rule_id": "language-suffix-ul-ül-usage",
+      "title": "Language suffix -ul/-ül usage"
+    },
+    {
+      "rule_id": "milyen-vs-hogy-question-construction",
+      "title": "Milyen vs hogy question construction"
+    },
+    {
+      "rule_id": "conditional-mood-usage",
+      "title": "Conditional mood usage"
+    }
+  ]
+}

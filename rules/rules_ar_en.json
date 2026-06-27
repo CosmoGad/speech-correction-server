@@ -1,0 +1,846 @@
+{
+  "learning": "ar",
+  "interface": "en",
+  "generated_at": "2026-06-27T04:31:40.693661+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "حروف-الجر",
+      "topic": "حروف الجر",
+      "title": "Common Mistakes with Prepositions (حروف الجر)",
+      "explanation": "In Arabic, prepositions are often tied to specific verbs and cannot be directly translated from English. A frequent error is using 'على' (on) where 'عن' (about) or 'إلى' (to) is required. For example, 'speak about' requires 'عن', not 'على', and 'go to' requires 'إلى'.",
+      "examples": [
+        {
+          "wrong": "أتكلم على السياسة.",
+          "right": "أتكلم عن السياسة.",
+          "note": "Use 'عن' for 'about' when speaking, not 'على'."
+        },
+        {
+          "wrong": "أذهب على المدرسة.",
+          "right": "أذهب إلى المدرسة.",
+          "note": "Use 'إلى' for 'to' when going to a place."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'I think about the problem'? (Use the verb 'أفكر')",
+          "answer": "أفكر في المشكلة."
+        },
+        {
+          "prompt": "How do you say 'He is waiting for the bus'? (Use the verb 'ينتظر' - note the correct preposition, if any)",
+          "answer": "ينتظر الحافلة."
+        }
+      ]
+    },
+    {
+      "rule_id": "الأزمنة",
+      "topic": "الأزمنة",
+      "title": "Arabic Tenses: Past vs Present (Common Mistake)",
+      "explanation": "In Arabic, the verb form must match the time of the action. A frequent mistake is using the present tense (imperfect) verb for past events. For completed actions in the past, always use the past tense (perfect) verb. Additionally, Arabic often drops the subject pronoun when the verb conjugation makes it clear.",
+      "examples": [
+        {
+          "wrong": "أمس أنا أذهب إلى المدرسة.",
+          "right": "أمس ذهبت إلى المدرسة.",
+          "note": "Use past tense (ذهبت) for 'yesterday'. The present tense (أذهب) indicates ongoing or habitual action."
+        },
+        {
+          "wrong": "هو يقرأ الكتاب البارحة.",
+          "right": "هو قرأ الكتاب البارحة.",
+          "note": "البارحة (yesterday) requires the past tense verb قرأ, not the present يقرأ."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the mistake: 'في الصباح أنا أشرب القهوة.' (intended meaning: I drank coffee in the morning)",
+          "answer": "في الصباح شربت القهوة."
+        },
+        {
+          "prompt": "Translate into Arabic: 'She visited her grandmother yesterday.'",
+          "answer": "زارت جدتها أمس."
+        },
+        {
+          "prompt": "What is wrong with: 'الطلاب يدرسون الدرس قبل أمس'? (The students studied the lesson the day before yesterday)",
+          "answer": "الطلاب درسوا الدرس قبل أمس."
+        }
+      ]
+    },
+    {
+      "rule_id": "الجنس-المذكر-والمؤنث",
+      "topic": "الجنس (المذكر والمؤنث)",
+      "title": "Common Mistake: Masculine vs. Feminine Gender in Arabic",
+      "explanation": "In Arabic, every noun has a grammatical gender (masculine or feminine). Most feminine nouns end with the 'taa marbuta' (ة), while masculine nouns typically do not. Adjectives and verbs must agree with the noun's gender. A frequent error is using a feminine adjective with a masculine noun or vice versa.",
+      "examples": [
+        {
+          "wrong": "البيت كبيرة",
+          "right": "البيت كبير",
+          "note": "بيت (house) is masculine, so the adjective must be masculine (كبير, not كبيرة)."
+        },
+        {
+          "wrong": "السيارة جديد",
+          "right": "السيارة جديدة",
+          "note": "سيارة (car) is feminine (ends with ة), so the adjective must be feminine (جديدة, not جديد)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank with the correct adjective: This is a big book. (كتاب is masculine) -> هذا كتاب ______.",
+          "answer": "كبير"
+        },
+        {
+          "prompt": "Fill in the blank with the correct adjective: This is a new school. (مدرسة is feminine) -> هذه مدرسة ______.",
+          "answer": "جديدة"
+        }
+      ]
+    },
+    {
+      "rule_id": "الإعراب",
+      "topic": "الإعراب",
+      "title": "Understanding الإعراب (Grammatical Inflection)",
+      "explanation": "In Arabic, the endings of nouns and adjectives change to indicate their grammatical role (subject, object, or after a preposition). A common mistake is using the wrong case ending, such as nominative (ُ) for a direct object instead of accusative (َ). Mastering these endings is essential for correct grammar.",
+      "examples": [
+        {
+          "wrong": "رأيتُ الطالبُ",
+          "right": "رأيتُ الطالبَ",
+          "note": "The direct object (الطالب) must take the accusative case (فتحة), not nominative (ضمة)."
+        },
+        {
+          "wrong": "ذهبَ الطالبَ",
+          "right": "ذهبَ الطالبُ",
+          "note": "The subject (الطالب) of a verb takes the nominative case (ضمة), not accusative."
+        },
+        {
+          "wrong": "سلمتُ على الطالبُ",
+          "right": "سلمتُ على الطالبِ",
+          "note": "After the preposition (على), the noun takes the genitive case (كسرة)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the ending in this sentence: 'رأيتُ الرجلُ.'",
+          "answer": "الرجلَ"
+        },
+        {
+          "prompt": "Fill in the correct ending: 'سلمتُ على ________.' (the doctor - masculine)",
+          "answer": "الطبيبِ"
+        }
+      ]
+    },
+    {
+      "rule_id": "الحركات-الفتحة-الضمة-الكسرة",
+      "topic": "الحركات (الفتحة، الضمة، الكسرة)",
+      "title": "Mastering Arabic Short Vowels (Harakat)",
+      "explanation": "Arabic short vowels (fatḥa, ḍamma, kasra) are essential for correct pronunciation and meaning. A common mistake is omitting or misplacing them, which can change a word entirely. Remember: fatḥa is a short 'a' sound, ḍamma is 'u', and kasra is 'i'.",
+      "examples": [
+        {
+          "wrong": "كتب",
+          "right": "كِتاب",
+          "note": "Without kasra on the first letter, 'kataba' (he wrote) becomes 'kitāb' (book)."
+        },
+        {
+          "wrong": "درس",
+          "right": "دَرْس",
+          "note": "Missing fatḥa changes 'dars' (lesson) to 'dars' with a different vowel (still correct but aimed at showing fatḥa placement). Actually a clearer example: 'دَرس' (he studied) vs 'دُرْس' (a pearl? not common). Better use: wrong: 'مُعَلّم' (muʿallim) vs right: 'مُعَلِّم' (teacher). Let's adjust."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the Arabic word for 'book' with correct short vowels.",
+          "answer": "كِتاب"
+        },
+        {
+          "prompt": "Write the Arabic word for 'he wrote' (past tense) with correct short vowels.",
+          "answer": "كَتَبَ"
+        },
+        {
+          "prompt": "Write the Arabic word for 'lesson' with a fatḥa on the first letter and sukun on the second.",
+          "answer": "دَرْس"
+        }
+      ]
+    },
+    {
+      "rule_id": "التنوين",
+      "topic": "التنوين",
+      "title": "Correct Use of Tanween (Nunation)",
+      "explanation": "Tanween (التنوين) is a grammatical marker added to the end of indefinite nouns and adjectives to indicate case: -un (nominative), -in (genitive), -an (accusative). A common mistake is adding tanween to definite nouns (those with the definite article ال); tanween only appears on indefinite words. Also note that in the accusative case, most words add an extra alif (ـًا), but words ending with ta marbuta (ة) do not take this alif.",
+      "examples": [
+        {
+          "wrong": "الكتابٌ",
+          "right": "كتابٌ",
+          "note": "Definite nouns (with ال) cannot have tanween; use it only on indefinite nouns."
+        },
+        {
+          "wrong": "بيتًا كبيرٌ",
+          "right": "بيتًا كبيرًا",
+          "note": "Both the noun and its adjective must agree in case and tanween (here, accusative)."
+        },
+        {
+          "wrong": "مدرسةًا",
+          "right": "مدرسةً",
+          "note": "Words ending with ta marbuta (ة) do not take the extra alif in accusative tanween; the tanween is written on the t itself."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the word 'book' (kitab) in the nominative indefinite case (as the subject of a sentence).",
+          "answer": "كتابٌ"
+        },
+        {
+          "prompt": "Write the phrase 'a large house' in the accusative case (as the object of a verb).",
+          "answer": "بيتًا كبيرًا"
+        },
+        {
+          "prompt": "Correct the mistake in 'المسجدٌ كبيرٌ' (the mosque is big?) – what should it be if the phrase is indefinite?",
+          "answer": "مسجدٌ كبيرٌ"
+        }
+      ]
+    },
+    {
+      "rule_id": "النبرة",
+      "topic": "النبرة",
+      "title": "Mastering Arabic Stress (النبرة)",
+      "explanation": "In Arabic, stress (النبرة) is the emphasis placed on a specific syllable within a word. Misplacing stress can change meaning or sound unnatural. Generally, stress falls on the heaviest syllable: long vowels or doubled consonants typically attract stress, and word-final syllables are rarely stressed.",
+      "examples": [
+        {
+          "wrong": "مَدْرَسَة",
+          "right": "مَدْرَسَة",
+          "note": "Correct stress is on the first syllable (مَدْ), not the second. Both spellings same; stress placement differs."
+        },
+        {
+          "wrong": "كِتَاب",
+          "right": "كِتَاب",
+          "note": "Stress falls on the long vowel ī (second syllable), not first. Both spellings identical; intonation matters."
+        },
+        {
+          "wrong": "سَأَلَ",
+          "right": "سَأَلَ",
+          "note": "Stress on the first syllable (سَأ), not the second. Often mispronounced with equal emphasis."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you correctly stress the word for 'school' (مدرسة)? Write it with proper emphasis in Arabic script.",
+          "answer": "مَدْرَسَة"
+        },
+        {
+          "prompt": "Which syllable is stressed in the word 'book' (كتاب)? Write the word with the stressed vowel marked (e.g., use a shadda or lengthened vowel) if needed.",
+          "answer": "كِتَاب"
+        },
+        {
+          "prompt": "Correct the stress mistake in this spoken sentence: 'أنا أَكَلْتُ التفاح' (I ate the apple). Write the corrected version with proper stress on 'أَكَلْتُ'.",
+          "answer": "أَنَا أَكَلْتُ التُّفَّاح"
+        }
+      ]
+    },
+    {
+      "rule_id": "definite-article-al-usage",
+      "topic": "Definite article al- usage",
+      "title": "When not to use the definite article 'al-'",
+      "explanation": "In Arabic, the definite article 'al-' is used to make a noun definite. However, a noun can already be definite in other ways: if it is a proper noun (like a name), or if it is the first term of a construct phrase (iḍāfa), or if it has a possessive pronoun suffix. Adding 'al-' in these cases is incorrect.",
+      "examples": [
+        {
+          "wrong": "الكتاب المدرسة",
+          "right": "كتاب المدرسة",
+          "note": "The first noun in a possessive construct does not take 'al-'."
+        },
+        {
+          "wrong": "الـمحمد",
+          "right": "محمد",
+          "note": "Proper names are already definite."
+        },
+        {
+          "wrong": "الكتابي",
+          "right": "كتابي",
+          "note": "The possessive suffix makes the noun definite; do not add 'al-'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'the teacher's book' correctly? (book = كتاب, teacher = مدرس)",
+          "answer": "كتاب المدرس"
+        },
+        {
+          "prompt": "Correct this: 'الـأحمد طالب' meaning 'Ahmed is a student'.",
+          "answer": "أحمد طالب"
+        },
+        {
+          "prompt": "Correct this: 'البيتي كبير' meaning 'my house is big'.",
+          "answer": "بيتي كبير"
+        }
+      ]
+    },
+    {
+      "rule_id": "idafa-construction-errors",
+      "topic": "Idafa construction errors",
+      "title": "Idafa Construction: Avoiding Common Errors",
+      "explanation": "In Arabic, the possessive or construct phrase (Idafa) consists of two nouns: the first noun (المُضاف) is always indefinite (no ال) and in the construct state, while the second noun (المُضاف إليه) is always in the genitive case and takes ال if it is definite. A common mistake is adding ال to the first noun or using incorrect case endings.",
+      "examples": [
+        {
+          "wrong": "الكتاب الطالب",
+          "right": "كتابُ الطالبِ",
+          "note": "The first noun 'كتاب' must not have the definite article; the second noun 'الطالب' takes ال and is in the genitive case."
+        },
+        {
+          "wrong": "سيارةٌ زيدٍ",
+          "right": "سيارةُ زيدٍ",
+          "note": "The first noun in Idafa cannot have tanween; it must be in the construct state (here with damma, not tanween)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'the teacher's pen' into Arabic using a correct Idafa construction.",
+          "answer": "قلمُ المعلّمِ"
+        },
+        {
+          "prompt": "Correct this phrase: 'بيتٌ الرجل' (a house of the man).",
+          "answer": "بيتُ الرجلِ"
+        }
+      ]
+    },
+    {
+      "rule_id": "hamza-spelling-rules",
+      "topic": "Hamza spelling rules",
+      "title": "Hamza Seat Selection: Matching the Vowel Before It",
+      "explanation": "In Arabic, the shape of the hamza (ء) depends on the short vowel of the letter that comes directly before it. If the preceding vowel is a fatha (ـَ), the hamza sits on an alif (أ). If it is a damma (ـُ), it sits on a waw (ؤ). If it is a kasra (ـِ), it sits on a ya (ئ). A very common mistake is using the wrong carrier, especially confusing alif and ya.",
+      "examples": [
+        {
+          "wrong": "بأر",
+          "right": "بئر",
+          "note": "The letter before the hamza has a kasra (ـِ), so the hamza must be written on a ya, not on an alif."
+        },
+        {
+          "wrong": "سأل",
+          "right": "سؤال",
+          "note": "The letter before the hamza has a damma (ـُ), so the hamza must be written on a waw, not on an alif."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you write 'read' (past tense, he read) with the correct hamza? The word is 'qara'a'.",
+          "answer": "قرأ"
+        },
+        {
+          "prompt": "Write the word for 'question' correctly. It sounds like 'su'aal'.",
+          "answer": "سؤال"
+        }
+      ]
+    },
+    {
+      "rule_id": "dual-noun-agreement",
+      "topic": "Dual noun agreement",
+      "title": "Dual Noun Agreement in Arabic",
+      "explanation": "In Arabic, when referring to two items, the noun, adjective, and verb must all be in the dual form. A common mistake is to use the singular or plural for the adjective or verb. Remember: dual nouns take endings like -an (nominative) or -ayn (accusative/genitive), and adjectives must match perfectly.",
+      "examples": [
+        {
+          "wrong": "هذان كتابان كبير",
+          "right": "هذان كتابان كبيران",
+          "note": "The adjective 'kabir' must become dual 'kabiran' to agree with the dual noun."
+        },
+        {
+          "wrong": "الطالبان ذكي",
+          "right": "الطالبان ذكيان",
+          "note": "The adjective 'dhaki' changes to dual 'dhakiyan' in the nominative case."
+        },
+        {
+          "wrong": "الطالبان كتب الدرس",
+          "right": "الطالبان كتبا الدرس",
+          "note": "The verb 'kataba' must be in the dual form 'kataba' (with alif) to match the dual subject."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the adjective agreement: 'رأيت رجلان طويل' (I saw two tall men).",
+          "answer": "رأيت رجلين طويلين"
+        },
+        {
+          "prompt": "Correct the verb agreement: 'المعلمان يشرح الدرس' (the two teachers explain the lesson).",
+          "answer": "المعلمان يشرحان الدرس"
+        },
+        {
+          "prompt": "Fix the noun and adjective: 'هاتان طالبتان جميلة' (these two beautiful female students).",
+          "answer": "هاتان طالبتان جميلتان"
+        }
+      ]
+    },
+    {
+      "rule_id": "sound-vs-broken-plurals",
+      "topic": "Sound vs broken plurals",
+      "title": "Sound vs Broken Plurals in Arabic",
+      "explanation": "Arabic plurals are either 'sound' (regular suffixes) or 'broken' (irregular vowel changes). Sound masculine plurals add -ون or -ين; sound feminine add -ات. Many nouns use broken plurals that change the word's internal structure. A common mistake is using a sound plural suffix where a broken plural is required, or vice versa.",
+      "examples": [
+        {
+          "wrong": "طالبون",
+          "right": "طلاب",
+          "note": "'طالب' (student) takes a broken plural 'طلاب', not the sound masculine suffix."
+        },
+        {
+          "wrong": "كرسيون",
+          "right": "كراسي",
+          "note": "'كرسي' (chair) has a broken plural 'كراسي', not formed by adding -ون."
+        },
+        {
+          "wrong": "مدنات",
+          "right": "مدن",
+          "note": "'مدينة' (city) uses the broken plural 'مدن', not the feminine sound plural -ات."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the mistake: 'طبيبون' is the plural of 'طبيب' (doctor).",
+          "answer": "أطباء"
+        },
+        {
+          "prompt": "What is the correct plural of 'مكتب' (desk/office)?",
+          "answer": "مكاتب"
+        },
+        {
+          "prompt": "What is the correct plural of 'مدرسة' (school)?",
+          "answer": "مدارس"
+        }
+      ]
+    },
+    {
+      "rule_id": "subject-verb-agreement-in-number",
+      "topic": "Subject-verb agreement in number",
+      "title": "Subject-Verb Agreement in Number: The Non-Human Plural Rule",
+      "explanation": "In Arabic, verbs and adjectives must agree with their subjects in gender and number. However, a very common mistake for English speakers is using a plural verb with a plural non-human subject (e.g., books, cars, windows). The correct rule: when the subject is a plural of a non-human noun, the verb or adjective takes the feminine singular form, not the plural.",
+      "examples": [
+        {
+          "wrong": "الكتب جديدون.",
+          "right": "الكتب جديدة.",
+          "note": "Because 'books' (الكتب) is a non-human plural, the adjective must be feminine singular 'جديدة', not the masculine plural 'جديدون'."
+        },
+        {
+          "wrong": "السيارات سريعون.",
+          "right": "السيارات سريعة.",
+          "note": "'Cars' (السيارات) is non-human plural, so the adjective is feminine singular 'سريعة', not masculine plural 'سريعون'."
+        },
+        {
+          "wrong": "الأبواب مفتوحون.",
+          "right": "الأبواب مفتوحة.",
+          "note": "'Doors' (الأبواب) is non-human plural; the correct form is 'مفتوحة' (feminine singular), not 'مفتوحون' (masculine plural)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct this Arabic sentence: 'النوافذ مغلقون' (The windows are closed). Write the correct version.",
+          "answer": "النوافذ مغلقة."
+        },
+        {
+          "prompt": "Translate into Arabic: 'The pens are new.' Use 'الأقلام' for pens.",
+          "answer": "الأقلام جديدة."
+        },
+        {
+          "prompt": "Fill in the blank with the correct word: 'الكراسي _______ (جديد)' (The chairs are new).",
+          "answer": "جديدة"
+        }
+      ]
+    },
+    {
+      "rule_id": "mood-marking-indicativesubjunctivejussive",
+      "topic": "Mood marking (indicative/subjunctive/jussive)",
+      "title": "Mood Marking: Indicative, Subjunctive, Jussive",
+      "explanation": "In Arabic, verbs change their ending depending on the mood: indicative (default, ends with -u), subjunctive (after أن, لن, كي, etc., ends with -a), and jussive (after لم, لام الأمر, etc., ends with -Ø or -ْ). A common mistake is using the indicative ending after particles that require the subjunctive or jussive.",
+      "examples": [
+        {
+          "wrong": "أُرِيدُ أَنْ أَذْهَبُ",
+          "right": "أُرِيدُ أَنْ أَذْهَبَ",
+          "note": "After 'أن', the verb must be in the subjunctive (with fatḥa), not indicative (with ḍamma)."
+        },
+        {
+          "wrong": "لَمْ يَذْهَبُ",
+          "right": "لَمْ يَذْهَبْ",
+          "note": "After 'لم', the verb must be in the jussive (with sukūn), not indicative."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank with the correct verb form: لَنْ يَذْهَبْ / يَذْهَبَ / يَذْهَبُ after 'لن'",
+          "answer": "لَنْ يَذْهَبَ"
+        },
+        {
+          "prompt": "Correct the mistake: هَلْ يُرِيدُ أَنْ تَدْرُسُ؟ (Change the verb after أن to the correct mood)",
+          "answer": "هَلْ يُرِيدُ أَنْ تَدْرُسَ؟"
+        },
+        {
+          "prompt": "Choose the right verb: لَمْ يَكْتُبْ / يَكْتُبُ / يَكْتُبَ after 'لم'",
+          "answer": "لَمْ يَكْتُبْ"
+        }
+      ]
+    },
+    {
+      "rule_id": "relative-pronouns-choice",
+      "topic": "Relative pronouns choice",
+      "title": "Choosing the Correct Arabic Relative Pronoun",
+      "explanation": "In Arabic, relative pronouns must agree with the noun they refer to in gender and number. A common mistake is using 'الذي' (masculine singular) for all nouns. Use 'الذي' for masculine singular, 'التي' for feminine singular, 'الذين' for masculine plural, and 'اللاتي' for feminine plural.",
+      "examples": [
+        {
+          "wrong": "المرأة الذي تدرس",
+          "right": "المرأة التي تدرس",
+          "note": "'المرأة' is feminine, so you must use 'التي', not 'الذي'."
+        },
+        {
+          "wrong": "الرجال الذي يعملون",
+          "right": "الرجال الذين يعملون",
+          "note": "'الرجال' is masculine plural, so use 'الذين' instead of 'الذي'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct relative pronoun: 'The girl who plays' – البنت ___ تلعب",
+          "answer": "التي"
+        },
+        {
+          "prompt": "Fill in the correct relative pronoun: 'The teachers (male) who teach' – المدرسون ___ يدرسون",
+          "answer": "الذين"
+        },
+        {
+          "prompt": "Fill in the correct relative pronoun: 'The book that I read' – الكتاب ___ أقرأه",
+          "answer": "الذي"
+        }
+      ]
+    },
+    {
+      "rule_id": "demonstrative-pronoun-proximity",
+      "topic": "Demonstrative pronoun proximity",
+      "title": "Demonstrative Pronoun Proximity (هذا vs ذلك)",
+      "explanation": "In Arabic, the choice between 'this' (هذا/هذه) and 'that' (ذلك/تلك) depends on physical or temporal distance. Use 'هذا' (masculine) or 'هذه' (feminine) for something near you, and 'ذلك' (masculine) or 'تلك' (feminine) for something far. A common mistake is using the wrong form for distance.",
+      "examples": [
+        {
+          "wrong": "ذلك كتاب على الطاولة.",
+          "right": "هذا كتاب على الطاولة.",
+          "note": "The book is on the table (near you), so use 'this' (هذا)."
+        },
+        {
+          "wrong": "هذه السيارة بعيدة.",
+          "right": "تلك السيارة بعيدة.",
+          "note": "The car is far away, so use 'that' (تلك)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'This is a pen' (pointing to a pen in your hand)?",
+          "answer": "هذا قلم."
+        },
+        {
+          "prompt": "How do you say 'That is a house' (pointing to a house far away)?",
+          "answer": "ذلك بيت."
+        }
+      ]
+    },
+    {
+      "rule_id": "kana-and-its-sisters",
+      "topic": "Kana and its sisters",
+      "title": "Kana and Its Sisters: The Inverted Sentence",
+      "explanation": "In Arabic, verbs like كان (kana) and its sisters (e.g., أصبح, ظل, صار, ليس) change the case of the predicate from nominative to accusative. The subject remains nominative, but the predicate must end with a fatha (or tanween al-fath). A common mistake is leaving the predicate in the nominative case, as if the verb were not there.",
+      "examples": [
+        {
+          "wrong": "كان الطالبُ مجتهدٌ",
+          "right": "كان الطالبُ مجتهدًا",
+          "note": "The student was diligent. Add tanween al-fath to the predicate 'مجتهد'."
+        },
+        {
+          "wrong": "أصبح الجوُ حارٌ",
+          "right": "أصبح الجوُ حارًّا",
+          "note": "The weather became hot. The adjective 'حار' must be accusative: 'حارًّا'."
+        },
+        {
+          "wrong": "لستَ طبيبٌ",
+          "right": "لستَ طبيبًا",
+          "note": "You are not a doctor. Even with ليس (a sister of kana), the predicate takes the accusative."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate and correct: 'The man was rich.' (use كان)",
+          "answer": "كان الرجلُ غنيًّا"
+        },
+        {
+          "prompt": "Correct the mistake: 'صار الماء باردٌ' (the water became cold)",
+          "answer": "صار الماء باردًا"
+        },
+        {
+          "prompt": "Correct the mistake: 'أصبحت السماء غائمةٌ' (the sky became cloudy)",
+          "answer": "أصبحت السماء غائمةً"
+        }
+      ]
+    },
+    {
+      "rule_id": "inna-and-its-sisters",
+      "topic": "Inna and its sisters",
+      "title": "Inna and Its Sisters (إنَّ وأخواتها)",
+      "explanation": "These particles (like إنَّ, أنَّ, كأنَّ, لكنَّ, ليتَ, لعلَّ) change the case of the subject (ism) in a nominal sentence from nominative to accusative, while the predicate (khabar) stays nominative. A common mistake is leaving the subject in the nominative as in a normal sentence.",
+      "examples": [
+        {
+          "wrong": "الطالبُ مجتهدٌ",
+          "right": "إنَّ الطالبَ مجتهدٌ",
+          "note": "After 'inna', the subject 'الطالب' must be accusative (الطالبَ), not nominative (الطالبُ)."
+        },
+        {
+          "wrong": "لعلَّ السماءُ ممطرةٌ",
+          "right": "لعلَّ السماءَ ممطرةٌ",
+          "note": "With 'la'alla', the subject 'السماء' becomes accusative (السماءَ)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct this sentence: 'إنَّ الجوُّ جميلٌ' (meaning: 'Indeed, the weather is beautiful').",
+          "answer": "إنَّ الجوَّ جميلٌ"
+        },
+        {
+          "prompt": "Write the correct form after 'ليتَ' (if only) for: 'الوقتُ كافٍ' (the time is sufficient).",
+          "answer": "ليتَ الوقتَ كافٍ"
+        }
+      ]
+    },
+    {
+      "rule_id": "vocative-particles-ya-ayyuha",
+      "topic": "Vocative particles (ya, ayyuha)",
+      "title": "Using Vocative Particles: Yā vs. Ayyuhā",
+      "explanation": "In Arabic, 'yā' (يا) is used for calling an individual or an indefinite noun directly, while 'ayyuhā' (أيها) and its feminine form 'ayyatuhā' (أيتها) are used for addressing a definite group or in formal contexts, often followed by a definite noun. A common mistake is using 'yā' with a definite plural noun where 'ayyuhā' is required, or combining both particles.",
+      "examples": [
+        {
+          "wrong": "يا الناس",
+          "right": "أيها الناس",
+          "note": "Use 'ayyuhā' for definite plural nouns like 'al-nās' (the people)."
+        },
+        {
+          "wrong": "يا أيها الرجل",
+          "right": "أيها الرجل",
+          "note": "Do not combine 'yā' and 'ayyuhā'; use only one particle."
+        },
+        {
+          "wrong": "يا المؤمنات",
+          "right": "أيتها المؤمنات",
+          "note": "For feminine plural nouns, use 'ayyatuhā' instead of 'yā'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the mistake: يا الطلاب (addressing male students formally).",
+          "answer": "أيها الطلاب"
+        },
+        {
+          "prompt": "Fix the error: يا أيها النساء (addressing women formally).",
+          "answer": "أيها النساء"
+        },
+        {
+          "prompt": "Translate 'O believers (feminine)' using the correct vocative particle.",
+          "answer": "أيتها المؤمنات"
+        }
+      ]
+    },
+    {
+      "rule_id": "cardinal-number-gender-agreement",
+      "topic": "Cardinal number gender agreement",
+      "title": "Cardinal Number Gender Agreement (3-10)",
+      "explanation": "In Arabic, numbers from 3 to 10 must agree in gender with the noun they modify, but in the opposite direction. If the noun is masculine, use the feminine form of the number; if the noun is feminine, use the masculine form. This reversal often confuses learners.",
+      "examples": [
+        {
+          "wrong": "ثلاثة كتب",
+          "right": "ثلاث كتب",
+          "note": "'كتب' (books) is masculine plural, so the number must be the feminine form 'ثلاث'."
+        },
+        {
+          "wrong": "أربع فتيات",
+          "right": "أربعة فتيات",
+          "note": "'فتيات' (girls) is feminine plural, so the number must be the masculine form 'أربعة'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'five pens' (pens = أقلام, masculine).",
+          "answer": "خمسة أقلام"
+        },
+        {
+          "prompt": "Translate 'six cars' (cars = سيارات, feminine).",
+          "answer": "ست سيارات"
+        }
+      ]
+    },
+    {
+      "rule_id": "ordinal-number-formation",
+      "topic": "Ordinal number formation",
+      "title": "Ordinal Number Formation in Arabic",
+      "explanation": "In Arabic, ordinal numbers (first, second, third...) have a special pattern. For most numbers, the masculine form is on the pattern فاعِل (e.g., ثاني for 'second'), and the feminine adds a tā’ marbūṭah (e.g., ثانية). The word for 'first' is irregular: أول (masculine) and أولى (feminine). A common mistake is using the cardinal number (واحد, اثنان, ثلاثة) instead of the ordinal form.",
+      "examples": [
+        {
+          "wrong": "هذا هو الدرس واحد.",
+          "right": "هذا هو الدرس الأول.",
+          "note": "Use أول (not واحد) for 'first'."
+        },
+        {
+          "wrong": "هذه هي الفصل ثالث.",
+          "right": "هذه هي الفصل الثالث.",
+          "note": "Ordinal 'third' agrees in gender: الثالث (masculine) with فصل (masculine)."
+        },
+        {
+          "wrong": "في المرة اثنان.",
+          "right": "في المرة الثانية.",
+          "note": "For feminine nouns like مرة, use الثانية (feminine ordinal)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'This is the second lesson (masculine).'",
+          "answer": "هذا هو الدرس الثاني."
+        },
+        {
+          "prompt": "Translate: 'She is the first student (feminine).'",
+          "answer": "هي الطالبة الأولى."
+        },
+        {
+          "prompt": "Translate: 'I am reading the third book (masculine).'",
+          "answer": "أقرأ الكتاب الثالث."
+        }
+      ]
+    },
+    {
+      "rule_id": "comparative-and-superlative-patterns",
+      "topic": "Comparative and superlative patterns",
+      "title": "Common Mistake: Arabic Comparative and Superlative Patterns",
+      "explanation": "In Arabic, the comparative (e.g., bigger) and superlative (e.g., biggest) are both formed using the pattern أَفْعَل (af‘al) for masculine and فُعْلَى (fu‘lā) for feminine. A common mistake is to use the regular adjective alone (e.g., كَبِير) or to misuse أَكْثَر (more) when the af‘al pattern is needed. For the superlative, the noun must be definite (e.g., الأَكْبَر).",
+      "examples": [
+        {
+          "wrong": "هو كبير مني.",
+          "right": "هو أكبر مني.",
+          "note": "Use the comparative pattern أَفْعَل instead of the base adjective."
+        },
+        {
+          "wrong": "هي أكبر مني.",
+          "right": "هي كُبْرَى مني.",
+          "note": "For feminine comparatives, use the pattern فُعْلَى (here: كُبْرَى) after the noun; 'أكبر' is masculine."
+        },
+        {
+          "wrong": "هو أكبر طالب في الفصل.",
+          "right": "هو أكبر طالب في الفصل.",
+          "note": "Correct if intended as comparative, but for superlative (the biggest) use 'هُوَ الطَّالِبُ الأَكْبَرُ' with definite article."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'She is younger than me' into Arabic (using the comparative pattern).",
+          "answer": "هي أصغر مني."
+        },
+        {
+          "prompt": "Correct the mistake: 'هذا الكتاب جيد من ذاك' (This book is better than that one).",
+          "answer": "هذا الكتاب أجود من ذاك."
+        },
+        {
+          "prompt": "Form the superlative 'the tallest boy' in Arabic.",
+          "answer": "الولد الأطول"
+        }
+      ]
+    },
+    {
+      "rule_id": "negative-particles-la-lam-lan-ma",
+      "topic": "Negative particles (la, lam, lan, ma)",
+      "title": "Mastering Arabic Negative Particles: La, Lam, Lan, Ma",
+      "explanation": "Arabic uses different particles to negate past, present, and future tenses. 'La' (لا) negates the present tense and leaves the verb in the indicative mood. 'Lam' (لم) negates the past tense and requires the verb to be in the jussive mood (sukun on the last letter). 'Lan' (لن) negates the future tense and requires the verb to be in the accusative mood (ending in -a). 'Ma' (ما) can also negate the past tense without changing the verb form. A common mistake is using the wrong particle or the incorrect verb form after it.",
+      "examples": [
+        {
+          "wrong": "لا ذهب",
+          "right": "لم يذهب",
+          "note": "Use 'lam' for past negation, not 'la'. The verb after 'lam' must have a sukun on the last letter (jussive)."
+        },
+        {
+          "wrong": "لا يذهبُ (meaning future)",
+          "right": "لن يذهبَ",
+          "note": "For future negation, use 'lan' and put the verb in the accusative (fatha on the last letter). 'La' is for present, not future."
+        },
+        {
+          "wrong": "لم يذهبُ",
+          "right": "لم يذهب",
+          "note": "After 'lam', the verb must be in the jussive (sukun), not the indicative (dammah)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'He did not study' using the correct negative particle and verb form.",
+          "answer": "لم يدرس"
+        },
+        {
+          "prompt": "Correct the mistake: 'He will not come' expressed as 'لا يأتي'.",
+          "answer": "لن يأتيَ"
+        },
+        {
+          "prompt": "Fill in the blank: 'She does not eat' - 'هي ___ تأكل'.",
+          "answer": "لا"
+        }
+      ]
+    },
+    {
+      "rule_id": "root-and-pattern-derivation",
+      "topic": "Root and pattern derivation",
+      "title": "Root and Pattern Derivation: Common Pitfalls",
+      "explanation": "Arabic words are built from a three-consonant root by applying different patterns. A common mistake is confusing the pattern for the active participle (the doer) with the pattern for the concrete noun (the thing). For example, from the root 'k-t-b' (to write), 'kaatib' means 'writer', while 'kitaab' means 'book'. Using the wrong pattern changes the meaning entirely.",
+      "examples": [
+        {
+          "wrong": "هذا كاتب",
+          "right": "هذا كتاب",
+          "note": "'كاتب' means 'writer', not 'book'. The correct word for 'book' is 'كتاب'."
+        },
+        {
+          "wrong": "أنا أقرأ كتابة",
+          "right": "أنا أقرأ كتاب",
+          "note": "'كتابة' is the verbal noun 'writing', not the object 'book'. Use 'كتاب' for 'book'."
+        },
+        {
+          "wrong": "هو درس",
+          "right": "هو طالب",
+          "note": "'درس' means 'lesson', not 'student'. The active participle for 'student' (from d-r-s) is 'طالب'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank: 'أنا أكتب ______' (I write a ______). Choose between 'كتاب' (book) or 'كتابة' (writing).",
+          "answer": "كتاب"
+        },
+        {
+          "prompt": "Which word means 'school'? 'مدرسة' or 'مدرس'?",
+          "answer": "مدرسة"
+        },
+        {
+          "prompt": "From root 's-m-ع' (hear), what is the active participle (one who hears)? 'سامع' or 'سماع'?",
+          "answer": "سامع"
+        }
+      ]
+    },
+    {
+      "rule_id": "sun-and-moon-letters-pronunciation",
+      "topic": "Sun and moon letters pronunciation",
+      "title": "Sun and Moon Letters: Pronunciation of the Definite Article",
+      "explanation": "In Arabic, the definite article الـ (al-) changes pronunciation depending on the first letter of the word. If the letter is a 'sun letter' (one of 14 letters: ت ث د ذ ر ز س ش ص ض ط ظ ل ن), the 'l' is not pronounced and the sun letter is doubled (e.g., ال + شمس becomes 'ash-shams'). If the letter is a 'moon letter' (all other letters), the 'l' is pronounced clearly (e.g., ال + قمر becomes 'al-qamar'). This rule helps natural Arabic speech flow smoothly.",
+      "examples": [
+        {
+          "wrong": "الرجل",
+          "right": "الرجل",
+          "note": "Wrong: 'al-rajul' — the ل is incorrectly pronounced clearly before ر (a sun letter). Right: 'ar-rajul' — the ل is assimilated and the ر is doubled."
+        },
+        {
+          "wrong": "القمر",
+          "right": "القمر",
+          "note": "Wrong: 'aq-qamar' — this incorrectly assimilates the ل before ق (a moon letter). Right: 'al-qamar' — the ل is pronounced clearly."
+        },
+        {
+          "wrong": "الشمس",
+          "right": "الشمس",
+          "note": "Wrong: 'al-shams' — the ل is not assimilated before ش (a sun letter). Right: 'ash-shams' — the ل becomes a ش sound, doubling it."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you pronounce 'الرجل' correctly?",
+          "answer": "الرجل"
+        },
+        {
+          "prompt": "How do you pronounce 'المدرسة' correctly?",
+          "answer": "المدرسة"
+        },
+        {
+          "prompt": "How do you pronounce 'الظل' correctly?",
+          "answer": "الظل"
+        }
+      ]
+    }
+  ]
+}

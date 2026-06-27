@@ -1,0 +1,886 @@
+{
+  "learning": "hu",
+  "interface": "en",
+  "generated_at": "2026-06-27T14:31:39.089483+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "cases",
+      "topic": "Cases",
+      "title": "Accusative Case: Don't Forget the -t!",
+      "explanation": "In Hungarian, direct objects must be in the accusative case, which adds the suffix -t (or -ot, -et, -öt depending on vowel harmony). English speakers often omit this suffix, but it's essential for correct grammar. For example, 'I read a book' becomes 'Olvasok egy könyvet', not 'Olvasok egy könyv'.",
+      "examples": [
+        {
+          "wrong": "Olvasok egy könyv.",
+          "right": "Olvasok egy könyvet.",
+          "note": "könyv needs the accusative suffix -et."
+        },
+        {
+          "wrong": "Vezetek egy autó.",
+          "right": "Vezetek egy autót.",
+          "note": "autó simply adds -t."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct accusative form: 'Látok egy _____ (ház).'",
+          "answer": "házat"
+        },
+        {
+          "prompt": "Fill in the correct accusative form: 'Kérek egy _____ (kávé).'",
+          "answer": "kávét"
+        }
+      ]
+    },
+    {
+      "rule_id": "vowel-harmony",
+      "topic": "Vowel harmony",
+      "title": "Vowel Harmony in Hungarian Suffixes",
+      "explanation": "Hungarian vowels are divided into front (e, é, i, í, ö, ő, ü, ű) and back (a, á, o, ó, u, ú) groups. When adding a suffix, its vowel must match the vowel type of the stem. A common mistake is using the wrong suffix vowel, e.g., adding a front-vowel suffix to a back-vowel word.",
+      "examples": [
+        {
+          "wrong": "házben",
+          "right": "házban",
+          "note": "The stem 'ház' has a back vowel (á), so the suffix must be back-vowel '-ban' (not front '-ben')."
+        },
+        {
+          "wrong": "emberban",
+          "right": "emberben",
+          "note": "The stem 'ember' has front vowels (e, e), so the suffix must be front-vowel '-ben' (not back '-ban')."
+        },
+        {
+          "wrong": "földon",
+          "right": "földön",
+          "note": "'föld' has a front rounded vowel (ö), so the suffix is '-ön' (front), not '-on' (back)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct suffix (back or front) for 'asztal' (table) in the meaning 'on the table': asztal__",
+          "answer": "asztalon"
+        },
+        {
+          "prompt": "Fill in the correct suffix for 'szék' (chair) in the meaning 'in the chair': szék__",
+          "answer": "székben"
+        },
+        {
+          "prompt": "Choose the correct suffix for 'fű' (grass) meaning 'with the grass': fű__ (options: -vel, -val)",
+          "answer": "fűvel"
+        }
+      ]
+    },
+    {
+      "rule_id": "definiteindefinite-conjugation",
+      "topic": "Definite/indefinite conjugation",
+      "title": "Definite vs. Indefinite Conjugation in Hungarian",
+      "explanation": "In Hungarian, verbs change form depending on whether the object is definite (e.g., 'the book') or indefinite (e.g., 'a book'). Use indefinite conjugation when the object is indefinite or absent, and definite conjugation when the object is definite or specific. A common mistake is mixing these up, which can change the meaning.",
+      "examples": [
+        {
+          "wrong": "Látom egy könyvet.",
+          "right": "Látok egy könyvet.",
+          "note": "The object 'a book' is indefinite, so use the indefinite form 'látok' instead of 'látom'."
+        },
+        {
+          "wrong": "Látok a könyvet.",
+          "right": "Látom a könyvet.",
+          "note": "The object 'the book' is definite, so use the definite form 'látom' instead of 'látok'."
+        },
+        {
+          "wrong": "Olvassa egy újságot.",
+          "right": "Olvas egy újságot.",
+          "note": "The object 'a newspaper' is indefinite, so use the indefinite form 'olvas' (without the definite suffix '-a')."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I eat the apple.' (use definite conjugation)",
+          "answer": "Eszem az almát."
+        },
+        {
+          "prompt": "Translate: 'She reads a letter.' (use indefinite conjugation)",
+          "answer": "Olvas egy levelet."
+        },
+        {
+          "prompt": "Translate: 'We see the car.' (use definite conjugation)",
+          "answer": "Látjuk az autót."
+        }
+      ]
+    },
+    {
+      "rule_id": "word-order",
+      "topic": "Word order",
+      "title": "Word Order: Subject Pronouns in Neutral Statements",
+      "explanation": "In Hungarian, neutral statements often place the verb first and omit the subject pronoun. Including pronouns like 'én' (I) or 'te' (you) is common for emphasis or contrast, but beginners frequently use them unnecessarily, copying English word order.",
+      "examples": [
+        {
+          "wrong": "Én szeretem a kávét.",
+          "right": "Szeretem a kávét.",
+          "note": "Use 'Szeretem a kávét' for a neutral statement. 'Én' adds emphasis on 'I'."
+        },
+        {
+          "wrong": "Te olvasol egy könyvet.",
+          "right": "Olvasol egy könyvet.",
+          "note": "Drop the pronoun 'te' for a neutral statement: 'Olvasol egy könyvet.'"
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'I speak Hungarian' in a neutral way?",
+          "answer": "Beszélek magyarul."
+        },
+        {
+          "prompt": "Correct this sentence to make it neutral: 'Én tanulok magyarul.'",
+          "answer": "Tanulok magyarul."
+        },
+        {
+          "prompt": "You want to emphasize that YOU (not someone else) like coffee. Write the correct sentence.",
+          "answer": "Én szeretem a kávét."
+        }
+      ]
+    },
+    {
+      "rule_id": "long-vowels",
+      "topic": "Long vowels",
+      "title": "Long Vowels in Hungarian",
+      "explanation": "In Hungarian, vowel length changes the meaning of words. A long vowel is marked with an acute accent (e.g., á, é, í, ó, ú, ű, ő). Never shorten a long vowel or you might say a different word.",
+      "examples": [
+        {
+          "wrong": "kor",
+          "right": "kór",
+          "note": "\"kor\" means age, \"kór\" means disease. The accent makes all the difference."
+        },
+        {
+          "wrong": "ver",
+          "right": "vér",
+          "note": "\"ver\" (beat) vs \"vér\" (blood). A single missing accent changes the meaning completely."
+        },
+        {
+          "wrong": "tuz",
+          "right": "tűz",
+          "note": "\"tuz\" is not a word; \"tűz\" means fire. Never omit the double accent on ű and ő."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'salt' in Hungarian? (long vowel needed)",
+          "answer": "só"
+        },
+        {
+          "prompt": "Write the word for 'mountain' with the correct long vowel.",
+          "answer": "hegy"
+        },
+        {
+          "prompt": "Correct the mistake: 'viz' (water) – what is the right form?",
+          "answer": "víz"
+        }
+      ]
+    },
+    {
+      "rule_id": "stress-on-first-syllable",
+      "topic": "Stress on first syllable",
+      "title": "Stress on the First Syllable in Hungarian",
+      "explanation": "In Hungarian, the stress always falls on the first syllable of a word. Unlike English, where stress can shift, Hungarian stress is fixed and predictable. Placing stress on any other syllable is a common mistake for English speakers.",
+      "examples": [
+        {
+          "wrong": "magyar",
+          "right": "magyar",
+          "note": "The stress should be on the first syllable 'ma', not on 'gyar'."
+        },
+        {
+          "wrong": "Budapest",
+          "right": "Budapest",
+          "note": "Stress the 'Bu', not the 'pest' as in English."
+        },
+        {
+          "wrong": "kék",
+          "right": "kék",
+          "note": "Even in one-syllable words, stress is still on the first (and only) syllable."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'Hungarian' (the language) with correct first-syllable stress?",
+          "answer": "magyar"
+        },
+        {
+          "prompt": "Pronounce the capital city correctly with stress on the first syllable.",
+          "answer": "Budapest"
+        },
+        {
+          "prompt": "Say 'hello' in Hungarian with correct stress.",
+          "answer": "szervusz"
+        }
+      ]
+    },
+    {
+      "rule_id": "gyty-sounds",
+      "topic": "gy/ty sounds",
+      "title": "Mastering Hungarian 'gy' and 'ty' Sounds",
+      "explanation": "The Hungarian letters 'gy' and 'ty' are single, palatalized sounds—not sequences. 'gy' is like a soft 'd' (as in 'dew'), and 'ty' is like a soft 't' (as in 'tune'). English speakers often mistakenly pronounce them as hard 'd' or 't' or split them into two sounds.",
+      "examples": [
+        {
+          "wrong": "méd",
+          "right": "megy",
+          "note": "'megy' means 'goes'; the 'gy' is a single soft sound, not 'd' plus 'y'."
+        },
+        {
+          "wrong": "t-yúk",
+          "right": "tyúk",
+          "note": "'tyúk' means 'hen'; the 'ty' is a single palatalized 't', not 't' followed by 'y'."
+        },
+        {
+          "wrong": "d-yár",
+          "right": "gyár",
+          "note": "'gyár' means 'factory'; keep 'gy' as one sound, not separated."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say the word for 'goes' using the correct 'gy' sound?",
+          "answer": "megy"
+        },
+        {
+          "prompt": "Pronounce the Hungarian word for 'hen' with the correct 'ty' sound.",
+          "answer": "tyúk"
+        },
+        {
+          "prompt": "What is the correct spelling and pronunciation of the word meaning 'factory'?",
+          "answer": "gyár"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-the-definite-article-aaz",
+      "topic": "Use of the definite article a/az",
+      "title": "Using the Definite Article: a or az?",
+      "explanation": "In Hungarian, the definite article is 'a' before words that begin with a consonant sound, and 'az' before words that begin with a vowel sound. This depends on pronunciation, not just the first letter. A common mistake is using 'a' before a vowel (e.g., 'a alma') instead of 'az'.",
+      "examples": [
+        {
+          "wrong": "a alma",
+          "right": "az alma",
+          "note": "'Alma' starts with a vowel sound, so it needs 'az'."
+        },
+        {
+          "wrong": "az ház",
+          "right": "a ház",
+          "note": "'Ház' starts with a consonant sound, so it needs 'a'."
+        },
+        {
+          "wrong": "a utca",
+          "right": "az utca",
+          "note": "'Utca' starts with a vowel sound, so it needs 'az'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank: '___ iskola' (the school).",
+          "answer": "az iskola"
+        },
+        {
+          "prompt": "Fill in the blank: '___ könyv' (the book).",
+          "answer": "a könyv"
+        },
+        {
+          "prompt": "Fill in the blank: '___ autó' (the car).",
+          "answer": "az autó"
+        }
+      ]
+    },
+    {
+      "rule_id": "vannincs-and-zero-copula",
+      "topic": "Van/nincs and zero copula",
+      "title": "Van/Nincs and Zero Copula",
+      "explanation": "In Hungarian, the verb 'van' (is) is used only for existence or location (e.g., 'van autó' = there is a car). For descriptions or identifications (e.g., 'The car is red'), the copula is dropped: just 'Az autó piros'. Negatively, 'nincs' replaces 'van' for nonexistence, but for descriptions use 'nem' + adjective (e.g., 'Az autó nem piros').",
+      "examples": [
+        {
+          "wrong": "Az autó piros van.",
+          "right": "Az autó piros.",
+          "note": "No 'van' for descriptions. Use adjective directly."
+        },
+        {
+          "wrong": "A könyv asztalon van.",
+          "right": "A könyv az asztalon van.",
+          "note": "Correct: 'van' used for location, but a specific location requires the definite article 'az' before 'asztalon'."
+        },
+        {
+          "wrong": "Ő nincs tanár.",
+          "right": "Ő nem tanár.",
+          "note": "For negating a description (being a teacher), use 'nem' not 'nincs'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'The house is big' (no existence).",
+          "answer": "A ház nagy."
+        },
+        {
+          "prompt": "Translate: 'There is no cat on the chair'.",
+          "answer": "Nincs macska a széken."
+        },
+        {
+          "prompt": "Correct the error: 'A fiú magas van.'",
+          "answer": "A fiú magas."
+        }
+      ]
+    },
+    {
+      "rule_id": "verb-prefix-separation-and-placement",
+      "topic": "Verb prefix separation and placement",
+      "title": "Verb Prefix Separation and Placement",
+      "explanation": "In Hungarian, verb prefixes (like meg-, el-, ki-) are attached to the verb in most affirmative present/future forms. However, they must separate from the verb and go after it in imperative sentences and when the verb is negated.",
+      "examples": [
+        {
+          "wrong": "Meglásd!",
+          "right": "Lásd meg!",
+          "note": "In imperative, the prefix moves after the verb."
+        },
+        {
+          "wrong": "Nem meglátom",
+          "right": "Nem látom meg",
+          "note": "In negation, the prefix separates and goes after the verb."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'Don't see it!' (negative imperative)?",
+          "answer": "Ne lásd meg!"
+        },
+        {
+          "prompt": "How do you say 'I don't open it' (using the prefix ki-)?",
+          "answer": "Nem nyitom ki."
+        },
+        {
+          "prompt": "How do you say 'Read it!' (using the prefix el-)?",
+          "answer": "Olvasd el!"
+        }
+      ]
+    },
+    {
+      "rule_id": "the-lak-lek-suffix-i-you-object",
+      "topic": "The -lak/-lek suffix (I-you object)",
+      "title": "The -lak/-lek Suffix (I-you object)",
+      "explanation": "In Hungarian, when the subject is 'I' (én) and the object is 'you' (téged/titeket), the verb takes the special suffix -lak or -lek (depending on vowel harmony). This suffix already includes the object, so you don't need to say 'téged' separately. It is a definite conjugation form used only for the 'I-you' combination.",
+      "examples": [
+        {
+          "wrong": "Szeretek téged.",
+          "right": "Szeretlek.",
+          "note": "The verb 'szeret' (to love) with -lek already means 'I love you'; 'téged' is redundant."
+        },
+        {
+          "wrong": "Látok téged.",
+          "right": "Látlak.",
+          "note": "Use -lak for back-vowel verbs like 'lát' (see)."
+        },
+        {
+          "wrong": "Várlak titeket.",
+          "right": "Várlak.",
+          "note": "The -lak suffix works for both singular and plural 'you' (téged or titeket); saying 'titeket' is optional for emphasis."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'I call you' (singular) in Hungarian (using the verb 'hív')?",
+          "answer": "Hívlak."
+        },
+        {
+          "prompt": "Translate 'I understand you' (using the verb 'ért') into Hungarian.",
+          "answer": "Értelek."
+        },
+        {
+          "prompt": "What is the correct form for 'I wait for you' (singular, verb 'vár')?",
+          "answer": "Várlak."
+        }
+      ]
+    },
+    {
+      "rule_id": "kell-dative-infinitive-structure",
+      "topic": "Kell + dative + infinitive structure",
+      "title": "Using 'kell' with Dative and Infinitive",
+      "explanation": "In Hungarian, 'kell' (must/have to) is impersonal. The person obliged to do something appears in the dative case (nekem, neked, neki, etc.), not the nominative (én, te, ő). The main verb is in the infinitive with a personal suffix that matches the dative pronoun (e.g., -nom, -ned, -nie). A common mistake is using a nominative subject like 'Én' instead of the dative form.",
+      "examples": [
+        {
+          "wrong": "Én kell menni.",
+          "right": "Nekem kell mennem.",
+          "note": "Use 'nekem' (dative) instead of 'én' (nominative), and add '-nem' to the infinitive."
+        },
+        {
+          "wrong": "Ő kell tanulni.",
+          "right": "Neki kell tanulnia.",
+          "note": "Replace 'ő' with 'neki' and attach '-nia' to 'tanulni'."
+        },
+        {
+          "wrong": "Mi kell vásárolni.",
+          "right": "Nekünk kell vásárolnunk.",
+          "note": "Use 'nekünk' (dative) and the infinitive ending '-nunk' for 'mi' (we)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'I have to study' in Hungarian?",
+          "answer": "Nekem kell tanulnom."
+        },
+        {
+          "prompt": "Correct the mistake: 'Te kell dolgozni.'",
+          "answer": "Neked kell dolgoznod."
+        },
+        {
+          "prompt": "Translate: 'She has to buy bread.'",
+          "answer": "Neki kell kenyeret vennie."
+        }
+      ]
+    },
+    {
+      "rule_id": "tud-vs-ismer-know-how-vs-know",
+      "topic": "Tud vs ismer (know how vs know)",
+      "title": "Tud vs Ismer: Knowing How vs Knowing Someone/Something",
+      "explanation": "In Hungarian, 'tud' means 'to know how to do something' or 'to know a fact' (e.g., I know how to swim, I know that he is here). 'Ismer' means 'to be familiar with' a person, place, or thing (e.g., I know John, I know this city). A common mistake is using 'tud' when you mean 'know' a person, or 'ismer' for a skill.",
+      "examples": [
+        {
+          "wrong": "Tudom Jánost.",
+          "right": "Ismerem Jánost.",
+          "note": "Use 'ismer' for people you know (are acquainted with)."
+        },
+        {
+          "wrong": "Ismerem úszni.",
+          "right": "Tudok úszni.",
+          "note": "Use 'tud' for skills (knowing how to do something)."
+        },
+        {
+          "wrong": "Tudom ezt a könyvet.",
+          "right": "Ismerem ezt a könyvet.",
+          "note": "Use 'ismer' for familiarity with objects, books, movies, etc."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank with the correct form of 'tud' or 'ismer': I know how to speak Hungarian.",
+          "answer": "Tudok magyarul beszélni."
+        },
+        {
+          "prompt": "Fill in the blank: She knows my brother well.",
+          "answer": "Ismeri a bátyámat."
+        },
+        {
+          "prompt": "Fill in the blank: Do you know that the train leaves at 8?",
+          "answer": "Tudod, hogy a vonat 8-kor indul?"
+        }
+      ]
+    },
+    {
+      "rule_id": "már-vs-még-already-vs-still",
+      "topic": "Már vs még (already vs still)",
+      "title": "Már vs Még (Already vs Still)",
+      "explanation": "Use 'már' (already) when an action has happened earlier than expected or is complete. Use 'még' (still) when an action is ongoing or hasn't happened yet. A common mistake is using 'még' for completed actions or 'már' for actions that haven't finished.",
+      "examples": [
+        {
+          "wrong": "Még megettem a vacsorát.",
+          "right": "Már megettem a vacsorát.",
+          "note": "'Még' suggests the action is still happening, but 'megettem' is past tense. Use 'már' to indicate completion."
+        },
+        {
+          "wrong": "Már nem ettem.",
+          "right": "Még nem ettem.",
+          "note": "'Már nem' means 'no longer', which implies you used to eat but stopped. For 'not yet', use 'még nem'."
+        },
+        {
+          "wrong": "Még elment?",
+          "right": "Már elment?",
+          "note": "For a finished departure, use 'már' (already). 'Még' works only for ongoing states, e.g., 'Még itt van?' (Is he still here?)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in with 'már' or 'még': ______ nem jött meg a busz. (The bus hasn't arrived yet.)",
+          "answer": "Még"
+        },
+        {
+          "prompt": "Fill in with 'már' or 'még': ______ kész a házi feladat? (Is the homework already done?)",
+          "answer": "Már"
+        },
+        {
+          "prompt": "Fill in with 'már' or 'még': ______ nem olvasta el a könyvet, de holnapra kell. (He still hasn't read the book, but it's due tomorrow.)",
+          "answer": "Még"
+        }
+      ]
+    },
+    {
+      "rule_id": "is-and-sem-placement-alsoneither",
+      "topic": "Is and sem placement (also/neither)",
+      "title": "Is and Sem: Placement Rules",
+      "explanation": "In Hungarian, 'is' (also/too) and 'sem' (neither/either) are placed directly after the word they emphasize, not at the end of the sentence. English speakers often mistakenly put them at the end, but Hungarian requires them to follow the specific element they modify. 'Sem' is used in negative sentences as the counterpart of 'is'.",
+      "examples": [
+        {
+          "wrong": "János elment is.",
+          "right": "János is elment.",
+          "note": "'is' must follow the subject 'János' — it means 'John also left'."
+        },
+        {
+          "wrong": "Nem ment el sem János.",
+          "right": "János sem ment el.",
+          "note": "'sem' follows the subject in a negative sentence — 'Neither did John go' (or 'John didn't go either')."
+        },
+        {
+          "wrong": "Szeretem is a kávét.",
+          "right": "Én is szeretem a kávét.",
+          "note": "'is' attaches to the subject 'én' (I) — 'I also like coffee'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the word order: 'Péter elment is.'",
+          "answer": "Péter is elment."
+        },
+        {
+          "prompt": "Fill in the blank with 'is' or 'sem': 'Ő ___ szereti a filmet.' (meaning: 'He doesn't like the movie either')",
+          "answer": "sem"
+        },
+        {
+          "prompt": "Translate into Hungarian: 'Anna is coming too.' (use 'is')",
+          "answer": "Anna is jön."
+        }
+      ]
+    },
+    {
+      "rule_id": "hogy-as-conjunction-vs-question-word",
+      "topic": "Hogy as conjunction vs question word",
+      "title": "Hogy: Conjunction vs. Question Word",
+      "explanation": "In Hungarian, 'hogy' can be either a conjunction meaning 'that' (introducing a subordinate clause) or a question word meaning 'how'. The most common mistake is using 'hogy' as a question word in indirect questions when you should use 'hogyan' (or 'hogy' alone in direct questions is fine). Also, learners sometimes omit 'hogy' where it's needed as a conjunction, or add it where it doesn't belong.",
+      "examples": [
+        {
+          "wrong": "Tudom, hogy csinálod.",
+          "right": "Tudom, hogyan csinálod.",
+          "note": "In indirect questions (I know how you do it), use 'hogyan' (or 'hogy' alone is only correct in direct questions like 'Hogy csinálod?')"
+        },
+        {
+          "wrong": "Kérdezte, hogy megyek-e.",
+          "right": "Kérdezte, hogy megyek-e.",
+          "note": "This is actually correct! 'Hogy' as a conjunction introduces the question clause. No change needed."
+        },
+        {
+          "wrong": "Hogy vagy? Jól vagyok.",
+          "right": "Hogy vagy? Jól vagyok.",
+          "note": "Direct question: 'Hogy vagy?' (How are you?) is correct. No mistake here."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I don't know how he did it.' (indirect question)",
+          "answer": "Nem tudom, hogyan csinálta."
+        },
+        {
+          "prompt": "Fill in the blank: 'Azt mondta, ______ holnap jön.' (He said that he'll come tomorrow.)",
+          "answer": "hogy"
+        },
+        {
+          "prompt": "Correct the mistake: 'Megkérdeztem, hogy csinálja ezt.' (I asked how he does this.)",
+          "answer": "Megkérdeztem, hogyan csinálja ezt."
+        }
+      ]
+    },
+    {
+      "rule_id": "ly-vs-j-spelling-and-pronunciation",
+      "topic": "Ly vs j spelling and pronunciation",
+      "title": "Ly vs j: Same Sound, Different Spelling",
+      "explanation": "In modern Hungarian, 'ly' and 'j' are both pronounced like the English 'y' in 'yes'. However, 'ly' is a historical spelling and is used only in certain words that must be memorized. A common mistake is to confuse the two, either writing 'j' where 'ly' is correct or vice versa.",
+      "examples": [
+        {
+          "wrong": "kiráj",
+          "right": "király",
+          "note": "The word for 'king' is spelled with 'ly', not 'j'."
+        },
+        {
+          "wrong": "lyáték",
+          "right": "játék",
+          "note": "The word for 'game' is spelled with 'j', not 'ly'."
+        },
+        {
+          "wrong": "hej",
+          "right": "hely",
+          "note": "The word for 'place' is spelled with 'ly', not 'j'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the correct Hungarian word for 'king'.",
+          "answer": "király"
+        },
+        {
+          "prompt": "Write the correct Hungarian word for 'game'.",
+          "answer": "játék"
+        },
+        {
+          "prompt": "Write the correct Hungarian word for 'place'.",
+          "answer": "hely"
+        }
+      ]
+    },
+    {
+      "rule_id": "short-ö-and-ü-vowel-pronunciation",
+      "topic": "Short ö and ü vowel pronunciation",
+      "title": "Short ö and ü Pronunciation",
+      "explanation": "In Hungarian, short ö and ü are distinct vowels that English speakers often mispronounce as longer or different sounds. Short ö is like the 'e' in 'her' but very brief and with rounded lips; short ü is like the 'u' in 'cute' but with tightly rounded lips and a short duration. Keep the sound short—never hold it like a long vowel.",
+      "examples": [
+        {
+          "wrong": "kör",
+          "right": "kör",
+          "note": "The wrong pronunciation sounds like 'kerr' (long), but the right one is a crisp, short 'ö' as in 'her' but shorter."
+        },
+        {
+          "wrong": "füst",
+          "right": "füst",
+          "note": "The wrong pronunciation might be 'foost' (long 'u'), but the right one is a short, rounded 'ü' like in French 'tu'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'wall' in Hungarian? (short ö)",
+          "answer": "fal"
+        },
+        {
+          "prompt": "Say 'forest' in Hungarian with a short ü.",
+          "answer": "erdő"
+        }
+      ]
+    },
+    {
+      "rule_id": "comparative-and-superlative-irregulars",
+      "topic": "Comparative and superlative irregulars",
+      "title": "Irregular Comparatives and Superlatives in Hungarian",
+      "explanation": "Some common adjectives have irregular comparative and superlative forms. Instead of adding regular suffixes, the stem changes. For example, 'jó' (good) becomes 'jobb' (better) and 'legjobb' (best); 'rossz' (bad) becomes 'rosszabb' (worse) and 'legrosszabb' (worst). Learn these patterns to avoid common errors.",
+      "examples": [
+        {
+          "wrong": "Ő jóbb, mint én.",
+          "right": "Ő jobb, mint én.",
+          "note": "The comparative of 'jó' is 'jobb', not 'jóbb'."
+        },
+        {
+          "wrong": "Ez a legjóbb könyv.",
+          "right": "Ez a legjobb könyv.",
+          "note": "The superlative of 'jó' is 'legjobb', not 'legjóbb'."
+        },
+        {
+          "wrong": "A kicsibb kutya.",
+          "right": "A kisebb kutya.",
+          "note": "The comparative of 'kicsi' is 'kisebb' (stem changes from 'kicsi' to 'kis'), not 'kicsibb'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'This is the worst movie.' (bad = rossz)",
+          "answer": "Ez a legrosszabb film."
+        },
+        {
+          "prompt": "Fill in the blank with the correct comparative form: 'A piros autó nagyobb, de a kék autó ___ (small).'",
+          "answer": "kisebb"
+        },
+        {
+          "prompt": "Correct the mistake: 'Ő a legszépebb lány.'",
+          "answer": "Ő a legszebb lány."
+        }
+      ]
+    },
+    {
+      "rule_id": "ez-vs-az-demonstrative-inflections",
+      "topic": "Ez vs az demonstrative inflections",
+      "title": "Demonstrative Inflections: ez (this) vs az (that)",
+      "explanation": "In Hungarian, the demonstratives 'ez' (this) and 'az' (that) must match the case of the noun they modify. They have special inflected forms, like 'ezt' (this, accusative) and 'azt' (that, accusative). A common mistake is using the base form instead of the inflected one when the noun has a case ending.",
+      "examples": [
+        {
+          "wrong": "Ez a könyvet olvasom.",
+          "right": "Ezt a könyvet olvasom.",
+          "note": "The accusative ending -t on 'könyvet' requires 'ez' to become 'ezt'."
+        },
+        {
+          "wrong": "Az a házban lakom.",
+          "right": "Abban a házban lakom.",
+          "note": "The inessive case (-ban) makes 'az' become 'abban'."
+        },
+        {
+          "wrong": "Ez az embernek adom.",
+          "right": "Ennek az embernek adom.",
+          "note": "The dative ending -nek turns 'ez' into 'ennek' (and 'az' becomes 'annak')."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct form of 'ez' or 'az' (meaning 'this' or 'that') for the accusative case: '___ a tollat kérem.'",
+          "answer": "Ezt"
+        },
+        {
+          "prompt": "Fill in the correct form for the inessive case (inside): '___ a szobában vagyok.'",
+          "answer": "Ebben"
+        },
+        {
+          "prompt": "Fill in the correct form for the dative case (to/for): '___ a lánynak írok.'",
+          "answer": "Annak"
+        }
+      ]
+    },
+    {
+      "rule_id": "formal-vs-informal-address-teön",
+      "topic": "Formal vs informal address (te/ön)",
+      "title": "Formal vs Informal Address: te vs ön",
+      "explanation": "In Hungarian, you must choose between informal 'te' (you, singular) and formal 'ön' (you, singular) based on your relationship. Use 'te' with friends, family, and children; use 'ön' with strangers, elders, and in professional settings. The verb conjugations differ: 'te' takes the -sz/-s ending, while 'ön' uses the -ik/-ik ending (typically third-person singular form).",
+      "examples": [
+        {
+          "wrong": "Te hogy vagy?",
+          "right": "Ön hogy van?",
+          "note": "Used when addressing a teacher or an older person. 'Hogy vagy' is informal; 'hogy van' is the formal third-person form."
+        },
+        {
+          "wrong": "Ön eljön velem?",
+          "right": "Te eljössz velem?",
+          "note": "Used when inviting a close friend. 'Ön eljön' sounds distant and overly formal among friends."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "You meet your new boss for the first time. Ask 'How are you?' correctly.",
+          "answer": "Ön hogy van?"
+        },
+        {
+          "prompt": "You are asking your younger sibling to come here. Say 'Come here!' informally.",
+          "answer": "Gyere ide!"
+        }
+      ]
+    },
+    {
+      "rule_id": "postpositions-vs-case-suffixes",
+      "topic": "Postpositions vs case suffixes",
+      "title": "Postpositions vs Case Suffixes",
+      "explanation": "In Hungarian, case suffixes (like -ban/-ben for 'in') are attached directly to the noun without a space, while postpositions (like mögött for 'behind') are separate words that follow the noun. A common mistake is to either separate the suffix from the noun or combine a suffix with a postposition. Use only one—either a case suffix attached to the noun or a postposition after the noun (no suffix).",
+      "examples": [
+        {
+          "wrong": "a ház ban",
+          "right": "a házban",
+          "note": "Case suffixes must be attached directly to the noun—no space."
+        },
+        {
+          "wrong": "a házban mögött",
+          "right": "a ház mögött",
+          "note": "Do not use a case suffix and a postposition together; choose one."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'in the park' in Hungarian?",
+          "answer": "a parkban"
+        },
+        {
+          "prompt": "How do you say 'behind the table' in Hungarian?",
+          "answer": "az asztal mögött"
+        },
+        {
+          "prompt": "Fill in the blank: 'A könyv __ (under the table) van.'",
+          "answer": "A könyv az asztal alatt van."
+        }
+      ]
+    },
+    {
+      "rule_id": "language-suffix-ul-ül-usage",
+      "topic": "Language suffix -ul/-ül usage",
+      "title": "Using the Language Suffix -ul/-ül",
+      "explanation": "In Hungarian, to say 'in a language' (e.g., 'in English', 'in German'), you add the suffix -ul or -ül to the language name. Use -ul after back vowels (a, á, o, ó, u, ú) and -ül after front vowels (e, é, i, í, ö, ő, ü, ű). This suffix turns the language name into an adverb meaning 'speaking/doing something in that language'.",
+      "examples": [
+        {
+          "wrong": "Beszélek magyarül.",
+          "right": "Beszélek magyarul.",
+          "note": "'Magyar' has back vowels (a, a), so it takes -ul."
+        },
+        {
+          "wrong": "Tanulok németul.",
+          "right": "Tanulok németül.",
+          "note": "'Német' has front vowels (e, e), so it takes -ül."
+        },
+        {
+          "wrong": "Írok angolül.",
+          "right": "Írok angolul.",
+          "note": "'Angol' has back vowels (a, o), so it takes -ul."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'I speak German' in Hungarian?",
+          "answer": "Beszélek németül."
+        },
+        {
+          "prompt": "How do you say 'I study English' in Hungarian?",
+          "answer": "Angolul tanulok."
+        },
+        {
+          "prompt": "How do you say 'He writes in French' in Hungarian? (French = francia)",
+          "answer": "Franciául ír."
+        }
+      ]
+    },
+    {
+      "rule_id": "milyen-vs-hogy-question-construction",
+      "topic": "Milyen vs hogy question construction",
+      "title": "Milyen vs Hogy: Asking 'How' in Hungarian",
+      "explanation": "In Hungarian, 'milyen' asks for a description or type ('what kind of'), while 'hogy' asks for a manner or method ('how'). English often uses 'how' for both, leading to mistakes. Use 'milyen' with nouns/adjectives (e.g., the weather), and 'hogy' with verbs (e.g., how you do something).",
+      "examples": [
+        {
+          "wrong": "Hogy az idő?",
+          "right": "Milyen az idő?",
+          "note": "Asking about the weather's quality, not a method."
+        },
+        {
+          "wrong": "Milyen vagy?",
+          "right": "Hogy vagy?",
+          "note": "Asking about someone's state/well-being, not their type."
+        },
+        {
+          "wrong": "Hogy a könyv?",
+          "right": "Milyen a könyv?",
+          "note": "Asking for a book's description, not a manner."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How is the coffee? (asking about its taste/quality)",
+          "answer": "Milyen a kávé?"
+        },
+        {
+          "prompt": "How do you go to school? (asking about method)",
+          "answer": "Hogy mész iskolába?"
+        },
+        {
+          "prompt": "What is your new phone like? (asking for description)",
+          "answer": "Milyen az új telefonod?"
+        }
+      ]
+    },
+    {
+      "rule_id": "conditional-mood-usage",
+      "topic": "Conditional mood usage",
+      "title": "Using the Conditional Mood Correctly",
+      "explanation": "In Hungarian, the conditional mood (-na/-ne/-ná/-né) is used for hypothetical situations, polite requests, and the 'would' construction. A common mistake by English speakers is using the conditional in 'if' clauses incorrectly or mixing it with indicative when making requests. Remember: in 'if' clauses for unreal conditions, use conditional in both clauses; for polite requests, use conditional to soften your tone.",
+      "examples": [
+        {
+          "wrong": "Szeretek egy kávét.",
+          "right": "Szeretnék egy kávét.",
+          "note": "When ordering or making a polite request, use the conditional 'szeretnék' (I would like) instead of the indicative 'szeretek' (I like)."
+        },
+        {
+          "wrong": "Ha van időm, elmennék.",
+          "right": "Ha lenne időm, elmennék.",
+          "note": "For hypothetical present situations, use conditional in both the 'if' clause (lenne) and the result clause (elmennék), not indicative in the 'if' clause."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I would like a glass of water.' (polite request)",
+          "answer": "Szeretnék egy pohár vizet."
+        },
+        {
+          "prompt": "Translate: 'If I had money, I would buy a house.' (hypothetical)",
+          "answer": "Ha lenne pénzem, vennék egy házat."
+        },
+        {
+          "prompt": "Translate: 'Could you please help me?' (polite request using 'tudnál')",
+          "answer": "Tudnál segíteni?"
+        }
+      ]
+    }
+  ]
+}

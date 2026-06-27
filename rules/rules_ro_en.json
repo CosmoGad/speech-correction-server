@@ -1,0 +1,888 @@
+{
+  "learning": "ro",
+  "interface": "en",
+  "generated_at": "2026-06-27T14:15:16.821477+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "articles",
+      "topic": "Articles",
+      "title": "Attaching Definite Articles to Nouns",
+      "explanation": "In Romanian, definite articles are suffixes attached to the end of nouns, not separate words like 'the' in English. For masculine singular nouns ending in a consonant, add '-ul'; for feminine singular nouns ending in '-ă', change to '-a' or add '-a' after a consonant. A common mistake is forgetting to attach the article or using a separate word.",
+      "examples": [
+        {
+          "wrong": "Am văzut băiat.",
+          "right": "Am văzut băiatul.",
+          "note": "Add '-ul' to masculine nouns ending in a consonant to say 'the boy'."
+        },
+        {
+          "wrong": "Cartea este pe masă? Nu, cartea este pe scaun.",
+          "right": "Cartea este pe masă? Nu, cartea este pe scaun.",
+          "note": "Wait, this example is correct. Let me fix: Wrong: 'Cartea este pe masa fără picioare.' (masa missing article) → Right: 'Cartea este pe masa fără picioare.'? Actually better: Wrong: 'Am citit carte interesantă.' → Right: 'Am citit cartea interesantă.' (add '-a' to feminine 'carte' to make it definite."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'the girl is smart' into Romanian.",
+          "answer": "Fata este deșteaptă."
+        },
+        {
+          "prompt": "Fill in the blank with the correct form: 'Am văzut ___ (the teacher, masculine: profesor).'",
+          "answer": "profesorul"
+        }
+      ]
+    },
+    {
+      "rule_id": "gender-agreement",
+      "topic": "Gender agreement",
+      "title": "Gender Agreement in Romanian",
+      "explanation": "In Romanian, adjectives and some pronouns must agree in gender (masculine, feminine, or neuter) with the noun they modify. A common mistake is using a masculine adjective with a feminine noun, or vice versa. Pay attention to noun endings: -ă often indicates feminine, -u or consonant often masculine.",
+      "examples": [
+        {
+          "wrong": "Un om frumoasă",
+          "right": "Un om frumos",
+          "note": "'Om' (man/human) is masculine, so the adjective must be 'frumos', not 'frumoasă' (feminine)."
+        },
+        {
+          "wrong": "O fată înalt",
+          "right": "O fată înaltă",
+          "note": "'Fată' (girl) is feminine, so the adjective must be 'înaltă', not 'înalt' (masculine)."
+        },
+        {
+          "wrong": "Acesta este o casă mare",
+          "right": "Aceasta este o casă mare",
+          "note": "'Casă' (house) is feminine, so the demonstrative pronoun must be 'aceasta' (feminine), not 'acesta' (masculine)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the gender agreement: 'El are un mașină nou.' (Hint: 'mașină' is feminine.)",
+          "answer": "El are o mașină nouă."
+        },
+        {
+          "prompt": "Correct the gender agreement: 'Am văzut un băiat frumoasă.' (Hint: 'băiat' is masculine.)",
+          "answer": "Am văzut un băiat frumos."
+        }
+      ]
+    },
+    {
+      "rule_id": "verb-conjugation",
+      "topic": "Verb conjugation",
+      "title": "Mastering Verb Conjugation in Present Tense",
+      "explanation": "In Romanian, verbs must change their endings to match the subject pronoun (I, you, he/she, etc.). A common mistake is using the infinitive form (e.g., 'a vorbi') for all subjects. Instead, you remove the infinitive ending and add the correct suffix for each person.",
+      "examples": [
+        {
+          "wrong": "Eu vorbi.",
+          "right": "Eu vorbesc.",
+          "note": "For first person singular of many -i verbs, add '-esc'."
+        },
+        {
+          "wrong": "El vorbi.",
+          "right": "El vorbește.",
+          "note": "Third person singular uses '-ește'."
+        },
+        {
+          "wrong": "Ei vorbi.",
+          "right": "Ei vorbesc.",
+          "note": "Third person plural often matches first person singular ('-esc')."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Conjugate 'a vorbi' for 'we speak'.",
+          "answer": "Noi vorbim."
+        },
+        {
+          "prompt": "What is the correct form for 'you (singular, informal) speak'?",
+          "answer": "Tu vorbești."
+        },
+        {
+          "prompt": "Fill in: El _____ (a vorbi) românește.",
+          "answer": "El vorbește românește."
+        }
+      ]
+    },
+    {
+      "rule_id": "prepositions",
+      "topic": "Prepositions",
+      "title": "Prepositions: La vs În",
+      "explanation": "Many English speakers confuse 'la' (at/to) and 'în' (in/inside) when talking about locations. Use 'la' for being at a place in general, like a school or market. Use 'în' only when you mean inside a specific building, container, or enclosed space.",
+      "examples": [
+        {
+          "wrong": "Sunt în școală.",
+          "right": "Sunt la școală.",
+          "note": "Use 'la' for being at a place in general; 'în' would mean inside the school building."
+        },
+        {
+          "wrong": "Merg în cinema.",
+          "right": "Merg la cinema.",
+          "note": "Use 'la' for going to an event or location; 'în' is for entering the building."
+        },
+        {
+          "wrong": "Stau în masă.",
+          "right": "Stau la masă.",
+          "note": "Use 'la' with furniture like table; 'în' would mean inside the table."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complete with the correct preposition: Sunt ___ bibliotecă. (I am at the library – general location)",
+          "answer": "la"
+        },
+        {
+          "prompt": "Complete: Cartea este ___ dulap. (The book is inside the closet)",
+          "answer": "în"
+        },
+        {
+          "prompt": "Complete: Mergem ___ piață. (We go to the market)",
+          "answer": "la"
+        }
+      ]
+    },
+    {
+      "rule_id": "diphthongs",
+      "topic": "Diphthongs",
+      "title": "Diphthongs: Keeping Vowel Pairs Together",
+      "explanation": "In Romanian, certain pairs of vowels (like 'oa', 'ia', 'ie', 'ua') form a single syllable, called a diphthong. Learners often incorrectly split these into two separate syllables or words. Remember to pronounce and write the vowels closely together without separation.",
+      "examples": [
+        {
+          "wrong": "ro ată",
+          "right": "roată",
+          "note": "The sequence 'oa' is a diphthong – one syllable, not two."
+        },
+        {
+          "wrong": "șco ală",
+          "right": "școală",
+          "note": "The diphthong 'oa' must stay together; 'școală' has two syllables: școa-lă."
+        },
+        {
+          "wrong": "pi atră",
+          "right": "piatră",
+          "note": "The diphthong 'ia' should not be split – it's one vowel sound."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the correct Romanian word for 'wheel' (which contains a diphthong).",
+          "answer": "roată"
+        },
+        {
+          "prompt": "Write the correct Romanian word for 'school' (which contains a diphthong).",
+          "answer": "școală"
+        },
+        {
+          "prompt": "Write the correct Romanian word for 'stone' (which contains a diphthong).",
+          "answer": "piatră"
+        }
+      ]
+    },
+    {
+      "rule_id": "ăâ-sounds",
+      "topic": "ă/â sounds",
+      "title": "Mastering the ă and â Sounds in Romanian",
+      "explanation": "The sounds 'ă' (like the 'a' in 'about') and 'â' (a deeper, more closed sound, like the 'u' in 'burn') are often confused by English speakers. 'ă' is short and relaxed, while 'â' is longer and more tense. Practice by hearing the difference in common words.",
+      "examples": [
+        {
+          "wrong": "măr (apple) said like 'mar'",
+          "right": "măr",
+          "note": "The 'ă' should sound like the 'a' in 'sofa', not like the 'a' in 'car'."
+        },
+        {
+          "wrong": "cânt (song) said like 'cant'",
+          "right": "cânt",
+          "note": "The 'â' is deeper; think of the 'u' in 'purr' but with lips spread."
+        },
+        {
+          "wrong": "pădure (forest) said with a flat 'a'",
+          "right": "pădure",
+          "note": "Keep the first vowel short and relaxed, like the 'e' in 'the'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say the word for 'apple' in Romanian? (Use the correct vowel sound)",
+          "answer": "măr"
+        },
+        {
+          "prompt": "Fill in the missing vowel: c_nt (meaning 'song')",
+          "answer": "â"
+        },
+        {
+          "prompt": "Write the Romanian word for 'forest' with the correct spelling.",
+          "answer": "pădure"
+        }
+      ]
+    },
+    {
+      "rule_id": "stress",
+      "topic": "Stress",
+      "title": "Mastering Romanian Word Stress",
+      "explanation": "In Romanian, the stress (accent) is most often on the last syllable of the word, but it can fall on any syllable, and shifting the stress can change the meaning entirely. English speakers frequently default to the first syllable, so pay close attention to where the stress falls in common words.",
+      "examples": [
+        {
+          "wrong": "MÁsa",
+          "right": "máSĂ",
+          "note": "'Masă' (table) has stress on the last syllable; 'masa' (the table) has stress on the first syllable. Different stress = different word."
+        },
+        {
+          "wrong": "CÓpil",
+          "right": "coPÍL",
+          "note": "'Copil' (child) is stressed on the last syllable, not the first."
+        },
+        {
+          "wrong": "FÉră",
+          "right": "feRĂ",
+          "note": "'Feră' (iron) – stress on the last syllable. Compare with 'fera' (to protect, subjunctive) – stress on first."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How would you correctly stress the Romanian word for 'book' (carte)?",
+          "answer": "CARte"
+        },
+        {
+          "prompt": "Which syllable is stressed in the word for 'school' (școală)?",
+          "answer": "șCOAlă"
+        },
+        {
+          "prompt": "Correct the stress in this sentence: 'Am o pRIetenă.' (friend)",
+          "answer": "Am o prieTE nă."
+        }
+      ]
+    },
+    {
+      "rule_id": "plural-formation-for-neuter-nouns",
+      "topic": "Plural formation for neuter nouns",
+      "title": "Plural of Neuter Nouns: Don't Guess the Ending",
+      "explanation": "In Romanian, neuter nouns are masculine in the singular and feminine in the plural. Most neuter plurals end in either **-e** or **-uri** – not in **-i** (which is for masculine nouns). A common mistake is to add **-i** to neuter nouns. Learn the correct ending for each word.",
+      "examples": [
+        {
+          "wrong": "calculator → calculatoare (calculator → calculators)",
+          "right": "calculator → calculatoare",
+          "note": "Many neuter nouns ending in -or or -tor take -e in the plural (not -i)."
+        },
+        {
+          "wrong": "ceas → ceași (clock → clocks)",
+          "right": "ceas → ceasuri",
+          "note": "Nouns ending in a consonant often take -uri (not -i or -e)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "What is the correct plural of 'birou' (desk)?",
+          "answer": "birouri"
+        },
+        {
+          "prompt": "Fill in the blank: 'Am două _______' (I have two pencils). (Hint: 'creion' is neuter.)",
+          "answer": "creioane"
+        }
+      ]
+    },
+    {
+      "rule_id": "personal-accusative-with-pe",
+      "topic": "Personal accusative with 'pe'",
+      "title": "Personal Accusative with 'pe'",
+      "explanation": "In Romanian, when a direct object refers to a specific person (or a beloved pet), you must place the preposition 'pe' before it. The object then takes the accusative form with a definite article. A common mistake is either omitting 'pe' or using it with non-personal objects.",
+      "examples": [
+        {
+          "wrong": "Văd Maria.",
+          "right": "O văd pe Maria.",
+          "note": "The direct object 'Maria' is a specific person, so 'pe' is required and a pronoun ('o') repeats it."
+        },
+        {
+          "wrong": "Am întrebat profesorul.",
+          "right": "L-am întrebat pe profesor.",
+          "note": "'Profesorul' is a definite person – use 'pe' and the pronoun 'l' (masculine)."
+        },
+        {
+          "wrong": "Iubesc câinele meu.",
+          "right": "Îl iubesc pe câinele meu.",
+          "note": "Even for a pet, if it's a specific, named or familiar animal, 'pe' is used."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'I see the doctor' (the doctor is a specific person)?",
+          "answer": "Îl văd pe doctor."
+        },
+        {
+          "prompt": "Translate: 'She called her mother.' (Hint: use 'a suna' for 'to call').",
+          "answer": "A sunat-o pe mama ei."
+        },
+        {
+          "prompt": "Correct this sentence: 'Am invitat prietenul.' (meaning 'I invited the friend').",
+          "answer": "L-am invitat pe prieten."
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-pronouns-alaaiale",
+      "topic": "Possessive pronouns al/a/ai/ale",
+      "title": "Mastering Romanian Possessive Pronouns: al/a/ai/ale",
+      "explanation": "In Romanian, possessive pronouns agree in gender and number with the noun they refer to, not with the owner. Use 'al' for masculine singular, 'a' for feminine singular, 'ai' for masculine plural, and 'ale' for feminine plural (including neuter plural). A common mistake is using 'al' for all cases, so match the pronoun to the possessed object's gender and number.",
+      "examples": [
+        {
+          "wrong": "Cartea este al meu.",
+          "right": "Cartea este a mea.",
+          "note": "Carte (book) is feminine singular, so use 'a' not 'al'."
+        },
+        {
+          "wrong": "Caietele sunt al meu.",
+          "right": "Caietele sunt ale mele.",
+          "note": "Caiete (notebooks) is feminine plural (neuter plural), so use 'ale'."
+        },
+        {
+          "wrong": "Computerul este a mea.",
+          "right": "Computerul este al meu.",
+          "note": "Computer (computer) is masculine singular, so use 'al' not 'a'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'The dog is mine.' (dog = câine, masculine singular)",
+          "answer": "Câinele este al meu."
+        },
+        {
+          "prompt": "Translate: 'The chairs are yours.' (chairs = scaune, neuter plural; 'yours' informal singular, feminine form)",
+          "answer": "Scaunele sunt ale tale."
+        },
+        {
+          "prompt": "Translate: 'The apple is hers.' (apple = măr, neuter singular; 'hers' = a ei)",
+          "answer": "Mărul este al ei."
+        }
+      ]
+    },
+    {
+      "rule_id": "subjunctive-mood-să-verb",
+      "topic": "Subjunctive mood (să + verb)",
+      "title": "Using the Subjunctive Mood (să + verb) in Romanian",
+      "explanation": "The subjunctive mood is used after certain verbs (like 'a vrea' – to want), expressions (like 'este important' – it's important), and conjunctions (like 'ca' – that). In Romanian, the subjunctive is formed by placing 'să' before the verb, which then takes a special conjugation. English speakers often mistakenly use the indicative instead of the subjunctive after these triggers.",
+      "examples": [
+        {
+          "wrong": "Vreau ca tu faci curat.",
+          "right": "Vreau ca tu să faci curat.",
+          "note": "After 'vreau ca' (I want that), use the subjunctive: să + verb."
+        },
+        {
+          "wrong": "Este important că el vine.",
+          "right": "Este important ca el să vină.",
+          "note": "After 'este important ca' (it's important that), use the subjunctive: să + verb."
+        },
+        {
+          "wrong": "Am nevoie ca tu ajuți.",
+          "right": "Am nevoie ca tu să ajuți.",
+          "note": "After 'am nevoie ca' (I need that), use the subjunctive: să + verb."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complete with the subjunctive: Vreau ca tu ______ (face) curat.",
+          "answer": "să faci"
+        },
+        {
+          "prompt": "Complete with the subjunctive: Este important ca el ______ (veni) la timp.",
+          "answer": "să vină"
+        },
+        {
+          "prompt": "Complete with the subjunctive: Ea speră ca noi ______ (putea) veni.",
+          "answer": "să putem"
+        }
+      ]
+    },
+    {
+      "rule_id": "conditional-mood-așaiar",
+      "topic": "Conditional mood (aș/ai/ar...)",
+      "title": "Correctly Using the Romanian Conditional Mood (aș/ai/ar)",
+      "explanation": "In Romanian, the conditional mood uses specific auxiliary verbs for each person: 'aș' for 'I', 'ai' for 'you' (singular), 'ar' for 'he/she/it'. A common mistake is to use 'aș' for all persons or to confuse 'a' with 'ar'. Always match the auxiliary to the subject.",
+      "examples": [
+        {
+          "wrong": "El a merge la film.",
+          "right": "El ar merge la film.",
+          "note": "'a' is not a conditional auxiliary; use 'ar' for third person singular."
+        },
+        {
+          "wrong": "Tu aș vrea să vii.",
+          "right": "Tu ai vrea să vii.",
+          "note": "'aș' is only for first person singular ('eu'); for 'tu' use 'ai'."
+        },
+        {
+          "wrong": "Eu ar fi mâncat.",
+          "right": "Eu aș fi mâncat.",
+          "note": "For 'eu' (I), use 'aș', not 'ar'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct conditional auxiliary: 'Eu ______ merge la mare.' (I would go to the sea.)",
+          "answer": "aș"
+        },
+        {
+          "prompt": "Fill in the correct conditional auxiliary: 'Tu ______ citi mai mult.' (You would read more.)",
+          "answer": "ai"
+        },
+        {
+          "prompt": "Fill in the correct conditional auxiliary: 'El ______ veni mâine.' (He would come tomorrow.)",
+          "answer": "ar"
+        }
+      ]
+    },
+    {
+      "rule_id": "future-tense-forms-voi-vs-o-să",
+      "topic": "Future tense forms (voi vs o să)",
+      "title": "Future Tense: 'voi' vs 'o să'",
+      "explanation": "In Romanian, there are two common ways to form the future tense. The formal construction uses the auxiliary 'voi' (or 'vei', 'va', etc.) followed by the infinitive of the verb, while the informal, everyday construction uses 'o să' followed by the subjunctive (present tense form). Many learners mistakenly mix the two, e.g., using 'o să' with the infinitive instead of the subjunctive. Use 'voi' for emphasis or in writing, and 'o să' in casual speech.",
+      "examples": [
+        {
+          "wrong": "O să merge la magazin.",
+          "right": "O să meargă la magazin.",
+          "note": "After 'o să', use the subjunctive (meargă), not the infinitive (merge)."
+        },
+        {
+          "wrong": "Voi o să cânte.",
+          "right": "Voi cânta.",
+          "note": "Never combine 'voi' and 'o să' – choose one form. 'Voi' is followed by the infinitive (cânta)."
+        },
+        {
+          "wrong": "El va o să vină.",
+          "right": "El o să vină. / El va veni.",
+          "note": "Again, don't mix auxiliaries. Use either 'va veni' (formal) or 'o să vină' (informal)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I will eat an apple.' (informal, using 'o să')",
+          "answer": "O să mănânc un măr."
+        },
+        {
+          "prompt": "Translate: 'She will go to school.' (formal, using 'voi/va')",
+          "answer": "Ea va merge la școală."
+        },
+        {
+          "prompt": "Correct the mistake: 'Noi o să vom vorbi.'",
+          "answer": "Noi o să vorbim. / Noi vom vorbi."
+        }
+      ]
+    },
+    {
+      "rule_id": "imperfect-tense-vs-perfect-compus",
+      "topic": "Imperfect tense vs perfect compus",
+      "title": "Imperfect vs. Perfect Compus: Past Actions in Romanian",
+      "explanation": "Use the imperfect tense for ongoing, habitual, or background actions in the past (like English 'was doing' or 'used to do'). Use the perfect compus for completed, one-time actions (like English 'did' or 'has done'). A common mistake is using perfect compus where the imperfect is needed to describe an action in progress or a repeated event.",
+      "examples": [
+        {
+          "wrong": "Ieri am mâncat când a sunat telefonul.",
+          "right": "Ieri mâncam când a sunat telefonul.",
+          "note": "Use imperfect (mâncam) for the action in progress when another event interrupted it."
+        },
+        {
+          "wrong": "El a fost la film în fiecare sâmbătă.",
+          "right": "El era la film în fiecare sâmbătă.",
+          "note": "Use imperfect (era) for repeated/habitual actions in the past."
+        },
+        {
+          "wrong": "Când am intrat, ea a citit o carte.",
+          "right": "Când am intrat, ea citea o carte.",
+          "note": "Use imperfect (citea) for the ongoing action when a new action (perfect compus) occurred."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'Yesterday, I was reading when you called.'",
+          "answer": "Ieri citeam când ai sunat."
+        },
+        {
+          "prompt": "Translate: 'Every summer, we went to the beach.'",
+          "answer": "În fiecare vară mergeam la plajă."
+        },
+        {
+          "prompt": "Translate: 'She finished her homework at 8 PM.'",
+          "answer": "Ea și-a terminat temele la ora 8."
+        }
+      ]
+    },
+    {
+      "rule_id": "numeral-agreement-ordinal-vs-cardinal",
+      "topic": "Numeral agreement (ordinal vs cardinal)",
+      "title": "Numeral Agreement: Ordinal vs Cardinal",
+      "explanation": "In Romanian, ordinal numerals (e.g., primul, a doua) must agree in gender and number with the noun they modify. Cardinal numerals (e.g., doi, două) are used for counting and do not show gender agreement. A common mistake is using the cardinal form where an ordinal is expected, or using the wrong gender for the ordinal.",
+      "examples": [
+        {
+          "wrong": "Primul zi",
+          "right": "Prima zi",
+          "note": "'zi' (day) is feminine, so the ordinal must be 'prima' (feminine), not 'primul' (masculine)."
+        },
+        {
+          "wrong": "Al treilea lecție",
+          "right": "A treia lecție",
+          "note": "'lecție' (lesson) is feminine, so the ordinal should be 'a treia', not 'al treilea'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank with the correct ordinal: 'El este _____ (the first) student.' (student – masculine)",
+          "answer": "primul"
+        },
+        {
+          "prompt": "Choose the correct ordinal for 'the second house' (casa – feminine).",
+          "answer": "A doua casă"
+        },
+        {
+          "prompt": "Correct the mistake: 'Am citit al treilea carte.'",
+          "answer": "Am citit a treia carte."
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-verbs-and-pronouns",
+      "topic": "Reflexive verbs and pronouns",
+      "title": "Reflexive Verbs: Don't Forget the Pronoun!",
+      "explanation": "In Romanian, many verbs that describe actions done to oneself (like washing, waking up, or shaving) require a reflexive pronoun before the verb. English often omits this pronoun, but in Romanian you must use it: 'mă' (myself), 'te' (yourself), 'se' (himself/herself/itself), 'ne' (ourselves), 'vă' (yourselves), 'se' (themselves).",
+      "examples": [
+        {
+          "wrong": "Eu spăl.",
+          "right": "Eu mă spăl.",
+          "note": "Without 'mă', the sentence means 'I wash something (e.g., the car)' instead of 'I wash myself.'"
+        },
+        {
+          "wrong": "El trezește la șapte.",
+          "right": "El se trezește la șapte.",
+          "note": "Add 'se' to mean 'he wakes up'; without it, it would mean 'he wakes someone else.'"
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'I wake up' in Romanian?",
+          "answer": "Eu mă trezesc."
+        },
+        {
+          "prompt": "Translate 'He shaves (himself)' into Romanian.",
+          "answer": "El se bărbierește."
+        },
+        {
+          "prompt": "How would you say 'We get dressed' in Romanian?",
+          "answer": "Noi ne îmbrăcăm."
+        }
+      ]
+    },
+    {
+      "rule_id": "double-negation-nunimeni",
+      "topic": "Double negation (nu...nimeni)",
+      "title": "Double Negation with 'nu...nimeni' in Romanian",
+      "explanation": "In Romanian, double negation is not only allowed but required. Unlike English, where you say 'I see nobody' with a single negative, Romanian uses both 'nu' before the verb and the negative word 'nimeni' (nobody) together. The same rule applies to other negative words like 'niciodată' (never) or 'nicăieri' (nowhere). Think of it as: whenever you have a negative word, you must also add 'nu' to the verb.",
+      "examples": [
+        {
+          "wrong": "Văd pe nimeni.",
+          "right": "Nu văd pe nimeni.",
+          "note": "Without 'nu', the sentence is incorrect. Romanian requires both negatives."
+        },
+        {
+          "wrong": "Nimeni a venit.",
+          "right": "Nimeni nu a venit.",
+          "note": "Even when 'nimeni' comes first, the verb still needs 'nu' before it."
+        },
+        {
+          "wrong": "Am întâlnit pe nimeni.",
+          "right": "Nu am întâlnit pe nimeni.",
+          "note": "Past tense verbs also need 'nu' placed before the auxiliary or the main verb."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'Nobody knows the answer.'",
+          "answer": "Nimeni nu știe răspunsul."
+        },
+        {
+          "prompt": "Correct the sentence: 'Am văzut pe nimeni.'",
+          "answer": "Nu am văzut pe nimeni."
+        },
+        {
+          "prompt": "How do you say 'She sees no one' in Romanian?",
+          "answer": "Ea nu vede pe nimeni."
+        }
+      ]
+    },
+    {
+      "rule_id": "comparative-and-superlative-adjectives",
+      "topic": "Comparative and superlative adjectives",
+      "title": "Comparative and Superlative Adjectives in Romanian",
+      "explanation": "To form the comparative in Romanian, use 'mai' before the adjective and 'decât' after it (meaning 'than'). The superlative requires the definite article 'cel' (which agrees in gender and number) before 'mai', plus the adjective. A common mistake is omitting 'cel' in the superlative or using 'ca' instead of 'decât' in comparisons.",
+      "examples": [
+        {
+          "wrong": "Ea este mai frumoasă ca Maria.",
+          "right": "Ea este mai frumoasă decât Maria.",
+          "note": "After 'mai', use 'decât' (than), not 'ca' (like)."
+        },
+        {
+          "wrong": "El este mai înalt din clasă.",
+          "right": "El este cel mai înalt din clasă.",
+          "note": "The superlative requires 'cel' before 'mai'."
+        },
+        {
+          "wrong": "Fetele sunt cel mai frumoase.",
+          "right": "Fetele sunt cele mai frumoase.",
+          "note": "'cel' must agree in gender and number: 'cel' (masc.sg.), 'cea' (fem.sg.), 'cei' (masc.pl.), 'cele' (fem.pl.)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'He is the tallest boy in the class.'",
+          "answer": "El este cel mai înalt băiat din clasă."
+        },
+        {
+          "prompt": "Correct the mistake: 'Mama este mai bună ca tata.'",
+          "answer": "Mama este mai bună decât tata."
+        },
+        {
+          "prompt": "Fill in: 'Aceste cărți sunt ___ (cea/cele) mai interesante.'",
+          "answer": "cele"
+        }
+      ]
+    },
+    {
+      "rule_id": "genitive-case-with-luial-etc",
+      "topic": "Genitive case with lui/al etc.",
+      "title": "Genitive Case: lui vs. al",
+      "explanation": "In Romanian, use 'lui' directly after the possessed noun when the possessor is a definite masculine or neuter noun (e.g., 'cartea lui Ion'). Do not add 'al' before 'lui' in this structure. Use 'al' (with its variants a, ai, ale) only in standalone possessive constructions (e.g., 'A cui este? – Al lui Ion.').",
+      "examples": [
+        {
+          "wrong": "Cartea a lui Maria.",
+          "right": "Cartea lui Maria.",
+          "note": "After the possessed noun, use only 'lui' for definite masculine/neuter possessors."
+        },
+        {
+          "wrong": "Telefonul al lui Paul.",
+          "right": "Telefonul lui Paul.",
+          "note": "Do not insert 'al' between the noun and 'lui'."
+        },
+        {
+          "wrong": "Casa a lui Ion este mare.",
+          "right": "Casa lui Ion este mare.",
+          "note": "The genitive article 'lui' already marks possession."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the sentence: 'Caietul al lui Andrei este pe masă.'",
+          "answer": "Caietul lui Andrei este pe masă."
+        },
+        {
+          "prompt": "Complete with 'lui' or 'al': 'A cui este această carte? – ______ lui Mihai.'",
+          "answer": "Al"
+        },
+        {
+          "prompt": "Fill in the blank: 'Mașina ______ (lui/al lui) profesor este nouă.'",
+          "answer": "lui"
+        }
+      ]
+    },
+    {
+      "rule_id": "vocative-case-usage",
+      "topic": "Vocative case usage",
+      "title": "Vocative Case in Romanian: Addressing Someone Correctly",
+      "explanation": "In Romanian, when directly addressing a person, you must use the vocative case instead of the nominative. Common mistakes include using the definite article form (e.g., 'mama' instead of 'mamă') or keeping the name unchanged (e.g., 'Maria' instead of 'Mario'). The rules vary: feminine names ending in -a change to -o, masculine names ending in a consonant often add -e, and family terms drop the definite article -a.",
+      "examples": [
+        {
+          "wrong": "Ana, vino aici!",
+          "right": "Ano, vino aici!",
+          "note": "Feminine names ending in -a change to -o in the vocative."
+        },
+        {
+          "wrong": "Mama, ajută-mă!",
+          "right": "Mamă, ajută-mă!",
+          "note": "Family terms like 'mamă' use the bare form, not the definite form 'mama'."
+        },
+        {
+          "wrong": "Ion, pleacă!",
+          "right": "Ioane, pleacă!",
+          "note": "Masculine names ending in a consonant typically add -e in the vocative."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the address: 'Maria, unde ești?'",
+          "answer": "Mario, unde ești?"
+        },
+        {
+          "prompt": "Fix the mistake: 'Tata, ce faci?'",
+          "answer": "Tată, ce faci?"
+        },
+        {
+          "prompt": "Write the vocative of 'Ștefan' (masculine name).",
+          "answer": "Ștefane"
+        }
+      ]
+    },
+    {
+      "rule_id": "relative-pronouns-ce-vs-care-vs-cine",
+      "topic": "Relative pronouns ce vs care vs cine",
+      "title": "Relative Pronouns: ce vs care vs cine",
+      "explanation": "Use 'care' for specific people or things (who/which/that). Use 'ce' only for things (what) and never for people. Use 'cine' for people in general or unknown (who) but not as a relative pronoun for a specific antecedent.",
+      "examples": [
+        {
+          "wrong": "Omul ce a venit este doctorul.",
+          "right": "Omul care a venit este doctorul.",
+          "note": "Replace 'ce' with 'care' when referring to a specific person."
+        },
+        {
+          "wrong": "Cartea cine am citit-o este interesantă.",
+          "right": "Cartea pe care am citit-o este interesantă.",
+          "note": "Use 'care' (with preposition 'pe' for direct object) instead of 'cine' for a specific thing."
+        },
+        {
+          "wrong": "Fata ce am văzut-o ieri este sora mea.",
+          "right": "Fata pe care am văzut-o ieri este sora mea.",
+          "note": "Again 'ce' is wrong for a person; use 'care' with the appropriate preposition."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the sentence: 'Studentul ce a câștigat concursul este prietenul meu.'",
+          "answer": "Studentul care a câștigat concursul este prietenul meu."
+        },
+        {
+          "prompt": "Fill in the blank with the correct pronoun: 'Femeia ______ locuiește aici este medic.' (who lives here)",
+          "answer": "care"
+        },
+        {
+          "prompt": "Rewrite using 'care' or 'cine': 'Nu știu pe cine ai văzut.' (I don't know whom you saw - keep the structure but use correct relative pronoun if needed – actually 'cine' is correct here as it's an indirect question. Instead, for a relative clause: 'Persoana pe care ai văzut-o este Maria.' Correct that: 'Persoana cine ai văzut-o este Maria.' is wrong.)",
+          "answer": "Persoana pe care ai văzut-o este Maria."
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciation-of-ț-ts-sound",
+      "topic": "Pronunciation of 'ț' (ts sound)",
+      "title": "Mastering the Romanian 'ț' (ts sound)",
+      "explanation": "The letter 'ț' represents a sharp 'ts' sound, like the 'ts' in 'cats' but tighter and with the tongue pressed against the upper teeth. English speakers often pronounce it as a plain 't', which can change the meaning of a word. Practice keeping the 't' and 's' together as one crisp sound.",
+      "examples": [
+        {
+          "wrong": "tară",
+          "right": "țară",
+          "note": "Mispronouncing 'ț' as 't' turns 'country' (țară) into 'stain' (tară)."
+        },
+        {
+          "wrong": "ceată",
+          "right": "ceață",
+          "note": "The final 'ț' in 'ceață' (fog) becomes 't' in 'ceată' (crowd), so the meaning changes."
+        },
+        {
+          "wrong": "put",
+          "right": "puț",
+          "note": "'put' means 'I can' (verb), while 'puț' (with 'ț') means 'well' (a hole in the ground)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Say the Romanian word for 'country' (as in Romania's land).",
+          "answer": "țară"
+        },
+        {
+          "prompt": "Which Romanian word meaning 'fog' contains the 'ț' sound?",
+          "answer": "ceață"
+        },
+        {
+          "prompt": "How do you correctly pronounce the Romanian word for 'goat'?",
+          "answer": "țap"
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciation-of-ș-sh-vs-s",
+      "topic": "Pronunciation of 'ș' (sh) vs s",
+      "title": "Pronouncing 'ș' (like 'sh') vs 's' in Romanian",
+      "explanation": "In Romanian, 'ș' is always pronounced like English 'sh' (as in 'ship'), while 's' is a hard 's' (as in 'sun'). Mixing them changes word meanings. To produce 'ș', curl your tongue back toward the roof of your mouth; for 's', keep your tongue tip near your front teeth.",
+      "examples": [
+        {
+          "wrong": "sase",
+          "right": "șase",
+          "note": "'șase' means 'six'; pronouncing it with 's' creates a non‑existent word."
+        },
+        {
+          "wrong": "peste",
+          "right": "pește",
+          "note": "'pește' means 'fish'; 'peste' means 'over' – a completely different word."
+        },
+        {
+          "wrong": "sarpe",
+          "right": "șarpe",
+          "note": "'șarpe' means 'snake'; 'sarpe' is not a Romanian word."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'snake' in Romanian?",
+          "answer": "șarpe"
+        },
+        {
+          "prompt": "How do you say 'six' in Romanian?",
+          "answer": "șase"
+        },
+        {
+          "prompt": "How do you say 'fish' in Romanian?",
+          "answer": "pește"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-de-with-quantity-expressions",
+      "topic": "Use of 'de' with quantity expressions",
+      "title": "Don't Add 'de' After Numbers: Use 'de' Only with Measurements and Groups",
+      "explanation": "In Romanian, when using a cardinal number (e.g., cinci, zece) or the adjectives mult/puțin directly before a noun, you do NOT add the preposition 'de'. However, 'de' is required after nouns that indicate a measure, container, or group (e.g., un pahar, o mulțime, un litru). This rule helps avoid a common mistake where English speakers overgeneralize the use of 'de'.",
+      "examples": [
+        {
+          "wrong": "Am cumpărat cinci de portocale.",
+          "right": "Am cumpărat cinci portocale.",
+          "note": "After a specific number, no 'de' is needed."
+        },
+        {
+          "wrong": "Vreau un pahar suc.",
+          "right": "Vreau un pahar de suc.",
+          "note": "When using a measure word like 'pahar', add 'de' before the noun."
+        },
+        {
+          "wrong": "Avem mult de timp.",
+          "right": "Avem mult timp.",
+          "note": "With 'mult' (much/many) directly modifying a noun, do not use 'de'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct this sentence: Am mâncat trei de mere.",
+          "answer": "Am mâncat trei mere."
+        },
+        {
+          "prompt": "Correct this sentence: Am cumpărat o sticlă apă minerală.",
+          "answer": "Am cumpărat o sticlă de apă minerală."
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-să-vs-că-in-clauses",
+      "topic": "Use of 'să' vs 'că' in clauses",
+      "title": "Using 'să' vs 'că' in Romanian Clauses",
+      "explanation": "In Romanian, 'să' introduces a subjunctive clause (expressing desire, purpose, necessity, or possibility), while 'că' introduces an indicative clause (stating a fact or a reported statement). A common mistake for English speakers is using 'că' where 'să' is required, or vice versa. Think of 'să' as triggering a verb in the subjunctive mood, whereas 'că' is followed by a verb in the indicative.",
+      "examples": [
+        {
+          "wrong": "Vreau că merg la magazin.",
+          "right": "Vreau să merg la magazin.",
+          "note": "After 'a vrea' (to want), we use 'să' + subjunctive, not 'că' + indicative."
+        },
+        {
+          "wrong": "Știu că să înveți.",
+          "right": "Știu că înveți.",
+          "note": "After 'a ști' (to know) stating a fact, use 'că' + indicative, not 'să'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I think that you are right.' (use 'că')",
+          "answer": "Cred că ai dreptate."
+        },
+        {
+          "prompt": "Translate: 'It is necessary that he comes.' (use 'să')",
+          "answer": "Este necesar să vină."
+        }
+      ]
+    }
+  ]
+}

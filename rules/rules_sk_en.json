@@ -1,0 +1,864 @@
+{
+  "learning": "sk",
+  "interface": "en",
+  "generated_at": "2026-06-27T15:36:55.581100+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "cases",
+      "topic": "Cases",
+      "title": "Mastering Slovak Cases: Nominative vs. Accusative",
+      "explanation": "In Slovak, nouns change their form depending on their role in the sentence – this is called a 'case'. A common mistake for English speakers is using the wrong case after verbs like 'vidím' (I see) which require the accusative case, not the nominative. Remember: the subject (who does the action) is in nominative; the direct object (what is being acted upon) is in accusative.",
+      "examples": [
+        {
+          "wrong": "Vidím pes.",
+          "right": "Vidím psa.",
+          "note": "After 'vidím' (I see), the dog (pes) must change to accusative 'psa'."
+        },
+        {
+          "wrong": "Mám kniha.",
+          "right": "Mám knihu.",
+          "note": "After 'mám' (I have), the book (kniha) becomes 'knihu' in accusative."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct this sentence: 'Ona kupuje dom.' (She buys a house – but the word for 'house' is 'dom').",
+          "answer": "Ona kupuje dom."
+        },
+        {
+          "prompt": "Fill in the correct form: 'Vidím ________ (mačka – cat).'",
+          "answer": "mačku"
+        },
+        {
+          "prompt": "Fix the mistake: 'Čítam kniha.' (I am reading a book).",
+          "answer": "Čítam knihu."
+        }
+      ]
+    },
+    {
+      "rule_id": "verb-aspect",
+      "topic": "Verb aspect",
+      "title": "Mastering Slovak Verb Aspect: Perfective vs Imperfective",
+      "explanation": "Slovak verbs have two aspects: imperfective (for ongoing, repeated, or incomplete actions) and perfective (for completed, one-time actions). A common mistake is using the imperfective when a perfective is needed, especially after phrases like 'already' or 'finally'. Learn to match the aspect to the context.",
+      "examples": [
+        {
+          "wrong": "Už som čítal tú knihu.",
+          "right": "Už som prečítal tú knihu.",
+          "note": "Use perfective 'prečítal' (read completely) with 'už' (already) to indicate completion."
+        },
+        {
+          "wrong": "Včera som písal list, ale nedokončil.",
+          "right": "Včera som napísal list, ale nedokončil ho.",
+          "note": "'Napísal' is perfective for a completed action; the second part shows it wasn't finished, so the aspect is mismatched."
+        },
+        {
+          "wrong": "Každý deň si kúpim chlieb.",
+          "right": "Každý deň si kupujem chlieb.",
+          "note": "For habitual actions, use imperfective 'kupujem' (buy repeatedly), not perfective 'kúpim' (buy once)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I have already made dinner.' (use perfective for 'make')",
+          "answer": "Už som uvaril večeru."
+        },
+        {
+          "prompt": "Choose the correct aspect for a repeated action: 'Every morning I drink coffee.' (drink = piť / vypiť)",
+          "answer": "Každé ráno pijem kávu."
+        },
+        {
+          "prompt": "Fill in the blank with the right perfective form: 'Finally, she ______ the letter.' (write = písať / napísať)",
+          "answer": "Konečne napísala list."
+        }
+      ]
+    },
+    {
+      "rule_id": "word-order",
+      "topic": "Word order",
+      "title": "Word Order: Reflexive Pronouns and Questions",
+      "explanation": "In Slovak, the reflexive pronoun sa (or si) must immediately follow the first stressed element of the sentence, usually the verb or a short subject like ja. For yes/no questions, the verb comes first—unlike English, which uses do/does. English speakers often put these elements in the wrong place.",
+      "examples": [
+        {
+          "wrong": "Ja umývam sa.",
+          "right": "Ja sa umývam.",
+          "note": "The reflexive pronoun 'sa' must follow the verb or the subject if the subject starts the sentence."
+        },
+        {
+          "wrong": "Ty hovoríš po slovensky?",
+          "right": "Hovoríš po slovensky?",
+          "note": "In yes/no questions, the verb comes first; the subject is usually omitted or placed after the verb."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'I wash myself' into correct Slovak word order (use the subject 'ja').",
+          "answer": "Ja sa umývam."
+        },
+        {
+          "prompt": "Form a yes/no question for 'Do you speak English?' (use 'ty' as implied subject).",
+          "answer": "Hovoríš po anglicky?"
+        }
+      ]
+    },
+    {
+      "rule_id": "diacritics",
+      "topic": "Diacritics",
+      "title": "Mastering Slovak Diacritics: Why Those Little Marks Matter",
+      "explanation": "Slovak uses diacritical marks (e.g., á, č, ď, ň, ó, š, ť, ú, ý, ž) to change both the sound and meaning of words. Skipping or misplacing them is a very common beginner mistake that can lead to confusion or completely different words. Always double-check your mäkčeň (softeners) and dĺžeň (lengtheners) when writing Slovak.",
+      "examples": [
+        {
+          "wrong": "dakujem",
+          "right": "ďakujem",
+          "note": "Missing the softener (ď) changes the word from 'thank you' to something unrecognizable."
+        },
+        {
+          "wrong": "krasny",
+          "right": "krásny",
+          "note": "Missing the length mark (á) changes the vowel from long to short, making the word incorrect."
+        },
+        {
+          "wrong": "pec",
+          "right": "peč",
+          "note": "A single missing softener changes 'oven' (pec) to 'liver' (peč). Context may not save you!"
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the correct Slovak word for 'thank you' with all needed diacritics.",
+          "answer": "ďakujem"
+        },
+        {
+          "prompt": "Correct the spelling: 'Mám tazkú úlohu.' (Focus on the adjective 'tazku').",
+          "answer": "ťažkú"
+        },
+        {
+          "prompt": "A common mistake: write the word for 'to eat' (infinitive) with its proper softener.",
+          "answer": "jesť"
+        }
+      ]
+    },
+    {
+      "rule_id": "vowel-length",
+      "topic": "Vowel length",
+      "title": "Vowel Length in Slovak",
+      "explanation": "In Slovak, vowels can be short or long, and this changes the meaning of words. Long vowels are marked with an accent (á, é, í, ó, ú, ý). English speakers often forget to lengthen vowels, leading to misunderstandings.",
+      "examples": [
+        {
+          "wrong": "krasny",
+          "right": "krásny",
+          "note": "The long á changes the meaning to 'beautiful'."
+        },
+        {
+          "wrong": "pani",
+          "right": "páni",
+          "note": "Using short a instead of long changes the word from 'lady' to 'gentlemen'."
+        },
+        {
+          "wrong": "rada",
+          "right": "ráda",
+          "note": "Vowel length distinguishes between 'advice' and 'glad' (feminine)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct vowel length: kr_sny (beautiful)",
+          "answer": "krásny"
+        },
+        {
+          "prompt": "Choose the correct spelling for 'gentlemen': pani / páni",
+          "answer": "páni"
+        },
+        {
+          "prompt": "Write the correct form of 'glad' (feminine): ___",
+          "answer": "ráda"
+        }
+      ]
+    },
+    {
+      "rule_id": "äô-sounds",
+      "topic": "ä/ô sounds",
+      "title": "Mastering Slovak ä and ô Sounds",
+      "explanation": "The Slovak letters 'ä' and 'ô' are often mispronounced or misspelled by English speakers. 'ä' sounds like the 'e' in 'bet' or 'a' in 'cat', not like a plain 'a'. 'ô' is a diphthong similar to 'uo' in 'quote', not a plain 'o'. Using the wrong letter can change the word's meaning completely.",
+      "examples": [
+        {
+          "wrong": "maso",
+          "right": "mäso",
+          "note": "‘maso’ means ‘butter’, while ‘mäso’ means ‘meat’. The ä changes the vowel sound."
+        },
+        {
+          "wrong": "kon",
+          "right": "kôň",
+          "note": "‘kon’ is not a word; ‘kôň’ means ‘horse’. The ô is pronounced like ‘uo’."
+        },
+        {
+          "wrong": "stol",
+          "right": "stôl",
+          "note": "‘stol’ (short o) is incorrect; ‘stôl’ means ‘table’ with the diphthong ô."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the correct Slovak word for 'meat' (using ä).",
+          "answer": "mäso"
+        },
+        {
+          "prompt": "Write the correct Slovak word for 'horse' (using ô).",
+          "answer": "kôň"
+        },
+        {
+          "prompt": "Write the correct Slovak word for 'table' (using ô).",
+          "answer": "stôl"
+        }
+      ]
+    },
+    {
+      "rule_id": "soft-consonants",
+      "topic": "Soft consonants",
+      "title": "Soft Consonants: When to Use ď, ť, ň, ľ",
+      "explanation": "In Slovak, the soft consonants ď, ť, ň, ľ are used only before the vowels a, o, u, or at the end of a word. Before the vowels e, i, í, ä, you must write d, t, n, l instead, even though they are still pronounced soft. A common mistake is adding the diacritic where it is not needed.",
+      "examples": [
+        {
+          "wrong": "ťicho",
+          "right": "ticho",
+          "note": "Before 'i', use 't' not 'ť' – the 't' is still pronounced soft."
+        },
+        {
+          "wrong": "ďeň",
+          "right": "deň",
+          "note": "Before 'e', write 'd' not 'ď' – the 'd' is soft here."
+        },
+        {
+          "wrong": "ňech",
+          "right": "nech",
+          "note": "Before 'e', use 'n' for the soft sound, not 'ň'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the correct Slovak word for 'thank you' (soft ď before a):",
+          "answer": "ďakujem"
+        },
+        {
+          "prompt": "Correct the spelling: 'ťicho' →",
+          "answer": "ticho"
+        },
+        {
+          "prompt": "Choose the correct spelling for 'day': 'deň' or 'ďeň'?",
+          "answer": "deň"
+        }
+      ]
+    },
+    {
+      "rule_id": "gender-agreement-of-adjectives",
+      "topic": "Gender agreement of adjectives",
+      "title": "Gender Agreement of Adjectives in Slovak",
+      "explanation": "In Slovak, adjectives must agree in gender (masculine, feminine, neuter) with the noun they describe. English speakers often use the masculine form for all nouns, but each gender has a distinct ending: -ý (masculine), -á (feminine), -é (neuter).",
+      "examples": [
+        {
+          "wrong": "dobrý kniha",
+          "right": "dobrá kniha",
+          "note": "Kniha (book) is feminine, so the adjective must be dobrá, not dobrý."
+        },
+        {
+          "wrong": "nový auto",
+          "right": "nové auto",
+          "note": "Auto (car) is neuter, so the adjective is nové, not nový."
+        },
+        {
+          "wrong": "stará muž",
+          "right": "starý muž",
+          "note": "Muž (man) is masculine, so the adjective is starý, not stará."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'a big house' (dom is masculine).",
+          "answer": "veľký dom"
+        },
+        {
+          "prompt": "Translate 'a small flower' (kvetina is feminine).",
+          "answer": "malá kvetina"
+        },
+        {
+          "prompt": "Translate 'a white table' (stôl is masculine).",
+          "answer": "biely stôl"
+        }
+      ]
+    },
+    {
+      "rule_id": "declension-of-numerals-1-4",
+      "topic": "Declension of numerals 1-4",
+      "title": "Declension of Numerals 1-4 in Slovak",
+      "explanation": "In Slovak, the numerals 1 through 4 change form depending on the gender (masculine, feminine, neuter) and case (nominative, accusative, etc.). A frequent mistake is using the nominative form when the accusative or another case is required, especially after verbs like 'vidieť' (to see) or prepositions like 's' (with). For masculine animate nouns, numerals often take special endings: e.g., 'dvoch' instead of 'dvaja' in accusative.",
+      "examples": [
+        {
+          "wrong": "Vidím dvaja muži.",
+          "right": "Vidím dvoch mužov.",
+          "note": "After the verb 'vidím' (I see), use accusative case: 'dvoch' for masculine animate, not nominative 'dvaja'."
+        },
+        {
+          "wrong": "Mám jeden kniha.",
+          "right": "Mám jednu knihu.",
+          "note": "'Kniha' is feminine, so the numeral must agree: accusative feminine 'jednu' (not 'jeden')."
+        },
+        {
+          "wrong": "Idem so štyri kamaráti.",
+          "right": "Idem so štyrmi kamarátmi.",
+          "note": "The preposition 's' (with) requires instrumental case: 'štyrmi' and the noun in instrumental plural."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I have two sisters.'",
+          "answer": "Mám dve sestry."
+        },
+        {
+          "prompt": "Translate: 'I see one cat.' (cat = mačka, feminine)",
+          "answer": "Vidím jednu mačku."
+        },
+        {
+          "prompt": "Translate: 'He goes with three friends.' (friends = priatelia, masculine animate)",
+          "answer": "Ide s tromi priateľmi."
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-pronoun-placement",
+      "topic": "Reflexive pronoun placement",
+      "title": "Reflexive Pronoun Placement in Slovak",
+      "explanation": "In Slovak, the reflexive pronouns 'sa' and 'si' must be placed correctly relative to the verb. If a subject is present, the pronoun comes before the main verb. If there is no separate subject, it comes immediately after the verb. In compound tenses (with auxiliary 'som', 'si', etc.), the pronoun goes after the auxiliary and before the main verb. A common mistake is to place the pronoun at the end of the clause, as in English.",
+      "examples": [
+        {
+          "wrong": "Ja umývam sa.",
+          "right": "Ja sa umývam.",
+          "note": "With a subject, 'sa' goes before the verb."
+        },
+        {
+          "wrong": "Oni umývajú sa.",
+          "right": "Oni sa umývajú.",
+          "note": "Same rule applies for all persons."
+        },
+        {
+          "wrong": "Včera som umýval sa.",
+          "right": "Včera som sa umýval.",
+          "note": "In past tense, 'sa' goes after the auxiliary 'som'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Rewrite correctly: 'Ona sprchuje sa.'",
+          "answer": "Ona sa sprchuje."
+        },
+        {
+          "prompt": "Rewrite correctly: 'Ja som ráno česala sa.'",
+          "answer": "Ja som sa ráno česala."
+        },
+        {
+          "prompt": "Rewrite correctly: 'Deti hrajú sa na dvore.'",
+          "answer": "Deti sa hrajú na dvore."
+        }
+      ]
+    },
+    {
+      "rule_id": "conditional-mood-with-by",
+      "topic": "Conditional mood with 'by'",
+      "title": "Using 'by' in the Conditional Mood",
+      "explanation": "In Slovak, the conditional mood is formed with the particle 'by' followed by the l-participle (past tense stem + -l). A common mistake is using 'by' with the infinitive instead of the l-participle. Remember that 'by' never pairs with an infinitive – it must always be followed by the correct past-tense form of the verb (e.g., robil, išiel, jedol).",
+      "examples": [
+        {
+          "wrong": "Ja by ísť do obchodu.",
+          "right": "Ja by som išiel do obchodu.",
+          "note": "Instead of the infinitive 'ísť', use the l-participle 'išiel' (and add 'som' for the first person singular)."
+        },
+        {
+          "wrong": "On by robiť domácu úlohu.",
+          "right": "On by robil domácu úlohu.",
+          "note": "'robiť' (infinitive) is replaced with the l-participle 'robil' (third person singular masculine)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the correct Slovak translation of: 'We would eat dinner.'",
+          "answer": "My by sme jedli večeru."
+        },
+        {
+          "prompt": "Write the correct Slovak translation of: 'She would buy a book.'",
+          "answer": "Ona by si kúpila knihu."
+        }
+      ]
+    },
+    {
+      "rule_id": "imperative-verb-formation",
+      "topic": "Imperative verb formation",
+      "title": "Forming the Imperative in Slovak",
+      "explanation": "In Slovak, the imperative is formed by dropping the infinitive ending and adding specific suffixes for singular and plural. A common mistake for English speakers is using the infinitive (e.g., 'Čítať!') instead of the correct imperative ('Čítaj!'). For most verbs, the singular imperative ends in -aj, -ej, -i, or a consonant; the plural adds -te. The verb 'byť' (to be) is irregular: 'buď' (singular) and 'buďte' (plural).",
+      "examples": [
+        {
+          "wrong": "Čítať!",
+          "right": "Čítaj!",
+          "note": "Use the imperative stem (číta- → čítaj) for singular, not the infinitive."
+        },
+        {
+          "wrong": "Prosím, povedajte mi.",
+          "right": "Prosím, povedzte mi.",
+          "note": "Verb 'povedať' uses shortened stem 'povedz-' for imperative, not 'povedaj-'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'Read!' (to one person) in Slovak?",
+          "answer": "Čítaj!"
+        },
+        {
+          "prompt": "How do you say 'Be quiet!' (to a group) in Slovak?",
+          "answer": "Buďte ticho!"
+        }
+      ]
+    },
+    {
+      "rule_id": "comparative-and-superlative-adjectives",
+      "topic": "Comparative and superlative adjectives",
+      "title": "Comparative and Superlative Adjectives in Slovak",
+      "explanation": "In Slovak, comparatives are usually formed by adding -ší or -ejší (e.g., pekný → krajší) or using 'viac' for longer adjectives. Superlatives add the prefix 'naj-'. A common mistake is using 'viac' or 'najviac' with adjectives that already have a synthetic form. Learn the irregular forms as well.",
+      "examples": [
+        {
+          "wrong": "Toto auto je viac drahé.",
+          "right": "Toto auto je drahšie.",
+          "note": "Use the synthetic comparative form (-ší) instead of 'viac' for most common adjectives."
+        },
+        {
+          "wrong": "Je to najviac pekný obraz.",
+          "right": "Je to najkrajší obraz.",
+          "note": "Superlative is formed with 'naj-' prefix, not 'najviac'."
+        },
+        {
+          "wrong": "Môj brat je viac vysoký ako ja.",
+          "right": "Môj brat je vyšší ako ja.",
+          "note": "Irregular comparative: vysoký → vyšší."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'This book is more interesting than that one.' (use synthetic comparative for 'zaujímavý')",
+          "answer": "Táto kniha je zaujímavejšia ako tá."
+        },
+        {
+          "prompt": "Correct the mistake: 'Je to najviac rýchly vlak.'",
+          "answer": "Je to najrýchlejší vlak."
+        },
+        {
+          "prompt": "Fill in: 'Ona je ______ (krásna) žena v triede.' (superlative)",
+          "answer": "najkrajšia"
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-pronoun-declension",
+      "topic": "Possessive pronoun declension",
+      "title": "Possessive Pronoun Declension: Matching Case, Number, and Gender",
+      "explanation": "In Slovak, possessive pronouns (like môj, tvoj, náš) must change their form to agree with the noun they modify in case, number, and gender. A common mistake is using the nominative form (e.g., môj) for all situations. Instead, you must decline the pronoun according to the noun's grammatical role in the sentence.",
+      "examples": [
+        {
+          "wrong": "To je môj kniha.",
+          "right": "To je moja kniha.",
+          "note": "Kniha is feminine, so the possessive pronoun must be feminine (moja)."
+        },
+        {
+          "wrong": "Vidím môj brat.",
+          "right": "Vidím môjho brata.",
+          "note": "Brat is masculine animate and the object of the verb, so the pronoun is in accusative case (môjho)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct form of 'môj' for the neuter noun 'auto' in the sentence: To je ___ auto.",
+          "answer": "moje"
+        },
+        {
+          "prompt": "Fill in the correct form of 'tvoj' for the feminine noun 'sestra' in the dative case: Dávam to ___ sestre.",
+          "answer": "tvojej"
+        }
+      ]
+    },
+    {
+      "rule_id": "double-negation-usage",
+      "topic": "Double negation usage",
+      "title": "Double Negation in Slovak: It's Correct!",
+      "explanation": "In Slovak, using two negative words in one sentence is grammatically correct and required. Unlike English, where double negatives cancel each other out, in Slovak they reinforce the negation. For example, 'nikto' (nobody) must be paired with a negated verb like 'neprišiel' (didn't come).",
+      "examples": [
+        {
+          "wrong": "Nikto prišiel.",
+          "right": "Nikto neprišiel.",
+          "note": "The verb must also be negative ('ne-') when using 'nikto'."
+        },
+        {
+          "wrong": "Nechcem nič.",
+          "right": "Nechcem nič.",
+          "note": "Wait, this is already correct! 'Nechcem' (I don't want) + 'nič' (nothing) – both negative, as required."
+        },
+        {
+          "wrong": "Nikdy som tam bol.",
+          "right": "Nikdy som tam nebol.",
+          "note": "'Nikdy' (never) needs a negated verb: 'nebol' (wasn't)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How would you say 'Nobody saw anything' in Slovak?",
+          "answer": "Nikto nič nevidel."
+        },
+        {
+          "prompt": "Correct this sentence: 'Nikto mi dal darček.'",
+          "answer": "Nikto mi nedal darček."
+        },
+        {
+          "prompt": "Translate 'I never eat nothing' into correct Slovak.",
+          "answer": "Nikdy nič nejem."
+        }
+      ]
+    },
+    {
+      "rule_id": "past-tense-auxiliary-byť",
+      "topic": "Past tense auxiliary 'byť'",
+      "title": "Past Tense Auxiliary 'byť' in Slovak",
+      "explanation": "In Slovak, the past tense requires the auxiliary verb 'byť' (to be) for first and second persons, followed by the l-participle. A common mistake is omitting this auxiliary. For third person, no auxiliary is used.",
+      "examples": [
+        {
+          "wrong": "Ja bol doma.",
+          "right": "Ja som bol doma.",
+          "note": "Auxiliary 'som' is required for first person singular."
+        },
+        {
+          "wrong": "My boli v kine.",
+          "right": "My sme boli v kine.",
+          "note": "Auxiliary 'sme' is required for first person plural."
+        },
+        {
+          "wrong": "Ty čítal knihu.",
+          "right": "Ty si čítal knihu.",
+          "note": "Auxiliary 'si' is required for second person singular."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "I was at home (masculine).",
+          "answer": "Ja som bol doma."
+        },
+        {
+          "prompt": "Fill in the auxiliary: 'My ______ boli v škole.'",
+          "answer": "My sme boli v škole."
+        },
+        {
+          "prompt": "Correct the mistake: 'Ty bol v obchode.'",
+          "answer": "Ty si bol v obchode."
+        }
+      ]
+    },
+    {
+      "rule_id": "motion-verbs-and-prefixes",
+      "topic": "Motion verbs and prefixes",
+      "title": "Motion Verbs and Prefixes: Perfective vs Imperfective",
+      "explanation": "In Slovak, motion verbs change meaning based on prefixes and aspect. Perfective verbs (e.g., prísť) describe completed actions, while imperfective verbs (e.g., prichádzať) describe ongoing or repeated actions. A common mistake is using the wrong aspect after prefixes, such as using imperfective for a single completed event or perfective for a habitual action.",
+      "examples": [
+        {
+          "wrong": "Včera som prichádzal domov neskoro.",
+          "right": "Včera som prišiel domov neskoro.",
+          "note": "Use perfective prišiel for a single completed event; prichádzal is for repeated or ongoing actions."
+        },
+        {
+          "wrong": "Každý deň prišiel do školy načas.",
+          "right": "Každý deň prichádzal do školy načas.",
+          "note": "Habitual actions require imperfective aspect (prichádzal), not perfective (prišiel)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'I came home yesterday at 6 PM.' (use perfective)",
+          "answer": "Včera som prišiel domov o šiestej večer."
+        },
+        {
+          "prompt": "Translate 'Every day she comes to work at 8 AM.' (use imperfective)",
+          "answer": "Každý deň prichádza do práce o ôsmej ráno."
+        },
+        {
+          "prompt": "Correct the mistake: 'On odchádzal z obchodu pred hodinou.' (single event)",
+          "answer": "On odišiel z obchodu pred hodinou."
+        }
+      ]
+    },
+    {
+      "rule_id": "verbal-nouns-formation",
+      "topic": "Verbal nouns formation",
+      "title": "Forming Verbal Nouns Correctly",
+      "explanation": "In Slovak, verbal nouns are formed by replacing the infinitive ending with a suffix. Most verbs ending in -ať take -anie, and those ending in -iť take -enie. However, verbs ending in -ovať take -ovanie. Common mistakes include using the wrong suffix or misapplying spelling rules.",
+      "examples": [
+        {
+          "wrong": "varanie",
+          "right": "varenie",
+          "note": "The verb 'variť' ends in -iť, so the correct suffix is -enie, not -anie."
+        },
+        {
+          "wrong": "kupovenie",
+          "right": "kupovanie",
+          "note": "The verb 'kupovať' ends in -ovať, so the correct suffix is -ovanie, not -ovenie."
+        },
+        {
+          "wrong": "česenie",
+          "right": "česanie",
+          "note": "The verb 'česať' ends in -ať, so the correct suffix is -anie even though the root has an 's'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the verbal noun of 'čítať' (to read):",
+          "answer": "čítanie"
+        },
+        {
+          "prompt": "Write the verbal noun of 'robiť' (to do/make):",
+          "answer": "robenie"
+        },
+        {
+          "prompt": "Write the verbal noun of 'pracovať' (to work):",
+          "answer": "pracovanie"
+        }
+      ]
+    },
+    {
+      "rule_id": "word-stress-on-first-syllable",
+      "topic": "Word stress on first syllable",
+      "title": "Stress on the First Syllable in Slovak",
+      "explanation": "In Slovak, word stress always falls on the first syllable, unlike English where stress can shift. This rule applies to all words, including borrowed ones, regardless of length or suffixes.",
+      "examples": [
+        {
+          "wrong": "rePUBlika",
+          "right": "REpublika",
+          "note": "English speakers often incorrectly stress the second syllable; remember the first syllable 'RE' is stressed."
+        },
+        {
+          "wrong": "SloVEnsko",
+          "right": "Slovensko",
+          "note": "The stress is on 'SLO' — think 'SLO-ven-sko', not 'slo-VEN-sko'."
+        },
+        {
+          "wrong": "poLIcia",
+          "right": "POlícia",
+          "note": "Stress the first syllable 'PO' — 'PO-li-ci-a', not 'po-LI-ci-a'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correctly stress the word 'republika' by capitalizing the stressed syllable.",
+          "answer": "REpublika"
+        },
+        {
+          "prompt": "Write the word 'polícia' with the stressed syllable in capital letters.",
+          "answer": "POlícia"
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciation-ch-vs-h",
+      "topic": "Pronunciation 'ch' vs 'h'",
+      "title": "Pronunciation of 'ch' vs 'h'",
+      "explanation": "In Slovak, 'ch' is a voiceless velar fricative, like the 'ch' in Scottish 'loch' or German 'Bach'. 'h' is a voiced glottal fricative, similar to English 'h' but softer and often pronounced with vocal cord vibration. A common mistake is to pronounce 'ch' like the English 'ch' in 'cheese' (an affricate) or to mix up the two sounds.",
+      "examples": [
+        {
+          "wrong": "chlieb (said as 'tchleep')",
+          "right": "chlieb (said as 'xleebp')",
+          "note": "Slovak 'ch' is a harsh, throaty sound – not like English 'ch'."
+        },
+        {
+          "wrong": "hora (said with a strong 'kh')",
+          "right": "hora (said with a soft, exhaled 'h')",
+          "note": "Slovak 'h' is gentle; avoid using the 'ch' sound for it."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Say the Slovak word for 'bread' with the correct 'ch' sound.",
+          "answer": "chlieb"
+        },
+        {
+          "prompt": "Which Slovak word for 'mountain' uses a soft 'h'?",
+          "answer": "hora"
+        },
+        {
+          "prompt": "Write the Slovak word for 'dam' (it uses a soft 'h').",
+          "answer": "hata"
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciation-dz-and-dž",
+      "topic": "Pronunciation 'dz' and 'dž'",
+      "title": "Pronunciation: 'dz' vs 'dž'",
+      "explanation": "In Slovak, 'dz' is pronounced like the 'ds' in 'kids' as a single soft sound, while 'dž' is pronounced like the 'j' in 'jump' (voiced). English speakers often confuse them because neither phoneme exists in English exactly. The key difference: 'dz' is softer and less forceful, whereas 'dž' is more explosive.",
+      "examples": [
+        {
+          "wrong": "dzem",
+          "right": "džem",
+          "note": "The word for 'jam' uses 'dž' (as in 'jump'), not 'dz'."
+        },
+        {
+          "wrong": "cudží",
+          "right": "cudzí",
+          "note": "The word for 'foreign' uses 'dz' (as in 'kids'), not 'dž'."
+        },
+        {
+          "wrong": "dzbán",
+          "right": "džbán",
+          "note": "The word for 'jug/can' starts with 'dž', not 'dz'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the missing letters: The Slovak word for 'between' is me__i.",
+          "answer": "dz"
+        },
+        {
+          "prompt": "Choose the correct spelling for the Slovak word meaning 'jam': džem or dzem?",
+          "answer": "džem"
+        },
+        {
+          "prompt": "Does the Slovak word 'cudzí' (foreign) contain 'dz' or 'dž'?",
+          "answer": "dz"
+        }
+      ]
+    },
+    {
+      "rule_id": "relative-pronouns-čo-vs-ktorý",
+      "topic": "Relative pronouns 'čo' vs 'ktorý'",
+      "title": "Relative Pronouns: 'čo' vs 'ktorý'",
+      "explanation": "In Slovak, 'ktorý' (which, who) must agree in gender and number with the noun it refers to, and is used for specific people or things. 'Čo' (that, what) is only used after indefinite pronouns like 'všetko' (everything) or 'niečo' (something), or in informal speech for inanimate objects. A common mistake is using 'čo' where 'ktorý' is required.",
+      "examples": [
+        {
+          "wrong": "Muž, čo býva vedľa, je lekár.",
+          "right": "Muž, ktorý býva vedľa, je lekár.",
+          "note": "'Muž' is masculine singular, so we need 'ktorý' matching masculine gender, not 'čo'."
+        },
+        {
+          "wrong": "Kniha, čo som čítal, je zaujímavá.",
+          "right": "Kniha, ktorú som čítal, je zaujímavá.",
+          "note": "'Kniha' is feminine singular, so we need 'ktorú' (feminine accusative) instead of 'čo'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct relative pronoun: 'Auto, ____ som videl, je červené.' (The car that I saw is red.)",
+          "answer": "ktoré"
+        },
+        {
+          "prompt": "Fill in the correct relative pronoun: 'Dievča, ____ stojí pri okne, je moja sestra.' (The girl who is standing by the window is my sister.)",
+          "answer": "ktoré"
+        },
+        {
+          "prompt": "Correct the mistake: 'Videl som všetko, ktoré si povedal.' (I saw everything that you said.)",
+          "answer": "Videl som všetko, čo si povedal."
+        }
+      ]
+    },
+    {
+      "rule_id": "subject-verb-agreement-je-vs-sú",
+      "topic": "Subject-verb agreement 'je' vs 'sú'",
+      "title": "Subject-Verb Agreement: 'je' vs 'sú'",
+      "explanation": "In Slovak, the verb 'byť' (to be) must match the subject in number. Use 'je' for singular subjects (one thing or person) and 'sú' for plural subjects (two or more). A common mistake is using 'je' with plural nouns.",
+      "examples": [
+        {
+          "wrong": "Deti je veselé.",
+          "right": "Deti sú veselé.",
+          "note": "Deti (children) is plural, so we need 'sú'."
+        },
+        {
+          "wrong": "Kniha sú na stole.",
+          "right": "Kniha je na stole.",
+          "note": "Kniha (book) is singular, so we need 'je'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct form of 'byť': 'Môj brat ____ doma.' (singular)",
+          "answer": "je"
+        },
+        {
+          "prompt": "Fill in the correct form of 'byť': 'Tie autá ____ nové.' (plural)",
+          "answer": "sú"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-prepositions-do-vs-na",
+      "topic": "Use of prepositions 'do' vs 'na'",
+      "title": "Prepositions 'do' vs 'na' – Destination and Direction",
+      "explanation": "In Slovak, 'do' means 'into' or 'to' for enclosed spaces or destinations with a clear boundary (e.g., a building, city, country). 'Na' means 'onto' or 'to' for surfaces, open areas, events, or activities (e.g., a street, a concert, a trip). A common mistake is using 'na' where 'do' is needed, or vice versa.",
+      "examples": [
+        {
+          "wrong": "Idem na školy.",
+          "right": "Idem do školy.",
+          "note": "A school is a building (enclosed space), so use 'do'."
+        },
+        {
+          "wrong": "Idem do ulicu.",
+          "right": "Idem na ulicu.",
+          "note": "A street is an open surface, so use 'na'."
+        },
+        {
+          "wrong": "Idem do koncert.",
+          "right": "Idem na koncert.",
+          "note": "A concert is an event/activity, so use 'na'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct preposition: Idem ______ obchodu. (to the shop)",
+          "answer": "do"
+        },
+        {
+          "prompt": "Fill in the correct preposition: Idem ______ pláž. (to the beach)",
+          "answer": "na"
+        },
+        {
+          "prompt": "Fill in the correct preposition: Idem ______ stanicu. (to the station)",
+          "answer": "na"
+        }
+      ]
+    },
+    {
+      "rule_id": "future-tense-with-budem",
+      "topic": "Future tense with 'budem'",
+      "title": "Future Tense with 'budem'",
+      "explanation": "In Slovak, the future tense is formed differently depending on verb aspect. For imperfective verbs (ongoing or repeated actions), use 'budem' (I will be) + the infinitive. For perfective verbs (completed actions), the present tense forms already express the future, so you do not use 'budem'. A common mistake is adding 'budem' to perfective verbs, e.g., 'budem urobiť' instead of the correct 'urobím'.",
+      "examples": [
+        {
+          "wrong": "Budem čítať knihu každý večer.",
+          "right": "Budem čítať knihu každý večer.",
+          "note": "This is actually correct because 'čítať' is imperfective. No mistake here – just an example of correct usage."
+        },
+        {
+          "wrong": "Budem napísať list.",
+          "right": "Napíšem list.",
+          "note": "'napísať' is perfective, so it should not be used with 'budem'. Use the present perfective form 'napíšem' for future."
+        },
+        {
+          "wrong": "Budem ísť do obchodu.",
+          "right": "Pôjdem do obchodu.",
+          "note": "'ísť' is imperfective, but for motion verbs, the future is often formed with the perfective 'pôjdem' (from 'ísť') or a separate verb. 'Budem ísť' is grammatically possible but sounds unnatural; prefer 'pôjdem'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: I will cook (imperfective, meaning I will be cooking).",
+          "answer": "Budem variť."
+        },
+        {
+          "prompt": "Translate: I will buy (perfective, meaning I will buy it once).",
+          "answer": "Kúpim."
+        },
+        {
+          "prompt": "Correct the mistake: 'Budem urobiť domácu úlohu.'",
+          "answer": "Urobím domácu úlohu."
+        }
+      ]
+    }
+  ]
+}
