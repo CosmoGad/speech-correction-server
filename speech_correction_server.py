@@ -10,7 +10,7 @@ import threading
 
 import regex as re
 from fastapi import FastAPI, HTTPException, Request, Depends, Security
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, StreamingResponse
 from fastapi.security import APIKeyHeader
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field, field_validator, model_validator
@@ -450,6 +450,35 @@ def _extract_json_object(response: str) -> Dict:
     raise ValueError("Model response is not a valid JSON object")
 
 
+# Matches a COMPLETE JSON string value for corrected_text in a partial buffer
+# (corrected_text is the first field the model emits). Used to surface the
+# correction to the client the moment it finishes, before the slower teaching
+# fields are generated.
+_CORRECTED_TEXT_RE = re.compile(r'"corrected_text"\s*:\s*"((?:[^"\\]|\\.)*)"')
+
+
+async def _call_deepseek_stream(client: AsyncOpenAI, prompt: str, user_text: str):
+    """Yield the model's content deltas as they arrive (same params as the
+    non-streaming call, so output is identical — just incremental)."""
+    stream = await client.chat.completions.create(
+        model=DEEPSEEK_MODEL,
+        messages=[
+            {"role": "system", "content": prompt},
+            {"role": "user", "content": user_text},
+        ],
+        temperature=0.3,
+        max_tokens=DEEPSEEK_MAX_TOKENS,
+        response_format={"type": "json_object"},
+        stream=True,
+    )
+    async for chunk in stream:
+        if not chunk.choices:
+            continue
+        delta = chunk.choices[0].delta.content
+        if delta:
+            yield delta
+
+
 async def _call_deepseek(client: AsyncOpenAI, prompt: str, user_text: str) -> str:
     response = await client.chat.completions.create(
         model=DEEPSEEK_MODEL,
@@ -658,6 +687,104 @@ async def process_text(
     except Exception as e:
         logger.error(f"Processing error for {client_ip}: {type(e).__name__}", exc_info=True)
         raise HTTPException(status_code=500, detail="Internal server error")
+
+
+def _sse(event: str, data: Dict) -> str:
+    return f"event: {event}\ndata: {json.dumps(data, ensure_ascii=False)}\n\n"
+
+
+def _build_content(sections: Dict, request: CorrectionRequest) -> Dict:
+    return {
+        "corrected_text": sections["corrected_text"],
+        "error_analysis": sections["error_analysis"],
+        "error_statistics": sections["error_statistics"],
+        "explanation": sections["explanation"],
+        "grammar_notes": sections["grammar_notes"],
+        "pronunciation_tips": sections["pronunciation_tips"],
+        "alternatives": sections["alternatives"],
+        "level_appropriate_suggestions": sections["level_appropriate_suggestions"],
+        "original_text": request.text,
+        "context": request.context or "",
+    }
+
+
+@app.post("/process-text-stream/")
+async def process_text_stream(
+    request: Request,
+    correction_request: CorrectionRequest,
+    _: None = Depends(verify_api_key),
+):
+    """Server-Sent Events variant of /process-text/. Emits the corrected text as
+    soon as the model finishes it (the first, short field) so the client can show
+    it after ~1-2s instead of waiting ~10s for the full analysis, then a final
+    event with the complete result. Same request body + auth + cache as the
+    non-streaming route, which stays for older clients.
+
+    Events: `partial` {corrected_text}, then `result` {full analysis}, or `error`.
+    """
+    client_ip = _get_client_ip(request)
+    if not rate_limiter.is_allowed(client_ip):
+        raise HTTPException(status_code=429, detail="Too many requests")
+
+    cache_key = ResponseCache.make_key(
+        correction_request.text, correction_request.language,
+        correction_request.level, correction_request.style,
+        correction_request.interface_language, correction_request.context,
+    )
+    interface_lang_config = INTERFACE_LANGUAGES.get(
+        correction_request.interface_language, INTERFACE_LANGUAGES["en"])
+
+    async def event_stream():
+        # Cache hit → deliver the same two-event shape instantly.
+        cached = response_cache.get(cache_key)
+        if cached is not None:
+            yield _sse("partial", {"corrected_text": cached.get("corrected_text", "")})
+            yield _sse("result", cached)
+            return
+
+        if not _deepseek_client:
+            yield _sse("error", {"detail": "DeepSeek API key not configured"})
+            return
+
+        try:
+            prompt = generate_teacher_prompt(correction_request)
+            buffer: List[str] = []
+            emitted_partial = False
+            async for delta in _call_deepseek_stream(
+                    _deepseek_client, prompt, correction_request.text):
+                buffer.append(delta)
+                if not emitted_partial:
+                    m = _CORRECTED_TEXT_RE.search("".join(buffer))
+                    if m:
+                        try:
+                            corrected = json.loads(f'"{m.group(1)}"')
+                        except json.JSONDecodeError:
+                            corrected = m.group(1)
+                        if corrected:
+                            yield _sse("partial", {"corrected_text": corrected})
+                            emitted_partial = True
+
+            full_text = "".join(buffer)
+            try:
+                sections = await parse_correction_response(
+                    full_text, interface_lang_config["language_code"],
+                    correction_request, _deepseek_client)
+            except ValueError:
+                yield _sse("error", {"detail": "Language model returned an invalid response, please try again"})
+                return
+
+            content = _build_content(sections, correction_request)
+            response_cache.put(cache_key, content)
+            yield _sse("result", content)
+        except Exception as e:
+            logger.error(f"Stream processing error for {client_ip}: {type(e).__name__}", exc_info=True)
+            yield _sse("error", {"detail": "Internal server error"})
+
+    return StreamingResponse(
+        event_stream(),
+        media_type="text/event-stream",
+        headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
+    )
 
 
 _RULE_MEDIA = "application/json; charset=utf-8"
