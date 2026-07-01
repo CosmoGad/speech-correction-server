@@ -15,7 +15,8 @@ from fastapi.security import APIKeyHeader
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field, field_validator, model_validator
 from typing import Optional, Dict, List
-from langdetect import detect, DetectorFactory
+from langdetect import detect_langs, DetectorFactory
+from langdetect.lang_detect_exception import LangDetectException
 
 from openai import AsyncOpenAI, APIError, RateLimitError
 from dotenv import load_dotenv
@@ -251,6 +252,35 @@ INTENT_INSTRUCTION = (
 )
 
 
+# Appended to every prompt. Roughly 60% of the output (and therefore of the
+# response latency, since output tokens are generated sequentially) is spent on
+# the four teaching fields. Capping their length keeps the high-signal core while
+# cutting generation time — a dense two-sentence note usually helps a learner
+# more than a rambling paragraph. Tunable: relax the caps to trade speed for
+# depth, or remove this block to restore the previous verbosity.
+BREVITY_INSTRUCTION = (
+    "RESPONSE LENGTH: Keep 'explanation', 'grammar_notes', 'pronunciation_tips' "
+    "and 'level_appropriate_suggestions' concise — at most 2 sentences each, "
+    "focused on what most helps the learner. Provide at most 2 'alternatives'. "
+    "Be precise and useful, not verbose. This does NOT apply to 'error_analysis': "
+    "still report EVERY error."
+)
+
+# Appended only when the input came from speech recognition with low confidence.
+# Without it the model treats transcription noise as learner mistakes; with it,
+# obvious mis-hearings are read as the intended word instead of flagged. {conf}
+# is the recognition_confidence the client already sends (previously ignored).
+LOW_CONFIDENCE_INSTRUCTION = (
+    "SPEECH INPUT NOTE: This text was transcribed from speech with LOW "
+    "recognition confidence ({conf:.2f}). Some apparent errors may be "
+    "transcription artifacts, not the learner's mistakes. When a 'mistake' looks "
+    "like a likely mis-transcription of a correct word in context, assume the "
+    "intended word and do NOT flag it as a learner error."
+)
+# Below this recognition_confidence we warn the model about transcription noise.
+_LOW_CONFIDENCE_THRESHOLD = 0.7
+
+
 class CorrectionRequest(BaseModel):
     text: str
     language: str
@@ -380,6 +410,15 @@ def generate_teacher_prompt(request: CorrectionRequest, retry: bool = False) -> 
     if request.context:
         prompt += f"\n\n{INTENT_INSTRUCTION}"
 
+    # Keep the teaching fields tight (speed) without touching error coverage.
+    prompt += f"\n\n{BREVITY_INSTRUCTION}"
+
+    # Speech transcribed with low confidence: don't mistake mis-hearings for the
+    # learner's errors.
+    if request.recognition_confidence < _LOW_CONFIDENCE_THRESHOLD:
+        prompt += "\n\n" + LOW_CONFIDENCE_INSTRUCTION.format(
+            conf=request.recognition_confidence)
+
     if retry:
         prompt += (
             f"\n\nWARNING: Previous response contained explanations in the wrong language. "
@@ -418,7 +457,10 @@ async def _call_deepseek(client: AsyncOpenAI, prompt: str, user_text: str) -> st
             {"role": "system", "content": prompt},
             {"role": "user", "content": user_text},
         ],
-        temperature=0.7,
+        # Correction is a precision task, not a creative one. A low temperature
+        # makes the model correct rather than rewrite, and produces more
+        # consistent, reliably-parseable JSON (fewer parse-retry round-trips).
+        temperature=0.3,
         max_tokens=DEEPSEEK_MAX_TOKENS,
         response_format={"type": "json_object"},
     )
@@ -426,6 +468,35 @@ async def _call_deepseek(client: AsyncOpenAI, prompt: str, user_text: str) -> st
     if choice.finish_reason == "length":
         logger.warning("DeepSeek response truncated at max_tokens=%s", DEEPSEEK_MAX_TOKENS)
     return choice.message.content
+
+
+# langdetect's top-1 guess is unreliable on the short, mixed-script strings we
+# get back (a Russian grammar note quoting English examples, an explanation under
+# ~20 chars, etc.). Strict `detect(text) != expected` produced false positives —
+# most damagingly Russian misread as bg/mk/uk — and every false positive cost a
+# full second model call (doubling latency) AND prepended an ugly "[Language
+# Error]" marker to correct, user-facing text. We now only flag a mismatch when
+# we're confident: short strings pass, and the expected language is accepted if
+# it appears anywhere in the probability ranking with a non-trivial share.
+_LANG_MISMATCH_MIN_LEN = 25
+_LANG_EXPECTED_MIN_PROB = 0.20
+
+
+def _is_wrong_language(text: str, expected_code: str) -> bool:
+    """True only when `text` is confidently NOT in `expected_code`. Conservative
+    by design: when unsure, return False so we neither retry nor mark the text."""
+    text = (text or "").strip()
+    if len(text) < _LANG_MISMATCH_MIN_LEN:
+        return False  # too short for reliable detection — trust the model
+    try:
+        ranked = detect_langs(text)  # list of "lang:prob", high→low
+    except LangDetectException:
+        return False
+    for guess in ranked:
+        if guess.lang == expected_code and guess.prob >= _LANG_EXPECTED_MIN_PROB:
+            return False
+    # Expected language absent (or negligible) in the ranking → genuinely wrong.
+    return True
 
 
 async def parse_correction_response(
@@ -455,27 +526,23 @@ async def parse_correction_response(
             valid_error_analysis.append(error)
     result["error_analysis"] = valid_error_analysis
 
-    explanation_fields = ["explanation", "grammar_notes", "pronunciation_tips", "level_appropriate_suggestions"]
+    # pronunciation_tips is deliberately excluded: it mixes interface-language
+    # prose with IPA and target-language words (e.g. "'student' [ˈstjuːdənt]"),
+    # which langdetect reliably misreads — flagging it was always a false
+    # positive. (It is also currently hidden in the client UI.)
+    explanation_fields = ["explanation", "grammar_notes", "level_appropriate_suggestions"]
     language_mismatch = False
     for field in explanation_fields:
         text = result.get(field, "")
-        if text:
-            try:
-                if detect(text) != interface_language_code:
-                    language_mismatch = True
-                    result[field] = f"[Language Error: Expected {interface_language_code}] {text}"
-            except Exception as e:
-                logger.error(f"Language detection failed for {field}: {e}")
+        if text and _is_wrong_language(text, interface_language_code):
+            language_mismatch = True
+            result[field] = f"[Language Error: Expected {interface_language_code}] {text}"
 
     for error in result["error_analysis"]:
         explanation = error.get("explanation", "")
-        if explanation:
-            try:
-                if detect(explanation) != interface_language_code:
-                    language_mismatch = True
-                    error["explanation"] = f"[Language Error: Expected {interface_language_code}] {explanation}"
-            except Exception as e:
-                logger.error(f"Language detection failed for error_analysis explanation: {e}")
+        if explanation and _is_wrong_language(explanation, interface_language_code):
+            language_mismatch = True
+            error["explanation"] = f"[Language Error: Expected {interface_language_code}] {explanation}"
 
     if language_mismatch and retry_count < 1:
         logger.info(f"Retrying request due to language mismatch (attempt {retry_count + 1}/1)")
@@ -658,12 +725,16 @@ async def get_rule_endpoint(
 
 
 class ResolveRuleRequest(BaseModel):
-    learning: str
-    interface: str = ""
-    type: str = ""
-    original: str = ""
-    corrected: str = ""
-    explanation: str = ""
+    # Length caps mirror the validation on CorrectionRequest: these fields are
+    # embedded into the resolve prompt, so bounding them keeps a caller from
+    # inflating token cost with oversized payloads. (The picked rule_id is also
+    # validated against the fixed taxonomy, so the output can't be injected.)
+    learning: str = Field(max_length=16)
+    interface: str = Field(default="", max_length=16)
+    type: str = Field(default="", max_length=32)
+    original: str = Field(default="", max_length=300)
+    corrected: str = Field(default="", max_length=300)
+    explanation: str = Field(default="", max_length=600)
 
 
 @app.post("/resolve-rule")
