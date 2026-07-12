@@ -40,7 +40,13 @@ _DANGEROUS_PATTERNS = [re.compile(p, re.IGNORECASE) for p in [
     r"\.\./", r"\.\.\\", r"%2e%2e", r"%252e",
     r"[‮‎‏‪‫‬‭]",
 ]]
-_VALID_TEXT_RE = re.compile(r"^[\p{L}\p{N}\s\.,!?()'\-]+$", re.UNICODE)
+# Allow common typographic punctuation across languages: straight AND curly
+# apostrophes/quotes (iOS "smart punctuation" inserts curly ’ “ ” which used to
+# be rejected as "invalid characters"), guillemets, en/em dashes, ellipsis,
+# colon and semicolon. Dangerous characters (RTL overrides etc.) are still caught
+# by _DANGEROUS_PATTERNS above.
+_VALID_TEXT_RE = re.compile(
+    r"""^[\p{L}\p{N}\s.,!?()'"’‘“”„‚«»–—…:;/-]+$""", re.UNICODE)
 
 # Initialize DeepSeek async client
 _deepseek_api_key = os.getenv("DEEPSEEK_API_KEY") or os.getenv("OPENAI_API_KEY")
@@ -266,6 +272,18 @@ BREVITY_INSTRUCTION = (
     "still report EVERY error."
 )
 
+# Appended to every prompt. The client highlights each correction in place by
+# finding its 'corrected' fragment inside corrected_text; if the model paraphrases
+# instead of copying, nothing matches and the correction falls back to a plain
+# list (this is why full rewrites, e.g. German, showed no inline highlights).
+HIGHLIGHT_INSTRUCTION = (
+    "ANCHORING (important for the UI): in every error_analysis item, 'corrected' "
+    "MUST be copied VERBATIM from corrected_text (an exact contiguous substring — "
+    "same words, spelling, case and punctuation), and 'original' an exact "
+    "substring of the user's input. Pick the smallest span that captures the fix. "
+    "Do not paraphrase these two fields."
+)
+
 # Appended only when the input came from speech recognition with low confidence.
 # Without it the model treats transcription noise as learner mistakes; with it,
 # obvious mis-hearings are read as the intended word instead of flagged. {conf}
@@ -412,6 +430,9 @@ def generate_teacher_prompt(request: CorrectionRequest, retry: bool = False) -> 
 
     # Keep the teaching fields tight (speed) without touching error coverage.
     prompt += f"\n\n{BREVITY_INSTRUCTION}"
+
+    # Make corrections anchorable so the client can highlight them in place.
+    prompt += f"\n\n{HIGHLIGHT_INSTRUCTION}"
 
     # Speech transcribed with low confidence: don't mistake mis-hearings for the
     # learner's errors.
