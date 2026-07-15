@@ -31,7 +31,8 @@ APP_VERSION = "2.2.0"
 # payloads (Cyrillic explanations are token-expensive); 1500 used to truncate
 # them mid-document, which surfaced to clients as "Error processing response".
 DEEPSEEK_MAX_TOKENS = 4000
-DEEPSEEK_MODEL = "deepseek-v4-flash"
+# Overridable via env so we can A/B a stronger model without a code change.
+DEEPSEEK_MODEL = os.getenv("DEEPSEEK_MODEL", "deepseek-v4-flash")
 
 # Precompile dangerous input patterns once at module load
 _DANGEROUS_PATTERNS = [re.compile(p, re.IGNORECASE) for p in [
