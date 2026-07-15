@@ -272,6 +272,20 @@ BREVITY_INSTRUCTION = (
     "still report EVERY error."
 )
 
+# Appended to every prompt. The learner's level was subtly steering the model to
+# only fix "level-relevant" grammar and leave other real errors in corrected_text
+# (e.g. at B2 it fixed the participle "fahren"->"gefahren" but kept the wrong
+# auxiliary "habe" instead of "bin"). corrected_text must always be fully correct;
+# the level only changes how we EXPLAIN, not how completely we fix.
+CORRECTNESS_INSTRUCTION = (
+    "CORRECTNESS OVERRIDES LEVEL: corrected_text MUST be fully correct and natural "
+    "regardless of the learner's level — never leave ANY real error unfixed "
+    "(grammar, auxiliary/verb choice, agreement, case, word order, vocabulary, "
+    "spelling, punctuation). The level ONLY tailors the depth and focus of your "
+    "explanations and level_appropriate_suggestions; it must NOT make you correct "
+    "less thoroughly. Report every fix you make in error_analysis."
+)
+
 # Appended to every prompt. The client highlights each correction in place by
 # finding its 'corrected' fragment inside corrected_text; if the model paraphrases
 # instead of copying, nothing matches and the correction falls back to a plain
@@ -430,6 +444,9 @@ def generate_teacher_prompt(request: CorrectionRequest, retry: bool = False) -> 
 
     # Keep the teaching fields tight (speed) without touching error coverage.
     prompt += f"\n\n{BREVITY_INSTRUCTION}"
+
+    # The level must not reduce how completely we correct.
+    prompt += f"\n\n{CORRECTNESS_INSTRUCTION}"
 
     # Make corrections anchorable so the client can highlight them in place.
     prompt += f"\n\n{HIGHLIGHT_INSTRUCTION}"
