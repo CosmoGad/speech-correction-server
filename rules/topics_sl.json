@@ -30,76 +30,76 @@
       "title": "Vowel length"
     },
     {
-      "rule_id": "noun-gender-assignment",
-      "title": "Noun gender assignment"
+      "rule_id": "infinitive-vs-supine-usage",
+      "title": "Infinitive vs supine usage"
     },
     {
-      "rule_id": "definite-vs-indefinite-adjective-forms",
-      "title": "Definite vs indefinite adjective forms"
+      "rule_id": "reflexive-verbs-se-vs-si",
+      "title": "Reflexive verbs se vs si"
     },
     {
-      "rule_id": "reflexive-pronoun-se-usage",
-      "title": "Reflexive pronoun 'se' usage"
+      "rule_id": "future-tense-formation",
+      "title": "Future tense formation"
     },
     {
-      "rule_id": "possession-imam-vs-mi-je",
-      "title": "Possession: 'imam' vs 'mi je'"
+      "rule_id": "imperative-mood-irregularities",
+      "title": "Imperative mood irregularities"
     },
     {
-      "rule_id": "double-negation-nikoli-ne",
-      "title": "Double negation (nikoli ne ...)"
+      "rule_id": "conditional-mood-formation",
+      "title": "Conditional mood formation"
     },
     {
-      "rule_id": "conditional-mood-bi-past-participle",
-      "title": "Conditional mood (bi + past participle)"
+      "rule_id": "past-participle-gender-agreement",
+      "title": "Past participle gender agreement"
     },
     {
-      "rule_id": "imperative-mood-formation",
-      "title": "Imperative mood formation"
+      "rule_id": "comparative-and-superlative-irregular-adjectives",
+      "title": "Comparative and superlative irregular adjectives"
     },
     {
-      "rule_id": "comparative-and-superlative-adjective-irregularities",
-      "title": "Comparative and superlative adjective irregularities"
+      "rule_id": "numerals-and-noun-case-agreement",
+      "title": "Numerals and noun case agreement"
     },
     {
-      "rule_id": "supine-vs-infinitive-after-motion-verbs",
-      "title": "Supine vs infinitive after motion verbs"
+      "rule_id": "possessive-reflexive-svoj",
+      "title": "Possessive reflexive svoj"
     },
     {
-      "rule_id": "pronunciation-of-sibilants-č-š-ž-vs-c-s-z",
-      "title": "Pronunciation of sibilants (č, š, ž vs c, s, z)"
+      "rule_id": "vocalic-r-pronunciation",
+      "title": "Vocalic R pronunciation"
     },
     {
-      "rule_id": "palatal-consonants-lj-nj-rj",
-      "title": "Palatal consonants (lj, nj, rj)"
+      "rule_id": "palatal-consonants-distinction",
+      "title": "Palatal consonants distinction"
     },
     {
-      "rule_id": "preposition-s-vs-z-voicing-assimilation",
-      "title": "Preposition 's' vs 'z' (voicing assimilation)"
+      "rule_id": "final-l-pronounced-as-u",
+      "title": "Final L pronounced as u"
     },
     {
-      "rule_id": "adjective-vs-adverb-usage",
-      "title": "Adjective vs adverb usage"
+      "rule_id": "formal-vs-informal-address",
+      "title": "Formal vs informal address"
     },
     {
-      "rule_id": "diminutive-noun-formation",
-      "title": "Diminutive noun formation"
+      "rule_id": "pronunciation-of-v-as-wu-in-coda",
+      "title": "Pronunciation of v as w/u in coda"
     },
     {
-      "rule_id": "pronunciation-of-l-as-w-at-syllable-end",
-      "title": "Pronunciation of 'l' as [w] at syllable end"
+      "rule_id": "negation-ni-vs-ne",
+      "title": "Negation ni vs ne"
     },
     {
-      "rule_id": "verb-conjugation-patterns-present-tense",
-      "title": "Verb conjugation patterns (present tense)"
+      "rule_id": "use-of-da-clauses-vs-infinitive",
+      "title": "Use of da-clauses vs infinitive"
     },
     {
-      "rule_id": "future-tense-formation-bom-l-participle",
-      "title": "Future tense formation (bom + l-participle)"
+      "rule_id": "gender-of-nouns-with-unexpected-endings",
+      "title": "Gender of nouns with unexpected endings"
     },
     {
-      "rule_id": "optative-naj-for-wishescommands",
-      "title": "Optative 'naj' for wishes/commands"
+      "rule_id": "passive-construction-with-se",
+      "title": "Passive construction with se"
     }
   ]
 }

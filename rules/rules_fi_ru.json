@@ -1,0 +1,878 @@
+{
+  "learning": "fi",
+  "interface": "ru",
+  "generated_at": "2026-06-27T19:30:49.305442+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "cases",
+      "topic": "Cases",
+      "title": "Ошибки с падежами: партитив после числительных и в отрицании",
+      "explanation": "В финском языке после числительных (кроме 1) и в отрицательных предложениях существительное должно стоять в партитиве (partitiivi), а не в номинативе. Например, после 'kaksi' (два) нужно говорить 'kaksi kirjaa', а не 'kaksi kirja'. То же самое в отрицании: 'Minulla ei ole kirjaa', а не 'Minulla ei ole kirja'. Запомните это правило, чтобы избежать типичной ошибки.",
+      "examples": [
+        {
+          "wrong": "Minulla on kaksi kirja.",
+          "right": "Minulla on kaksi kirjaa.",
+          "note": "После числительного 'kaksi' (два) требуется партитив: 'kirjaa'."
+        },
+        {
+          "wrong": "Minulla ei ole kirja.",
+          "right": "Minulla ei ole kirjaa.",
+          "note": "В отрицательном предложении объект ставится в партитив: 'kirjaa'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Вставьте правильную форму слова 'pulla' (булочка): Minulla on kolme ______.",
+          "answer": "pullaa"
+        },
+        {
+          "prompt": "Вставьте правильную форму слова 'kissa' (кошка): Minulla ei ole ______.",
+          "answer": "kissaa"
+        }
+      ]
+    },
+    {
+      "rule_id": "consonant-gradation",
+      "topic": "Consonant gradation",
+      "title": "Чередование согласных (kpt-аstevaihtelu)",
+      "explanation": "В финском языке некоторые согласные (k, p, t) и их удвоенные формы (kk, pp, tt) меняются на слабую ступень в определённых грамматических формах (например, в родительном падеже, в 1-м лице единственного числа глаголов). Это называется чередованием согласных. Ошибочное сохранение сильной ступени — частая ошибка у начинающих.",
+      "examples": [
+        {
+          "wrong": "kukkan",
+          "right": "kukan",
+          "note": "Слово kukka (цветок) в родительном падеже: сильное kk становится слабым k."
+        },
+        {
+          "wrong": "kauppan",
+          "right": "kaupan",
+          "note": "Слово kauppa (магазин) в родительном падеже: pp переходит в p."
+        },
+        {
+          "wrong": "minä tullen",
+          "right": "minä tulen",
+          "note": "Глагол tulla (приходить) в 1-м лице единственного числа: ll ослабевает до l."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите правильную форму слова 'kukka' в родительном падеже единственного числа.",
+          "answer": "kukan"
+        },
+        {
+          "prompt": "Напишите правильную форму слова 'kauppa' в родительном падеже единственного числа.",
+          "answer": "kaupan"
+        },
+        {
+          "prompt": "Напишите правильную форму глагола 'tulla' для 1-го лица единственного числа настоящего времени.",
+          "answer": "tulen"
+        }
+      ]
+    },
+    {
+      "rule_id": "vowel-harmony",
+      "topic": "Vowel harmony",
+      "title": "Гармония гласных в финском языке",
+      "explanation": "В финском языке гласные делятся на задние (a, o, u), передние (ä, ö, y) и нейтральные (e, i). Суффиксы должны содержать гласные той же группы, что и корень слова. Нейтральные гласные могут сочетаться с любой группой.",
+      "examples": [
+        {
+          "wrong": "talössä",
+          "right": "talossa",
+          "note": "Слово 'talo' содержит задние гласные (a, o), поэтому суффикс должен быть с задними гласными -ssa."
+        },
+        {
+          "wrong": "pöydalla",
+          "right": "pöydällä",
+          "note": "Слово 'pöytä' содержит передние гласные (ö, ä), поэтому суффикс с передними -llä."
+        },
+        {
+          "wrong": "tytolla",
+          "right": "tytöllä",
+          "note": "Слово 'tyttö' содержит передние гласные (y, ö), поэтому суффикс должен быть с передними -llä."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите правильную форму слова 'kirja' (книга) с суффиксом -ssa (в).",
+          "answer": "kirjassa"
+        },
+        {
+          "prompt": "Напишите правильную форму слова 'kylmä' (холодный) с суффиксом -ssa (в).",
+          "answer": "kylmässä"
+        },
+        {
+          "prompt": "Исправьте ошибку: 'pöydassa' (на столе).",
+          "answer": "pöydässä"
+        }
+      ]
+    },
+    {
+      "rule_id": "postpositions",
+      "topic": "Postpositions",
+      "title": "Послелоги в финском языке",
+      "explanation": "В финском языке послелоги (postpositiot) ставятся после существительного, а не перед ним. Существительное перед послелогом всегда стоит в генитиве (родительном падеже). Ошибка новичков — использовать именительный падеж или ставить послелог перед словом.",
+      "examples": [
+        {
+          "wrong": "pöytä päällä",
+          "right": "pöydän päällä",
+          "note": "Существительное pöytä (стол) должно быть в генитиве: pöydän — 'на столе'."
+        },
+        {
+          "wrong": "koti lähellä",
+          "right": "kodin lähellä",
+          "note": "koti (дом) → kodin lähellä — 'рядом с домом'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напиши по-фински 'на стуле' (стул = tuoli, послелог 'на' = päällä).",
+          "answer": "tuolin päällä"
+        },
+        {
+          "prompt": "Напиши по-фински 'внутри машины' (машина = auto, послелог 'внутри' = sisällä).",
+          "answer": "auton sisällä"
+        }
+      ]
+    },
+    {
+      "rule_id": "vowel-length",
+      "topic": "Vowel length",
+      "title": "Долгота гласных в финском языке",
+      "explanation": "В финском языке длина гласной имеет смыслоразличительное значение: короткая и долгая гласная могут полностью менять значение слова. Долгая гласная обозначается двойной буквой (например, 'aa', 'ee'). Русскоязычным учащимся важно запомнить, что нельзя путать короткие и долгие гласные, так как это приводит к ошибкам в понимании.",
+      "examples": [
+        {
+          "wrong": "tuli",
+          "right": "tuuli",
+          "note": "Ошибка: произнесено слово 'tuli' (огонь) вместо 'tuuli' (ветер)."
+        },
+        {
+          "wrong": "kala",
+          "right": "kaali",
+          "note": "Ошибка: произнесено слово 'kala' (рыба) вместо 'kaali' (капуста)."
+        },
+        {
+          "wrong": "sika",
+          "right": "siika",
+          "note": "Ошибка: произнесено слово 'sika' (свинья) вместо 'siika' (сиг, рыба)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Какое слово означает 'ветер'? Выберите правильный вариант: 'tuli' или 'tuuli'.",
+          "answer": "tuuli"
+        },
+        {
+          "prompt": "Как правильно написать 'рыба'? 'kala' или 'kaala'?",
+          "answer": "kala"
+        },
+        {
+          "prompt": "Какое слово означает 'капуста'? 'kala' или 'kaali'?",
+          "answer": "kaali"
+        }
+      ]
+    },
+    {
+      "rule_id": "double-consonants",
+      "topic": "Double consonants",
+      "title": "Двойные согласные в финском языке",
+      "explanation": "В финском языке двойные согласные произносятся долго и могут менять значение слова. Русскоязычные часто путают одинарные и двойные согласные, потому что в русском языке нет такого же противопоставления по долготе. Запомните: одна буква — короткий звук, две — долгий.",
+      "examples": [
+        {
+          "wrong": "tule",
+          "right": "tulle",
+          "note": "tule = 'приходи', tulle = 'таможня' — разные слова"
+        },
+        {
+          "wrong": "mato",
+          "right": "matto",
+          "note": "mato = 'червь', matto = 'ковёр' — путать нельзя"
+        },
+        {
+          "wrong": "kisa",
+          "right": "kissa",
+          "note": "kisa = 'соревнование', kissa = 'кошка'"
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите правильную форму финского слова 'лопата' (с двойной согласной):",
+          "answer": "lapio"
+        },
+        {
+          "prompt": "Вставьте пропущенную букву: _atto (ковёр) — какой вариант верный: mato или matto?",
+          "answer": "matto"
+        },
+        {
+          "prompt": "Как будет по-фински 'приходить' (с одной или двумя l?), напишите:",
+          "answer": "tulla"
+        }
+      ]
+    },
+    {
+      "rule_id": "frontback-vowels",
+      "topic": "Front/back vowels",
+      "title": "Передние и задние гласные (гармония гласных)",
+      "explanation": "В финском языке гласные делятся на передние (ä, ö, y), задние (a, o, u) и нейтральные (e, i). В одном слове (не сложном) могут быть только гласные одной группы: либо передние, либо задние. Нейтральные гласные могут сочетаться с любой группой. Частая ошибка — смешивать передние и задние гласные в одном слове.",
+      "examples": [
+        {
+          "wrong": "hyva",
+          "right": "hyvä",
+          "note": "Слово 'хороший' требует передних гласных: y и ä."
+        },
+        {
+          "wrong": "pöydalla",
+          "right": "pöydällä",
+          "note": "Окончание -llä, так как в корне передний гласный ö."
+        },
+        {
+          "wrong": "värilla",
+          "right": "värillä",
+          "note": "Корень väri (передние гласные) требует окончания с ä."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите правильную форму слова 'хороший' в финском языке.",
+          "answer": "hyvä"
+        },
+        {
+          "prompt": "Как будет 'на столе' (стол = pöytä) с правильным окончанием?",
+          "answer": "pöydällä"
+        },
+        {
+          "prompt": "Выберите правильный вариант: 'с цветом' (цвет = väri) — 'värilla' или 'värillä'?",
+          "answer": "värillä"
+        }
+      ]
+    },
+    {
+      "rule_id": "partitive-after-numbers",
+      "topic": "Partitive after numbers",
+      "title": "Партитив после числительных",
+      "explanation": "В финском языке после числительных, кроме 'yksi' (один), существительное ставится в партитиве единственного числа. После 'yksi' используется номинатив единственного числа. Это распространённая ошибка, когда путают падежи.",
+      "examples": [
+        {
+          "wrong": "Kaksi kirjat",
+          "right": "Kaksi kirjaa",
+          "note": "После числительных, больших единицы, требуется партитив единственного числа ('kirjaa'), а не номинатив множественного ('kirjat')."
+        },
+        {
+          "wrong": "Yksi kirjaa",
+          "right": "Yksi kirja",
+          "note": "После 'yksi' (один) всегда используется номинатив единственного числа, без партитива."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите: 'две книги'",
+          "answer": "kaksi kirjaa"
+        },
+        {
+          "prompt": "Переведите: 'три дома'",
+          "answer": "kolme taloa"
+        },
+        {
+          "prompt": "Переведите: 'один студент'",
+          "answer": "yksi opiskelija"
+        }
+      ]
+    },
+    {
+      "rule_id": "object-case-selection",
+      "topic": "Object case selection",
+      "title": "Выбор падежа объекта в финском языке",
+      "explanation": "В финском языке выбор падежа объекта (партитив или аккузатив) зависит от завершённости действия и определённости объекта. После отрицания объект всегда стоит в партитиве. Некоторые глаголы, например 'rakastaa' (любить), всегда требуют партитива.",
+      "examples": [
+        {
+          "wrong": "Rakastan sinut.",
+          "right": "Rakastan sinua.",
+          "note": "Глагол 'rakastaa' всегда требует партитива, так как действие не является результативным."
+        },
+        {
+          "wrong": "En osta leipä.",
+          "right": "En osta leipää.",
+          "note": "После отрицания объект всегда стоит в партитиве."
+        },
+        {
+          "wrong": "Hän lukee kirja.",
+          "right": "Hän lukee kirjaa.",
+          "note": "Длительное или незавершённое действие — партитив."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на финский: 'Я люблю тебя.'",
+          "answer": "Minä rakastan sinua."
+        },
+        {
+          "prompt": "Переведите на финский: 'Я не покупаю хлеб.'",
+          "answer": "En osta leipää."
+        },
+        {
+          "prompt": "Переведите на финский: 'Я читаю книгу (в процессе).'",
+          "answer": "Luen kirjaa."
+        }
+      ]
+    },
+    {
+      "rule_id": "plural-formation-and-t-plural",
+      "topic": "Plural formation and t-plural",
+      "title": "Образование множественного числа в финском: окончание -t",
+      "explanation": "В финском языке множественное число в именительном падеже (nominatiivi) образуется путём добавления окончания -t к основе слова. Например: talo (дом) → talot (дома). Частая ошибка — забывать это окончание или использовать форму единственного числа вместо множественного. Также важно согласовывать глагол: с множественным числом используется глагол во множественном числе (например, ovat вместо on).",
+      "examples": [
+        {
+          "wrong": "Nämä on kukka.",
+          "right": "Nämä ovat kukat.",
+          "note": "В множественном числе существительное должно иметь окончание -t, а глагол 'olla' — форму 'ovat'."
+        },
+        {
+          "wrong": "Talo on suuri.",
+          "right": "Talot ovat suuria.",
+          "note": "Если речь идёт о нескольких домах, существительное получает -t, а прилагательное — окончание партитива множественного числа (-ia/-ja)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите правильную форму множественного числа (nominatiivi) для слова 'koira' (собака).",
+          "answer": "koirat"
+        },
+        {
+          "prompt": "Исправьте ошибку: 'Nämä on omena.'",
+          "answer": "Nämä ovat omenat."
+        },
+        {
+          "prompt": "Заполните пропуск: '_____ (talo, множественное число) ovat pieniä.'",
+          "answer": "Talot"
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-suffix-usage",
+      "topic": "Possessive suffix usage",
+      "title": "Использование притяжательного суффикса в финском языке",
+      "explanation": "В финском языке, если перед существительным стоит притяжательное местоимение (minun, sinun, hänen, meidän, teidän, heidän), само существительное обязательно должно иметь притяжательный суффикс (-ni, -si, -nsa/-nsä, -mme, -nne, -nsa/-nsä). Ошибка возникает, когда суффикс опускают (например, 'minun kirja' вместо 'minun kirjani'). В разговорной речи суффикс могут не использовать, но в письменном стандартном финском он обязателен.",
+      "examples": [
+        {
+          "wrong": "Minun kirja on pöydällä.",
+          "right": "Minun kirjani on pöydällä.",
+          "note": "После minun нужно добавить суффикс -ni к слову kirja."
+        },
+        {
+          "wrong": "Hänen auto on punainen.",
+          "right": "Hänen autonsa on punainen.",
+          "note": "После hänen используется суффикс -nsa/-nsä, в зависимости от гармонии гласных."
+        },
+        {
+          "wrong": "Meidän talo on iso.",
+          "right": "Meidän talomme on iso.",
+          "note": "После meidän присоединяется суффикс -mme."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на финский: 'Моя книга на столе'. Не забудьте притяжательный суффикс.",
+          "answer": "Minun kirjani on pöydällä."
+        },
+        {
+          "prompt": "Переведите на финский: 'Его машина красная'.",
+          "answer": "Hänen autonsa on punainen."
+        },
+        {
+          "prompt": "Переведите на финский: 'Наш дом большой'.",
+          "answer": "Meidän talomme on iso."
+        }
+      ]
+    },
+    {
+      "rule_id": "negative-verb-conjugation",
+      "topic": "Negative verb conjugation",
+      "title": "Отрицательная форма глагола в финском языке",
+      "explanation": "В финском языке отрицание образуется с помощью специального отрицательного глагола 'ei', который изменяется по лицам (en, et, ei, emme, ette, eivät). Основной глагол при этом ставится в неизменяемую форму (так называемая 'слабая основа' без личного окончания). Частая ошибка — оставлять основной глагол в полной личной форме или использовать неправильную форму отрицательного глагола.",
+      "examples": [
+        {
+          "wrong": "Minä en puhun suomea.",
+          "right": "Minä en puhu suomea.",
+          "note": "После 'en' глагол теряет личное окончание -n. Правильно: puhu (основа), а не puhun."
+        },
+        {
+          "wrong": "He eivät puhuvat suomea.",
+          "right": "He eivät puhu suomea.",
+          "note": "После 'eivät' глагол тоже стоит в неизменяемой основе, без окончания -vat. Правильно: puhu."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите отрицательную форму: 'Я не говорю по-фински.' (глагол puhua)",
+          "answer": "Minä en puhu suomea."
+        },
+        {
+          "prompt": "Напишите отрицательную форму: 'Мы не едим рыбу.' (глагол syödä, рыба = kalaa)",
+          "answer": "Me emme syö kalaa."
+        },
+        {
+          "prompt": "Напишите отрицательную форму: 'Они не живут в Хельсинки.' (глагол asua)",
+          "answer": "He eivät asu Helsingissä."
+        }
+      ]
+    },
+    {
+      "rule_id": "conditional-mood-formation",
+      "topic": "Conditional mood formation",
+      "title": "Условное наклонение в финском языке (Conditonalis)",
+      "explanation": "В финском языке условное наклонение образуется добавлением суффикса -isi- к основе глагола. Например, для глагола puhua (говорить) основа puhu- + -isi- + личное окончание даёт puhuisin (я бы говорил). Частая ошибка — использование формы настоящего времени вместо условного или неправильное присоединение суффикса.",
+      "examples": [
+        {
+          "wrong": "Minä puhun suomea, jos minulla on aikaa.",
+          "right": "Minä puhuisin suomea, jos minulla olisi aikaa.",
+          "note": "В первой части используется настоящее время (puhun), а нужно условное (puhuisin), так как речь о гипотетической ситуации."
+        },
+        {
+          "wrong": "Hän tulee, jos hän haluaa.",
+          "right": "Hän tulisi, jos hän haluaisi.",
+          "note": "Глагол tulla (приходить) в условном наклонении имеет форму tulisi, а не tulee."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите по-фински: 'Я бы купил машину, если бы у меня были деньги.'",
+          "answer": "Minä ostaisin auton, jos minulla olisi rahaa."
+        },
+        {
+          "prompt": "Напишите по-фински: 'Он бы поехал в Хельсинки, если бы знал дорогу.'",
+          "answer": "Hän menisi Helsinkiin, jos hän tietäisi tien."
+        }
+      ]
+    },
+    {
+      "rule_id": "question-suffix-placement",
+      "topic": "Question suffix placement",
+      "title": "Размещение вопросительного суффикса -ko/-kö",
+      "explanation": "В финском языке для образования общего вопроса (да/нет) к глаголу или другому слову, на которое падает логическое ударение, добавляется суффикс -ko или -kö (в зависимости от гармонии гласных). Суффикс ставится в начало слова после его основы, а не в конец фразы. Если в предложении есть вопросительное слово (miksi, missä, kuka и т.д.), суффикс не используется.",
+      "examples": [
+        {
+          "wrong": "Sinä oletko opiskelija?",
+          "right": "Oletko sinä opiskelija?",
+          "note": "Суффикс -ko должен быть прикреплён к глаголу, а не стоять отдельно."
+        },
+        {
+          "wrong": "Hän menee kouluunko?",
+          "right": "Meneekö hän kouluun?",
+          "note": "Суффикс -kö ставится на глагол, который является первым словом в вопросе."
+        },
+        {
+          "wrong": "Miksi sinä tulitko?",
+          "right": "Miksi sinä tulit?",
+          "note": "При наличии вопросительного слова (miksi) суффикс -ko не добавляется."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на финский: Ты говоришь по-фински?",
+          "answer": "Puhutko sinä suomea?"
+        },
+        {
+          "prompt": "Исправьте ошибку: Hän onko kotona?",
+          "answer": "Onko hän kotona?"
+        },
+        {
+          "prompt": "Задайте вопрос: Они идут в парк? (используйте mennä, puisto)",
+          "answer": "Menevätkö he puistoon?"
+        }
+      ]
+    },
+    {
+      "rule_id": "adessive-for-possession",
+      "topic": "Adessive for possession",
+      "title": "Адессив для выражения обладания",
+      "explanation": "В финском языке для обозначения обладания используется адессив (окончание -lla/-llä) у обладателя и глагол 'on'. Например, 'minulla on' означает 'у меня есть'. Частая ошибка русскоговорящих — использовать именительный падеж (minä olen) или форму 'minun on' вместо адессива.",
+      "examples": [
+        {
+          "wrong": "Minä olen kirja.",
+          "right": "Minulla on kirja.",
+          "note": "Неправильно использовать 'minä olen' (я есть) для 'у меня есть'. Нужен адессив 'minulla'."
+        },
+        {
+          "wrong": "Minun on auto.",
+          "right": "Minulla on auto.",
+          "note": "Форма 'minun on' означает 'мой есть', но не 'у меня есть'. Используйте адессив."
+        },
+        {
+          "wrong": "Hän on koira.",
+          "right": "Hänellä on koira.",
+          "note": "Для 'у него/неё есть' также нужен адессив, а не именительный падеж."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите: 'У меня есть книга'.",
+          "answer": "Minulla on kirja."
+        },
+        {
+          "prompt": "Переведите: 'У него есть машина'.",
+          "answer": "Hänellä on auto."
+        },
+        {
+          "prompt": "Переведите: 'У нас есть дом'.",
+          "answer": "Meillä on talo."
+        }
+      ]
+    },
+    {
+      "rule_id": "translative-case-usage",
+      "topic": "Translative case usage",
+      "title": "Ошибки в использовании транслатива (translatiivi)",
+      "explanation": "Транслатив (translatiivi) в финском языке указывает на превращение или изменение состояния, а не на текущее положение или роль. Частая ошибка — использовать транслатив вместо номинатива (для описания того, кем кто-то является) или эссива (для описания работы в качестве кого-то). Запомните: транслатив употребляется с глаголами изменения (tulla, muuttua, ryhtyä), а не состояния.",
+      "examples": [
+        {
+          "wrong": "Hän on opettajaksi.",
+          "right": "Hän on opettaja.",
+          "note": "Для описания текущей профессии используйте номинатив."
+        },
+        {
+          "wrong": "Hän työskentelee insinööriksi.",
+          "right": "Hän työskentelee insinöörinä.",
+          "note": "Для описания работы в качестве кого-либо используйте эссив."
+        },
+        {
+          "wrong": "Muutan Helsingiksi.",
+          "right": "Muutan Helsinkiin.",
+          "note": "Для направления движения (в город) используйте иллатив."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Напишите по-фински: «Он становится врачом».",
+          "answer": "Hän tulee lääkäriksi."
+        },
+        {
+          "prompt": "Как правильно сказать по-фински: «Я работаю гидом»?",
+          "answer": "Minä työskentelen oppaana."
+        }
+      ]
+    },
+    {
+      "rule_id": "essive-case-usage",
+      "topic": "Essive case usage",
+      "title": "Употребление эссива (essiivi) в финском языке",
+      "explanation": "Эссив используется для обозначения временного состояния, статуса или момента времени (например, дня недели). Он отвечает на вопрос «в качестве кого?» или «когда?» и образуется добавлением окончания -na/-nä к основе слова. Частая ошибка русскоязычных — путать эссив с номинативом или транслативом.",
+      "examples": [
+        {
+          "wrong": "Maanantai on vapaa.",
+          "right": "Maanantaina on vapaa.",
+          "note": "Для дней недели всегда используй эссив (окончание -na/-nä)."
+        },
+        {
+          "wrong": "Hän työskentelee opettaja.",
+          "right": "Hän työskentelee opettajana.",
+          "note": "При временной роли (работать в качестве кого-то) требуется эссив."
+        },
+        {
+          "wrong": "Olen sairas (в значении временной болезни).",
+          "right": "Olen sairaana.",
+          "note": "Эссив указывает на временное состояние (болеть сейчас), а номинатив — на постоянное свойство."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на финский: «во вторник».",
+          "answer": "tiistaina"
+        },
+        {
+          "prompt": "Он работает врачом (временно).",
+          "answer": "Hän työskentelee lääkärinä."
+        },
+        {
+          "prompt": "Она больна (временно).",
+          "answer": "Hän on sairaana."
+        }
+      ]
+    },
+    {
+      "rule_id": "a-infinitive-vs-ma-infinitive",
+      "topic": "A-infinitive vs MA-infinitive",
+      "title": "A-инфинитив vs MA-инфинитив",
+      "explanation": "В финском языке после модальных глаголов (хотеть, мочь, уметь, должен) используется A-инфинитив (первый инфинитив), например: 'Haluan opiskella' (Я хочу учиться). После глаголов движения (идти, приходить) и для обозначения цели или процесса используется MA-инфинитив (третий инфинитив), например: 'Menen opiskelemaan' (Я иду учиться). Ошибки часто возникают при смешении этих двух форм.",
+      "examples": [
+        {
+          "wrong": "Hän haluaa uimaan.",
+          "right": "Hän haluaa uida.",
+          "note": "После 'haluaa' (хочет) используем A-инфинитив."
+        },
+        {
+          "wrong": "Menen uida.",
+          "right": "Menen uimaan.",
+          "note": "После 'menen' (иду) используем MA-инфинитив."
+        },
+        {
+          "wrong": "Osaan puhumaan suomea.",
+          "right": "Osaan puhua suomea.",
+          "note": "После 'osaan' (умею) используем A-инфинитив."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Исправьте ошибку: 'Hän osaa puhumaan suomea.' Напишите правильный вариант.",
+          "answer": "Hän osaa puhua suomea."
+        },
+        {
+          "prompt": "Исправьте ошибку: 'He menevät syödä.' Напишите правильный вариант.",
+          "answer": "He menevät syömään."
+        }
+      ]
+    },
+    {
+      "rule_id": "imperative-mood-formation",
+      "topic": "Imperative mood formation",
+      "title": "Формирование повелительного наклонения (императива) в финском языке",
+      "explanation": "В финском языке форма повелительного наклонения для 2-го лица единственного числа (ты) образуется от основы глагола без окончания. Частая ошибка — использовать форму 3-го лица или инфинитив. Запомните: для глаголов 1-го типа (например, puhua) уберите -a/-ä, получите основу (puhu). Для остальных типов — используйте основу без окончания (syödä -> syö, tulla -> tule).",
+      "examples": [
+        {
+          "wrong": "Puhuu!",
+          "right": "Puhu!",
+          "note": "Не используйте форму 3-го лица единственного числа (puhuu) для команды."
+        },
+        {
+          "wrong": "Syöt!",
+          "right": "Syö!",
+          "note": "Уберите личное окончание -t."
+        },
+        {
+          "wrong": "Tulla tänne!",
+          "right": "Tule tänne!",
+          "note": "Инфинитив не подходит, используйте основу глагола."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Образуйте повелительное наклонение (ты) от глагола lukea (читать).",
+          "answer": "Lue!"
+        },
+        {
+          "prompt": "Исправьте ошибку: 'Mennä kotiin!' (иди домой) - напишите правильную форму.",
+          "answer": "Mene kotiin!"
+        },
+        {
+          "prompt": "Как правильно сказать 'Смотри!' от глагола katsoa?",
+          "answer": "Katso!"
+        }
+      ]
+    },
+    {
+      "rule_id": "passive-voice-forms",
+      "topic": "Passive voice forms",
+      "title": "Пассивный залог в финском языке: типичные ошибки",
+      "explanation": "В финском языке пассивный залог используется, когда деятель неизвестен или не важен. Частая ошибка — использовать форму 3-го лица множественного числа (например, 'he tekevät') вместо пассива ('tehdään'). Пассив образуется по-разному в зависимости от времени: в настоящем — основа глагола + '-aan/-ään' (например, 'puhua' → 'puhutaan'), в прошедшем — основа + '-ttiin' (например, 'puhua' → 'puhuttiin').",
+      "examples": [
+        {
+          "wrong": "He tekevät työtä.",
+          "right": "Työtä tehdään.",
+          "note": "Здесь 'они делают работу' неверно, если речь идёт о том, что работа делается вообще (пассив)."
+        },
+        {
+          "wrong": "He sanoivat, että sataa.",
+          "right": "Sanottiin, että sataa.",
+          "note": "Вместо 'они сказали' используем пассив 'было сказано' для общих утверждений."
+        },
+        {
+          "wrong": "Minä puhun suomea.",
+          "right": "Täällä puhutaan suomea.",
+          "note": "Не 'я говорю по-фински', а 'здесь говорят по-фински' (обобщение)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Переведите на финский (используя пассив): 'Говорят, что погода изменится.'",
+          "answer": "Sanotaan, että sää muuttuu."
+        },
+        {
+          "prompt": "Исправьте ошибку: 'He kirjoittavat kirjan.' (в значении 'книга пишется')",
+          "answer": "Kirja kirjoitetaan."
+        },
+        {
+          "prompt": "Напишите пассив прошедшего времени от глагола 'tehdä' (делать) в предложении: 'Работа была сделана вчера.'",
+          "answer": "Työ tehtiin eilen."
+        }
+      ]
+    },
+    {
+      "rule_id": "ordinal-numbers-usage",
+      "topic": "Ordinal numbers usage",
+      "title": "Порядковые числительные: распространённая ошибка",
+      "explanation": "В финском языке порядковые числительные образуются с помощью суффикса -s (первый – ensimmäinen, второй – toinen, третий – kolmas и т.д.). Частая ошибка — использование количественных числительных (yksi, kaksi, kolme) вместо порядковых, особенно в датах, этажах и местах. Помните: порядковые склоняются как прилагательные.",
+      "examples": [
+        {
+          "wrong": "Olen toinen kerros.",
+          "right": "Olen toisessa kerroksessa.",
+          "note": "«Toinen kerros» означает «второй этаж» (объект), а не «на втором этаже». Нужен инессив (toisessa kerroksessa)."
+        },
+        {
+          "wrong": "Tänään on yksi toukokuuta.",
+          "right": "Tänään on ensimmäinen toukokuuta.",
+          "note": "В датах всегда используется порядковое числительное. «Yksi toukokuuta» звучит как «один мая», а не «первое мая»."
+        },
+        {
+          "wrong": "Hän tuli kolmas kilpailussa.",
+          "right": "Hän tuli kolmanneksi kilpailussa.",
+          "note": "Для обозначения финишного места используется транслатив (kolmanneksi), а не номинатив (kolmas)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Как правильно: «Он живёт на пятом этаже»? (фраза на финском)",
+          "answer": "Hän asuu viidennessä kerroksessa."
+        },
+        {
+          "prompt": "Исправьте ошибку: «Tänään on kaksi joulukuuta».",
+          "answer": "Tänään on toinen joulukuuta."
+        },
+        {
+          "prompt": "Переведите: «Мы идём на третий урок».",
+          "answer": "Menemme kolmannelle oppitunnille."
+        }
+      ]
+    },
+    {
+      "rule_id": "word-order-v2-rule",
+      "topic": "Word order V2 rule",
+      "title": "Порядок слов: правило V2 (глагол на втором месте)",
+      "explanation": "В финском языке в главном предложении глагол всегда стоит на втором месте. Первое место может занимать подлежащее, обстоятельство или другой член предложения, но глагол следует сразу за ним. Русскоязычные часто ставят глагол позже, что является ошибкой.",
+      "examples": [
+        {
+          "wrong": "Minä eilen menin kauppaan.",
+          "right": "Minä menin eilen kauppaan.",
+          "note": "Глагол menin должен стоять сразу после подлежащего Minä, а наречие eilen — после глагола."
+        },
+        {
+          "wrong": "Eilen minä menin elokuviin.",
+          "right": "Eilen menin minä elokuviin.",
+          "note": "Когда на первом месте обстоятельство eilen, глагол menin всё равно второй, а подлежащее minä перемещается за глагол."
+        },
+        {
+          "wrong": "Hän aina syö aamupalaa.",
+          "right": "Hän syö aina aamupalaa.",
+          "note": "Наречие aina не может стоять между подлежащим и глаголом; глагол syö должен быть на втором месте."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Исправьте порядок слов: Minä tänään kävin kaupassa.",
+          "answer": "Minä kävin tänään kaupassa."
+        },
+        {
+          "prompt": "Исправьте порядок слов: Huomenna minä menen kouluun.",
+          "answer": "Huomenna menen minä kouluun."
+        },
+        {
+          "prompt": "Исправьте порядок слов: Hän usein lukee kirjoja.",
+          "answer": "Hän lukee usein kirjoja."
+        }
+      ]
+    },
+    {
+      "rule_id": "relative-pronoun-choice",
+      "topic": "Relative pronoun choice",
+      "title": "Выбор относительного местоимения: joka или mikä?",
+      "explanation": "В финском языке 'joka' используется, когда относительное местоимение относится к конкретному существительному (одушевлённому или неодушевлённому) и согласуется с ним. 'Mikä' же применяется, когда нет чёткого референта (например, после слов 'se', 'kaikki', 'ainoa') или когда местоимение относится ко всему предыдущему предложению. Не путайте: 'joka' = 'который' (конкретный предмет/лицо), 'mikä' = 'что' (неопределённое или целая ситуация).",
+      "examples": [
+        {
+          "wrong": "Tämä on kirja, mikä on mielenkiintoinen.",
+          "right": "Tämä on kirja, joka on mielenkiintoinen.",
+          "note": "С конкретным существительным 'kirja' (книга) используем 'joka'."
+        },
+        {
+          "wrong": "Hän oli myöhässä, joka oli tyypillistä.",
+          "right": "Hän oli myöhässä, mikä oli tyypillistä.",
+          "note": "Когда местоимение относится ко всему предложению ('он опоздал'), используем 'mikä'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Заполните пропуск: Tämä on talo, ___ on vanha.",
+          "answer": "joka"
+        },
+        {
+          "prompt": "Заполните пропуск: Hän sanoi, ettei tule, ___ oli harmillista.",
+          "answer": "mikä"
+        },
+        {
+          "prompt": "Заполните пропуск: Siellä on mies, ___ asuu naapurissa.",
+          "answer": "joka"
+        }
+      ]
+    },
+    {
+      "rule_id": "vielä-vs-enää-distinction",
+      "topic": "Vielä vs enää distinction",
+      "title": "Разница между vielä и enää",
+      "explanation": "Vielä означает «ещё» (действие продолжается) и употребляется в утвердительных предложениях. Enää означает «уже не» / «больше не» и используется только в отрицательных предложениях. Типичная ошибка — использовать enää в утвердительных предложениях или vielä в отрицательных, когда имеется в виду прекращение действия.",
+      "examples": [
+        {
+          "wrong": "Minulla on enää rahaa.",
+          "right": "Minulla on vielä rahaa.",
+          "note": "В утвердительном предложении (деньги ещё есть) нужно vielä."
+        },
+        {
+          "wrong": "En tarvitse vielä apua.",
+          "right": "En tarvitse enää apua.",
+          "note": "Если вы хотите сказать «мне больше не нужна помощь», используйте enää в отрицании."
+        },
+        {
+          "wrong": "Hän on enää täällä.",
+          "right": "Hän on vielä täällä.",
+          "note": "В утвердительном предложении «он всё ещё здесь» употребляется vielä."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Заполните пропуск: Я всё ещё голоден. — Minulla on _____ nälkä.",
+          "answer": "vielä"
+        },
+        {
+          "prompt": "Заполните пропуск: У меня больше нет времени. — Minulla ei ole _____ aikaa.",
+          "answer": "enää"
+        },
+        {
+          "prompt": "Заполните пропуск: Ты ещё не закончил? — Etkö ole _____ valmis?",
+          "answer": "vielä"
+        }
+      ]
+    },
+    {
+      "rule_id": "paljon-vs-moni-distinction",
+      "topic": "Paljon vs moni distinction",
+      "title": "Различие между paljon и moni",
+      "explanation": "Paljon означает 'много' и используется с неисчисляемыми существительными в партитиве (paljon vettä) или с исчисляемыми во множественном числе партитива (paljon ihmisiä). Moni переводится как 'многие' и употребляется с исчисляемыми существительными в единственном числе номинатива (moni ihminen) или во множественном числе (monet ihmiset), подчёркивая каждый отдельный случай. Ошибка: использование paljon с номинативом вместо партитива или moni.",
+      "examples": [
+        {
+          "wrong": "Paljon ihmiset ajattelevat niin.",
+          "right": "Moni ihminen ajattelee niin.",
+          "note": "Слово paljon требует партитива (ihmisiä), а moni — номинатива единственного числа (ihminen)."
+        },
+        {
+          "wrong": "Paljon vesi on kylmää.",
+          "right": "Paljon vettä on kylmää.",
+          "note": "С неисчисляемыми существительными всегда используйте paljon + партитив."
+        },
+        {
+          "wrong": "Monet rahaa meni hukkaan.",
+          "right": "Paljon rahaa meni hukkaan.",
+          "note": "Raha (деньги) — неисчисляемое, поэтому требуется paljon, а не moni."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Выберите правильное слово: ___ ihmisiä tuli juhliin. (Paljon/Moni)",
+          "answer": "Paljon"
+        },
+        {
+          "prompt": "Заполните пропуск: ___ opiskelija ei ymmärtänyt tehtävää. (Paljon/Moni)",
+          "answer": "Moni"
+        },
+        {
+          "prompt": "Исправьте ошибку: 'Paljon lapset leikkivät pihalla.'",
+          "answer": "Monet lapset leikkivät pihalla."
+        }
+      ]
+    }
+  ]
+}

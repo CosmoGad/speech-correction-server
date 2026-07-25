@@ -1,0 +1,105 @@
+{
+  "learning": "lt",
+  "topics": [
+    {
+      "rule_id": "cases",
+      "title": "Cases"
+    },
+    {
+      "rule_id": "verb-conjugation",
+      "title": "Verb conjugation"
+    },
+    {
+      "rule_id": "accentuation",
+      "title": "Accentuation"
+    },
+    {
+      "rule_id": "participles",
+      "title": "Participles"
+    },
+    {
+      "rule_id": "pitch-accent",
+      "title": "Pitch accent"
+    },
+    {
+      "rule_id": "longshort-vowels",
+      "title": "Long/short vowels"
+    },
+    {
+      "rule_id": "nasal-vowels",
+      "title": "Nasal vowels"
+    },
+    {
+      "rule_id": "word-order-svo-vs-free",
+      "title": "Word order SVO vs free"
+    },
+    {
+      "rule_id": "reflexive-verbs-si-usage",
+      "title": "Reflexive verbs -si usage"
+    },
+    {
+      "rule_id": "prepositions-with-cases",
+      "title": "Prepositions with cases"
+    },
+    {
+      "rule_id": "numeral-agreement-with-nouns",
+      "title": "Numeral agreement with nouns"
+    },
+    {
+      "rule_id": "adjective-noun-gender-agreement",
+      "title": "Adjective-noun gender agreement"
+    },
+    {
+      "rule_id": "comparative-and-superlative-forms",
+      "title": "Comparative and superlative forms"
+    },
+    {
+      "rule_id": "negation-with-ne-and-double-negatives",
+      "title": "Negation with ne- and double negatives"
+    },
+    {
+      "rule_id": "question-formation-without-inversion",
+      "title": "Question formation without inversion"
+    },
+    {
+      "rule_id": "imperative-mood-formation",
+      "title": "Imperative mood formation"
+    },
+    {
+      "rule_id": "conditional-mood-with-čiau-tum",
+      "title": "Conditional mood with -čiau/-tum"
+    },
+    {
+      "rule_id": "perfective-vs-imperfective-aspect",
+      "title": "Perfective vs imperfective aspect"
+    },
+    {
+      "rule_id": "verbal-prefixes-and-meaning-change",
+      "title": "Verbal prefixes and meaning change"
+    },
+    {
+      "rule_id": "use-of-būti-as-copula-and-auxiliary",
+      "title": "Use of būti as copula and auxiliary"
+    },
+    {
+      "rule_id": "possessive-constructions-with-genitive",
+      "title": "Possessive constructions with genitive"
+    },
+    {
+      "rule_id": "location-vs-direction-with-įantpo",
+      "title": "Location vs direction with į/ant/po"
+    },
+    {
+      "rule_id": "days-months-and-time-expressions",
+      "title": "Days, months, and time expressions"
+    },
+    {
+      "rule_id": "definite-vs-indefinite-adjective-forms",
+      "title": "Definite vs indefinite adjective forms"
+    },
+    {
+      "rule_id": "dual-number-remnants-and-pluralia-tantum",
+      "title": "Dual number remnants and pluralia tantum"
+    }
+  ]
+}

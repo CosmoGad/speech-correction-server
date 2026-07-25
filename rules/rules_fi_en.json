@@ -1,0 +1,883 @@
+{
+  "learning": "fi",
+  "interface": "en",
+  "generated_at": "2026-06-27T19:16:38.303241+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "cases",
+      "topic": "Cases",
+      "title": "Using the Partitive Case After Numbers and 'Monta'",
+      "explanation": "In Finnish, when you use a number other than one (or the word 'monta' meaning 'many'), the noun must be in the partitive case. The partitive often ends in -a/-ä or -ta/-tä. For example, 'yksi kirja' (one book) but 'kaksi kirjaa' (two books). Remember that 'monta' also requires the partitive: 'monta kirjaa'.",
+      "examples": [
+        {
+          "wrong": "Minulla on kaksi kirja.",
+          "right": "Minulla on kaksi kirjaa.",
+          "note": "After numbers 2+ and 'monta', use partitive -a/-ä."
+        },
+        {
+          "wrong": "Hänellä on monta ystävä.",
+          "right": "Hänellä on monta ystävää.",
+          "note": "Monta always takes partitive."
+        },
+        {
+          "wrong": "Ostan kolme omena.",
+          "right": "Ostan kolme omenaa.",
+          "note": "Same rule for all numbers except yksi."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'I have two cats'? (kaksi + kissa)",
+          "answer": "Minulla on kaksi kissaa."
+        },
+        {
+          "prompt": "How do you say 'She has many friends'? (monta + ystävä)",
+          "answer": "Hänellä on monta ystävää."
+        },
+        {
+          "prompt": "How do you say 'I buy three apples'? (kolme + omena)",
+          "answer": "Ostan kolme omenaa."
+        }
+      ]
+    },
+    {
+      "rule_id": "consonant-gradation",
+      "topic": "Consonant gradation",
+      "title": "Consonant Gradation: The Basics",
+      "explanation": "In Finnish, certain consonants (k, p, t) often change between a 'strong' form and a 'weak' form when the word is inflected. This is called consonant gradation. For example, 'k' may become nothing, 'p' may become 'v', and 't' may become 'd', or double consonants like 'kk' become single 'k'. Beginners often forget to apply the weak grade in cases like the inessive or genitive.",
+      "examples": [
+        {
+          "wrong": "kuppissa",
+          "right": "kupissa",
+          "note": "The double 'pp' weakens to a single 'p' in the inessive case."
+        },
+        {
+          "wrong": "lukkossa",
+          "right": "lukossa",
+          "note": "The double 'kk' weakens to a single 'k' in the inessive case."
+        },
+        {
+          "wrong": "katulla",
+          "right": "kadulla",
+          "note": "The single 't' weakens to 'd' in the adessive case."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the inessive case (meaning 'in the lock') of the word 'lukko'.",
+          "answer": "lukossa"
+        },
+        {
+          "prompt": "Write the adessive case (meaning 'on the street') of the word 'katu'.",
+          "answer": "kadulla"
+        },
+        {
+          "prompt": "Write the inessive case (meaning 'in the cup') of the word 'kuppi'.",
+          "answer": "kupissa"
+        }
+      ]
+    },
+    {
+      "rule_id": "vowel-harmony",
+      "topic": "Vowel harmony",
+      "title": "Finnish Vowel Harmony",
+      "explanation": "Finnish vowels are divided into front vowels (ä, ö, y), back vowels (a, o, u), and neutral vowels (e, i). In native Finnish words, suffixes and endings must harmonize with the vowel type of the root: all vowels in a word are either all front or all back, except neutral vowels which can appear with either group. This rule applies to word stems and their suffixes.",
+      "examples": [
+        {
+          "wrong": "talo+ssä",
+          "right": "talossa",
+          "note": "The word 'talo' (house) has back vowels (a, o), so the suffix must be '-ssa' (not '-ssä')."
+        },
+        {
+          "wrong": "pöytä+lla",
+          "right": "pöydällä",
+          "note": "'pöytä' (table) has front vowels (ö, ä), so the suffix must be '-llä' (not '-lla')."
+        },
+        {
+          "wrong": "kirja+sta",
+          "right": "kirjasta",
+          "note": "'kirja' (book) has back vowels (i is neutral, a is back), so the suffix '-sta' uses back vowel 'a'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Add the correct ending for 'in the house' using the suffix '-ssa/-ssä': the word is 'talo'.",
+          "answer": "talossa"
+        },
+        {
+          "prompt": "Add the correct ending for 'on the table' using the suffix '-lla/-llä': the word is 'pöytä'.",
+          "answer": "pöydällä"
+        },
+        {
+          "prompt": "Add the correct ending for 'from the book' using the suffix '-sta/-stä': the word is 'kirja'.",
+          "answer": "kirjasta"
+        }
+      ]
+    },
+    {
+      "rule_id": "postpositions",
+      "topic": "Postpositions",
+      "title": "Postpositions: Put Them After the Noun",
+      "explanation": "In Finnish, many location words (like 'behind', 'in front of', 'next to') are postpositions, not prepositions. This means they come after the noun, and the noun is usually in the genitive case. A common mistake for English speakers is to place these words before the noun, as in English.",
+      "examples": [
+        {
+          "wrong": "takana talo",
+          "right": "talon takana",
+          "note": "Incorrect: 'behind house' (word order like English). Correct: 'house's behind' – noun in genitive first, then postposition."
+        },
+        {
+          "wrong": "vieressä koulu",
+          "right": "koulun vieressä",
+          "note": "Incorrect: 'next to school'. Correct: 'school's next to' – always postposition after the noun."
+        },
+        {
+          "wrong": "alla pöytä",
+          "right": "pöydän alla",
+          "note": "Incorrect: 'under table'. Correct: 'table's under' – note the genitive ending -n on 'pöytä'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'in front of the house' into Finnish.",
+          "answer": "talon edessä"
+        },
+        {
+          "prompt": "Translate 'behind the car' into Finnish.",
+          "answer": "auton takana"
+        },
+        {
+          "prompt": "Translate 'next to the church' into Finnish.",
+          "answer": "kirkon vieressä"
+        }
+      ]
+    },
+    {
+      "rule_id": "vowel-length",
+      "topic": "Vowel length",
+      "title": "Mastering Finnish Vowel Length",
+      "explanation": "In Finnish, vowel length changes the meaning of words. A short vowel is written with one letter, a long vowel with two identical letters. For example, 'tuli' (fire) vs. 'tuuli' (wind) are different words, so pronouncing and writing the length correctly is essential.",
+      "examples": [
+        {
+          "wrong": "tuli",
+          "right": "tuuli",
+          "note": "Short 'u' means 'fire', long 'uu' means 'wind'."
+        },
+        {
+          "wrong": "kisa",
+          "right": "kissa",
+          "note": "Short 'i' means 'competition', long 'i' plus double 's' means 'cat'."
+        },
+        {
+          "wrong": "mato",
+          "right": "matto",
+          "note": "Short 'a' means 'worm', long 'a' plus double 't' means 'carpet'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the Finnish word for 'book' (long 'i' in the middle).",
+          "answer": "kirja"
+        },
+        {
+          "prompt": "Choose the correct word for 'soup': 'keitto' or 'keito'?",
+          "answer": "keitto"
+        },
+        {
+          "prompt": "Fill in the missing vowels: 't__li' (meaning 'fire').",
+          "answer": "tuli"
+        }
+      ]
+    },
+    {
+      "rule_id": "double-consonants",
+      "topic": "Double consonants",
+      "title": "Double Consonants in Finnish",
+      "explanation": "In Finnish, the length of a consonant can change the meaning of a word. A single consonant is short, while a double consonant is pronounced longer and is written with two identical letters. Always double the consonant after a short vowel in a stressed syllable when the word would otherwise be ambiguous or to match standard spelling.",
+      "examples": [
+        {
+          "wrong": "tule",
+          "right": "tulee",
+          "note": "tule means 'come!', but tulee means 'comes' (3rd person singular). The double 'e' indicates a long vowel; here the double consonant rule applies to the stem."
+        },
+        {
+          "wrong": "kisa",
+          "right": "kissa",
+          "note": "kisa means 'competition', while kissa means 'cat'. The double 's' changes the word entirely."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the Finnish word for 'a little' (a small amount, with a double consonant).",
+          "answer": "vähän"
+        },
+        {
+          "prompt": "Complete the Finnish word for 'six': k__si (double consonant required).",
+          "answer": "kuusi"
+        }
+      ]
+    },
+    {
+      "rule_id": "frontback-vowels",
+      "topic": "Front/back vowels",
+      "title": "Front and Back Vowels in Finnish (Vowel Harmony)",
+      "explanation": "In Finnish, vowels are divided into front (ä, ö, y), back (a, o, u), and neutral (e, i). Vowel harmony demands that all vowels in a native word belong to either the front or back group, and suffixes must match the word's vowels. Neutral vowels can appear with either group, but the harmony is determined by the nearest non-neutral vowel.",
+      "examples": [
+        {
+          "wrong": "talossä",
+          "right": "talossa",
+          "note": "\"talo\" has back vowels (a, o), so the inessive suffix must use back vowel -ssa, not front -ssä."
+        },
+        {
+          "wrong": "pöytassa",
+          "right": "pöytässä",
+          "note": "\"pöytä\" has front vowels (ö, ä), so the suffix must use front vowel -ssä, not back -ssa."
+        },
+        {
+          "wrong": "kyna",
+          "right": "kynä",
+          "note": "The front vowel y requires the following vowel to be ä (front) to maintain harmony, not a (back)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Choose the correct Finnish word for 'in the house' (inessive of 'talo').",
+          "answer": "talossa"
+        },
+        {
+          "prompt": "Choose the correct Finnish word for 'on the table' (inessive of 'pöytä').",
+          "answer": "pöydässä"
+        }
+      ]
+    },
+    {
+      "rule_id": "partitive-after-numbers",
+      "topic": "Partitive after numbers",
+      "title": "Partitive After Numbers",
+      "explanation": "In Finnish, the noun after a number takes the partitive singular form, except after the number 1 (which requires the nominative singular). This rule applies to all cardinal numbers greater than 1, including numbers ending in 1 like 21. Avoid using the nominative plural form after numbers.",
+      "examples": [
+        {
+          "wrong": "kaksi autot",
+          "right": "kaksi autoa",
+          "note": "After '2', use partitive singular 'autoa', not nominative plural 'autot'."
+        },
+        {
+          "wrong": "kolme kirjat",
+          "right": "kolme kirjaa",
+          "note": "After '3', use partitive singular 'kirjaa', not nominative plural 'kirjat'."
+        },
+        {
+          "wrong": "yksi kirjat",
+          "right": "yksi kirja",
+          "note": "After '1', use nominative singular 'kirja', not partitive or plural."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write 'three houses' in Finnish.",
+          "answer": "kolme taloa"
+        },
+        {
+          "prompt": "Write 'one house' in Finnish.",
+          "answer": "yksi talo"
+        },
+        {
+          "prompt": "Write 'ten apples' in Finnish.",
+          "answer": "kymmenen omenaa"
+        }
+      ]
+    },
+    {
+      "rule_id": "object-case-selection",
+      "topic": "Object case selection",
+      "title": "Object Case Selection: Partitive vs. Accusative",
+      "explanation": "In Finnish, the object of a verb can be in either the partitive or accusative case. The partitive is used for incomplete actions, negative sentences, and with certain verbs (e.g., 'rakastaa'). The accusative is used for completed actions and with positive sentences where the object is a specific, whole entity. Choosing the wrong case is a common mistake for learners.",
+      "examples": [
+        {
+          "wrong": "Minä rakastan sinä",
+          "right": "Minä rakastan sinua",
+          "note": "The verb 'rakastaa' always takes the partitive case for the object."
+        },
+        {
+          "wrong": "Minä en lue kirja",
+          "right": "Minä en lue kirjaa",
+          "note": "In negative sentences, the object is always in the partitive case."
+        },
+        {
+          "wrong": "Hän näkee koira",
+          "right": "Hän näkee koiran",
+          "note": "With positive, completed actions (seeing a specific dog), use the accusative case."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I eat an apple' (as in eating a whole apple).",
+          "answer": "Minä syön omenan"
+        },
+        {
+          "prompt": "Translate: 'I do not eat the apple'.",
+          "answer": "Minä en syö omenaa"
+        },
+        {
+          "prompt": "Translate: 'I love you'.",
+          "answer": "Minä rakastan sinua"
+        }
+      ]
+    },
+    {
+      "rule_id": "plural-formation-and-t-plural",
+      "topic": "Plural formation and t-plural",
+      "title": "Finnish Plural: The T-Plural",
+      "explanation": "In Finnish, the plural of nouns in the nominative case is formed by adding -t to the stem (singular form). Unlike English, you never add -s or -es. Remember to also use a plural verb form (e.g., 'ovat' instead of 'on') when the subject is plural.",
+      "examples": [
+        {
+          "wrong": "Tässä on kirja (when meaning 'here are books')",
+          "right": "Tässä on kirjat",
+          "note": "Add -t to the noun to make it plural. The verb stays 'on' for existence, but the noun becomes 'kirjat'."
+        },
+        {
+          "wrong": "Opiskelija on täällä (when talking about many students)",
+          "right": "Opiskelijat ovat täällä",
+          "note": "Both the noun and the verb must be plural: 'opiskelijat' (students) and 'ovat' (are)."
+        },
+        {
+          "wrong": "Minä ostin uusi kirja (meaning 'I bought new books')",
+          "right": "Minä ostin uudet kirjat",
+          "note": "The adjective 'uusi' also becomes plural ('uudet') and the noun gets -t ('kirjat')."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Say 'These are houses' in Finnish (using plural nominative).",
+          "answer": "Nämä ovat talot"
+        },
+        {
+          "prompt": "Correct the plural mistake: 'Minä ostin uusi kirja' (I bought new books).",
+          "answer": "Minä ostin uudet kirjat"
+        },
+        {
+          "prompt": "Form the plural of 'kirja' (book) and use it in a sentence meaning 'The books are on the table'.",
+          "answer": "Kirjat ovat pöydällä"
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-suffix-usage",
+      "topic": "Possessive suffix usage",
+      "title": "Using the Possessive Suffix Correctly",
+      "explanation": "In Finnish, when you show possession, the possessed noun usually gets a possessive suffix (-ni, -si, -nsa, etc.). Even if you use a separate possessor word like 'minun' (my), you still need the suffix on the noun. A common mistake is to drop the suffix, resulting in forms like 'minun auto' instead of the correct 'minun autoni'.",
+      "examples": [
+        {
+          "wrong": "Minun auto",
+          "right": "Minun autoni",
+          "note": "The possessive suffix -ni is required even after the explicit possessor 'minun'."
+        },
+        {
+          "wrong": "Hänen kirja",
+          "right": "Hänen kirjansa",
+          "note": "The suffix -nsa matches 'hänen' (his/her). Never omit it."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'my car' into Finnish.",
+          "answer": "Minun autoni"
+        },
+        {
+          "prompt": "Fill in the blank: 'Tämä on ___ talo.' (your, singular informal)correctly.",
+          "answer": "sinun talosi"
+        }
+      ]
+    },
+    {
+      "rule_id": "negative-verb-conjugation",
+      "topic": "Negative verb conjugation",
+      "title": "Forming Negatives with 'ei'",
+      "explanation": "In Finnish, to make a negative sentence you conjugate the negative auxiliary 'ei' according to the subject (en, et, ei, emme, ette, eivät) and then use the base stem of the main verb – never add a personal ending to that main verb. A common mistake is keeping the normal affirmative personal ending on the main verb after 'ei'.",
+      "examples": [
+        {
+          "wrong": "Minä en puhun suomea.",
+          "right": "Minä en puhu suomea.",
+          "note": "The main verb 'puhua' loses its -n ending after 'en'."
+        },
+        {
+          "wrong": "Hän ei puhuu englantia.",
+          "right": "Hän ei puhu englantia.",
+          "note": "After 'ei', the verb 'puhua' uses its stem 'puhu' without the third-person -u."
+        },
+        {
+          "wrong": "Me emme puhumme ruotsia.",
+          "right": "Me emme puhu ruotsia.",
+          "note": "The -mme ending is dropped; all persons use the same stem 'puhu'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the correct negative form: 'I do not speak Finnish.'",
+          "answer": "Minä en puhu suomea."
+        },
+        {
+          "prompt": "Write the correct negative form: 'She does not eat meat.'",
+          "answer": "Hän ei syö lihaa."
+        },
+        {
+          "prompt": "Write the correct negative form: 'We do not live here.'",
+          "answer": "Me emme asu täällä."
+        }
+      ]
+    },
+    {
+      "rule_id": "conditional-mood-formation",
+      "topic": "Conditional mood formation",
+      "title": "Conditional Mood Formation (Would)",
+      "explanation": "In Finnish, the conditional mood (expressing 'would') is formed by adding the infix -isi- to the verb stem, followed by the personal ending. A common mistake is to use the present tense or the infinitive instead of inserting -isi-.",
+      "examples": [
+        {
+          "wrong": "Minä menen huomenna",
+          "right": "Minä menisin huomenna",
+          "note": "Use menisin (men- + -isi- + -n) for 'I would go'."
+        },
+        {
+          "wrong": "Hän puhuu suomea",
+          "right": "Hän puhuisi suomea",
+          "note": "Add -isi- to the stem puhu- to form 'would speak'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'I would speak Finnish' using the verb puhua.",
+          "answer": "Minä puhuisin suomea"
+        },
+        {
+          "prompt": "Change 'Hän syö omenan' (He eats the apple) to conditional mood.",
+          "answer": "Hän söisi omenan"
+        },
+        {
+          "prompt": "Form the conditional of 'Me menemme kouluun' (We go to school).",
+          "answer": "Me menisimme kouluun"
+        }
+      ]
+    },
+    {
+      "rule_id": "question-suffix-placement",
+      "topic": "Question suffix placement",
+      "title": "Question Suffix Placement",
+      "explanation": "In Finnish yes/no questions, the question suffix -ko or -kö is attached directly to the verb, and the verb then moves to the first position in the sentence. A common mistake is to attach the suffix to the subject or to leave it at the end of the sentence.",
+      "examples": [
+        {
+          "wrong": "Sinä oletko opettaja?",
+          "right": "Oletko sinä opettaja?",
+          "note": "The suffix -ko must go on the verb 'olet', which then comes first."
+        },
+        {
+          "wrong": "Hän asuu Helsingissäkö?",
+          "right": "Asuuko hän Helsingissä?",
+          "note": "The suffix -kö attaches to the verb 'asuu', not to the place name."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct this question: 'Te oletteko suomalaisia?'",
+          "answer": "Oletteko te suomalaisia?"
+        },
+        {
+          "prompt": "Fix the placement: 'Sinä puhutko englantia?'",
+          "answer": "Puhutko sinä englantia?"
+        }
+      ]
+    },
+    {
+      "rule_id": "adessive-for-possession",
+      "topic": "Adessive for possession",
+      "title": "Using Adessive for Possession (Have/Have Not)",
+      "explanation": "In Finnish, possession is expressed with the adessive case (ending -lla/-llä) of the possessor, followed by the verb 'on' (is). A common mistake is using the nominative form of the pronoun or omitting 'on'. For example, 'I have a book' is 'Minulla on kirja', not 'Minä on kirja'.",
+      "examples": [
+        {
+          "wrong": "Minä on kirja.",
+          "right": "Minulla on kirja.",
+          "note": "Use the adessive 'minulla' instead of the nominative 'minä'."
+        },
+        {
+          "wrong": "Hänellä on auto.",
+          "right": "Hänellä on auto.",
+          "note": "This is already correct (adessive + 'on'). If you said 'Hän on auto', it would mean 'He is a car'."
+        },
+        {
+          "wrong": "Meillä kissa.",
+          "right": "Meillä on kissa.",
+          "note": "Do not omit the verb 'on'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'I have a car'?",
+          "answer": "Minulla on auto."
+        },
+        {
+          "prompt": "How do you say 'She has a cat'?",
+          "answer": "Hänellä on kissa."
+        },
+        {
+          "prompt": "How do you say 'We have a house'?",
+          "answer": "Meillä on talo."
+        }
+      ]
+    },
+    {
+      "rule_id": "translative-case-usage",
+      "topic": "Translative case usage",
+      "title": "Translative Case (-ksi): When Things Change",
+      "explanation": "The translative case (ending -ksi) indicates a change of state, role, or transformation. Use it after verbs like tulla (become), muuttua (turn into), and when studying to become something. A common mistake is using the essive case (-na) for a current state or the partitive case, instead of translative for changes.",
+      "examples": [
+        {
+          "wrong": "Hän on insinöörinä.",
+          "right": "Hän tulee insinööriksi.",
+          "note": "Use translative after 'tulla' (become) to indicate the new role, not essive for the current state."
+        },
+        {
+          "wrong": "Minä opiskelen lääkäriä.",
+          "right": "Minä opiskelen lääkäriksi.",
+          "note": "When studying to become something, use translative, not partitive."
+        },
+        {
+          "wrong": "Vesi muuttuu jäätä.",
+          "right": "Vesi muuttuu jääksi.",
+          "note": "Use translative after 'muuttua' (turn into) to show the result."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Finish the sentence: I want to become a doctor. Haluan tulla ____.",
+          "answer": "lääkäriksi"
+        },
+        {
+          "prompt": "The caterpillar turned into a butterfly. Toukka muuttuu ____.",
+          "answer": "perhoseksi"
+        },
+        {
+          "prompt": "She studies to be a teacher. Hän opiskelee ____.",
+          "answer": "opettajaksi"
+        }
+      ]
+    },
+    {
+      "rule_id": "essive-case-usage",
+      "topic": "Essive case usage",
+      "title": "Essive Case: Temporary State or Role",
+      "explanation": "The essive case (ending -na/-nä) in Finnish expresses a temporary state, role, or condition (e.g., 'as a student', 'on Monday'). It is often confused with the nominative or translative case. Use essive when something is temporarily or currently in a certain role or time.",
+      "examples": [
+        {
+          "wrong": "Hän on opettaja tänään.",
+          "right": "Hän on opettajana tänään.",
+          "note": "Use essive for a temporary role: 'He is working as a teacher today.' (Not a permanent identity.)"
+        },
+        {
+          "wrong": "Maanantaina olen koti.",
+          "right": "Maanantaina olen kotona.",
+          "note": "Essive is used for location in time expressions like 'on Monday', but 'kotona' is the essive of 'koti' (home) meaning 'at home'."
+        },
+        {
+          "wrong": "Hän toimi sihteeri.",
+          "right": "Hän toimi sihteerinä.",
+          "note": "After verbs like 'toimia' (to act as), use essive for the role: 'she acted as a secretary.'"
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct form: 'I work as a nurse.' (Teen työtä sairaanhoitaja...)",
+          "answer": "sairaanhoitajana"
+        },
+        {
+          "prompt": "Fill in: 'On Monday we will meet.' (Maanantai... tapaamme.)",
+          "answer": "Maanantaina"
+        },
+        {
+          "prompt": "Fill in: 'He is studying as an exchange student.' (Hän opiskelee vaihto-opiskelija...)",
+          "answer": "vaihto-opiskelijana"
+        }
+      ]
+    },
+    {
+      "rule_id": "a-infinitive-vs-ma-infinitive",
+      "topic": "A-infinitive vs MA-infinitive",
+      "title": "A-infinitive vs MA-infinitive: A Common Finnish Mistake",
+      "explanation": "In Finnish, the infinitive can appear as the A-infinitive (ending in -a/ä, e.g., 'puhua') or the MA-infinitive (ending in -ma/mä, e.g., 'puhumaan'). The correct form depends on the verb before it. For instance, verbs like 'haluta' (want), 'osata' (know how) and 'täytyy' (must) take the A-infinitive, while verbs like 'alkaa' (begin), 'pystyä' (be able) and 'ryhtyä' (start doing) take the MA-infinitive. Mixing them up is a typical error for learners.",
+      "examples": [
+        {
+          "wrong": "Haluan puhumaan suomea.",
+          "right": "Haluan puhua suomea.",
+          "note": "\"Haluta\" always requires the A-infinitive, not the MA-infinitive."
+        },
+        {
+          "wrong": "Aloitan puhua suomea.",
+          "right": "Aloitan puhumaan suomea.",
+          "note": "\"Aloittaa\" (begin) takes the MA-infinitive, not the A-infinitive."
+        },
+        {
+          "wrong": "Täytyy tekemään läksyt.",
+          "right": "Täytyy tehdä läksyt.",
+          "note": "\"Täytyy\" (must) is used with the A-infinitive, despite its meaning of obligation."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "I want to eat an apple. (Use 'haluta')",
+          "answer": "Haluan syödä omenan."
+        },
+        {
+          "prompt": "She starts to study. (Use 'alkaa')",
+          "answer": "Hän alkaa opiskelemaan."
+        },
+        {
+          "prompt": "I can speak Finnish. (Use 'osata')",
+          "answer": "Osaan puhua suomea."
+        }
+      ]
+    },
+    {
+      "rule_id": "imperative-mood-formation",
+      "topic": "Imperative mood formation",
+      "title": "Forming the Finnish Imperative (2nd Person Singular)",
+      "explanation": "The Finnish imperative for the 2nd person singular (you, one person) is formed by dropping the infinitive ending -a/-ä (or -da/-dä for type 2 verbs) and using the stem. A common mistake is using the infinitive form directly instead of the correct imperative stem.",
+      "examples": [
+        {
+          "wrong": "Puhua!",
+          "right": "Puhu!",
+          "note": "For type 1 verbs, remove -a from the infinitive."
+        },
+        {
+          "wrong": "Ostaa!",
+          "right": "Osta!",
+          "note": "Same rule applies to verbs like ostaa."
+        },
+        {
+          "wrong": "Tulla!",
+          "right": "Tule!",
+          "note": "For type 3 verbs (e.g., tulla, mennä), the stem changes: tule-."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'Speak!' (to one person) in Finnish?",
+          "answer": "Puhu!"
+        },
+        {
+          "prompt": "How do you say 'Come!' (to one person)?",
+          "answer": "Tule!"
+        },
+        {
+          "prompt": "How do you say 'Take!' (to one person)?",
+          "answer": "Ota!"
+        }
+      ]
+    },
+    {
+      "rule_id": "passive-voice-forms",
+      "topic": "Passive voice forms",
+      "title": "Avoiding Overuse of Passive Voice in Finnish",
+      "explanation": "In Finnish, the passive voice is used much less frequently than in English, especially in spoken language and informal writing. A common mistake is translating English passive constructions directly, which can sound unnatural. Instead, use active voice or the impersonal 'one' form ('tehdään') where appropriate.",
+      "examples": [
+        {
+          "wrong": "Minä olen rakastettu.",
+          "right": "Minua rakastetaan.",
+          "note": "'Olen rakastettu' is a direct translation of 'I am loved' but the passive marker -taan/-tään is preferred for general statements."
+        },
+        {
+          "wrong": "Se on tehty minun toimesta.",
+          "right": "Se tehtiin minun toimestani.",
+          "note": "Avoid 'on tehty' + agent; use simple past passive or active instead."
+        },
+        {
+          "wrong": "Kirja on luettu monien ihmisten toimesta.",
+          "right": "Kirjaa on luettu paljon.",
+          "note": "The agent construction 'monien ihmisten toimesta' is unnatural; use zero agent or active."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the sentence: 'Auto on pesty minun toimestani.'",
+          "answer": "Auto pestiin minun toimestani."
+        },
+        {
+          "prompt": "Rewrite this English passive naturally in Finnish: 'The meeting is held every week.'",
+          "answer": "Kokous pidetään joka viikko."
+        },
+        {
+          "prompt": "Fix the overuse: 'Minä olen kutsuttu juhliin.'",
+          "answer": "Minut on kutsuttu juhliin."
+        }
+      ]
+    },
+    {
+      "rule_id": "ordinal-numbers-usage",
+      "topic": "Ordinal numbers usage",
+      "title": "Ordinal Numbers Usage: Common Mistakes",
+      "explanation": "In Finnish, ordinal numbers indicate order (first, second, third) and are used in dates and rankings. However, age is expressed with cardinal numbers in the partitive case (e.g., '20 vuotta'), and the result after verbs like 'tulla' (to come) requires the translative case (e.g., 'toiseksi'). A common mistake is using an ordinal form where a cardinal or a different case is needed.",
+      "examples": [
+        {
+          "wrong": "Olen kahdeskymmenes.",
+          "right": "Olen kaksikymmentä (vuotta).",
+          "note": "Age uses cardinal numbers, not ordinals."
+        },
+        {
+          "wrong": "Hän tuli toinen kilpailussa.",
+          "right": "Hän tuli toiseksi kilpailussa.",
+          "note": "After 'tulla' to indicate a result, use the translative case of the ordinal."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How old are you? (I am 25)",
+          "answer": "Olen kaksikymmentäviisi (vuotta)."
+        },
+        {
+          "prompt": "He came first in the race.",
+          "answer": "Hän tuli ensimmäiseksi kilpailussa."
+        },
+        {
+          "prompt": "What is the date? (It is May 3rd)",
+          "answer": "Se on toukokuun kolmas."
+        }
+      ]
+    },
+    {
+      "rule_id": "word-order-v2-rule",
+      "topic": "Word order V2 rule",
+      "title": "The V2 Rule: Verb Must Be Second",
+      "explanation": "In Finnish main clauses, the finite verb must always be in the second position when a sentence starts with something other than the subject. This is called the V2 rule. If you put a word like 'tänään' (today) or 'huomenna' (tomorrow) at the front, the verb comes next, not the subject.",
+      "examples": [
+        {
+          "wrong": "Tänään minä menen ostoksille.",
+          "right": "Tänään menen minä ostoksille.",
+          "note": "After 'Tänään', the verb 'menen' must be second, so the subject 'minä' moves after the verb."
+        },
+        {
+          "wrong": "Huomenna hän tulee kotiin.",
+          "right": "Huomenna tulee hän kotiin.",
+          "note": "Again, 'Huomenna' pushes the verb 'tulee' to the second slot, pushing the subject 'hän' after the verb."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the word order: 'Eilen minä kävin elokuvissa.' (Yesterday I went to the movies.)",
+          "answer": "Eilen kävin minä elokuvissa."
+        },
+        {
+          "prompt": "Fix this sentence: 'Aamulla sinä luet kirjaa.' (In the morning you read a book.)",
+          "answer": "Aamulla luet sinä kirjaa."
+        }
+      ]
+    },
+    {
+      "rule_id": "relative-pronoun-choice",
+      "topic": "Relative pronoun choice",
+      "title": "Choosing Between 'Joka' and 'Mikä' in Relative Clauses",
+      "explanation": "In Finnish, use 'joka' to refer to a specific noun (person or thing) in a relative clause. Use 'mikä' to refer to a whole previous clause or an indefinite/abstract concept. Both decline according to case, but they follow different declension patterns.",
+      "examples": [
+        {
+          "wrong": "Tämä on kirja, mikä on mielenkiintoinen.",
+          "right": "Tämä on kirja, joka on mielenkiintoinen.",
+          "note": "Use 'joka' because 'kirja' is a specific noun."
+        },
+        {
+          "wrong": "Hän myöhästyi, joka oli ikävää.",
+          "right": "Hän myöhästyi, mikä oli ikävää.",
+          "note": "Use 'mikä' because it refers to the whole preceding clause 'hän myöhästyi'."
+        },
+        {
+          "wrong": "Tämä on auto, mikä on nopea.",
+          "right": "Tämä on auto, joka on nopea.",
+          "note": "Use 'joka' because 'auto' is a specific noun."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank with the correct relative pronoun: 'Tämä on kissa, ____ on musta.'",
+          "answer": "joka"
+        },
+        {
+          "prompt": "Fill in the blank: 'Hän voitti kilpailun, ____ oli hienoa.'",
+          "answer": "mikä"
+        },
+        {
+          "prompt": "Choose the correct pronoun: 'Se on idea, (joka / mikä) on hyvä.'",
+          "answer": "joka"
+        }
+      ]
+    },
+    {
+      "rule_id": "vielä-vs-enää-distinction",
+      "topic": "Vielä vs enää distinction",
+      "title": "Vielä vs Enää: Still vs Anymore",
+      "explanation": "Both words translate to 'still' or 'anymore' in English, but they have opposite meanings. Use 'vielä' when a situation continues (affirmative), and 'enää' when it is stopping or no longer happening (often in negative sentences).",
+      "examples": [
+        {
+          "wrong": "Minulla on enää rahaa.",
+          "right": "Minulla on vielä rahaa.",
+          "note": "'I still have money' – the situation continues, so use 'vielä'."
+        },
+        {
+          "wrong": "En asu vielä täällä.",
+          "right": "En asu enää täällä.",
+          "note": "'I no longer live here' – the situation has ended, so use 'enää' with the negative verb."
+        },
+        {
+          "wrong": "Haluatko vielä kahvia?",
+          "right": "Haluatko vielä kahvia? (correct already – but compare with 'enää')",
+          "note": "This is actually a correct use of 'vielä' in a question: 'Do you still want coffee?' – affirmative meaning."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I don't have any more apples.' Use 'enää' and the negative verb.",
+          "answer": "Minulla ei ole enää omenoita."
+        },
+        {
+          "prompt": "Translate: 'She is still sleeping.' Use 'vielä'.",
+          "answer": "Hän nukkuu vielä."
+        },
+        {
+          "prompt": "Fill in: 'He doesn't work here ______.' (anymore)",
+          "answer": "Hän ei työskentele enää täällä."
+        }
+      ]
+    },
+    {
+      "rule_id": "paljon-vs-moni-distinction",
+      "topic": "Paljon vs moni distinction",
+      "title": "Paljon vs Moni: Many vs A Lot of",
+      "explanation": "In Finnish, 'paljon' means 'a lot of' or 'much' and is used with uncountable nouns (like water, money) or with countable nouns in the plural partitive form (e.g., 'paljon kirjoja'). 'Moni' (plural 'monet') means 'many' and is used with countable nouns, typically in singular ('moni ihminen') or plural ('monet ihmiset'). The common mistake is using 'paljon' with singular countable nouns (e.g., 'paljon kirja') or 'moni' with uncountable nouns.",
+      "examples": [
+        {
+          "wrong": "Paljon ihmiset",
+          "right": "Monet ihmiset",
+          "note": "'Ihmiset' is a countable plural noun; use 'monet' for 'many people'."
+        },
+        {
+          "wrong": "Moni maito",
+          "right": "Paljon maitoa",
+          "note": "'Maito' (milk) is uncountable; use 'paljon' plus partitive."
+        },
+        {
+          "wrong": "Paljon kirja",
+          "right": "Paljon kirjoja",
+          "note": "Even with 'paljon', countable nouns must be in plural partitive (kirjoja), not singular."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'many children' in Finnish?",
+          "answer": "Monet lapset"
+        },
+        {
+          "prompt": "How do you say 'a lot of water' in Finnish?",
+          "answer": "Paljon vettä"
+        },
+        {
+          "prompt": "How do you say 'many books' (emphasizing the number of individual books) in Finnish?",
+          "answer": "Monet kirjat"
+        }
+      ]
+    }
+  ]
+}

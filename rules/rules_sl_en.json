@@ -1,0 +1,873 @@
+{
+  "learning": "sl",
+  "interface": "en",
+  "generated_at": "2026-06-27T18:38:26.337014+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "cases",
+      "topic": "Cases",
+      "title": "Using the Accusative Case after Verbs",
+      "explanation": "In Slovenian, verbs like 'videti' (to see) and 'imeti' (to have) require the object to be in the accusative case. The most common mistake for beginners is using the nominative form instead. For feminine nouns ending in -a, the accusative ending changes to -o; for masculine animate nouns, it often changes to -a.",
+      "examples": [
+        {
+          "wrong": "Vidim hiša.",
+          "right": "Vidim hišo.",
+          "note": "'Hiša' is feminine; accusative changes to 'hišo'."
+        },
+        {
+          "wrong": "Imam knjiga.",
+          "right": "Imam knjigo.",
+          "note": "'Knjiga' is feminine; accusative changes to 'knjigo'."
+        },
+        {
+          "wrong": "Kupujem miza.",
+          "right": "Kupujem mizo.",
+          "note": "'Miza' is feminine; accusative changes to 'mizo'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the sentence: 'I have a cat.' (mačka - feminine, use 'imam')",
+          "answer": "Imam mačko."
+        },
+        {
+          "prompt": "Correct the sentence: 'I see a boy.' (fant - masculine animate, accusative changes to 'fanta')",
+          "answer": "Vidim fanta."
+        },
+        {
+          "prompt": "Translate: 'I am buying a flower.' (roža - feminine, use 'kupujem')",
+          "answer": "Kupujem rožo."
+        }
+      ]
+    },
+    {
+      "rule_id": "dual-number",
+      "topic": "Dual number",
+      "title": "Mastering the Dual Number in Slovenian",
+      "explanation": "Slovenian uses a special grammatical form called the dual for exactly two people or things. English does not have this, so learners often mistakenly use the plural instead. For nouns, adjectives, and verbs, you must use dual forms after the numbers 'dva' (masculine) or 'dve' (feminine/neuter).",
+      "examples": [
+        {
+          "wrong": "Dva avtomobili so rdeči.",
+          "right": "Dva avtomobila sta rdeča.",
+          "note": "Use the dual noun ending '-a' and the dual verb 'sta' instead of the plural forms."
+        },
+        {
+          "wrong": "Imam dve knjige.",
+          "right": "Imam dve knjigi.",
+          "note": "After 'dve', feminine nouns take the dual form (knjigi), not the plural (knjige)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate into Slovenian using the dual: 'Two boys are playing.'",
+          "answer": "Dva fanta se igrata."
+        },
+        {
+          "prompt": "Fill in the blank with the correct dual form: 'I saw two cats.' (use accusative case)",
+          "answer": "Videl sem dve mački."
+        }
+      ]
+    },
+    {
+      "rule_id": "verb-aspect",
+      "topic": "Verb aspect",
+      "title": "Mastering Verb Aspect in Slovenian",
+      "explanation": "Slovenian verbs come in two aspects: imperfective (ongoing, repeated, or habitual actions) and perfective (completed, single, or resultative actions). English speakers often confuse them because English relies more on tenses. Use imperfective for actions in progress or repeated, and perfective for finished actions or single events.",
+      "examples": [
+        {
+          "wrong": "Včeraj sem bral knjigo.",
+          "right": "Včeraj sem prebral knjigo.",
+          "note": "Use perfective 'prebral' for a completed action like 'read the whole book yesterday'."
+        },
+        {
+          "wrong": "Vsak dan preberem knjigo.",
+          "right": "Vsak dan berem knjigo.",
+          "note": "Use imperfective 'berem' for a habitual/repeated action ('I read a book every day')."
+        },
+        {
+          "wrong": "Zdaj je naredil domačo nalogo.",
+          "right": "Zdaj dela domačo nalogo.",
+          "note": "Use imperfective 'dela' for an ongoing action ('He is doing homework now')."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I have already written the letter.' (Perfective, completed action)",
+          "answer": "Že sem napisal pismo."
+        },
+        {
+          "prompt": "Translate: 'I often write letters.' (Imperfective, habitual action)",
+          "answer": "Pogosto pišem pisma."
+        },
+        {
+          "prompt": "Translate: 'She is cooking dinner right now.' (Imperfective, ongoing)",
+          "answer": "Zdaj kuha večerjo."
+        }
+      ]
+    },
+    {
+      "rule_id": "word-order",
+      "topic": "Word order",
+      "title": "Word Order with Clitic Pronouns",
+      "explanation": "In Slovenian, short object pronouns (clitics like ga, jo, mi, te) must come immediately after the first verb or stressed word, not after the main verb as in English. A common mistake is placing them at the end of the sentence.",
+      "examples": [
+        {
+          "wrong": "Jaz vidim ga.",
+          "right": "Jaz ga vidim.",
+          "note": "The clitic 'ga' (him) goes before the verb 'vidim'."
+        },
+        {
+          "wrong": "Ona daje mu jabolko.",
+          "right": "Ona mu daje jabolko.",
+          "note": "The clitic 'mu' (to him) must come before 'daje'."
+        },
+        {
+          "wrong": "Jaz kličem te.",
+          "right": "Jaz te kličem.",
+          "note": "The clitic 'te' (you, informal) is placed before the verb 'kličem'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct this sentence: 'Jaz dam mu knjigo.'",
+          "answer": "Jaz mu dam knjigo."
+        },
+        {
+          "prompt": "Translate 'I see you (informal)' with correct word order.",
+          "answer": "Jaz te vidim."
+        },
+        {
+          "prompt": "Fix the word order: 'Midva kličeva jo.' (We two call her.)",
+          "answer": "Midva jo kličeva."
+        }
+      ]
+    },
+    {
+      "rule_id": "pitch-accent",
+      "topic": "Pitch accent",
+      "title": "Mastering Slovenian Pitch Accent",
+      "explanation": "Slovenian uses pitch accent (tonal stress) to distinguish words. Long vowels can have a falling tone (circumflex, e.g., ô) or a rising tone (acute, e.g., ó). Using the wrong tone can completely change the meaning, so pay close attention to pronunciation.",
+      "examples": [
+        {
+          "wrong": "Kupil sem móka.",
+          "right": "Kupil sem môka.",
+          "note": "Môka (falling) means 'flour', while móka (rising) means 'torment'."
+        },
+        {
+          "wrong": "Videl sem kôs.",
+          "right": "Videl sem kós.",
+          "note": "Kôs (falling) means 'piece', while kós (rising) means 'blackbird'."
+        },
+        {
+          "wrong": "To je pól.",
+          "right": "To je pôl.",
+          "note": "Pôl (falling) means 'half', while pól (rising) means 'pole'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Which Slovenian word with the correct accent means 'flour'?",
+          "answer": "môka"
+        },
+        {
+          "prompt": "How do you say 'blackbird' in Slovenian (with the right pitch accent)?",
+          "answer": "kós"
+        }
+      ]
+    },
+    {
+      "rule_id": "vowel-reduction",
+      "topic": "Vowel reduction",
+      "title": "Vowel Reduction in Unstressed Syllables",
+      "explanation": "In Slovenian, unstressed vowels—especially final -o—are pronounced shorter and more relaxed than their stressed counterparts. English speakers often over pronounce these vowels, making their speech sound unnatural. Focus on reducing the length and centralizing the vowel sound in unstressed positions.",
+      "examples": [
+        {
+          "wrong": "lepo",
+          "right": "lepo",
+          "note": "The final -o in 'lepo' is unstressed; pronounce it as a short, lax vowel (like the 'a' in 'sofa'), not a long 'oh'."
+        },
+        {
+          "wrong": "mleko",
+          "right": "mleko",
+          "note": "In 'mleko', stress is on the first syllable. The final -o should be reduced to a central, relaxed sound."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'window' in Slovenian? Remember to reduce the unstressed final vowel.",
+          "answer": "okno"
+        },
+        {
+          "prompt": "Say 'nice' (adverb) in Slovenian, with correct vowel reduction.",
+          "answer": "lepo"
+        }
+      ]
+    },
+    {
+      "rule_id": "vowel-length",
+      "topic": "Vowel length",
+      "title": "Vowel Length in Slovenian",
+      "explanation": "In Slovenian, vowel length can change the meaning of a word, even if the spelling is the same. Short and long vowels are distinguished by accent marks (e.g., ȍ for short, ó for long). English speakers often overlook this distinction, so it's important to practice hearing and saying the correct length.",
+      "examples": [
+        {
+          "wrong": "To je pol.",
+          "right": "To je pȍl.",
+          "note": "Short 'o' (pȍl) means 'half' – a common mistake is to use the wrong length, confusing it with 'pole'."
+        },
+        {
+          "wrong": "Vidim kosa.",
+          "right": "Vidim kósa.",
+          "note": "Long 'o' (kós) means 'blackbird'; short 'o' (kȍs) means 'piece' – the length changes the noun entirely."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you write 'half' in Slovenian? (Use the correct accent mark for vowel length.)",
+          "answer": "pȍl"
+        },
+        {
+          "prompt": "Which word means 'blackbird' – 'kȍs' or 'kós'? Write the correct form.",
+          "answer": "kós"
+        },
+        {
+          "prompt": "Write the Slovenian word for 'cup' (with a long 'u').",
+          "answer": "kúp"
+        }
+      ]
+    },
+    {
+      "rule_id": "infinitive-vs-supine-usage",
+      "topic": "Infinitive vs supine usage",
+      "title": "Infinitive vs Supine: When to Use Which",
+      "explanation": "In Slovenian, the infinitive ends in -ti (e.g., delati 'to work') and the supine ends in -t (e.g., delat). A common mistake is using the infinitive after verbs of motion (e.g., iti 'to go', priti 'to come'), which require the supine. Use the infinitive after modal verbs (e.g., morati, želeti) and in most other contexts.",
+      "examples": [
+        {
+          "wrong": "Grem delati.",
+          "right": "Grem delat.",
+          "note": "After the motion verb 'grem' (I go), use the supine 'delat'."
+        },
+        {
+          "wrong": "Moram delat.",
+          "right": "Moram delati.",
+          "note": "After the modal verb 'moram' (I must), use the infinitive 'delati'."
+        },
+        {
+          "wrong": "Prišel je jesti.",
+          "right": "Prišel je jest.",
+          "note": "After 'prišel je' (he came), use the supine 'jest'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct form (infinitive or supine) for the verb 'pisati' (to write): 'Želim ____' (I want to write).",
+          "answer": "Želim pisati."
+        },
+        {
+          "prompt": "Fill in the correct form for 'brati' (to read): 'Grem ____' (I'm going to read).",
+          "answer": "Grem brat."
+        },
+        {
+          "prompt": "Fill in the correct form for 'spati' (to sleep): 'Moraš ____' (You must sleep).",
+          "answer": "Moraš spati."
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-verbs-se-vs-si",
+      "topic": "Reflexive verbs se vs si",
+      "title": "Reflexive Verbs: se vs si",
+      "explanation": "In Slovenian, 'se' is used for direct reflexive actions (the subject acts upon itself), while 'si' is used for indirect reflexive actions (the subject does something for or to itself, often with a body part or possession). Think of 'si' as the dative (to/for myself) and 'se' as the accusative (myself).",
+      "examples": [
+        {
+          "wrong": "Umivam si roke.",
+          "right": "Umivam si roke.",
+          "note": "Correct! 'Si' is used because the action is done to one's own hands (indirect object)."
+        },
+        {
+          "wrong": "Umivam se obraz.",
+          "right": "Umivam si obraz.",
+          "note": "'Si' is needed because the face belongs to the subject; 'se' would mean washing oneself entirely."
+        },
+        {
+          "wrong": "On se umije.",
+          "right": "On se umije.",
+          "note": "Correct! 'Se' is used when the subject washes himself (direct reflexive)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "I brush my teeth. (brush = umivati)",
+          "answer": "Umivam si zobe."
+        },
+        {
+          "prompt": "She is dressing herself. (dress = oblačiti)",
+          "answer": "Ona se oblači."
+        },
+        {
+          "prompt": "He is washing his hair. (wash = umivati)",
+          "answer": "Umiva si lase."
+        }
+      ]
+    },
+    {
+      "rule_id": "future-tense-formation",
+      "topic": "Future tense formation",
+      "title": "Future Tense: Perfective vs Imperfective Verbs",
+      "explanation": "In Slovenian, the future tense uses different forms depending on verb aspect. For imperfective verbs (ongoing or repeated actions), use the auxiliary 'bom' + infinitive. For perfective verbs (completed or one-time actions), the present tense already indicates the future, so do NOT add 'bom'. A common mistake is using 'bom' with perfective verbs.",
+      "examples": [
+        {
+          "wrong": "Jutri bom naredil nalogo.",
+          "right": "Jutri naredim nalogo.",
+          "note": "'Narediti' is perfective; use present tense for future."
+        },
+        {
+          "wrong": "Naslednji teden bom kupil avto.",
+          "right": "Naslednji teden kupim avto.",
+          "note": "'Kupiti' is perfective; avoid 'bom'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Correct the sentence: 'Sporočil ti bom, ko pridem.'",
+          "answer": "Sporočim ti, ko pridem."
+        },
+        {
+          "prompt": "Correct the sentence: 'Po kosilu bom pospravil sobo.'",
+          "answer": "Po kosilu pospravim sobo."
+        }
+      ]
+    },
+    {
+      "rule_id": "imperative-mood-irregularities",
+      "topic": "Imperative mood irregularities",
+      "title": "Imperative Mood Irregularities in Slovenian",
+      "explanation": "Some common Slovenian verbs have irregular imperative forms that don't follow the regular pattern of adding -i, -imo, -ite to the infinitive stem. Instead, they use a different root or change the spelling. Memorize these key irregular imperatives to avoid mistakes.",
+      "examples": [
+        {
+          "wrong": "Priti sem!",
+          "right": "Pridi sem!",
+          "note": "The verb 'priti' (to come) uses the stem 'prid-' in the imperative instead of 'prit-'."
+        },
+        {
+          "wrong": "Dati mi knjigo!",
+          "right": "Daj mi knjigo!",
+          "note": "The verb 'dati' (to give) drops the -ti and becomes 'daj' in the imperative singular."
+        },
+        {
+          "wrong": "Reči kaj!",
+          "right": "Reci kaj!",
+          "note": "The verb 'reči' (to say) loses the 'č' and becomes 'reci' in the imperative singular."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complete with the correct imperative form: '______ (priti) jutri na obisk.'",
+          "answer": "Pridi"
+        },
+        {
+          "prompt": "Complete with the correct imperative form: '______ (dati) mi roko.'",
+          "answer": "Daj"
+        },
+        {
+          "prompt": "Complete with the correct imperative form: '______ (reči) ime.'",
+          "answer": "Reci"
+        }
+      ]
+    },
+    {
+      "rule_id": "conditional-mood-formation",
+      "topic": "Conditional mood formation",
+      "title": "Forming the Conditional Mood with 'bi'",
+      "explanation": "In Slovenian, the conditional mood is formed using the invariable particle 'bi' followed by the past participle (l‑participle) of the main verb. The participle must agree with the subject in gender and number. A common mistake for English speakers is to use the present tense after 'bi' instead of the participle, or to omit the agreement.",
+      "examples": [
+        {
+          "wrong": "Jaz bi delam.",
+          "right": "Jaz bi delal.",
+          "note": "Use the past participle (delal) after 'bi', not the present tense (delam)."
+        },
+        {
+          "wrong": "Ona bi hodi.",
+          "right": "Ona bi hodila.",
+          "note": "The participle must match the gender and number of the subject (hodila for feminine singular)."
+        },
+        {
+          "wrong": "Mi bi gremo.",
+          "right": "Mi bi šli.",
+          "note": "The verb 'iti' has an irregular past participle (šli)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'I would work' (for a male speaker) in Slovenian?",
+          "answer": "Jaz bi delal."
+        },
+        {
+          "prompt": "How do you say 'She would walk' in Slovenian?",
+          "answer": "Ona bi hodila."
+        },
+        {
+          "prompt": "How do you say 'We would go' in Slovenian?",
+          "answer": "Mi bi šli."
+        }
+      ]
+    },
+    {
+      "rule_id": "past-participle-gender-agreement",
+      "topic": "Past participle gender agreement",
+      "title": "Past Participle Gender Agreement in Slovenian",
+      "explanation": "In Slovenian, the past participle (used in compound past tenses) must agree in gender (masculine, feminine, neuter) and number with the subject. English often ignores this, so a common mistake is using the masculine form for feminine or neutral subjects. Always match the participle ending to the subject's gender.",
+      "examples": [
+        {
+          "wrong": "Jaz sem bil doma.",
+          "right": "Jaz sem bila doma.",
+          "note": "For a female speaker, 'bila' (feminine) replaces 'bil' (masculine)."
+        },
+        {
+          "wrong": "Mi smo šli v trgovino.",
+          "right": "Mi smo šle v trgovino.",
+          "note": "If the group is all female, use 'šle' (feminine plural) instead of 'šli' (masculine plural)."
+        },
+        {
+          "wrong": "Ona je prebral knjigo.",
+          "right": "Ona je prebrala knjigo.",
+          "note": "The feminine singular participle adds -a: 'prebrala' instead of 'prebral'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I (feminine) was happy.'",
+          "answer": "Bila sem srečna."
+        },
+        {
+          "prompt": "Translate: 'We (masculine) came.'",
+          "answer": "Prišli smo."
+        },
+        {
+          "prompt": "Translate: 'She wrote a letter.'",
+          "answer": "Ona je napisala pismo."
+        }
+      ]
+    },
+    {
+      "rule_id": "comparative-and-superlative-irregular-adjectives",
+      "topic": "Comparative and superlative irregular adjectives",
+      "title": "Irregular Comparatives and Superlatives in Slovenian",
+      "explanation": "Some common adjectives in Slovenian have irregular comparative and superlative forms. Instead of adding '-ejši' or '-ši' regularly, the word stem changes (e.g., 'dober' becomes 'boljši', not 'dobrejši'). Memorize these irregular forms to avoid common mistakes.",
+      "examples": [
+        {
+          "wrong": "Ta film je dobrejši.",
+          "right": "Ta film je boljši.",
+          "note": "'dober' (good) becomes 'boljši' (better), not 'dobrejši'."
+        },
+        {
+          "wrong": "To je najslabejša hrana.",
+          "right": "To je najslabša hrana.",
+          "note": "'slab' (bad) becomes 'slabši' (worse) and 'najslabši' (worst), not 'slabejši'."
+        },
+        {
+          "wrong": "Njegova hiša je velikejša.",
+          "right": "Njegova hiša je večja.",
+          "note": "'velik' (big) becomes 'večji' (bigger), not 'velikejši'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct comparative form of 'dober': Ta knjiga je _______ (better) kot tista.",
+          "answer": "boljša"
+        },
+        {
+          "prompt": "Fill in the correct superlative form of 'slab': To je _______ (the worst) dan.",
+          "answer": "najslabši"
+        },
+        {
+          "prompt": "Fill in the correct comparative form of 'majhen' (small, which becomes 'manjši'): Moja soba je _______ (smaller) od tvoje.",
+          "answer": "manjša"
+        }
+      ]
+    },
+    {
+      "rule_id": "numerals-and-noun-case-agreement",
+      "topic": "Numerals and noun case agreement",
+      "title": "Numerals and Noun Agreement: Avoiding the Genitive Plural",
+      "explanation": "In Slovenian, numbers 2, 3, and 4 (and compound numbers ending in them) do not take the genitive plural. Instead, for 2 use the dual or genitive singular; for 3 and 4 use the nominative plural. A common mistake is to apply the genitive plural (used for 5 and above) to these numbers.",
+      "examples": [
+        {
+          "wrong": "dva avtomobilov",
+          "right": "dva avtomobila",
+          "note": "After 2 (masculine), use the genitive singular (same as dual), not the genitive plural."
+        },
+        {
+          "wrong": "trije avtomobilov",
+          "right": "trije avtomobili",
+          "note": "After 3 and 4 (masculine), use the nominative plural, not the genitive plural."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Complete: Dve ____ (knjiga) – two books.",
+          "answer": "knjigi"
+        },
+        {
+          "prompt": "Complete: Trije ____ (avtomobil) – three cars.",
+          "answer": "avtomobili"
+        },
+        {
+          "prompt": "Complete: Pet ____ (avtomobil) – five cars.",
+          "answer": "avtomobilov"
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-reflexive-svoj",
+      "topic": "Possessive reflexive svoj",
+      "title": "Using the Possessive Reflexive 'svoj' in Slovenian",
+      "explanation": "In Slovenian, the possessive reflexive 'svoj' (meaning 'one's own') must refer back to the subject of the sentence. It replaces other possessives (like 'moj', 'tvoj', 'njegov') when the owner is the same as the subject. A common mistake is to use a regular possessive pronoun instead of 'svoj' when the subject is the owner.",
+      "examples": [
+        {
+          "wrong": "Vidim njegovo knjigo.",
+          "right": "Vidim svojo knjigo.",
+          "note": "When the subject 'I' (jaz) is the owner, use 'svojo' (feminine accusative of svoj) instead of 'njegovo' (his)."
+        },
+        {
+          "wrong": "Marija je vzela njeno torbo.",
+          "right": "Marija je vzela svojo torbo.",
+          "note": "Since Marija is the subject and also the owner, use 'svojo' (her own) not 'njeno' (someone else's)."
+        },
+        {
+          "wrong": "Otroci so igrali z njihovimi igračami.",
+          "right": "Otroci so igrali s svojimi igračami.",
+          "note": "The children (subject) are playing with their own toys, so use 'svojimi' (instrumental plural of svoj)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'Peter is reading his (own) book.' (Peter is the subject and owner.)",
+          "answer": "Peter bere svojo knjigo."
+        },
+        {
+          "prompt": "Correct the mistake: 'Včeraj sem posodila njegovo svinčnik.' (The pencil belongs to me, the speaker.)",
+          "answer": "Včeraj sem posodila svoj svinčnik."
+        },
+        {
+          "prompt": "Fill in the blank with the correct form of 'svoj': 'Oni so prodali _____ hišo.' (They sold their own house.)",
+          "answer": "svojo"
+        }
+      ]
+    },
+    {
+      "rule_id": "vocalic-r-pronunciation",
+      "topic": "Vocalic R pronunciation",
+      "title": "Mastering the Vocalic R in Slovenian",
+      "explanation": "In Slovenian, the letter 'r' can act as a vowel, forming its own syllable. This occurs when 'r' is between two consonants or at the end of a word after a consonant. Unlike English, where 'r' is always a consonant, the Slovenian vocalic 'r' is pronounced as a short, rolled vowel sound (like a quick 'er' without an extra vowel). Avoid inserting a vowel before or after it.",
+      "examples": [
+        {
+          "wrong": "turg",
+          "right": "trg",
+          "note": "Pronounce 'trg' as one syllable with a rolled vocalic r, not as 'turg'."
+        },
+        {
+          "wrong": "vert",
+          "right": "vrt",
+          "note": "The 'r' in 'vrt' is a vowel; do not say 'ver-t'."
+        },
+        {
+          "wrong": "kerv",
+          "right": "krv",
+          "note": "Keep the r as a syllabic sound; no extra vowel."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you spell the Slovenian word for 'market' (the one with a vocalic r)?",
+          "answer": "trg"
+        },
+        {
+          "prompt": "Which is the correct Slovenian spelling for 'garden'? a) vert  b) vrt",
+          "answer": "vrt"
+        },
+        {
+          "prompt": "Fill in the blank: The Slovenian word for 'death' is ______.",
+          "answer": "smrt"
+        }
+      ]
+    },
+    {
+      "rule_id": "palatal-consonants-distinction",
+      "topic": "Palatal consonants distinction",
+      "title": "Palatal Consonants: lj, nj, č vs l, n, c",
+      "explanation": "Slovenian has palatal consonants (soft sounds) that are different from their plain counterparts. For example, 'lj' is like the 'lli' in 'million', 'nj' like the 'ny' in 'canyon', and 'č' like the 'ch' in 'chat'. English speakers often substitute the plain versions (l, n, c), which changes the meaning or sounds foreign.",
+      "examples": [
+        {
+          "wrong": "Lubjana",
+          "right": "Ljubljana",
+          "note": "The 'lj' is a palatal lateral, not a simple 'l'."
+        },
+        {
+          "wrong": "nihov",
+          "right": "njihov",
+          "note": "The 'nj' is a palatal nasal, like 'ny' in 'canyon'."
+        },
+        {
+          "wrong": "cas",
+          "right": "čas",
+          "note": "The 'č' is a palatal affricate (like 'ch'), not a plain 'ts' sound."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct palatal consonant: The Slovenian word for 'horse' is ko__.",
+          "answer": "konj"
+        },
+        {
+          "prompt": "Write the correct form of 'their' (possessive) in Slovenian:",
+          "answer": "njihov"
+        },
+        {
+          "prompt": "How do you say 'time' in Slovenian? Use the correct consonant.",
+          "answer": "čas"
+        }
+      ]
+    },
+    {
+      "rule_id": "final-l-pronounced-as-u",
+      "topic": "Final L pronounced as u",
+      "title": "Pronouncing Final L in Slovenian",
+      "explanation": "In standard Slovenian, the letter L at the end of a word is pronounced as a clear L sound (like in English 'bell'), not as a 'u' or English 'w'. Many speakers mistakenly pronounce it as 'u' due to dialect influence, but the correct pronunciation requires a distinct L. This rule applies to all words ending in L.",
+      "examples": [
+        {
+          "wrong": "sou",
+          "right": "sol",
+          "note": "The word for 'salt' ends with L, not 'u'."
+        },
+        {
+          "wrong": "pou",
+          "right": "pol",
+          "note": "'Pol' means 'half' and must end with a clear L."
+        },
+        {
+          "wrong": "dau",
+          "right": "dal",
+          "note": "In the past tense 'dal' (he gave), the final L is pronounced as L."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the Slovenian word for 'salt' with the correct final consonant.",
+          "answer": "sol"
+        },
+        {
+          "prompt": "Correct the misspelling: 'pou' should be written as...",
+          "answer": "pol"
+        },
+        {
+          "prompt": "How do you spell the past tense of 'give' (he gave) in standard Slovenian?",
+          "answer": "dal"
+        }
+      ]
+    },
+    {
+      "rule_id": "formal-vs-informal-address",
+      "topic": "Formal vs informal address",
+      "title": "Formal vs Informal Address in Slovenian",
+      "explanation": "In Slovenian, you must choose between informal 'ti' (used with friends, family, children) and formal 'vi' (used with strangers, superiors, elders, or in professional settings). The verb form changes accordingly: informal uses the second-person singular, while formal uses the second-person plural (even when addressing one person). Using the wrong form can be seen as rude or overly familiar.",
+      "examples": [
+        {
+          "wrong": "Kako si?",
+          "right": "Kako ste?",
+          "note": "When addressing a teacher or stranger, use 'ste' (formal) instead of 'si' (informal)."
+        },
+        {
+          "wrong": "Kaj želiš?",
+          "right": "Kaj želite?",
+          "note": "In a shop or formal request, use 'želite' (formal) instead of 'želiš' (informal)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How would you formally greet your boss in the morning? (use 'good morning' and the formal verb)",
+          "answer": "Dobro jutro, kako ste?"
+        },
+        {
+          "prompt": "You are at a restaurant. Ask the waiter politely: 'What would you like to order?' (formal singular)",
+          "answer": "Kaj bi želeli naročiti?"
+        },
+        {
+          "prompt": "A child asks you informally: 'Where are you going?' Write the same question but addressed formally to an adult.",
+          "answer": "Kam greste?"
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciation-of-v-as-wu-in-coda",
+      "topic": "Pronunciation of v as w/u in coda",
+      "title": "Pronunciation of 'v' at the end of words (coda)",
+      "explanation": "In Slovenian, when the letter 'v' appears at the end of a syllable or word, it is pronounced like the English 'w' or a short 'u', not like English 'v'. English speakers often mistakenly pronounce it as a hard 'v', which sounds foreign. The correct pronunciation turns 'v' into a glide (similar to the 'w' in 'how' or 'u' in 'out').",
+      "examples": [
+        {
+          "wrong": "leu",
+          "right": "lev",
+          "note": "The final 'v' in 'lev' (lion) sounds like 'u' or 'w', not 'v'."
+        },
+        {
+          "wrong": "pou",
+          "right": "pov",
+          "note": "In 'pov' (fairy tale), the 'v' at the end is pronounced as a glide, not a fricative."
+        },
+        {
+          "wrong": "kou",
+          "right": "kov",
+          "note": "Similarly, 'kov' (metal) ends with a 'v' that is pronounced like 'w' or 'u'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the Slovenian word for 'lion' (remember the pronunciation rule).",
+          "answer": "lev"
+        },
+        {
+          "prompt": "Write the Slovenian word for 'fairy tale' (ends with 'v').",
+          "answer": "pov"
+        },
+        {
+          "prompt": "Write the Slovenian word for 'metal' (correct spelling).",
+          "answer": "kov"
+        }
+      ]
+    },
+    {
+      "rule_id": "negation-ni-vs-ne",
+      "topic": "Negation ni vs ne",
+      "title": "Negation: 'ni' vs 'ne'",
+      "explanation": "In Slovenian, 'ne' is the general negation word placed before verbs (e.g., 'ne vem' = I don't know). 'Ni' is the negative form of the verb 'biti' (to be) for third person singular, meaning 'is not' (e.g., 'To ni dobro' = That is not good). A common mistake is using 'ni' where 'ne' is needed or vice versa.",
+      "examples": [
+        {
+          "wrong": "Ni vem.",
+          "right": "Ne vem.",
+          "note": "Use 'ne' before verbs like 'vem' (I know). 'Ni' means 'is not'."
+        },
+        {
+          "wrong": "To ne je dobro.",
+          "right": "To ni dobro.",
+          "note": "Use 'ni' for 'is not' after a subject. 'Ne' cannot stand alone with 'je'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'I don't speak Slovenian.'",
+          "answer": "Ne govorim slovensko."
+        },
+        {
+          "prompt": "Translate 'This is not mine.'",
+          "answer": "To ni moje."
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-da-clauses-vs-infinitive",
+      "topic": "Use of da-clauses vs infinitive",
+      "title": "Da-clauses vs Infinitive: When to Use Which",
+      "explanation": "In Slovenian, some verbs require an infinitive (e.g., modal verbs like 'hočem', 'moram', 'lahko'), while others need a 'da'-clause followed by a present tense verb (e.g., 'upam', 'želim', 'mislim'). A common mistake is using 'da' where the infinitive should stand, or vice versa. The key rule: if the subject of the main verb and the dependent verb are the same, modal-like verbs take the infinitive; if expressing hope, desire, or thought, use 'da' + present.",
+      "examples": [
+        {
+          "wrong": "Hočem da jem.",
+          "right": "Hočem jesti.",
+          "note": "After 'hočem' (want), use the infinitive, not 'da' + present."
+        },
+        {
+          "wrong": "Upam iti.",
+          "right": "Upam, da grem.",
+          "note": "After 'upam' (hope), you need a 'da'-clause with a present tense verb."
+        },
+        {
+          "wrong": "Rad bi da grem.",
+          "right": "Rad bi šel.",
+          "note": "'Rad bi' (would like) takes the infinitive (or past participle in this case), not 'da'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "I have to go.",
+          "answer": "Moram iti."
+        },
+        {
+          "prompt": "I hope that you come.",
+          "answer": "Upam, da prideš."
+        },
+        {
+          "prompt": "I want to learn Slovenian.",
+          "answer": "Hočem se naučiti slovenščine."
+        }
+      ]
+    },
+    {
+      "rule_id": "gender-of-nouns-with-unexpected-endings",
+      "topic": "Gender of nouns with unexpected endings",
+      "title": "Gender of Nouns with Unexpected Endings",
+      "explanation": "In Slovenian, nouns ending in -a are usually feminine, but some are masculine (e.g., 'sluga' – servant). Conversely, nouns ending in a consonant are typically masculine, but some common words like 'pot' (path) and 'noč' (night) are feminine. Pay attention to these exceptions to use correct adjective forms.",
+      "examples": [
+        {
+          "wrong": "Ta sluga je lepa.",
+          "right": "Ta sluga je lep.",
+          "note": "'Sluga' ends in -a but is masculine, so the adjective must be masculine ('lep')."
+        },
+        {
+          "wrong": "Ta pot je velik.",
+          "right": "Ta pot je velika.",
+          "note": "'Pot' ends in a consonant but is feminine, so the adjective must be feminine ('velika')."
+        },
+        {
+          "wrong": "Ta noč je kratek.",
+          "right": "Ta noč je kratka.",
+          "note": "'Noč' ends in a consonant but is feminine, so the adjective must be feminine ('kratka')."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank with the correct form of 'lep' for 'sluga': 'Ta sluga je ______.'",
+          "answer": "lep"
+        },
+        {
+          "prompt": "Fill in the blank with the correct form of 'velik' for 'pot': 'Ta pot je ______.'",
+          "answer": "velika"
+        },
+        {
+          "prompt": "Fill in the blank with the correct form of 'kratek' for 'noč': 'Ta noč je ______.'",
+          "answer": "kratka"
+        }
+      ]
+    },
+    {
+      "rule_id": "passive-construction-with-se",
+      "topic": "Passive construction with se",
+      "title": "Passive Construction with 'se'",
+      "explanation": "In Slovenian, the passive voice is often formed using the reflexive pronoun 'se' before the verb in the present or past tense. A common mistake for English speakers is using the past participle (like 'je odprto') instead of the 'se' form to describe an ongoing or habitual passive action. Remember: 'se' + verb in the active form creates a passive meaning for third-person subjects.",
+      "examples": [
+        {
+          "wrong": "Okno je zaprto.",
+          "right": "Okno se zapira.",
+          "note": "Use 'se' + present tense verb for an action in progress ('the window is being closed'), not the past participle which describes a state ('the window is closed')."
+        },
+        {
+          "wrong": "Angleščina govori se.",
+          "right": "Angleščina se govori.",
+          "note": "Place 'se' immediately before the verb in a main clause, not after it – 'se govori' is correct, not 'govori se'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'The door is being opened.'",
+          "answer": "Vrata se odpirajo."
+        },
+        {
+          "prompt": "Correct the sentence: 'Knjiga je brana.' (to express present passive)",
+          "answer": "Knjiga se bere."
+        },
+        {
+          "prompt": "Fill in the blank: 'Slovenščina ___ govori.' (use the correct passive form)",
+          "answer": "se"
+        }
+      ]
+    }
+  ]
+}

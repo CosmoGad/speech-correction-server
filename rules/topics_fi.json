@@ -1,0 +1,105 @@
+{
+  "learning": "fi",
+  "topics": [
+    {
+      "rule_id": "cases",
+      "title": "Cases"
+    },
+    {
+      "rule_id": "consonant-gradation",
+      "title": "Consonant gradation"
+    },
+    {
+      "rule_id": "vowel-harmony",
+      "title": "Vowel harmony"
+    },
+    {
+      "rule_id": "postpositions",
+      "title": "Postpositions"
+    },
+    {
+      "rule_id": "vowel-length",
+      "title": "Vowel length"
+    },
+    {
+      "rule_id": "double-consonants",
+      "title": "Double consonants"
+    },
+    {
+      "rule_id": "frontback-vowels",
+      "title": "Front/back vowels"
+    },
+    {
+      "rule_id": "partitive-after-numbers",
+      "title": "Partitive after numbers"
+    },
+    {
+      "rule_id": "object-case-selection",
+      "title": "Object case selection"
+    },
+    {
+      "rule_id": "plural-formation-and-t-plural",
+      "title": "Plural formation and t-plural"
+    },
+    {
+      "rule_id": "possessive-suffix-usage",
+      "title": "Possessive suffix usage"
+    },
+    {
+      "rule_id": "negative-verb-conjugation",
+      "title": "Negative verb conjugation"
+    },
+    {
+      "rule_id": "conditional-mood-formation",
+      "title": "Conditional mood formation"
+    },
+    {
+      "rule_id": "question-suffix-placement",
+      "title": "Question suffix placement"
+    },
+    {
+      "rule_id": "adessive-for-possession",
+      "title": "Adessive for possession"
+    },
+    {
+      "rule_id": "translative-case-usage",
+      "title": "Translative case usage"
+    },
+    {
+      "rule_id": "essive-case-usage",
+      "title": "Essive case usage"
+    },
+    {
+      "rule_id": "a-infinitive-vs-ma-infinitive",
+      "title": "A-infinitive vs MA-infinitive"
+    },
+    {
+      "rule_id": "imperative-mood-formation",
+      "title": "Imperative mood formation"
+    },
+    {
+      "rule_id": "passive-voice-forms",
+      "title": "Passive voice forms"
+    },
+    {
+      "rule_id": "ordinal-numbers-usage",
+      "title": "Ordinal numbers usage"
+    },
+    {
+      "rule_id": "word-order-v2-rule",
+      "title": "Word order V2 rule"
+    },
+    {
+      "rule_id": "relative-pronoun-choice",
+      "title": "Relative pronoun choice"
+    },
+    {
+      "rule_id": "vielä-vs-enää-distinction",
+      "title": "Vielä vs enää distinction"
+    },
+    {
+      "rule_id": "paljon-vs-moni-distinction",
+      "title": "Paljon vs moni distinction"
+    }
+  ]
+}

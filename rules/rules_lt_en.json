@@ -1,0 +1,814 @@
+{
+  "learning": "lt",
+  "interface": "en",
+  "generated_at": "2026-06-27T19:39:56.766042+00:00",
+  "model": "deepseek-v4-flash",
+  "rules": [
+    {
+      "rule_id": "cases",
+      "topic": "Cases",
+      "title": "Using the Correct Case After Prepositions (su, be)",
+      "explanation": "In Lithuanian, prepositions like 'su' (with) and 'be' (without) require specific cases: 'su' takes the instrumental case, and 'be' takes the genitive case. A common mistake for English speakers is using the nominative form (e.g., 'su aš' instead of 'su manimi'). Always learn which case a preposition demands.",
+      "examples": [
+        {
+          "wrong": "Aš einu su tu.",
+          "right": "Aš einu su tavimi.",
+          "note": "'su' requires the instrumental case – 'tavimi' is the correct form, not 'tu'."
+        },
+        {
+          "wrong": "Jis yra be aš.",
+          "right": "Jis yra be manęs.",
+          "note": "'be' requires the genitive case – 'manęs' is correct, not 'aš'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'with us' in Lithuanian?",
+          "answer": "su mumis"
+        },
+        {
+          "prompt": "How do you say 'without them' (masculine) in Lithuanian?",
+          "answer": "be jų"
+        }
+      ]
+    },
+    {
+      "rule_id": "verb-conjugation",
+      "topic": "Verb conjugation",
+      "title": "Present Tense Verb Conjugation: Don't Use the Infinitive",
+      "explanation": "In Lithuanian, every verb must be conjugated to agree with its subject. A common mistake English speakers make is using the infinitive form (e.g., 'dirbti' – to work) instead of the correct personal ending. For example, 'aš dirbti' is wrong; you must say 'aš dirbu' (I work). Memorize the present tense endings for each person.",
+      "examples": [
+        {
+          "wrong": "Aš dirbti",
+          "right": "Aš dirbu",
+          "note": "Use the first person singular ending '-u', not the infinitive."
+        },
+        {
+          "wrong": "Jis dirbti",
+          "right": "Jis dirba",
+          "note": "Third person singular ends with '-a' (or '-ia' for certain verbs)."
+        },
+        {
+          "wrong": "Mes dirbti",
+          "right": "Mes dirbame",
+          "note": "First person plural ending is '-ame' (or '-ime' for some verbs)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Conjugate the verb 'skaityti' (to read) for the subject 'Aš' (I).",
+          "answer": "Aš skaitau"
+        },
+        {
+          "prompt": "Conjugate the verb 'rašyti' (to write) for the subject 'Tu' (you singular).",
+          "answer": "Tu rašai"
+        },
+        {
+          "prompt": "Conjugate the verb 'kalbėti' (to speak) for the subject 'Jie' (they masculine).",
+          "answer": "Jie kalba"
+        }
+      ]
+    },
+    {
+      "rule_id": "accentuation",
+      "topic": "Accentuation",
+      "title": "Common Accentuation Mistakes in Lithuanian",
+      "explanation": "In Lithuanian, stress is free and can fall on any syllable. A common beginner error is placing stress on the wrong syllable, especially for words like 'mokytojas' (teacher) where the stress is on the second syllable (mokýtojas), not the first. Similarly, 'darbas' (work) is stressed on the first syllable (dárbas), not the second.",
+      "examples": [
+        {
+          "wrong": "mókytojas",
+          "right": "mokýtojas",
+          "note": "The word for 'teacher' has stress on the second syllable, not the first."
+        },
+        {
+          "wrong": "darbàs",
+          "right": "dárbas",
+          "note": "The word for 'work' has stress on the first syllable, not the second."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Place the correct stress mark (´) on the word for 'work': darbas",
+          "answer": "dárbas"
+        },
+        {
+          "prompt": "Place the correct stress mark on the word for 'teacher': mokytojas",
+          "answer": "mokýtojas"
+        }
+      ]
+    },
+    {
+      "rule_id": "participles",
+      "topic": "Participles",
+      "title": "Participles: Choosing the Correct Form",
+      "explanation": "In Lithuanian, participles must agree in gender, number, and case with the noun they modify. A common mistake is using an active participle where a passive one is needed, or vice versa. For example, use the past passive participle (e.g., 'parašytas') for completed actions on an object, and the present active participle (e.g., 'rašantis') for the doer of an ongoing action.",
+      "examples": [
+        {
+          "wrong": "Knyga yra skaitanti.",
+          "right": "Knyga yra skaityta.",
+          "note": "Use the past passive participle ('skaityta') because the book is the object being read, not the one doing the reading."
+        },
+        {
+          "wrong": "Jis yra rašantis.",
+          "right": "Jis rašo.",
+          "note": "Do not use the present active participle with 'būti' for an ongoing action; use the simple present tense instead."
+        },
+        {
+          "wrong": "Moters, parašytos laišką, nebuvo namuose.",
+          "right": "Moters, parašiusios laišką, nebuvo namuose.",
+          "note": "For a past action performed by the subject, use the past active participle ('parašiusios'), not the passive form."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Combine the sentences using a participle: 'Mergina dainuoja. Mergina yra graži.'",
+          "answer": "Dainuojanti mergina yra graži."
+        },
+        {
+          "prompt": "Translate into Lithuanian using the correct participle: 'The written letter is on the table.'",
+          "answer": "Parašytas laiškas yra ant stalo."
+        },
+        {
+          "prompt": "Correct the mistake in this sentence: 'Vyras, rašytas laišką, yra gydytojas.'",
+          "answer": "Vyras, rašantis laišką, yra gydytojas."
+        }
+      ]
+    },
+    {
+      "rule_id": "pitch-accent",
+      "topic": "Pitch accent",
+      "title": "Understanding Lithuanian Pitch Accent",
+      "explanation": "In Lithuanian, pitch accent (acute vs. circumflex) can change the meaning of words that look similar. The acute accent (´) indicates a falling tone, while the circumflex (˜) indicates a rising tone. Using the wrong pitch leads to common mistakes, especially with long vowels and diphthongs.",
+      "examples": [
+        {
+          "wrong": "Aš valgiau kõšę.",
+          "right": "Aš valgiau kóšę.",
+          "note": "'kõšę' (circumflex) means 'sieved' (accusative), while 'kóšę' (acute) means 'porridge' – a common mix-up."
+        },
+        {
+          "wrong": "Užklijuok vóką.",
+          "right": "Užklijuok vóką.",
+          "note": "Actually both are spelled the same but differ in pitch; the wrong version uses 'vóką' (acute) for 'lid' instead of 'envelope'. The correct 'vóką' (acute) means envelope, while 'võką' (circumflex) means lid."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the blank: 'She ate ______.' (porridge).",
+          "answer": "kóšę"
+        },
+        {
+          "prompt": "Fill in the blank: 'He sealed the ______.' (envelope).",
+          "answer": "vóką"
+        },
+        {
+          "prompt": "Fill in the blank: 'The ______ is broken.' (lid).",
+          "answer": "Võkas"
+        }
+      ]
+    },
+    {
+      "rule_id": "longshort-vowels",
+      "topic": "Long/short vowels",
+      "title": "Mastering Lithuanian Long vs. Short Vowels",
+      "explanation": "In Lithuanian, vowel length changes the meaning of words. Short vowels are pronounced quickly, while long vowels are held longer and are often marked with a macron (e.g., a vs. ā, i vs. y). English speakers commonly miss this distinction, leading to confusion between words like 'būti' (to be) and 'buti' (apartments).",
+      "examples": [
+        {
+          "wrong": "buti",
+          "right": "būti",
+          "note": "'buti' means 'apartments' (plural of butas), while 'būti' means 'to be'. The long ū is essential."
+        },
+        {
+          "wrong": "suni",
+          "right": "šunį",
+          "note": "'suni' is incorrect; 'šunį' (dog, accusative) has a long ė sound and the nasal vowel ę. The short i vs. long y is critical."
+        },
+        {
+          "wrong": "kitas",
+          "right": "kytas",
+          "note": "'kitas' means 'other' but 'kytas' means 'a stick/cane'. The y (long i) vs. i (short i) changes the word."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the correct Lithuanian word for 'to be' (with a long vowel):",
+          "answer": "būti"
+        },
+        {
+          "prompt": "Which vowel is long in the word for 'dog' (accusative case)? Fill in the blank: š_nį",
+          "answer": "šunį"
+        },
+        {
+          "prompt": "Choose the correct word: 'kitas' or 'kytas' for 'a stick'.",
+          "answer": "kytas"
+        }
+      ]
+    },
+    {
+      "rule_id": "nasal-vowels",
+      "topic": "Nasal vowels",
+      "title": "Nasal Vowels in Lithuanian: Don't Add an 'n'!",
+      "explanation": "In Lithuanian, nasal vowels (ą, ę, į, ų) are pronounced with nasalization of the vowel itself, not as a vowel followed by a consonant like 'n' or 'm'. A common mistake is to say 'an' instead of a nasalized 'a'. The key is to let air flow through your nose while saying the vowel, without adding a separate 'n' sound.",
+      "examples": [
+        {
+          "wrong": "kans",
+          "right": "kąs",
+          "note": "The word 'kąs' means 'bite'; avoid saying 'kans'."
+        },
+        {
+          "wrong": "penk",
+          "right": "penk",
+          "note": "Actually 'penk' is fine—the mistake here is in words like 'pę́kti' vs. 'penkti'. Let's use a clearer example: 'ką́sti' (to bite) is often mispronounced as 'kansti'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the correct Lithuanian form for the word meaning 'five' (hint: no added 'n' after the vowel).",
+          "answer": "penk"
+        },
+        {
+          "prompt": "How do you correctly spell the word that sounds like 'lan' but is really a nasal vowel? (meaning: 'line' or 'strip')",
+          "answer": "lą"
+        }
+      ]
+    },
+    {
+      "rule_id": "word-order-svo-vs-free",
+      "topic": "Word order SVO vs free",
+      "title": "Word Order: SVO vs Free Order in Lithuanian",
+      "explanation": "Lithuanian word order is flexible because noun cases indicate who is doing what. The neutral order is Subject-Verb-Object (SVO), like in English. However, you can rearrange words for emphasis or style. A common mistake is using rigid SVO all the time, which can sound unnatural or miss the intended focus.",
+      "examples": [
+        {
+          "wrong": "Aš tave myliu.",
+          "right": "Tave aš myliu.",
+          "note": "Move the object to the front to emphasize it."
+        },
+        {
+          "wrong": "Jis skaito knygą.",
+          "right": "Knygą jis skaito.",
+          "note": "Fronting the object makes it the topic of the sentence."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'I eat an apple' but emphasize the apple.",
+          "answer": "Obuolį aš valgau."
+        },
+        {
+          "prompt": "Translate 'She loves him' but emphasize 'him'.",
+          "answer": "Jį ji myli."
+        },
+        {
+          "prompt": "Translate 'We see the car' but emphasize 'the car'.",
+          "answer": "Automobilį mes matome."
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-verbs-si-usage",
+      "topic": "Reflexive verbs -si usage",
+      "title": "Reflexive Verbs: The -si Ending",
+      "explanation": "In Lithuanian, reflexive verbs indicate that the subject acts upon itself. The reflexive marker -si is added to the end of the verb (e.g., 'prausti' becomes 'praustis' – to wash oneself). A common mistake is to omit -si when the action is reflexive, or to use it incorrectly with non-reflexive verbs. Always check if the verb expresses a self-directed action.",
+      "examples": [
+        {
+          "wrong": "Aš prausiu.",
+          "right": "Aš prausiuosi.",
+          "note": "Prausiu means 'I wash (something)'; prausiuosi means 'I wash myself.'"
+        },
+        {
+          "wrong": "Jis rengia.",
+          "right": "Jis rengiasi.",
+          "note": "Rengia means 'he dresses (someone)'; rengiasi means 'he dresses himself.'"
+        },
+        {
+          "wrong": "Mes mokome.",
+          "right": "Mes mokomės.",
+          "note": "Mokome means 'we teach'; mokomės means 'we learn/study (ourselves).'"
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'I am getting up' (reflexive verb keltis).",
+          "answer": "Aš keliuosi."
+        },
+        {
+          "prompt": "Translate 'She is washing (herself)' (reflexive verb praustis).",
+          "answer": "Ji prausiasi."
+        },
+        {
+          "prompt": "Translate 'We are learning' (reflexive verb mokytis).",
+          "answer": "Mes mokomės."
+        }
+      ]
+    },
+    {
+      "rule_id": "prepositions-with-cases",
+      "topic": "Prepositions with cases",
+      "title": "Prepositions with Cases: 'su' (with) + Instrumental",
+      "explanation": "In Lithuanian, the preposition 'su' (with) always requires the instrumental case. A common mistake is using the nominative or another case after 'su'. Remember to change the noun and adjective endings to the instrumental form (e.g., -u, -a, -i, -iais).",
+      "examples": [
+        {
+          "wrong": "Aš einu su draugas.",
+          "right": "Aš einu su draugu.",
+          "note": "After 'su', 'draugas' (friend) becomes 'draugu' (instrumental singular)."
+        },
+        {
+          "wrong": "Ji dirba su mažas vaikas.",
+          "right": "Ji dirba su mažais vaikais.",
+          "note": "Both 'mažas' (small) and 'vaikas' (child) change to instrumental plural: 'mažais vaikais'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I speak with the teacher.' (teacher = mokytojas, masculine)",
+          "answer": "Aš kalbu su mokytoju."
+        },
+        {
+          "prompt": "Fill in the blank: 'Jis gyvena su ______ (tėvai, parents)'.",
+          "answer": "tėvais"
+        }
+      ]
+    },
+    {
+      "rule_id": "numeral-agreement-with-nouns",
+      "topic": "Numeral agreement with nouns",
+      "title": "Numeral Agreement with Nouns: 2-4 vs 5-9",
+      "explanation": "In Lithuanian, the noun form changes depending on the numeral. After 1, use the nominative singular. After 2, 3, and 4, use the nominative plural. After 5 through 9 (and other numbers ending in 5-9, except 11-19), use the genitive plural. A common mistake is using the nominative plural after 5-9 or using the nominative singular after 2-4.",
+      "examples": [
+        {
+          "wrong": "Du studentas",
+          "right": "Du studentai",
+          "note": "After 2, 3, 4, the noun must be in nominative plural, not singular."
+        },
+        {
+          "wrong": "Penki studentai",
+          "right": "Penki studentų",
+          "note": "After 5-9, the noun must be in genitive plural, not nominative plural."
+        },
+        {
+          "wrong": "Trys obuolys",
+          "right": "Trys obuoliai",
+          "note": "Again, after 3 the noun is nominative plural."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Fill in the correct noun form: Čia yra du _____ (studentas).",
+          "answer": "studentai"
+        },
+        {
+          "prompt": "Fill in the correct noun form: Čia yra penki _____ (studentas).",
+          "answer": "studentų"
+        },
+        {
+          "prompt": "Fill in the correct noun form: Čia yra trys _____ (knyga).",
+          "answer": "knygos"
+        }
+      ]
+    },
+    {
+      "rule_id": "adjective-noun-gender-agreement",
+      "topic": "Adjective-noun gender agreement",
+      "title": "Adjective-Noun Gender Agreement in Lithuanian",
+      "explanation": "In Lithuanian, adjectives must match the gender of the noun they describe. Masculine nouns typically end in -as or -is, while feminine nouns end in -a or -ė. Adjectives change their endings: masculine adjectives often end in -as or -is, feminine adjectives in -a or -ė.",
+      "examples": [
+        {
+          "wrong": "geras mergina",
+          "right": "gera mergina",
+          "note": "\"Mergina\" (girl) is feminine, so the adjective \"geras\" (good) must become feminine \"gera\"."
+        },
+        {
+          "wrong": "graži vyras",
+          "right": "gražus vyras",
+          "note": "\"Vyras\" (man) is masculine, so the adjective \"graži\" (beautiful) must become masculine \"gražus\"."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'a big house'? (house = namas, masculine)",
+          "answer": "didelis namas"
+        },
+        {
+          "prompt": "How do you say 'a small cat'? (cat = katė, feminine)",
+          "answer": "maža katė"
+        }
+      ]
+    },
+    {
+      "rule_id": "comparative-and-superlative-forms",
+      "topic": "Comparative and superlative forms",
+      "title": "Comparative and Superlative Adjectives: Don't Use 'daugiau'!",
+      "explanation": "In Lithuanian, most adjectives form the comparative by adding the suffix -esnis (masculine) or -esnė (feminine), and the superlative by adding -iausias (masculine) or -iausia (feminine). A common mistake is using 'daugiau' (more) or 'labiausiai' (most) directly before the adjective, which is incorrect for standard adjectives – these words are used for quantities or with verbs, not for simple comparisons.",
+      "examples": [
+        {
+          "wrong": "daugiau geras",
+          "right": "geresnis",
+          "note": "Use the suffix -esnis instead of 'daugiau' for 'better'."
+        },
+        {
+          "wrong": "labiausiai geras",
+          "right": "geriausias",
+          "note": "Use the suffix -iausias instead of 'labiausiai' for 'the best'."
+        },
+        {
+          "wrong": "daugiau šiltas",
+          "right": "šiltesnis",
+          "note": "For 'warmer', add -esnis to the stem 'šilt-'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Write the comparative form of 'šaltas' (cold) for a masculine noun (e.g., 'colder day').",
+          "answer": "šaltesnis"
+        },
+        {
+          "prompt": "Write the superlative form of 'gražus' (beautiful) for a feminine noun (e.g., 'the most beautiful flower').",
+          "answer": "gražiausia"
+        },
+        {
+          "prompt": "What is the correct comparative of 'lengvas' (light) for a masculine noun?",
+          "answer": "lengvesnis"
+        }
+      ]
+    },
+    {
+      "rule_id": "negation-with-ne-and-double-negatives",
+      "topic": "Negation with ne- and double negatives",
+      "title": "Negation with ne- and Double Negatives",
+      "explanation": "In Lithuanian, negation requires both a negative verb (with prefix ne-) and a negative pronoun or adverb. This creates a double negative, which is grammatically correct. English speakers often mistakenly use only one negative, leading to errors.",
+      "examples": [
+        {
+          "wrong": "Aš mačiau nieko.",
+          "right": "Aš nieko nemačiau.",
+          "note": "The verb must have ne-; 'nieko' is correct for 'nothing'."
+        },
+        {
+          "wrong": "Aš niekada mačiau.",
+          "right": "Aš niekada nemačiau.",
+          "note": "The adverb 'niekada' (never) requires a negated verb."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I saw nobody.'",
+          "answer": "Aš nieko nemačiau."
+        },
+        {
+          "prompt": "Translate: 'I never go anywhere.'",
+          "answer": "Aš niekada niekur neinu."
+        }
+      ]
+    },
+    {
+      "rule_id": "question-formation-without-inversion",
+      "topic": "Question formation without inversion",
+      "title": "Question Formation Without Inversion",
+      "explanation": "In Lithuanian, you do not invert the subject and verb when forming questions, unlike English. Yes/no questions often start with 'ar' (or just use rising intonation), and wh-questions keep the subject before the verb. Avoid moving the verb before the subject.",
+      "examples": [
+        {
+          "wrong": "Ar esi tu studentas?",
+          "right": "Ar tu esi studentas?",
+          "note": "Keep subject (tu) before verb (esi) after 'ar'."
+        },
+        {
+          "wrong": "Kur eini tu?",
+          "right": "Kur tu eini?",
+          "note": "Wh-questions also maintain subject-verb order."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'Is the book on the table?' correctly.",
+          "answer": "Ar knyga yra ant stalo?"
+        },
+        {
+          "prompt": "Translate 'Where do you live?' correctly.",
+          "answer": "Kur tu gyveni?"
+        }
+      ]
+    },
+    {
+      "rule_id": "imperative-mood-formation",
+      "topic": "Imperative mood formation",
+      "title": "Forming the Imperative Mood in Lithuanian",
+      "explanation": "In Lithuanian, the imperative mood for the second person is formed from the verb stem. For informal singular (tu), add -k (e.g., valgyk). For formal or plural (jūs), add -kite (e.g., valgykite). A common mistake is using the infinitive form instead of the correct imperative ending.",
+      "examples": [
+        {
+          "wrong": "Valgyti!",
+          "right": "Valgyk!",
+          "note": "Infinitive 'valgyti' is incorrect; use the stem 'valgy-' plus -k for singular informal."
+        },
+        {
+          "wrong": "Eiti!",
+          "right": "Eik!",
+          "note": "Infinitive 'eiti' is wrong; use stem 'ei-' plus -k for singular informal."
+        },
+        {
+          "wrong": "Rašyk, mokiniai!",
+          "right": "Rašykite, mokiniai!",
+          "note": "When addressing multiple people (mokiniai = students), use the plural/formal ending -kite."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'Eat!' (informal, to one person)?",
+          "answer": "Valgyk!"
+        },
+        {
+          "prompt": "How do you say 'Write!' (formal or to multiple people)?",
+          "answer": "Rašykite!"
+        },
+        {
+          "prompt": "How do you say 'Go!' (informal, singular)?",
+          "answer": "Eik!"
+        }
+      ]
+    },
+    {
+      "rule_id": "conditional-mood-with-čiau-tum",
+      "topic": "Conditional mood with -čiau/-tum",
+      "title": "Using Conditional Mood: -čiau and -tum",
+      "explanation": "In Lithuanian, the conditional mood for 'I would' uses the ending -čiau (e.g., norėčiau), while 'you would' (singular informal) uses -tum (e.g., norėtum). A common mistake is swapping these endings—using -tum for first person or -čiau for second person. Remember: -čiau is for 'I', -tum is for 'you' (tu).",
+      "examples": [
+        {
+          "wrong": "Aš norėtum pavalgyti.",
+          "right": "Aš norėčiau pavalgyti.",
+          "note": "Use -čiau with 'aš' (I), not -tum."
+        },
+        {
+          "wrong": "Tu norėčiau eiti į kiną.",
+          "right": "Tu norėtum eiti į kiną.",
+          "note": "With 'tu' (you), use -tum, not -čiau."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How would you say 'I would like to read a book' in Lithuanian?",
+          "answer": "Aš norėčiau skaityti knygą."
+        },
+        {
+          "prompt": "How would you say 'You (singular) would buy a car' in Lithuanian?",
+          "answer": "Tu norėtum nusipirkti automobilį."
+        }
+      ]
+    },
+    {
+      "rule_id": "perfective-vs-imperfective-aspect",
+      "topic": "Perfective vs imperfective aspect",
+      "title": "Perfective vs Imperfective Aspect in Lithuanian",
+      "explanation": "Lithuanian verbs have two aspects: imperfective for ongoing, repeated, or habitual actions, and perfective for completed or single actions. English speakers often confuse them because English uses the same simple tense for both. For example, use imperfective for 'I read every day' (habitual) and perfective for 'I read this book yesterday' (completed).",
+      "examples": [
+        {
+          "wrong": "Aš perskaitau knygą kiekvieną dieną.",
+          "right": "Aš skaitau knygą kiekvieną dieną.",
+          "note": "Habitual actions (every day) need the imperfective aspect."
+        },
+        {
+          "wrong": "Vakar aš skaičiau tą knygą iki galo.",
+          "right": "Vakar aš perskaičiau tą knygą.",
+          "note": "Completed actions in the past (finished reading) need the perfective aspect."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate into Lithuanian (imperfective): 'I am writing a letter right now.'",
+          "answer": "Aš rašau laišką."
+        },
+        {
+          "prompt": "Translate into Lithuanian (perfective): 'I wrote a letter (and finished it) yesterday.'",
+          "answer": "Vakar aš parašiau laišką."
+        }
+      ]
+    },
+    {
+      "rule_id": "verbal-prefixes-and-meaning-change",
+      "topic": "Verbal prefixes and meaning change",
+      "title": "How Prefixes Change Verb Meaning in Lithuanian",
+      "explanation": "In Lithuanian, adding a prefix to a verb often changes the meaning from an ongoing or indefinite action to a completed or specific one. For example, 'rašyti' means 'to write' (in general), while 'parašyti' means 'to finish writing'. English speakers commonly forget to add prefixes when describing completed actions.",
+      "examples": [
+        {
+          "wrong": "Aš rašau laišką.",
+          "right": "Aš parašiau laišką.",
+          "note": "Without prefix, it means 'I am writing a letter' (ongoing); with 'pa-', it means 'I have written the letter' (completed)."
+        },
+        {
+          "wrong": "Jis geria arbatą.",
+          "right": "Jis išgėrė arbatą.",
+          "note": "'Gerti' is 'to drink'; 'išgerti' means 'to drink up/finish'. Use the prefix when the action is completed."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How would you say 'I have finished writing the report' in Lithuanian? Use the verb 'rašyti' with a prefix.",
+          "answer": "Aš parašiau ataskaitą."
+        },
+        {
+          "prompt": "Translate: 'She drank (all) the juice' using the correct prefix for completion.",
+          "answer": "Ji išgėrė sultis."
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-būti-as-copula-and-auxiliary",
+      "topic": "Use of būti as copula and auxiliary",
+      "title": "When to Use (and Not Use) 'būti'",
+      "explanation": "In Lithuanian, the verb 'būti' (to be) is not used as an auxiliary to form continuous tenses like in English—use the simple present instead. Additionally, in present tense, the copula 'būti' is often omitted, especially in third person, though it can be included for emphasis.",
+      "examples": [
+        {
+          "wrong": "Aš esu dirbantis.",
+          "right": "Aš dirbu.",
+          "note": "Do not combine 'būti' with a present participle; use simple present for ongoing actions."
+        },
+        {
+          "wrong": "Jis yra mokytojas.",
+          "right": "Jis mokytojas.",
+          "note": "In present tense, the copula is usually dropped; 'yra' is optional but less natural in everyday speech."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'I am eating' into Lithuanian without using 'būti'.",
+          "answer": "Aš valgau."
+        },
+        {
+          "prompt": "Translate 'She is a doctor' into Lithuanian, omitting the copula if possible.",
+          "answer": "Ji gydytoja."
+        },
+        {
+          "prompt": "Translate 'We had worked' (past perfect) using the correct auxiliary.",
+          "answer": "Mes buvome dirbę."
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-constructions-with-genitive",
+      "topic": "Possessive constructions with genitive",
+      "title": "Possessive Constructions with Genitive",
+      "explanation": "In Lithuanian, possession is shown by putting the owner in the genitive case before the thing owned. For masculine nouns, the genitive often ends in -o; for feminine nouns, it often ends in -os. Do not use a separate word like 'of' – just place the genitive form directly in front.",
+      "examples": [
+        {
+          "wrong": "Jonas knyga",
+          "right": "Jono knyga",
+          "note": "Jonas (nominative) becomes Jono (genitive) to show 'John's book'."
+        },
+        {
+          "wrong": "Mama namas",
+          "right": "Mamos namas",
+          "note": "Mama (nominative) becomes Mamos (genitive) to mean 'mother's house'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'Mary's dog' into Lithuanian.",
+          "answer": "Marijos šuo"
+        },
+        {
+          "prompt": "Translate 'the boy's bicycle' into Lithuanian.",
+          "answer": "berniuko dviratis"
+        },
+        {
+          "prompt": "Translate 'the teacher's book' into Lithuanian (assume teacher is feminine).",
+          "answer": "mokytojos knyga"
+        }
+      ]
+    },
+    {
+      "rule_id": "location-vs-direction-with-įantpo",
+      "topic": "Location vs direction with į/ant/po",
+      "title": "Location vs Direction with į/ant/po",
+      "explanation": "In Lithuanian, location (where something is) uses the locative case (e.g., -e, -yje) with prepositions like ant (on) and po (under). Direction (where something is going) uses the accusative case with these prepositions and with į (into). A common mistake is using the locative case when direction is needed, or vice versa.",
+      "examples": [
+        {
+          "wrong": "Aš einu mokykloje.",
+          "right": "Aš einu į mokyklą.",
+          "note": "When moving to a place, use į + accusative (mokyklą), not locative (mokykloje)."
+        },
+        {
+          "wrong": "Padėk knygą ant stalo (locative).",
+          "right": "Padėk knygą ant stalo (accusative).",
+          "note": "Same form? Actually, ant stalo can be locative (on the table) or accusative (onto the table) depending on verb. Here 'padėk' (put) implies direction, so accusative is correct, but note that masculine nouns like stalas have same ending in locative and accusative (stale vs stalą? Wait: locative - ant stalo (genitive? No, ant + genitive? Actually ant + genitive for location? No, ant + genitive is wrong. Let me correct: Lithuanian prepositions: ant (on) takes genitive for location? No, re-evaluate: In Lithuanian, ant + genitive for location (ant stalo - on the table), ant + accusative for direction (ant stalą - onto the table). But common usage often merges. To avoid confusion, I'll adjust example. Better example: 'Šuo po lova' (location, under the bed - instrumental? Actually po + instrumental for location (po lova), po + accusative for direction (po lovą). So use that.)"
+        },
+        {
+          "wrong": "Šuo bėga po lova.",
+          "right": "Šuo bėga po lovą.",
+          "note": "When the dog runs to a place under the bed, use po + accusative (lovą) for direction. For location (the dog is under the bed), use po + instrumental (lovà → lova)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'I am going to the park.' (park = parkas)",
+          "answer": "Aš einu į parką."
+        },
+        {
+          "prompt": "Translate: 'The cat is under the chair.' (chair = kėdė)",
+          "answer": "Katė po kėde."
+        },
+        {
+          "prompt": "Translate: 'Put the book on the shelf.' (shelf = lentyna)",
+          "answer": "Padėk knygą ant lentynos."
+        }
+      ]
+    },
+    {
+      "rule_id": "days-months-and-time-expressions",
+      "topic": "Days, months, and time expressions",
+      "title": "Days, Months, and Time Expressions in Lithuanian",
+      "explanation": "When saying 'on Monday' or 'in January', use the accusative case (no preposition). For days: pirmadienį. For months: sausį. Do not add 'ant' or 'per'. To state 'today is Monday', use the nominative: Šiandien pirmadienis.",
+      "examples": [
+        {
+          "wrong": "Aš dirbu ant pirmadienio.",
+          "right": "Aš dirbu pirmadienį.",
+          "note": "Use accusative for 'on Monday', not 'ant' + genitive."
+        },
+        {
+          "wrong": "Mūsų susitikimas yra sausyje.",
+          "right": "Mūsų susitikimas yra sausį.",
+          "note": "Use accusative for months (sausį), not locative (sausyje)."
+        },
+        {
+          "wrong": "Šiandien yra pirmadienį?",
+          "right": "Šiandien yra pirmadienis.",
+          "note": "When saying what day it is today, use nominative (pirmadienis), not accusative."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "How do you say 'on Tuesday' in Lithuanian?",
+          "answer": "antradienį"
+        },
+        {
+          "prompt": "Translate 'in February' to Lithuanian.",
+          "answer": "vasarį"
+        },
+        {
+          "prompt": "Complete: 'Šiandien yra ______' (today is Sunday).",
+          "answer": "sekmadienis"
+        }
+      ]
+    },
+    {
+      "rule_id": "definite-vs-indefinite-adjective-forms",
+      "topic": "Definite vs indefinite adjective forms",
+      "title": "Definite vs Indefinite Adjective Forms",
+      "explanation": "In Lithuanian, adjectives have two forms: indefinite (e.g., 'gražus') and definite (e.g., 'gražusis'). The definite form is used when the adjective refers to a specific, known noun (like English 'the' + adjective), while the indefinite form is used for general qualities or when the noun is not previously mentioned.",
+      "examples": [
+        {
+          "wrong": "Mėlynas dangus šiandien yra labai gražus.",
+          "right": "Mėlynasis dangus šiandien yra labai gražus.",
+          "note": "If you are talking about a specific sky (e.g., today's), use the definite form 'mėlynasis'."
+        },
+        {
+          "wrong": "Noriu didelės kavos.",
+          "right": "Noriu didelios kavos.",
+          "note": "'Didelės' is indefinite; correct definite form for a specific coffee (e.g., the one you are ordering) is 'didelios' (but here 'didelės' is actually indefinite genitive, not definite; the definite genitive would be 'dideliosios'. However, in context of ordering, it's usually indefinite. Better example: 'Aš geriu šaltą pieną' (indefinite) vs 'Aš geriu šaltąjį pieną' (definite, specific cold milk). Let's adjust."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate 'I see a big house.' (indefinite, general) into Lithuanian.",
+          "answer": "Matau didelį namą."
+        },
+        {
+          "prompt": "Translate 'I see the big house (that we talked about).' (definite, specific) into Lithuanian.",
+          "answer": "Matau didįjį namą."
+        }
+      ]
+    },
+    {
+      "rule_id": "dual-number-remnants-and-pluralia-tantum",
+      "topic": "Dual number remnants and pluralia tantum",
+      "title": "Dual Number Remnants and Pluralia Tantum: Using Collective Numerals",
+      "explanation": "In Lithuanian, some nouns exist only in the plural form (pluralia tantum), such as 'durys' (door) and 'žirklės' (scissors). To count these nouns, you must use special collective numerals (e.g., vienerios, dvejos, trejos) instead of regular cardinal numbers. Additionally, remnants of the dual number mean that body parts that come in pairs (like eyes, hands) are always plural, but they use regular cardinal numerals.",
+      "examples": [
+        {
+          "wrong": "du duris",
+          "right": "dvejos durys",
+          "note": "Use collective numerals for pluralia tantum like 'durys'."
+        },
+        {
+          "wrong": "vienerios akys",
+          "right": "dvi akys",
+          "note": "For paired body parts like 'akys' (eyes), use regular cardinal numerals (e.g., dvi, trys)."
+        },
+        {
+          "wrong": "trys žirklės",
+          "right": "trejos žirklės",
+          "note": "Always use collective numerals for pluralia tantum like 'žirklės' (scissors)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Translate: 'one door' (using correct numeral form)",
+          "answer": "vienerios durys"
+        },
+        {
+          "prompt": "Translate: 'two eyes'",
+          "answer": "dvi akys"
+        },
+        {
+          "prompt": "Translate: 'three scissors' (meaning three pairs of scissors)",
+          "answer": "trejos žirklės"
+        }
+      ]
+    }
+  ]
+}

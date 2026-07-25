@@ -1,0 +1,105 @@
+{
+  "learning": "lv",
+  "topics": [
+    {
+      "rule_id": "cases",
+      "title": "Cases"
+    },
+    {
+      "rule_id": "verb-conjugation",
+      "title": "Verb conjugation"
+    },
+    {
+      "rule_id": "definiteindefinite-adjectives",
+      "title": "Definite/indefinite adjectives"
+    },
+    {
+      "rule_id": "word-order",
+      "title": "Word order"
+    },
+    {
+      "rule_id": "long-vowels",
+      "title": "Long vowels"
+    },
+    {
+      "rule_id": "broken-tone",
+      "title": "Broken tone"
+    },
+    {
+      "rule_id": "palatalization",
+      "title": "Palatalization"
+    },
+    {
+      "rule_id": "noun-gender-assignment",
+      "title": "Noun gender assignment"
+    },
+    {
+      "rule_id": "declension-noun-patterns",
+      "title": "Declension noun patterns"
+    },
+    {
+      "rule_id": "reflexive-verbs-and-pronouns",
+      "title": "Reflexive verbs and pronouns"
+    },
+    {
+      "rule_id": "prepositional-case-usage",
+      "title": "Prepositional case usage"
+    },
+    {
+      "rule_id": "verbal-aspect-perfective-imperfective",
+      "title": "Verbal aspect perfective imperfective"
+    },
+    {
+      "rule_id": "debitive-mood-jā-construction",
+      "title": "Debitive mood jā construction"
+    },
+    {
+      "rule_id": "conditional-mood-usage",
+      "title": "Conditional mood usage"
+    },
+    {
+      "rule_id": "possessive-constructions-man-ir-vs-mana",
+      "title": "Possessive constructions man ir vs mana"
+    },
+    {
+      "rule_id": "numerals-and-noun-agreement",
+      "title": "Numerals and noun agreement"
+    },
+    {
+      "rule_id": "comparative-and-superlative-adjectives",
+      "title": "Comparative and superlative adjectives"
+    },
+    {
+      "rule_id": "existential-ir-there-is-are",
+      "title": "Existential ir there is are"
+    },
+    {
+      "rule_id": "conjunctions-ka-vs-lai",
+      "title": "Conjunctions ka vs lai"
+    },
+    {
+      "rule_id": "negative-pronouns-and-double-negation",
+      "title": "Negative pronouns and double negation"
+    },
+    {
+      "rule_id": "reflexive-possessive-savs",
+      "title": "Reflexive possessive savs"
+    },
+    {
+      "rule_id": "pronunciation-of-š-č-ž-dž",
+      "title": "Pronunciation of š č ž dž"
+    },
+    {
+      "rule_id": "word-stress-on-first-syllable",
+      "title": "Word stress on first syllable"
+    },
+    {
+      "rule_id": "final-consonant-pronunciation",
+      "title": "Final consonant pronunciation"
+    },
+    {
+      "rule_id": "demonstratives-tas-vs-šis",
+      "title": "Demonstratives tas vs šis"
+    }
+  ]
+}
