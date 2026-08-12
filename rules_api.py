@@ -2,7 +2,7 @@
 
 Wire it into the app with auth, e.g.:
     from rules_api import router as rules_router
-    app.include_router(rules_router, dependencies=[Depends(verify_api_key)])
+    app.include_router(rules_router, dependencies=[Depends(verify_client)])
 """
 
 from __future__ import annotations

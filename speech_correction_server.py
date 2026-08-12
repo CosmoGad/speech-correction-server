@@ -7,6 +7,7 @@ import sqlite3
 from datetime import datetime, timedelta
 from functools import lru_cache
 import threading
+from dataclasses import dataclass
 
 import regex as re
 from fastapi import FastAPI, HTTPException, Request, Depends, Security
@@ -21,6 +22,9 @@ from langdetect.lang_detect_exception import LangDetectException
 from openai import AsyncOpenAI, APIError, RateLimitError
 from dotenv import load_dotenv
 from logging.handlers import RotatingFileHandler
+import firebase_admin
+from firebase_admin import auth as firebase_auth
+from firebase_admin import credentials as firebase_credentials
 
 DetectorFactory.seed = 0
 load_dotenv()
@@ -59,16 +63,90 @@ if _deepseek_api_key:
         timeout=30.0,
     )
 
-# Client API key auth
+# Authentication migration
+#
+# Released clients up to Android 1.6.5 use X-API-Key, which is not a secret once
+# it has shipped in an APK/IPA. New clients send Firebase ID tokens instead. The
+# legacy path remains only as a temporary compatibility bridge; set
+# ALLOW_LEGACY_API_KEY=false after the migration window and rotate API_KEY.
 _api_key_header = APIKeyHeader(name="X-API-Key", auto_error=False)
 _server_api_key = os.getenv("API_KEY")
+_allow_legacy_api_key = os.getenv("ALLOW_LEGACY_API_KEY", "true").lower() == "true"
+_firebase_project_id = os.getenv("FIREBASE_PROJECT_ID", "speechcorrection-4118e")
+_firebase_service_account_json = os.getenv("FIREBASE_SERVICE_ACCOUNT_JSON")
+_firebase_ready = False
 
 
-async def verify_api_key(key: str = Security(_api_key_header)) -> None:
-    if not _server_api_key:
-        return  # API_KEY not set — open mode (dev/migration)
-    if key != _server_api_key:
-        raise HTTPException(status_code=401, detail="Invalid or missing API key")
+def _initialize_firebase_admin() -> bool:
+    """Initialise server-side Firebase token verification without a key file.
+
+    Fly secrets hold the service-account JSON as one value. Application Default
+    Credentials are also supported for local Google-managed environments.
+    Failure is non-fatal during the migration: existing legacy clients keep
+    working, but Bearer tokens are rejected until the secret is configured.
+    """
+    try:
+        try:
+            firebase_admin.get_app()
+            return True
+        except ValueError:
+            pass
+        if _firebase_service_account_json:
+            certificate = json.loads(_firebase_service_account_json)
+            firebase_admin.initialize_app(
+                firebase_credentials.Certificate(certificate),
+                {"projectId": _firebase_project_id},
+            )
+        else:
+            firebase_admin.initialize_app(options={"projectId": _firebase_project_id})
+        return True
+    except Exception as error:
+        logger.warning("Firebase Admin unavailable: %s", type(error).__name__)
+        return False
+
+
+@dataclass(frozen=True)
+class AuthenticatedClient:
+    """Trusted principal used for rate limits and audit-safe request metadata."""
+
+    principal_id: str
+    auth_scheme: str  # firebase | legacy
+
+
+def _bearer_token(request: Request) -> Optional[str]:
+    value = request.headers.get("Authorization", "")
+    scheme, _, token = value.partition(" ")
+    if scheme.lower() != "bearer" or not token.strip():
+        return None
+    return token.strip()
+
+
+async def verify_client(request: Request, key: str = Security(_api_key_header)) -> AuthenticatedClient:
+    """Accept a Firebase ID token, with a temporary legacy fallback.
+
+    Never trust a UID supplied by the client: `verify_id_token` verifies the
+    Firebase signature, audience, issuer and expiry before returning it.
+    """
+    token = _bearer_token(request)
+    if token:
+        if not _firebase_ready:
+            raise HTTPException(status_code=503, detail="Firebase authentication unavailable")
+        try:
+            decoded = firebase_auth.verify_id_token(token, check_revoked=False)
+        except Exception:
+            raise HTTPException(status_code=401, detail="Invalid or expired Firebase token")
+        uid = decoded.get("uid")
+        if not isinstance(uid, str) or not uid:
+            raise HTTPException(status_code=401, detail="Firebase token has no user id")
+        return AuthenticatedClient(principal_id=f"uid:{uid}", auth_scheme="firebase")
+
+    if _allow_legacy_api_key and _server_api_key and key == _server_api_key:
+        return AuthenticatedClient(
+            principal_id=f"legacy:{_get_client_ip(request)}",
+            auth_scheme="legacy",
+        )
+
+    raise HTTPException(status_code=401, detail="Missing or invalid authentication")
 
 
 # Load static configurations at startup
@@ -91,6 +169,8 @@ handler = RotatingFileHandler("app.log", maxBytes=10000000, backupCount=5, encod
 formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 handler.setFormatter(formatter)
 logger.addHandler(handler)
+
+_firebase_ready = _initialize_firebase_admin()
 
 SERVER_URL = os.getenv("SERVER_URL", "https://speech-correction.fly.dev")
 _is_prod = os.getenv("ENVIRONMENT", "production").lower() == "production"
@@ -116,11 +196,12 @@ app.add_middleware(
 )
 
 # Grammar rule book endpoints (GET /rules, GET /rule) — served from static JSON
-# in rules/ (see rules/README.md). Same X-API-Key auth as the other routes.
+# in rules/ (see rules/README.md). Same Firebase/legacy migration auth as the
+# other routes.
 from rules_api import router as rules_router
 import rules_store
 
-app.include_router(rules_router, dependencies=[Depends(verify_api_key)])
+app.include_router(rules_router, dependencies=[Depends(verify_client)])
 
 
 class RateLimiter:
@@ -658,14 +739,20 @@ response_cache = ResponseCache()
 async def process_text(
     request: Request,
     correction_request: CorrectionRequest,
-    _: None = Depends(verify_api_key),
+    client: AuthenticatedClient = Depends(verify_client),
 ):
     client_ip = _get_client_ip(request)
 
-    if not rate_limiter.is_allowed(client_ip):
+    if not rate_limiter.is_allowed(client.principal_id):
         raise HTTPException(status_code=429, detail="Too many requests")
 
-    logger.info(f"Request received from {client_ip}, lang={correction_request.language}, level={correction_request.level}, style={correction_request.style}")
+    logger.info(
+        "Request received auth=%s lang=%s level=%s style=%s",
+        client.auth_scheme,
+        correction_request.language,
+        correction_request.level,
+        correction_request.style,
+    )
 
     # Reuse a stored result for an identical request — saves a model call.
     cache_key = ResponseCache.make_key(
@@ -678,7 +765,7 @@ async def process_text(
     )
     cached = response_cache.get(cache_key)
     if cached is not None:
-        logger.info(f"Cache hit for {client_ip}")
+        logger.info("Cache hit auth=%s", client.auth_scheme)
         return JSONResponse(content=cached, media_type="application/json; charset=utf-8")
 
     if not _deepseek_client:
@@ -751,7 +838,7 @@ def _build_content(sections: Dict, request: CorrectionRequest) -> Dict:
 async def process_text_stream(
     request: Request,
     correction_request: CorrectionRequest,
-    _: None = Depends(verify_api_key),
+    client: AuthenticatedClient = Depends(verify_client),
 ):
     """Server-Sent Events variant of /process-text/. Emits the corrected text as
     soon as the model finishes it (the first, short field) so the client can show
@@ -762,7 +849,7 @@ async def process_text_stream(
     Events: `partial` {corrected_text}, then `result` {full analysis}, or `error`.
     """
     client_ip = _get_client_ip(request)
-    if not rate_limiter.is_allowed(client_ip):
+    if not rate_limiter.is_allowed(client.principal_id):
         raise HTTPException(status_code=429, detail="Too many requests")
 
     cache_key = ResponseCache.make_key(
@@ -835,12 +922,12 @@ async def get_rule_endpoint(
     learning: str,
     interface: str,
     rule_id: str,
-    _: None = Depends(verify_api_key),
+    client: AuthenticatedClient = Depends(verify_client),
 ):
     """Full lesson for one rule. Served from the pre-generated static file when
     available; otherwise generated on demand for a valid taxonomy key and cached
     (the "grows with use" path). See rules/DYNAMIC_RULES_SPEC.md."""
-    if not rate_limiter.is_allowed(_get_client_ip(request)):
+    if not rate_limiter.is_allowed(client.principal_id):
         raise HTTPException(status_code=429, detail="Too many requests")
     # 1) static pre-generated content
     try:
@@ -907,13 +994,13 @@ class ResolveRuleRequest(BaseModel):
 async def resolve_rule_endpoint(
     request: Request,
     body: ResolveRuleRequest,
-    _: None = Depends(verify_api_key),
+    client: AuthenticatedClient = Depends(verify_client),
 ):
     """Map a correction error to the best-matching rule_id from the fixed
     taxonomy (or null). The model can only SELECT an existing id, never invent
     one — the anti-duplication guarantee. POST keeps the user's text out of
     request URLs/logs; cached per error signature; rate-limited."""
-    if not rate_limiter.is_allowed(_get_client_ip(request)):
+    if not rate_limiter.is_allowed(client.principal_id):
         raise HTTPException(status_code=429, detail="Too many requests")
     learning = body.learning
     err_type = body.type
