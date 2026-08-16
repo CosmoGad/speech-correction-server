@@ -1603,12 +1603,58 @@ async def resolve_rule_endpoint(
     if not topics:
         return JSONResponse(content={"rule_id": None}, media_type=_RULE_MEDIA)
     threshold = float(os.getenv("RULE_MAPPING_MIN_CONFIDENCE", "0.75"))
-    resolved = (
-        rules_store.resolve_concept(learning, body.concept_code)
-        if body.concept_code and body.confidence >= threshold
-        else None
-    )
+    if body.concept_code and body.confidence >= threshold:
+        resolved = rules_store.resolve_concept(learning, body.concept_code)
+        return JSONResponse(content={"rule_id": resolved}, media_type=_RULE_MEDIA)
+
+    # Fallback for the v1 analysis contract, which carries no concept code.
+    # Without this the link from a correction to its rule is dead for every
+    # user: v1 is still the default, so nothing ever supplies a concept, and
+    # the client can only fall back to the full rule list.
+    #
+    # The model may only SELECT a code from the active taxonomy, so this cannot
+    # invent a rule, and "none" is a valid answer. Cached by error signature, so
+    # a given mistake costs one call across all users. Delete this branch once
+    # ANALYSIS_CONTRACT_VERSION is v2 everywhere.
+    resolved = await _resolve_rule_from_text(learning, body)
     return JSONResponse(content={"rule_id": resolved}, media_type=_RULE_MEDIA)
+
+
+async def _resolve_rule_from_text(learning: str,
+                                  body: "ResolveRuleRequest") -> Optional[str]:
+    if not (body.original or body.corrected or body.explanation):
+        return None
+    if not _deepseek_client:
+        return None
+
+    sig = rules_store.error_signature(
+        learning, body.type, body.original, body.corrected)
+    cache_key = f"resolve::{sig}"
+    cached = response_cache.get(cache_key)
+    if isinstance(cached, dict) and "rule_id" in cached:
+        return cached["rule_id"] or None
+
+    topics = rules_store.topics_with_concepts(learning)
+    if not topics:
+        return None
+    prompt = rules_store.build_concept_selection_prompt(
+        catalog_display_name(LANGUAGE_CATALOG, learning), topics,
+        body.type, body.original, body.corrected, body.explanation)
+    try:
+        raw = await _call_deepseek(
+            _deepseek_client, prompt, "Choose the topic now.",
+            feature="rule_resolution")
+        code = (rules_store.extract_json(raw) or {}).get("concept_code")
+        resolved = (rules_store.resolve_concept(learning, code)
+                    if isinstance(code, str) else None)
+    except Exception as e:
+        logger.warning(f"Rule resolution failed for {learning}: {type(e).__name__}")
+        return None
+
+    # Cache the miss too — an error with no matching rule should not pay for a
+    # model call every time someone opens it.
+    response_cache.put(cache_key, {"rule_id": resolved or ""})
+    return resolved
 
 
 @app.get("/health")

@@ -160,6 +160,45 @@ def topic_title(learning: str, rule_id: str) -> str | None:
     return None
 
 
+def error_signature(learning: str, err_type: str, original: str,
+                    corrected: str) -> str:
+    """Stable cache key for one mistake, so resolving it costs one model call
+    across all users who make it. Hashed rather than stored raw: the learner's
+    own words must not sit in a cache key."""
+    raw = json.dumps([
+        learning, (err_type or "").lower(),
+        (original or "").strip().lower(), (corrected or "").strip().lower(),
+    ], ensure_ascii=False)
+    return hashlib.sha256(raw.encode("utf-8")).hexdigest()
+
+
+def build_concept_selection_prompt(learning_name: str, topics: list[dict],
+                                   err_type: str, original: str,
+                                   corrected: str, explanation: str) -> str:
+    """Ask the model to pick ONE concept code for a V1 error, or none.
+
+    Used only while `ANALYSIS_CONTRACT_VERSION` is v1, which does not carry a
+    concept code. The model may only return a code from `topics`, so this cannot
+    mint a rule that does not exist — the same guarantee the V2 path gets for
+    free. Answering "none" is explicitly allowed: an unrelated lesson is worse
+    than no lesson.
+    """
+    catalogue = "\n".join(
+        f'{t["concept_code"]}  {t["title"]}' for t in topics)
+    return (
+        f"A learner of {learning_name} made one mistake. Choose the single "
+        "grammar topic from the list that explains it.\n\n"
+        f"Mistake category: {err_type or 'unknown'}\n"
+        f"They wrote: {original}\n"
+        f"It should be: {corrected}\n"
+        f"Why: {explanation}\n\n"
+        f"Topics (code, then title):\n{catalogue}\n\n"
+        'Return ONLY a JSON object: {"concept_code": "<one code from the list>"}'
+        '\nIf no topic genuinely explains this mistake, return '
+        '{"concept_code": null}. Never invent a code.'
+    )
+
+
 def build_rule_prompt(title: str, learning_name: str,
                       interface_name: str) -> str:
     """Mirror of the offline generator's prompt, so lazily-generated lessons
