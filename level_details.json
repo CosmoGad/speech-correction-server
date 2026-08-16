@@ -1,92 +1,188 @@
 {
   "A1": {
     "description": {
-      "Русский": "Начальный уровень. Базовые фразы и простые предложения.",
-      "English": "Beginner level. Basic phrases and simple sentences.",
-      "Deutsch": "Anfängerniveau. Grundlegende Phrasen und einfache Sätze.",
-      "Українська": "Початковий рівень. Базові фрази та прості речення.",
-      "Italiano": "Livello iniziale. Frasi di base e frasi semplici.",
-      "Français": "Niveau débutant. Phrases de base et phrases simples.",
-      "Español": "Nivel inicial. Frases básicas y oraciones simples.",
-      "Polski": "Poziom podstawowy. Podstawowe zwroty i proste zdania."
+      "ru": "Начальный уровень. Базовые фразы и простые предложения.",
+      "en": "Beginner level. Basic phrases and simple sentences.",
+      "de": "Anfängerniveau. Grundlegende Phrasen und einfache Sätze.",
+      "uk": "Початковий рівень. Базові фрази та прості речення.",
+      "it": "Livello iniziale. Frasi di base e frasi semplici.",
+      "fr": "Niveau débutant. Phrases de base et phrases simples.",
+      "es": "Nivel inicial. Frases básicas y oraciones simples.",
+      "pl": "Poziom podstawowy. Podstawowe zwroty i proste zdania.",
+      "ar": "المستوى المبتدئ. عبارات أساسية وجمل بسيطة.",
+      "da": "Begynder niveau. Grundlæggende sætninger og enkle udtryk.",
+      "fa": "سطح مبتدی. عبارات پایه و جملات ساده.",
+      "ku": "Astê destpêkê. Bêjeyên bingehîn û hevokên hêsan.",
+      "nl": "Beginniveau. Basisuitdrukkingen en eenvoudige zinnen.",
+      "no": "Nybegynner nivå. Grunnleggende fraser og enkle setninger.",
+      "pt": "Nível iniciante. Frases básicas e orações simples.",
+      "sv": "Nybörjarnivå. Grundläggande fraser och enkla meningar.",
+      "tr": "Başlangıç seviyesi. Temel ifadeler ve basit cümleler.",
+      "ur": "ابتدائی سطح۔ بنیادی فقرات اور سادہ جملے۔",
+      "sr": "Почетни ниво. Основне фразе и једноставне реченице.",
+      "es_MX": "Nivel inicial. Frases básicas y oraciones simples."
     },
     "complexity": "basic",
-    "explanation_style": "очень подробный, с примерами",
-    "grammar_focus": ["простое настоящее время", "личные местоимения", "базовые предлоги"]
+    "explanation_style": "very detailed, with examples",
+    "grammar_focus": [
+      "simple present tense",
+      "personal pronouns",
+      "basic prepositions"
+    ]
   },
   "A2": {
     "description": {
-      "Русский": "Элементарный уровень. Простые диалоги и описания.",
-      "English": "Elementary level. Simple dialogues and descriptions.",
-      "Deutsch": "Grundlegendes Niveau. Einfache Dialoge und Beschreibungen.",
-      "Українська": "Елементарний рівень. Прості діалоги та описи.",
-      "Italiano": "Livello elementare. Dialoghi semplici e descrizioni.",
-      "Français": "Niveau élémentaire. Dialogues simples et descriptions.",
-      "Español": "Nivel elemental. Diálogos simples y descripciones.",
-      "Polski": "Poziom podstawowy. Proste dialogi i opisy."
+      "ru": "Элементарный уровень. Простые диалоги и описания.",
+      "en": "Elementary level. Simple dialogues and descriptions.",
+      "de": "Grundlegendes Niveau. Einfache Dialoge und Beschreibungen.",
+      "uk": "Елементарний рівень. Прості діалоги та описи.",
+      "it": "Livello elementare. Dialoghi semplici e descrizioni.",
+      "fr": "Niveau élémentaire. Dialogues simples et descriptions.",
+      "es": "Nivel elemental. Diálogos simples y descripciones.",
+      "pl": "Poziom podstawowy. Proste dialogi i opisy.",
+      "ar": "المستوى الأساسي. حوارات بسيطة ووصف.",
+      "da": "Elementært niveau. Enkle dialoger og beskrivelser.",
+      "fa": "سطح ابتدایی. گفتگوها و توصیفات ساده.",
+      "ku": "Astê bingehîn. Diyalogên hêsan û dîroknivîs.",
+      "nl": "Elementair niveau. Eenvoudige dialogen en beschrijvingen.",
+      "no": "Elementært nivå. Enkle dialoger og beskrivelser.",
+      "pt": "Nível elementar. Diálogos simples e descrições.",
+      "sv": "Elementär nivå. Enkla dialoger och beskrivningar.",
+      "tr": "Temel seviye. Basit diyaloglar ve betimlemeler.",
+      "ur": "بنیادی سطح۔ سادہ مکالمے اور تفصیلات۔",
+      "sr": "Елементарни ниво. Једноставни дијалози и описи.",
+      "es_MX": "Nivel elemental. Diálogos simples y descripciones."
     },
     "complexity": "elementary",
-    "explanation_style": "подробный, с аналогиями",
-    "grammar_focus": ["прошедшее время", "простое будущее", "базовые союзы"]
+    "explanation_style": "detailed, with analogies",
+    "grammar_focus": [
+      "past tense",
+      "simple future tense",
+      "basic conjunctions"
+    ]
   },
   "B1": {
     "description": {
-      "Русский": "Средний уровень. Свободное общение на знакомые темы.",
-      "English": "Intermediate level. Free communication on familiar topics.",
-      "Deutsch": "Mittelstufe. Freie Kommunikation über vertraute Themen.",
-      "Українська": "Середній рівень. Вільне спілкування на знайомі теми.",
-      "Italiano": "Livello intermedio. Comunicazione libera su argomenti familiari.",
-      "Français": "Niveau intermédiaire. Communication libre sur des sujets familiers.",
-      "Español": "Nivel intermedio. Comunicación libre sobre temas familiares.",
-      "Polski": "Poziom średni. Swobodna komunikacja na znane tematy."
+      "ru": "Средний уровень. Свободное общение на знакомые темы.",
+      "en": "Intermediate level. Free communication on familiar topics.",
+      "de": "Mittelstufe. Freie Kommunikation über vertraute Themen.",
+      "uk": "Середній рівень. Вільне спілкування на знайомі теми.",
+      "it": "Livello intermedio. Comunicazione libera su argomenti familiari.",
+      "fr": "Niveau intermédiaire. Communication libre sur des sujets familiers.",
+      "es": "Nivel intermedio. Comunicación libre sobre temas familiares.",
+      "pl": "Poziom średni. Swobodna komunikacja na znane tematy.",
+      "ar": "المستوى المتوسط. تواصل حر حول مواضيع مألوفة.",
+      "da": "Mellemniveau. Fri kommunikation om velkendte emner.",
+      "fa": "سطح متوسط. ارتباط آزاد در مورد موضوعات آشنا.",
+      "ku": "Astê navîn. Ragihandina azad li ser mijarên nas.",
+      "nl": "Gemiddeld niveau. Vrije communicatie over bekende onderwerpen.",
+      "no": "Mellomnivå. Fri kommunikasjon om kjente emner.",
+      "pt": "Nível intermediário. Comunicação livre sobre tópicos familiares.",
+      "sv": "Mellanliggande nivå. Fri kommunikation om välbekanta ämnen.",
+      "tr": "Orta seviye. Tanıdık konularda serbest iletişim.",
+      "ur": "درمیانی سطح۔ واقف موضوعات پر آزادانہ گفتگو۔",
+      "sr": "Средњи ниво. Слободна комуникација на познате теме.",
+      "es_MX": "Nivel intermedio. Comunicación libre sobre temas familiares."
     },
     "complexity": "intermediate",
-    "explanation_style": "детальный, с контекстом",
-    "grammar_focus": ["все времена", "условные предложения", "модальные глаголы"]
+    "explanation_style": "detailed, with context",
+    "grammar_focus": [
+      "all tenses",
+      "conditional sentences",
+      "modal verbs"
+    ]
   },
   "B2": {
     "description": {
-      "Русский": "Средне-продвинутый уровень. Сложные темы и абстрактные понятия.",
-      "English": "Upper-intermediate level. Complex topics and abstract concepts.",
-      "Deutsch": "Höhere Mittelstufe. Komplexe Themen und abstrakte Konzepte.",
-      "Українська": "Вище середнього рівня. Складні теми та абстрактні поняття.",
-      "Italiano": "Livello intermedio superiore. Argomenti complessi e concetti astratti.",
-      "Français": "Niveau intermédiaire supérieur. Sujets complexes et concepts abstraits.",
-      "Español": "Nivel intermedio alto. Temas complejos y conceptos abstractos.",
-      "Polski": "Poziom średnio zaawansowany. Złożone tematy i abstrakcyjne pojęcia."
+      "ru": "Средне-продвинутый уровень. Сложные темы и абстрактные понятия.",
+      "en": "Upper-intermediate level. Complex topics and abstract concepts.",
+      "de": "Höhere Mittelstufe. Komplexe Themen und abstrakte Konzepte.",
+      "uk": "Вище середнього рівня. Складні теми та абстрактні поняття.",
+      "it": "Livello intermedio superiore. Argomenti complessi e concetti astratti.",
+      "fr": "Niveau intermédiaire supérieur. Sujets complexes et concepts abstraits.",
+      "es": "Nivel intermedio alto. Temas complejos y conceptos abstractos.",
+      "pl": "Poziom średnio zaawansowany. Złożone tematy i abstrakcyjne pojęcia.",
+      "ar": "المستوى فوق المتوسط. مواضيع معقدة ومفاهيم مجردة.",
+      "da": "Øvre mellemniveau. Komplekse emner og abstrakte begreber.",
+      "fa": "سطح بالای متوسط. موضوعات پیچیده و مفاهیم انتزاعی.",
+      "ku": "Astê navîn yê bilind. Mijarên kompleks û konseptên abstrakt.",
+      "nl": "Hoger gemiddeld niveau. Complexe onderwerpen en abstracte concepten.",
+      "no": "Høyere mellomnivå. Komplekse emner og abstrakte begreper.",
+      "pt": "Nível intermediário superior. Tópicos complexos e conceitos abstratos.",
+      "sv": "Högre mellannivå. Komplexa ämnen och abstrakta begrepp.",
+      "tr": "Üst orta seviye. Karmaşık konular ve soyut kavramlar.",
+      "ur": "اعلی درمیانی سطح۔ پیچیدہ موضوعات اور تجریدی تصورات۔",
+      "sr": "Виши средњи ниво. Сложене теме и апстрактни појмови.",
+      "es_MX": "Nivel intermedio alto. Temas complejos y conceptos abstractos."
     },
     "complexity": "upper-intermediate",
-    "explanation_style": "академический, с примерами из жизни",
-    "grammar_focus": ["сложные времена", "пассивный залог", "косвенная речь"]
+    "explanation_style": "academic, with real-life examples",
+    "grammar_focus": [
+      "complex tenses",
+      "passive voice",
+      "reported speech"
+    ]
   },
   "C1": {
     "description": {
-      "Русский": "Продвинутый уровень. Свободное владение языком.",
-      "English": "Advanced level. Fluent language proficiency.",
-      "Deutsch": "Fortgeschrittenes Niveau. Fließende Sprachkenntnisse.",
-      "Українська": "Просунутий рівень. Вільне володіння мовою.",
-      "Italiano": "Livello avanzato. Padronanza fluente della lingua.",
-      "Français": "Niveau avancé. Maîtrise fluide de la langue.",
-      "Español": "Nivel avanzado. Dominio fluido del idioma.",
-      "Polski": "Poziom zaawansowany. Biegła znajomość języka."
+      "ru": "Продвинутый уровень. Свободное владение языком.",
+      "en": "Advanced level. Fluent language proficiency.",
+      "de": "Fortgeschrittenes Niveau. Fließende Sprachkenntnisse.",
+      "uk": "Просунутий рівень. Вільне володіння мовою.",
+      "it": "Livello avanzato. Padronanza fluente della lingua.",
+      "fr": "Niveau avancé. Maîtrise fluide de la langue.",
+      "es": "Nivel avanzado. Dominio fluido del idioma.",
+      "pl": "Poziom zaawansowany. Biegła znajomość języka.",
+      "ar": "المستوى المتقدم. إتقان اللغة بطلاقة.",
+      "da": "Avanceret niveau. Flydende sprogfærdigheder.",
+      "fa": "سطح پیشرفته. تسلط روان بر زبان.",
+      "ku": "Astê pêşketî. Zimanê bi rêkûpêk.",
+      "nl": "Gevorderd niveau. Vloeiende taalvaardigheid.",
+      "no": "Avansert nivå. Flytende språkferdigheter.",
+      "pt": "Nível avançado. Domínio fluente do idioma.",
+      "sv": "Avancerad nivå. Flytande språkkunskaper.",
+      "tr": "İleri seviye. Akıcı dil becerisi.",
+      "ur": "اعلی سطح۔ زبان پر روانی سے عبور۔",
+      "sr": "Напредни ниво. Течно владање језиком.",
+      "es_MX": "Nivel avanzado. Dominio fluido del idioma."
     },
     "complexity": "advanced",
-    "explanation_style": "профессиональный, с литературными примерами",
-    "grammar_focus": ["все аспекты грамматики", "стилистические приемы", "идиомы"]
+    "explanation_style": "professional, with literary examples",
+    "grammar_focus": [
+      "all grammar aspects",
+      "stylistic devices",
+      "idioms"
+    ]
   },
   "C2": {
     "description": {
-      "Русский": "Уровень носителя языка. Совершенное владение.",
-      "English": "Native-like level. Perfect mastery.",
-      "Deutsch": "Muttersprachliches Niveau. Perfekte Beherrschung.",
-      "Українська": "Рівень носія мови. Досконале володіння.",
-      "Italiano": "Livello madrelingua. Padronanza perfetta.",
-      "Français": "Niveau natif. Maîtrise parfaite.",
-      "Español": "Nivel nativo. Dominio perfecto.",
-      "Polski": "Poziom rodzimego użytkownika. Doskonałe opanowanie."
+      "ru": "Уровень носителя языка. Совершенное владение.",
+      "en": "Native-like level. Perfect mastery.",
+      "de": "Muttersprachliches Niveau. Perfekte Beherrschung.",
+      "uk": "Рівень носія мови. Досконале володіння.",
+      "it": "Livello madrelingua. Padronanza perfetta.",
+      "fr": "Niveau natif. Maîtrise parfaite.",
+      "es": "Nivel nativo. Dominio perfecto.",
+      "pl": "Poziom rodzimego użytkownika. Doskonałe opanowanie.",
+      "ar": "مستوى اللغة الأم. إتقان تام.",
+      "da": "Modersmål-niveau. Perfekt beherskelse.",
+      "fa": "سطح زبان مادری. تسلط کامل.",
+      "ku": "Astê zimanê zikmakî. Rêkûpêk.",
+      "nl": "Moedertaalniveau. Perfecte beheersing.",
+      "no": "Morsmålsnivå. Perfekt beherskelse.",
+      "pt": "Nível nativo. Domínio perfeito.",
+      "sv": "Modersmålsnivå. Perfekt behärskning.",
+      "tr": "Anadil seviyesi. Mükemmel hakimiyet.",
+      "ur": "مادری زبان کی سطح۔ کامل عبور۔",
+      "sr": "Ниво изворног говорника. Савршено владање.",
+      "es_MX": "Nivel nativo. Dominio perfecto."
     },
     "complexity": "native-like",
-    "explanation_style": "экспертный, с культурным контекстом",
-    "grammar_focus": ["все аспекты языка", "диалекты", "профессиональная лексика"]
+    "explanation_style": "expert-level, with cultural context",
+    "grammar_focus": [
+      "all language aspects",
+      "dialects",
+      "professional vocabulary"
+    ]
   }
 }

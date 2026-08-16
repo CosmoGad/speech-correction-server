@@ -28,9 +28,11 @@ def _request(headers=None, client_host="198.51.100.1"):
 
 def test_verified_firebase_token_uses_uid_as_principal():
     original_ready = server._firebase_ready
+    original_enforced = server._app_check_enforced
     original_verify = server.firebase_auth.verify_id_token
     try:
         server._firebase_ready = True
+        server._app_check_enforced = False
         server.firebase_auth.verify_id_token = lambda token, check_revoked: {"uid": "user-123"}
         client = asyncio.run(server.verify_client(
             _request({"Authorization": "Bearer signed-token"}), None))
@@ -39,6 +41,7 @@ def test_verified_firebase_token_uses_uid_as_principal():
         assert client.app_check_status == "missing"
     finally:
         server._firebase_ready = original_ready
+        server._app_check_enforced = original_enforced
         server.firebase_auth.verify_id_token = original_verify
 
 
@@ -66,9 +69,11 @@ def test_invalid_firebase_token_is_rejected():
 def test_legacy_key_remains_ip_scoped_during_migration():
     original_key = server._server_api_key
     original_allowed = server._allow_legacy_api_key
+    original_enforced = server._app_check_enforced
     try:
         server._server_api_key = "legacy-key"
         server._allow_legacy_api_key = True
+        server._app_check_enforced = False
         client = asyncio.run(server.verify_client(
             _request({"X-API-Key": "legacy-key"}, "203.0.113.10"), "legacy-key"))
         assert client.principal_id == "legacy:203.0.113.10"
@@ -76,14 +81,17 @@ def test_legacy_key_remains_ip_scoped_during_migration():
     finally:
         server._server_api_key = original_key
         server._allow_legacy_api_key = original_allowed
+        server._app_check_enforced = original_enforced
 
 
 def test_requests_without_auth_are_rejected():
     original_key = server._server_api_key
     original_allowed = server._allow_legacy_api_key
+    original_enforced = server._app_check_enforced
     try:
         server._server_api_key = "legacy-key"
         server._allow_legacy_api_key = False
+        server._app_check_enforced = False
         try:
             asyncio.run(server.verify_client(_request(), None))
             assert False, "expected 401"
@@ -92,6 +100,7 @@ def test_requests_without_auth_are_rejected():
     finally:
         server._server_api_key = original_key
         server._allow_legacy_api_key = original_allowed
+        server._app_check_enforced = original_enforced
 
 
 def test_invalid_app_check_token_is_observed_before_enforcement():

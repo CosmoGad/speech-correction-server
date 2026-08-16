@@ -5,3 +5,7 @@ __pycache__
 .env
 .git
 .vscode
+translate_env/
+*.db
+*.log
+.github/

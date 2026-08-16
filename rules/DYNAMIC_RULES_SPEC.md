@@ -1,6 +1,6 @@
 # Dynamic rule book — design spec (resolver + lazy generation)
 
-Status: **spec only, not yet implemented.** Builds on the static rule book
+Status: **implemented.** Builds on the static rule book
 (see `README.md`). Goal: the rule book "grows with use" — a learner taps
 "Learn more about this rule" on a correction and gets the right lesson, even if
 it wasn't pre-generated — **without ever creating duplicate rules**.
@@ -112,12 +112,11 @@ response cache.
 
 ## Client changes
 
-- "Learn more about this rule" button (already exists in `error_detail_sheet.dart`)
-  → call `/resolve-rule` with the current error → if `rule_id`, open
-  `RuleDetailScreen(rule_id)`; if `null`, fall back to the rule **list** (current
-  behaviour) or a gentle "no specific rule yet" note.
-- `RulesService`: add `resolveRule(...)`; `fetchRule` already handles a missing
-  rule via the server's lazy generation (Flow B) transparently.
+- "Learn more about this rule" calls `/resolve-rule`; a match opens
+  `RuleDetailScreen`, while no match falls back to the rule list.
+- `RulesService.resolveRule(...)` and lazy `fetchRule(...)` are implemented.
+- `RuleDetailScreen` can launch a native five-question `/rule-quiz` practice
+  flow with immediate feedback, retry of mistakes and local aggregate progress.
 
 ## Token / cost
 

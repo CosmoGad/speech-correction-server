@@ -1,18 +1,73 @@
-# See https://fly.io/docs/app-guides/continuous-deployment-with-github-actions/
-
 name: Fly Deploy
+
 on:
   push:
-    branches:
-      - main
+    branches: [master]
+
 jobs:
-  deploy:
-    name: Deploy app
+  validate:
+    name: Validate backend
     runs-on: ubuntu-latest
-    concurrency: deploy-group    # optional: ensure only one action runs at a time
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Check configuration and source compilation
+        run: |
+          python -m py_compile speech_correction_server.py rules_store.py language_catalog.py languages/catalog_v2.py rules/concept_registry.py
+          python language_catalog_validator.py
+      - name: Scan tracked source and Git history for credentials
+        run: python tools/secret_scan.py
+      - name: Run unit and contract tests
+        run: |
+          python test_backend_auth.py
+          python test_response_cache.py
+          python test_llm_usage_meter.py
+          python test_rules_store.py
+          python test_rule_quiz.py
+          python test_language_runtime.py
+          python test_analysis_v2_runtime.py
+          python test_v2_analysis_runtime.py
+          python test_concept_registry.py
+          python -m unittest -v test_prompt_contract_v2.py test_text_analysis_eval_set.py test_text_analysis_eval_runner.py test_language_catalog_validator.py
+      - name: Build production container
+        run: docker build --tag speech-correction-ci:${{ github.sha }} .
+
+  deploy:
+    name: Deploy and verify production
+    needs: validate
+    runs-on: ubuntu-latest
+    concurrency: deploy-group
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
       - uses: superfly/flyctl-actions/setup-flyctl@master
-      - run: flyctl deploy --remote-only
+      - name: Deploy and smoke-test
+        shell: bash
+        run: |
+          set -euo pipefail
+          flyctl releases --app speech-correction --json > previous-releases.json
+          flyctl deploy --remote-only --strategy rolling --app speech-correction
+          health="$(curl --fail --silent --show-error --retry 10 --retry-all-errors https://speech-correction.fly.dev/health)"
+          test "$(python -c 'import json,sys; print(json.load(sys.stdin)["status"])' <<< "$health")" = "healthy"
+          unauthenticated_status="$(curl --silent --output /dev/null --write-out '%{http_code}' -X POST https://speech-correction.fly.dev/process-text/)"
+          test "$unauthenticated_status" = "401" -o "$unauthenticated_status" = "403"
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+      - name: Roll back the deployed image after a failed smoke-test
+        if: failure()
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s previous-releases.json
+          previous_image="$(python -c 'import json; print(json.load(open("previous-releases.json", encoding="utf-8"))[0]["ImageRef"])')"
+          flyctl deploy --app speech-correction --image "$previous_image" --strategy immediate --yes
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}

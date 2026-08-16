@@ -73,7 +73,7 @@ By default the generator uses the **paid DeepSeek API** (`api.deepseek.com`,
 `DEEPSEEK_API_KEY`, chat completions) — same key the production server uses. No
 extra config needed; just run the commands above.
 
-The 600 pre-generated rule sets in this folder are static JSON and need no API
+The pre-generated rule sets in this folder are static JSON and need no API
 at runtime. The production server's lazy `/rule` generation and `/resolve-rule`
 also use the paid DeepSeek key — they do NOT depend on any free promo.
 
@@ -85,7 +85,7 @@ also use the paid DeepSeek key — they do NOT depend on any free promo.
 > (paid DeepSeek) is what to use now. Remove any stale `RULES_API_*` lines from
 > `.env`.
 
-## Server endpoint (sketch — not yet wired)
+## Server endpoints (implemented)
 
 `GET /rule?learning=en&interface=ru&rule_id=articles` →
 
@@ -96,9 +96,24 @@ also use the paid DeepSeek key — they do NOT depend on any free promo.
 Returns the single rule object from the schema above. Requires the same
 `X-API-Key` header as the other endpoints.
 
-## Client integration (sketch — not yet wired)
+`GET /rule-quiz?learning=en&interface=ru&rule_id=articles&level=B2` →
 
-In `error_detail_sheet.dart`, add a "Learn more about this rule" action that
-derives `rule_id` from the error (slug of the error topic/category), calls
-`ApiService.fetchRule(...)`, shows the lesson + exercises, and caches the
-fetched rule locally (SharedPreferences) so it works offline after first view.
+1. Validate the configured languages, CEFR level and taxonomy-owned `rule_id`.
+2. Reuse a validated quiz cached by rule, interface and CEFR band.
+3. On a miss, generate exactly five four-option questions, validate every
+   field, retry one malformed response, cache the result and return it.
+
+The bands `A1-A2`, `B1-B2` and `C1-C2` limit generation cost. Quiz prompts and
+explanations use the interface language; answer options use the learning
+language. The model call is capped at 1800 output tokens and tagged
+`feature=rule_quiz` in token/latency logs. Cache misses are protected by a
+single-flight lock plus UID, IP and global generation quotas, so concurrent
+opens of the same quiz do not multiply paid requests.
+
+## Client integration (implemented)
+
+The correction detail resolves an error through `/resolve-rule`, opens the
+native rule lesson and can launch a five-question mini-test. Valid lessons and
+quizzes are cached locally for offline reuse. Quiz progress stores only
+aggregate attempts, best score, timestamp and mastery; question and answer text
+is not persisted as progress data.

@@ -52,6 +52,19 @@ def test_bad_rule_id_rejected():
         pass
 
 
+def test_taxonomy_concepts_resolve_exactly_without_language_heuristics():
+    topics = s.topics_with_concepts("en")
+    article = next(topic for topic in topics if topic["rule_id"] == "articles")
+    assert article["concept_code"].startswith("taxonomy.")
+    assert s.resolve_concept("en", article["concept_code"]) == "articles"
+    assert s.resolve_concept("en", "taxonomy.00000000000000000000") is None
+
+
+def test_taxonomy_concept_is_stable_and_learning_scoped():
+    assert s.topic_concept_code("en", "articles") == s.topic_concept_code("en", "articles")
+    assert s.topic_concept_code("en", "articles") != s.topic_concept_code("ru", "падежные-окончания")
+
+
 if __name__ == "__main__":
     fns = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     for fn in fns:

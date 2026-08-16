@@ -6,3 +6,4 @@ pydantic
 regex
 langdetect
 firebase-admin
+cryptography

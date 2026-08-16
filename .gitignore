@@ -1,7 +1,11 @@
 .env
 __pycache__/
 *.pyc
+.venv/
+venv/
+translate_env/
+evals/text_analysis/results/
 .DS_Store
-# Runtime databases (rate limiter, response cache with user texts) — never commit
+# Runtime databases and logs — never commit.
 *.db
 *.log

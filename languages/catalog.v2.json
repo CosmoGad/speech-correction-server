@@ -1,0 +1,1277 @@
+{
+  "schema_version": 2,
+  "default_interface_language": "en",
+  "languages": {
+    "ar": {
+      "code": "ar",
+      "native_name": "العربية",
+      "detection_code": "ar",
+      "direction": "rtl",
+      "roles": [
+        "learning",
+        "interface"
+      ],
+      "common_errors": [
+        "حروف الجر",
+        "الأزمنة",
+        "الجنس (المذكر والمؤنث)",
+        "الإعراب"
+      ],
+      "pronunciation_focus": [
+        "الحركات (الفتحة، الضمة، الكسرة)",
+        "التنوين",
+        "النبرة"
+      ],
+      "context": {
+        "with_context": "ينوي المستخدم التعبير عن ما يلي باللغة العربية: '{context}' (مقدم بـ {interface_language}). استخدم هذا السياق لفهم قصد المستخدم وتحسين اكتشاف الأخطاء والتفسيرات.\n",
+        "no_context": "لم يتم تقديم سياق.\n"
+      },
+      "interface_labels": {
+        "corrected_text": "النص المصحح",
+        "explanation": "تحليل الأخطاء",
+        "grammar_notes": "ملاحظات قواعدية",
+        "pronunciation_tips": "نصائح النطق",
+        "level_suggestions": "اقتراحات المستوى"
+      }
+    },
+    "bg": {
+      "code": "bg",
+      "native_name": "Български",
+      "detection_code": "bg",
+      "direction": "ltr",
+      "roles": [
+        "learning",
+        "interface"
+      ],
+      "common_errors": [
+        "Definite article",
+        "Verb aspect",
+        "Clitic placement",
+        "Prepositions"
+      ],
+      "pronunciation_focus": [
+        "Stress",
+        "Vowel reduction",
+        "Palatalization"
+      ],
+      "context": {
+        "with_context": "Потребителят възнамерява да изрази следното на български: '{context}' (предоставено на {interface_language}). Използвайте този контекст, за да разберете намерението и да подобрите откриването на грешки и обясненията.\n",
+        "no_context": "Не е предоставен контекст.\n"
+      },
+      "interface_labels": {
+        "corrected_text": "Коригиран текст",
+        "explanation": "Анализ на грешките",
+        "grammar_notes": "Граматически бележки",
+        "pronunciation_tips": "Съвети за произношение",
+        "level_suggestions": "Предложения според нивото"
+      }
+    },
+    "cs": {
+      "code": "cs",
+      "native_name": "Čeština",
+      "detection_code": "cs",
+      "direction": "ltr",
+      "roles": [
+        "learning",
+        "interface"
+      ],
+      "common_errors": [
+        "Cases",
+        "Verb aspect",
+        "Word order",
+        "Diacritics"
+      ],
+      "pronunciation_focus": [
+        "Consonant clusters",
+        "ř sound",
+        "Vowel length"
+      ],
+      "context": {
+        "with_context": "Uživatel chce vyjádřit následující v češtině: '{context}' (poskytnuto v {interface_language}). Použijte tento kontext k pochopení záměru uživatele a zlepšení detekce chyb a vysvětlení.\n",
+        "no_context": "Žádný kontext nebyl poskytnut.\n"
+      },
+      "interface_labels": {
+        "corrected_text": "Opravený text",
+        "explanation": "Analýza chyb",
+        "grammar_notes": "Gramatické poznámky",
+        "pronunciation_tips": "Tipy k výslovnosti",
+        "level_suggestions": "Návrhy podle úrovně"
+      }
+    },
+    "da": {
+      "code": "da",
+      "native_name": "Dansk",
+      "detection_code": "da",
+      "direction": "ltr",
+      "roles": [
+        "learning",
+        "interface"
+      ],
+      "common_errors": [
+        "Artikler",
+        "Tider",
+        "Præpositioner",
+        "Udsagnsordets form"
+      ],
+      "pronunciation_focus": [
+        "Stød",
+        "Udtale af vokaler",
+        "Intonation"
+      ],
+      "context": {
+        "with_context": "Brugeren har til hensigt at udtrykke følgende på dansk: '{context}' (angivet på {interface_language}). Brug denne kontekst til at forstå brugerens intention og forbedre fejldetektion og forklaringer.\n",
+        "no_context": "Ingen kontekst angivet.\n"
+      },
+      "interface_labels": {
+        "corrected_text": "Korrigeret tekst",
+        "explanation": "Fejlanalyse",
+        "grammar_notes": "Grammatiknoter",
+        "pronunciation_tips": "Udtale tips",
+        "level_suggestions": "Niveau forslag"
+      }
+    },
+    "de": {
+      "code": "de",
+      "native_name": "Deutsch",
+      "detection_code": "de",
+      "direction": "ltr",
+      "roles": [
+        "learning",
+        "interface"
+      ],
+      "common_errors": [
+        "Artikel",
+        "Wortstellung",
+        "Kasus",
+        "Modalverben"
+      ],
+      "pronunciation_focus": [
+        "Umlaute",
+        "ch-Laute",
+        "Betonung in zusammengesetzten Wörtern"
+      ],
+      "context": {
+        "with_context": "Der Benutzer beabsichtigt, Folgendes auf Deutsch auszudrücken: '{context}' (bereitgestellt in {interface_language}). Nutzen Sie diesen Kontext, um die Absicht des Benutzers zu verstehen und die Fehlererkennung sowie die Erklärungen zu verbessern.\n",
+        "no_context": "Kein Kontext bereitgestellt.\n"
+      },
+      "interface_labels": {
+        "corrected_text": "Korrigierter Text",
+        "explanation": "Fehleranalyse",
+        "grammar_notes": "Grammatische Hinweise",
+        "pronunciation_tips": "Aussprache-Tipps",
+        "level_suggestions": "Niveau-Empfehlungen"
+      }
+    },
+    "el": {
+      "code": "el",
+      "native_name": "Ελληνικά",
+      "detection_code": "el",
+      "direction": "ltr",
+      "roles": [
+        "learning",
+        "interface"
+      ],
+      "common_errors": [
+        "Articles",
+        "Noun cases",
+        "Gender agreement",
+        "Verb conjugation"
+      ],
+      "pronunciation_focus": [
+        "Stress placement",
+        "Vowel sounds",
+        "γ/χ consonants"
+      ],
+      "context": {
+        "with_context": "Ο χρήστης σκοπεύει να εκφράσει το εξής στα Ελληνικά: '{context}' (παρέχεται στα {interface_language}). Χρησιμοποιήστε αυτό το πλαίσιο για να κατανοήσετε την πρόθεση του χρήστη και να βελτιώσετε τον εντοπισμό σφαλμάτων και τις εξηγήσεις.\n",
+        "no_context": "Δεν παρέχεται πλαίσιο.\n"
+      },
+      "interface_labels": {
+        "corrected_text": "Διορθωμένο κείμενο",
+        "explanation": "Ανάλυση σφαλμάτων",
+        "grammar_notes": "Γραμματικές σημειώσεις",
+        "pronunciation_tips": "Συμβουλές προφοράς",
+        "level_suggestions": "Προτάσεις επιπέδου"
+      }
+    },
+    "en": {
+      "code": "en",
+      "native_name": "English",
+      "detection_code": "en",
+      "direction": "ltr",
+      "roles": [
+        "learning",
+        "interface"
+      ],
+      "common_errors": [
+        "Articles",
+        "Tenses",
+        "Prepositions",
+        "Conditional sentences"
+      ],
+      "pronunciation_focus": [
+        "th sounds",
+        "Stress",
+        "Intonation"
+      ],
+      "context": {
+        "with_context": "The user intends to express the following in English: '{context}' (provided in {interface_language}). Use this context to understand the user's intention and improve error detection and explanations.\n",
+        "no_context": "No context provided.\n"
+      },
+      "interface_labels": {
+        "corrected_text": "Corrected Text",
+        "explanation": "Error Analysis",
+        "grammar_notes": "Grammar Notes",
+        "pronunciation_tips": "Pronunciation Tips",
+        "level_suggestions": "Level Suggestions"
+      }
+    },
+    "es": {
+      "code": "es",
+      "native_name": "Español",
+      "detection_code": "es",
+      "direction": "ltr",
+      "roles": [
+        "learning",
+        "interface"
+      ],
+      "common_errors": [
+        "Ser/Estar",
+        "Subjuntivo",
+        "Tiempos verbales",
+        "Preposiciones"
+      ],
+      "pronunciation_focus": [
+        "Sonidos r/rr (звуки r/rr)",
+        "Pronunciación de la ñ",
+        "Entonación"
+      ],
+      "context": {
+        "with_context": "El usuario pretende expresar lo siguiente en español: '{context}' (proporcionado en {interface_language}). Utilice este contexto para entender la intención del usuario y mejorar la detección de errores y las explicaciones.\n",
+        "no_context": "No se proporcionó contexto.\n"
+      },
+      "interface_labels": {
+        "corrected_text": "Texto corregido",
+        "explanation": "Análisis de errores",
+        "grammar_notes": "Notas gramaticales",
+        "pronunciation_tips": "Consejos de pronunciación",
+        "level_suggestions": "Sugerencias de nivel"
+      }
+    },
+    "es-MX": {
+      "code": "es-MX",
+      "native_name": "Español Mexicano",
+      "detection_code": "es",
+      "direction": "ltr",
+      "roles": [
+        "learning",
+        "interface"
+      ],
+      "legacy_codes": [
+        "es_MX"
+      ],
+      "common_errors": [
+        "ser/estar",
+        "subjuntivo",
+        "tiempos verbales",
+        "preposiciones"
+      ],
+      "pronunciation_focus": [
+        "sonidos r/rr",
+        "pronunciación de la ñ",
+        "entonación"
+      ],
+      "context": {
+        "with_context": "El usuario pretende expresar lo siguiente en español mexicano: '{context}' (proporcionado en {interface_language}). Utilice este contexto para entender la intención del usuario y mejorar la detección de errores y las explicaciones.\n",
+        "no_context": "No se proporcionó contexto.\n"
+      },
+      "interface_labels": {
+        "corrected_text": "Texto corregido",
+        "explanation": "Análisis de errores",
+        "grammar_notes": "Notas gramaticales",
+        "pronunciation_tips": "Consejos de pronunciación",
+        "level_suggestions": "Sugerencias de nivel"
+      }
+    },
+    "et": {
+      "code": "et",
+      "native_name": "Eesti",
+      "detection_code": "et",
+      "direction": "ltr",
+      "roles": [
+        "learning",
+        "interface"
+      ],
+      "common_errors": [
+        "Cases",
+        "Consonant gradation",
+        "Vowel harmony",
+        "Postpositions"
+      ],
+      "pronunciation_focus": [
+        "Three vowel lengths",
+        "Palatalization",
+        "Õ sound"
+      ],
+      "context": {
+        "with_context": "Kasutaja soovib väljendada järgmist eesti keeles: '{context}' (esitatud keeles {interface_language}). Kasutage seda konteksti, et mõista kavatsust ja parandada vigade tuvastamist ja selgitusi.\n",
+        "no_context": "Konteksti ei esitatud.\n"
+      },
+      "interface_labels": {
+        "corrected_text": "Parandatud tekst",
+        "explanation": "Vigade analüüs",
+        "grammar_notes": "Grammatikamärkused",
+        "pronunciation_tips": "Hääldusnõuanded",
+        "level_suggestions": "Taseme soovitused"
+      }
+    },
+    "fa": {
+      "code": "fa",
+      "native_name": "فارسی",
+      "detection_code": "fa",
+      "direction": "rtl",
+      "roles": [
+        "learning",
+        "interface"
+      ],
+      "common_errors": [
+        "حروف اضافه",
+        "زمان‌های فعل",
+        "جمع بستن",
+        "نقش کلمات در جمله"
+      ],
+      "pronunciation_focus": [
+        "تلفظ حروف صدادار",
+        "تشدید",
+        "آهنگ جمله"
+      ],
+      "context": {
+        "with_context": "کاربر قصد دارد موارد زیر را به زبان فارسی بیان کند: '{context}' (ارائه شده به {interface_language}). از این زمینه برای درک قصد کاربر و بهبود تشخیص خطا و توضیحات استفاده کنید.\n",
+        "no_context": "هیچ زمینه‌ای ارائه نشده است.\n"
+      },
+      "interface_labels": {
+        "corrected_text": "متن تصحیح شده",
+        "explanation": "تحلیل خطاها",
+        "grammar_notes": "یادداشت‌های دستوری",
+        "pronunciation_tips": "نکات تلفظ",
+        "level_suggestions": "پیشنهادات سطح"
+      }
+    },
+    "fi": {
+      "code": "fi",
+      "native_name": "Suomi",
+      "detection_code": "fi",
+      "direction": "ltr",
+      "roles": [
+        "learning",
+        "interface"
+      ],
+      "common_errors": [
+        "Cases",
+        "Consonant gradation",
+        "Vowel harmony",
+        "Postpositions"
+      ],
+      "pronunciation_focus": [
+        "Vowel length",
+        "Double consonants",
+        "Front/back vowels"
+      ],
+      "context": {
+        "with_context": "Käyttäjä haluaa ilmaista seuraavan suomeksi: '{context}' (annettu kielellä {interface_language}). Käytä tätä kontekstia ymmärtääksesi tarkoituksen ja parantaaksesi virheiden havaitsemista ja selityksiä.\n",
+        "no_context": "Kontekstia ei annettu.\n"
+      },
+      "interface_labels": {
+        "corrected_text": "Korjattu teksti",
+        "explanation": "Virheanalyysi",
+        "grammar_notes": "Kielioppimuistiinpanot",
+        "pronunciation_tips": "Ääntämisvinkit",
+        "level_suggestions": "Tasoehdotukset"
+      }
+    },
+    "fr": {
+      "code": "fr",
+      "native_name": "Français",
+      "detection_code": "fr",
+      "direction": "ltr",
+      "roles": [
+        "learning",
+        "interface"
+      ],
+      "common_errors": [
+        "Articles",
+        "Temps",
+        "Accord",
+        "Pronoms"
+      ],
+      "pronunciation_focus": [
+        "Voyelles nasales",
+        "Liaison",
+        "Accent tonique"
+      ],
+      "context": {
+        "with_context": "L'utilisateur a l'intention d'exprimer ce qui suit en français: '{context}' (fourni en {interface_language}). Utilisez ce contexte pour comprendre l'intention de l'utilisateur et améliorer la détection des erreurs et les explications.\n",
+        "no_context": "Aucun contexte fourni.\n"
+      },
+      "interface_labels": {
+        "corrected_text": "Texte corrigé",
+        "explanation": "Analyse des erreurs",
+        "grammar_notes": "Notes grammaticales",
+        "pronunciation_tips": "Conseils de prononciation",
+        "level_suggestions": "Suggestions de niveau"
+      }
+    },
+    "hr": {
+      "code": "hr",
+      "native_name": "Hrvatski",
+      "detection_code": "hr",
+      "direction": "ltr",
+      "roles": [
+        "learning",
+        "interface"
+      ],
+      "common_errors": [
+        "Cases",
+        "Verb aspect",
+        "Word order",
+        "Diacritics"
+      ],
+      "pronunciation_focus": [
+        "č/ć distinction",
+        "Vowel length",
+        "Pitch accent"
+      ],
+      "context": {
+        "with_context": "Korisnik želi izraziti sljedeće na hrvatskom: '{context}' (na jeziku {interface_language}). Koristite ovaj kontekst za razumijevanje namjere i poboljšanje otkrivanja pogrešaka i objašnjenja.\n",
+        "no_context": "Nije pružen kontekst.\n"
+      },
+      "interface_labels": {
+        "corrected_text": "Ispravljeni tekst",
+        "explanation": "Analiza pogrešaka",
+        "grammar_notes": "Gramatičke bilješke",
+        "pronunciation_tips": "Savjeti za izgovor",
+        "level_suggestions": "Prijedlozi prema razini"
+      }
+    },
+    "hu": {
+      "code": "hu",
+      "native_name": "Magyar",
+      "detection_code": "hu",
+      "direction": "ltr",
+      "roles": [
+        "learning",
+        "interface"
+      ],
+      "common_errors": [
+        "Cases",
+        "Vowel harmony",
+        "Definite/indefinite conjugation",
+        "Word order"
+      ],
+      "pronunciation_focus": [
+        "Long vowels",
+        "Stress on first syllable",
+        "gy/ty sounds"
+      ],
+      "context": {
+        "with_context": "A felhasználó a következőt szeretné kifejezni magyarul: '{context}' ({interface_language} nyelven megadva). Használja ezt a kontextust a felhasználó szándékának megértéséhez és a hibafelismerés és magyarázatok javításához.\n",
+        "no_context": "Nincs megadott kontextus.\n"
+      },
+      "interface_labels": {
+        "corrected_text": "Javított szöveg",
+        "explanation": "Hibaelemzés",
+        "grammar_notes": "Nyelvtani megjegyzések",
+        "pronunciation_tips": "Kiejtési tippek",
+        "level_suggestions": "Szintjavaslatok"
+      }
+    },
+    "it": {
+      "code": "it",
+      "native_name": "Italiano",
+      "detection_code": "it",
+      "direction": "ltr",
+      "roles": [
+        "learning",
+        "interface"
+      ],
+      "common_errors": [
+        "Articoli",
+        "Concordanza dei tempi",
+        "Preposizioni",
+        "Congiuntivo"
+      ],
+      "pronunciation_focus": [
+        "Consonanti doppie",
+        "Accento",
+        "Intonazione"
+      ],
+      "context": {
+        "with_context": "L'utente intende esprimere quanto segue in italiano: '{context}' (fornito in {interface_language}). Utilizza questo contesto per comprendere l'intenzione dell'utente e migliorare il rilevamento degli errori e le spiegazioni.\n",
+        "no_context": "Nessun contesto fornito.\n"
+      },
+      "interface_labels": {
+        "corrected_text": "Testo corretto",
+        "explanation": "Analisi degli errori",
+        "grammar_notes": "Note grammaticali",
+        "pronunciation_tips": "Suggerimenti di pronuncia",
+        "level_suggestions": "Suggerimenti di livello"
+      }
+    },
+    "ku": {
+      "code": "ku",
+      "native_name": "Kurdî",
+      "detection_code": "ku",
+      "direction": "ltr",
+      "roles": [
+        "interface"
+      ],
+      "interface_labels": {
+        "corrected_text": "Nivîsa rastkirî",
+        "explanation": "Analîza çewtiyan",
+        "grammar_notes": "Notên rêzimanî",
+        "pronunciation_tips": "Pêşniyarên bilêvkirinê",
+        "level_suggestions": "Pêşniyarên astê"
+      }
+    },
+    "lt": {
+      "code": "lt",
+      "native_name": "Lietuvių",
+      "detection_code": "lt",
+      "direction": "ltr",
+      "roles": [
+        "learning",
+        "interface"
+      ],
+      "common_errors": [
+        "Cases",
+        "Verb conjugation",
+        "Accentuation",
+        "Participles"
+      ],
+      "pronunciation_focus": [
+        "Pitch accent",
+        "Long/short vowels",
+        "Nasal vowels"
+      ],
+      "context": {
+        "with_context": "Vartotojas nori išreikšti tai lietuviškai: '{context}' (pateikta {interface_language} kalba). Naudokite šį kontekstą, kad suprastumėte ketinimą ir pagerintumėte klaidų aptikimą ir paaiškinimus.\n",
+        "no_context": "Kontekstas nepateiktas.\n"
+      },
+      "interface_labels": {
+        "corrected_text": "Pataisytas tekstas",
+        "explanation": "Klaidų analizė",
+        "grammar_notes": "Gramatikos pastabos",
+        "pronunciation_tips": "Tarimo patarimai",
+        "level_suggestions": "Pasiūlymai pagal lygį"
+      }
+    },
+    "lv": {
+      "code": "lv",
+      "native_name": "Latviešu",
+      "detection_code": "lv",
+      "direction": "ltr",
+      "roles": [
+        "learning",
+        "interface"
+      ],
+      "common_errors": [
+        "Cases",
+        "Verb conjugation",
+        "Definite/indefinite adjectives",
+        "Word order"
+      ],
+      "pronunciation_focus": [
+        "Long vowels",
+        "Broken tone",
+        "Palatalization"
+      ],
+      "context": {
+        "with_context": "Lietotājs vēlas izteikt šo latviski: '{context}' (sniegts {interface_language} valodā). Izmantojiet šo kontekstu, lai saprastu nodomu un uzlabotu kļūdu noteikšanu un skaidrojumus.\n",
+        "no_context": "Konteksts nav sniegts.\n"
+      },
+      "interface_labels": {
+        "corrected_text": "Labotais teksts",
+        "explanation": "Kļūdu analīze",
+        "grammar_notes": "Gramatikas piezīmes",
+        "pronunciation_tips": "Izrunas padomi",
+        "level_suggestions": "Ieteikumi pēc līmeņa"
+      }
+    },
+    "nl": {
+      "code": "nl",
+      "native_name": "Nederlands",
+      "detection_code": "nl",
+      "direction": "ltr",
+      "roles": [
+        "learning",
+        "interface"
+      ],
+      "common_errors": [
+        "Lidwoorden",
+        "Werkwoordstijden",
+        "Voorzetsels",
+        "Woordvolgorde"
+      ],
+      "pronunciation_focus": [
+        "Uitspraak van de g",
+        "Klinkers",
+        "Intonatie"
+      ],
+      "context": {
+        "with_context": "De gebruiker wil het volgende in het Nederlands uitdrukken: '{context}' (aangeleverd in {interface_language}). Gebruik deze context om de bedoeling van de gebruiker te begrijpen en de foutdetectie en uitleg te verbeteren.\n",
+        "no_context": "Geen context verstrekt.\n"
+      },
+      "interface_labels": {
+        "corrected_text": "Gecorrigeerde tekst",
+        "explanation": "Foutenanalyse",
+        "grammar_notes": "Grammatica notities",
+        "pronunciation_tips": "Uitspraaktips",
+        "level_suggestions": "Niveau suggesties"
+      }
+    },
+    "no": {
+      "code": "no",
+      "native_name": "Norsk",
+      "detection_code": "no",
+      "direction": "ltr",
+      "roles": [
+        "learning",
+        "interface"
+      ],
+      "common_errors": [
+        "Artikler",
+        "Verbformer",
+        "Preposisjoner",
+        "Setningsstruktur"
+      ],
+      "pronunciation_focus": [
+        "Tonem",
+        "Uttale av vokaler",
+        "Intonasjon"
+      ],
+      "context": {
+        "with_context": "Brukeren har til hensikt å uttrykke følgende på norsk: '{context}' (gitt på {interface_language}). Bruk denne konteksten til å forstå brukerens intensjon og forbedre feildeteksjon og forklaringer.\n",
+        "no_context": "Ingen kontekst gitt.\n"
+      },
+      "interface_labels": {
+        "corrected_text": "Korrigert tekst",
+        "explanation": "Feilanalyse",
+        "grammar_notes": "Grammatikknotater",
+        "pronunciation_tips": "Uttalestips",
+        "level_suggestions": "Nivåforslag"
+      }
+    },
+    "pl": {
+      "code": "pl",
+      "native_name": "Polski",
+      "detection_code": "pl",
+      "direction": "ltr",
+      "roles": [
+        "learning",
+        "interface"
+      ],
+      "common_errors": [
+        "Przypadki",
+        "Aspekty czasownikowe",
+        "Przyimki",
+        "Liczebniki"
+      ],
+      "pronunciation_focus": [
+        "Samogłoski nosowe",
+        "Spółgłoski szumiące",
+        "Akcent"
+      ],
+      "context": {
+        "with_context": "Użytkownik zamierza wyrazić następującą treść po polsku: '{context}' (dostarczone w {interface_language}). Użyj tego kontekstu, aby zrozumieć intencję użytkownika i poprawić wykrywanie błędów oraz wyjaśnienia.\n",
+        "no_context": "Nie dostarczono kontekstu.\n"
+      },
+      "interface_labels": {
+        "corrected_text": "Poprawiony tekst",
+        "explanation": "Analiza błędów",
+        "grammar_notes": "Uwagi gramatyczne",
+        "pronunciation_tips": "Wskazówki wymowy",
+        "level_suggestions": "Sugestie poziomu"
+      }
+    },
+    "pt": {
+      "code": "pt",
+      "native_name": "Português",
+      "detection_code": "pt",
+      "direction": "ltr",
+      "roles": [
+        "learning",
+        "interface"
+      ],
+      "common_errors": [
+        "Artigos",
+        "Tempos verbais",
+        "Preposições",
+        "Conjugação"
+      ],
+      "pronunciation_focus": [
+        "Vogais nasais",
+        "Sotaque",
+        "Entonação"
+      ],
+      "context": {
+        "with_context": "O usuário pretende expressar o seguinte em português: '{context}' (fornecido em {interface_language}). Use este contexto para entender a intenção do usuário e melhorar a detecção de erros e explicações.\n",
+        "no_context": "Nenhum contexto fornecido.\n"
+      },
+      "interface_labels": {
+        "corrected_text": "Texto corrigido",
+        "explanation": "Análise de erros",
+        "grammar_notes": "Notas gramaticais",
+        "pronunciation_tips": "Dicas de pronúncia",
+        "level_suggestions": "Sugestões de nível"
+      }
+    },
+    "ro": {
+      "code": "ro",
+      "native_name": "Română",
+      "detection_code": "ro",
+      "direction": "ltr",
+      "roles": [
+        "learning",
+        "interface"
+      ],
+      "common_errors": [
+        "Articles",
+        "Gender agreement",
+        "Verb conjugation",
+        "Prepositions"
+      ],
+      "pronunciation_focus": [
+        "Diphthongs",
+        "ă/â sounds",
+        "Stress"
+      ],
+      "context": {
+        "with_context": "Utilizatorul intenționează să exprime următoarele în română: '{context}' (furnizat în {interface_language}). Folosiți acest context pentru a înțelege intenția utilizatorului și a îmbunătăți detectarea erorilor și explicațiile.\n",
+        "no_context": "Niciun context furnizat.\n"
+      },
+      "interface_labels": {
+        "corrected_text": "Text corectat",
+        "explanation": "Analiza erorilor",
+        "grammar_notes": "Note gramaticale",
+        "pronunciation_tips": "Sfaturi de pronunție",
+        "level_suggestions": "Sugestii de nivel"
+      }
+    },
+    "ru": {
+      "code": "ru",
+      "native_name": "Русский",
+      "detection_code": "ru",
+      "direction": "ltr",
+      "roles": [
+        "learning",
+        "interface"
+      ],
+      "common_errors": [
+        "падежные окончания",
+        "глагольные приставки",
+        "ударения",
+        "видовые пары глаголов"
+      ],
+      "pronunciation_focus": [
+        "мягкие согласные",
+        "редукция гласных",
+        "ударение"
+      ],
+      "context": {
+        "with_context": "Пользователь намеревается выразить следующее на русском языке: '{context}' (предоставлено на {interface_language}). Используйте этот контекст для понимания намерения пользователя и улучшения обнаружения ошибок и объяснений.\n",
+        "no_context": "Контекст не предоставлен.\n"
+      },
+      "interface_labels": {
+        "corrected_text": "Исправленный текст",
+        "explanation": "Анализ ошибок",
+        "grammar_notes": "Грамматические заметки",
+        "pronunciation_tips": "Советы по произношению",
+        "level_suggestions": "Рекомендации по уровню"
+      }
+    },
+    "sk": {
+      "code": "sk",
+      "native_name": "Slovenčina",
+      "detection_code": "sk",
+      "direction": "ltr",
+      "roles": [
+        "learning",
+        "interface"
+      ],
+      "common_errors": [
+        "Cases",
+        "Verb aspect",
+        "Word order",
+        "Diacritics"
+      ],
+      "pronunciation_focus": [
+        "Vowel length",
+        "ä/ô sounds",
+        "Soft consonants"
+      ],
+      "context": {
+        "with_context": "Používateľ chce vyjadriť nasledujúce v slovenčine: '{context}' (poskytnuté v {interface_language}). Použite tento kontext na pochopenie zámeru a zlepšenie detekcie chýb a vysvetlení.\n",
+        "no_context": "Nebol poskytnutý žiadny kontext.\n"
+      },
+      "interface_labels": {
+        "corrected_text": "Opravený text",
+        "explanation": "Analýza chýb",
+        "grammar_notes": "Gramatické poznámky",
+        "pronunciation_tips": "Tipy na výslovnosť",
+        "level_suggestions": "Návrhy podľa úrovne"
+      }
+    },
+    "sl": {
+      "code": "sl",
+      "native_name": "Slovenščina",
+      "detection_code": "sl",
+      "direction": "ltr",
+      "roles": [
+        "learning",
+        "interface"
+      ],
+      "common_errors": [
+        "Cases",
+        "Dual number",
+        "Verb aspect",
+        "Word order"
+      ],
+      "pronunciation_focus": [
+        "Pitch accent",
+        "Vowel reduction",
+        "Vowel length"
+      ],
+      "context": {
+        "with_context": "Uporabnik želi izraziti naslednje v slovenščini: '{context}' (v jeziku {interface_language}). Uporabite ta kontekst za razumevanje namena in izboljšanje odkrivanja napak in razlag.\n",
+        "no_context": "Kontekst ni bil podan.\n"
+      },
+      "interface_labels": {
+        "corrected_text": "Popravljeno besedilo",
+        "explanation": "Analiza napak",
+        "grammar_notes": "Slovnične opombe",
+        "pronunciation_tips": "Nasveti za izgovorjavo",
+        "level_suggestions": "Predlogi glede na raven"
+      }
+    },
+    "sr": {
+      "code": "sr",
+      "native_name": "Српски",
+      "detection_code": "sr",
+      "direction": "ltr",
+      "roles": [
+        "learning",
+        "interface"
+      ],
+      "common_errors": [
+        "падежи",
+        "глаголски видови",
+        "акценат",
+        "придеви"
+      ],
+      "pronunciation_focus": [
+        "меки сугласници",
+        "акценат",
+        "интонација"
+      ],
+      "context": {
+        "with_context": "Корисник намерава да изрази следеће на српском: '{context}' (дато на {interface_language}). Користите овај контекст да разумете намеру корисника и побољшате откривање грешака и објашњења.\n",
+        "no_context": "Није дат контекст.\n"
+      },
+      "interface_labels": {
+        "corrected_text": "Исправљен текст",
+        "explanation": "Анализа грешака",
+        "grammar_notes": "Граматичке напомене",
+        "pronunciation_tips": "Савети за изговор",
+        "level_suggestions": "Предлози за ниво"
+      }
+    },
+    "sv": {
+      "code": "sv",
+      "native_name": "Svenska",
+      "detection_code": "sv",
+      "direction": "ltr",
+      "roles": [
+        "learning",
+        "interface"
+      ],
+      "common_errors": [
+        "Artiklar",
+        "Verbtider",
+        "Prepositioner ",
+        "Ordföljd"
+      ],
+      "pronunciation_focus": [
+        "Svenska vokaler",
+        "Tonaccent",
+        "Intonation"
+      ],
+      "context": {
+        "with_context": "Användaren avser att uttrycka följande på svenska: '{context}' (tillhandahållet på {interface_language}). Använd denna kontext för att förstå användarens avsikt och förbättra feldetektering och förklaringar.\n",
+        "no_context": "Ingen kontext tillhandahållen.\n"
+      },
+      "interface_labels": {
+        "corrected_text": "Korrigerad text",
+        "explanation": "Felanalys",
+        "grammar_notes": "Grammatikanteckningar",
+        "pronunciation_tips": "Uttalstips",
+        "level_suggestions": "Nivåförslag"
+      }
+    },
+    "tr": {
+      "code": "tr",
+      "native_name": "Türkçe",
+      "detection_code": "tr",
+      "direction": "ltr",
+      "roles": [
+        "learning",
+        "interface"
+      ],
+      "common_errors": [
+        "Ekler",
+        "Zamanlar",
+        "Edatlar",
+        "Çekim"
+      ],
+      "pronunciation_focus": [
+        "Ünlü uyumu",
+        "Vurgu",
+        "Tonlama"
+      ],
+      "context": {
+        "with_context": "Kullanıcı Türkçe olarak şunları ifade etmek istiyor: '{context}' ({interface_language} dilinde sağlanmıştır). Kullanıcının niyetini anlamak ve hata algılama ve açıklamaları geliştirmek için bu bağlamı kullanın.\n",
+        "no_context": "Bağlam sağlanmadı.\n"
+      },
+      "interface_labels": {
+        "corrected_text": "Düzeltilmiş metin",
+        "explanation": "Hata analizi",
+        "grammar_notes": "Dil bilgisi notları",
+        "pronunciation_tips": "Telaffuz ipuçları",
+        "level_suggestions": "Seviye önerileri"
+      }
+    },
+    "uk": {
+      "code": "uk",
+      "native_name": "Українська",
+      "detection_code": "uk",
+      "direction": "ltr",
+      "roles": [
+        "learning",
+        "interface"
+      ],
+      "common_errors": [
+        "чергування голосних",
+        "м'який знак",
+        "наголос",
+        "відмінювання"
+      ],
+      "pronunciation_focus": [
+        "м'які приголосні",
+        "наголос",
+        "дифтонги"
+      ],
+      "context": {
+        "with_context": "Користувач має намір висловити наступне українською мовою: '{context}' (надано на {interface_language}). Використовуйте цей контекст для розуміння наміру користувача та покращення виявлення помилок і пояснень.\n",
+        "no_context": "Контекст не надано.\n"
+      },
+      "interface_labels": {
+        "corrected_text": "Виправлений текст",
+        "explanation": "Аналіз помилок",
+        "grammar_notes": "Граматичні нотатки",
+        "pronunciation_tips": "Поради щодо вимови",
+        "level_suggestions": "Рекомендації щодо рівня"
+      }
+    },
+    "ur": {
+      "code": "ur",
+      "native_name": "اردو",
+      "detection_code": "ur",
+      "direction": "rtl",
+      "roles": [
+        "learning",
+        "interface"
+      ],
+      "common_errors": [
+        "حروف جار",
+        "افعال کے زمانے",
+        "جملے کی ساخت",
+        "اسم کی اقسام"
+      ],
+      "pronunciation_focus": [
+        "حرکات کی ادائیگی",
+        "تشدید",
+        "لہجہ"
+      ],
+      "context": {
+        "with_context": "صارف اردو میں درج ذیل کا اظہار کرنا چاہتا ہے: '{context}' ({interface_language} میں فراہم کیا گیا)۔ صارف کے ارادے کو سمجھنے اور غلطیوں کی شناخت اور وضاحتوں کو بہتر بنانے کے لیے اس سیاق و سباق کا استعمال کریں۔\n",
+        "no_context": "کوئی سیاق و سباق فراہم نہیں کیا گیا۔\n"
+      },
+      "interface_labels": {
+        "corrected_text": "درست متن",
+        "explanation": "غلطیوں کا تجزیہ",
+        "grammar_notes": "قواعدی نوٹس",
+        "pronunciation_tips": "تلفظ کے نکات",
+        "level_suggestions": "سطح کے مشورے"
+      }
+    }
+  },
+  "level_profiles": {
+    "A1": {
+      "complexity": "basic",
+      "explanation_style": "very detailed, with examples",
+      "grammar_focus": [
+        "simple present tense",
+        "personal pronouns",
+        "basic prepositions"
+      ],
+      "descriptions": {
+        "ru": "Начальный уровень. Базовые фразы и простые предложения.",
+        "en": "Beginner level. Basic phrases and simple sentences.",
+        "de": "Anfängerniveau. Grundlegende Phrasen und einfache Sätze.",
+        "uk": "Початковий рівень. Базові фрази та прості речення.",
+        "it": "Livello iniziale. Frasi di base e frasi semplici.",
+        "fr": "Niveau débutant. Phrases de base et phrases simples.",
+        "es": "Nivel inicial. Frases básicas y oraciones simples.",
+        "pl": "Poziom podstawowy. Podstawowe zwroty i proste zdania.",
+        "ar": "المستوى المبتدئ. عبارات أساسية وجمل بسيطة.",
+        "da": "Begynder niveau. Grundlæggende sætninger og enkle udtryk.",
+        "fa": "سطح مبتدی. عبارات پایه و جملات ساده.",
+        "ku": "Astê destpêkê. Bêjeyên bingehîn û hevokên hêsan.",
+        "nl": "Beginniveau. Basisuitdrukkingen en eenvoudige zinnen.",
+        "no": "Nybegynner nivå. Grunnleggende fraser og enkle setninger.",
+        "pt": "Nível iniciante. Frases básicas e orações simples.",
+        "sv": "Nybörjarnivå. Grundläggande fraser och enkla meningar.",
+        "tr": "Başlangıç seviyesi. Temel ifadeler ve basit cümleler.",
+        "ur": "ابتدائی سطح۔ بنیادی فقرات اور سادہ جملے۔",
+        "sr": "Почетни ниво. Основне фразе и једноставне реченице.",
+        "es-MX": "Nivel inicial. Frases básicas y oraciones simples.",
+        "el": "Επίπεδο αρχαρίων. Βασικές φράσεις και απλές προτάσεις.",
+        "cs": "Začátečnická úroveň. Základní fráze a jednoduché věty.",
+        "ro": "Nivel începător. Expresii de bază și propoziții simple.",
+        "hu": "Kezdő szint. Alapvető kifejezések és egyszerű mondatok.",
+        "bg": "Начално ниво. Основни фрази и прости изречения.",
+        "hr": "Početna razina. Osnovne fraze i jednostavne rečenice.",
+        "sk": "Začiatočnícka úroveň. Základné frázy a jednoduché vety.",
+        "sl": "Začetna raven. Osnovne fraze in preprosti stavki.",
+        "fi": "Aloittelijataso. Perusfraaseja ja yksinkertaisia lauseita.",
+        "lt": "Pradedančiojo lygis. Pagrindinės frazės ir paprasti sakiniai.",
+        "lv": "Iesācēja līmenis. Pamatfrāzes un vienkārši teikumi.",
+        "et": "Algaja tase. Põhifraasid ja lihtsad laused."
+      }
+    },
+    "A2": {
+      "complexity": "elementary",
+      "explanation_style": "detailed, with analogies",
+      "grammar_focus": [
+        "past tense",
+        "simple future tense",
+        "basic conjunctions"
+      ],
+      "descriptions": {
+        "ru": "Элементарный уровень. Простые диалоги и описания.",
+        "en": "Elementary level. Simple dialogues and descriptions.",
+        "de": "Grundlegendes Niveau. Einfache Dialoge und Beschreibungen.",
+        "uk": "Елементарний рівень. Прості діалоги та описи.",
+        "it": "Livello elementare. Dialoghi semplici e descrizioni.",
+        "fr": "Niveau élémentaire. Dialogues simples et descriptions.",
+        "es": "Nivel elemental. Diálogos simples y descripciones.",
+        "pl": "Poziom podstawowy. Proste dialogi i opisy.",
+        "ar": "المستوى الأساسي. حوارات بسيطة ووصف.",
+        "da": "Elementært niveau. Enkle dialoger og beskrivelser.",
+        "fa": "سطح ابتدایی. گفتگوها و توصیفات ساده.",
+        "ku": "Astê bingehîn. Diyalogên hêsan û dîroknivîs.",
+        "nl": "Elementair niveau. Eenvoudige dialogen en beschrijvingen.",
+        "no": "Elementært nivå. Enkle dialoger og beskrivelser.",
+        "pt": "Nível elementar. Diálogos simples e descrições.",
+        "sv": "Elementär nivå. Enkla dialoger och beskrivningar.",
+        "tr": "Temel seviye. Basit diyaloglar ve betimlemeler.",
+        "ur": "بنیادی سطح۔ سادہ مکالمے اور تفصیلات۔",
+        "sr": "Елементарни ниво. Једноставни дијалози и описи.",
+        "es-MX": "Nivel elemental. Diálogos simples y descripciones.",
+        "el": "Στοιχειώδες επίπεδο. Απλοί διάλογοι και περιγραφές.",
+        "cs": "Základní úroveň. Jednoduché dialogy a popisy.",
+        "ro": "Nivel elementar. Dialoguri și descrieri simple.",
+        "hu": "Alapszint. Egyszerű párbeszédek és leírások.",
+        "bg": "Елементарно ниво. Прости диалози и описания.",
+        "hr": "Osnovna razina. Jednostavni dijalozi i opisi.",
+        "sk": "Základná úroveň. Jednoduché dialógy a opisy.",
+        "sl": "Osnovna raven. Preprosti dialogi in opisi.",
+        "fi": "Alkeistaso. Yksinkertaisia dialogeja ja kuvauksia.",
+        "lt": "Pagrindinis lygis. Paprasti dialogai ir aprašymai.",
+        "lv": "Pamatlīmenis. Vienkārši dialogi un apraksti.",
+        "et": "Algtase. Lihtsad dialoogid ja kirjeldused."
+      }
+    },
+    "B1": {
+      "complexity": "intermediate",
+      "explanation_style": "detailed, with context",
+      "grammar_focus": [
+        "all tenses",
+        "conditional sentences",
+        "modal verbs"
+      ],
+      "descriptions": {
+        "ru": "Средний уровень. Свободное общение на знакомые темы.",
+        "en": "Intermediate level. Free communication on familiar topics.",
+        "de": "Mittelstufe. Freie Kommunikation über vertraute Themen.",
+        "uk": "Середній рівень. Вільне спілкування на знайомі теми.",
+        "it": "Livello intermedio. Comunicazione libera su argomenti familiari.",
+        "fr": "Niveau intermédiaire. Communication libre sur des sujets familiers.",
+        "es": "Nivel intermedio. Comunicación libre sobre temas familiares.",
+        "pl": "Poziom średni. Swobodna komunikacja na znane tematy.",
+        "ar": "المستوى المتوسط. تواصل حر حول مواضيع مألوفة.",
+        "da": "Mellemniveau. Fri kommunikation om velkendte emner.",
+        "fa": "سطح متوسط. ارتباط آزاد در مورد موضوعات آشنا.",
+        "ku": "Astê navîn. Ragihandina azad li ser mijarên nas.",
+        "nl": "Gemiddeld niveau. Vrije communicatie over bekende onderwerpen.",
+        "no": "Mellomnivå. Fri kommunikasjon om kjente emner.",
+        "pt": "Nível intermediário. Comunicação livre sobre tópicos familiares.",
+        "sv": "Mellanliggande nivå. Fri kommunikation om välbekanta ämnen.",
+        "tr": "Orta seviye. Tanıdık konularda serbest iletişim.",
+        "ur": "درمیانی سطح۔ واقف موضوعات پر آزادانہ گفتگو۔",
+        "sr": "Средњи ниво. Слободна комуникација на познате теме.",
+        "es-MX": "Nivel intermedio. Comunicación libre sobre temas familiares.",
+        "el": "Μεσαίο επίπεδο. Άνετη επικοινωνία σε οικεία θέματα.",
+        "cs": "Středně pokročilá úroveň. Plynulá komunikace na známá témata.",
+        "ro": "Nivel intermediar. Comunicare fluentă pe teme familiare.",
+        "hu": "Középszint. Magabiztos kommunikáció ismerős témákról.",
+        "bg": "Средно ниво. Свободно общуване по познати теми.",
+        "hr": "Srednja razina. Slobodna komunikacija o poznatim temama.",
+        "sk": "Stredne pokročilá úroveň. Plynulá komunikácia o známych témach.",
+        "sl": "Srednja raven. Tekoče sporazumevanje o znanih temah.",
+        "fi": "Keskitaso. Sujuvaa viestintää tutuista aiheista.",
+        "lt": "Vidutinis lygis. Laisvas bendravimas pažįstamomis temomis.",
+        "lv": "Vidējais līmenis. Brīva saziņa par pazīstamām tēmām.",
+        "et": "Kesktase. Sujuv suhtlus tuttavatel teemadel."
+      }
+    },
+    "B2": {
+      "complexity": "upper-intermediate",
+      "explanation_style": "academic, with real-life examples",
+      "grammar_focus": [
+        "complex tenses",
+        "passive voice",
+        "reported speech"
+      ],
+      "descriptions": {
+        "ru": "Средне-продвинутый уровень. Сложные темы и абстрактные понятия.",
+        "en": "Upper-intermediate level. Complex topics and abstract concepts.",
+        "de": "Höhere Mittelstufe. Komplexe Themen und abstrakte Konzepte.",
+        "uk": "Вище середнього рівня. Складні теми та абстрактні поняття.",
+        "it": "Livello intermedio superiore. Argomenti complessi e concetti astratti.",
+        "fr": "Niveau intermédiaire supérieur. Sujets complexes et concepts abstraits.",
+        "es": "Nivel intermedio alto. Temas complejos y conceptos abstractos.",
+        "pl": "Poziom średnio zaawansowany. Złożone tematy i abstrakcyjne pojęcia.",
+        "ar": "المستوى فوق المتوسط. مواضيع معقدة ومفاهيم مجردة.",
+        "da": "Øvre mellemniveau. Komplekse emner og abstrakte begreber.",
+        "fa": "سطح بالای متوسط. موضوعات پیچیده و مفاهیم انتزاعی.",
+        "ku": "Astê navîn yê bilind. Mijarên kompleks û konseptên abstrakt.",
+        "nl": "Hoger gemiddeld niveau. Complexe onderwerpen en abstracte concepten.",
+        "no": "Høyere mellomnivå. Komplekse emner og abstrakte begreper.",
+        "pt": "Nível intermediário superior. Tópicos complexos e conceitos abstratos.",
+        "sv": "Högre mellannivå. Komplexa ämnen och abstrakta begrepp.",
+        "tr": "Üst orta seviye. Karmaşık konular ve soyut kavramlar.",
+        "ur": "اعلی درمیانی سطح۔ پیچیدہ موضوعات اور تجریدی تصورات۔",
+        "sr": "Виши средњи ниво. Сложене теме и апстрактни појмови.",
+        "es-MX": "Nivel intermedio alto. Temas complejos y conceptos abstractos.",
+        "el": "Ανώτερο μεσαίο επίπεδο. Σύνθετα θέματα και αφηρημένες έννοιες.",
+        "cs": "Vyšší středně pokročilá úroveň. Složitá témata a abstraktní pojmy.",
+        "ro": "Nivel intermediar superior. Subiecte complexe și concepte abstracte.",
+        "hu": "Haladó középszint. Összetett témák és elvont fogalmak.",
+        "bg": "Горно средно ниво. Сложни теми и абстрактни понятия.",
+        "hr": "Viša srednja razina. Složene teme i apstraktni pojmovi.",
+        "sk": "Vyššia stredne pokročilá úroveň. Zložité témy a abstraktné pojmy.",
+        "sl": "Višja srednja raven. Zapletene teme in abstraktni pojmi.",
+        "fi": "Ylempi keskitaso. Monimutkaisia aiheita ja abstrakteja käsitteitä.",
+        "lt": "Aukštesnis vidutinis lygis. Sudėtingos temos ir abstrakčios sąvokos.",
+        "lv": "Augstāks vidējais līmenis. Sarežģītas tēmas un abstrakti jēdzieni.",
+        "et": "Kõrgem kesktase. Keerukad teemad ja abstraktsed mõisted."
+      }
+    },
+    "C1": {
+      "complexity": "advanced",
+      "explanation_style": "professional, with literary examples",
+      "grammar_focus": [
+        "all grammar aspects",
+        "stylistic devices",
+        "idioms"
+      ],
+      "descriptions": {
+        "ru": "Продвинутый уровень. Свободное владение языком.",
+        "en": "Advanced level. Fluent language proficiency.",
+        "de": "Fortgeschrittenes Niveau. Fließende Sprachkenntnisse.",
+        "uk": "Просунутий рівень. Вільне володіння мовою.",
+        "it": "Livello avanzato. Padronanza fluente della lingua.",
+        "fr": "Niveau avancé. Maîtrise fluide de la langue.",
+        "es": "Nivel avanzado. Dominio fluido del idioma.",
+        "pl": "Poziom zaawansowany. Biegła znajomość języka.",
+        "ar": "المستوى المتقدم. إتقان اللغة بطلاقة.",
+        "da": "Avanceret niveau. Flydende sprogfærdigheder.",
+        "fa": "سطح پیشرفته. تسلط روان بر زبان.",
+        "ku": "Astê pêşketî. Zimanê bi rêkûpêk.",
+        "nl": "Gevorderd niveau. Vloeiende taalvaardigheid.",
+        "no": "Avansert nivå. Flytende språkferdigheter.",
+        "pt": "Nível avançado. Domínio fluente do idioma.",
+        "sv": "Avancerad nivå. Flytande språkkunskaper.",
+        "tr": "İleri seviye. Akıcı dil becerisi.",
+        "ur": "اعلی سطح۔ زبان پر روانی سے عبور۔",
+        "sr": "Напредни ниво. Течно владање језиком.",
+        "es-MX": "Nivel avanzado. Dominio fluido del idioma.",
+        "el": "Προχωρημένο επίπεδο. Άνετη και ευέλικτη χρήση της γλώσσας.",
+        "cs": "Pokročilá úroveň. Plynulé ovládání jazyka.",
+        "ro": "Nivel avansat. Stăpânire fluentă a limbii.",
+        "hu": "Haladó szint. Folyékony nyelvhasználat.",
+        "bg": "Напреднало ниво. Свободно владеене на езика.",
+        "hr": "Napredna razina. Tečno vladanje jezikom.",
+        "sk": "Pokročilá úroveň. Plynulé ovládanie jazyka.",
+        "sl": "Napredna raven. Tekoče obvladanje jezika.",
+        "fi": "Edistynyt taso. Sujuva kielitaito.",
+        "lt": "Pažengęs lygis. Laisvas kalbos vartojimas.",
+        "lv": "Augstākais līmenis. Brīva valodas prasme.",
+        "et": "Edasijõudnu tase. Keele ladus valdamine."
+      }
+    },
+    "C2": {
+      "complexity": "native-like",
+      "explanation_style": "expert-level, with cultural context",
+      "grammar_focus": [
+        "all language aspects",
+        "dialects",
+        "professional vocabulary"
+      ],
+      "descriptions": {
+        "ru": "Уровень носителя языка. Совершенное владение.",
+        "en": "Native-like level. Perfect mastery.",
+        "de": "Muttersprachliches Niveau. Perfekte Beherrschung.",
+        "uk": "Рівень носія мови. Досконале володіння.",
+        "it": "Livello madrelingua. Padronanza perfetta.",
+        "fr": "Niveau natif. Maîtrise parfaite.",
+        "es": "Nivel nativo. Dominio perfecto.",
+        "pl": "Poziom rodzimego użytkownika. Doskonałe opanowanie.",
+        "ar": "مستوى اللغة الأم. إتقان تام.",
+        "da": "Modersmål-niveau. Perfekt beherskelse.",
+        "fa": "سطح زبان مادری. تسلط کامل.",
+        "ku": "Astê zimanê zikmakî. Rêkûpêk.",
+        "nl": "Moedertaalniveau. Perfecte beheersing.",
+        "no": "Morsmålsnivå. Perfekt beherskelse.",
+        "pt": "Nível nativo. Domínio perfeito.",
+        "sv": "Modersmålsnivå. Perfekt behärskning.",
+        "tr": "Anadil seviyesi. Mükemmel hakimiyet.",
+        "ur": "مادری زبان کی سطح۔ کامل عبور۔",
+        "sr": "Ниво изворног говорника. Савршено владање.",
+        "es-MX": "Nivel nativo. Dominio perfecto.",
+        "el": "Επίπεδο σχεδόν μητρικής γλώσσας. Άριστη γνώση.",
+        "cs": "Téměř rodilá úroveň. Dokonalé zvládnutí jazyka.",
+        "ro": "Nivel apropiat de cel nativ. Stăpânire deplină.",
+        "hu": "Anyanyelvihez közeli szint. Tökéletes nyelvtudás.",
+        "bg": "Ниво, близко до родния език. Пълно владеене.",
+        "hr": "Razina bliska izvornom govorniku. Potpuno vladanje jezikom.",
+        "sk": "Úroveň blízka rodenému hovoriacemu. Dokonalé ovládanie jazyka.",
+        "sl": "Raven blizu maternemu govorcu. Popolno obvladanje jezika.",
+        "fi": "Lähes äidinkielen taso. Täydellinen hallinta.",
+        "lt": "Beveik gimtakalbio lygis. Puikus kalbos mokėjimas.",
+        "lv": "Gandrīz dzimtās valodas līmenis. Pilnīga prasme.",
+        "et": "Emakeelelähedane tase. Täielik valdamine."
+      }
+    }
+  }
+}

@@ -3,10 +3,12 @@ import json
 import logging
 import asyncio
 import hashlib
+import hmac
 import sqlite3
 import time
 from datetime import datetime, timedelta
 from functools import lru_cache
+from contextlib import asynccontextmanager, contextmanager
 import threading
 from dataclasses import dataclass
 
@@ -22,11 +24,13 @@ from langdetect.lang_detect_exception import LangDetectException
 
 from openai import AsyncOpenAI, APIError, RateLimitError
 from dotenv import load_dotenv
-from logging.handlers import RotatingFileHandler
+from cryptography.fernet import Fernet, InvalidToken
 import firebase_admin
 from firebase_admin import auth as firebase_auth
 from firebase_admin import app_check as firebase_app_check
 from firebase_admin import credentials as firebase_credentials
+from language_catalog import CatalogError, display_name as catalog_display_name, load_catalog, runtime_views
+from prompt_contract_v2 import AnalysisInput as V2AnalysisInput, AnalysisOutput as V2AnalysisOutput, CANONICAL_SYSTEM_PROMPT, build_user_payload
 
 DetectorFactory.seed = 0
 load_dotenv()
@@ -43,6 +47,11 @@ DEEPSEEK_MODEL = os.getenv("DEEPSEEK_MODEL", "deepseek-v4-flash")
 # by default; disabling it avoids spending most of the request on hidden
 # reasoning before it starts streaming the JSON response to the learner.
 DEEPSEEK_THINKING = {"type": "disabled"}
+# Bump either value whenever a change can affect the answer for the same input.
+# Existing encrypted entries then become unreachable without manual cache work.
+ANALYSIS_CONTRACT_VERSION = os.getenv("ANALYSIS_CONTRACT_VERSION", "v1").lower()
+ANALYSIS_PROMPT_VERSION = os.getenv("ANALYSIS_PROMPT_VERSION", ANALYSIS_CONTRACT_VERSION)
+ANALYSIS_SCHEMA_VERSION = "v2" if ANALYSIS_CONTRACT_VERSION == "v2" else "v1"
 
 # Precompile dangerous input patterns once at module load
 _DANGEROUS_PATTERNS = [re.compile(p, re.IGNORECASE) for p in [
@@ -77,11 +86,11 @@ if _deepseek_api_key:
 # ALLOW_LEGACY_API_KEY=false after the migration window and rotate API_KEY.
 _api_key_header = APIKeyHeader(name="X-API-Key", auto_error=False)
 _server_api_key = os.getenv("API_KEY")
-_allow_legacy_api_key = os.getenv("ALLOW_LEGACY_API_KEY", "true").lower() == "true"
+_allow_legacy_api_key = os.getenv("ALLOW_LEGACY_API_KEY", "false").lower() == "true"
 _firebase_project_id = os.getenv("FIREBASE_PROJECT_ID", "speechcorrection-4118e")
 _firebase_service_account_json = os.getenv("FIREBASE_SERVICE_ACCOUNT_JSON")
 _firebase_ready = False
-_app_check_enforced = os.getenv("APP_CHECK_ENFORCED", "false").lower() == "true"
+_app_check_enforced = os.getenv("APP_CHECK_ENFORCED", "true").lower() == "true"
 
 
 def _initialize_firebase_admin() -> bool:
@@ -188,26 +197,20 @@ async def verify_client(request: Request, key: str = Security(_api_key_header)) 
     raise HTTPException(status_code=401, detail="Missing or invalid authentication")
 
 
-# Load static configurations at startup
-with open("language_configs.json", "r", encoding="utf-8") as f:
-    LANGUAGE_CONFIGS = json.load(f)
+# The versioned catalog is the only runtime language source.  The older JSON
+# files remain in the repository temporarily as migration inputs/rollback data,
+# but no endpoint reads them.
+try:
+    LANGUAGE_CATALOG = load_catalog()
+except CatalogError as error:
+    raise RuntimeError(f"Language catalog startup validation failed: {error}") from error
+LANGUAGE_CONFIGS, INTERFACE_LANGUAGES, LEVEL_DETAILS, CONTEXT_INSTRUCTIONS = runtime_views(
+    LANGUAGE_CATALOG)
 
-with open("level_details.json", "r", encoding="utf-8") as f:
-    LEVEL_DETAILS = json.load(f)
-
-with open("interface_languages.json", "r", encoding="utf-8") as f:
-    INTERFACE_LANGUAGES = json.load(f)
-
-with open("context_instructions.json", "r", encoding="utf-8") as f:
-    CONTEXT_INSTRUCTIONS = json.load(f)
-
-# Configure logging
+# Configure logging. Never write user text or client IP addresses to a local
+# file: platform log retention is configured outside the application.
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
-handler = RotatingFileHandler("app.log", maxBytes=10000000, backupCount=5, encoding="utf-8")
-formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
-handler.setFormatter(formatter)
-logger.addHandler(handler)
 
 _firebase_ready = _initialize_firebase_admin()
 
@@ -265,34 +268,100 @@ class RateLimiter:
 
 
 class ResponseCache:
-    """Content-addressed cache of analysis results in SQLite. Identical
-    requests (same text + language + level + style + interface + context) reuse
-    a stored result instead of calling the model again — saving tokens on the
-    repeated mistakes many users make. Keyed by content only (no user id), with
-    a TTL, so it never builds a per-user profile."""
+    """Bounded encrypted cache shared by identical requests.
 
-    def __init__(self, db_path: str = "response_cache.db", ttl_days: int = 30):
+    Values are encrypted at rest and database keys are HMACs, so neither a
+    copied database nor a common-phrase dictionary reveals learner input. The
+    cache has no user identifier: identical requests reuse paid model results.
+    """
+
+    _FORMAT_VERSION = "fernet-hmac-v1"
+
+    def __init__(
+        self,
+        db_path: str = "response_cache.db",
+        ttl_days: int = 30,
+        max_entries: int | None = None,
+        *,
+        encryption_key: str | bytes | None = None,
+        hmac_key: str | bytes | None = None,
+    ):
         self.db_path = db_path
         self.ttl = timedelta(days=ttl_days)
+        self.max_entries = max_entries if max_entries is not None else int(
+            os.getenv("RESPONSE_CACHE_MAX_ENTRIES", "5000"))
         self._lock = threading.Lock()
-        with sqlite3.connect(self.db_path) as conn:
+        encryption_key = encryption_key or os.getenv("CACHE_ENCRYPTION_KEY")
+        hmac_key = hmac_key or os.getenv("CACHE_HMAC_KEY")
+        self._hmac_key = self._as_bytes(hmac_key)
+        self._fernet: Fernet | None = None
+        try:
+            if encryption_key and self._hmac_key:
+                self._fernet = Fernet(self._as_bytes(encryption_key))
+        except (TypeError, ValueError):
+            logger.error("Response cache disabled: invalid encryption configuration")
+        self.enabled = self._fernet is not None and self._hmac_key is not None
+        if not self.enabled:
+            logger.warning(
+                "Response cache disabled until CACHE_ENCRYPTION_KEY and CACHE_HMAC_KEY are configured")
+            return
+        if self.max_entries < 1:
+            raise ValueError("RESPONSE_CACHE_MAX_ENTRIES must be positive")
+        with self._lock, self._connection() as conn:
             conn.execute(
                 "CREATE TABLE IF NOT EXISTS cache ("
                 "key TEXT PRIMARY KEY, response TEXT NOT NULL, created_at TEXT NOT NULL)"
             )
+            conn.execute("CREATE TABLE IF NOT EXISTS cache_meta (key TEXT PRIMARY KEY, value TEXT NOT NULL)")
+            row = conn.execute("SELECT value FROM cache_meta WHERE key = 'format'").fetchone()
+            if row is None or row[0] != self._FORMAT_VERSION:
+                # Do not retain rows from the previous plaintext storage format.
+                conn.execute("DELETE FROM cache")
+                conn.execute(
+                    "INSERT OR REPLACE INTO cache_meta (key, value) VALUES ('format', ?)",
+                    (self._FORMAT_VERSION,),
+                )
 
     @staticmethod
-    def make_key(text, language, level, style, interface_language, context) -> str:
+    def _as_bytes(value: str | bytes | None) -> bytes | None:
+        if value is None:
+            return None
+        return value.encode("utf-8") if isinstance(value, str) else value
+
+    def _digest(self, value: str) -> str:
+        assert self._hmac_key is not None
+        return hmac.new(self._hmac_key, value.encode("utf-8"), hashlib.sha256).hexdigest()
+
+    @contextmanager
+    def _connection(self):
+        connection = sqlite3.connect(self.db_path)
+        try:
+            yield connection
+            connection.commit()
+        finally:
+            connection.close()
+
+    def make_key(self, text, language, level, style, interface_language, context) -> str:
         raw = json.dumps(
-            [text, language, level, style, interface_language, context or ""],
+            [
+                text, language, level, style, interface_language, context or "",
+                DEEPSEEK_MODEL, ANALYSIS_PROMPT_VERSION, ANALYSIS_SCHEMA_VERSION,
+            ],
             ensure_ascii=False,
+            separators=(",", ":"),
         )
-        return hashlib.sha256(raw.encode("utf-8")).hexdigest()
+        return f"analysis::{self._digest(raw)}" if self.enabled else ""
+
+    def _storage_key(self, key: str) -> str:
+        return self._digest(key)
 
     def get(self, key: str) -> Optional[Dict]:
-        with self._lock, sqlite3.connect(self.db_path) as conn:
+        if not self.enabled or not key:
+            return None
+        storage_key = self._storage_key(key)
+        with self._lock, self._connection() as conn:
             row = conn.execute(
-                "SELECT response, created_at FROM cache WHERE key = ?", (key,)
+                "SELECT response, created_at FROM cache WHERE key = ?", (storage_key,)
             ).fetchone()
             if not row:
                 return None
@@ -302,24 +371,170 @@ class ResponseCache:
             except ValueError:
                 fresh = False
             if not fresh:
-                conn.execute("DELETE FROM cache WHERE key = ?", (key,))
+                conn.execute("DELETE FROM cache WHERE key = ?", (storage_key,))
                 return None
             try:
-                return json.loads(response)
-            except json.JSONDecodeError:
+                assert self._fernet is not None
+                return json.loads(self._fernet.decrypt(response.encode("utf-8")))
+            except (InvalidToken, UnicodeDecodeError, json.JSONDecodeError):
+                conn.execute("DELETE FROM cache WHERE key = ?", (storage_key,))
+                logger.warning("Discarded unreadable encrypted cache entry")
                 return None
 
     def put(self, key: str, response: Dict) -> None:
+        if not self.enabled or not key:
+            return
         try:
-            with self._lock, sqlite3.connect(self.db_path) as conn:
+            assert self._fernet is not None
+            encrypted = self._fernet.encrypt(
+                json.dumps(response, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+            ).decode("utf-8")
+            with self._lock, self._connection() as conn:
                 conn.execute(
-                    "INSERT OR REPLACE INTO cache (key, response, created_at) "
-                    "VALUES (?, ?, ?)",
-                    (key, json.dumps(response, ensure_ascii=False), datetime.now().isoformat()),
+                    "INSERT OR REPLACE INTO cache (key, response, created_at) VALUES (?, ?, ?)",
+                    (self._storage_key(key), encrypted, datetime.now().isoformat()),
                 )
-        except sqlite3.Error as e:
+                count = conn.execute("SELECT COUNT(*) FROM cache").fetchone()[0]
+                excess = count - self.max_entries
+                if excess > 0:
+                    conn.execute(
+                        "DELETE FROM cache WHERE key IN (SELECT key FROM cache ORDER BY created_at ASC LIMIT ?)",
+                        (excess,),
+                    )
+        except (sqlite3.Error, TypeError, ValueError) as error:
             # A cache write must never break a successful response.
-            logger.error(f"Cache write failed: {e}")
+            logger.error("Cache write failed: %s", type(error).__name__)
+
+
+class LLMUsageMeter:
+    """Privacy-safe, daily aggregate telemetry for paid model work.
+
+    This deliberately records neither a Firebase UID nor text, prompt, response,
+    IP address, or cache key. It only accounts for fixed product features.
+    """
+
+    _MICRODOLLARS = 1_000_000
+
+    def __init__(
+        self,
+        db_path: str = "llm_usage.db",
+        *,
+        input_price_per_mtok: float | None = None,
+        output_price_per_mtok: float | None = None,
+    ):
+        self.db_path = db_path
+        self.input_price_per_mtok = (
+            input_price_per_mtok
+            if input_price_per_mtok is not None
+            else float(os.getenv("LLM_INPUT_COST_PER_MTOK", "0"))
+        )
+        self.output_price_per_mtok = (
+            output_price_per_mtok
+            if output_price_per_mtok is not None
+            else float(os.getenv("LLM_OUTPUT_COST_PER_MTOK", "0"))
+        )
+        if self.input_price_per_mtok < 0 or self.output_price_per_mtok < 0:
+            raise ValueError("LLM token prices must be non-negative")
+        self._lock = threading.Lock()
+        with self._lock, self._connection() as conn:
+            conn.execute(
+                "CREATE TABLE IF NOT EXISTS llm_usage_daily ("
+                "day TEXT NOT NULL, feature TEXT NOT NULL, model TEXT NOT NULL, "
+                "model_calls INTEGER NOT NULL DEFAULT 0, "
+                "cache_hits INTEGER NOT NULL DEFAULT 0, "
+                "prompt_tokens INTEGER NOT NULL DEFAULT 0, "
+                "completion_tokens INTEGER NOT NULL DEFAULT 0, "
+                "latency_ms INTEGER NOT NULL DEFAULT 0, "
+                "estimated_cost_microdollars INTEGER NOT NULL DEFAULT 0, "
+                "PRIMARY KEY(day, feature, model))"
+            )
+
+    @contextmanager
+    def _connection(self):
+        connection = sqlite3.connect(self.db_path)
+        try:
+            yield connection
+            connection.commit()
+        finally:
+            connection.close()
+
+    @staticmethod
+    def _safe_count(value: object) -> int:
+        return value if isinstance(value, int) and value >= 0 else 0
+
+    def _estimated_cost_microdollars(
+        self, prompt_tokens: int, completion_tokens: int
+    ) -> int:
+        dollars = (
+            prompt_tokens * self.input_price_per_mtok
+            + completion_tokens * self.output_price_per_mtok
+        ) / 1_000_000
+        return round(dollars * self._MICRODOLLARS)
+
+    def _upsert(
+        self,
+        *,
+        feature: str,
+        model: str,
+        model_calls: int = 0,
+        cache_hits: int = 0,
+        prompt_tokens: int = 0,
+        completion_tokens: int = 0,
+        latency_ms: int = 0,
+    ) -> None:
+        # feature and model are internal configuration values, but bounding them
+        # prevents a bad configuration from growing the aggregate table forever.
+        feature = str(feature)[:64]
+        model = str(model)[:128]
+        if not feature or not model:
+            return
+        estimated_cost = self._estimated_cost_microdollars(
+            prompt_tokens, completion_tokens)
+        try:
+            with self._lock, self._connection() as conn:
+                conn.execute(
+                    "INSERT INTO llm_usage_daily ("
+                    "day, feature, model, model_calls, cache_hits, prompt_tokens, "
+                    "completion_tokens, latency_ms, estimated_cost_microdollars) "
+                    "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) "
+                    "ON CONFLICT(day, feature, model) DO UPDATE SET "
+                    "model_calls = model_calls + excluded.model_calls, "
+                    "cache_hits = cache_hits + excluded.cache_hits, "
+                    "prompt_tokens = prompt_tokens + excluded.prompt_tokens, "
+                    "completion_tokens = completion_tokens + excluded.completion_tokens, "
+                    "latency_ms = latency_ms + excluded.latency_ms, "
+                    "estimated_cost_microdollars = "
+                    "estimated_cost_microdollars + excluded.estimated_cost_microdollars",
+                    (
+                        datetime.now().date().isoformat(), feature, model,
+                        model_calls, cache_hits, prompt_tokens, completion_tokens,
+                        latency_ms, estimated_cost,
+                    ),
+                )
+        except sqlite3.Error as error:
+            # Accounting must never make a learner request fail.
+            logger.error("LLM usage metric write failed: %s", type(error).__name__)
+
+    def record_completion(
+        self,
+        *,
+        feature: str,
+        model: str,
+        prompt_tokens: object,
+        completion_tokens: object,
+        latency_seconds: float,
+    ) -> None:
+        self._upsert(
+            feature=feature,
+            model=model,
+            model_calls=1,
+            prompt_tokens=self._safe_count(prompt_tokens),
+            completion_tokens=self._safe_count(completion_tokens),
+            latency_ms=max(0, round(latency_seconds * 1000)),
+        )
+
+    def record_cache_hit(self, *, feature: str, model: str) -> None:
+        self._upsert(feature=feature, model=model, cache_hits=1)
 
 
 def _get_client_ip(request: Request) -> str:
@@ -543,7 +758,7 @@ def generate_teacher_prompt(request: CorrectionRequest, retry: bool = False) -> 
             text=request.text,
             interface_language=interface_lang_config["name"],
             interface_language_code=interface_lang_config["language_code"],
-            level_description=level_info["description"].get(interface_lang_config["language_code"], level_info["description"]["English"]),
+            level_description=_level_description(level_info, interface_lang_config),
             common_errors=", ".join(lang_config["common_errors"]),
             pronunciation_focus=", ".join(lang_config["pronunciation_focus"]),
             grammar_focus=", ".join(level_info["grammar_focus"]),
@@ -589,6 +804,99 @@ def generate_teacher_prompt(request: CorrectionRequest, retry: bool = False) -> 
     return prompt
 
 
+def _v2_mapping_threshold() -> float:
+    """Configured confidence gate for showing a rule; invalid values fail safe."""
+    try:
+        value = float(os.getenv("RULE_MAPPING_MIN_CONFIDENCE", "0.75"))
+    except ValueError:
+        return 0.75
+    return min(1.0, max(0.0, value))
+
+
+def build_v2_prompt(request: CorrectionRequest) -> tuple[str, str]:
+    """Build instruction-only system text plus separate structured learner data."""
+    concepts = rules_store.topics_with_concepts(request.language)
+    concept_catalog = [
+        {"concept_code": topic["concept_code"], "title": topic["title"]}
+        for topic in concepts
+    ]
+    system = (
+        f"{CANONICAL_SYSTEM_PROMPT}\n\n"
+        "Allowed concept codes for this learning language follow. Choose one only "
+        "when the observed correction is directly taught by that topic; otherwise "
+        "use taxonomy.unresolved.\n"
+        f"{json.dumps(concept_catalog, ensure_ascii=False, separators=(',', ':'))}"
+    )
+    payload = V2AnalysisInput(
+        text=request.text,
+        learning_language=request.language,
+        interface_language=request.interface_language,
+        level=request.level,
+        style=request.style,
+        context=request.context,
+    )
+    return system, build_user_payload(payload)
+
+
+def parse_v2_correction_response(response: str, request: CorrectionRequest) -> Dict:
+    """Validate V2 output and adapt it to the response shape used by released apps."""
+    parsed = V2AnalysisOutput.model_validate(_extract_json_object(response))
+    errors: list[dict] = []
+    threshold = _v2_mapping_threshold()
+    for error in parsed.errors:
+        # Anchors are a product invariant: they make text highlighting accurate
+        # and prevent a model rewrite from being presented as a small correction.
+        if request.text and error.original not in request.text:
+            raise ValueError("V2 original anchor is not in submitted text")
+        if error.corrected not in parsed.corrected_text:
+            raise ValueError("V2 corrected anchor is not in corrected text")
+        rule_id = (
+            rules_store.resolve_concept(request.language, error.concept_code)
+            if error.confidence >= threshold
+            else None
+        )
+        errors.append({
+            "type": error.category.value,
+            "concept_code": error.concept_code,
+            "confidence": str(error.confidence),
+            "rule_id": rule_id or "",
+            "original": error.original,
+            "corrected": error.corrected,
+            "explanation": error.explanation,
+        })
+    counts: dict[str, int] = {}
+    for error in errors:
+        counts[error["type"]] = counts.get(error["type"], 0) + 1
+    return {
+        "contract_version": 2,
+        "corrected_text": parsed.corrected_text,
+        "error_analysis": errors,
+        "error_statistics": ", ".join(
+            f"{category}: {count}" for category, count in sorted(counts.items())),
+        "explanation": parsed.summary,
+        "grammar_notes": "",
+        "pronunciation_tips": "",
+        "alternatives": "",
+        "level_appropriate_suggestions": "",
+    }
+
+
+def _level_description(level_info: Dict, interface_config: Dict) -> str:
+    """Read legacy display-name descriptions through a code-first adapter.
+
+    Catalog v2 will use ISO codes directly. Until then this keeps every current
+    interface localized without language-specific branches.
+    """
+    descriptions = level_info.get("description", {})
+    if not isinstance(descriptions, dict):
+        return ""
+    return (
+        descriptions.get(interface_config.get("language_code"))
+        or descriptions.get(interface_config.get("name"))
+        or descriptions.get("English", "")
+    )
+
+
 _CODE_FENCE_RE = re.compile(r"^\s*```(?:json)?\s*|\s*```\s*$")
 
 
@@ -616,7 +924,9 @@ def _extract_json_object(response: str) -> Dict:
 _CORRECTED_TEXT_RE = re.compile(r'"corrected_text"\s*:\s*"((?:[^"\\]|\\.)*)"')
 
 
-async def _call_deepseek_stream(client: AsyncOpenAI, prompt: str, user_text: str):
+async def _call_deepseek_stream(
+    client: AsyncOpenAI, prompt: str, user_text: str, *, feature: str = "analysis_stream"
+):
     """Yield the model's content deltas as they arrive (same params as the
     non-streaming call, so output is identical — just incremental)."""
     started = time.perf_counter()
@@ -654,19 +964,29 @@ async def _call_deepseek_stream(client: AsyncOpenAI, prompt: str, user_text: str
                 content_chars += len(delta)
                 yield delta
     finally:
+        elapsed = time.perf_counter() - started
+        llm_usage_meter.record_completion(
+            feature=feature,
+            model=DEEPSEEK_MODEL,
+            prompt_tokens=getattr(usage, "prompt_tokens", None),
+            completion_tokens=getattr(usage, "completion_tokens", None),
+            latency_seconds=elapsed,
+        )
         logger.info(
             "DeepSeek stream completed model=%s first_content_seconds=%s "
             "total_seconds=%.3f content_chars=%s prompt_tokens=%s completion_tokens=%s",
             DEEPSEEK_MODEL,
             f"{first_content_seconds:.3f}" if first_content_seconds is not None else "none",
-            time.perf_counter() - started,
+            elapsed,
             content_chars,
             getattr(usage, "prompt_tokens", None),
             getattr(usage, "completion_tokens", None),
         )
 
 
-async def _call_deepseek(client: AsyncOpenAI, prompt: str, user_text: str) -> str:
+async def _call_deepseek(client: AsyncOpenAI, prompt: str, user_text: str,
+                         *, feature: str = "generic",
+                         max_tokens: int = DEEPSEEK_MAX_TOKENS) -> str:
     started = time.perf_counter()
     response = await client.chat.completions.create(
         model=DEEPSEEK_MODEL,
@@ -678,21 +998,33 @@ async def _call_deepseek(client: AsyncOpenAI, prompt: str, user_text: str) -> st
         # makes the model correct rather than rewrite, and produces more
         # consistent, reliably-parseable JSON (fewer parse-retry round-trips).
         temperature=0.3,
-        max_tokens=DEEPSEEK_MAX_TOKENS,
+        max_tokens=max_tokens,
         response_format={"type": "json_object"},
         extra_body={"thinking": DEEPSEEK_THINKING},
     )
     choice = response.choices[0]
     usage = getattr(response, "usage", None)
+    elapsed = time.perf_counter() - started
+    llm_usage_meter.record_completion(
+        feature=feature,
+        model=DEEPSEEK_MODEL,
+        prompt_tokens=getattr(usage, "prompt_tokens", None),
+        completion_tokens=getattr(usage, "completion_tokens", None),
+        latency_seconds=elapsed,
+    )
     logger.info(
-        "DeepSeek completion model=%s total_seconds=%.3f prompt_tokens=%s completion_tokens=%s",
+        "DeepSeek completion feature=%s model=%s total_seconds=%.3f "
+        "prompt_tokens=%s completion_tokens=%s",
+        feature,
         DEEPSEEK_MODEL,
-        time.perf_counter() - started,
+        elapsed,
         getattr(usage, "prompt_tokens", None),
         getattr(usage, "completion_tokens", None),
     )
     if choice.finish_reason == "length":
-        logger.warning("DeepSeek response truncated at max_tokens=%s", DEEPSEEK_MAX_TOKENS)
+        logger.warning(
+            "DeepSeek response truncated feature=%s max_tokens=%s",
+            feature, max_tokens)
     return choice.message.content
 
 
@@ -718,8 +1050,9 @@ def _is_wrong_language(text: str, expected_code: str) -> bool:
         ranked = detect_langs(text)  # list of "lang:prob", high→low
     except LangDetectException:
         return False
+    detection_code = expected_code.replace("-", "_").split("_", 1)[0].lower()
     for guess in ranked:
-        if guess.lang == expected_code and guess.prob >= _LANG_EXPECTED_MIN_PROB:
+        if guess.lang == detection_code and guess.prob >= _LANG_EXPECTED_MIN_PROB:
             return False
     # Expected language absent (or negligible) in the ranking → genuinely wrong.
     return True
@@ -809,7 +1142,27 @@ async def parse_correction_response(
 
 
 rate_limiter = RateLimiter(max_requests=20, time_frame=timedelta(minutes=1))
+quiz_ip_generation_limiter = RateLimiter(
+    max_requests=3, time_frame=timedelta(minutes=1))
+quiz_global_generation_limiter = RateLimiter(
+    max_requests=60, time_frame=timedelta(minutes=1))
+_quiz_generation_locks: Dict[str, asyncio.Lock] = {}
 response_cache = ResponseCache()
+llm_usage_meter = LLMUsageMeter()
+
+
+@asynccontextmanager
+async def _quiz_generation_lock(cache_key: str):
+    """Deduplicate a cold quiz generation without retaining idle locks forever."""
+    lock = _quiz_generation_locks.setdefault(cache_key, asyncio.Lock())
+    try:
+        async with lock:
+            yield
+    finally:
+        # This exact lock is idle after the context exits. Do not remove a
+        # replacement lock another coroutine may have installed meanwhile.
+        if _quiz_generation_locks.get(cache_key) is lock and not lock.locked():
+            _quiz_generation_locks.pop(cache_key, None)
 
 
 @app.post("/process-text/")
@@ -818,8 +1171,6 @@ async def process_text(
     correction_request: CorrectionRequest,
     client: AuthenticatedClient = Depends(verify_client),
 ):
-    client_ip = _get_client_ip(request)
-
     if not rate_limiter.is_allowed(client.principal_id):
         raise HTTPException(status_code=429, detail="Too many requests")
 
@@ -832,7 +1183,7 @@ async def process_text(
     )
 
     # Reuse a stored result for an identical request — saves a model call.
-    cache_key = ResponseCache.make_key(
+    cache_key = response_cache.make_key(
         correction_request.text,
         correction_request.language,
         correction_request.level,
@@ -842,6 +1193,7 @@ async def process_text(
     )
     cached = response_cache.get(cache_key)
     if cached is not None:
+        llm_usage_meter.record_cache_hit(feature="analysis", model=DEEPSEEK_MODEL)
         logger.info("Cache hit auth=%s", client.auth_scheme)
         return JSONResponse(content=cached, media_type="application/json; charset=utf-8")
 
@@ -849,16 +1201,24 @@ async def process_text(
         raise HTTPException(status_code=500, detail="DeepSeek API key not configured")
 
     try:
-        prompt = generate_teacher_prompt(correction_request)
+        if ANALYSIS_CONTRACT_VERSION == "v2":
+            prompt, user_payload = build_v2_prompt(correction_request)
+        else:
+            prompt, user_payload = generate_teacher_prompt(correction_request), correction_request.text
         interface_lang_config = INTERFACE_LANGUAGES.get(correction_request.interface_language, INTERFACE_LANGUAGES["en"])
 
         sections = None
         last_parse_error: Optional[ValueError] = None
         for attempt in range(2):
-            response_text = await _call_deepseek(_deepseek_client, prompt, correction_request.text)
+            response_text = await _call_deepseek(
+                _deepseek_client, prompt, user_payload, feature="analysis")
             try:
-                sections = await parse_correction_response(
-                    response_text, interface_lang_config["language_code"], correction_request, _deepseek_client
+                sections = (
+                    parse_v2_correction_response(response_text, correction_request)
+                    if ANALYSIS_CONTRACT_VERSION == "v2"
+                    else await parse_correction_response(
+                        response_text, interface_lang_config["language_code"], correction_request, _deepseek_client
+                    )
                 )
                 break
             except ValueError as e:
@@ -877,7 +1237,6 @@ async def process_text(
             "pronunciation_tips": sections["pronunciation_tips"],
             "alternatives": sections["alternatives"],
             "level_appropriate_suggestions": sections["level_appropriate_suggestions"],
-            "original_text": correction_request.text,
             "context": correction_request.context or "",
         }
         response_cache.put(cache_key, content)
@@ -888,7 +1247,7 @@ async def process_text(
     except HTTPException:
         raise
     except Exception as e:
-        logger.error(f"Processing error for {client_ip}: {type(e).__name__}", exc_info=True)
+        logger.error("Processing error: %s", type(e).__name__, exc_info=True)
         raise HTTPException(status_code=500, detail="Internal server error")
 
 
@@ -906,7 +1265,6 @@ def _build_content(sections: Dict, request: CorrectionRequest) -> Dict:
         "pronunciation_tips": sections["pronunciation_tips"],
         "alternatives": sections["alternatives"],
         "level_appropriate_suggestions": sections["level_appropriate_suggestions"],
-        "original_text": request.text,
         "context": request.context or "",
     }
 
@@ -925,11 +1283,10 @@ async def process_text_stream(
 
     Events: `partial` {corrected_text}, then `result` {full analysis}, or `error`.
     """
-    client_ip = _get_client_ip(request)
     if not rate_limiter.is_allowed(client.principal_id):
         raise HTTPException(status_code=429, detail="Too many requests")
 
-    cache_key = ResponseCache.make_key(
+    cache_key = response_cache.make_key(
         correction_request.text, correction_request.language,
         correction_request.level, correction_request.style,
         correction_request.interface_language, correction_request.context,
@@ -941,6 +1298,8 @@ async def process_text_stream(
         # Cache hit → deliver the same two-event shape instantly.
         cached = response_cache.get(cache_key)
         if cached is not None:
+            llm_usage_meter.record_cache_hit(
+                feature="analysis_stream", model=DEEPSEEK_MODEL)
             yield _sse("partial", {"corrected_text": cached.get("corrected_text", "")})
             yield _sse("result", cached)
             return
@@ -950,11 +1309,15 @@ async def process_text_stream(
             return
 
         try:
-            prompt = generate_teacher_prompt(correction_request)
+            if ANALYSIS_CONTRACT_VERSION == "v2":
+                prompt, user_payload = build_v2_prompt(correction_request)
+            else:
+                prompt, user_payload = generate_teacher_prompt(correction_request), correction_request.text
             buffer: List[str] = []
             emitted_partial = False
             async for delta in _call_deepseek_stream(
-                    _deepseek_client, prompt, correction_request.text):
+                    _deepseek_client, prompt, user_payload,
+                    feature="analysis_stream"):
                 buffer.append(delta)
                 if not emitted_partial:
                     m = _CORRECTED_TEXT_RE.search("".join(buffer))
@@ -969,9 +1332,13 @@ async def process_text_stream(
 
             full_text = "".join(buffer)
             try:
-                sections = await parse_correction_response(
-                    full_text, interface_lang_config["language_code"],
-                    correction_request, _deepseek_client)
+                sections = (
+                    parse_v2_correction_response(full_text, correction_request)
+                    if ANALYSIS_CONTRACT_VERSION == "v2"
+                    else await parse_correction_response(
+                        full_text, interface_lang_config["language_code"],
+                        correction_request, _deepseek_client)
+                )
             except ValueError:
                 yield _sse("error", {"detail": "Language model returned an invalid response, please try again"})
                 return
@@ -980,7 +1347,7 @@ async def process_text_stream(
             response_cache.put(cache_key, content)
             yield _sse("result", content)
         except Exception as e:
-            logger.error(f"Stream processing error for {client_ip}: {type(e).__name__}", exc_info=True)
+            logger.error("Stream processing error: %s", type(e).__name__, exc_info=True)
             yield _sse("error", {"detail": "Internal server error"})
 
     return StreamingResponse(
@@ -1024,13 +1391,14 @@ async def get_rule_endpoint(
     cache_key = f"rule::{learning}::{interface}::{rule_id}"
     cached = response_cache.get(cache_key)
     if cached is not None:
+        llm_usage_meter.record_cache_hit(feature="rule", model=DEEPSEEK_MODEL)
         return JSONResponse(content=cached, media_type=_RULE_MEDIA)
 
     # 4) lazy generation via the model, then cache
     if not _deepseek_client:
         raise HTTPException(status_code=503, detail="generation unavailable")
-    learning_name = rules_store.LANGUAGE_NAMES.get(learning, learning)
-    interface_name = rules_store.LANGUAGE_NAMES.get(interface, interface)
+    learning_name = catalog_display_name(LANGUAGE_CATALOG, learning)
+    interface_name = catalog_display_name(LANGUAGE_CATALOG, interface)
     prompt = rules_store.build_rule_prompt(title, learning_name, interface_name)
     try:
         raw = await _call_deepseek(
@@ -1054,13 +1422,159 @@ async def get_rule_endpoint(
     return JSONResponse(content=rule, media_type=_RULE_MEDIA)
 
 
+@app.get("/rule-quiz")
+async def get_rule_quiz_endpoint(
+    request: Request,
+    learning: str,
+    interface: str,
+    rule_id: str,
+    level: str,
+    question_count: int = 5,
+    client: AuthenticatedClient = Depends(verify_client),
+):
+    """Return a cached or lazily generated quiz at the requested CEFR level."""
+    if not rate_limiter.is_allowed(client.principal_id):
+        raise HTTPException(status_code=429, detail="Too many requests")
+
+    try:
+        quiz_level, quiz_question_count = rules_store.validate_quiz_parameters(
+            learning, interface, rule_id, level, question_count)
+    except ValueError:
+        raise HTTPException(status_code=400, detail="invalid parameters")
+
+    # Syntactically valid but unsupported codes must fail before touching the
+    # shared cache or invoking the paid model endpoint.
+    if learning not in LANGUAGE_CONFIGS or interface not in INTERFACE_LANGUAGES:
+        raise HTTPException(status_code=400, detail="unsupported language")
+
+    topics = rules_store.load_topics(learning)
+    if not topics:
+        raise HTTPException(status_code=404, detail="learning taxonomy not found")
+    title = next(
+        (topic.get("title") for topic in topics
+         if topic.get("rule_id") == rule_id),
+        None,
+    )
+    if not isinstance(title, str) or not title.strip():
+        raise HTTPException(status_code=404, detail="rule not found")
+
+    cache_key = (
+        f"rule-quiz::v2::{learning}::{interface}::{rule_id}::{quiz_level}::{quiz_question_count}")
+    cached = response_cache.get(cache_key)
+    if cached is not None:
+        llm_usage_meter.record_cache_hit(feature="rule_quiz", model=DEEPSEEK_MODEL)
+        try:
+            clean = rules_store.validate_rule_quiz(
+                cached, expected_question_count=quiz_question_count)
+            result = {
+                "rule_id": rule_id,
+                "learning": learning,
+                "interface": interface,
+                "level_band": quiz_level,
+                "questions": clean["questions"],
+            }
+            return JSONResponse(content=result, media_type=_RULE_MEDIA)
+        except ValueError:
+            logger.warning(
+                "Ignoring invalid rule quiz cache entry %s/%s/%s/%s",
+                learning, interface, rule_id, quiz_level)
+
+    # Single-flight by quiz key: concurrent first opens await one generation
+    # instead of multiplying paid model calls for the same content.
+    async with _quiz_generation_lock(cache_key):
+        cached = response_cache.get(cache_key)
+        if cached is not None:
+            llm_usage_meter.record_cache_hit(
+                feature="rule_quiz", model=DEEPSEEK_MODEL)
+            try:
+                clean = rules_store.validate_rule_quiz(
+                    cached, expected_question_count=quiz_question_count)
+                return JSONResponse(content={
+                    "rule_id": rule_id,
+                    "learning": learning,
+                    "interface": interface,
+                    "level_band": quiz_level,
+                    "questions": clean["questions"],
+                }, media_type=_RULE_MEDIA)
+            except ValueError:
+                pass
+
+        # A new anonymous Firebase UID must not reset the paid-generation
+        # budget. Cache hits remain free and do not consume these quotas.
+        client_ip = _get_client_ip(request)
+        if (not quiz_ip_generation_limiter.is_allowed(client_ip)
+                or not quiz_global_generation_limiter.is_allowed("global")):
+            raise HTTPException(
+                status_code=429, detail="Quiz generation limit reached")
+        if not _deepseek_client:
+            raise HTTPException(status_code=503, detail="generation unavailable")
+
+        rule_context = None
+        try:
+            rule_context = rules_store.get_rule(learning, interface, rule_id)
+        except (rules_store.RulesNotFound, rules_store.RuleNotFound):
+            pass
+
+        prompt = rules_store.build_rule_quiz_prompt(
+            title=title,
+            learning_name=catalog_display_name(LANGUAGE_CATALOG, learning),
+            interface_name=catalog_display_name(LANGUAGE_CATALOG, interface),
+            level=quiz_level,
+            question_count=quiz_question_count,
+            rule_context=rule_context,
+        )
+        clean = None
+        for attempt in range(2):
+            try:
+                raw = await _call_deepseek(
+                    _deepseek_client,
+                    prompt,
+                    "Generate the quiz JSON now.",
+                    feature="rule_quiz",
+                    max_tokens=1800,
+                )
+            except Exception as error:
+                logger.error(
+                    "Rule quiz model call failed %s/%s/%s/%s: %s",
+                    learning, interface, rule_id, quiz_level,
+                    type(error).__name__)
+                raise HTTPException(
+                    status_code=502, detail="quiz generation failed")
+
+            try:
+                if not isinstance(raw, str):
+                    raise ValueError("quiz response must be text")
+                clean = rules_store.validate_rule_quiz(
+                    rules_store.extract_json(raw),
+                    expected_question_count=quiz_question_count)
+                break
+            except (TypeError, ValueError):
+                logger.warning(
+                    "Invalid rule quiz response %s/%s/%s/%s attempt=%s",
+                    learning, interface, rule_id, quiz_level, attempt + 1)
+
+        if clean is None:
+            raise HTTPException(status_code=502, detail="quiz generation failed")
+
+        result = {
+            "rule_id": rule_id,
+            "learning": learning,
+            "interface": interface,
+            "level_band": quiz_level,
+            "questions": clean["questions"],
+        }
+        response_cache.put(cache_key, result)
+        return JSONResponse(content=result, media_type=_RULE_MEDIA)
+
+
 class ResolveRuleRequest(BaseModel):
-    # Length caps mirror the validation on CorrectionRequest: these fields are
-    # embedded into the resolve prompt, so bounding them keeps a caller from
-    # inflating token cost with oversized payloads. (The picked rule_id is also
-    # validated against the fixed taxonomy, so the output can't be injected.)
+    # Legacy text fields are accepted only so already-shipped clients get a
+    # harmless unresolved result during migration.  They are never embedded in
+    # a prompt or used for keyword matching.
     learning: str = Field(max_length=16)
     interface: str = Field(default="", max_length=16)
+    concept_code: str = Field(default="", max_length=100)
+    confidence: float = Field(default=0.0, ge=0.0, le=1.0)
     type: str = Field(default="", max_length=32)
     original: str = Field(default="", max_length=300)
     corrected: str = Field(default="", max_length=300)
@@ -1073,54 +1587,28 @@ async def resolve_rule_endpoint(
     body: ResolveRuleRequest,
     client: AuthenticatedClient = Depends(verify_client),
 ):
-    """Map a correction error to the best-matching rule_id from the fixed
-    taxonomy (or null). The model can only SELECT an existing id, never invent
-    one — the anti-duplication guarantee. POST keeps the user's text out of
-    request URLs/logs; cached per error signature; rate-limited."""
+    """Resolve a V2 concept to one exact active rule, or return unresolved.
+
+    There is deliberately no text-to-rule fallback here: returning an unrelated
+    lesson is worse than showing the rule list.  New clients send concept_code
+    from the analysis result; legacy clients receive null until upgraded.
+    """
     if not rate_limiter.is_allowed(client.principal_id):
         raise HTTPException(status_code=429, detail="Too many requests")
     learning = body.learning
-    err_type = body.type
-    original = body.original
-    corrected = body.corrected
-    explanation = body.explanation
     try:
         topics = rules_store.load_topics(learning)
     except ValueError:
         raise HTTPException(status_code=400, detail="invalid parameters")
     if not topics:
         return JSONResponse(content={"rule_id": None}, media_type=_RULE_MEDIA)
-
-    sig = rules_store.error_signature(learning, err_type, original, corrected)
-    cache_key = f"resolve::{sig}"
-    cached = response_cache.get(cache_key)
-    if cached is not None:
-        return JSONResponse(content=cached, media_type=_RULE_MEDIA)
-
-    # No model configured → return null WITHOUT caching (so it resolves once
-    # generation is available again).
-    if not _deepseek_client:
-        return JSONResponse(content={"rule_id": None}, media_type=_RULE_MEDIA)
-
-    valid_ids = {t["rule_id"] for t in topics}
-    prompt = rules_store.build_resolve_prompt(
-        rules_store.LANGUAGE_NAMES.get(learning, learning), topics,
-        err_type, original, corrected, explanation)
-    try:
-        raw = await _call_deepseek(
-            _deepseek_client, prompt, "Return the JSON now.")
-        picked = rules_store.extract_json(raw).get("rule_id")
-    except Exception as e:
-        # Transient failure → return null but DON'T cache it (avoid poisoning
-        # this error with a permanent "no rule" for the cache TTL).
-        logger.error(f"Rule resolve failed {learning}: {type(e).__name__}")
-        return JSONResponse(content={"rule_id": None}, media_type=_RULE_MEDIA)
-
-    # Definitive answer (a valid pick, or a genuine "none") — safe to cache.
-    result = {"rule_id": picked if (isinstance(picked, str)
-                                    and picked in valid_ids) else None}
-    response_cache.put(cache_key, result)
-    return JSONResponse(content=result, media_type=_RULE_MEDIA)
+    threshold = float(os.getenv("RULE_MAPPING_MIN_CONFIDENCE", "0.75"))
+    resolved = (
+        rules_store.resolve_concept(learning, body.concept_code)
+        if body.concept_code and body.confidence >= threshold
+        else None
+    )
+    return JSONResponse(content={"rule_id": resolved}, media_type=_RULE_MEDIA)
 
 
 @app.get("/health")
@@ -1131,7 +1619,7 @@ async def health_check():
                 status_code=503,
                 content={"status": "unhealthy", "reason": "DeepSeek API key not configured", "timestamp": datetime.now().isoformat()},
             )
-        required_files = ["language_configs.json", "level_details.json", "interface_languages.json", "context_instructions.json"]
+        required_files = ["languages/catalog.v2.json"]
         for f in required_files:
             if not os.path.exists(f):
                 return JSONResponse(
