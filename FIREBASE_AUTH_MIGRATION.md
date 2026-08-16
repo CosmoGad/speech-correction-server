@@ -43,6 +43,22 @@ Review the monitoring metrics for at least one release cycle before enforcing.
 Authentication identifies a user; App Check makes it harder for modified apps
 and scripts to impersonate the official client. They complement each other.
 
+### Rollout status — 2026-08-16
+
+- Android app `com.daniilnovykov.speech_correction` is registered with **Play
+  Integrity** in Firebase App Check.
+- The server verifies the `X-Firebase-AppCheck` header when it is present but
+  accepts missing or invalid tokens while `APP_CHECK_ENFORCED=false` (the
+  default). This is the monitoring phase for the custom Fly backend.
+- iOS registration remains pending. Firebase requires an Apple Developer
+  authentication key (`.p8`), its Key ID and Apple Team ID to register
+  DeviceCheck/App Attest. Do not enable enforcement until iOS is registered,
+  the new app builds are live and monitoring shows valid tokens.
+- After 1–2 weeks of monitoring, review Fly logs and App Check metrics. If
+  legitimate current clients consistently send valid tokens, set
+  `APP_CHECK_ENFORCED=true`, deploy, and verify current Android and iOS builds
+  before turning it on permanently.
+
 ## Incident response
 
 The historical static client key is public by design once distributed. It should

@@ -24,6 +24,7 @@ from dotenv import load_dotenv
 from logging.handlers import RotatingFileHandler
 import firebase_admin
 from firebase_admin import auth as firebase_auth
+from firebase_admin import app_check as firebase_app_check
 from firebase_admin import credentials as firebase_credentials
 
 DetectorFactory.seed = 0
@@ -75,6 +76,7 @@ _allow_legacy_api_key = os.getenv("ALLOW_LEGACY_API_KEY", "true").lower() == "tr
 _firebase_project_id = os.getenv("FIREBASE_PROJECT_ID", "speechcorrection-4118e")
 _firebase_service_account_json = os.getenv("FIREBASE_SERVICE_ACCOUNT_JSON")
 _firebase_ready = False
+_app_check_enforced = os.getenv("APP_CHECK_ENFORCED", "false").lower() == "true"
 
 
 def _initialize_firebase_admin() -> bool:
@@ -111,6 +113,7 @@ class AuthenticatedClient:
 
     principal_id: str
     auth_scheme: str  # firebase | legacy
+    app_check_status: str  # valid | missing | invalid | unavailable
 
 
 def _bearer_token(request: Request) -> Optional[str]:
@@ -121,12 +124,37 @@ def _bearer_token(request: Request) -> Optional[str]:
     return token.strip()
 
 
+def _verify_app_check(request: Request) -> str:
+    """Verify an optional App Check token, enforcing only when enabled.
+
+    App Check is intentionally deployed in monitoring mode first. The status is
+    safe to log and exposes neither the token nor user-provided content.
+    """
+    token = request.headers.get("X-Firebase-AppCheck", "").strip()
+    if not token:
+        if _app_check_enforced:
+            raise HTTPException(status_code=401, detail="Missing App Check token")
+        return "missing"
+    if not _firebase_ready:
+        if _app_check_enforced:
+            raise HTTPException(status_code=503, detail="App Check unavailable")
+        return "unavailable"
+    try:
+        firebase_app_check.verify_token(token)
+        return "valid"
+    except Exception:
+        if _app_check_enforced:
+            raise HTTPException(status_code=401, detail="Invalid App Check token")
+        return "invalid"
+
+
 async def verify_client(request: Request, key: str = Security(_api_key_header)) -> AuthenticatedClient:
     """Accept a Firebase ID token, with a temporary legacy fallback.
 
     Never trust a UID supplied by the client: `verify_id_token` verifies the
     Firebase signature, audience, issuer and expiry before returning it.
     """
+    app_check_status = _verify_app_check(request)
     token = _bearer_token(request)
     if token:
         if not _firebase_ready:
@@ -138,12 +166,17 @@ async def verify_client(request: Request, key: str = Security(_api_key_header)) 
         uid = decoded.get("uid")
         if not isinstance(uid, str) or not uid:
             raise HTTPException(status_code=401, detail="Firebase token has no user id")
-        return AuthenticatedClient(principal_id=f"uid:{uid}", auth_scheme="firebase")
+        return AuthenticatedClient(
+            principal_id=f"uid:{uid}",
+            auth_scheme="firebase",
+            app_check_status=app_check_status,
+        )
 
     if _allow_legacy_api_key and _server_api_key and key == _server_api_key:
         return AuthenticatedClient(
             principal_id=f"legacy:{_get_client_ip(request)}",
             auth_scheme="legacy",
+            app_check_status=app_check_status,
         )
 
     raise HTTPException(status_code=401, detail="Missing or invalid authentication")

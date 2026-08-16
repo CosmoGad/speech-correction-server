@@ -36,6 +36,7 @@ def test_verified_firebase_token_uses_uid_as_principal():
             _request({"Authorization": "Bearer signed-token"}), None))
         assert client.principal_id == "uid:user-123"
         assert client.auth_scheme == "firebase"
+        assert client.app_check_status == "missing"
     finally:
         server._firebase_ready = original_ready
         server.firebase_auth.verify_id_token = original_verify
@@ -91,6 +92,39 @@ def test_requests_without_auth_are_rejected():
     finally:
         server._server_api_key = original_key
         server._allow_legacy_api_key = original_allowed
+
+
+def test_invalid_app_check_token_is_observed_before_enforcement():
+    original_ready = server._firebase_ready
+    original_enforced = server._app_check_enforced
+    original_verify = server.firebase_app_check.verify_token
+    try:
+        server._firebase_ready = True
+        server._app_check_enforced = False
+
+        def reject(*_args, **_kwargs):
+            raise ValueError("bad App Check token")
+
+        server.firebase_app_check.verify_token = reject
+        assert server._verify_app_check(
+            _request({"X-Firebase-AppCheck": "invalid"})) == "invalid"
+    finally:
+        server._firebase_ready = original_ready
+        server._app_check_enforced = original_enforced
+        server.firebase_app_check.verify_token = original_verify
+
+
+def test_app_check_is_rejected_when_enforcement_is_enabled():
+    original_enforced = server._app_check_enforced
+    try:
+        server._app_check_enforced = True
+        try:
+            server._verify_app_check(_request())
+            assert False, "expected 401"
+        except HTTPException as error:
+            assert error.status_code == 401
+    finally:
+        server._app_check_enforced = original_enforced
 
 
 if __name__ == "__main__":
