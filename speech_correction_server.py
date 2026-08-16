@@ -181,6 +181,7 @@ async def verify_client(request: Request, key: str = Security(_api_key_header)) 
         uid = decoded.get("uid")
         if not isinstance(uid, str) or not uid:
             raise HTTPException(status_code=401, detail="Firebase token has no user id")
+        request.state.auth_scheme = "firebase"
         return AuthenticatedClient(
             principal_id=f"uid:{uid}",
             auth_scheme="firebase",
@@ -188,12 +189,14 @@ async def verify_client(request: Request, key: str = Security(_api_key_header)) 
         )
 
     if _allow_legacy_api_key and _server_api_key and key == _server_api_key:
+        request.state.auth_scheme = "legacy"
         return AuthenticatedClient(
             principal_id=f"legacy:{_get_client_ip(request)}",
             auth_scheme="legacy",
             app_check_status=app_check_status,
         )
 
+    request.state.auth_scheme = "none"
     raise HTTPException(status_code=401, detail="Missing or invalid authentication")
 
 
@@ -1689,11 +1692,18 @@ async def log_requests(request: Request, call_next):
     response = await call_next(request)
     process_time = (datetime.now() - start_time).total_seconds()
     app_check_status = getattr(request.state, "app_check_status", "not_checked")
+    # auth_scheme tells legacy-key clients apart from Firebase ones. It is the
+    # signal for when ALLOW_LEGACY_API_KEY can safely be turned off: flipping it
+    # while old builds are still in use kills them instantly, and store approval
+    # says nothing about how many people have actually updated. Watch legacy fall
+    # to near zero here first.
+    auth_scheme = getattr(request.state, "auth_scheme", "none")
     logger.info(
-        "%s %s - %s, app_check=%s, Process time: %.4fs",
+        "%s %s - %s, auth=%s, app_check=%s, Process time: %.4fs",
         request.method,
         request.url.path,
         response.status_code,
+        auth_scheme,
         app_check_status,
         process_time,
     )
