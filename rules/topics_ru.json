@@ -11,7 +11,8 @@
     },
     {
       "rule_id": "ударения",
-      "title": "ударения"
+      "title": "ударения",
+      "active": false
     },
     {
       "rule_id": "видовые-пары-глаголов",
@@ -27,7 +28,8 @@
     },
     {
       "rule_id": "ударение",
-      "title": "ударение"
+      "title": "ударение",
+      "active": false
     },
     {
       "rule_id": "use-of-быть-in-present-tense",
@@ -91,7 +93,8 @@
     },
     {
       "rule_id": "pronunciation-of-ч-vs-щ",
-      "title": "Pronunciation of ч vs щ"
+      "title": "Pronunciation of ч vs щ",
+      "active": false
     },
     {
       "rule_id": "conjugation-patterns-еи-endings",

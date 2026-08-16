@@ -91,7 +91,8 @@
     },
     {
       "rule_id": "pronunciation-of-retroflex-vs-dental-consonants",
-      "title": "Pronunciation of retroflex vs dental consonants"
+      "title": "Pronunciation of retroflex vs dental consonants",
+      "active": false
     },
     {
       "rule_id": "use-of-ko-as-object-marker",

@@ -27,7 +27,8 @@
     },
     {
       "rule_id": "intonation",
-      "title": "Intonation"
+      "title": "Intonation",
+      "active": false
     },
     {
       "rule_id": "noun-gender-common-neuter",
@@ -83,15 +84,18 @@
     },
     {
       "rule_id": "pronunciation-of-sj-sound",
-      "title": "Pronunciation of sj sound"
+      "title": "Pronunciation of sj sound",
+      "active": false
     },
     {
       "rule_id": "pronunciation-of-tj-sound",
-      "title": "Pronunciation of tj sound"
+      "title": "Pronunciation of tj sound",
+      "active": false
     },
     {
       "rule_id": "att-vs-och-pronunciation-distinction",
-      "title": "Att vs och pronunciation distinction"
+      "title": "Att vs och pronunciation distinction",
+      "active": false
     },
     {
       "rule_id": "både-och-and-antingen-eller",

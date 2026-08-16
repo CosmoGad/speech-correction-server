@@ -67,7 +67,8 @@
     },
     {
       "rule_id": "open-vs-closed-vowel-distinction",
-      "title": "Open vs closed vowel distinction"
+      "title": "Open vs closed vowel distinction",
+      "active": false
     },
     {
       "rule_id": "impersonal-se-constructions",

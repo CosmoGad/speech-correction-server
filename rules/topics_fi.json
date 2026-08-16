@@ -11,7 +11,8 @@
     },
     {
       "rule_id": "vowel-harmony",
-      "title": "Vowel harmony"
+      "title": "Vowel harmony",
+      "active": false
     },
     {
       "rule_id": "postpositions",
@@ -19,7 +20,8 @@
     },
     {
       "rule_id": "vowel-length",
-      "title": "Vowel length"
+      "title": "Vowel length",
+      "active": false
     },
     {
       "rule_id": "double-consonants",
@@ -27,7 +29,8 @@
     },
     {
       "rule_id": "frontback-vowels",
-      "title": "Front/back vowels"
+      "title": "Front/back vowels",
+      "active": false
     },
     {
       "rule_id": "partitive-after-numbers",

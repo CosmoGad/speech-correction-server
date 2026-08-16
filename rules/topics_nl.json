@@ -19,7 +19,8 @@
     },
     {
       "rule_id": "uitspraak-van-de-g",
-      "title": "Uitspraak van de g"
+      "title": "Uitspraak van de g",
+      "active": false
     },
     {
       "rule_id": "klinkers",
@@ -27,7 +28,8 @@
     },
     {
       "rule_id": "intonatie",
-      "title": "Intonatie"
+      "title": "Intonatie",
+      "active": false
     },
     {
       "rule_id": "use-of-er-existentialpronoun",
@@ -99,7 +101,8 @@
     },
     {
       "rule_id": "pronunciation-of-sch-and-ng-clusters",
-      "title": "Pronunciation of 'sch' and 'ng' clusters"
+      "title": "Pronunciation of 'sch' and 'ng' clusters",
+      "active": false
     }
   ]
 }

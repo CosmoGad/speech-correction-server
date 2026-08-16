@@ -23,11 +23,13 @@
     },
     {
       "rule_id": "vowel-reduction",
-      "title": "Vowel reduction"
+      "title": "Vowel reduction",
+      "active": false
     },
     {
       "rule_id": "vowel-length",
-      "title": "Vowel length"
+      "title": "Vowel length",
+      "active": false
     },
     {
       "rule_id": "infinitive-vs-supine-usage",
@@ -67,7 +69,8 @@
     },
     {
       "rule_id": "vocalic-r-pronunciation",
-      "title": "Vocalic R pronunciation"
+      "title": "Vocalic R pronunciation",
+      "active": false
     },
     {
       "rule_id": "palatal-consonants-distinction",
@@ -83,7 +86,8 @@
     },
     {
       "rule_id": "pronunciation-of-v-as-wu-in-coda",
-      "title": "Pronunciation of v as w/u in coda"
+      "title": "Pronunciation of v as w/u in coda",
+      "active": false
     },
     {
       "rule_id": "negation-ni-vs-ne",

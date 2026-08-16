@@ -19,7 +19,8 @@
     },
     {
       "rule_id": "stød",
-      "title": "Stød"
+      "title": "Stød",
+      "active": false
     },
     {
       "rule_id": "udtale-af-vokaler",
@@ -27,7 +28,8 @@
     },
     {
       "rule_id": "intonation",
-      "title": "Intonation"
+      "title": "Intonation",
+      "active": false
     },
     {
       "rule_id": "word-order-after-adverbs",
@@ -87,11 +89,13 @@
     },
     {
       "rule_id": "pronunciation-of-soft-d",
-      "title": "Pronunciation of soft d"
+      "title": "Pronunciation of soft d",
+      "active": false
     },
     {
       "rule_id": "pronunciation-of-uvular-r",
-      "title": "Pronunciation of uvular r"
+      "title": "Pronunciation of uvular r",
+      "active": false
     },
     {
       "rule_id": "false-friends-false-cognates",
@@ -99,7 +103,8 @@
     },
     {
       "rule_id": "compound-word-formation-stress",
-      "title": "Compound word formation stress"
+      "title": "Compound word formation stress",
+      "active": false
     },
     {
       "rule_id": "double-definite-construction",

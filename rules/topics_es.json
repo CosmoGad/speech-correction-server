@@ -19,15 +19,18 @@
     },
     {
       "rule_id": "sonidos-rrr-звуки-rrr",
-      "title": "Sonidos r/rr (звуки r/rr)"
+      "title": "Sonidos r/rr (звуки r/rr)",
+      "active": false
     },
     {
       "rule_id": "pronunciación-de-la-ñ",
-      "title": "Pronunciación de la ñ"
+      "title": "Pronunciación de la ñ",
+      "active": false
     },
     {
       "rule_id": "entonación",
-      "title": "Entonación"
+      "title": "Entonación",
+      "active": false
     },
     {
       "rule_id": "gender-of-nouns-masculinefeminine",

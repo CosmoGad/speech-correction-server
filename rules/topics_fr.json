@@ -19,11 +19,13 @@
     },
     {
       "rule_id": "voyelles-nasales",
-      "title": "Voyelles nasales"
+      "title": "Voyelles nasales",
+      "active": false
     },
     {
       "rule_id": "liaison",
-      "title": "Liaison"
+      "title": "Liaison",
+      "active": false
     },
     {
       "rule_id": "accent-tonique",

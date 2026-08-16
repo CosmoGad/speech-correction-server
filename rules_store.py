@@ -48,10 +48,14 @@ def _load_set(learning: str, interface: str) -> dict:
 
 
 def list_rules(learning: str, interface: str) -> list[dict]:
-    """Lightweight index: [{rule_id, title}, ...] (no heavy content)."""
+    """Lightweight index: [{rule_id, title}, ...] (no heavy content).
+
+    Inactive topics are filtered out — see `inactive_rule_ids`."""
     data = _load_set(learning, interface)
+    hidden = inactive_rule_ids(learning)
     return [{"rule_id": r["rule_id"], "title": r["title"]}
-            for r in data.get("rules", [])]
+            for r in data.get("rules", [])
+            if r["rule_id"] not in hidden]
 
 
 def get_rule(learning: str, interface: str, rule_id: str) -> dict:
@@ -81,15 +85,39 @@ LANGUAGE_NAMES = {
 }
 
 
-def load_topics(learning: str) -> list[dict]:
-    """The fixed taxonomy for a learning language: [{rule_id, title}, ...].
-    This is the ONLY source of rule_ids — dynamic resolution never mints new
-    ids, it only selects from here, which is what prevents duplicates."""
+def _all_topics(learning: str) -> list[dict]:
     _validate_code(learning, "learning")
     path = RULES_DIR / f"topics_{learning}.json"
     if not path.is_file():
         return []
     return json.loads(path.read_text(encoding="utf-8")).get("topics", [])
+
+
+def inactive_rule_ids(learning: str) -> set[str]:
+    """Topics marked `"active": false` — currently the pronunciation ones.
+
+    They are switched off rather than deleted because the pipeline cannot reach
+    them: speech is transcribed to text on the device, so a mispronunciation
+    either arrives as the correct word (no error at all) or as a different word
+    (a vocabulary error). Nothing ever resolves to a stress or intonation rule,
+    while the lessons themselves read as broken — their `wrong` and `right`
+    examples are necessarily the same string, since the difference is audible
+    and not spelled.
+
+    Deleting them would throw away usable content: once real pronunciation
+    analysis exists (see the TTS plan), flipping the flag brings them back."""
+    return {t["rule_id"] for t in _all_topics(learning)
+            if t.get("active") is False}
+
+
+def load_topics(learning: str) -> list[dict]:
+    """The fixed taxonomy for a learning language: [{rule_id, title}, ...].
+    This is the ONLY source of rule_ids — dynamic resolution never mints new
+    ids, it only selects from here, which is what prevents duplicates.
+
+    Inactive topics are excluded, so `/resolve-rule` cannot map an error onto a
+    rule the product cannot actually teach yet."""
+    return [t for t in _all_topics(learning) if t.get("active") is not False]
 
 
 def topic_title(learning: str, rule_id: str) -> str | None:

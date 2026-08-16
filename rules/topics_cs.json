@@ -27,7 +27,8 @@
     },
     {
       "rule_id": "vowel-length",
-      "title": "Vowel length"
+      "title": "Vowel length",
+      "active": false
     },
     {
       "rule_id": "gender-agreement-of-adjectives",

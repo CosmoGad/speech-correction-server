@@ -23,11 +23,13 @@
     },
     {
       "rule_id": "longshort-vowels",
-      "title": "Long/short vowels"
+      "title": "Long/short vowels",
+      "active": false
     },
     {
       "rule_id": "nasal-vowels",
-      "title": "Nasal vowels"
+      "title": "Nasal vowels",
+      "active": false
     },
     {
       "rule_id": "word-order-svo-vs-free",

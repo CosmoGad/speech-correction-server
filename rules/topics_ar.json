@@ -27,7 +27,8 @@
     },
     {
       "rule_id": "النبرة",
-      "title": "النبرة"
+      "title": "النبرة",
+      "active": false
     },
     {
       "rule_id": "definite-article-al-usage",
@@ -99,7 +100,8 @@
     },
     {
       "rule_id": "sun-and-moon-letters-pronunciation",
-      "title": "Sun and moon letters pronunciation"
+      "title": "Sun and moon letters pronunciation",
+      "active": false
     }
   ]
 }

@@ -19,15 +19,18 @@
     },
     {
       "rule_id": "th-sounds",
-      "title": "th sounds"
+      "title": "th sounds",
+      "active": false
     },
     {
       "rule_id": "stress",
-      "title": "Stress"
+      "title": "Stress",
+      "active": false
     },
     {
       "rule_id": "intonation",
-      "title": "Intonation"
+      "title": "Intonation",
+      "active": false
     },
     {
       "rule_id": "subject-verb-agreement",
@@ -71,11 +74,13 @@
     },
     {
       "rule_id": "silent-letters",
-      "title": "Silent letters"
+      "title": "Silent letters",
+      "active": false
     },
     {
       "rule_id": "homophones-spelling",
-      "title": "Homophones spelling"
+      "title": "Homophones spelling",
+      "active": false
     },
     {
       "rule_id": "irregular-verb-forms",

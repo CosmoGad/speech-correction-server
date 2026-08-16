@@ -23,7 +23,8 @@
     },
     {
       "rule_id": "vowel-length",
-      "title": "Vowel length"
+      "title": "Vowel length",
+      "active": false
     },
     {
       "rule_id": "pitch-accent",
@@ -51,11 +52,13 @@
     },
     {
       "rule_id": "soft-consonants-lj-nj-pronunciation",
-      "title": "Soft consonants lj nj pronunciation"
+      "title": "Soft consonants lj nj pronunciation",
+      "active": false
     },
     {
       "rule_id": "syllabic-r-pronunciation",
-      "title": "Syllabic r pronunciation"
+      "title": "Syllabic r pronunciation",
+      "active": false
     },
     {
       "rule_id": "auxiliary-verb-biti-forms",

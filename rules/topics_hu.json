@@ -7,7 +7,8 @@
     },
     {
       "rule_id": "vowel-harmony",
-      "title": "Vowel harmony"
+      "title": "Vowel harmony",
+      "active": false
     },
     {
       "rule_id": "definiteindefinite-conjugation",
@@ -19,11 +20,13 @@
     },
     {
       "rule_id": "long-vowels",
-      "title": "Long vowels"
+      "title": "Long vowels",
+      "active": false
     },
     {
       "rule_id": "stress-on-first-syllable",
-      "title": "Stress on first syllable"
+      "title": "Stress on first syllable",
+      "active": false
     },
     {
       "rule_id": "gyty-sounds",
@@ -67,11 +70,13 @@
     },
     {
       "rule_id": "ly-vs-j-spelling-and-pronunciation",
-      "title": "Ly vs j spelling and pronunciation"
+      "title": "Ly vs j spelling and pronunciation",
+      "active": false
     },
     {
       "rule_id": "short-ö-and-ü-vowel-pronunciation",
-      "title": "Short ö and ü vowel pronunciation"
+      "title": "Short ö and ü vowel pronunciation",
+      "active": false
     },
     {
       "rule_id": "comparative-and-superlative-irregulars",

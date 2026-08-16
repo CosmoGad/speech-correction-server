@@ -19,7 +19,8 @@
     },
     {
       "rule_id": "long-vowels",
-      "title": "Long vowels"
+      "title": "Long vowels",
+      "active": false
     },
     {
       "rule_id": "broken-tone",
@@ -87,15 +88,18 @@
     },
     {
       "rule_id": "pronunciation-of-š-č-ž-dž",
-      "title": "Pronunciation of š č ž dž"
+      "title": "Pronunciation of š č ž dž",
+      "active": false
     },
     {
       "rule_id": "word-stress-on-first-syllable",
-      "title": "Word stress on first syllable"
+      "title": "Word stress on first syllable",
+      "active": false
     },
     {
       "rule_id": "final-consonant-pronunciation",
-      "title": "Final consonant pronunciation"
+      "title": "Final consonant pronunciation",
+      "active": false
     },
     {
       "rule_id": "demonstratives-tas-vs-šis",

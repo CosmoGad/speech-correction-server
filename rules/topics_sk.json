@@ -19,7 +19,8 @@
     },
     {
       "rule_id": "vowel-length",
-      "title": "Vowel length"
+      "title": "Vowel length",
+      "active": false
     },
     {
       "rule_id": "äô-sounds",
@@ -75,15 +76,18 @@
     },
     {
       "rule_id": "word-stress-on-first-syllable",
-      "title": "Word stress on first syllable"
+      "title": "Word stress on first syllable",
+      "active": false
     },
     {
       "rule_id": "pronunciation-ch-vs-h",
-      "title": "Pronunciation 'ch' vs 'h'"
+      "title": "Pronunciation 'ch' vs 'h'",
+      "active": false
     },
     {
       "rule_id": "pronunciation-dz-and-dž",
-      "title": "Pronunciation 'dz' and 'dž'"
+      "title": "Pronunciation 'dz' and 'dž'",
+      "active": false
     },
     {
       "rule_id": "relative-pronouns-čo-vs-ktorý",

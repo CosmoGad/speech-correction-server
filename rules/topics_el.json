@@ -19,11 +19,13 @@
     },
     {
       "rule_id": "stress-placement",
-      "title": "Stress placement"
+      "title": "Stress placement",
+      "active": false
     },
     {
       "rule_id": "vowel-sounds",
-      "title": "Vowel sounds"
+      "title": "Vowel sounds",
+      "active": false
     },
     {
       "rule_id": "γχ-consonants",
@@ -87,7 +89,8 @@
     },
     {
       "rule_id": "diphthong-αυευ-pronunciation",
-      "title": "Diphthong αυ/ευ pronunciation"
+      "title": "Diphthong αυ/ευ pronunciation",
+      "active": false
     },
     {
       "rule_id": "double-consonant-sounds",

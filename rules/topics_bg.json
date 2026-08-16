@@ -19,11 +19,13 @@
     },
     {
       "rule_id": "stress",
-      "title": "Stress"
+      "title": "Stress",
+      "active": false
     },
     {
       "rule_id": "vowel-reduction",
-      "title": "Vowel reduction"
+      "title": "Vowel reduction",
+      "active": false
     },
     {
       "rule_id": "palatalization",

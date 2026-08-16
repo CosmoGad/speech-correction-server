@@ -19,15 +19,18 @@
     },
     {
       "rule_id": "umlaute",
-      "title": "Umlaute"
+      "title": "Umlaute",
+      "active": false
     },
     {
       "rule_id": "ch-laute",
-      "title": "ch-Laute"
+      "title": "ch-Laute",
+      "active": false
     },
     {
       "rule_id": "betonung-in-zusammengesetzten-wörtern",
-      "title": "Betonung in zusammengesetzten Wörtern"
+      "title": "Betonung in zusammengesetzten Wörtern",
+      "active": false
     },
     {
       "rule_id": "separable-prefix-verbs-usage",
@@ -67,11 +70,13 @@
     },
     {
       "rule_id": "pronunciation-uvular-r",
-      "title": "Pronunciation: uvular R"
+      "title": "Pronunciation: uvular R",
+      "active": false
     },
     {
       "rule_id": "pronunciation-ig-ending-ɪç-vs-ɪk",
-      "title": "Pronunciation: ig ending [ɪç] vs [ɪk]"
+      "title": "Pronunciation: ig ending [ɪç] vs [ɪk]",
+      "active": false
     },
     {
       "rule_id": "kein-vs-nicht-negation",

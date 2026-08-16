@@ -27,7 +27,8 @@
     },
     {
       "rule_id": "stress",
-      "title": "Stress"
+      "title": "Stress",
+      "active": false
     },
     {
       "rule_id": "plural-formation-for-neuter-nouns",
@@ -87,11 +88,13 @@
     },
     {
       "rule_id": "pronunciation-of-ț-ts-sound",
-      "title": "Pronunciation of 'ț' (ts sound)"
+      "title": "Pronunciation of 'ț' (ts sound)",
+      "active": false
     },
     {
       "rule_id": "pronunciation-of-ș-sh-vs-s",
-      "title": "Pronunciation of 'ș' (sh) vs s"
+      "title": "Pronunciation of 'ș' (sh) vs s",
+      "active": false
     },
     {
       "rule_id": "use-of-de-with-quantity-expressions",

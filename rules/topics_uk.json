@@ -79,7 +79,8 @@
     },
     {
       "rule_id": "pronunciation-of-the-letter-щ",
-      "title": "Pronunciation of the letter щ"
+      "title": "Pronunciation of the letter щ",
+      "active": false
     },
     {
       "rule_id": "hard-vs-soft-adjective-endings",

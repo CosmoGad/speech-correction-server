@@ -27,7 +27,8 @@
     },
     {
       "rule_id": "akcent",
-      "title": "Akcent"
+      "title": "Akcent",
+      "active": false
     },
     {
       "rule_id": "gender-agreement-of-adjectives",
