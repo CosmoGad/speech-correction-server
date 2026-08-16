@@ -1,0 +1,897 @@
+{
+  "learning": "es",
+  "interface": "nl",
+  "generated_at": "2026-08-16T12:01:01.623089+00:00",
+  "model": "claude-opus-4.8-agent",
+  "rules": [
+    {
+      "rule_id": "serestar",
+      "topic": "Ser/Estar",
+      "title": "Ser of estar: twee keer 'zijn'",
+      "explanation": "Het Spaans heeft twee werkwoorden voor ons 'zijn'. Gebruik 'ser' voor blijvende of definierende eigenschappen: identiteit, herkomst, beroep en tijd. Gebruik 'estar' voor tijdelijke toestanden: plaats, gevoelens en omstandigheden. Omdat wij maar een werkwoord 'zijn' kennen, moet je bij elke zin bewust afwegen of het om wat iets is gaat of om hoe iets er even aan toe is.",
+      "examples": [
+        {
+          "wrong": "Soy en la biblioteca.",
+          "right": "Estoy en la biblioteca.",
+          "note": "Bij een plaats gebruik je altijd 'estar', ook al is die plaats permanent."
+        },
+        {
+          "wrong": "Estoy estudiante.",
+          "right": "Soy estudiante.",
+          "note": "Bij een beroep of identiteit gebruik je 'ser'. Let op: er staat geen lidwoord voor het beroep."
+        },
+        {
+          "wrong": "Él es cansado.",
+          "right": "Él está cansado.",
+          "note": "Bij een tijdelijke toestand als moeheid hoort 'estar'. 'Ser cansado' betekent dat hij een vermoeiend persoon is."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vul in: 'Yo ___ (ser/estar) feliz hoy.' (vandaag blij)",
+          "answer": "estoy"
+        },
+        {
+          "prompt": "Vul in: 'Ellos ___ (ser/estar) de España.' (herkomst)",
+          "answer": "son"
+        },
+        {
+          "prompt": "Vul in: 'La mesa ___ (ser/estar) en la cocina.' (plaats)",
+          "answer": "está"
+        }
+      ]
+    },
+    {
+      "rule_id": "subjuntivo",
+      "topic": "Subjuntivo",
+      "title": "De subjuntivo na vaste signaalwoorden",
+      "explanation": "De subjuntivo is een aparte werkwoordswijs die het Nederlands niet meer kent, dus je moet hem puur op signaalwoorden herkennen. Hij volgt na uitdrukkingen van twijfel, emotie, wens of noodzaak, zoals 'es importante que', 'espero que', 'es necesario que' en 'ojalá', en ook na 'cuando' wanneer dat naar de toekomst verwijst. Beginners gebruiken hier vaak per ongeluk de gewone tegenwoordige tijd.",
+      "examples": [
+        {
+          "wrong": "Es importante que estudias mucho.",
+          "right": "Es importante que estudies mucho.",
+          "note": "Na 'es importante que' volgt de subjuntivo, omdat de zin een noodzaak of mening uitdrukt."
+        },
+        {
+          "wrong": "Cuando termino mi trabajo, voy a casa.",
+          "right": "Cuando termine mi trabajo, voy a casa.",
+          "note": "Verwijst 'cuando' naar iets in de toekomst en niet naar een gewoonte, dan volgt de subjuntivo."
+        },
+        {
+          "wrong": "Ojalá llueve mañana.",
+          "right": "Ojalá llueva mañana.",
+          "note": "'Ojalá' (hopelijk) vraagt altijd om de subjuntivo, want het drukt een wens uit."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vul de juiste subjuntivo in: 'Es necesario que (tú) _______ (hablar) con el profesor.'",
+          "answer": "hables"
+        },
+        {
+          "prompt": "Vul de juiste subjuntivo in: 'Espero que (ella) _______ (venir) a la fiesta.'",
+          "answer": "venga"
+        },
+        {
+          "prompt": "Vul de juiste subjuntivo in: 'Cuando yo _______ (llegar) a casa, te llamaré.'",
+          "answer": "llegue"
+        }
+      ]
+    },
+    {
+      "rule_id": "tiempos-verbales",
+      "topic": "Tiempos verbales",
+      "title": "Indefinido of imperfecto?",
+      "explanation": "Het pretérito indefinido gebruik je voor handelingen die afgerond zijn of op een bepaald moment plaatsvonden. Het imperfecto gebruik je voor beschrijvingen, gewoontes en achtergrond in het verleden. Onze onvoltooid verleden tijd doet beide dingen tegelijk ('ik at'), dus je moet je bij elke zin afvragen: had de handeling een duidelijk begin en eind, of schets ik een situatie?",
+      "examples": [
+        {
+          "wrong": "Ayer yo comía pizza.",
+          "right": "Ayer yo comí pizza.",
+          "note": "Bij een afgeronde handeling op een bepaald moment gebruik je het indefinido."
+        },
+        {
+          "wrong": "Cuando era niño, yo fui feliz.",
+          "right": "Cuando era niño, yo era feliz.",
+          "note": "Bij een beschrijving van een toestand of gevoel in het verleden gebruik je het imperfecto."
+        },
+        {
+          "wrong": "Ellos jugaban fútbol ayer a las 3.",
+          "right": "Ellos jugaron fútbol ayer a las 3.",
+          "note": "Staat er een concreet tijdstip bij, dan is de handeling afgerond en gebruik je het indefinido."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vul de juiste verleden tijd in: 'Ayer yo _____ (hablar) con mi madre.'",
+          "answer": "hablé"
+        },
+        {
+          "prompt": "Kies de juiste vorm: 'Cuando era niño, yo _____ (vivir) en una casa grande.' (viví / vivía)",
+          "answer": "vivía"
+        },
+        {
+          "prompt": "Vul in: 'Ellos _____ (visitar) el museo el lunes pasado.'",
+          "answer": "visitaron"
+        }
+      ]
+    },
+    {
+      "rule_id": "preposiciones",
+      "topic": "Preposiciones",
+      "title": "Por of para: het klassieke voorzetselprobleem",
+      "explanation": "Zowel 'por' als 'para' kan in het Nederlands 'voor' worden, maar ze doen iets anders. 'Por' gebruik je voor een reden, een oorzaak, een duur of een ruil; 'para' voor een doel, een bestemming of een ontvanger. Een handig ezelsbruggetje: por kijkt achteruit naar de aanleiding, para kijkt vooruit naar het doel.",
+      "examples": [
+        {
+          "wrong": "Gracias para tu ayuda.",
+          "right": "Gracias por tu ayuda.",
+          "note": "Na 'gracias' gebruik je 'por', want je noemt de reden van je dank."
+        },
+        {
+          "wrong": "Estudio por aprobar el examen.",
+          "right": "Estudio para aprobar el examen.",
+          "note": "Met 'para' geef je een doel aan: ik studeer om te slagen."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vul in: 'Estudio ___ aprender.' (doel)",
+          "answer": "para"
+        },
+        {
+          "prompt": "Vul in: 'Gracias ___ tu ayuda.' (reden)",
+          "answer": "por"
+        }
+      ]
+    },
+    {
+      "rule_id": "sonidos-rrr-звуки-rrr",
+      "topic": "Sonidos r/rr (звуки r/rr)",
+      "title": "De Spaanse r en rr",
+      "explanation": "De enkele r tussen klinkers is een korte tik van de tongpunt tegen het gehemelte, terwijl de dubbele rr een echte rollende r is. Ook een r aan het begin van een woord wordt gerold. Heb je een rollende Nederlandse tong-r, dan heb je een streepje voor; spreek je een huig-r uit de keel, dan moet je hier apart op oefenen, want het verschil tussen enkel en dubbel bepaalt de betekenis.",
+      "examples": [
+        {
+          "wrong": "pero (uitgesproken als 'perro')",
+          "right": "perro (met een gerolde rr)",
+          "note": "'Pero' betekent 'maar', 'perro' betekent 'hond'. Alleen de rol maakt het verschil."
+        },
+        {
+          "wrong": "caro (uitgesproken als 'carro')",
+          "right": "carro (met een gerolde rr)",
+          "note": "'Caro' betekent 'duur', 'carro' betekent 'auto'."
+        },
+        {
+          "wrong": "coro (uitgesproken als 'corro')",
+          "right": "corro (met een gerolde rr)",
+          "note": "'Coro' betekent 'koor', 'corro' betekent 'ik ren'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Hoe zeg je 'rijst' in het Spaans? (tip: begint met een gerolde r)",
+          "answer": "arroz"
+        },
+        {
+          "prompt": "Hoe schrijf je 'maar' in het Spaans? (enkele r, geen dubbele)",
+          "answer": "pero"
+        },
+        {
+          "prompt": "Vul in: 'El ___ (hond) ladra.'",
+          "answer": "perro"
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciación-de-la-ñ",
+      "topic": "Pronunciación de la ñ",
+      "title": "De Spaanse ñ uitspreken",
+      "explanation": "De letter ñ staat voor een palatale nasaal: je legt de tongrug tegen het gehemelte en zegt de klank als een geheel. Voor Nederlandstaligen is dit goed te doen, want het is precies de nj-klank in 'oranje' of 'Spanje'. Wat je niet moet doen is er een gewone n van maken of hem in twee losse letters n + j opsplitsen, want dat verandert de betekenis van het woord.",
+      "examples": [
+        {
+          "wrong": "manana",
+          "right": "mañana",
+          "note": "Zonder de ñ bestaat het woord niet. 'Mañana' (morgen) heeft de nj-klank van 'oranje'."
+        },
+        {
+          "wrong": "ano",
+          "right": "año",
+          "note": "Dit is de beruchte valkuil: 'año' betekent 'jaar', 'ano' betekent 'anus'. De ñ is hier echt onmisbaar."
+        },
+        {
+          "wrong": "nino",
+          "right": "niño",
+          "note": "'Nino' is geen Spaans woord; 'niño' betekent 'kind' of 'jongen'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Hoe zeg je 'Spanje' in het Spaans? (denk aan de ñ)",
+          "answer": "España"
+        },
+        {
+          "prompt": "Schrijf het woord voor 'meisje' met de juiste ñ.",
+          "answer": "niña"
+        },
+        {
+          "prompt": "Vertaal: 'Ik ga vanavond eten.' (gebruik het werkwoord voor avondeten)",
+          "answer": "voy a cenar esta noche"
+        }
+      ]
+    },
+    {
+      "rule_id": "entonación",
+      "topic": "Entonación",
+      "title": "Intonatie: mededeling of vraag",
+      "explanation": "In het Spaans hangt het verschil tussen een mededeling en een ja/nee-vraag vaak alleen van je intonatie af, want de woordvolgorde blijft hetzelfde. Een mededeling eindigt dalend, een vraag stijgend. Nederlandstaligen laten hun stem aan het eind van een zin nogal eens omhooggaan, waardoor een gewone mededeling per ongeluk als vraag klinkt. In geschreven Spaans markeer je de vraag bovendien met het omgekeerde vraagteken vooraan.",
+      "examples": [
+        {
+          "wrong": "Ella viene mañana. (met stijgende toon)",
+          "right": "Ella viene mañana. (met dalende toon)",
+          "note": "Dezelfde woorden: stijgend klinkt het als een vraag, dalend als een mededeling."
+        },
+        {
+          "wrong": "Hablas inglés. (met stijgende toon, als mededeling bedoeld)",
+          "right": "¿Hablas inglés? (stijgend, en met vraagtekens geschreven)",
+          "note": "Wil je echt vragen, gebruik dan ook in de schrijftaal ¿ en ? om je heen."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Schrijf 'Jij spreekt Spaans' als mededeling (met een punt).",
+          "answer": "Hablas español."
+        },
+        {
+          "prompt": "Schrijf 'Woont hij hier?' als vraag, met de juiste leestekens.",
+          "answer": "¿Él vive aquí?"
+        },
+        {
+          "prompt": "Maak van deze vraag een mededeling: '¿Ella trabaja?'",
+          "answer": "Ella trabaja."
+        }
+      ]
+    },
+    {
+      "rule_id": "gender-of-nouns-masculinefeminine",
+      "topic": "Gender of nouns (masculine/feminine)",
+      "title": "Het geslacht van zelfstandige naamwoorden",
+      "explanation": "Spaanse zelfstandige naamwoorden zijn mannelijk of vrouwelijk. Woorden op -o zijn meestal mannelijk en woorden op -a meestal vrouwelijk, maar er zijn belangrijke uitzonderingen: woorden op -ma van Griekse oorsprong zoals 'problema' zijn mannelijk, en 'mano' is vrouwelijk ondanks de -o. Ons de/het-systeem helpt je hier niet, dus leer het lidwoord altijd samen met het woord.",
+      "examples": [
+        {
+          "wrong": "la problema",
+          "right": "el problema",
+          "note": "Woorden op -ma zijn meestal mannelijk, ook al eindigen ze op -a."
+        },
+        {
+          "wrong": "el mano",
+          "right": "la mano",
+          "note": "'Mano' (hand) is vrouwelijk, ondanks de uitgang -o."
+        },
+        {
+          "wrong": "el foto",
+          "right": "la foto",
+          "note": "'Foto' is de afkorting van 'fotografía' en blijft daarom vrouwelijk."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Welk lidwoord hoort bij 'día' (dag)?",
+          "answer": "el día"
+        },
+        {
+          "prompt": "Welk lidwoord hoort bij 'mano' (hand)?",
+          "answer": "la mano"
+        },
+        {
+          "prompt": "Welk lidwoord hoort bij 'sistema' (systeem)?",
+          "answer": "el sistema"
+        }
+      ]
+    },
+    {
+      "rule_id": "adjective-agreement-in-gender-and-number",
+      "topic": "Adjective agreement in gender and number",
+      "title": "Bijvoeglijke naamwoorden laten meebuigen",
+      "explanation": "Een Spaans bijvoeglijk naamwoord past zich aan aan het zelfstandig naamwoord in geslacht en getal. Meestal eindigt de mannelijke vorm op -o, de vrouwelijke op -a, en komt er -s bij in het meervoud. Wij kennen alleen het kleine verschil tussen 'groot huis' en 'grote huis', dus die volledige verbuiging vergeten Nederlandstaligen makkelijk. Woorden die al op -e of een medeklinker eindigen, zoals 'grande', veranderen niet van geslachtsvorm.",
+      "examples": [
+        {
+          "wrong": "La casa rojo",
+          "right": "La casa roja",
+          "note": "'Casa' is vrouwelijk, dus het bijvoeglijk naamwoord wordt 'roja'."
+        },
+        {
+          "wrong": "Los coches roja",
+          "right": "Los coches rojos",
+          "note": "'Coches' is mannelijk meervoud, dus 'rojos'."
+        },
+        {
+          "wrong": "Las flores bonito",
+          "right": "Las flores bonitas",
+          "note": "'Flores' is vrouwelijk meervoud, dus 'bonitas'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vul aan: het grote huis → la casa _____ (grande)",
+          "answer": "grande"
+        },
+        {
+          "prompt": "Vul aan: de witte katten → los gatos _____ (blanco)",
+          "answer": "blancos"
+        }
+      ]
+    },
+    {
+      "rule_id": "direct-object-pronouns-lo-la-los-las",
+      "topic": "Direct object pronouns (lo, la, los, las)",
+      "title": "Lijdend voorwerp: lo, la, los, las",
+      "explanation": "De voornaamwoorden lo, la, los en las vervangen een lijdend voorwerp en moeten kloppen in geslacht en getal. Ze staan voor het vervoegde werkwoord, of ze plakken vast achter een infinitief of gerundium. Dat is wennen: in het Nederlands staat het voorwerp altijd achter het werkwoord ('ik zie hem'), in het Spaans juist ervoor ('lo veo').",
+      "examples": [
+        {
+          "wrong": "Veo él.",
+          "right": "Lo veo.",
+          "note": "Vervang 'él' door 'lo' en zet het voor het werkwoord."
+        },
+        {
+          "wrong": "Compro las manzanas y como las.",
+          "right": "Compro las manzanas y las como.",
+          "note": "Voor een vervoegd werkwoord staat het voornaamwoord ervoor, niet erachter."
+        },
+        {
+          "wrong": "Voy a ver ella.",
+          "right": "La voy a ver. OF Voy a verla.",
+          "note": "Bij een infinitief mag je kiezen: los voor het vervoegde werkwoord, of vastgeplakt aan de infinitief."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vertaal: 'Ik zie hen.' (mannelijk)",
+          "answer": "Los veo."
+        },
+        {
+          "prompt": "Vervang 'la casa' door het juiste voornaamwoord: 'Ella compra la casa.'",
+          "answer": "Ella la compra."
+        },
+        {
+          "prompt": "Vervang 'las flores' door het juiste voornaamwoord: 'Él riega las flores.'",
+          "answer": "Él las riega."
+        }
+      ]
+    },
+    {
+      "rule_id": "indirect-object-pronouns-le-les",
+      "topic": "Indirect object pronouns (le, les)",
+      "title": "Meewerkend voorwerp: le en les",
+      "explanation": "'Le' (enkelvoud) en 'les' (meervoud) zijn de voornaamwoorden voor het meewerkend voorwerp: aan hem, aan haar, aan u, aan hen. Twee dingen gaan vaak mis: ze worden per ongeluk als lijdend voorwerp gebruikt in plaats van lo of la, en ze worden niet aangepast aan een meervoudige ontvanger. Bovendien blijft het voornaamwoord verplicht, ook als je de ontvanger er al bij noemt met 'a Juan' - iets wat wij nooit dubbel zouden zeggen.",
+      "examples": [
+        {
+          "wrong": "Le vi a Juan.",
+          "right": "Lo vi a Juan.",
+          "note": "'Ver' heeft een lijdend voorwerp, dus 'lo'. (In delen van Spanje hoor je 'le vi', maar in de standaardnorm is 'lo vi' correct.)"
+        },
+        {
+          "wrong": "Le compré un regalo a mis padres.",
+          "right": "Les compré un regalo a mis padres.",
+          "note": "'Mis padres' is meervoud, dus wordt 'le' hier 'les'."
+        },
+        {
+          "wrong": "Doy el libro a Juan.",
+          "right": "Le doy el libro a Juan.",
+          "note": "Het voornaamwoord 'le' blijft verplicht, ook al staat 'a Juan' er al; het is geen dubbelop."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vul het juiste voornaamwoord in: 'Ik geef het boek aan María.' → (Yo) ___ doy el libro a María.",
+          "answer": "Le"
+        },
+        {
+          "prompt": "Vul in: 'Zij schrijven een brief aan hun grootouders.' → (Ellos) ___ escriben una carta a sus abuelos.",
+          "answer": "Les"
+        },
+        {
+          "prompt": "Vul in: 'Hij stuurt u een e-mail.' → Él ___ envía un correo a usted.",
+          "answer": "Le"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-personal-a",
+      "topic": "Use of personal 'a'",
+      "title": "De persoonlijke 'a'",
+      "explanation": "Als het lijdend voorwerp van een werkwoord een bepaalde persoon is - of een huisdier dat je als persoon behandelt - zet je er in het Spaans het voorzetsel 'a' voor. Dat heet de persoonlijke a en er is geen enkele Nederlandse tegenhanger van, dus dit wordt structureel vergeten. Gaat het om een ding of een willekeurig dier, dan blijft de a juist weg.",
+      "examples": [
+        {
+          "wrong": "Veo Juan.",
+          "right": "Veo a Juan.",
+          "note": "Juan is een bepaalde persoon, dus de 'a' is verplicht."
+        },
+        {
+          "wrong": "Busco mi perro.",
+          "right": "Busco a mi perro.",
+          "note": "Huisdieren worden als personen behandeld en krijgen dus ook de persoonlijke a."
+        },
+        {
+          "wrong": "Visito la abuela.",
+          "right": "Visito a la abuela.",
+          "note": "Familieleden zijn personen, dus ook hier hoort 'a'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vertaal: 'Ik zie María.'",
+          "answer": "Veo a María."
+        },
+        {
+          "prompt": "Vertaal: 'Zij houdt van haar kat.'",
+          "answer": "Ella ama a su gato."
+        },
+        {
+          "prompt": "Vertaal: 'U belt de dokter.' (beleefdheidsvorm)",
+          "answer": "Usted llama al doctor."
+        }
+      ]
+    },
+    {
+      "rule_id": "verbs-like-gustar-me-gusta-etc",
+      "topic": "Verbs like 'gustar' (me gusta, etc.)",
+      "title": "Werkwoorden als gustar",
+      "explanation": "'Gustar' werkt omgekeerd aan ons 'leuk vinden': het ding dat bevalt is het onderwerp, en de persoon die het leuk vindt staat als meewerkend voorwerp (me, te, le, nos, les). Je zegt dus 'Me gusta la pizza' - de pizza bevalt mij - en nooit 'Yo gusto la pizza'. Denk aan ons werkwoord 'bevallen': 'het bevalt me' heeft precies dezelfde bouw, en het werkwoord richt zich naar het ding, niet naar de persoon.",
+      "examples": [
+        {
+          "wrong": "Yo gusto el libro.",
+          "right": "Me gusta el libro.",
+          "note": "Het boek is het onderwerp bij 'gusta'; 'me' geeft aan wie het leuk vindt."
+        },
+        {
+          "wrong": "Ellos gustan los deportes.",
+          "right": "A ellos les gustan los deportes.",
+          "note": "Gebruik 'les' voor de meervoudige ontvanger en 'gustan' omdat 'los deportes' meervoud is."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vertaal: 'Ik hou van films.' (películas)",
+          "answer": "Me gustan las películas."
+        },
+        {
+          "prompt": "Verbeter de fout: 'Tú gustas la música.'",
+          "answer": "Te gusta la música."
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-verbs-and-pronouns",
+      "topic": "Reflexive verbs and pronouns",
+      "title": "Wederkerende werkwoorden en voornaamwoorden",
+      "explanation": "Wanneer het onderwerp de handeling op zichzelf uitvoert, heeft het Spaans een wederkerend voornaamwoord nodig: me, te, se, nos of os. Zonder dat voornaamwoord verandert de betekenis compleet: 'levantar' is iets of iemand optillen, 'levantarse' is zelf opstaan. Ons 'zich' werkt vergelijkbaar, maar het Spaans gebruikt het veel vaker, vooral bij dagelijkse routines.",
+      "examples": [
+        {
+          "wrong": "Yo levanto a las siete.",
+          "right": "Yo me levanto a las siete.",
+          "note": "'Levantar' is 'optillen'; met 'me' wordt het 'ik sta op'."
+        },
+        {
+          "wrong": "Él viste para la fiesta.",
+          "right": "Él se viste para la fiesta.",
+          "note": "'Vestir' zonder 'se' betekent iemand anders aankleden; 'vestirse' is zich aankleden."
+        },
+        {
+          "wrong": "Él llama Pedro.",
+          "right": "Él se llama Pedro.",
+          "note": "'Llamar' is 'roepen' of 'bellen'; 'llamarse' betekent 'heten'. Zonder 'se' zeg je dat hij Pedro belt."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vertaal: 'Ik was mijn handen.' (gebruik 'lavarse')",
+          "answer": "Yo me lavo las manos."
+        },
+        {
+          "prompt": "Vertaal: 'Zij gaat om tien uur naar bed.' (gebruik 'acostarse')",
+          "answer": "Ella se acuesta a las diez."
+        },
+        {
+          "prompt": "Vertaal: 'Wij voelen ons moe.' (gebruik 'sentirse')",
+          "answer": "Nos sentimos cansados."
+        }
+      ]
+    },
+    {
+      "rule_id": "formal-vs-informal-commands-imperative",
+      "topic": "Formal vs informal commands (imperative)",
+      "title": "Gebiedende wijs: formeel en informeel",
+      "explanation": "De Spaanse gebiedende wijs verandert naargelang je iemand met 'tú' of met 'usted' aanspreekt - vergelijkbaar met ons verschil tussen jij en u, maar met echt andere werkwoordsvormen. Voor een bevestigend bevel met tú gebruik je de él/ella-vorm van de tegenwoordige tijd ('habla'). Voor alle formele bevelen en voor ontkennende bevelen met tú gebruik je de subjuntivo ('hable', 'no hables').",
+      "examples": [
+        {
+          "wrong": "Habla más despacio. (tegen een onbekende)",
+          "right": "Hable más despacio.",
+          "note": "Tegen iemand die je niet kent gebruik je de formele vorm 'hable'."
+        },
+        {
+          "wrong": "No come eso. (tegen een vriend)",
+          "right": "No comas eso.",
+          "note": "Ontkennende bevelen met tú vragen om de subjuntivo: 'no comas', niet 'no come'."
+        },
+        {
+          "wrong": "Escribe la carta. (tegen je baas)",
+          "right": "Escriba la carta.",
+          "note": "Bij 'usted' zet je het werkwoord in de subjuntivo: 'escriba'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Zeg tegen een vriend (tú): 'spreek langzamer'.",
+          "answer": "Habla más despacio."
+        },
+        {
+          "prompt": "Zeg tegen een arts (formeel): 'gaat u zitten, alstublieft'.",
+          "answer": "Siéntese, por favor."
+        },
+        {
+          "prompt": "Zeg tegen een kind (tú): 'niet rennen'.",
+          "answer": "No corras."
+        }
+      ]
+    },
+    {
+      "rule_id": "comparative-and-superlative-forms",
+      "topic": "Comparative and superlative forms",
+      "title": "Vergrotende en overtreffende trap",
+      "explanation": "Vergelijken doe je in het Spaans met 'más ... que' (meer dan) of 'menos ... que' (minder dan); een uitgang zoals ons -er bestaat niet. Voor de overtreffende trap gebruik je 'el/la/los/las más ... de'. Denk eraan dat het bijvoeglijk naamwoord meebuigt in geslacht en getal, en dat onregelmatige vormen als 'mejor' en 'peor' nooit met 'más' worden gecombineerd.",
+      "examples": [
+        {
+          "wrong": "Ella es más inteligente de Juan.",
+          "right": "Ella es más inteligente que Juan.",
+          "note": "Na 'más' of 'menos' volgt bij een vergelijking 'que', niet 'de'."
+        },
+        {
+          "wrong": "Ella es más rápida de la clase.",
+          "right": "Ella es la más rápida de la clase.",
+          "note": "Bij een overtreffende trap hoort er een bepaald lidwoord voor 'más'."
+        },
+        {
+          "wrong": "Este es el más mejor libro.",
+          "right": "Este es el mejor libro.",
+          "note": "'Mejor' is al een vergrotende vorm; 'más' erbij is dubbelop, net als ons 'meer beter'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vertaal: 'Zij is langer dan hij.'",
+          "answer": "Ella es más alta que él."
+        },
+        {
+          "prompt": "Vertaal: 'Dit is het interessantste boek.'",
+          "answer": "Este es el libro más interesante."
+        },
+        {
+          "prompt": "Verbeter de fout: 'Él es el más inteligente estudiante.'",
+          "answer": "Él es el estudiante más inteligente."
+        }
+      ]
+    },
+    {
+      "rule_id": "demonstrative-adjectives-and-pronouns-este-ese-aquel",
+      "topic": "Demonstrative adjectives and pronouns (este, ese, aquel)",
+      "title": "Aanwijzende woorden: este, ese en aquel",
+      "explanation": "Het Spaans onderscheidt drie afstanden, terwijl wij er maar twee hebben. 'Este' is dichtbij de spreker (deze hier), 'ese' is dichtbij de luisteraar (die bij jou) en 'aquel' is ver van allebei (die daarginds). Ons 'deze' en 'die' dekken die middelste categorie niet netjes af, dus vraag je bij elke zin af waar het voorwerp zich bevindt - en vergeet de vormen voor geslacht en getal niet.",
+      "examples": [
+        {
+          "wrong": "Este libro que tienes en la mano es interesante.",
+          "right": "Ese libro que tienes en la mano es interesante.",
+          "note": "Het boek is in de hand van de luisteraar, dus 'ese' en niet 'este'."
+        },
+        {
+          "wrong": "¿Puedes pasarme aquel lápiz que está aquí?",
+          "right": "¿Puedes pasarme este lápiz que está aquí?",
+          "note": "'Aquel' is voor iets veraf; ligt het vlak bij je, dan gebruik je 'este'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vul de juiste vorm in: '___ (die daarginds) casa en la colina es muy antigua.'",
+          "answer": "Aquella"
+        },
+        {
+          "prompt": "Vul in: '___ (deze) manzana que tengo en la mano es roja.'",
+          "answer": "Esta"
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-adjectives-mi-tu-su-vs-possessive-pronouns-mío-tuyo",
+      "topic": "Possessive adjectives (mi, tu, su) vs possessive pronouns (mío, tuyo)",
+      "title": "Bezittelijke bijvoeglijke naamwoorden en voornaamwoorden",
+      "explanation": "De korte vormen mi, tu en su staan voor een zelfstandig naamwoord en passen zich alleen in getal aan (mi libro, mis libros). De lange vormen mío, tuyo en suyo vervangen het zelfstandig naamwoord of volgen op 'ser', en passen zich aan in geslacht en getal. In het Nederlands zeggen we 'mijn boek' en 'het boek is van mij'; het Spaans gebruikt daarvoor twee verschillende reeksen woorden.",
+      "examples": [
+        {
+          "wrong": "Este es mi.",
+          "right": "Este es mío.",
+          "note": "Na 'ser' hoort de lange vorm 'mío', niet de korte vorm 'mi'."
+        },
+        {
+          "wrong": "Es el mío libro.",
+          "right": "Es mi libro.",
+          "note": "Voor een zelfstandig naamwoord gebruik je de korte vorm 'mi'."
+        },
+        {
+          "wrong": "¿Son tus amigos? Sí, son tus.",
+          "right": "¿Son tus amigos? Sí, son míos.",
+          "note": "Na 'ser' gebruik je de lange vorm, die meebuigt met 'amigos': 'míos'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vertaal met het bezittelijk bijvoeglijk naamwoord: 'Dit is mijn huis.'",
+          "answer": "Esta es mi casa."
+        },
+        {
+          "prompt": "Vertaal met het bezittelijk voornaamwoord: 'Dat boek is van mij.'",
+          "answer": "Ese libro es mío."
+        },
+        {
+          "prompt": "Kies het juiste woord: 'Ella es (mi / mía) hermana.'",
+          "answer": "mi"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-qué-vs-cuál",
+      "topic": "Use of 'qué' vs 'cuál'",
+      "title": "Qué of cuál: wat of welke",
+      "explanation": "Gebruik 'qué' als je vraagt naar een definitie of uitleg, of als de mogelijkheden onbeperkt zijn. Gebruik 'cuál' als je uit een bekende of beperkte reeks moet kiezen. Een handige test: kun je 'welke' of 'welke van deze' zeggen, dan is het 'cuál'. Let op dat het Spaans bij een naam of een telefoonnummer 'cuál' gebruikt waar wij gewoon 'wat' zeggen.",
+      "examples": [
+        {
+          "wrong": "¿Qué es tu nombre?",
+          "right": "¿Cuál es tu nombre?",
+          "note": "Je kiest een naam uit alle bestaande namen, dus 'cuál' - ook al zeggen wij 'wat is je naam'."
+        },
+        {
+          "wrong": "¿Cuál es eso?",
+          "right": "¿Qué es eso?",
+          "note": "Vraag je om uitleg over een onbekend voorwerp, dan gebruik je 'qué'."
+        },
+        {
+          "wrong": "¿Qué prefieres, café o té?",
+          "right": "¿Cuál prefieres, café o té?",
+          "note": "Er liggen twee opties op tafel, dus is 'cuál' de juiste keuze."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vertaal: 'Wat is je lievelingsfilm?'",
+          "answer": "¿Cuál es tu película favorita?"
+        },
+        {
+          "prompt": "Vertaal: 'Wat wil je eten?' (algemene vraag)",
+          "answer": "¿Qué quieres comer?"
+        },
+        {
+          "prompt": "Vertaal: 'Welke van deze jurken moet ik kopen?' (keuze uit een paar jurken)",
+          "answer": "¿Cuál de estos vestidos debo comprar?"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-sino-vs-pero",
+      "topic": "Use of 'sino' vs 'pero'",
+      "title": "Sino of pero: twee keer 'maar'",
+      "explanation": "Beide woorden betekenen 'maar', maar ze doen iets anders. 'Pero' gebruik je voor een gewone tegenstelling of een uitzondering. 'Sino' gebruik je alleen na een ontkenning, wanneer het tweede deel het eerste rechtstreeks corrigeert en vervangt - vergelijkbaar met ons 'niet ..., maar juist ...'. Voegt het tweede deel alleen informatie toe, dan is het weer 'pero'.",
+      "examples": [
+        {
+          "wrong": "No es caro, pero barato.",
+          "right": "No es caro, sino barato.",
+          "note": "'Goedkoop' vervangt hier 'duur' na een ontkenning, dus 'sino'."
+        },
+        {
+          "wrong": "No compré pan, sino compré leche.",
+          "right": "No compré pan, pero compré leche.",
+          "note": "Het tweede deel voegt informatie toe in plaats van 'pan' te corrigeren, dus 'pero'."
+        },
+        {
+          "wrong": "No estudio mucho, sino trabajo.",
+          "right": "No estudio mucho, pero trabajo.",
+          "note": "Ook hier is het een extra feit en geen directe correctie, dus 'pero'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vul sino of pero in: 'No es azul, _______ rojo.' (Het is niet blauw, maar rood.)",
+          "answer": "sino"
+        },
+        {
+          "prompt": "Vul sino of pero in: 'Quiero ir, _______ no puedo.' (Ik wil gaan, maar ik kan niet.)",
+          "answer": "pero"
+        },
+        {
+          "prompt": "Vul sino of pero in: 'No hablo inglés, _______ español.' (Ik spreek geen Engels, maar Spaans.)",
+          "answer": "sino"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-muy-vs-mucho",
+      "topic": "Use of 'muy' vs 'mucho'",
+      "title": "Muy of mucho: heel of veel",
+      "explanation": "Gebruik 'muy' voor een bijvoeglijk naamwoord of bijwoord om het te versterken, en 'mucho' voor een zelfstandig naamwoord of na een werkwoord om een hoeveelheid aan te geven. De verdeling komt overeen met ons heel tegenover veel: 'heel moe' wordt 'muy cansado', 'veel geld' wordt 'mucho dinero'. Voor een zelfstandig naamwoord buigt 'mucho' bovendien mee in geslacht en getal.",
+      "examples": [
+        {
+          "wrong": "Estoy mucho cansado.",
+          "right": "Estoy muy cansado.",
+          "note": "'Cansado' is een bijvoeglijk naamwoord, dus 'muy' - heel moe."
+        },
+        {
+          "wrong": "Tengo muy dinero.",
+          "right": "Tengo mucho dinero.",
+          "note": "'Dinero' is een zelfstandig naamwoord, dus 'mucho' - veel geld."
+        },
+        {
+          "wrong": "Me gusta muy el café.",
+          "right": "Me gusta mucho el café.",
+          "note": "Na een werkwoord gebruik je 'mucho'; 'muy' kan nooit een werkwoord versterken."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vul in: 'Ella es _____ inteligente.' (heel)",
+          "answer": "muy"
+        },
+        {
+          "prompt": "Vul in: 'Hay _____ personas en la fiesta.' (veel)",
+          "answer": "muchas"
+        },
+        {
+          "prompt": "Vul in: 'Él corre _____ rápido.' (heel)",
+          "answer": "muy"
+        }
+      ]
+    },
+    {
+      "rule_id": "false-cognates-embarazada-etc",
+      "topic": "False cognates (embarazada, etc.)",
+      "title": "Valse vrienden: embarazada en andere valkuilen",
+      "explanation": "Valse vrienden zijn woorden die in het Spaans op een bekend Engels of Nederlands woord lijken maar iets heel anders betekenen. 'Embarazada' betekent 'zwanger' en niet 'in verlegenheid gebracht', 'sensible' betekent 'gevoelig' en niet 'verstandig', en 'constipado' betekent 'verkouden' en niet 'geconstipeerd'. Controleer bij zulke woorden altijd even de betekenis voordat je ze gebruikt.",
+      "examples": [
+        {
+          "wrong": "Estoy embarazada. (bedoeld als 'ik schaam me')",
+          "right": "Estoy avergonzada.",
+          "note": "'Embarazada' betekent uitsluitend 'zwanger'; voor 'beschaamd' gebruik je 'avergonzado' of 'avergonzada'."
+        },
+        {
+          "wrong": "Él es sensible. (bedoeld als 'hij is verstandig')",
+          "right": "Él es sensato.",
+          "note": "'Sensible' betekent 'gevoelig'; voor 'verstandig' gebruik je 'sensato'."
+        },
+        {
+          "wrong": "Estoy constipado. (bedoeld als 'ik ben geconstipeerd')",
+          "right": "Estoy estreñido.",
+          "note": "'Constipado' betekent 'verkouden'; voor 'geconstipeerd' zeg je 'estreñido'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Wat betekent 'embarazada' in het Nederlands?",
+          "answer": "embarazada = zwanger"
+        },
+        {
+          "prompt": "Hoe zeg je 'Zij is verstandig' in het Spaans?",
+          "answer": "Ella es sensata"
+        },
+        {
+          "prompt": "Wat is het Spaanse woord voor 'geconstipeerd'?",
+          "answer": "estreñido"
+        }
+      ]
+    },
+    {
+      "rule_id": "apocope-bueno-buen-primero-primer",
+      "topic": "Apocope (bueno -> buen, primero -> primer)",
+      "title": "Apocope: verkorting voor een mannelijk enkelvoud",
+      "explanation": "Sommige Spaanse bijvoeglijke naamwoorden verliezen hun laatste letter wanneer ze direct voor een mannelijk zelfstandig naamwoord in het enkelvoud staan. Dat heet apocope: bueno wordt buen, primero wordt primer en tercero wordt tercer. Staat het bijvoeglijk naamwoord achter het zelfstandig naamwoord, dan blijft de volledige vorm gewoon staan.",
+      "examples": [
+        {
+          "wrong": "el bueno chico",
+          "right": "el buen chico",
+          "note": "'Bueno' wordt 'buen' voor een mannelijk zelfstandig naamwoord in het enkelvoud."
+        },
+        {
+          "wrong": "el primero capítulo",
+          "right": "el primer capítulo",
+          "note": "'Primero' wordt 'primer' voor een mannelijk enkelvoud."
+        },
+        {
+          "wrong": "el tercero piso",
+          "right": "el tercer piso",
+          "note": "Ook 'tercero' verkort tot 'tercer' voor een mannelijk zelfstandig naamwoord."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vertaal: 'het goede boek' (libro, mannelijk)",
+          "answer": "el buen libro"
+        },
+        {
+          "prompt": "Vertaal: 'de eerste dag' (día, mannelijk)",
+          "answer": "el primer día"
+        },
+        {
+          "prompt": "Vertaal: 'de derde verdieping' (piso, mannelijk)",
+          "answer": "el tercer piso"
+        }
+      ]
+    },
+    {
+      "rule_id": "contractions-al-and-del",
+      "topic": "Contractions 'al' and 'del'",
+      "title": "De samentrekkingen al en del",
+      "explanation": "De voorzetsels 'a' en 'de' smelten samen met het mannelijke lidwoord 'el' tot 'al' en 'del'. Die samentrekking is verplicht: 'a el' en 'de el' als losse woorden bestaan niet. De regel geldt alleen voor 'el' en dus niet voor la, los of las. Vergelijk het met ons 'in het' dat gewoon los blijft - in het Spaans is dat geen optie.",
+      "examples": [
+        {
+          "wrong": "Voy a el parque.",
+          "right": "Voy al parque.",
+          "note": "'A + el' wordt altijd 'al'."
+        },
+        {
+          "wrong": "El libro es de el profesor.",
+          "right": "El libro es del profesor.",
+          "note": "'De + el' wordt altijd 'del'."
+        },
+        {
+          "wrong": "Salimos de el aeropuerto.",
+          "right": "Salimos del aeropuerto.",
+          "note": "Onthoud: 'de el' is nooit correct, trek het altijd samen tot 'del'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vul aan: 'Voy ___ cine.' (a + el)",
+          "answer": "al"
+        },
+        {
+          "prompt": "Vul aan: 'La casa es ___ abuelo.' (de + el)",
+          "answer": "del"
+        },
+        {
+          "prompt": "Vul aan: 'Ella llega ___ banco.' (a + el)",
+          "answer": "al"
+        }
+      ]
+    },
+    {
+      "rule_id": "placement-of-adjectives-before-vs-after-noun",
+      "topic": "Placement of adjectives (before vs after noun)",
+      "title": "De plaats van het bijvoeglijk naamwoord",
+      "explanation": "In het Spaans staat het bijvoeglijk naamwoord meestal achter het zelfstandig naamwoord: 'un coche rojo'. Dat is precies omgekeerd aan het Nederlands, waar het er altijd voor staat, en die gewoonte is hardnekkig. Enkele veelgebruikte woorden als bueno, malo en grande kunnen wel voorop staan, maar veranderen dan van betekenis ('un gran hombre' is een groot man in de zin van bewonderenswaardig). Zet als beginner alles wat kleur, formaat of nationaliteit aangeeft achter het zelfstandig naamwoord.",
+      "examples": [
+        {
+          "wrong": "una roja manzana",
+          "right": "una manzana roja",
+          "note": "Kleuren staan altijd achter het zelfstandig naamwoord."
+        },
+        {
+          "wrong": "un interesante libro",
+          "right": "un libro interesante",
+          "note": "De meeste beschrijvende bijvoeglijke naamwoorden volgen op het zelfstandig naamwoord."
+        },
+        {
+          "wrong": "una pequeña casa",
+          "right": "una casa pequeña",
+          "note": "Ook woorden voor afmeting staan achteraan als je de fysieke grootte bedoelt."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vertaal: 'een blauwe pen'",
+          "answer": "un bolígrafo azul"
+        },
+        {
+          "prompt": "Zet in de juiste volgorde: 'un (grande) perro'",
+          "answer": "un perro grande"
+        },
+        {
+          "prompt": "Herschrijf met de juiste plaatsing: 'una difícil lección'",
+          "answer": "una lección difícil"
+        }
+      ]
+    }
+  ]
+}

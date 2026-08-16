@@ -1,0 +1,886 @@
+{
+  "learning": "en",
+  "interface": "tr",
+  "generated_at": "2026-08-16T12:01:41+00:00",
+  "model": "claude-opus-4.8-agent",
+  "rules": [
+    {
+      "rule_id": "articles",
+      "topic": "Articles",
+      "title": "Tanımlıkların Kullanımı: a, an, the",
+      "explanation": "Tanımlıklar bir ismin genel mi yoksa belirli mi olduğunu gösterir. Genel anlamdaki tekil ve sayılabilen isimlerin önüne 'a' ya da 'an' gelir (a cat, an apple). Hem konuşanın hem de dinleyenin bildiği belirli isimlerde 'the' kullanılır. Genel anlamdaki çoğullarda ve sayılamayan isimlerde ise hiçbir tanımlık kullanılmaz (cats, water).",
+      "examples": [
+        {
+          "wrong": "I saw dog in park.",
+          "right": "I saw a dog in the park.",
+          "note": "Köpek herhangi bir köpek olduğu için 'a', park ise belirli olduğu için 'the' alır."
+        },
+        {
+          "wrong": "She wants an apple and banana.",
+          "right": "She wants an apple and a banana.",
+          "note": "Ünlü sesle başlayan sözcüklerden önce 'an' (apple), ünsüz sesle başlayanlardan önce 'a' gelir (banana)."
+        },
+        {
+          "wrong": "The love is important.",
+          "right": "Love is important.",
+          "note": "love, water, ideas gibi genel anlamda kullanılan sayılamayan isimler tanımlık almaz."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Boşluğu doldurun: I need ___ umbrella. (genel, tek bir tane)",
+          "answer": "an"
+        },
+        {
+          "prompt": "Boşluğu doldurun: ___ sun is very hot today. (belirli, hepimizin bildiği)",
+          "answer": "The"
+        },
+        {
+          "prompt": "Boşluğu doldurun: I like ___ dogs. (genel, çoğul)",
+          "answer": "(no article)"
+        }
+      ]
+    },
+    {
+      "rule_id": "tenses",
+      "topic": "Tenses",
+      "title": "Past Simple ile Present Perfect Arasındaki Fark",
+      "explanation": "Geçmişte belirli bir anda olup bitmiş eylemler için Past Simple kullanılır (yesterday, last week). Belirli bir zamanı olmayan ya da sonucu bugüne uzanan eylemlerde ise Present Perfect tercih edilir (ever, never, already). Present Perfect'i geçmişte kesin bir zaman bildiren ifadelerle birlikte kullanmayın.",
+      "examples": [
+        {
+          "wrong": "I have bought a new car yesterday.",
+          "right": "I bought a new car yesterday.",
+          "note": "'Yesterday' geçmişte belirli bir zamanı gösterir, bu yüzden Past Simple gerekir."
+        },
+        {
+          "wrong": "Did you ever eat sushi?",
+          "right": "Have you ever eaten sushi?",
+          "note": "'Ever' hayat boyu edinilen bir deneyimi sorar; bu durumda Present Perfect kullanılır."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Boşluğu doldurun: She _____ (go) to the beach last weekend.",
+          "answer": "went"
+        },
+        {
+          "prompt": "Boşluğu doldurun: I _____ (never / eat) Thai food.",
+          "answer": "have never eaten"
+        },
+        {
+          "prompt": "Boşluğu doldurun: They _____ (already / finish) their homework.",
+          "answer": "have already finished"
+        }
+      ]
+    },
+    {
+      "rule_id": "prepositions",
+      "topic": "Prepositions",
+      "title": "Zaman Edatları: in, on, at",
+      "explanation": "Saat gibi kesin zamanlar için 'at' (5 PM, midnight), gün ve tarihler için 'on' (Monday, July 4th), ay, yıl, mevsim ve yüzyıl gibi uzun dönemler için 'in' kullanılır. En sık yapılan hata bunların birbirine karıştırılmasıdır; örneğin 'on Monday' yerine 'in Monday' demek gibi.",
+      "examples": [
+        {
+          "wrong": "I will see you in Monday.",
+          "right": "I will see you on Monday.",
+          "note": "Haftanın günlerinde 'on' kullanılır."
+        },
+        {
+          "wrong": "The meeting is at June.",
+          "right": "The meeting is in June.",
+          "note": "Aylar ve yıllar için 'in' gerekir."
+        },
+        {
+          "wrong": "I wake up on 7 AM.",
+          "right": "I wake up at 7 AM.",
+          "note": "Saat bildiren kesin zamanlarda 'at' kullanılır."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Boşluğu doldurun: I will meet you ___ Friday.",
+          "answer": "on"
+        },
+        {
+          "prompt": "Boşluğu doldurun: His birthday is ___ October.",
+          "answer": "in"
+        },
+        {
+          "prompt": "Boşluğu doldurun: The movie starts ___ 8 PM.",
+          "answer": "at"
+        }
+      ]
+    },
+    {
+      "rule_id": "conditional-sentences",
+      "topic": "Conditional sentences",
+      "title": "Koşul Cümleleri: 'if' Yan Cümlesinde 'will' Kullanılmaz",
+      "explanation": "Birinci tip koşul cümlelerinde (gerçekleşmesi mümkün gelecek) 'if' ile başlayan bölümde 'will' değil geniş zaman kullanılır. Gelecek yapısı ('will' + fiil) yalnızca ana cümlede yer alır. Örneğin doğrusu 'If it rains, I will stay home'dır, 'If it will rain' değil.",
+      "examples": [
+        {
+          "wrong": "If I will have time, I will call you.",
+          "right": "If I have time, I will call you.",
+          "note": "'if'ten sonra 'will have' değil, geniş zaman biçimi olan 'have' gelir."
+        },
+        {
+          "wrong": "If she will study, she will pass the exam.",
+          "right": "If she studies, she will pass the exam.",
+          "note": "Koşul bölümü geniş zamanla kurulur ('studies'); 'will' yalnızca sonucu bildiren cümlede bulunur."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Boşluğu doldurun: If it ___ (rain) tomorrow, I will stay home.",
+          "answer": "rains"
+        },
+        {
+          "prompt": "Boşluğu doldurun: If I ___ (have) enough money, I will buy a new phone.",
+          "answer": "have"
+        },
+        {
+          "prompt": "Doğru biçimi yazın: If she ___ (be) late, we will miss the bus.",
+          "answer": "is"
+        }
+      ]
+    },
+    {
+      "rule_id": "th-sounds",
+      "topic": "th sounds",
+      "title": "'th' Seslerini Doğru Çıkarmak",
+      "explanation": "İngilizcede iki ayrı 'th' sesi vardır: ötümsüz /θ/ ('think' sözcüğündeki gibi) ve ötümlü /ð/ ('this' sözcüğündeki gibi). Bu sesleri çıkarmak için dilinizin ucunu ön dişlerinizin arasına hafifçe koyup hava verin. Türkçede bu sesler bulunmadığı için birçok öğrenci onları /t/ ya da /d/ ile değiştirir; bu da sözcüğün anlamını tamamen değiştirebilir.",
+      "examples": [
+        {
+          "wrong": "I tink it's true.",
+          "right": "I think it's true.",
+          "note": "'t' yerine ötümsüz 'th' sesini kullanın: dilin ucu dişlerin arasında."
+        },
+        {
+          "wrong": "Dis is my pen.",
+          "right": "This is my pen.",
+          "note": "'d' yerine ötümlü 'th' sesini kullanın: ses tellerinde titreşim olmalı."
+        },
+        {
+          "wrong": "I have tree apples.",
+          "right": "I have three apples.",
+          "note": "'three' sözcüğündeki 'th' ötümsüzdür; 'tree' ise bambaşka bir sözcüktür (ağaç)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Doğru sözcüğü seçin: I need to _____ about it. (think / tink)",
+          "answer": "think"
+        },
+        {
+          "prompt": "Boşluğu doldurun: Please give me _____ book. (this / dis)",
+          "answer": "this"
+        },
+        {
+          "prompt": "Doğru sözcüğü seçin: She has _____ cats. (three / tree)",
+          "answer": "three"
+        }
+      ]
+    },
+    {
+      "rule_id": "stress",
+      "topic": "Stress",
+      "title": "Sözcük Vurgusu: İngilizcenin Gizli Ritmi",
+      "explanation": "İngilizce sözcüklerde bir hece vurgulanır; bu hece daha uzun, daha güçlü ve daha tiz söylenir. Vurguyu yanlış heceye koymak sözcüğün anlamını değiştirebilir ya da konuşmanızı yapay gösterebilir. Örneğin 'record' sözcüğü isim olduğunda RE-cord, fiil olduğunda re-CORD biçiminde vurgulanır.",
+      "examples": [
+        {
+          "wrong": "I need to RE-cord the meeting.",
+          "right": "I need to re-CORD the meeting.",
+          "note": "Burada 'record' fiildir (kaydetmek), bu yüzden vurgu ikinci hecededir: re-CORD. İsim olarak (kayıt) ise vurgu birinci heceye kayar: RE-cord."
+        },
+        {
+          "wrong": "Let's go to the de-SERT for our vacation.",
+          "right": "Let's go to the DES-ert for our vacation.",
+          "note": "'Desert' (çöl) birinci hecede vurgulanır: DES-ert. 'Dessert' (tatlı) ise ikinci hecede: des-SERT. Yazılışları da farklıdır."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "'Present' sözcüğü 'hediye' anlamında kullanıldığında hangi hece vurgulanır? (Yüksek sesle söyleyin: PRES-ent mi, pre-SENT mi?)",
+          "answer": "PRES-ent"
+        },
+        {
+          "prompt": "Bu cümledeki vurgu hatasını düzeltin: 'I need to EX-port these files.' (İpucu: 'export' fiil olarak ikinci hecede vurgulanır.)",
+          "answer": "I need to ex-PORT these files."
+        },
+        {
+          "prompt": "'Photograph' sözcüğünü doğru vurguyla yüksek sesle okuyun. Hangi hece en güçlüdür?",
+          "answer": "The first syllable: PHO-to-graph"
+        }
+      ]
+    },
+    {
+      "rule_id": "intonation",
+      "topic": "Intonation",
+      "title": "İngilizcede Tonlamayı Doğru Kullanmak",
+      "explanation": "Sesin yükselip alçalması, yani tonlama, bir cümlenin anlamını bütünüyle değiştirebilir. Evet/hayır sorularında ses sonda yükselir; düz cümlelerde ve wh- sorularında (who, what, where...) ise alçalır. Yanlış tonlama, sorunuzu düz cümle gibi gösterebilir ya da kararsız görünmenize yol açabilir.",
+      "examples": [
+        {
+          "wrong": "You're coming? (said with a falling tone)",
+          "right": "You're coming? (said with a rising tone)",
+          "note": "Sonda yükselen ton evet/hayır sorusunu işaret eder; alçalan ton cümleyi düz bir ifadeye dönüştürür."
+        },
+        {
+          "wrong": "Where are you going? (said with a rising tone)",
+          "right": "Where are you going? (said with a falling tone)",
+          "note": "Wh- soruları genellikle alçalan tonlamayla biter; yükselen ton şaşkınlık ya da 'tekrar eder misin?' izlenimi verir."
+        },
+        {
+          "wrong": "I like apples, oranges, and bananas. (all flat)",
+          "right": "I like apples↗, oranges↗, and bananas↘.",
+          "note": "Sıralama yaparken ses her ögede yükselir, yalnızca sonuncuda alçalarak listenin bittiğini gösterir."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Doğru tonlamayla yüksek sesle okuyun: 'Are you hungry?' (evet/hayır sorusu). Sesiniz sonda yükselmeli mi, alçalmalı mı?",
+          "answer": "Rise"
+        },
+        {
+          "prompt": "Doğru tonlamayla yüksek sesle okuyun: 'What time is it?' (wh- sorusu). Sesiniz sonda yükselmeli mi, alçalmalı mı?",
+          "answer": "Fall"
+        },
+        {
+          "prompt": "Bu listeyi doğru tonlamayla söyleyin: 'We need milk, bread, and eggs.' Sesiniz nerede yükselir, nerede alçalır?",
+          "answer": "Rise on 'milk' and 'bread', fall on 'eggs'"
+        }
+      ]
+    },
+    {
+      "rule_id": "subject-verb-agreement",
+      "topic": "Subject-verb agreement",
+      "title": "Özne-Yüklem Uyumu",
+      "explanation": "İngilizcede fiil, öznesiyle sayı bakımından uyuşmak zorundadır. Tekil özne tekil fiil, çoğul özne çoğul fiil alır. Belgisiz zamirlere ve özne ile fiil arasına giren araya girmiş öbeklere özellikle dikkat edin; bunlar sizi kolayca yanıltabilir.",
+      "examples": [
+        {
+          "wrong": "The list of items are on the table.",
+          "right": "The list of items is on the table.",
+          "note": "Özne 'items' değil, 'list' (tekil) olduğu için fiil de tekil olmalıdır."
+        },
+        {
+          "wrong": "Everyone have their own opinion.",
+          "right": "Everyone has their own opinion.",
+          "note": "'Everyone' tekil sayılır, bu yüzden 'has' kullanılır."
+        },
+        {
+          "wrong": "She don't like coffee.",
+          "right": "She doesn't like coffee.",
+          "note": "Üçüncü tekil şahısta (he, she, it) 'doesn't' gerekir."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Doğru biçimde yeniden yazın: The group of students is/are studying.",
+          "answer": "The group of students is studying."
+        },
+        {
+          "prompt": "Doğru fiili seçin: Neither the teacher nor the students (is/are) in the room.",
+          "answer": "are"
+        },
+        {
+          "prompt": "Hatayı düzeltin: Each of the apples are fresh.",
+          "answer": "Each of the apples is fresh."
+        }
+      ]
+    },
+    {
+      "rule_id": "countable-vs-uncountable-nouns",
+      "topic": "Countable vs uncountable nouns",
+      "title": "Sayılabilen ve Sayılamayan İsimler",
+      "explanation": "Sayılabilen isimler tek tek sayılabilir (one apple, two apples) ve 'a/an', 'many', 'few' ile kullanılır. Sayılamayan isimler ise sayılamaz (water, advice) ve 'much', 'little' ya da 'some' alır; asla 'a/an' veya 'many' ile kullanılmaz.",
+      "examples": [
+        {
+          "wrong": "I have many homeworks.",
+          "right": "I have a lot of homework.",
+          "note": "'Homework' sayılamayan bir isimdir; 'much' ya da 'a lot of' ile kullanılır ve çoğul eki almaz."
+        },
+        {
+          "wrong": "He gave me a good advice.",
+          "right": "He gave me a piece of good advice.",
+          "note": "'Advice' sayılamaz; tek bir öğüt için 'a piece of advice' denir."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Boşluğu doldurun: I need _____ (many/much) time to finish.",
+          "answer": "much"
+        },
+        {
+          "prompt": "Cümleyi düzeltin: He has many furniture in his room.",
+          "answer": "He has a lot of furniture in his room."
+        }
+      ]
+    },
+    {
+      "rule_id": "gerund-vs-infinitive",
+      "topic": "Gerund vs infinitive",
+      "title": "Gerund mu, Mastar mı? -ing ve to Sevenler",
+      "explanation": "Bazı İngilizce fiillerden sonra gerund (fiil + ing), bazılarından sonra ise 'to'lu mastar gelir. Örneğin 'enjoy' her zaman gerund, 'want' her zaman mastar alır. Bu kalıpları fiillerle birlikte ezberlemek en sık yapılan hatalardan kurtulmanızı sağlar.",
+      "examples": [
+        {
+          "wrong": "I enjoy to swim.",
+          "right": "I enjoy swimming.",
+          "note": "'enjoy' fiilinden sonra gerund gelir."
+        },
+        {
+          "wrong": "She wants going home.",
+          "right": "She wants to go home.",
+          "note": "'want' fiilinden sonra 'to'lu mastar kullanılır."
+        },
+        {
+          "wrong": "He suggested to eat out.",
+          "right": "He suggested eating out.",
+          "note": "'suggest' fiilinden sonra gerund gelir."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Boşluğu doldurun: I need ___ (study) for the exam.",
+          "answer": "to study"
+        },
+        {
+          "prompt": "Boşluğu doldurun: She avoids ___ (eat) junk food.",
+          "answer": "eating"
+        },
+        {
+          "prompt": "Boşluğu doldurun: They decided ___ (move) to a new city.",
+          "answer": "to move"
+        }
+      ]
+    },
+    {
+      "rule_id": "modal-verbs-usage",
+      "topic": "Modal verbs usage",
+      "title": "Modal Fiiller: can, must ve may",
+      "explanation": "'can', 'must' ve 'may' gibi modal fiillerin her birinin kendine özgü bir işlevi vardır. 'Can' yetenek ya da günlük dilde izin bildirir; 'may' ise resmi durumlarda izin istemek için kullanılır. 'Must' güçlü bir zorunluluğu, 'must not' ise yasağı anlatır. Modal fiilden sonra asla 'to' gelmez: 'I must go' doğru, 'I must to go' yanlıştır.",
+      "examples": [
+        {
+          "wrong": "Can I leave early?",
+          "right": "May I leave early?",
+          "note": "Resmi ya da kibar bir izin isteğinde 'can' yerine 'may' tercih edilir."
+        },
+        {
+          "wrong": "I must to finish my homework.",
+          "right": "I must finish my homework.",
+          "note": "Modal fiilden sonra her zaman fiilin yalın hâli gelir; araya 'to' konmaz."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Boşluğu doldurun: She ___ speak three languages fluently. (yetenek)",
+          "answer": "can"
+        },
+        {
+          "prompt": "Boşluğu doldurun: You ___ park here; it's forbidden. (yasak)",
+          "answer": "must not"
+        },
+        {
+          "prompt": "Boşluğu doldurun: ___ I borrow your pen, please? (kibar istek)",
+          "answer": "May"
+        }
+      ]
+    },
+    {
+      "rule_id": "word-order-in-questions",
+      "topic": "Word order in questions",
+      "title": "Sorularda Sözcük Sırası",
+      "explanation": "İngilizce sorularda özne ile yardımcı fiil yer değiştirir; yardımcı fiil yoksa 'do' eklenir. Wh- sorularında önce soru sözcüğü, sonra yardımcı fiil, ardından özne ve en son asıl fiil gelir. Düz cümledeki sırayı (önce özne, sonra fiil) olduğu gibi koruyup sonuna soru işareti koymak yaygın bir hatadır.",
+      "examples": [
+        {
+          "wrong": "You are from where?",
+          "right": "Where are you from?",
+          "note": "Wh- sorularında önce soru sözcüğü, sonra yardımcı fiil ve özne gelir."
+        },
+        {
+          "wrong": "He likes coffee?",
+          "right": "Does he like coffee?",
+          "note": "Yardımcı fiili olmayan evet/hayır sorularında 'do/does/did' eklenir ve özneden önce yazılır."
+        },
+        {
+          "wrong": "Why you are late?",
+          "right": "Why are you late?",
+          "note": "Yardımcı fiil her zaman wh- sözcüğünden sonra, özneden önce yer alır."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Soruyu düzeltin: 'You live where?'",
+          "answer": "Where do you live?"
+        },
+        {
+          "prompt": "Soruyu düzeltin: 'She can swim?'",
+          "answer": "Can she swim?"
+        },
+        {
+          "prompt": "Soruyu düzeltin: 'What you want?'",
+          "answer": "What do you want?"
+        }
+      ]
+    },
+    {
+      "rule_id": "comparatives-and-superlatives",
+      "topic": "Comparatives and superlatives",
+      "title": "Karşılaştırma ve Üstünlük Biçimlerinde Sık Yapılan Hatalar",
+      "explanation": "İki şeyi karşılaştırırken karşılaştırma biçimi kullanılır: sıfat + -er ya da 'more' + sıfat, ardından 'than'. Üç ya da daha fazla şey söz konusuysa üstünlük biçimi gelir: sıfat + -est ya da 'most' + sıfat, başında 'the' ile. 'more better' gibi çifte karşılaştırmalardan kaçının ve 'good, better, best' ile 'bad, worse, worst' gibi kuralsız biçimleri ezberleyin.",
+      "examples": [
+        {
+          "wrong": "She is more smarter than him.",
+          "right": "She is smarter than him.",
+          "note": "-er ekli biçimlerle 'more' birlikte kullanılmaz; 'smarter' zaten karşılaştırma biçimidir."
+        },
+        {
+          "wrong": "This is the most best cake I've had.",
+          "right": "This is the best cake I've had.",
+          "note": "'Best' zaten üstünlük biçimidir, başına 'most' eklenmez."
+        },
+        {
+          "wrong": "He is the taller in his class.",
+          "right": "He is the tallest in his class.",
+          "note": "Üç ya da daha fazla kişi veya nesne karşılaştırılırken üstünlük biçimi (-est) kullanılır."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Tamamlayın: This is the ______ (good) movie I've ever seen.",
+          "answer": "best"
+        },
+        {
+          "prompt": "Hatayı düzeltin: 'My house is more bigger than yours.'",
+          "answer": "My house is bigger than yours."
+        },
+        {
+          "prompt": "Doğru seçeneği işaretleyin: 'She runs (faster / most fast) than me.'",
+          "answer": "faster"
+        }
+      ]
+    },
+    {
+      "rule_id": "passive-voice-formation",
+      "topic": "Passive voice formation",
+      "title": "Edilgen Çatının Doğru Kurulması",
+      "explanation": "Edilgen çatı, uygun zamanda çekilmiş 'to be' fiili ile asıl fiilin üçüncü hâlinden (past participle) oluşur. Sık yapılan hata, üçüncü hâl yerine fiilin yalın ya da ikinci hâlini kullanmaktır. Unutmayın: üçüncü hâl hiç değişmez, zamanı gösteren 'be' fiilidir.",
+      "examples": [
+        {
+          "wrong": "The window was break.",
+          "right": "The window was broken.",
+          "note": "'was'tan sonra yalın hâl 'break' değil, üçüncü hâl 'broken' gelir."
+        },
+        {
+          "wrong": "The letter is wrote by her.",
+          "right": "The letter is written by her.",
+          "note": "'write' fiilinin üçüncü hâli 'wrote' değil 'written'dır."
+        },
+        {
+          "wrong": "The cake has been eat.",
+          "right": "The cake has been eaten.",
+          "note": "'been'den sonra üçüncü hâl olan 'eaten' kullanılır."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Cümleyi düzeltin: 'The window was break by the ball.'",
+          "answer": "The window was broken by the ball."
+        },
+        {
+          "prompt": "Cümleyi düzeltin: 'The emails are send every day.'",
+          "answer": "The emails are sent every day."
+        },
+        {
+          "prompt": "Cümleyi düzeltin: 'The song has been sing many times.'",
+          "answer": "The song has been sung many times."
+        }
+      ]
+    },
+    {
+      "rule_id": "relative-clauses",
+      "topic": "Relative clauses",
+      "title": "Sıfat Cümleciklerinde Fazladan Zamir Kullanmamak",
+      "explanation": "İngilizcede bir sıfat cümleciği kurarken özneyi ya da nesneyi 'she', 'he', 'it' gibi bir zamirle tekrar etmeyin. Bunun yerine 'who', 'that' veya 'which' gibi bir ilgi zamiri kullanın; zamir nesne görevindeyse tamamen de düşürülebilir. Bu hata çoğunlukla ana dilden birebir çeviri yapmaktan kaynaklanır.",
+      "examples": [
+        {
+          "wrong": "The woman she lives next door is kind.",
+          "right": "The woman who lives next door is kind.",
+          "note": "Fazladan 'she' zamirini atın ve insanlar için ilgi zamiri olan 'who'yu kullanın."
+        },
+        {
+          "wrong": "I like the movie it was very funny.",
+          "right": "I like the movie that was very funny.",
+          "note": "Cümlecikleri bağlamak için 'it' yerine 'that' (ya da 'which') gelir."
+        },
+        {
+          "wrong": "The car he bought it is red.",
+          "right": "The car he bought is red.",
+          "note": "İlgi zamiri nesne görevindeyse tamamen düşürülebilir; ancak 'it' cümlede kalmamalıdır."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Cümleyi düzeltin: 'The girl she studies hard got an A.'",
+          "answer": "The girl who studies hard got an A."
+        },
+        {
+          "prompt": "Cümleyi düzeltin: 'I have a friend he speaks Spanish.'",
+          "answer": "I have a friend who speaks Spanish."
+        },
+        {
+          "prompt": "Cümleyi düzeltin: 'The cake I baked it was delicious.'",
+          "answer": "The cake I baked was delicious."
+        }
+      ]
+    },
+    {
+      "rule_id": "phrasal-verbs",
+      "topic": "Phrasal verbs",
+      "title": "Phrasal Verb'ler: Ayrılabilenler ve Ayrılamayanlar",
+      "explanation": "Phrasal verb'ler bir fiil ile bir edattan oluşur (up, off, into gibi). Bazıları ayrılabilir: isim fiil ile edatın arasına girebilir, zamir ise mutlaka araya girmek zorundadır. Bazıları ise ayrılamaz; edat her zaman fiilin hemen yanında kalır. Bu iki grubu karıştırmak çok yaygın bir hatadır.",
+      "examples": [
+        {
+          "wrong": "I will pick up you after work.",
+          "right": "I will pick you up after work.",
+          "note": "'pick up' gibi ayrılabilen phrasal verb'lerde zamir fiil ile edatın arasına konur."
+        },
+        {
+          "wrong": "He ran her into at the store.",
+          "right": "He ran into her at the store.",
+          "note": "'run into' ayrılamaz; zamir edattan sonra gelir."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Cümleyi düzeltin: 'Please throw away it.'",
+          "answer": "Please throw it away."
+        },
+        {
+          "prompt": "Cümleyi düzeltin: 'She looked them after.'",
+          "answer": "She looked after them."
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-apostrophe-s",
+      "topic": "Possessive apostrophe s",
+      "title": "İyelik Bildiren Kesme İşareti ve s",
+      "explanation": "İyelik eki ('s) bir şeyin kime ya da neye ait olduğunu gösterir. Tekil isimlere 's eklenir (the cat's toy). Sonu s ile biten çoğul isimlere yalnızca kesme işareti konur (the cats' toys). Sonu s ile bitmeyen çoğul isimler ise yine 's alır (the children's toys). İyelik bildirmeyen düz çoğullarda kesme işareti kullanılmaz.",
+      "examples": [
+        {
+          "wrong": "The dogs bone is on the floor.",
+          "right": "The dog's bone is on the floor.",
+          "note": "Tek bir köpek söz konusu olduğu için ismin sonuna 's gelir."
+        },
+        {
+          "wrong": "The girls dresses are pretty.",
+          "right": "The girls' dresses are pretty.",
+          "note": "'girls' zaten s ile biten bir çoğul olduğu için sadece kesme işareti eklenir."
+        },
+        {
+          "wrong": "The childrens toys are everywhere.",
+          "right": "The children's toys are everywhere.",
+          "note": "'children' çoğuldur ama s ile bitmez; bu yüzden 's alır."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Düzeltin: 'The mens room is down the hall.'",
+          "answer": "The men's room is down the hall."
+        },
+        {
+          "prompt": "Düzeltin: 'The books cover is torn.'",
+          "answer": "The book's cover is torn."
+        },
+        {
+          "prompt": "Düzeltin: 'My parents car is blue.'",
+          "answer": "My parents' car is blue."
+        }
+      ]
+    },
+    {
+      "rule_id": "silent-letters",
+      "topic": "Silent letters",
+      "title": "Okunmayan Harfler: Yazılan Her Harf Söylenmez",
+      "explanation": "İngilizcede bazı harfler yazıldıkları hâlde okunmaz; bunlara okunmayan harfler denir. Konuşurken bu harfleri seslendirmemeniz gerekir. En bilinen örnekler 'knife' sözcüğündeki 'k', 'listen' sözcüğündeki 't' ve 'comb' sözcüğündeki 'b'dir.",
+      "examples": [
+        {
+          "wrong": "I have a k-nife.",
+          "right": "I have a knife.",
+          "note": "'k' harfi okunmaz; sözcük 'nayf' gibi söylenir."
+        },
+        {
+          "wrong": "She likes to lis-ten.",
+          "right": "She likes to listen.",
+          "note": "'listen' sözcüğündeki 't' okunmaz; 'lisın' gibi söylenir."
+        },
+        {
+          "wrong": "She lost her com.",
+          "right": "She lost her comb.",
+          "note": "'comb' sözcüğü sondaki 'b' ile yazılır ama bu harf okunmaz; söylenişi 'koum'dur."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Hangi sözcükte 'k' okunmaz? (knife, kite, king)",
+          "answer": "knife"
+        },
+        {
+          "prompt": "Cümleyi tamamlayın: The 'b' in '______' is silent. (lamb, bee, broke)",
+          "answer": "lamb"
+        },
+        {
+          "prompt": "'Write' sözcüğünün doğru söylenişini seçin: (a) 'w' sesiyle (b) 'w' okunmadan",
+          "answer": "silent 'w'"
+        }
+      ]
+    },
+    {
+      "rule_id": "homophones-spelling",
+      "topic": "Homophones spelling",
+      "title": "Eş Sesli Sözcüklerde Sık Yapılan Yazım Hataları",
+      "explanation": "Eş sesli sözcükler aynı okunur ama yazılışları ve anlamları farklıdır. Bu yüzden yazarken sık sık birbirine karıştırılırlar. Hatadan kaçınmak için sözcüğün cümledeki anlamına ve bağlama dikkat edin.",
+      "examples": [
+        {
+          "wrong": "Their going to the store.",
+          "right": "They're going to the store.",
+          "note": "'They're', 'they are'in kısaltmasıdır; 'their' ise iyelik bildirir."
+        },
+        {
+          "wrong": "Your a great student.",
+          "right": "You're a great student.",
+          "note": "'You're', 'you are'in kısaltmasıdır; 'your' sahiplik bildirir."
+        },
+        {
+          "wrong": "Its a beautiful day.",
+          "right": "It's a beautiful day.",
+          "note": "'It's' = 'it is'; kesme işaretsiz 'its' ise iyelik bildirir."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Doğru sözcüğü seçin: (There/Their/They're) going to the park.",
+          "answer": "They're"
+        },
+        {
+          "prompt": "Boşluğu doldurun: ___ (Your/You're) book is on the table.",
+          "answer": "Your"
+        },
+        {
+          "prompt": "Tamamlayın: The dog wagged ___ (its/it's) tail.",
+          "answer": "its"
+        }
+      ]
+    },
+    {
+      "rule_id": "irregular-verb-forms",
+      "topic": "Irregular verb forms",
+      "title": "Düzensiz Fiil Biçimleri",
+      "explanation": "Düzensiz fiiller geçmiş zamanda -ed eki almaz; bunun yerine biçimleri tamamen değişir. Bu fiillerin ikinci ve üçüncü hâllerini ezberlemekten başka yol yoktur. En sık kullanılanlarla başlamak hataları hızla azaltır.",
+      "examples": [
+        {
+          "wrong": "I have went to the store.",
+          "right": "I have gone to the store.",
+          "note": "'go' fiilinin üçüncü hâli 'went' değil 'gone'dır."
+        },
+        {
+          "wrong": "She drinked the water.",
+          "right": "She drank the water.",
+          "note": "'drink' fiilinin ikinci hâli 'drinked' değil 'drank'tir."
+        },
+        {
+          "wrong": "He brang his book.",
+          "right": "He brought his book.",
+          "note": "'bring' fiilinin geçmiş biçimi 'brang' değil 'brought'tur."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Boşluğu doldurun: Yesterday, I ____ (go) to the park.",
+          "answer": "went"
+        },
+        {
+          "prompt": "Boşluğu doldurun: She has ____ (write) a letter.",
+          "answer": "written"
+        },
+        {
+          "prompt": "Boşluğu doldurun: They ____ (eat) lunch already.",
+          "answer": "eaten"
+        }
+      ]
+    },
+    {
+      "rule_id": "reported-speech-backshift",
+      "topic": "Reported speech backshift",
+      "title": "Dolaylı Anlatım: Zaman Kaydırma",
+      "explanation": "Birinin söylediklerini aktarırken özgün cümlenin zamanı genellikle bir adım geriye kaydırılır. Buna zaman kaydırma denir. Örneğin geniş zaman geçmiş zamana, şimdiki zaman ise sürekli geçmiş zamana dönüşür. Aktarma fiili geçmiş zamandaysa yan cümlenin zamanını da buna göre ayarlayın.",
+      "examples": [
+        {
+          "wrong": "She said she is tired.",
+          "right": "She said she was tired.",
+          "note": "'said' geçmiş zaman olduğu için özgün cümledeki 'is' de 'was'a kayar."
+        },
+        {
+          "wrong": "He told me he will come.",
+          "right": "He told me he would come.",
+          "note": "Dolaylı anlatımda 'will', 'would'a dönüşür."
+        },
+        {
+          "wrong": "They said they are going to the party.",
+          "right": "They said they were going to the party.",
+          "note": "Şimdiki zaman 'are going', sürekli geçmiş zaman 'were going' olur."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Dolaylı anlatıma çevirin: 'I live in London.' (He said...)",
+          "answer": "He said he lived in London."
+        },
+        {
+          "prompt": "Dolaylı anlatıma çevirin: 'We are watching a movie.' (They told me...)",
+          "answer": "They told me they were watching a movie."
+        },
+        {
+          "prompt": "Dolaylı anlatıma çevirin: 'I will call you.' (She said...)",
+          "answer": "She said she would call me."
+        }
+      ]
+    },
+    {
+      "rule_id": "when-to-use-some-vs-any",
+      "topic": "When to use 'some' vs 'any'",
+      "title": "'some' mu, 'any' mi? Basit Bir Kural",
+      "explanation": "Olumlu cümlelerde ve ikram ya da rica bildiren sorularda 'some' kullanılır. Olumsuz cümlelerde ve çoğu soruda ise 'any' gelir. Örneğin \"I have some apples\" (olumlu) ama \"I don't have any apples\" (olumsuz). Bir şey ikram ederken soru cümlesinde bile 'some' tercih edilir: \"Would you like some coffee?\"",
+      "examples": [
+        {
+          "wrong": "I don't have some money.",
+          "right": "I don't have any money.",
+          "note": "Olumsuz cümlelerde 'some' değil 'any' kullanılır."
+        },
+        {
+          "wrong": "Would you like any coffee?",
+          "right": "Would you like some coffee?",
+          "note": "İkram ya da kibar rica bildiren sorularda 'any' yerine 'some' gelir."
+        },
+        {
+          "wrong": "There is any milk in the fridge.",
+          "right": "There is some milk in the fridge.",
+          "note": "Olumlu cümlelerde 'any' değil 'some' kullanılır."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Boşluğu doldurun: I want ___ water. (olumlu cümle)",
+          "answer": "some"
+        },
+        {
+          "prompt": "Boşluğu doldurun: She doesn't have ___ friends. (olumsuz)",
+          "answer": "any"
+        },
+        {
+          "prompt": "Boşluğu doldurun: Would you like ___ tea? (ikram)",
+          "answer": "some"
+        }
+      ]
+    },
+    {
+      "rule_id": "definite-vs-zero-article",
+      "topic": "Definite vs zero article",
+      "title": "'the' mi, Tanımlıksız mı? Belirli Tanımlığın Kullanımı",
+      "explanation": "Dinleyenin hangisi olduğunu bildiği belirli bir isimden söz ederken 'the' kullanılır. Genel anlamda konuşurken, sayılamayan veya çoğul isimlerde ise hiçbir tanımlık kullanılmaz. Örneğin 'I love music' genel bir ifadedir, 'I love the music in this movie' ise belirli bir müziği anlatır.",
+      "examples": [
+        {
+          "wrong": "I go to the school every day.",
+          "right": "I go to school every day.",
+          "note": "school, hospital, prison gibi kurumlardan asıl işlevleriyle söz ederken tanımlık kullanılmaz."
+        },
+        {
+          "wrong": "She loves the dogs.",
+          "right": "She loves dogs.",
+          "note": "Genel anlamdaki çoğul isimler tanımlık almaz."
+        },
+        {
+          "wrong": "The milk is good for health.",
+          "right": "Milk is good for health.",
+          "note": "Sayılamayan isimlerden genel olarak söz edilirken tanımlık kullanılmaz."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Boşluğu doldurun: '_____ cats are cute.' (kediler hakkında genel bir ifade)",
+          "answer": "Cats"
+        },
+        {
+          "prompt": "Boşluğu doldurun: 'I need to go to _____ hospital to visit my friend.' (belirli bir hastane)",
+          "answer": "the"
+        },
+        {
+          "prompt": "Boşluğu doldurun: '_____ life is beautiful.' (genel anlamda hayat)",
+          "answer": "Life"
+        }
+      ]
+    },
+    {
+      "rule_id": "clause-linking-conjunctions",
+      "topic": "Clause linking conjunctions",
+      "title": "Cümlecikleri Bağlaçlarla Birleştirmek",
+      "explanation": "İki bağımsız cümleyi birleştirirken 'and', 'but', 'or', 'so' ya da 'because' gibi bir bağlaca ihtiyacınız vardır. Sık yapılan hata, iki cümleyi yalnızca virgülle birbirine eklemek ya da hiç işaret koymamaktır. Cümlecikler arasına mutlaka uygun bir bağlaç ekleyin.",
+      "examples": [
+        {
+          "wrong": "I went to the store, I bought milk.",
+          "right": "I went to the store, and I bought milk.",
+          "note": "İki tam cümleyi birleştirmek için virgülle birlikte 'and' gibi bir bağlaç kullanın."
+        },
+        {
+          "wrong": "She is tired she went to bed.",
+          "right": "She is tired, so she went to bed.",
+          "note": "Sonuç ya da neden ilişkisini göstermek için 'so' gibi bir bağlaç eklenir."
+        },
+        {
+          "wrong": "He likes coffee she prefers tea.",
+          "right": "He likes coffee, but she prefers tea.",
+          "note": "İki düşünce arasındaki karşıtlığı belirtmek için 'but' kullanılır."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Cümleyi düzeltin: 'I was hungry I ate lunch.'",
+          "answer": "I was hungry, so I ate lunch."
+        },
+        {
+          "prompt": "Bu iki cümleyi 'because' ile birleştirin: 'I stayed home. I was sick.'",
+          "answer": "I stayed home because I was sick."
+        },
+        {
+          "prompt": "Virgül hatasını düzeltin: 'The sun set, the stars appeared.'",
+          "answer": "The sun set, and the stars appeared."
+        }
+      ]
+    },
+    {
+      "rule_id": "misplaced-modifiers",
+      "topic": "Misplaced modifiers",
+      "title": "Yanlış Yerleştirilmiş Niteleyiciler",
+      "explanation": "Yanlış yerleştirilmiş niteleyici, nitelediği sözcükten çok uzağa konmuş bir sözcük ya da öbektir; bu da anlam karışıklığına, hatta istemeden komik cümlelere yol açar. Çözüm basittir: niteleyiciyi nitelediği sözcüğün hemen yanına taşıyın.",
+      "examples": [
+        {
+          "wrong": "Running to catch the bus, my backpack fell.",
+          "right": "Running to catch the bus, I dropped my backpack.",
+          "note": "'Running to catch the bus' öbeği, eylemi yapan kişinin (I) yanında olmalıdır, sırt çantasının değil."
+        },
+        {
+          "wrong": "She almost drove her kids to school every day.",
+          "right": "She drove her kids to school almost every day.",
+          "note": "'Almost' sözcüğünü 'every day'in yanına koyun; aksi hâlde cümle 'neredeyse götürecekti ama götürmedi' anlamına gelir."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Yanlış yerleştirilmiş niteleyiciyi düzeltin: 'The waiter served a steak to the man with a side of fries.'",
+          "answer": "The waiter served the man a steak with a side of fries."
+        },
+        {
+          "prompt": "Cümleyi düzeltin: 'He nearly ate the whole pizza himself.'",
+          "answer": "He ate nearly the whole pizza himself."
+        }
+      ]
+    }
+  ]
+}

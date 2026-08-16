@@ -1,0 +1,897 @@
+{
+  "learning": "es",
+  "interface": "tr",
+  "generated_at": "2026-08-16T12:01:41+00:00",
+  "model": "claude-opus-4.8-agent",
+  "rules": [
+    {
+      "rule_id": "serestar",
+      "topic": "Ser/Estar",
+      "title": "Ser ile Estar: Hangisi Ne Zaman?",
+      "explanation": "İspanyolcada hem 'ser' hem de 'estar' Türkçeye '-dır, olmak' diye çevrilir ama kullanımları farklıdır. Kalıcı ya da tanımlayıcı özellikler için 'ser' kullanılır: kimlik, köken, meslek, saat. Geçici durumlar için ise 'estar' gelir: bulunulan yer, duygular, anlık hâller. Sık yapılan hata, yer ve geçici duygular için 'ser', doğuştan gelen özellikler için 'estar' kullanmaktır.",
+      "examples": [
+        {
+          "wrong": "Soy en la biblioteca.",
+          "right": "Estoy en la biblioteca.",
+          "note": "Bulunulan yer bildirilirken 'ser' değil 'estar' kullanılır."
+        },
+        {
+          "wrong": "Estoy estudiante.",
+          "right": "Soy estudiante.",
+          "note": "Meslek ve kimlik bildirirken 'ser' gerekir."
+        },
+        {
+          "wrong": "Él es cansado.",
+          "right": "Él está cansado.",
+          "note": "Yorgunluk gibi geçici bedensel durumlarda 'estar' kullanılır; 'ser cansado' ise 'yorucu, bunaltıcı bir insan' anlamına gelir."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Boşluğu doldurun: 'Yo ___ (ser/estar) feliz hoy.'",
+          "answer": "estoy"
+        },
+        {
+          "prompt": "Boşluğu doldurun: 'Ellos ___ (ser/estar) de España.'",
+          "answer": "son"
+        },
+        {
+          "prompt": "Boşluğu doldurun: 'La mesa ___ (ser/estar) en la cocina.'",
+          "answer": "está"
+        }
+      ]
+    },
+    {
+      "rule_id": "subjuntivo",
+      "topic": "Subjuntivo",
+      "title": "Yaygın Kalıplardan Sonra Subjuntivo'yu Doğru Kullanmak",
+      "explanation": "İspanyolcada subjuntivo kipi, şüphe, duygu, gereklilik ya da gelecekteki bir eylem bildiren belirli kalıplardan sonra gelir. En sık karşılaşılan tetikleyiciler 'es importante que', 'espero que', 'es necesario que' ve gelecekten söz eden 'cuando' kalıplarıdır. Yeni başlayanlar bu kalıplardan sonra sıklıkla subjuntivo yerine düz geniş zamanı (indicativo) kullanır.",
+      "examples": [
+        {
+          "wrong": "Es importante que estudias mucho.",
+          "right": "Es importante que estudies mucho.",
+          "note": "'es importante que' gereklilik ve görüş bildirdiği için ardından subjuntivo gelir."
+        },
+        {
+          "wrong": "Cuando termino mi trabajo, voy a casa.",
+          "right": "Cuando termine mi trabajo, voy a casa.",
+          "note": "'cuando' alışkanlığı değil gelecekteki bir eylemi anlatıyorsa subjuntivo kullanılır."
+        },
+        {
+          "wrong": "Ojalá llueve mañana.",
+          "right": "Ojalá llueva mañana.",
+          "note": "'Ojalá' dilek ve umut bildirdiği için her zaman subjuntivo ister."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Boşluğu doğru subjuntivo biçimiyle doldurun: Es necesario que (tú) _______ (hablar) con el profesor.",
+          "answer": "hables"
+        },
+        {
+          "prompt": "Boşluğu doğru subjuntivo biçimiyle doldurun: Espero que (ella) _______ (venir) a la fiesta.",
+          "answer": "venga"
+        },
+        {
+          "prompt": "Boşluğu doğru subjuntivo biçimiyle doldurun: Cuando yo _______ (llegar) a casa, te llamaré.",
+          "answer": "llegue"
+        }
+      ]
+    },
+    {
+      "rule_id": "tiempos-verbales",
+      "topic": "Tiempos verbales",
+      "title": "Pretérito ile Imperfecto: Hangisi Ne Zaman?",
+      "explanation": "İspanyolcada pretérito, geçmişte tamamlanmış ya da belirli bir anda gerçekleşmiş eylemler için kullanılır; imperfecto ise süregelen, alışkanlık hâline gelmiş ya da arka plan niteliğindeki eylemleri anlatır. Öğrenciler tamamlanmış eylemler için imperfecto ya da tam tersini kullanarak sık sık hata yapar. Basit bir ölçüt: eylemin belirli bir başlangıcı ve sonu varsa pretérito, betimleme ya da tekrar söz konusuysa imperfecto seçin.",
+      "examples": [
+        {
+          "wrong": "Ayer yo comía pizza.",
+          "right": "Ayer yo comí pizza.",
+          "note": "Belirli bir zamanda tamamlanmış tek bir eylem için pretérito kullanılır."
+        },
+        {
+          "wrong": "Cuando era niño, yo fui feliz.",
+          "right": "Cuando era niño, yo era feliz.",
+          "note": "Geçmişteki durum ve duyguları betimlerken imperfecto gerekir."
+        },
+        {
+          "wrong": "Ellos jugaban fútbol ayer a las 3.",
+          "right": "Ellos jugaron fútbol ayer a las 3.",
+          "note": "Belirli bir saat verildiğinde tamamlanmış eylem için pretérito kullanılır."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Doğru geçmiş zaman biçimiyle tamamlayın: 'Ayer yo _____ (hablar) con mi madre.'",
+          "answer": "hablé"
+        },
+        {
+          "prompt": "Doğru fiili seçin: 'Cuando era niño, yo _____ (vivir) en una casa grande.' (viví / vivía)",
+          "answer": "vivía"
+        },
+        {
+          "prompt": "Boşluğu doldurun: 'Ellos _____ (visitar) el museo el lunes pasado.'",
+          "answer": "visitaron"
+        }
+      ]
+    },
+    {
+      "rule_id": "preposiciones",
+      "topic": "Preposiciones",
+      "title": "Por ile Para: Sık Karıştırılan İki Edat",
+      "explanation": "Hem 'por' hem de 'para' Türkçeye çoğu zaman 'için' diye çevrilir, ama işlevleri farklıdır. Neden, süre ve değiş tokuş bildirirken 'por' kullanılır; amaç, varış noktası ve alıcı bildirirken ise 'para' gelir. Özellikle teşekkür ve hedef ifadelerinde bu ikisi sık sık karıştırılır.",
+      "examples": [
+        {
+          "wrong": "Gracias para tu ayuda.",
+          "right": "Gracias por tu ayuda.",
+          "note": "'gracias'tan sonra teşekkürün nedenini gösteren 'por' kullanılır."
+        },
+        {
+          "wrong": "Estudio por aprobar el examen.",
+          "right": "Estudio para aprobar el examen.",
+          "note": "Amaç ya da hedef bildirmek için 'para' gerekir."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Boşluğu doldurun: 'Estudio ___ aprender.' (amaç)",
+          "answer": "para"
+        },
+        {
+          "prompt": "Boşluğu doldurun: 'Gracias ___ tu ayuda.' (neden)",
+          "answer": "por"
+        }
+      ]
+    },
+    {
+      "rule_id": "sonidos-rrr-звуки-rrr",
+      "topic": "Sonidos r/rr (звуки r/rr)",
+      "title": "İspanyolcada r ve rr Sesleri",
+      "explanation": "İspanyolcada tek 'r' hızlı bir tek vuruşla çıkarılır ve Türkçedeki 'r' sesine oldukça yakındır. Çift 'rr' ise dilin ucunun damağa çarparak titremesiyle oluşan uzun, yuvarlanan bir sestir. Sözcük başındaki tek 'r' de titrek söylenir. Bu iki sesi karıştırmak sözcüğün anlamını tamamen değiştirebilir.",
+      "examples": [
+        {
+          "wrong": "pero",
+          "right": "perro",
+          "note": "Titreşim atlanırsa anlam kayar: 'pero' 'ama', 'perro' ise 'köpek' demektir."
+        },
+        {
+          "wrong": "caro",
+          "right": "carro",
+          "note": "Tek vuruş ile titreşim farkı: 'caro' 'pahalı', 'carro' ise 'araba' anlamına gelir."
+        },
+        {
+          "wrong": "coro",
+          "right": "corro",
+          "note": "Yine tek 'r' ile çift 'r' farkı: 'coro' 'koro', 'corro' ise 'koşuyorum' demektir."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "'Pirinç' sözcüğü İspanyolcada nasıl söylenir? (İpucu: başındaki r titrek söylenir.)",
+          "answer": "arroz"
+        },
+        {
+          "prompt": "İspanyolcada 'ama' anlamındaki sözcük nasıl yazılır? (çift değil, tek r)",
+          "answer": "pero"
+        },
+        {
+          "prompt": "Boşluğu doldurun: 'El ___ (köpek) ladra.'",
+          "answer": "perro"
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciación-de-la-ñ",
+      "topic": "Pronunciación de la ñ",
+      "title": "İspanyolca ñ Harfinin Söylenişi",
+      "explanation": "İspanyolcadaki 'ñ' harfi kendine özgü bir damaksıl genizsi sesi gösterir; Türkçedeki 'ny' birleşimine benzer ama tek bir ses olarak, dilin sırtı damağa yapışık biçimde çıkarılır. Öğrenciler bu sesi çoğu zaman düz 'n' ile değiştirir ya da 'n' ve 'y'yi ayrı ayrı söyler; bu da sözcüğün anlamını bozar. 'ny' birleşimini iki harf gibi değil, tek bir ses gibi söyleyerek çalışın.",
+      "examples": [
+        {
+          "wrong": "Espana",
+          "right": "España",
+          "note": "'ñ' yerine düz 'n' yazmak ya da söylemek sözcüğü anlamsız hâle getirir; ülkenin adı 'España'dır."
+        },
+        {
+          "wrong": "ano",
+          "right": "año",
+          "note": "'año' (yıl) sözcüğünü 'ano' diye söylemek utandırıcı bir hatadır, çünkü 'ano' bambaşka bir anlam taşır."
+        },
+        {
+          "wrong": "nino",
+          "right": "niño",
+          "note": "'ñ' olmadan 'nino' İspanyolcada bir sözcük değildir. 'Niño' 'çocuk, oğlan' demektir."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "'İspanya' İspanyolcada nasıl yazılır? ('ñ' sesini unutmayın.)",
+          "answer": "España"
+        },
+        {
+          "prompt": "'Küçük kız' anlamındaki sözcüğü doğru 'ñ' harfiyle yazın.",
+          "answer": "niña"
+        },
+        {
+          "prompt": "'Yıl' anlamındaki İspanyolca sözcüğü doğru 'ñ' harfiyle yazın.",
+          "answer": "año"
+        }
+      ]
+    },
+    {
+      "rule_id": "entonación",
+      "topic": "Entonación",
+      "title": "İspanyolcada Tonlama: Düz Cümle mi, Soru mu?",
+      "explanation": "İspanyolcada bir cümlenin düz ifade mi yoksa evet/hayır sorusu mu olduğunu çoğu zaman yalnızca tonlama belirler. Düz cümleler alçalan tonla biter, sorular ise yükselen tonla. Türkçede soru eki bu ayrımı yaptığı için öğrenciler tonlamayı ihmal edip düz cümleleri soru gibi seslendirebilir.",
+      "examples": [
+        {
+          "wrong": "Ella viene mañana. (yükselen tonlamayla)",
+          "right": "Ella viene mañana. (alçalan tonlamayla)",
+          "note": "Aynı sözcükler, farklı ton. Düz cümlelerde ses sonda alçalmalıdır."
+        },
+        {
+          "wrong": "¿Hablas inglés? (alçalan tonlamayla)",
+          "right": "¿Hablas inglés? (yükselen tonlamayla)",
+          "note": "Evet/hayır sorularında ses sonda yükselir; alçalan ton cümleyi düz bir ifadeye dönüştürür."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "'Sen İspanyolca konuşuyorsun' cümlesini düz ifade olarak yazın (nokta kullanın).",
+          "answer": "Hablas español."
+        },
+        {
+          "prompt": "'O burada mı yaşıyor?' cümlesini doğru noktalama ile soru olarak yazın.",
+          "answer": "¿Él vive aquí?"
+        },
+        {
+          "prompt": "Şu soruyu düz cümleye çevirin: '¿Ella trabaja?'",
+          "answer": "Ella trabaja."
+        }
+      ]
+    },
+    {
+      "rule_id": "gender-of-nouns-masculinefeminine",
+      "topic": "Gender of nouns (masculine/feminine)",
+      "title": "İsimlerde Cinsiyet: Eril ve Dişil Sonlar",
+      "explanation": "İspanyolcada isimler eril ya da dişildir. Genellikle -o ile bitenler eril, -a ile bitenler dişildir; ancak önemli istisnalar vardır. Örneğin çoğu Yunancadan gelen ve -ma ile biten 'problema' erildir; 'mano' (el) ise -o ile bitmesine rağmen dişildir.",
+      "examples": [
+        {
+          "wrong": "la problema",
+          "right": "el problema",
+          "note": "-ma ile biten isimler genellikle erildir."
+        },
+        {
+          "wrong": "el mano",
+          "right": "la mano",
+          "note": "'Mano' -o ile bitse de dişildir."
+        },
+        {
+          "wrong": "el foto",
+          "right": "la foto",
+          "note": "'Foto', 'fotografía' sözcüğünün kısaltmasıdır; bu yüzden dişil kalır."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "'día' (gün) sözcüğü için doğru artikeli yazın.",
+          "answer": "el día"
+        },
+        {
+          "prompt": "'mano' (el) sözcüğü için doğru artikeli yazın.",
+          "answer": "la mano"
+        },
+        {
+          "prompt": "'sistema' (sistem) sözcüğü için doğru artikeli yazın.",
+          "answer": "el sistema"
+        }
+      ]
+    },
+    {
+      "rule_id": "adjective-agreement-in-gender-and-number",
+      "topic": "Adjective agreement in gender and number",
+      "title": "Sıfatların Cinsiyet ve Sayı Uyumu",
+      "explanation": "İspanyolcada sıfatlar niteledikleri isme hem cinsiyet (eril/dişil) hem de sayı (tekil/çoğul) bakımından uymak zorundadır. Genellikle eril sıfatlar -o, dişil sıfatlar -a ile biter ve çoğul için -s eklenir. Hatalar çoğunlukla sıfatın isme uyacak biçimde değiştirilmemesinden kaynaklanır.",
+      "examples": [
+        {
+          "wrong": "La casa rojo",
+          "right": "La casa roja",
+          "note": "'Casa' dişildir, bu yüzden sıfat da dişil olmalıdır: 'rojo' değil 'roja'."
+        },
+        {
+          "wrong": "Los coches roja",
+          "right": "Los coches rojos",
+          "note": "'Coches' eril çoğuldur, bu yüzden sıfat da eril çoğul olur: 'roja' değil 'rojos'."
+        },
+        {
+          "wrong": "Las flores bonito",
+          "right": "Las flores bonitas",
+          "note": "'Flores' dişil çoğuldur, bu yüzden sıfat da dişil çoğul olmalıdır: 'bonito' değil 'bonitas'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Boşluğu doldurun: büyük ev (la casa) → la casa _____ (grande)",
+          "answer": "grande"
+        },
+        {
+          "prompt": "Boşluğu doldurun: beyaz kediler (los gatos) → los gatos _____ (blanco)",
+          "answer": "blancos"
+        }
+      ]
+    },
+    {
+      "rule_id": "direct-object-pronouns-lo-la-los-las",
+      "topic": "Direct object pronouns (lo, la, los, las)",
+      "title": "Belirtili Nesne Zamirleri: lo, la, los, las",
+      "explanation": "İspanyolcada belirtili nesne zamirleri (lo, la, los, las) yerini tuttukları ismin cinsiyetine ve sayısına uymak zorundadır ve çekimli fiilden önce yer alır; mastara ya da ulaca ise bitişik yazılabilir. Sık yapılan hata, zamiri fiilden sonra bırakmak ya da yanlış biçimi seçmektir.",
+      "examples": [
+        {
+          "wrong": "Veo él.",
+          "right": "Lo veo.",
+          "note": "'él' (onu) yerine 'lo' kullanılır ve zamir fiilin önüne geçer."
+        },
+        {
+          "wrong": "Tengo los libros. Tengo los.",
+          "right": "Tengo los libros. Los tengo.",
+          "note": "Zamir fiilden sonra bırakılmaz; çekimli fiilin önüne alınır."
+        },
+        {
+          "wrong": "Voy a ver ella.",
+          "right": "La voy a ver. OR Voy a verla.",
+          "note": "'la' zamiri ya mastara bitişik yazılır ya da çekimli fiilin önüne konur; iki biçim de doğrudur."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Çevirin: 'Onları görüyorum.' (eril)",
+          "answer": "Los veo."
+        },
+        {
+          "prompt": "Şu cümlede 'la casa' yerine doğru zamiri koyun: 'Ella compra la casa.'",
+          "answer": "Ella la compra."
+        },
+        {
+          "prompt": "'las flores' için doğru zamiri seçin: 'Él riega las flores.'",
+          "answer": "Él las riega."
+        }
+      ]
+    },
+    {
+      "rule_id": "indirect-object-pronouns-le-les",
+      "topic": "Indirect object pronouns (le, les)",
+      "title": "Dolaylı Nesne Zamirleri: le ve les",
+      "explanation": "İspanyolcada 'le' (tekil) ve 'les' (çoğul) dolaylı nesne zamirleridir; 'ona, size' ve 'onlara' anlamlarını taşır. Sık yapılan hatalar şunlardır: bu zamirleri belirtili nesne yerine kullanmak ('le vi' yerine 'lo vi' olmalı) ve sayı uyumunu atlamak (çoğul için 'le' yerine 'les' gerekir). Ayrıca dolaylı nesne cümlede açıkça belirtilse bile ('a Juan' gibi) zamir yine de kullanılmak zorundadır.",
+      "examples": [
+        {
+          "wrong": "Le vi a Juan.",
+          "right": "Lo vi a Juan.",
+          "note": "'ver' fiili dolaylı nesne almadığı için 'onu' anlamında 'le' değil, belirtili nesne zamiri 'lo' kullanılır."
+        },
+        {
+          "wrong": "Le compré un regalo a mis padres.",
+          "right": "Les compré un regalo a mis padres.",
+          "note": "'mis padres' çoğul olduğu için 'le' yerine 'les' gerekir."
+        },
+        {
+          "wrong": "Doy el libro a Juan.",
+          "right": "Le doy el libro a Juan.",
+          "note": "'a Juan' cümlede açıkça yazılsa bile 'le' zamiri zorunludur; isteğe bağlı değildir."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Boşluğu doğru dolaylı nesne zamiriyle doldurun: Kitabı María'ya veriyorum. (Yo) ___ doy el libro a María.",
+          "answer": "Le"
+        },
+        {
+          "prompt": "Boşluğu doldurun: Büyükanne ve büyükbabalarına bir mektup yazıyorlar. (Ellos) ___ escriben una carta a sus abuelos.",
+          "answer": "Les"
+        },
+        {
+          "prompt": "Boşluğu doldurun: Size (resmî) bir e-posta gönderiyor. Él ___ envía un correo a usted.",
+          "answer": "Le"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-personal-a",
+      "topic": "Use of personal 'a'",
+      "title": "İspanyolcada Kişi Belirten 'a'",
+      "explanation": "İspanyolcada bir fiilin belirtili nesnesi belirli bir kişi ya da insan gibi görülen bir evcil hayvansa, önüne 'a' edatı konur. Buna 'kişi a'sı' denir ve Türkçede doğrudan bir karşılığı yoktur. Nesne bir insan ya da evcil hayvan değilse (bir eşya veya sıradan bir hayvan gibi) 'a' kullanılmaz.",
+      "examples": [
+        {
+          "wrong": "Veo Juan.",
+          "right": "Veo a Juan.",
+          "note": "Juan belirli bir kişi olduğu için 'a' zorunludur."
+        },
+        {
+          "wrong": "Busco mi perro.",
+          "right": "Busco a mi perro.",
+          "note": "Evcil hayvanlar insan gibi kabul edilir, bu yüzden kişi 'a'sı kullanılır."
+        },
+        {
+          "wrong": "Visito la abuela.",
+          "right": "Visito a la abuela.",
+          "note": "Aile üyeleri de kişi sayıldığı için 'a' gerekir."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Çevirin: María'yı görüyorum.",
+          "answer": "Veo a María."
+        },
+        {
+          "prompt": "Çevirin: Kedisini çok seviyor.",
+          "answer": "Ella ama a su gato."
+        },
+        {
+          "prompt": "Çevirin: Siz (resmî) doktoru arıyorsunuz.",
+          "answer": "Usted llama al doctor."
+        }
+      ]
+    },
+    {
+      "rule_id": "verbs-like-gustar-me-gusta-etc",
+      "topic": "Verbs like 'gustar' (me gusta, etc.)",
+      "title": "'gustar' Gibi Çalışan Fiiller",
+      "explanation": "İspanyolcada 'gustar' gibi fiiller Türkçedeki 'sevmek' fiilinden farklı çalışır; daha çok 'hoşuma gitmek' yapısına benzer. Cümlenin öznesi beğenilen şeydir, beğenen kişi ise dolaylı nesne zamiriyle gösterilir (me, te, le, nos, les). Bu yüzden 'Yo gusto la pizza' değil, 'Me gusta la pizza' denir.",
+      "examples": [
+        {
+          "wrong": "Yo gusto el libro.",
+          "right": "Me gusta el libro.",
+          "note": "Özne kitaptır ve fiil ona göre çekilir ('gusta'); 'me' ise beğenen kişiyi gösterir."
+        },
+        {
+          "wrong": "Ellos gustan los deportes.",
+          "right": "A ellos les gustan los deportes.",
+          "note": "Çoğul dolaylı nesne için 'les' kullanılır; 'deportes' çoğul olduğu için fiil de 'gustan' olur."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Çevirin: 'Filmleri seviyorum.' (filmler = películas)",
+          "answer": "Me gustan las películas."
+        },
+        {
+          "prompt": "Hatayı düzeltin: 'Tú gustas la música.'",
+          "answer": "Te gusta la música."
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-verbs-and-pronouns",
+      "topic": "Reflexive verbs and pronouns",
+      "title": "Dönüşlü Fiiller ve Zamirler",
+      "explanation": "İspanyolcada öznenin eylemi kendi üzerinde gerçekleştirdiği durumlarda dönüşlü zamir kullanmak zorunludur (me, te, se, nos, os). Türkçede bu genellikle fiile eklenen bir ekle karşılanır, İspanyolcada ise ayrı bir zamir gerekir. En sık hata, 'levantarse' (kalkmak) ya da 'vestirse' (giyinmek) gibi günlük rutin fiillerinde bu zamiri unutmaktır.",
+      "examples": [
+        {
+          "wrong": "Yo levanto a las siete.",
+          "right": "Yo me levanto a las siete.",
+          "note": "'Levantar' 'birini/bir şeyi kaldırmak' demektir; 'kendim kalkıyorum' için 'me' gerekir."
+        },
+        {
+          "wrong": "Él viste para la fiesta.",
+          "right": "Él se viste para la fiesta.",
+          "note": "'se' olmadan 'vestir' 'başkasını giydirmek' anlamına gelir; 'vestirse' ise 'giyinmek' demektir."
+        },
+        {
+          "wrong": "Yo llamo Pedro.",
+          "right": "Yo me llamo Pedro.",
+          "note": "'Llamar' 'çağırmak, seslenmek' demektir; 'llamarse' ise 'adı ... olmak' anlamındadır. Zamir olmadan cümle 'Pedro'ya sesleniyorum' gibi anlaşılır."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Çevirin: 'Ellerimi yıkıyorum.' ('lavarse' fiilini kullanın.)",
+          "answer": "Yo me lavo las manos."
+        },
+        {
+          "prompt": "Tamamlayın: 'Saat onda yatıyor.' ('acostarse' fiilini kullanın.)",
+          "answer": "Ella se acuesta a las diez."
+        },
+        {
+          "prompt": "Boşluğu doldurun: 'Yorgun hissediyoruz.' ('sentirse' fiilini kullanın.)",
+          "answer": "Nos sentimos cansados."
+        }
+      ]
+    },
+    {
+      "rule_id": "formal-vs-informal-commands-imperative",
+      "topic": "Formal vs informal commands (imperative)",
+      "title": "Resmî ve Samimi Emir Kipi",
+      "explanation": "İspanyolcada emir kipi, karşınızdakine samimi (tú) ya da resmî (usted) hitap etmenize göre değişir. Olumlu samimi emirlerde geniş zamanın él/ella biçimi kullanılır (örneğin 'habla'). Resmî emirlerin hepsinde ve olumsuz samimi emirlerde ise subjuntivo biçimi gelir ('hable', 'no hables').",
+      "examples": [
+        {
+          "wrong": "Habla más despacio. (bir yabancıya)",
+          "right": "Hable más despacio.",
+          "note": "Yakından tanımadığınız birine ya da saygı göstermek istediğinizde resmî biçim olan 'hable' kullanılır."
+        },
+        {
+          "wrong": "No come eso. (bir arkadaşa)",
+          "right": "No comas eso.",
+          "note": "Olumsuz samimi emirlerde subjuntivo gerekir: 'no come' değil 'no comas'."
+        },
+        {
+          "wrong": "Escribe la carta. (patronunuza)",
+          "right": "Escriba la carta.",
+          "note": "Resmî 'usted' için fiil subjuntivo biçimine girer: 'escriba'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Bir arkadaşınıza (tú) 'daha yavaş konuş' deyin.",
+          "answer": "Habla más despacio."
+        },
+        {
+          "prompt": "Bir doktora (resmî) 'lütfen oturun' deyin.",
+          "answer": "Siéntese, por favor."
+        },
+        {
+          "prompt": "Bir çocuğa (tú) 'koşma' deyin.",
+          "answer": "No corras."
+        }
+      ]
+    },
+    {
+      "rule_id": "comparative-and-superlative-forms",
+      "topic": "Comparative and superlative forms",
+      "title": "İspanyolcada Karşılaştırma ve Üstünlük Biçimleri",
+      "explanation": "İspanyolcada iki şeyi karşılaştırmak için 'más...que' (daha ... -den) ya da 'menos...que' (daha az ... -den) kalıpları kullanılır. Üstünlük derecesi için 'el/la/los/las más...de' yapısı gelir. Sıfatların cinsiyet ve sayı uyumunu korumayı unutmayın; ayrıca 'mejor' (daha iyi/en iyi) ve 'peor' (daha kötü/en kötü) gibi kuralsız biçimler 'más' almaz.",
+      "examples": [
+        {
+          "wrong": "Ella es más inteligente de Juan.",
+          "right": "Ella es más inteligente que Juan.",
+          "note": "Karşılaştırmalarda 'más/menos'tan sonra 'de' değil 'que' kullanılır."
+        },
+        {
+          "wrong": "Ella es más rápida de la clase.",
+          "right": "Ella es la más rápida de la clase.",
+          "note": "Üstünlük derecesinde 'más/menos'tan önce belirli artikel gerekir ('el/la/los/las')."
+        },
+        {
+          "wrong": "Este es el más mejor libro.",
+          "right": "Este es el mejor libro.",
+          "note": "'mejor' ve 'peor' gibi kuralsız biçimler asla 'más' ile kullanılmaz."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Çevirin: 'O, ondan daha uzun boylu.' (dişil özne)",
+          "answer": "Ella es más alta que él."
+        },
+        {
+          "prompt": "Çevirin: 'Bu, en ilginç kitap.'",
+          "answer": "Este es el libro más interesante."
+        },
+        {
+          "prompt": "Hatayı düzeltin: 'Él es el más inteligente estudiante.'",
+          "answer": "Él es el estudiante más inteligente."
+        }
+      ]
+    },
+    {
+      "rule_id": "demonstrative-adjectives-and-pronouns-este-ese-aquel",
+      "topic": "Demonstrative adjectives and pronouns (este, ese, aquel)",
+      "title": "İşaret Sıfat ve Zamirleri: este, ese, aquel",
+      "explanation": "İspanyolcada 'este' (bu), 'ese' (şu) ve 'aquel' (o, oradaki) konuşana olan uzaklığa göre değişir. 'Este' konuşana yakın olanı, 'ese' dinleyene yakın olanı, 'aquel' ise her ikisinden de uzak olanı gösterir. Sık yapılan hata, 'ese' ya da 'aquel' gerekirken 'este' kullanmak veya cinsiyet ve sayı biçimlerini karıştırmaktır.",
+      "examples": [
+        {
+          "wrong": "Este libro que tienes en la mano es interesante.",
+          "right": "Ese libro que tienes en la mano es interesante.",
+          "note": "Dinleyene yakın bir şey için 'este' değil 'ese' kullanılır; 'este' konuşana yakın olanı gösterir."
+        },
+        {
+          "wrong": "¿Puedes pasarme aquel lápiz que está aquí?",
+          "right": "¿Puedes pasarme este lápiz que está aquí?",
+          "note": "'Aquel' uzaktaki nesneler içindir; nesne hemen buradaysa 'este' gelir."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Boşluğu doğru biçimle doldurun: '___ (oradaki) casa en la colina es muy antigua.'",
+          "answer": "Aquella"
+        },
+        {
+          "prompt": "Boşluğu doldurun: '___ (bu) manzana que tengo en la mano es roja.'",
+          "answer": "Esta"
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-adjectives-mi-tu-su-vs-possessive-pronouns-mío-tuyo",
+      "topic": "Possessive adjectives (mi, tu, su) vs possessive pronouns (mío, tuyo)",
+      "title": "İyelik Sıfatları ile İyelik Zamirleri",
+      "explanation": "İyelik sıfatları (mi, tu, su) ismin önüne gelir ve yalnızca sayı bakımından uyum gösterir ('mi libro', 'mis libros'). İyelik zamirleri (mío, tuyo, suyo) ise ismin yerini tutar ve hem cinsiyet hem sayı bakımından uyar ('el libro mío', 'la casa suya'). Kısacası: isimden önce sıfat, 'ser' fiilinden sonra ya da tek başına zamir kullanılır.",
+      "examples": [
+        {
+          "wrong": "Este es mi.",
+          "right": "Este es mío.",
+          "note": "'ser' fiilinden sonra sıfat olan 'mi' değil, zamir olan 'mío' kullanılır."
+        },
+        {
+          "wrong": "Es el mío libro.",
+          "right": "Es mi libro.",
+          "note": "İsimden önce zamir olan 'mío' değil, sıfat olan 'mi' gelir."
+        },
+        {
+          "wrong": "¿Son tus amigos? Sí, son tus.",
+          "right": "¿Son tus amigos? Sí, son míos.",
+          "note": "'ser' fiilinden sonra 'amigos' ile uyumlu zamir olan 'míos' kullanılır."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Doğru iyelik sıfatıyla tamamlayın: 'Bu benim evim.'",
+          "answer": "Esta es mi casa."
+        },
+        {
+          "prompt": "Doğru iyelik zamiriyle tamamlayın: 'O kitap benim.'",
+          "answer": "Ese libro es mío."
+        },
+        {
+          "prompt": "Doğru sözcüğü seçin: 'Ella es (mi / mía) hermana.'",
+          "answer": "mi"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-qué-vs-cuál",
+      "topic": "Use of 'qué' vs 'cuál'",
+      "title": "Qué ile Cuál: 'Ne' ve 'Hangisi'",
+      "explanation": "Tanım, açıklama sorarken ya da seçenekler sınırsızken 'qué' kullanılır. Bilinen bir kümeden seçim yapılıyorsa veya konuşanın aklında sınırlı sayıda seçenek varsa 'cuál' gelir. Pratik bir ipucu: 'hangisi' diyebiliyorsanız 'cuál' seçin. Ayrıca standart İspanyolcada bir ismin hemen önünde 'cuál' değil 'qué' tercih edilir.",
+      "examples": [
+        {
+          "wrong": "¿Qué es tu nombre?",
+          "right": "¿Cuál es tu nombre?",
+          "note": "Burada bütün adlar kümesinden belirli bir ad sorulduğu için 'cuál' gerekir."
+        },
+        {
+          "wrong": "¿Cuál es eso?",
+          "right": "¿Qué es eso?",
+          "note": "Bilinmeyen bir nesnenin tanımı ya da açıklaması sorulduğunda 'qué' kullanılır."
+        },
+        {
+          "wrong": "¿Qué prefieres, café o té?",
+          "right": "¿Cuál prefieres, café o té?",
+          "note": "Sınırlı sayıda seçenek verildiğinde doğru olan 'cuál'dır."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Çevirin: 'En sevdiğin film hangisi?'",
+          "answer": "¿Cuál es tu película favorita?"
+        },
+        {
+          "prompt": "Çevirin: 'Ne yemek istiyorsun?' (genel soru)",
+          "answer": "¿Qué quieres comer?"
+        },
+        {
+          "prompt": "Çevirin: 'Hangi elbiseyi almalıyım?' (Dikkat: doğrudan bir ismin önünde 'qué' kullanılır.)",
+          "answer": "¿Qué vestido debo comprar?"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-sino-vs-pero",
+      "topic": "Use of 'sino' vs 'pero'",
+      "title": "'sino' ile 'pero' Kullanımı",
+      "explanation": "Hem 'sino' hem de 'pero' 'ama' anlamına gelir ama farklı bağlamlarda kullanılır. Basit bir karşıtlık ya da istisna için 'pero' gelir. Olumsuz bir ifadeden sonra bir düzeltme ya da 'aksine' anlamı veriliyorsa 'sino' kullanılır. Kısacası: 'sino' yalnızca ilk cümlecik olumsuzken ve ikinci cümlecik onu doğrudan düzeltirken kullanılır.",
+      "examples": [
+        {
+          "wrong": "No es caro, pero barato.",
+          "right": "No es caro, sino barato.",
+          "note": "Cümle olumsuzdan sonra 'pahalı' yerine 'ucuz' düzeltmesini getirdiği için 'sino' gerekir."
+        },
+        {
+          "wrong": "No compré pan, sino compré leche.",
+          "right": "No compré pan, pero compré leche.",
+          "note": "Burada ikinci bölüm 'ekmek'i düzeltmiyor, yeni bir bilgi ekliyor. Bu yüzden 'pero' kullanılır."
+        },
+        {
+          "wrong": "No estudio mucho, sino trabajo.",
+          "right": "No estudio mucho, pero trabajo.",
+          "note": "İkinci bölüm doğrudan bir düzeltme değil, ek bir olgudur; 'pero' gerekir."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Boşluğu 'sino' ya da 'pero' ile doldurun: 'No es azul, _______ rojo.' (Mavi değil, kırmızı.)",
+          "answer": "sino"
+        },
+        {
+          "prompt": "Boşluğu doldurun: 'Quiero ir, _______ no puedo.' (Gitmek istiyorum ama gidemem.)",
+          "answer": "pero"
+        },
+        {
+          "prompt": "Boşluğu doldurun: 'No hablo inglés, _______ español.' (İngilizce değil, İspanyolca konuşuyorum.)",
+          "answer": "sino"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-muy-vs-mucho",
+      "topic": "Use of 'muy' vs 'mucho'",
+      "title": "'muy' mu, 'mucho' mu?",
+      "explanation": "Sıfat ve zarfları güçlendirmek için 'muy' (çok) kullanılır ve bunların önüne gelir. Miktar ya da derece bildirmek için ise 'mucho' (çok, epey) kullanılır; isimlerin önüne veya fiillerden sonra gelir.",
+      "examples": [
+        {
+          "wrong": "Estoy mucho cansado.",
+          "right": "Estoy muy cansado.",
+          "note": "'Cansado' bir sıfattır, bu yüzden 'mucho' değil 'muy' gerekir."
+        },
+        {
+          "wrong": "Tengo muy dinero.",
+          "right": "Tengo mucho dinero.",
+          "note": "'Dinero' bir isimdir, bu yüzden 'muy' değil 'mucho' kullanılır."
+        },
+        {
+          "wrong": "Me gusta muy el café.",
+          "right": "Me gusta mucho el café.",
+          "note": "'gustar' gibi bir fiilden sonra 'mucho' gelir; 'muy' fiilleri niteleyemez."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Boşluğu doldurun: 'Ella es _____ inteligente.' (çok)",
+          "answer": "muy"
+        },
+        {
+          "prompt": "Boşluğu doldurun: 'Hay _____ personas en la fiesta.' (birçok)",
+          "answer": "muchas"
+        },
+        {
+          "prompt": "Boşluğu doldurun: 'Él corre _____ rápido.' (çok)",
+          "answer": "muy"
+        }
+      ]
+    },
+    {
+      "rule_id": "false-cognates-embarazada-etc",
+      "topic": "False cognates (embarazada, etc.)",
+      "title": "Yalancı Eşdeğerler: embarazada ve Diğerleri",
+      "explanation": "Yalancı eşdeğerler, İngilizce ya da başka dillerdeki bir sözcüğe benzeyen ama bambaşka anlam taşıyan İspanyolca sözcüklerdir. Örneğin 'embarazada' 'utanmış' değil 'hamile' demektir. Diğer yaygın örnekler 'sensible' ('duyarlı', 'aklı başında' değil) ve 'constipado' ('nezle olmuş', 'kabız' değil) sözcükleridir. Bu tuzaklı sözcükleri kullanmadan önce anlamlarını mutlaka doğrulayın.",
+      "examples": [
+        {
+          "wrong": "Estoy embarazada.",
+          "right": "Estoy avergonzada.",
+          "note": "'Utandım' demek istiyorsanız 'avergonzado/a' kullanın. 'Embarazada' yalnızca 'hamile' anlamına gelir."
+        },
+        {
+          "wrong": "Él es sensible.",
+          "right": "Él es sensato.",
+          "note": "İspanyolcada 'sensible' 'duyarlı, alıngan' demektir. 'Aklı başında, mantıklı' için 'sensato/a' kullanılır."
+        },
+        {
+          "wrong": "Estoy constipado.",
+          "right": "Estoy estreñido.",
+          "note": "'Constipado' 'nezle olmuş' demektir. 'Kabız' anlamı için 'estreñido' denir."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "'embarazada' sözcüğü Türkçede ne anlama gelir?",
+          "answer": "pregnant"
+        },
+        {
+          "prompt": "'O aklı başında bir kadın' cümlesi İspanyolcada nasıl söylenir?",
+          "answer": "Ella es sensata"
+        },
+        {
+          "prompt": "'Kabız' anlamına gelen İspanyolca sözcük nedir?",
+          "answer": "estreñido"
+        }
+      ]
+    },
+    {
+      "rule_id": "apocope-bueno-buen-primero-primer",
+      "topic": "Apocope (bueno -> buen, primero -> primer)",
+      "title": "Apokope: Eril İsimlerden Önce Kısalan Sıfatlar",
+      "explanation": "İspanyolcada bazı sıfatlar eril tekil bir ismin hemen önüne geldiğinde son harflerini düşürür. Buna apokope denir. En bilinen örnekler 'bueno' → 'buen', 'primero' → 'primer' ve 'tercero' → 'tercer' dönüşümleridir. Sıfat ismin arkasına geçtiğinde bu kural işlemez.",
+      "examples": [
+        {
+          "wrong": "el bueno chico",
+          "right": "el buen chico",
+          "note": "'Bueno', eril tekil bir isimden önce 'buen' biçimine kısalır."
+        },
+        {
+          "wrong": "el primero capítulo",
+          "right": "el primer capítulo",
+          "note": "'Primero', eril tekil bir isimden önce 'primer' olur."
+        },
+        {
+          "wrong": "el tercero piso",
+          "right": "el tercer piso",
+          "note": "'Tercero' de eril bir isimden önce 'tercer' biçimine girer."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Çevirin: 'iyi kitap' (kitap = libro, eril)",
+          "answer": "el buen libro"
+        },
+        {
+          "prompt": "Çevirin: 'ilk gün' (gün = día, eril)",
+          "answer": "el primer día"
+        },
+        {
+          "prompt": "Çevirin: 'üçüncü kat' (kat = piso, eril)",
+          "answer": "el tercer piso"
+        }
+      ]
+    },
+    {
+      "rule_id": "contractions-al-and-del",
+      "topic": "Contractions 'al' and 'del'",
+      "title": "İspanyolca Kaynaşmalar: 'al' ve 'del'",
+      "explanation": "İspanyolcada 'a' (-e, -a) ve 'de' (-in, -den) edatları eril artikel 'el' ile birleşerek 'al' ve 'del' biçimlerini oluşturur. 'a el' ya da 'de el' biçiminde ayrı ayrı yazmak her zaman yanlıştır. Bu kural yalnızca 'el' için geçerlidir; 'la', 'los' ve 'las' ile birleşme olmaz.",
+      "examples": [
+        {
+          "wrong": "Voy a el parque.",
+          "right": "Voy al parque.",
+          "note": "'a + el' her zaman 'al' olur."
+        },
+        {
+          "wrong": "El libro es de el profesor.",
+          "right": "El libro es del profesor.",
+          "note": "'de + el' her zaman 'del' olur."
+        },
+        {
+          "wrong": "Salimos de el aeropuerto.",
+          "right": "Salimos del aeropuerto.",
+          "note": "Unutmayın: 'de el' hiçbir zaman doğru değildir, mutlaka 'del' biçimine girer."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Tamamlayın: Voy ___ cine. (a + el)",
+          "answer": "al"
+        },
+        {
+          "prompt": "Tamamlayın: La casa es ___ abuelo. (de + el)",
+          "answer": "del"
+        },
+        {
+          "prompt": "Tamamlayın: Ella llega ___ banco. (a + el)",
+          "answer": "al"
+        }
+      ]
+    },
+    {
+      "rule_id": "placement-of-adjectives-before-vs-after-noun",
+      "topic": "Placement of adjectives (before vs after noun)",
+      "title": "Sıfatların Yeri: İsimden Önce mi, Sonra mı?",
+      "explanation": "İspanyolcada sıfatların çoğu isimden sonra gelir ('un coche rojo' = kırmızı bir araba). Bu, sıfatın her zaman isimden önce geldiği Türkçenin tam tersidir. 'bueno', 'malo', 'grande' gibi bazı yaygın sıfatlar anlamı değiştirmek için isimden önce kullanılabilir ('un gran hombre' = büyük bir insan), ancak yeni başlayanlar renk, boyut ve milliyet bildiren sıfatları isimden sonra koymalıdır.",
+      "examples": [
+        {
+          "wrong": "una roja manzana",
+          "right": "una manzana roja",
+          "note": "Renk bildiren sıfatlar her zaman isimden sonra gelir."
+        },
+        {
+          "wrong": "un interesante libro",
+          "right": "un libro interesante",
+          "note": "Niteleyici sıfatların çoğu ismi izler."
+        },
+        {
+          "wrong": "una pequeña casa",
+          "right": "una casa pequeña",
+          "note": "Fiziksel boyut bildiren sıfatlar da ('pequeño' gibi) isimden sonra kullanılır."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Çevirin: 'mavi bir kalem'",
+          "answer": "un bolígrafo azul"
+        },
+        {
+          "prompt": "Sıralamayı düzeltin: 'un (grande) perro'",
+          "answer": "un perro grande"
+        },
+        {
+          "prompt": "Sıfatın yerini düzelterek yeniden yazın: 'una difícil lección'",
+          "answer": "una lección difícil"
+        }
+      ]
+    }
+  ]
+}

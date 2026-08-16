@@ -1,0 +1,902 @@
+{
+  "learning": "es",
+  "interface": "pl",
+  "generated_at": "2026-08-16T12:00:44+00:00",
+  "model": "claude-opus-4.8-agent",
+  "rules": [
+    {
+      "rule_id": "serestar",
+      "topic": "Ser/Estar",
+      "title": "'Ser' czy 'estar' — dwa hiszpańskie 'być'",
+      "explanation": "Polskiemu czasownikowi 'być' odpowiadają w hiszpańskim dwa różne czasowniki. 'Ser' opisuje cechy stałe i definiujące: tożsamość, pochodzenie, zawód, godzinę. 'Estar' odnosi się do stanów przejściowych, samopoczucia oraz położenia w przestrzeni. Najczęstsze błędy to użycie 'ser' przy miejscu i nastroju albo 'estar' przy cesze trwałej.",
+      "examples": [
+        {
+          "wrong": "Soy en la biblioteca.",
+          "right": "Estoy en la biblioteca.",
+          "note": "Położenie zawsze wyrażamy przez 'estar'."
+        },
+        {
+          "wrong": "Estoy estudiante.",
+          "right": "Soy estudiante.",
+          "note": "Zawód i tożsamość to domena 'ser'."
+        },
+        {
+          "wrong": "Él es cansado.",
+          "right": "Él está cansado.",
+          "note": "Zmęczenie jest stanem chwilowym, więc 'estar'. 'Ser cansado' znaczyłoby, że ktoś jest męczący."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Uzupełnij lukę: 'Yo ___ (ser/estar) feliz hoy.'",
+          "answer": "estoy"
+        },
+        {
+          "prompt": "Uzupełnij lukę: 'Ellos ___ (ser/estar) de España.'",
+          "answer": "son"
+        },
+        {
+          "prompt": "Uzupełnij lukę: 'La mesa ___ (ser/estar) en la cocina.'",
+          "answer": "está"
+        }
+      ]
+    },
+    {
+      "rule_id": "subjuntivo",
+      "topic": "Subjuntivo",
+      "title": "Tryb łączący po typowych zwrotach",
+      "explanation": "Subjuntivo pojawia się po wyrażeniach oznaczających wątpliwość, emocje, konieczność lub życzenie, a także po 'cuando' odnoszącym się do przyszłości. Do najczęstszych sygnałów należą 'es importante que', 'espero que', 'es necesario que' i 'ojalá'. Polszczyzna nie ma osobnego trybu łączącego, dlatego odruchowo wstawiamy zwykły tryb oznajmujący.",
+      "examples": [
+        {
+          "wrong": "Es importante que estudias mucho.",
+          "right": "Es importante que estudies mucho.",
+          "note": "Po 'es importante que' wyrażamy konieczność, więc konieczny jest subjuntivo."
+        },
+        {
+          "wrong": "Cuando termino mi trabajo, voy a casa.",
+          "right": "Cuando termine mi trabajo, voy a casa.",
+          "note": "Gdy 'cuando' odnosi się do przyszłości, a nie do czynności powtarzalnej, używamy subjuntivo."
+        },
+        {
+          "wrong": "Ojalá llueve mañana.",
+          "right": "Ojalá llueva mañana.",
+          "note": "'Ojalá' wyraża życzenie i zawsze pociąga za sobą subjuntivo."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Wstaw poprawną formę subjuntivo: Es necesario que (tú) _______ (hablar) con el profesor.",
+          "answer": "hables"
+        },
+        {
+          "prompt": "Wstaw poprawną formę subjuntivo: Espero que (ella) _______ (venir) a la fiesta.",
+          "answer": "venga"
+        },
+        {
+          "prompt": "Wstaw poprawną formę subjuntivo: Cuando yo _______ (llegar) a casa, te llamaré.",
+          "answer": "llegue"
+        }
+      ]
+    },
+    {
+      "rule_id": "tiempos-verbales",
+      "topic": "Tiempos verbales",
+      "title": "Pretérito indefinido a imperfecto",
+      "explanation": "Pretérito indefinido opisuje czynność zakończoną, osadzoną w konkretnym momencie przeszłości — odpowiada polskiemu aspektowi dokonanemu. Imperfecto służy do tła, opisów i czynności powtarzalnych, czyli mniej więcej temu, co polski aspekt niedokonany. Prosta wskazówka: jeśli zdarzenie ma wyraźny początek i koniec, wybierz indefinido; jeśli malujesz tło albo mówisz o zwyczaju, wybierz imperfecto.",
+      "examples": [
+        {
+          "wrong": "Ayer yo comía pizza.",
+          "right": "Ayer yo comí pizza.",
+          "note": "Konkretna, zakończona czynność w określonym dniu wymaga indefinido."
+        },
+        {
+          "wrong": "Cuando era niño, yo fui feliz.",
+          "right": "Cuando era niño, yo era feliz.",
+          "note": "Opis stanu i uczuć w przeszłości to imperfecto."
+        },
+        {
+          "wrong": "Ellos jugaban fútbol ayer a las 3.",
+          "right": "Ellos jugaron fútbol ayer a las 3.",
+          "note": "Podana godzina zamyka czynność w czasie, więc potrzebne jest indefinido."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Wstaw poprawny czas przeszły: 'Ayer yo _____ (hablar) con mi madre.'",
+          "answer": "hablé"
+        },
+        {
+          "prompt": "Wybierz właściwą formę: 'Cuando era niño, yo _____ (vivir) en una casa grande.' (viví / vivía)",
+          "answer": "vivía"
+        },
+        {
+          "prompt": "Uzupełnij: 'Ellos _____ (visitar) el museo el lunes pasado.'",
+          "answer": "visitaron"
+        }
+      ]
+    },
+    {
+      "rule_id": "preposiciones",
+      "topic": "Preposiciones",
+      "title": "'Por' a 'para' — najczęstsza pułapka przyimkowa",
+      "explanation": "Oba przyimki tłumaczymy na polski jako 'dla' lub 'za', ale ich role są różne. 'Por' wskazuje przyczynę, czas trwania, drogę i wymianę, a 'para' — cel, przeznaczenie, kierunek i odbiorcę. Najwięcej błędów pojawia się w podziękowaniach ('gracias por') i przy wyrażaniu zamiaru ('para aprobar').",
+      "examples": [
+        {
+          "wrong": "Gracias para tu ayuda.",
+          "right": "Gracias por tu ayuda.",
+          "note": "Po 'gracias' wskazujemy powód wdzięczności, więc zawsze 'por'."
+        },
+        {
+          "wrong": "Estudio por aprobar el examen.",
+          "right": "Estudio para aprobar el examen.",
+          "note": "Cel działania wyrażamy przez 'para'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Uzupełnij lukę: 'Estudio ___ aprender.' (cel)",
+          "answer": "para"
+        },
+        {
+          "prompt": "Uzupełnij lukę: 'Gracias ___ tu ayuda.' (przyczyna)",
+          "answer": "por"
+        }
+      ]
+    },
+    {
+      "rule_id": "sonidos-rrr-звуки-rrr",
+      "topic": "Sonidos r/rr (звуки r/rr)",
+      "title": "Hiszpańskie 'r' i 'rr'",
+      "explanation": "Pojedyncze 'r' w środku wyrazu to krótkie, jednokrotne uderzenie języka o dziąsła — brzmi bardzo podobnie do polskiego 'r' w słowie 'para'. Podwójne 'rr', a także 'r' na początku wyrazu, wymaga wyraźnej wibracji, czyli kilku uderzeń pod rząd. Dla Polaka trudność polega nie na samym dźwięku, lecz na konsekwentnym odróżnianiu obu wariantów, bo od tego zależy znaczenie wyrazu.",
+      "examples": [
+        {
+          "wrong": "pero",
+          "right": "perro",
+          "note": "Brak wibracji zmienia znaczenie: 'pero' to 'ale', a 'perro' to 'pies'."
+        },
+        {
+          "wrong": "caro",
+          "right": "carro",
+          "note": "'Caro' znaczy 'drogi', a 'carro' — 'samochód, wóz'."
+        },
+        {
+          "wrong": "coro",
+          "right": "corro",
+          "note": "'Coro' to 'chór', a 'corro' — 'biegnę'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Jak po hiszpańsku powiedzieć 'ryż'? (podpowiedź: 'r' na początku wymawiamy z wibracją)",
+          "answer": "arroz"
+        },
+        {
+          "prompt": "Jak zapisuje się hiszpańskie 'ale'? (pojedyncze r)",
+          "answer": "pero"
+        },
+        {
+          "prompt": "Uzupełnij lukę: 'El ___ (pies) ladra.'",
+          "answer": "perro"
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciación-de-la-ñ",
+      "topic": "Pronunciación de la ñ",
+      "title": "Wymowa i zapis litery ñ",
+      "explanation": "Litera ñ oznacza spółgłoskę nosową podniebienną, praktycznie identyczną z polskim 'ń' w słowie 'koń'. To dobra wiadomość: Polak nie musi uczyć się nowego dźwięku, wystarczy pamiętać o samym znaku. Pominięcie tyldy to jednak błąd ortograficzny, który potrafi zmienić wyraz w zupełnie inne słowo albo w słowo nieistniejące.",
+      "examples": [
+        {
+          "wrong": "Espana",
+          "right": "España",
+          "note": "Bez tyldy wyraz nie istnieje — 'España' to Hiszpania."
+        },
+        {
+          "wrong": "nino",
+          "right": "niño",
+          "note": "'Niño' znaczy 'dziecko, chłopiec'; 'nino' nie jest hiszpańskim słowem."
+        },
+        {
+          "wrong": "ano",
+          "right": "año",
+          "note": "Tu pomyłka bywa krępująca: 'año' to 'rok', a 'ano' oznacza odbyt."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Napisz po hiszpańsku słowo 'Hiszpania' z poprawną literą ñ.",
+          "answer": "España"
+        },
+        {
+          "prompt": "Napisz po hiszpańsku słowo 'dziewczynka' z poprawną literą ñ.",
+          "answer": "niña"
+        },
+        {
+          "prompt": "Napisz po hiszpańsku słowo 'rok' z poprawną literą ñ.",
+          "answer": "año"
+        }
+      ]
+    },
+    {
+      "rule_id": "entonación",
+      "topic": "Entonación",
+      "title": "Intonacja: zdanie oznajmujące czy pytanie?",
+      "explanation": "W hiszpańskim to często sama melodia decyduje, czy zdanie jest stwierdzeniem, czy pytaniem — szyk wyrazów bywa identyczny. Zdania oznajmujące kończymy tonem opadającym, pytania o rozstrzygnięcie tonem wznoszącym, a pytania z wyrazem pytającym (qué, dónde) znowu opadającym. Polacy przenoszą tu własne wzorce i zbyt często podnoszą głos na końcu zwykłego stwierdzenia.",
+      "examples": [
+        {
+          "wrong": "Hoy hace buen tiempo. (con entonación ascendente)",
+          "right": "Hoy hace buen tiempo. (con entonación descendente)",
+          "note": "Zdanie oznajmujące kończymy tonem opadającym."
+        },
+        {
+          "wrong": "¿Vienes mañana? (con entonación descendente)",
+          "right": "¿Vienes mañana? (con entonación ascendente)",
+          "note": "Pytanie o rozstrzygnięcie wymaga tonu wznoszącego."
+        },
+        {
+          "wrong": "¿Dónde vives? (con entonación ascendente)",
+          "right": "¿Dónde vives? (con entonación descendente)",
+          "note": "Pytanie z wyrazem pytającym kończy się tonem opadającym, tak jak stwierdzenie."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Zapisz jako zdanie oznajmujące: 'Hablas español'",
+          "answer": "Hablas español."
+        },
+        {
+          "prompt": "Zapisz jako pytanie o rozstrzygnięcie, z hiszpańską interpunkcją: 'Ella estudia español'",
+          "answer": "¿Ella estudia español?"
+        },
+        {
+          "prompt": "Zamień pytanie na zdanie oznajmujące: '¿Ella trabaja?'",
+          "answer": "Ella trabaja."
+        }
+      ]
+    },
+    {
+      "rule_id": "gender-of-nouns-masculinefeminine",
+      "topic": "Gender of nouns (masculine/feminine)",
+      "title": "Rodzaj rzeczownika: męski i żeński",
+      "explanation": "Hiszpański rzeczownik jest rodzaju męskiego albo żeńskiego — rodzaju nijakiego, znanego z polszczyzny, po prostu nie ma. Zwykle końcówka -o wskazuje rodzaj męski, a -a żeński, ale wyjątków jest sporo: rzeczowniki na -ma pochodzenia greckiego (problema, sistema) są męskie, a 'mano' mimo końcówki -o jest żeńskie. Rodzaj hiszpański często nie pokrywa się z polskim, więc warto uczyć się słów razem z rodzajnikiem.",
+      "examples": [
+        {
+          "wrong": "la problema",
+          "right": "el problema",
+          "note": "Rzeczowniki zakończone na -ma są zwykle rodzaju męskiego."
+        },
+        {
+          "wrong": "el mano",
+          "right": "la mano",
+          "note": "'Mano' jest rodzaju żeńskiego mimo końcówki -o."
+        },
+        {
+          "wrong": "el foto",
+          "right": "la foto",
+          "note": "'Foto' to skrót od 'fotografía', dlatego zachowuje rodzaj żeński."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Wstaw właściwy rodzajnik przy słowie 'día' (dzień).",
+          "answer": "el día"
+        },
+        {
+          "prompt": "Wstaw właściwy rodzajnik przy słowie 'mano' (ręka).",
+          "answer": "la mano"
+        },
+        {
+          "prompt": "Wstaw właściwy rodzajnik przy słowie 'sistema' (system).",
+          "answer": "el sistema"
+        }
+      ]
+    },
+    {
+      "rule_id": "adjective-agreement-in-gender-and-number",
+      "topic": "Adjective agreement in gender and number",
+      "title": "Zgodność przymiotnika co do rodzaju i liczby",
+      "explanation": "Hiszpański przymiotnik dopasowuje się do rzeczownika pod względem rodzaju i liczby. Formy męskie kończą się zwykle na -o, żeńskie na -a, a liczbę mnogą tworzy końcówka -s. Przymiotniki zakończone na -e lub na spółgłoskę (grande, difícil) mają jedną formę dla obu rodzajów i zmieniają się tylko w liczbie.",
+      "examples": [
+        {
+          "wrong": "La casa rojo",
+          "right": "La casa roja",
+          "note": "'Casa' jest rodzaju żeńskiego, więc przymiotnik brzmi 'roja'."
+        },
+        {
+          "wrong": "Los coches roja",
+          "right": "Los coches rojos",
+          "note": "'Coches' to rodzaj męski w liczbie mnogiej, stąd forma 'rojos'."
+        },
+        {
+          "wrong": "Las flores bonito",
+          "right": "Las flores bonitas",
+          "note": "'Flores' jest rodzaju żeńskiego w liczbie mnogiej, więc 'bonitas'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Uzupełnij: duży dom → la casa _____ (grande)",
+          "answer": "grande"
+        },
+        {
+          "prompt": "Uzupełnij: białe koty → los gatos _____ (blanco)",
+          "answer": "blancos"
+        }
+      ]
+    },
+    {
+      "rule_id": "direct-object-pronouns-lo-la-los-las",
+      "topic": "Direct object pronouns (lo, la, los, las)",
+      "title": "Zaimki dopełnienia bliższego: lo, la, los, las",
+      "explanation": "Zaimki lo, la, los, las zastępują rzeczownik będący dopełnieniem bliższym i zgadzają się z nim co do rodzaju i liczby. Stawiamy je przed czasownikiem w formie osobowej albo doczepiamy do bezokolicznika lub gerundio. Typowe błędy to pozostawienie zaimka po czasowniku oraz dobranie złej formy.",
+      "examples": [
+        {
+          "wrong": "Veo él.",
+          "right": "Lo veo.",
+          "note": "'Él' zastępujemy zaimkiem 'lo' i przenosimy go przed czasownik."
+        },
+        {
+          "wrong": "Tengo los libros. Tengo los.",
+          "right": "Tengo los libros. Los tengo.",
+          "note": "Zaimek stoi przed czasownikiem osobowym, nigdy po nim."
+        },
+        {
+          "wrong": "Voy a ver ella.",
+          "right": "La voy a ver.",
+          "note": "Zaimek 'la' stawiamy przed formą osobową albo doczepiamy do bezokolicznika: 'Voy a verla'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Przetłumacz: 'Widzę ich.' (rodzaj męski)",
+          "answer": "Los veo."
+        },
+        {
+          "prompt": "Zastąp 'la casa' zaimkiem: 'Ella compra la casa.'",
+          "answer": "Ella la compra."
+        },
+        {
+          "prompt": "Zastąp 'las flores' zaimkiem: 'Él riega las flores.'",
+          "answer": "Él las riega."
+        }
+      ]
+    },
+    {
+      "rule_id": "indirect-object-pronouns-le-les",
+      "topic": "Indirect object pronouns (le, les)",
+      "title": "Zaimki dopełnienia dalszego: le i les",
+      "explanation": "'Le' i 'les' odpowiadają polskiemu celownikowi — 'jemu, jej, panu' oraz 'im, państwu'. Nie wolno ich mylić z zaimkami dopełnienia bliższego: 'widzę go' to 'lo veo', a nie 'le veo'. Pamiętaj też, że zaimek pojawia się nawet wtedy, gdy odbiorca jest wymieniony wprost ('Le doy el libro a Juan') — po polsku takie podwojenie brzmiałoby dziwnie, po hiszpańsku jest obowiązkowe.",
+      "examples": [
+        {
+          "wrong": "Le vi a Juan.",
+          "right": "Lo vi a Juan.",
+          "note": "Czasownik 'ver' łączy się z dopełnieniem bliższym, więc potrzebne jest 'lo'."
+        },
+        {
+          "wrong": "Le compré un regalo a mis padres.",
+          "right": "Les compré un regalo a mis padres.",
+          "note": "'Mis padres' to liczba mnoga, więc zaimek brzmi 'les'."
+        },
+        {
+          "wrong": "Doy el libro a Juan.",
+          "right": "Le doy el libro a Juan.",
+          "note": "Zaimek 'le' jest obowiązkowy, mimo że odbiorca został wymieniony."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Wstaw właściwy zaimek: Daję książkę Marii. (Yo) ___ doy el libro a María.",
+          "answer": "Le"
+        },
+        {
+          "prompt": "Wstaw właściwy zaimek: Piszą list do dziadków. (Ellos) ___ escriben una carta a sus abuelos.",
+          "answer": "Les"
+        },
+        {
+          "prompt": "Wstaw właściwy zaimek: On wysyła panu e-mail. Él ___ envía un correo a usted.",
+          "answer": "Le"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-personal-a",
+      "topic": "Use of personal 'a'",
+      "title": "Osobowe 'a' przed dopełnieniem",
+      "explanation": "Gdy dopełnieniem bliższym jest konkretna osoba albo zwierzę traktowane jak domownik, przed nim obowiązkowo stawiamy przyimek 'a'. To tak zwane 'a personal', które nie ma odpowiednika ani w polskim, ani w angielskim, dlatego bardzo łatwo je pominąć. Przed rzeczami i przed zwierzętami nieokreślonymi 'a' nie występuje.",
+      "examples": [
+        {
+          "wrong": "Veo Juan.",
+          "right": "Veo a Juan.",
+          "note": "Juan to konkretna osoba, więc 'a' jest konieczne."
+        },
+        {
+          "wrong": "Busco mi perro.",
+          "right": "Busco a mi perro.",
+          "note": "Własnego psa traktujemy jak osobę, dlatego stawiamy 'a'."
+        },
+        {
+          "wrong": "Visito la abuela.",
+          "right": "Visito a la abuela.",
+          "note": "Członkowie rodziny to również osoby — 'a' obowiązuje."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Przetłumacz: 'Widzę Marię.'",
+          "answer": "Veo a María."
+        },
+        {
+          "prompt": "Przetłumacz: 'Ona kocha swojego kota.'",
+          "answer": "Ella ama a su gato."
+        },
+        {
+          "prompt": "Przetłumacz: 'Dzwoni pan po lekarza.'",
+          "answer": "Usted llama al doctor."
+        }
+      ]
+    },
+    {
+      "rule_id": "verbs-like-gustar-me-gusta-etc",
+      "topic": "Verbs like 'gustar' (me gusta, etc.)",
+      "title": "Czasowniki typu 'gustar'",
+      "explanation": "'Gustar' działa inaczej niż polskie 'lubić': podmiotem jest rzecz, która się podoba, a osoba przeżywająca upodobanie występuje jako dopełnienie dalsze (me, te, le, nos, les). Konstrukcja przypomina polskie 'podoba mi się' — i właśnie tak najłatwiej ją zapamiętać. Czasownik uzgadniamy więc z tym, co się podoba: 'me gusta el libro', ale 'me gustan los libros'.",
+      "examples": [
+        {
+          "wrong": "Yo gusto el libro.",
+          "right": "Me gusta el libro.",
+          "note": "Podmiotem jest książka ('gusta'), a 'me' wskazuje, komu się podoba."
+        },
+        {
+          "wrong": "Ellos gustan los deportes.",
+          "right": "A ellos les gustan los deportes.",
+          "note": "Potrzebny jest zaimek 'les', a czasownik przyjmuje liczbę mnogą, bo 'deportes' jest w liczbie mnogiej."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Przetłumacz: 'Lubię filmy.' (películas)",
+          "answer": "Me gustan las películas."
+        },
+        {
+          "prompt": "Popraw błąd: 'Tú gustas la música.'",
+          "answer": "Te gusta la música."
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-verbs-and-pronouns",
+      "topic": "Reflexive verbs and pronouns",
+      "title": "Czasowniki zwrotne i ich zaimki",
+      "explanation": "Hiszpański ma osobny zaimek zwrotny dla każdej osoby: me, te, se, nos, os. Tam gdzie po polsku wystarcza jedno 'się', po hiszpańsku trzeba wybrać formę pasującą do podmiotu i postawić ją przed czasownikiem. Pominięcie zaimka zmienia znaczenie: 'levantar' to 'podnieść coś', a dopiero 'levantarse' znaczy 'wstać'.",
+      "examples": [
+        {
+          "wrong": "Yo levanto a las siete.",
+          "right": "Yo me levanto a las siete.",
+          "note": "Bez 'me' zdanie znaczyłoby, że podnosimy coś innego, a nie że wstajemy."
+        },
+        {
+          "wrong": "Él viste para la fiesta.",
+          "right": "Él se viste para la fiesta.",
+          "note": "'Vestir' to ubierać kogoś; 'vestirse' — ubierać się."
+        },
+        {
+          "wrong": "Yo llamo Pedro.",
+          "right": "Yo me llamo Pedro.",
+          "note": "'Llamar' znaczy 'wołać, dzwonić', a 'llamarse' — 'nazywać się'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Przetłumacz: 'Myję ręce.' (czasownik lavarse)",
+          "answer": "Yo me lavo las manos."
+        },
+        {
+          "prompt": "Przetłumacz: 'Ona kładzie się spać o dziesiątej.' (czasownik acostarse)",
+          "answer": "Ella se acuesta a las diez."
+        },
+        {
+          "prompt": "Przetłumacz: 'Czujemy się zmęczeni.' (czasownik sentirse)",
+          "answer": "Nos sentimos cansados."
+        }
+      ]
+    },
+    {
+      "rule_id": "formal-vs-informal-commands-imperative",
+      "topic": "Formal vs informal commands (imperative)",
+      "title": "Tryb rozkazujący: na 'ty' i na 'pan/pani'",
+      "explanation": "Forma rozkaźnika zależy od tego, czy zwracamy się do kogoś na 'ty' (tú), czy oficjalnie (usted). Twierdzący rozkaz na 'ty' ma postać formy trzeciej osoby czasu teraźniejszego ('habla'). Rozkaz formalny oraz każdy rozkaz przeczący tworzymy natomiast od trybu łączącego: 'hable', 'no hables'.",
+      "examples": [
+        {
+          "wrong": "Habla más despacio. (a un desconocido)",
+          "right": "Hable más despacio.",
+          "note": "Do osoby obcej zwracamy się formą formalną 'hable'."
+        },
+        {
+          "wrong": "No come eso. (a un amigo)",
+          "right": "No comas eso.",
+          "note": "Przeczący rozkaz na 'ty' wymaga trybu łączącego: 'no comas'."
+        },
+        {
+          "wrong": "Escribe la carta. (a tu jefe)",
+          "right": "Escriba la carta.",
+          "note": "W zwrocie do przełożonego używamy formy 'escriba'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Powiedz koledze (tú), żeby mówił wolniej.",
+          "answer": "Habla más despacio."
+        },
+        {
+          "prompt": "Poproś lekarza (forma grzecznościowa), żeby usiadł.",
+          "answer": "Siéntese, por favor."
+        },
+        {
+          "prompt": "Powiedz dziecku (tú): 'nie biegaj'.",
+          "answer": "No corras."
+        }
+      ]
+    },
+    {
+      "rule_id": "comparative-and-superlative-forms",
+      "topic": "Comparative and superlative forms",
+      "title": "Stopniowanie przymiotników",
+      "explanation": "Stopień wyższy tworzymy konstrukcją 'más … que' albo 'menos … que'. Stopień najwyższy wymaga rodzajnika określonego: 'el/la/los/las más … de'. Przymiotnik zawsze zgadza się z rzeczownikiem, a formy nieregularne 'mejor' i 'peor' nigdy nie łączą się z 'más'.",
+      "examples": [
+        {
+          "wrong": "Ella es más inteligente de Juan.",
+          "right": "Ella es más inteligente que Juan.",
+          "note": "Po 'más' i 'menos' w porównaniu stoi 'que', a nie 'de'."
+        },
+        {
+          "wrong": "Ella es más rápida de la clase.",
+          "right": "Ella es la más rápida de la clase.",
+          "note": "W stopniu najwyższym przed 'más' musi stać rodzajnik określony."
+        },
+        {
+          "wrong": "Este es el más mejor libro.",
+          "right": "Este es el mejor libro.",
+          "note": "'Mejor' jest już formą nieregularną, więc 'más' jest błędem."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Przetłumacz: 'Ona jest wyższa od niego.'",
+          "answer": "Ella es más alta que él."
+        },
+        {
+          "prompt": "Przetłumacz: 'To jest najciekawsza książka.'",
+          "answer": "Este es el libro más interesante."
+        },
+        {
+          "prompt": "Popraw błąd: 'Él es el más inteligente estudiante.'",
+          "answer": "Él es el estudiante más inteligente."
+        }
+      ]
+    },
+    {
+      "rule_id": "demonstrative-adjectives-and-pronouns-este-ese-aquel",
+      "topic": "Demonstrative adjectives and pronouns (este, ese, aquel)",
+      "title": "Zaimki wskazujące: este, ese, aquel",
+      "explanation": "Hiszpański rozróżnia trzy odległości, podczas gdy polski wystarcza sobie z 'ten' i 'tamten'. 'Este' wskazuje przedmiot przy mówiącym, 'ese' — przy rozmówcy, a 'aquel' — daleko od obu. Wszystkie trzy odmieniają się przez rodzaj i liczbę: este/esta/estos/estas i tak dalej.",
+      "examples": [
+        {
+          "wrong": "Este libro está lejos, en la estantería.",
+          "right": "Aquel libro está lejos, en la estantería.",
+          "note": "Przedmiot jest daleko, więc potrzebne jest 'aquel'."
+        },
+        {
+          "wrong": "Aquel coche que tienes al lado es bonito.",
+          "right": "Ese coche que tienes al lado es bonito.",
+          "note": "Rzecz znajduje się przy rozmówcy, dlatego 'ese'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Wstaw właściwą formę: '___ (tamten, daleko) casa en la colina es muy antigua.'",
+          "answer": "Aquella"
+        },
+        {
+          "prompt": "Wstaw właściwą formę: '___ (ta, w mojej ręce) manzana que tengo en la mano es roja.'",
+          "answer": "Esta"
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-adjectives-mi-tu-su-vs-possessive-pronouns-mío-tuyo",
+      "topic": "Possessive adjectives (mi, tu, su) vs possessive pronouns (mío, tuyo)",
+      "title": "Przymiotniki i zaimki dzierżawcze",
+      "explanation": "Formy mi, tu, su stoją przed rzeczownikiem i zmieniają się tylko przez liczbę: 'mi libro', 'mis libros'. Formy mío, tuyo, suyo zastępują rzeczownik albo pojawiają się po czasowniku 'ser' i uzgadniają się co do rodzaju i liczby: 'el libro es mío', 'la casa es tuya'. Pomieszanie tych dwóch grup to jeden z najczęstszych błędów na poziomie początkującym.",
+      "examples": [
+        {
+          "wrong": "Este libro es mi.",
+          "right": "Este libro es mío.",
+          "note": "Po czasowniku 'ser' używamy formy zaimkowej 'mío'."
+        },
+        {
+          "wrong": "Ella es mía amiga.",
+          "right": "Ella es mi amiga.",
+          "note": "Przed rzeczownikiem stoi forma krótka 'mi'."
+        },
+        {
+          "wrong": "La casa es tuyo.",
+          "right": "La casa es tuya.",
+          "note": "'Casa' jest rodzaju żeńskiego, więc zaimek przyjmuje formę 'tuya'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Wybierz właściwą formę: 'Esta es ___ (mi / mía) mochila.'",
+          "answer": "mi"
+        },
+        {
+          "prompt": "Uzupełnij: 'Este perro es ___ (tuyo / tu).'",
+          "answer": "tuyo"
+        },
+        {
+          "prompt": "Przetłumacz: 'Ta książka jest moja.'",
+          "answer": "Este libro es mío."
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-qué-vs-cuál",
+      "topic": "Use of 'qué' vs 'cuál'",
+      "title": "'Qué' czy 'cuál'?",
+      "explanation": "'Qué' pytamy o definicję, istotę rzeczy albo wtedy, gdy możliwości jest nieskończenie wiele. 'Cuál' wybiera jeden element ze znanego, ograniczonego zbioru i odpowiada polskiemu 'który'. Uwaga na utrwalone zwroty: przed rzeczownikiem w hiszpańszczyźnie europejskiej stawiamy 'qué' ('¿Qué vestido?'), a nie 'cuál'.",
+      "examples": [
+        {
+          "wrong": "¿Qué es tu nombre?",
+          "right": "¿Cuál es tu nombre?",
+          "note": "Pytamy o wybór z ogromnego zbioru imion, więc właściwe jest 'cuál'."
+        },
+        {
+          "wrong": "¿Cuál es esto?",
+          "right": "¿Qué es esto?",
+          "note": "Prosimy o wyjaśnienie, czym jest dany przedmiot — tu potrzebne jest 'qué'."
+        },
+        {
+          "wrong": "¿Qué prefieres, café o té?",
+          "right": "¿Cuál prefieres, café o té?",
+          "note": "Wybór spośród dwóch podanych możliwości to zadanie dla 'cuál'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Przetłumacz: 'Jaki jest twój ulubiony film?'",
+          "answer": "¿Cuál es tu película favorita?"
+        },
+        {
+          "prompt": "Przetłumacz: 'Co chcesz zjeść?' (pytanie ogólne)",
+          "answer": "¿Qué quieres comer?"
+        },
+        {
+          "prompt": "Przetłumacz: 'Którą sukienkę mam kupić?' (zaimek stoi przed rzeczownikiem)",
+          "answer": "¿Qué vestido debo comprar?"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-sino-vs-pero",
+      "topic": "Use of 'sino' vs 'pero'",
+      "title": "'Sino' a 'pero' — dwa rodzaje 'ale'",
+      "explanation": "'Pero' wprowadza zwykłe przeciwstawienie lub zastrzeżenie i odpowiada polskiemu 'ale'. 'Sino' pojawia się wyłącznie po zdaniu przeczącym i prostuje to, co zostało zaprzeczone — najbliższe mu polskie słowo to 'lecz' albo 'tylko' w zwrocie 'nie…, lecz…'. Warunek jest podwójny: pierwsza część musi być przecząca, a druga musi bezpośrednio ją korygować.",
+      "examples": [
+        {
+          "wrong": "No es caro, pero barato.",
+          "right": "No es caro, sino barato.",
+          "note": "Druga część prostuje zaprzeczoną cechę, więc obowiązuje 'sino'."
+        },
+        {
+          "wrong": "No compré pan, sino compré leche.",
+          "right": "No compré pan, pero compré leche.",
+          "note": "Tu dopowiadamy nową informację, a nie korygujemy 'pan' — potrzebne jest 'pero'."
+        },
+        {
+          "wrong": "No estudio mucho, sino trabajo.",
+          "right": "No estudio mucho, pero trabajo.",
+          "note": "Druga część zdania dodaje fakt, zamiast prostować pierwszy, dlatego 'pero'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Wstaw 'sino' albo 'pero': 'No es azul, _______ rojo.' (nie niebieski, lecz czerwony)",
+          "answer": "sino"
+        },
+        {
+          "prompt": "Wstaw 'sino' albo 'pero': 'Quiero ir, _______ no puedo.' (chcę iść, ale nie mogę)",
+          "answer": "pero"
+        },
+        {
+          "prompt": "Wstaw 'sino' albo 'pero': 'No hablo inglés, _______ español.' (nie po angielsku, lecz po hiszpańsku)",
+          "answer": "sino"
+        }
+      ]
+    },
+    {
+      "rule_id": "use-of-muy-vs-mucho",
+      "topic": "Use of 'muy' vs 'mucho'",
+      "title": "'Muy' a 'mucho'",
+      "explanation": "'Muy' znaczy 'bardzo' i wzmacnia przymiotniki oraz przysłówki. 'Mucho' znaczy 'dużo, wiele' i stoi przy rzeczownikach albo po czasownikach, przy czym w połączeniu z rzeczownikiem odmienia się przez rodzaj i liczbę (mucho, mucha, muchos, muchas). Zapamiętaj: 'muy cansado', ale 'mucho dinero'.",
+      "examples": [
+        {
+          "wrong": "Estoy mucho cansado.",
+          "right": "Estoy muy cansado.",
+          "note": "'Cansado' to przymiotnik, więc wzmacniamy go słowem 'muy'."
+        },
+        {
+          "wrong": "Tengo muy dinero.",
+          "right": "Tengo mucho dinero.",
+          "note": "Przed rzeczownikiem 'dinero' stoi 'mucho'."
+        },
+        {
+          "wrong": "Me gusta muy el café.",
+          "right": "Me gusta mucho el café.",
+          "note": "Po czasowniku używamy 'mucho'; 'muy' nie może określać czasownika."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Uzupełnij lukę: 'Ella es _____ inteligente.' (bardzo)",
+          "answer": "muy"
+        },
+        {
+          "prompt": "Uzupełnij lukę: 'Hay _____ personas en la fiesta.' (dużo)",
+          "answer": "muchas"
+        },
+        {
+          "prompt": "Uzupełnij lukę: 'Él corre _____ rápido.' (bardzo)",
+          "answer": "muy"
+        }
+      ]
+    },
+    {
+      "rule_id": "false-cognates-embarazada-etc",
+      "topic": "False cognates (embarazada, etc.)",
+      "title": "Fałszywi przyjaciele: embarazada i spółka",
+      "explanation": "Fałszywi przyjaciele to słowa, które wyglądają znajomo, ale znaczą coś zupełnie innego. 'Embarazada' nie oznacza zakłopotania, lecz ciążę; 'sensible' to 'wrażliwy', a nie 'rozsądny'; 'constipado' znaczy 'zaziębiony', a nie 'zaparty'. Zanim sięgniesz po podobnie brzmiące słowo, sprawdź je w słowniku — inaczej łatwo o krępującą pomyłkę.",
+      "examples": [
+        {
+          "wrong": "Estoy embarazada.",
+          "right": "Estoy avergonzado.",
+          "note": "Jeśli chcesz powiedzieć 'jest mi wstyd', użyj 'avergonzado/a'. 'Embarazada' znaczy 'w ciąży'."
+        },
+        {
+          "wrong": "Él es sensible.",
+          "right": "Él es sensato.",
+          "note": "'Sensible' to po hiszpańsku 'wrażliwy'; 'rozsądny' to 'sensato'."
+        },
+        {
+          "wrong": "Estoy constipado.",
+          "right": "Estoy estreñido.",
+          "note": "'Constipado' znaczy 'zaziębiony'; 'mam zaparcie' to 'estoy estreñido'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Jak po hiszpańsku powiedzieć 'Ona jest w ciąży'?",
+          "answer": "Ella está embarazada."
+        },
+        {
+          "prompt": "Jak po hiszpańsku powiedzieć 'Ona jest rozsądna'?",
+          "answer": "Ella es sensata."
+        },
+        {
+          "prompt": "Jak po hiszpańsku powiedzieć 'Jestem zaziębiony'?",
+          "answer": "Estoy constipado."
+        }
+      ]
+    },
+    {
+      "rule_id": "apocope-bueno-buen-primero-primer",
+      "topic": "Apocope (bueno -> buen, primero -> primer)",
+      "title": "Apokopa: skracanie przymiotnika przed rzeczownikiem",
+      "explanation": "Niektóre hiszpańskie przymiotniki tracą końcową samogłoskę, gdy stoją bezpośrednio przed rzeczownikiem rodzaju męskiego w liczbie pojedynczej. Zjawisko to nazywamy apokopą: bueno staje się buen, malo — mal, primero — primer, tercero — tercer. Gdy przymiotnik stoi po rzeczowniku albo określa rzeczownik żeński, zachowuje pełną formę.",
+      "examples": [
+        {
+          "wrong": "el bueno chico",
+          "right": "el buen chico",
+          "note": "Przed męskim rzeczownikiem w liczbie pojedynczej 'bueno' skraca się do 'buen'."
+        },
+        {
+          "wrong": "el primero capítulo",
+          "right": "el primer capítulo",
+          "note": "'Primero' przyjmuje formę 'primer'."
+        },
+        {
+          "wrong": "el tercero piso",
+          "right": "el tercer piso",
+          "note": "'Tercero' również ulega skróceniu do 'tercer'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Przetłumacz: 'dobra książka' (libro — rodzaj męski)",
+          "answer": "el buen libro"
+        },
+        {
+          "prompt": "Przetłumacz: 'pierwszy dzień' (día — rodzaj męski)",
+          "answer": "el primer día"
+        },
+        {
+          "prompt": "Przetłumacz: 'trzecie piętro' (piso — rodzaj męski)",
+          "answer": "el tercer piso"
+        }
+      ]
+    },
+    {
+      "rule_id": "contractions-al-and-del",
+      "topic": "Contractions 'al' and 'del'",
+      "title": "Ściągnięcia 'al' i 'del'",
+      "explanation": "Przyimki 'a' i 'de' łączą się z męskim rodzajnikiem 'el' w jedną formę: 'al' oraz 'del'. Zapis 'a el' i 'de el' jest błędem — jedyny wyjątek stanowi zaimek 'él' z akcentem ('el libro de él'). Z pozostałymi rodzajnikami (la, los, las) żadne ściągnięcie nie zachodzi.",
+      "examples": [
+        {
+          "wrong": "Voy a el parque.",
+          "right": "Voy al parque.",
+          "note": "'A + el' zawsze daje 'al'."
+        },
+        {
+          "wrong": "El libro es de el profesor.",
+          "right": "El libro es del profesor.",
+          "note": "'De + el' zawsze daje 'del'."
+        },
+        {
+          "wrong": "Salimos de el aeropuerto.",
+          "right": "Salimos del aeropuerto.",
+          "note": "Zapis 'de el' nigdy nie jest poprawny — obowiązuje 'del'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Uzupełnij: Voy ___ cine. (a + el)",
+          "answer": "al"
+        },
+        {
+          "prompt": "Uzupełnij: La casa es ___ abuelo. (de + el)",
+          "answer": "del"
+        },
+        {
+          "prompt": "Uzupełnij: Ella llega ___ banco. (a + el)",
+          "answer": "al"
+        }
+      ]
+    },
+    {
+      "rule_id": "placement-of-adjectives-before-vs-after-noun",
+      "topic": "Placement of adjectives (before vs after noun)",
+      "title": "Miejsce przymiotnika: przed czy po rzeczowniku?",
+      "explanation": "W hiszpańskim przymiotnik opisowy stoi zwykle po rzeczowniku: 'un coche rojo'. To odwrotnie niż w polszczyźnie, gdzie naturalne jest 'czerwony samochód'. Kilka przymiotników, takich jak bueno, malo czy grande, może stanąć przed rzeczownikiem, ale wtedy zmienia się odcień znaczenia: 'un gran hombre' to wielki człowiek, a 'un hombre grande' — człowiek postawny.",
+      "examples": [
+        {
+          "wrong": "una roja manzana",
+          "right": "una manzana roja",
+          "note": "Przymiotniki określające kolor zawsze stoją po rzeczowniku."
+        },
+        {
+          "wrong": "un interesante libro",
+          "right": "un libro interesante",
+          "note": "Większość przymiotników opisowych następuje po rzeczowniku."
+        },
+        {
+          "wrong": "una pequeña casa",
+          "right": "una casa pequeña",
+          "note": "Przymiotniki wielkości w znaczeniu dosłownym również idą po rzeczowniku."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Przetłumacz: 'niebieski długopis'",
+          "answer": "un bolígrafo azul"
+        },
+        {
+          "prompt": "Popraw szyk: 'un (grande) perro'",
+          "answer": "un perro grande"
+        },
+        {
+          "prompt": "Zapisz z poprawnym szykiem: 'una difícil lección'",
+          "answer": "una lección difícil"
+        }
+      ]
+    }
+  ]
+}

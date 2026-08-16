@@ -1,0 +1,886 @@
+{
+  "learning": "en",
+  "interface": "pl",
+  "generated_at": "2026-08-16T11:53:22+00:00",
+  "model": "claude-opus-4.8-agent",
+  "rules": [
+    {
+      "rule_id": "articles",
+      "topic": "Articles",
+      "title": "Przedimki a, an, the",
+      "explanation": "Przedimek pokazuje, czy mówimy o rzeczowniku ogólnie, czy o czymś konkretnym. Przed policzalnym rzeczownikiem w liczbie pojedynczej wprowadzanym po raz pierwszy stawiamy 'a' lub 'an', a 'the' wtedy, gdy obie strony wiedzą, o którą rzecz chodzi. Przy rzeczownikach niepoliczalnych i przy liczbie mnogiej w znaczeniu ogólnym nie ma żadnego przedimka. Polszczyzna przedimków nie ma, więc najczęstszym błędem jest po prostu ich pomijanie.",
+      "examples": [
+        {
+          "wrong": "I saw dog in park.",
+          "right": "I saw a dog in the park.",
+          "note": "'A dog' — jakiś pies, jeden z wielu; 'the park' — konkretny park, znany rozmówcom."
+        },
+        {
+          "wrong": "She wants an apple and banana.",
+          "right": "She wants an apple and a banana.",
+          "note": "'An' przed dźwiękiem samogłoskowym (apple), 'a' przed spółgłoskowym (banana)."
+        },
+        {
+          "wrong": "The love is important.",
+          "right": "Love is important.",
+          "note": "Rzeczowniki niepoliczalne w znaczeniu ogólnym (love, water, money) idą bez przedimka."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Uzupełnij lukę: I need ___ umbrella. (ogólnie, jedna sztuka)",
+          "answer": "an"
+        },
+        {
+          "prompt": "Uzupełnij lukę: ___ sun is very hot today. (konkret, wszyscy wiemy, o co chodzi)",
+          "answer": "The"
+        },
+        {
+          "prompt": "Uzupełnij lukę: I like ___ dogs. (ogólnie, liczba mnoga)",
+          "answer": "(no article)"
+        }
+      ]
+    },
+    {
+      "rule_id": "tenses",
+      "topic": "Tenses",
+      "title": "Past Simple a Present Perfect",
+      "explanation": "Past Simple opisuje czynność zakończoną w określonym momencie w przeszłości (yesterday, last week, in 2019). Present Perfect stosujemy wtedy, gdy moment nie jest podany albo gdy zdarzenie ma związek z teraźniejszością (ever, never, already, just). Nigdy nie łączymy Present Perfect z określeniem konkretnego czasu przeszłego.",
+      "examples": [
+        {
+          "wrong": "I have bought a new car yesterday.",
+          "right": "I bought a new car yesterday.",
+          "note": "'Yesterday' wskazuje konkretny moment w przeszłości, więc potrzebny jest Past Simple."
+        },
+        {
+          "wrong": "Did you ever eat sushi?",
+          "right": "Have you ever eaten sushi?",
+          "note": "'Ever' pyta o doświadczenie życiowe, a nie o konkretny dzień — stąd Present Perfect."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Wstaw poprawną formę: She _____ (go) to the beach last weekend.",
+          "answer": "went"
+        },
+        {
+          "prompt": "Wstaw poprawną formę: I _____ (never / eat) Thai food.",
+          "answer": "have never eaten"
+        },
+        {
+          "prompt": "Wstaw poprawną formę: They _____ (already / finish) their homework.",
+          "answer": "have already finished"
+        }
+      ]
+    },
+    {
+      "rule_id": "prepositions",
+      "topic": "Prepositions",
+      "title": "Przyimki czasu: in, on, at",
+      "explanation": "'At' stawiamy przed godziną i konkretnym punktem na osi czasu (at 5 PM, at midnight), 'on' przed dniami tygodnia i datami (on Monday, on July 4th), a 'in' przed dłuższymi okresami: miesiącami, latami, porami roku i wiekami. Po polsku we wszystkich tych wypadkach mówimy zwykle 'w', dlatego łatwo pomylić 'in Monday' z poprawnym 'on Monday'.",
+      "examples": [
+        {
+          "wrong": "I will see you in Monday.",
+          "right": "I will see you on Monday.",
+          "note": "Przed dniami tygodnia zawsze 'on'."
+        },
+        {
+          "wrong": "The meeting is at June.",
+          "right": "The meeting is in June.",
+          "note": "Przed nazwami miesięcy i latami używamy 'in'."
+        },
+        {
+          "wrong": "I wake up on 7 AM.",
+          "right": "I wake up at 7 AM.",
+          "note": "Przed godziną z zegara stawiamy 'at'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Uzupełnij: I will meet you ___ Friday.",
+          "answer": "on"
+        },
+        {
+          "prompt": "Uzupełnij: His birthday is ___ October.",
+          "answer": "in"
+        },
+        {
+          "prompt": "Uzupełnij: The movie starts ___ 8 PM.",
+          "answer": "at"
+        }
+      ]
+    },
+    {
+      "rule_id": "conditional-sentences",
+      "topic": "Conditional sentences",
+      "title": "Okresy warunkowe: po 'if' nie ma 'will'",
+      "explanation": "W pierwszym okresie warunkowym (realna przyszłość) w zdaniu z 'if' stoi czas Present Simple, a nie 'will'. Forma z 'will' należy wyłącznie do zdania nadrzędnego, które opisuje skutek. Mówimy więc 'If it rains, I will stay home', a nie 'If it will rain'.",
+      "examples": [
+        {
+          "wrong": "If I will have time, I will call you.",
+          "right": "If I have time, I will call you.",
+          "note": "Po 'if' stawiamy Present Simple ('have'), nigdy 'will have'."
+        },
+        {
+          "wrong": "If she will study, she will pass the exam.",
+          "right": "If she studies, she will pass the exam.",
+          "note": "Warunek w Present Simple ('studies'); 'will' pojawia się tylko w części opisującej skutek."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Uzupełnij lukę: If it ___ (rain) tomorrow, I will stay home.",
+          "answer": "rains"
+        },
+        {
+          "prompt": "Uzupełnij lukę: If I ___ (have) enough money, I will buy a new phone.",
+          "answer": "have"
+        },
+        {
+          "prompt": "Uzupełnij poprawnie: If she ___ (be) late, we will miss the bus.",
+          "answer": "is"
+        }
+      ]
+    },
+    {
+      "rule_id": "th-sounds",
+      "topic": "th sounds",
+      "title": "Dwa dźwięki 'th'",
+      "explanation": "Angielskie 'th' to dwa dźwięki: bezdźwięczny /θ/ (think) i dźwięczny /ð/ (this). Powstają wtedy, gdy czubek języka delikatnie dotyka krawędzi górnych zębów i wypuszczamy powietrze. Polacy zastępują je zwykle przez s, z, f, t lub d — a to potrafi zmienić słowo w zupełnie inne.",
+      "examples": [
+        {
+          "wrong": "I tink it's true.",
+          "right": "I think it's true.",
+          "note": "Zamiast 't' użyj bezdźwięcznego 'th' — język między zębami."
+        },
+        {
+          "wrong": "Dis is my pen.",
+          "right": "This is my pen.",
+          "note": "Tu potrzebne jest dźwięczne 'th' (z drganiem strun głosowych), a nie polskie 'd'."
+        },
+        {
+          "wrong": "I have tree apples.",
+          "right": "I have three apples.",
+          "note": "'Three' ma bezdźwięczne 'th'; 'tree' to zupełnie inne słowo — drzewo."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Wybierz poprawne słowo: I need to _____ about it. (think / tink)",
+          "answer": "think"
+        },
+        {
+          "prompt": "Uzupełnij lukę: Please give me _____ book. (this / dis)",
+          "answer": "this"
+        },
+        {
+          "prompt": "Wybierz poprawne słowo: She has _____ cats. (three / tree)",
+          "answer": "three"
+        }
+      ]
+    },
+    {
+      "rule_id": "stress",
+      "topic": "Stress",
+      "title": "Akcent wyrazowy — ukryty rytm angielszczyzny",
+      "explanation": "W angielskim wyrazie jedna sylaba jest akcentowana: dłuższa, głośniejsza i wymawiana wyżej. Akcent nie jest stały jak w polskim (gdzie zwykle pada na przedostatnią sylabę) — przesunięty w złe miejsce potrafi zmienić znaczenie słowa albo sprawić, że zdanie brzmi obco. Klasyczny przykład to 'record': RE-cord (rzeczownik) i re-CORD (czasownik).",
+      "examples": [
+        {
+          "wrong": "I need to RE-cord the meeting.",
+          "right": "I need to re-CORD the meeting.",
+          "note": "Tutaj 'record' to czasownik (nagrać), więc akcent pada na drugą sylabę: re-CORD. Rzeczownik 'record' (nagranie) akcentujemy na pierwszej: RE-cord."
+        },
+        {
+          "wrong": "Let's go to the de-SERT for our vacation.",
+          "right": "Let's go to the DES-ert for our vacation.",
+          "note": "'Desert' (pustynia) ma akcent na pierwszej sylabie: DES-ert. 'Dessert' (deser) — na drugiej: des-SERT. Różni się też pisownia."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Która sylaba jest akcentowana w słowie 'present' w znaczeniu 'prezent'? (Powiedz na głos: PRES-ent czy pre-SENT?)",
+          "answer": "PRES-ent"
+        },
+        {
+          "prompt": "Popraw akcent w zdaniu: 'I need to EX-port these files.' (Wskazówka: 'export' jako czasownik ma akcent na drugiej sylabie.)",
+          "answer": "I need to ex-PORT these files."
+        },
+        {
+          "prompt": "Przeczytaj na głos słowo 'photograph' z poprawnym akcentem. Która sylaba jest najmocniejsza?",
+          "answer": "The first syllable: PHO-to-graph"
+        }
+      ]
+    },
+    {
+      "rule_id": "intonation",
+      "topic": "Intonation",
+      "title": "Intonacja, czyli melodia zdania",
+      "explanation": "Intonacja — wznoszenie i opadanie głosu — potrafi całkowicie zmienić sens wypowiedzi. W pytaniach o rozstrzygnięcie (tak/nie) głos idzie w górę, a w zdaniach twierdzących i w pytaniach z 'who', 'what', 'where' — w dół. Zła melodia sprawia, że pytanie brzmi jak stwierdzenie albo że mówiący wydaje się niepewny.",
+      "examples": [
+        {
+          "wrong": "You're coming? (said with a falling tone)",
+          "right": "You're coming? (said with a rising tone)",
+          "note": "Wznoszący ton na końcu sygnalizuje pytanie tak/nie; opadający zmienia je w zwykłe stwierdzenie."
+        },
+        {
+          "wrong": "Where are you going? (said with a rising tone)",
+          "right": "Where are you going? (said with a falling tone)",
+          "note": "Pytania z wyrazem pytającym kończymy tonem opadającym; ton wznoszący brzmi jak prośba o powtórzenie."
+        },
+        {
+          "wrong": "I like apples, oranges, and bananas. (all flat)",
+          "right": "I like apples↗, oranges↗, and bananas↘.",
+          "note": "Przy wyliczaniu głos idzie w górę na każdym elemencie oprócz ostatniego, na którym opada — to sygnał, że lista się kończy."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Przeczytaj na głos z poprawną intonacją: 'Are you hungry?' (pytanie tak/nie). Głos ma iść w górę czy w dół?",
+          "answer": "Rise"
+        },
+        {
+          "prompt": "Przeczytaj na głos z poprawną intonacją: 'What time is it?' (pytanie z wyrazem pytającym). Głos ma iść w górę czy w dół?",
+          "answer": "Fall"
+        },
+        {
+          "prompt": "Powiedz tę listę z właściwą melodią: 'We need milk, bread, and eggs.' Gdzie głos się wznosi, a gdzie opada?",
+          "answer": "Rise on 'milk' and 'bread', fall on 'eggs'"
+        }
+      ]
+    },
+    {
+      "rule_id": "subject-verb-agreement",
+      "topic": "Subject-verb agreement",
+      "title": "Zgodność podmiotu z orzeczeniem",
+      "explanation": "Czasownik musi zgadzać się z podmiotem co do liczby: podmiot w liczbie pojedynczej wymaga formy pojedynczej, mnogi — mnogiej. Pułapką są wyrazy wtrącone między podmiot a czasownik oraz zaimki nieokreślone (everyone, each, neither), które mimo znaczenia zbiorowego są gramatycznie pojedyncze.",
+      "examples": [
+        {
+          "wrong": "The list of items are on the table.",
+          "right": "The list of items is on the table.",
+          "note": "Podmiotem jest 'list' (liczba pojedyncza), a nie 'items'."
+        },
+        {
+          "wrong": "Everyone have their own opinion.",
+          "right": "Everyone has their own opinion.",
+          "note": "'Everyone' traktujemy jako liczbę pojedynczą, więc 'has'."
+        },
+        {
+          "wrong": "She don't like coffee.",
+          "right": "She doesn't like coffee.",
+          "note": "W trzeciej osobie liczby pojedynczej (he, she, it) używamy 'doesn't'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Zapisz poprawnie: The group of students is/are studying.",
+          "answer": "The group of students is studying."
+        },
+        {
+          "prompt": "Wybierz właściwy czasownik: Neither the teacher nor the students (is/are) in the room.",
+          "answer": "are"
+        },
+        {
+          "prompt": "Popraw błąd: Each of the apples are fresh.",
+          "answer": "Each of the apples is fresh."
+        }
+      ]
+    },
+    {
+      "rule_id": "countable-vs-uncountable-nouns",
+      "topic": "Countable vs uncountable nouns",
+      "title": "Rzeczowniki policzalne i niepoliczalne",
+      "explanation": "Rzeczowniki policzalne dają się policzyć (one apple, two apples) i łączą się z 'a/an', 'many' oraz 'few'. Niepoliczalnych nie liczymy (water, advice, information) — używamy przy nich 'much', 'little' lub 'a lot of', nigdy 'a/an' ani 'many'. Uwaga: część słów niepoliczalnych w angielskim ma polskie odpowiedniki policzalne, np. 'informacje' czy 'rady'.",
+      "examples": [
+        {
+          "wrong": "I have many homeworks.",
+          "right": "I have a lot of homework.",
+          "note": "'Homework' jest niepoliczalne i nie ma liczby mnogiej — mówimy 'much homework' albo 'a lot of homework'."
+        },
+        {
+          "wrong": "He gave me a good advice.",
+          "right": "He gave me a piece of good advice.",
+          "note": "'Advice' jest niepoliczalne; pojedynczą radę wyrażamy zwrotem 'a piece of advice'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Uzupełnij lukę: I need _____ (many/much) time to finish.",
+          "answer": "much"
+        },
+        {
+          "prompt": "Popraw zdanie: He has many furniture in his room.",
+          "answer": "He has much furniture in his room."
+        }
+      ]
+    },
+    {
+      "rule_id": "gerund-vs-infinitive",
+      "topic": "Gerund vs infinitive",
+      "title": "Gerund czy bezokolicznik po czasowniku?",
+      "explanation": "Po jednych angielskich czasownikach stoi gerund (forma z -ing), po innych bezokolicznik z 'to'. 'Enjoy', 'avoid' i 'suggest' zawsze łączą się z gerundem, a 'want', 'need' i 'decide' — z bezokolicznikiem. Po polsku w obu wypadkach mamy zwykły bezokolicznik, więc tych połączeń trzeba się po prostu nauczyć na pamięć.",
+      "examples": [
+        {
+          "wrong": "I enjoy to swim.",
+          "right": "I enjoy swimming.",
+          "note": "Po 'enjoy' zawsze stoi gerund."
+        },
+        {
+          "wrong": "She wants going home.",
+          "right": "She wants to go home.",
+          "note": "Po 'want' używamy bezokolicznika z 'to'."
+        },
+        {
+          "wrong": "He suggested to eat out.",
+          "right": "He suggested eating out.",
+          "note": "Po 'suggest' obowiązkowo gerund."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Wstaw właściwą formę: I need ___ (study) for the exam.",
+          "answer": "to study"
+        },
+        {
+          "prompt": "Wstaw właściwą formę: She avoids ___ (eat) junk food.",
+          "answer": "eating"
+        },
+        {
+          "prompt": "Wstaw właściwą formę: They decided ___ (move) to a new city.",
+          "answer": "to move"
+        }
+      ]
+    },
+    {
+      "rule_id": "modal-verbs-usage",
+      "topic": "Modal verbs usage",
+      "title": "Czasowniki modalne: can, must, may",
+      "explanation": "'Can' wyraża umiejętność i pozwolenie w mowie potocznej, 'may' — pozwolenie w rejestrze formalnym. 'Must' oznacza silny obowiązek, a 'must not' zakaz. Po czasowniku modalnym stoi zawsze goła forma czasownika, bez 'to': mówimy 'I must go', nie 'I must to go'.",
+      "examples": [
+        {
+          "wrong": "Can I leave early?",
+          "right": "May I leave early?",
+          "note": "W grzecznej, oficjalnej prośbie lepiej brzmi 'may' niż 'can'."
+        },
+        {
+          "wrong": "I must to finish my homework.",
+          "right": "I must finish my homework.",
+          "note": "Po czasowniku modalnym nigdy nie dodajemy 'to'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Uzupełnij lukę: She ___ speak three languages fluently. (umiejętność)",
+          "answer": "can"
+        },
+        {
+          "prompt": "Uzupełnij lukę: You ___ park here; it's forbidden. (zakaz)",
+          "answer": "must not"
+        },
+        {
+          "prompt": "Uzupełnij lukę: ___ I borrow your pen, please? (grzeczna prośba)",
+          "answer": "May"
+        }
+      ]
+    },
+    {
+      "rule_id": "word-order-in-questions",
+      "topic": "Word order in questions",
+      "title": "Szyk wyrazów w pytaniach",
+      "explanation": "W angielskim pytaniu podmiot i czasownik posiłkowy zamieniają się miejscami, a jeśli posiłkowego nie ma, dodajemy 'do', 'does' lub 'did'. W pytaniach z wyrazem pytającym kolejność jest stała: wyraz pytający, czasownik posiłkowy, podmiot, czasownik główny. Polski szyk, w którym podmiot zostaje przed czasownikiem, brzmi tu po prostu błędnie.",
+      "examples": [
+        {
+          "wrong": "You are from where?",
+          "right": "Where are you from?",
+          "note": "Wyraz pytający idzie na początek, potem czasownik posiłkowy, a dopiero za nim podmiot."
+        },
+        {
+          "wrong": "He likes coffee?",
+          "right": "Does he like coffee?",
+          "note": "W pytaniu tak/nie bez czasownika posiłkowego dodajemy 'do/does/did' i stawiamy je przed podmiotem."
+        },
+        {
+          "wrong": "Why you are late?",
+          "right": "Why are you late?",
+          "note": "Czasownik posiłkowy stoi zaraz po wyrazie pytającym, przed podmiotem."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Popraw pytanie: 'You live where?'",
+          "answer": "Where do you live?"
+        },
+        {
+          "prompt": "Popraw pytanie: 'She can swim?'",
+          "answer": "Can she swim?"
+        },
+        {
+          "prompt": "Popraw pytanie: 'What you want?'",
+          "answer": "What do you want?"
+        }
+      ]
+    },
+    {
+      "rule_id": "comparatives-and-superlatives",
+      "topic": "Comparatives and superlatives",
+      "title": "Stopniowanie przymiotników — typowe błędy",
+      "explanation": "Porównując dwie rzeczy, używamy stopnia wyższego (przymiotnik + -er albo 'more' + przymiotnik) i słowa 'than'. Przy trzech lub więcej stosujemy stopień najwyższy (-est albo 'most') poprzedzony przedimkiem 'the'. Nie łączymy obu sposobów naraz ('more better' jest błędem) i pamiętamy o formach nieregularnych: good – better – best, bad – worse – worst.",
+      "examples": [
+        {
+          "wrong": "She is more smarter than him.",
+          "right": "She is smarter than him.",
+          "note": "Nie łączymy 'more' z końcówką -er; 'smarter' to już stopień wyższy."
+        },
+        {
+          "wrong": "This is the most best cake I've had.",
+          "right": "This is the best cake I've had.",
+          "note": "'Best' jest już stopniem najwyższym, więc 'most' jest zbędne."
+        },
+        {
+          "wrong": "He is the taller in his class.",
+          "right": "He is the tallest in his class.",
+          "note": "Gdy porównujemy więcej niż dwie osoby, potrzebny jest stopień najwyższy (-est)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Uzupełnij: This is the ______ (good) movie I've ever seen.",
+          "answer": "best"
+        },
+        {
+          "prompt": "Popraw błąd: 'My house is more bigger than yours.'",
+          "answer": "My house is bigger than yours."
+        },
+        {
+          "prompt": "Wybierz właściwą formę: 'She runs (faster / most fast) than me.'",
+          "answer": "faster"
+        }
+      ]
+    },
+    {
+      "rule_id": "passive-voice-formation",
+      "topic": "Passive voice formation",
+      "title": "Jak poprawnie zbudować stronę bierną",
+      "explanation": "Stronę bierną tworzymy z czasownika 'to be' w odpowiednim czasie i imiesłowu biernego (trzeciej formy czasownika). Najczęstszy błąd to wstawienie zamiast niej formy podstawowej albo formy czasu przeszłego. Zapamiętaj: imiesłów się nie zmienia, a czas gramatyczny pokazuje wyłącznie 'be'.",
+      "examples": [
+        {
+          "wrong": "The window was break.",
+          "right": "The window was broken.",
+          "note": "Po 'was' stoi imiesłów bierny 'broken', a nie forma podstawowa 'break'."
+        },
+        {
+          "wrong": "The letter is wrote by her.",
+          "right": "The letter is written by her.",
+          "note": "Imiesłów bierny od 'write' to 'written', a nie 'wrote'."
+        },
+        {
+          "wrong": "The cake has been eat.",
+          "right": "The cake has been eaten.",
+          "note": "Po 'been' potrzebny jest imiesłów 'eaten'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Popraw zdanie: 'The window was break by the ball.'",
+          "answer": "The window was broken by the ball."
+        },
+        {
+          "prompt": "Popraw zdanie: 'The emails are send every day.'",
+          "answer": "The emails are sent every day."
+        },
+        {
+          "prompt": "Popraw zdanie: 'The song has been sing many times.'",
+          "answer": "The song has been sung many times."
+        }
+      ]
+    },
+    {
+      "rule_id": "relative-clauses",
+      "topic": "Relative clauses",
+      "title": "Zdania względne bez zbędnego zaimka",
+      "explanation": "Wprowadzając zdanie względne, nie powtarzamy podmiotu ani dopełnienia zaimkiem 'she', 'he' czy 'it'. Ich rolę przejmuje zaimek względny 'who', 'that' lub 'which', a gdy pełni on funkcję dopełnienia, można go w ogóle pominąć. Błąd bierze się z dosłownego przekładu polskiej konstrukcji.",
+      "examples": [
+        {
+          "wrong": "The woman she lives next door is kind.",
+          "right": "The woman who lives next door is kind.",
+          "note": "Usuwamy zbędne 'she' i wstawiamy 'who' — zaimek względny dla osób."
+        },
+        {
+          "wrong": "I like the movie it was very funny.",
+          "right": "I like the movie that was very funny.",
+          "note": "Zamiast 'it' potrzebny jest łącznik 'that' (albo 'which')."
+        },
+        {
+          "wrong": "The car he bought it is red.",
+          "right": "The car he bought is red.",
+          "note": "Gdy zaimek względny jest dopełnieniem, można go pominąć — ale 'it' trzeba usunąć."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Popraw zdanie: 'The girl she studies hard got an A.'",
+          "answer": "The girl who studies hard got an A."
+        },
+        {
+          "prompt": "Popraw zdanie: 'I have a friend he speaks Spanish.'",
+          "answer": "I have a friend who speaks Spanish."
+        },
+        {
+          "prompt": "Popraw zdanie: 'The cake I baked it was delicious.'",
+          "answer": "The cake I baked was delicious."
+        }
+      ]
+    },
+    {
+      "rule_id": "phrasal-verbs",
+      "topic": "Phrasal verbs",
+      "title": "Czasowniki frazowe: rozdzielne i nierozdzielne",
+      "explanation": "Czasownik frazowy to połączenie czasownika z partykułą (up, off, into). Część z nich jest rozdzielna — rzeczownik może stać między czasownikiem a partykułą, a zaimek musi tam stać. Inne są nierozdzielne i partykuła zawsze zostaje przy czasowniku. Mylenie tych dwóch grup to bardzo częsty błąd.",
+      "examples": [
+        {
+          "wrong": "I will pick up you after work.",
+          "right": "I will pick you up after work.",
+          "note": "Przy czasownikach rozdzielnych, takich jak 'pick up', zaimek wchodzi między czasownik a partykułę."
+        },
+        {
+          "wrong": "He ran her into at the store.",
+          "right": "He ran into her at the store.",
+          "note": "'Run into' jest nierozdzielne — zaimek stoi po partykule."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Popraw zdanie: 'Please throw away it.'",
+          "answer": "Please throw it away."
+        },
+        {
+          "prompt": "Popraw zdanie: 'She looked them after.'",
+          "answer": "She looked after them."
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-apostrophe-s",
+      "topic": "Possessive apostrophe s",
+      "title": "Dopełniacz saksoński: apostrof i s",
+      "explanation": "Końcówka 's pokazuje przynależność. Do rzeczownika w liczbie pojedynczej dodajemy 's (the cat's toy), do liczby mnogiej zakończonej na -s wyłącznie apostrof (the cats' toys), a do liczby mnogiej bez -s znowu 's (the children's toys). Apostrofu nie stawiamy w zwykłej liczbie mnogiej, która niczego nie posiada.",
+      "examples": [
+        {
+          "wrong": "The dogs bone is on the floor.",
+          "right": "The dog's bone is on the floor.",
+          "note": "Jeden pies — dodajemy 's przed nazwą posiadanej rzeczy."
+        },
+        {
+          "wrong": "The girls dresses are pretty.",
+          "right": "The girls' dresses are pretty.",
+          "note": "Liczba mnoga 'girls' kończy się na -s, więc dopisujemy sam apostrof."
+        },
+        {
+          "wrong": "The childrens toys are everywhere.",
+          "right": "The children's toys are everywhere.",
+          "note": "'Children' to liczba mnoga bez końcówki -s, dlatego dodajemy pełne 's."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Popraw: 'The mens room is down the hall.'",
+          "answer": "The men's room is down the hall."
+        },
+        {
+          "prompt": "Popraw: 'The books cover is torn.'",
+          "answer": "The book's cover is torn."
+        },
+        {
+          "prompt": "Popraw: 'My parents car is blue.'",
+          "answer": "My parents' car is blue."
+        }
+      ]
+    },
+    {
+      "rule_id": "silent-letters",
+      "topic": "Silent letters",
+      "title": "Litery nieme — czego nie wymawiamy",
+      "explanation": "W wielu angielskich wyrazach niektóre litery zapisujemy, ale ich nie wymawiamy. Nazywamy je literami niemymi. Do najczęstszych należą 'k' w 'knife', 't' w 'listen', 'l' w 'half' oraz 'w' w 'write'. Polacy odruchowo czytają wszystko tak, jak jest napisane, więc te wyrazy warto zapamiętać osobno.",
+      "examples": [
+        {
+          "wrong": "I have a k-nife.",
+          "right": "I have a knife.",
+          "note": "Litera 'k' jest niema — mówimy 'najf'."
+        },
+        {
+          "wrong": "She likes to lis-ten.",
+          "right": "She likes to listen.",
+          "note": "'T' w 'listen' jest nieme — mówimy 'lisen'."
+        },
+        {
+          "wrong": "I will talk with an 'l' sound.",
+          "right": "I will talk (no 'l' sound).",
+          "note": "'L' w 'talk' jest nieme — mówimy 'tok'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "W którym słowie 'k' jest nieme? (knife, kite, king)",
+          "answer": "knife"
+        },
+        {
+          "prompt": "Uzupełnij zdanie: litera 'b' jest niema w słowie ______. (lamb, bee, broke)",
+          "answer": "lamb"
+        },
+        {
+          "prompt": "Wybierz poprawną wymowę słowa 'write': (a) z dźwiękiem 'w' (b) z niemym 'w'",
+          "answer": "silent 'w'"
+        }
+      ]
+    },
+    {
+      "rule_id": "homophones-spelling",
+      "topic": "Homophones spelling",
+      "title": "Homofony — te same dźwięki, inna pisownia",
+      "explanation": "Homofony brzmią identycznie, ale zapisujemy je inaczej i znaczą co innego. Najczęściej mylone pary to their / they're, your / you're oraz its / it's. Zawsze sprawdzaj, czy w danym miejscu chodzi o skrót od 'is'/'are' (wtedy jest apostrof), czy o przynależność (wtedy apostrofu nie ma).",
+      "examples": [
+        {
+          "wrong": "Their going to the store.",
+          "right": "They're going to the store.",
+          "note": "'They're' to skrót od 'they are'; 'their' oznacza 'ich'."
+        },
+        {
+          "wrong": "Your a great student.",
+          "right": "You're a great student.",
+          "note": "'You're' to skrót od 'you are'; 'your' znaczy 'twój'."
+        },
+        {
+          "wrong": "Its a beautiful day.",
+          "right": "It's a beautiful day.",
+          "note": "'It's' znaczy 'it is'; 'its' bez apostrofu wyraża przynależność."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Wybierz właściwe słowo: (There/Their/They're) going to the park.",
+          "answer": "They're"
+        },
+        {
+          "prompt": "Uzupełnij: ___ (Your/You're) book is on the table.",
+          "answer": "Your"
+        },
+        {
+          "prompt": "Uzupełnij: The dog wagged ___ (its/it's) tail.",
+          "answer": "its"
+        }
+      ]
+    },
+    {
+      "rule_id": "irregular-verb-forms",
+      "topic": "Irregular verb forms",
+      "title": "Czasowniki nieregularne",
+      "explanation": "Czasowniki nieregularne nie tworzą czasu przeszłego przez dodanie -ed — zmieniają całą formę. Trzeba też odróżniać drugą formę (czas przeszły prosty) od trzeciej (imiesłów bierny), bo bywają różne: go – went – gone. Tych form uczymy się na pamięć, w trójkach.",
+      "examples": [
+        {
+          "wrong": "I have went to the store.",
+          "right": "I have gone to the store.",
+          "note": "Imiesłów bierny od 'go' to 'gone', a nie 'went'."
+        },
+        {
+          "wrong": "She drinked the water.",
+          "right": "She drank the water.",
+          "note": "Czas przeszły od 'drink' to 'drank', nie 'drinked'."
+        },
+        {
+          "wrong": "He brang his book.",
+          "right": "He brought his book.",
+          "note": "Czas przeszły od 'bring' to 'brought', nie 'brang'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Uzupełnij: Yesterday, I ____ (go) to the park.",
+          "answer": "went"
+        },
+        {
+          "prompt": "Uzupełnij: She has ____ (write) a letter.",
+          "answer": "written"
+        },
+        {
+          "prompt": "Uzupełnij: They ____ (eat) lunch already.",
+          "answer": "have eaten"
+        }
+      ]
+    },
+    {
+      "rule_id": "reported-speech-backshift",
+      "topic": "Reported speech backshift",
+      "title": "Mowa zależna: następstwo czasów",
+      "explanation": "Relacjonując czyjeś słowa, cofamy czas oryginalnej wypowiedzi o jeden stopień w przeszłość. Present Simple przechodzi w Past Simple, Present Continuous w Past Continuous, a 'will' w 'would'. Po polsku czas zostaje bez zmian, dlatego to przesunięcie łatwo pominąć.",
+      "examples": [
+        {
+          "wrong": "She said she is tired.",
+          "right": "She said she was tired.",
+          "note": "Oryginalne 'is' zmienia się w 'was', bo czasownik relacjonujący 'said' jest w czasie przeszłym."
+        },
+        {
+          "wrong": "He told me he will come.",
+          "right": "He told me he would come.",
+          "note": "'Will' w mowie zależnej przechodzi w 'would'."
+        },
+        {
+          "wrong": "They said they are going to the party.",
+          "right": "They said they were going to the party.",
+          "note": "Present Continuous 'are going' zmienia się w Past Continuous 'were going'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Zamień na mowę zależną: 'I live in London.' (He said...)",
+          "answer": "He said he lived in London."
+        },
+        {
+          "prompt": "Zamień na mowę zależną: 'We are watching a movie.' (They told me...)",
+          "answer": "They told me they were watching a movie."
+        },
+        {
+          "prompt": "Zamień na mowę zależną: 'I will call you.' (She said...)",
+          "answer": "She said she would call me."
+        }
+      ]
+    },
+    {
+      "rule_id": "when-to-use-some-vs-any",
+      "topic": "When to use 'some' vs 'any'",
+      "title": "'Some' czy 'any' — prosta zasada",
+      "explanation": "'Some' stawiamy w zdaniach twierdzących oraz w propozycjach i uprzejmych prośbach. 'Any' pojawia się w przeczeniach i w zwykłych pytaniach. Dlatego mówimy 'I have some apples', ale 'I don't have any apples', a jednocześnie 'Would you like some coffee?', mimo że to pytanie.",
+      "examples": [
+        {
+          "wrong": "I don't have some money.",
+          "right": "I don't have any money.",
+          "note": "W przeczeniu potrzebne jest 'any', nie 'some'."
+        },
+        {
+          "wrong": "Do you have any apples? (as a polite request)",
+          "right": "Do you have some apples?",
+          "note": "W uprzejmej prośbie lub propozycji używamy 'some' także w pytaniu."
+        },
+        {
+          "wrong": "There is any milk in the fridge.",
+          "right": "There is some milk in the fridge.",
+          "note": "W zdaniu twierdzącym stawiamy 'some'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Uzupełnij lukę: I want ___ water. (zdanie twierdzące)",
+          "answer": "some"
+        },
+        {
+          "prompt": "Uzupełnij lukę: She doesn't have ___ friends. (przeczenie)",
+          "answer": "any"
+        },
+        {
+          "prompt": "Uzupełnij lukę: Would you like ___ tea? (propozycja)",
+          "answer": "some"
+        }
+      ]
+    },
+    {
+      "rule_id": "definite-vs-zero-article",
+      "topic": "Definite vs zero article",
+      "title": "'The' czy brak przedimka?",
+      "explanation": "'The' stawiamy wtedy, gdy rozmówca wie dokładnie, o którą rzecz chodzi. Gdy mówimy ogólnie — o rzeczownikach niepoliczalnych albo o liczbie mnogiej — przedimka nie ma wcale. Porównaj: 'I love music' (ogólnie) i 'I love the music in this movie' (konkretnie).",
+      "examples": [
+        {
+          "wrong": "I go to the school every day.",
+          "right": "I go to school every day.",
+          "note": "Przy instytucjach (school, hospital, prison) w ich podstawowej funkcji przedimka nie stawiamy."
+        },
+        {
+          "wrong": "She loves the dogs.",
+          "right": "She loves dogs.",
+          "note": "Liczba mnoga w znaczeniu ogólnym idzie bez przedimka."
+        },
+        {
+          "wrong": "The milk is good for health.",
+          "right": "Milk is good for health.",
+          "note": "Rzeczowniki niepoliczalne w znaczeniu ogólnym również nie mają przedimka."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Uzupełnij lukę: '_____ cats are cute.' (o kotach w ogóle)",
+          "answer": "Cats"
+        },
+        {
+          "prompt": "Uzupełnij lukę: 'I need to go to _____ hospital to visit my friend.' (konkretny szpital)",
+          "answer": "the"
+        },
+        {
+          "prompt": "Uzupełnij lukę: '_____ life is beautiful.' (o życiu w ogóle)",
+          "answer": "Life"
+        }
+      ]
+    },
+    {
+      "rule_id": "clause-linking-conjunctions",
+      "topic": "Clause linking conjunctions",
+      "title": "Łączenie zdań spójnikami",
+      "explanation": "Dwa samodzielne zdania łączymy spójnikiem: 'and', 'but', 'or', 'so' albo 'because'. Sam przecinek nie wystarczy — taki błąd nazywa się comma splice i w angielskim jest wyraźnie odczuwalny, choć w polskim przecinek często by wystarczył. Brak jakiegokolwiek znaku między zdaniami też jest błędem.",
+      "examples": [
+        {
+          "wrong": "I went to the store, I bought milk.",
+          "right": "I went to the store, and I bought milk.",
+          "note": "Dwa pełne zdania łączymy przecinkiem razem ze spójnikiem, np. 'and'."
+        },
+        {
+          "wrong": "She is tired she went to bed.",
+          "right": "She is tired, so she went to bed.",
+          "note": "Spójnik 'so' pokazuje skutek albo wynik."
+        },
+        {
+          "wrong": "He likes coffee she prefers tea.",
+          "right": "He likes coffee, but she prefers tea.",
+          "note": "'But' sygnalizuje kontrast między dwiema myślami."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Popraw zdanie: 'I was hungry I ate lunch.'",
+          "answer": "I was hungry, so I ate lunch."
+        },
+        {
+          "prompt": "Połącz zdania spójnikiem 'because': 'I stayed home. I was sick.'",
+          "answer": "I stayed home because I was sick."
+        },
+        {
+          "prompt": "Popraw błędny przecinek: 'The sun set, the stars appeared.'",
+          "answer": "The sun set, and the stars appeared."
+        }
+      ]
+    },
+    {
+      "rule_id": "misplaced-modifiers",
+      "topic": "Misplaced modifiers",
+      "title": "Źle umieszczone określenia",
+      "explanation": "Określenie postawione zbyt daleko od wyrazu, do którego się odnosi, zmienia sens zdania — czasem w sposób niezamierzenie komiczny. Angielski szyk jest sztywniejszy niż polski, więc takie przesunięcie od razu rzuca się w oczy. Lekarstwo jest proste: przesuń określenie tuż obok słowa, które opisuje.",
+      "examples": [
+        {
+          "wrong": "Running to catch the bus, my backpack fell.",
+          "right": "Running to catch the bus, I dropped my backpack.",
+          "note": "Wyrażenie 'Running to catch the bus' musi odnosić się do osoby, która biegnie (I), a nie do plecaka."
+        },
+        {
+          "wrong": "She almost drove her kids to school every day.",
+          "right": "She drove her kids to school almost every day.",
+          "note": "'Almost' postawione przy 'every day' mówi o częstotliwości; przy czasowniku znaczyłoby, że prawie wsiadła za kierownicę, ale jednak nie."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Popraw źle umieszczone określenie: 'The waiter served a steak to the man with a side of fries.'",
+          "answer": "The waiter served a man a steak with a side of fries."
+        },
+        {
+          "prompt": "Popraw zdanie: 'He nearly ate the whole pizza himself.'",
+          "answer": "He ate nearly the whole pizza himself."
+        }
+      ]
+    }
+  ]
+}

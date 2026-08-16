@@ -1,0 +1,886 @@
+{
+  "learning": "en",
+  "interface": "nl",
+  "generated_at": "2026-08-16T12:01:01.623089+00:00",
+  "model": "claude-opus-4.8-agent",
+  "rules": [
+    {
+      "rule_id": "articles",
+      "topic": "Articles",
+      "title": "Lidwoorden: a, an en the",
+      "explanation": "Lidwoorden vertellen of een zelfstandig naamwoord algemeen of specifiek is. Gebruik 'a' of 'an' bij een telbaar enkelvoud dat je voor het eerst noemt, en 'the' als spreker en luisteraar allebei weten om welk ding het gaat. Bij algemene meervouden en niet-telbare woorden staat er helemaal geen lidwoord - anders dan in het Nederlands, waar je wel 'de' of 'het' kunt gebruiken.",
+      "examples": [
+        {
+          "wrong": "I saw dog in park.",
+          "right": "I saw a dog in the park.",
+          "note": "'A' omdat het een willekeurige hond is, 'the' omdat het over een bekend park gaat."
+        },
+        {
+          "wrong": "She wants an apple and banana.",
+          "right": "She wants an apple and a banana.",
+          "note": "'An' voor een klinkerklank (apple), 'a' voor een medeklinkerklank (banana). Het gaat om de klank, niet om de letter."
+        },
+        {
+          "wrong": "The love is important.",
+          "right": "Love is important.",
+          "note": "Bij abstracte, niet-telbare woorden staat er geen lidwoord. Wij zeggen 'de liefde is belangrijk', het Engels laat 'the' juist weg."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vul in: I need ___ umbrella. (een willekeurige paraplu)",
+          "answer": "an"
+        },
+        {
+          "prompt": "Vul in: ___ sun is very hot today. (specifiek, we kennen hem allemaal)",
+          "answer": "The"
+        },
+        {
+          "prompt": "Vul in: I like ___ dogs. (honden in het algemeen, meervoud)",
+          "answer": "(geen lidwoord)"
+        }
+      ]
+    },
+    {
+      "rule_id": "tenses",
+      "topic": "Tenses",
+      "title": "Past simple of present perfect?",
+      "explanation": "Gebruik de past simple voor iets wat op een bepaald moment in het verleden gebeurde (yesterday, last week, in 2019). Gebruik de present perfect als er geen tijdstip bij staat of als het verband met het heden telt (ever, never, already, just). Let op: in het Nederlands zeggen we heel vaak 'ik heb gisteren gekocht', maar zodra er een afgesloten tijdstip in de zin staat, moet het Engels de past simple hebben.",
+      "examples": [
+        {
+          "wrong": "I have bought a new car yesterday.",
+          "right": "I bought a new car yesterday.",
+          "note": "'Yesterday' is een afgesloten moment, dus past simple. Dit is de klassieke valkuil voor Nederlandstaligen."
+        },
+        {
+          "wrong": "Did you ever eat sushi?",
+          "right": "Have you ever eaten sushi?",
+          "note": "'Ever' vraagt naar levenservaring zonder tijdstip, dus present perfect."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vul de juiste vorm in: She _____ (go) to the beach last weekend.",
+          "answer": "went"
+        },
+        {
+          "prompt": "Vul de juiste vorm in: I _____ (never / eat) Thai food.",
+          "answer": "have never eaten"
+        },
+        {
+          "prompt": "Vul de juiste vorm in: They _____ (already / finish) their homework.",
+          "answer": "have already finished"
+        }
+      ]
+    },
+    {
+      "rule_id": "prepositions",
+      "topic": "Prepositions",
+      "title": "Tijdsvoorzetsels: in, on en at",
+      "explanation": "Gebruik 'at' bij een exact klokmoment (at 5 PM, at midnight), 'on' bij dagen en data (on Monday, on 4 July) en 'in' bij langere periodes zoals maanden, jaargetijden, jaren en eeuwen. Het Nederlandse 'op maandag' helpt je bij 'on Monday', maar 'om 5 uur' wordt 'at 5', niet 'on'.",
+      "examples": [
+        {
+          "wrong": "I will see you in Monday.",
+          "right": "I will see you on Monday.",
+          "note": "Bij dagen van de week gebruik je 'on'."
+        },
+        {
+          "wrong": "The meeting is at June.",
+          "right": "The meeting is in June.",
+          "note": "Bij maanden en jaren gebruik je 'in'."
+        },
+        {
+          "wrong": "I wake up on 7 AM.",
+          "right": "I wake up at 7 AM.",
+          "note": "Bij een exacte kloktijd gebruik je 'at' - net als ons 'om zeven uur'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vul in: I will meet you ___ Friday.",
+          "answer": "on"
+        },
+        {
+          "prompt": "Vul in: His birthday is ___ October.",
+          "answer": "in"
+        },
+        {
+          "prompt": "Vul in: The movie starts ___ 8 PM.",
+          "answer": "at"
+        }
+      ]
+    },
+    {
+      "rule_id": "conditional-sentences",
+      "topic": "Conditional sentences",
+      "title": "Voorwaardelijke zinnen: geen 'will' na 'if'",
+      "explanation": "In de eerste conditional (een reeele mogelijkheid in de toekomst) staat in de if-zin de present simple, niet 'will'. De toekomende vorm met 'will' hoort alleen in de hoofdzin thuis. Dat werkt precies zoals in het Nederlands: 'Als het regent, blijf ik thuis' - ook wij zeggen niet 'als het zal regenen'.",
+      "examples": [
+        {
+          "wrong": "If I will have time, I will call you.",
+          "right": "If I have time, I will call you.",
+          "note": "Na 'if' staat de present simple ('have'), nooit 'will have'."
+        },
+        {
+          "wrong": "If she will study, she will pass the exam.",
+          "right": "If she studies, she will pass the exam.",
+          "note": "De voorwaarde krijgt de present simple ('studies'); 'will' staat alleen in het gevolg."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vul in: If it ___ (rain) tomorrow, I will stay home.",
+          "answer": "rains"
+        },
+        {
+          "prompt": "Vul in: If I ___ (have) enough money, I will buy a new phone.",
+          "answer": "have"
+        },
+        {
+          "prompt": "Vul correct aan: If she ___ (be) late, we will miss the bus.",
+          "answer": "is"
+        }
+      ]
+    },
+    {
+      "rule_id": "th-sounds",
+      "topic": "th sounds",
+      "title": "De twee th-klanken onder de knie krijgen",
+      "explanation": "Het Engels heeft twee th-klanken: de stemloze /θ/ (zoals in 'think') en de stemhebbende /ð/ (zoals in 'this'). Je maakt ze door het puntje van je tong licht tussen je voortanden te leggen en lucht te laten stromen. Het Nederlands kent deze klanken niet, waardoor ze vaak als t, d, s of z klinken - en dat verandert soms het hele woord.",
+      "examples": [
+        {
+          "wrong": "I tink it's true.",
+          "right": "I think it's true.",
+          "note": "Gebruik de stemloze th (tong tussen de tanden) in plaats van een t."
+        },
+        {
+          "wrong": "Dis is my pen.",
+          "right": "This is my pen.",
+          "note": "Gebruik de stemhebbende th (met trilling in je stembanden) in plaats van een d."
+        },
+        {
+          "wrong": "I have tree apples.",
+          "right": "I have three apples.",
+          "note": "'Three' heeft de stemloze th; 'tree' (boom) is een compleet ander woord."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Kies het juiste woord: I need to _____ about it. (think / tink)",
+          "answer": "think"
+        },
+        {
+          "prompt": "Vul in: Please give me _____ book. (this / dis)",
+          "answer": "this"
+        },
+        {
+          "prompt": "Kies het juiste woord: She has _____ cats. (three / tree)",
+          "answer": "three"
+        }
+      ]
+    },
+    {
+      "rule_id": "stress",
+      "topic": "Stress",
+      "title": "Woordklemtoon: de verborgen maat van het Engels",
+      "explanation": "In elk Engels woord ligt de klemtoon op een vaste lettergreep: die klinkt langer, luider en hoger. Leg je de klemtoon verkeerd, dan klinkt het woord onnatuurlijk of betekent het zelfs iets anders. Zo is 'record' als zelfstandig naamwoord RE-cord (een opname) en als werkwoord re-CORD (opnemen).",
+      "examples": [
+        {
+          "wrong": "I need to RE-cord the meeting.",
+          "right": "I need to re-CORD the meeting.",
+          "note": "Als werkwoord (opnemen) ligt de klemtoon op de tweede lettergreep: re-CORD. Als zelfstandig naamwoord (een opname) juist op de eerste: RE-cord."
+        },
+        {
+          "wrong": "Let's go to the de-SERT for our vacation.",
+          "right": "Let's go to the DES-ert for our vacation.",
+          "note": "'Desert' (woestijn) heeft klemtoon op de eerste lettergreep: DES-ert. 'Dessert' (nagerecht) op de tweede: de-SSERT - en het wordt ook anders gespeld."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Op welke lettergreep ligt de klemtoon in 'present' als het 'cadeau' betekent? (PRES-ent of pre-SENT?)",
+          "answer": "PRES-ent"
+        },
+        {
+          "prompt": "Verbeter de klemtoon: 'I need to EX-port these files.' (Tip: 'export' als werkwoord heeft klemtoon op de tweede lettergreep.)",
+          "answer": "I need to ex-PORT these files."
+        },
+        {
+          "prompt": "Spreek 'photograph' hardop uit. Welke lettergreep is het sterkst?",
+          "answer": "The first syllable: PHO-to-graph"
+        }
+      ]
+    },
+    {
+      "rule_id": "intonation",
+      "topic": "Intonation",
+      "title": "Intonatie in het Engels",
+      "explanation": "Intonatie - het stijgen en dalen van je stem - kan de betekenis van een zin volledig veranderen. Bij ja/nee-vragen gaat je stem aan het eind omhoog; bij mededelingen en wh-vragen (who, what, where) gaat hij omlaag. De verkeerde intonatie laat een vraag klinken als een mededeling of maakt dat je onzeker overkomt.",
+      "examples": [
+        {
+          "wrong": "You're coming? (met dalende toon)",
+          "right": "You're coming? (met stijgende toon)",
+          "note": "Een stijgende toon aan het eind maakt er een ja/nee-vraag van; een dalende toon klinkt als een mededeling."
+        },
+        {
+          "wrong": "Where are you going? (met stijgende toon)",
+          "right": "Where are you going? (met dalende toon)",
+          "note": "Wh-vragen eindigen meestal dalend; stijgend klinkt alsof je iets niet hebt verstaan."
+        },
+        {
+          "wrong": "I like apples, oranges, and bananas. (helemaal vlak)",
+          "right": "I like apples↗, oranges↗, and bananas↘.",
+          "note": "In een opsomming stijgt je stem bij elk element behalve het laatste; daar daalt hij om te laten horen dat de rij af is."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Lees hardop met de juiste intonatie: 'Are you hungry?' (ja/nee-vraag). Gaat je stem aan het eind omhoog of omlaag?",
+          "answer": "Rise"
+        },
+        {
+          "prompt": "Lees hardop met de juiste intonatie: 'What time is it?' (wh-vraag). Gaat je stem omhoog of omlaag?",
+          "answer": "Fall"
+        },
+        {
+          "prompt": "Zeg deze opsomming met de juiste intonatie: 'We need milk, bread, and eggs.' Waar stijgt je stem en waar daalt hij?",
+          "answer": "Rise on 'milk' and 'bread', fall on 'eggs'"
+        }
+      ]
+    },
+    {
+      "rule_id": "subject-verb-agreement",
+      "topic": "Subject-verb agreement",
+      "title": "Congruentie: onderwerp en werkwoord op elkaar afstemmen",
+      "explanation": "Het Engelse werkwoord moet in getal kloppen met het onderwerp: enkelvoud bij enkelvoud, meervoud bij meervoud. Pas op bij onderwerpen met een bepaling ertussen en bij onbepaalde voornaamwoorden zoals 'everyone' of 'each', die altijd enkelvoud zijn. Vergeet ook de -s van de derde persoon enkelvoud niet: 'she doesn't', niet 'she don't'.",
+      "examples": [
+        {
+          "wrong": "The list of items are on the table.",
+          "right": "The list of items is on the table.",
+          "note": "Het onderwerp is 'list' (enkelvoud), niet 'items'."
+        },
+        {
+          "wrong": "Everyone have their own opinion.",
+          "right": "Everyone has their own opinion.",
+          "note": "'Everyone' is grammaticaal enkelvoud, dus 'has' - ook al gaat het over meerdere mensen."
+        },
+        {
+          "wrong": "She don't like coffee.",
+          "right": "She doesn't like coffee.",
+          "note": "Bij he, she en it hoort 'doesn't'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Schrijf correct over: The group of students is/are studying.",
+          "answer": "The group of students is studying."
+        },
+        {
+          "prompt": "Kies het juiste werkwoord: Neither the teacher nor the students (is/are) in the room.",
+          "answer": "are"
+        },
+        {
+          "prompt": "Verbeter de fout: Each of the apples are fresh.",
+          "answer": "Each of the apples is fresh."
+        }
+      ]
+    },
+    {
+      "rule_id": "countable-vs-uncountable-nouns",
+      "topic": "Countable vs uncountable nouns",
+      "title": "Telbare en niet-telbare zelfstandige naamwoorden",
+      "explanation": "Telbare woorden kun je tellen (one apple, two apples) en gaan samen met 'a/an', 'many' en 'few'. Niet-telbare woorden (water, advice, homework, furniture) hebben geen meervoud en gaan samen met 'much', 'little' of 'a lot of' - nooit met 'a/an' of 'many'. Let op: in het Nederlands kun je wel 'een advies' zeggen, in het Engels absoluut niet.",
+      "examples": [
+        {
+          "wrong": "I have many homeworks.",
+          "right": "I have a lot of homework.",
+          "note": "'Homework' is niet-telbaar en heeft geen meervoud; gebruik 'much' of 'a lot of'."
+        },
+        {
+          "wrong": "He gave me a good advice.",
+          "right": "He gave me a piece of good advice.",
+          "note": "'Advice' is niet-telbaar. Wil je er toch een eenheid van maken, dan gebruik je 'a piece of advice'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vul in: I need _____ (many/much) time to finish.",
+          "answer": "much"
+        },
+        {
+          "prompt": "Verbeter de zin: He has many furniture in his room.",
+          "answer": "He has much furniture in his room."
+        }
+      ]
+    },
+    {
+      "rule_id": "gerund-vs-infinitive",
+      "topic": "Gerund vs infinitive",
+      "title": "Gerund of infinitief: -ing of to",
+      "explanation": "Sommige Engelse werkwoorden worden gevolgd door een gerund (werkwoord + -ing) en andere door een infinitief (to + werkwoord). Zo krijgt 'enjoy' altijd een gerund en 'want' altijd een infinitief. In het Nederlands staat er in beide gevallen gewoon 'te + infinitief' of een kaal werkwoord, dus je moet deze patronen per werkwoord uit je hoofd leren.",
+      "examples": [
+        {
+          "wrong": "I enjoy to swim.",
+          "right": "I enjoy swimming.",
+          "note": "Na 'enjoy' volgt altijd de -ing-vorm."
+        },
+        {
+          "wrong": "She wants going home.",
+          "right": "She wants to go home.",
+          "note": "Na 'want' volgt altijd de infinitief met 'to'."
+        },
+        {
+          "wrong": "He suggested to eat out.",
+          "right": "He suggested eating out.",
+          "note": "Na 'suggest' volgt de -ing-vorm, ook al zeggen wij 'hij stelde voor om uit eten te gaan'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vul de juiste vorm in: I need ___ (study) for the exam.",
+          "answer": "to study"
+        },
+        {
+          "prompt": "Vul de juiste vorm in: She avoids ___ (eat) junk food.",
+          "answer": "eating"
+        },
+        {
+          "prompt": "Vul de juiste vorm in: They decided ___ (move) to a new city.",
+          "answer": "to move"
+        }
+      ]
+    },
+    {
+      "rule_id": "modal-verbs-usage",
+      "topic": "Modal verbs usage",
+      "title": "Modale werkwoorden: can, must en may",
+      "explanation": "Modale werkwoorden als 'can', 'must' en 'may' hebben elk hun eigen gebruik. 'Can' drukt vermogen of informele toestemming uit, 'may' hoort bij formele of beleefde verzoeken, en 'must' geeft een sterke verplichting aan ('must not' betekent verbod). Belangrijk: na een modaal werkwoord komt de kale infinitief, dus nooit 'to' - net zoals wij 'ik moet gaan' zeggen en niet 'ik moet te gaan'.",
+      "examples": [
+        {
+          "wrong": "Can I leave early? (tegen je directeur)",
+          "right": "May I leave early?",
+          "note": "In een formele of beleefde situatie past 'may' beter; 'can' klinkt informeel."
+        },
+        {
+          "wrong": "I must to finish my homework.",
+          "right": "I must finish my homework.",
+          "note": "Na een modaal werkwoord volgt altijd de kale infinitief, zonder 'to'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vul in: She ___ speak three languages fluently. (vermogen)",
+          "answer": "can"
+        },
+        {
+          "prompt": "Vul in: You ___ park here; it's forbidden. (verbod)",
+          "answer": "must not"
+        },
+        {
+          "prompt": "Vul in: ___ I borrow your pen, please? (beleefd verzoek)",
+          "answer": "May"
+        }
+      ]
+    },
+    {
+      "rule_id": "word-order-in-questions",
+      "topic": "Word order in questions",
+      "title": "Woordvolgorde in vragen",
+      "explanation": "In Engelse vragen wisselen onderwerp en hulpwerkwoord van plaats, en als er geen hulpwerkwoord is, voeg je 'do/does/did' toe. Bij wh-vragen komt eerst het vraagwoord, dan het hulpwerkwoord, dan het onderwerp en pas daarna het hoofdwerkwoord. Wij draaien in het Nederlands gewoon om ('Houdt hij van koffie?'), maar het Engels heeft die extra 'do' nodig: 'Does he like coffee?'",
+      "examples": [
+        {
+          "wrong": "You are from where?",
+          "right": "Where are you from?",
+          "note": "Bij wh-vragen staat het vraagwoord vooraan, gevolgd door hulpwerkwoord en onderwerp."
+        },
+        {
+          "wrong": "He likes coffee?",
+          "right": "Does he like coffee?",
+          "note": "Zonder hulpwerkwoord voeg je 'do/does/did' toe voor het onderwerp - en het hoofdwerkwoord verliest dan zijn -s."
+        },
+        {
+          "wrong": "Why you are late?",
+          "right": "Why are you late?",
+          "note": "Het hulpwerkwoord staat na het vraagwoord en voor het onderwerp."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Verbeter de vraag: 'You live where?'",
+          "answer": "Where do you live?"
+        },
+        {
+          "prompt": "Verbeter de vraag: 'She can swim?'",
+          "answer": "Can she swim?"
+        },
+        {
+          "prompt": "Verbeter de vraag: 'What you want?'",
+          "answer": "What do you want?"
+        }
+      ]
+    },
+    {
+      "rule_id": "comparatives-and-superlatives",
+      "topic": "Comparatives and superlatives",
+      "title": "Vergrotende en overtreffende trap: veelgemaakte fouten",
+      "explanation": "Vergelijk je twee dingen, gebruik dan de vergrotende trap (bijvoeglijk naamwoord + -er, of 'more' + bijvoeglijk naamwoord) met 'than'. Bij drie of meer gebruik je de overtreffende trap (-est of 'most') met 'the'. Combineer nooit allebei: 'more better' bestaat niet, net zomin als ons 'meer beter'. Leer ook de onregelmatige vormen good-better-best en bad-worse-worst.",
+      "examples": [
+        {
+          "wrong": "She is more smarter than him.",
+          "right": "She is smarter than him.",
+          "note": "Combineer 'more' nooit met een -er-vorm; 'smarter' is al een vergrotende trap."
+        },
+        {
+          "wrong": "This is the most best cake I've had.",
+          "right": "This is the best cake I've had.",
+          "note": "'Best' is al een overtreffende trap; 'most' erbij is dubbelop."
+        },
+        {
+          "wrong": "He is the taller in his class.",
+          "right": "He is the tallest in his class.",
+          "note": "Bij drie of meer personen of dingen gebruik je de overtreffende trap (-est)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vul aan: This is the ______ (good) movie I've ever seen.",
+          "answer": "best"
+        },
+        {
+          "prompt": "Verbeter de fout: 'My house is more bigger than yours.'",
+          "answer": "My house is bigger than yours."
+        },
+        {
+          "prompt": "Kies: 'She runs (faster / most fast) than me.'",
+          "answer": "faster"
+        }
+      ]
+    },
+    {
+      "rule_id": "passive-voice-formation",
+      "topic": "Passive voice formation",
+      "title": "De lijdende vorm correct maken",
+      "explanation": "De Engelse lijdende vorm bestaat uit 'to be' in de juiste tijd plus het voltooid deelwoord van het hoofdwerkwoord. Een veelgemaakte fout is de infinitief of de verleden tijd gebruiken in plaats van het voltooid deelwoord. Onthoud: het deelwoord verandert nooit, de tijd zit helemaal in 'be' - vergelijkbaar met ons 'wordt geopend / werd geopend'.",
+      "examples": [
+        {
+          "wrong": "The window was break.",
+          "right": "The window was broken.",
+          "note": "Na 'was' hoort het voltooid deelwoord 'broken', niet de infinitief 'break'."
+        },
+        {
+          "wrong": "The letter is wrote by her.",
+          "right": "The letter is written by her.",
+          "note": "Het voltooid deelwoord van 'write' is 'written'; 'wrote' is de verleden tijd."
+        },
+        {
+          "wrong": "The cake has been eat.",
+          "right": "The cake has been eaten.",
+          "note": "Na 'been' volgt het voltooid deelwoord 'eaten'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Verbeter de zin: 'The window was break by the ball.'",
+          "answer": "The window was broken by the ball."
+        },
+        {
+          "prompt": "Verbeter de zin: 'The emails are send every day.'",
+          "answer": "The emails are sent every day."
+        },
+        {
+          "prompt": "Verbeter de zin: 'The song has been sing many times.'",
+          "answer": "The song has been sung many times."
+        }
+      ]
+    },
+    {
+      "rule_id": "relative-clauses",
+      "topic": "Relative clauses",
+      "title": "Geen dubbel voornaamwoord in betrekkelijke bijzinnen",
+      "explanation": "In een Engelse betrekkelijke bijzin herhaal je het onderwerp of lijdend voorwerp niet met 'she', 'he' of 'it'. Je gebruikt een betrekkelijk voornaamwoord ('who', 'that', 'which'), of je laat het helemaal weg als het het lijdend voorwerp is. Vergelijk met het Nederlands: 'de vrouw die hiernaast woont' - ook wij zeggen niet 'de vrouw die zij hiernaast woont'.",
+      "examples": [
+        {
+          "wrong": "The woman she lives next door is kind.",
+          "right": "The woman who lives next door is kind.",
+          "note": "Haal de extra 'she' weg en gebruik 'who' voor personen."
+        },
+        {
+          "wrong": "I like the movie it was very funny.",
+          "right": "I like the movie that was very funny.",
+          "note": "Vervang 'it' door 'that' (of 'which') om de bijzin te verbinden."
+        },
+        {
+          "wrong": "The car he bought it is red.",
+          "right": "The car he bought is red.",
+          "note": "Is het betrekkelijk voornaamwoord lijdend voorwerp, dan mag je het weglaten - maar 'it' mag er zeker niet blijven staan."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Verbeter de zin: 'The girl she studies hard got an A.'",
+          "answer": "The girl who studies hard got an A."
+        },
+        {
+          "prompt": "Verbeter de zin: 'I have a friend he speaks Spanish.'",
+          "answer": "I have a friend who speaks Spanish."
+        },
+        {
+          "prompt": "Verbeter de zin: 'The cake I baked it was delicious.'",
+          "answer": "The cake I baked was delicious."
+        }
+      ]
+    },
+    {
+      "rule_id": "phrasal-verbs",
+      "topic": "Phrasal verbs",
+      "title": "Phrasal verbs: scheidbaar of niet",
+      "explanation": "Een phrasal verb bestaat uit een werkwoord plus een partikel (up, off, into). Sommige zijn scheidbaar: een zelfstandig naamwoord mag ertussen of erachter, maar een voornaamwoord moet er verplicht tussen. Andere zijn onscheidbaar en houden het partikel altijd direct achter het werkwoord. Denk aan onze scheidbare werkwoorden ('ik haal je op'), maar leer per phrasal verb of hij scheidbaar is - dat kun je er niet aan afzien.",
+      "examples": [
+        {
+          "wrong": "I will pick up you after work.",
+          "right": "I will pick you up after work.",
+          "note": "Bij scheidbare phrasal verbs zoals 'pick up' staat een voornaamwoord verplicht tussen werkwoord en partikel."
+        },
+        {
+          "wrong": "He ran her into at the store.",
+          "right": "He ran into her at the store.",
+          "note": "'Run into' is onscheidbaar; het voornaamwoord blijft achter het partikel staan."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Verbeter deze zin: 'Please throw away it.'",
+          "answer": "Please throw it away."
+        },
+        {
+          "prompt": "Verbeter deze zin: 'She looked them after.'",
+          "answer": "She looked after them."
+        }
+      ]
+    },
+    {
+      "rule_id": "possessive-apostrophe-s",
+      "topic": "Possessive apostrophe s",
+      "title": "De bezits-'s met apostrof",
+      "explanation": "Met 's geef je in het Engels aan dat iets van iemand is. Bij een enkelvoud schrijf je 's (the cat's toy), bij een meervoud dat al op -s eindigt alleen een apostrof (the cats' toys), en bij een onregelmatig meervoud weer 's (the children's toys). Let op het verschil met het Nederlands: wij schrijven 'Jans boek' zonder apostrof, het Engels zet er altijd een.",
+      "examples": [
+        {
+          "wrong": "The dogs bone is on the floor.",
+          "right": "The dog's bone is on the floor.",
+          "note": "Bij een enkelvoud zet je 's voor het bezit."
+        },
+        {
+          "wrong": "The girls dresses are pretty.",
+          "right": "The girls' dresses are pretty.",
+          "note": "Bij een meervoud dat al op -s eindigt komt er alleen een apostrof achter."
+        },
+        {
+          "wrong": "The childrens toys are everywhere.",
+          "right": "The children's toys are everywhere.",
+          "note": "'Children' is meervoud maar eindigt niet op -s, dus krijgt het gewoon 's."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Verbeter: 'The mens room is down the hall.'",
+          "answer": "The men's room is down the hall."
+        },
+        {
+          "prompt": "Verbeter: 'The books cover is torn.'",
+          "answer": "The book's cover is torn."
+        },
+        {
+          "prompt": "Verbeter: 'My parents car is blue.'",
+          "answer": "My parents' car is blue."
+        }
+      ]
+    },
+    {
+      "rule_id": "silent-letters",
+      "topic": "Silent letters",
+      "title": "Stomme letters: spreek niet uit wat er staat",
+      "explanation": "Veel Engelse woorden bevatten letters die je niet uitspreekt: de stomme letters. Ze staan er alleen in de spelling en moet je bij het spreken gewoon overslaan. Bekende voorbeelden zijn de k in 'knife', de t in 'listen', de l in 'half' en de w in 'write'.",
+      "examples": [
+        {
+          "wrong": "I have a k-nife.",
+          "right": "I have a knife.",
+          "note": "De k is stom. Je zegt 'nife'."
+        },
+        {
+          "wrong": "She likes to lis-ten.",
+          "right": "She likes to listen.",
+          "note": "De t in 'listen' is stom. Je zegt 'lissen'."
+        },
+        {
+          "wrong": "I will talk (met een hoorbare l).",
+          "right": "I will talk (zonder l-klank).",
+          "note": "De l in 'talk' is stom. Je zegt 'tawk'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Welk woord heeft een stomme 'k'? (knife, kite, king)",
+          "answer": "knife"
+        },
+        {
+          "prompt": "Vul aan: de 'b' in '______' is stom. (lamb, bee, broke)",
+          "answer": "lamb"
+        },
+        {
+          "prompt": "Hoe spreek je 'write' uit? (a) met een w-klank (b) met een stomme w",
+          "answer": "silent 'w'"
+        }
+      ]
+    },
+    {
+      "rule_id": "homophones-spelling",
+      "topic": "Homophones spelling",
+      "title": "Homofonen: gelijk klinken, anders schrijven",
+      "explanation": "Homofonen zijn woorden die hetzelfde klinken maar anders geschreven worden en iets anders betekenen. In gesproken taal merk je het verschil niet, maar op papier levert het meteen een fout op. Kijk daarom altijd naar de betekenis in de zin: is het een samentrekking ('they are' = they're) of een bezittelijk voornaamwoord ('their')?",
+      "examples": [
+        {
+          "wrong": "Their going to the store.",
+          "right": "They're going to the store.",
+          "note": "'They're' is de samentrekking van 'they are'; 'their' betekent 'hun'."
+        },
+        {
+          "wrong": "Your a great student.",
+          "right": "You're a great student.",
+          "note": "'You're' staat voor 'you are'; 'your' betekent 'jouw'."
+        },
+        {
+          "wrong": "Its a beautiful day.",
+          "right": "It's a beautiful day.",
+          "note": "'It's' betekent 'it is'; 'its' zonder apostrof betekent 'zijn/haar'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Kies het juiste woord: (There/Their/They're) going to the park.",
+          "answer": "They're"
+        },
+        {
+          "prompt": "Vul in: ___ (Your/You're) book is on the table.",
+          "answer": "Your"
+        },
+        {
+          "prompt": "Vul aan: The dog wagged ___ (its/it's) tail.",
+          "answer": "its"
+        }
+      ]
+    },
+    {
+      "rule_id": "irregular-verb-forms",
+      "topic": "Irregular verb forms",
+      "title": "Onregelmatige werkwoordsvormen",
+      "explanation": "Onregelmatige werkwoorden volgen niet het gewone patroon met -ed, maar veranderen van klinker of vorm. Je moet ze in rijtjes leren: infinitief, verleden tijd en voltooid deelwoord. Net als bij onze sterke werkwoorden (drinken - dronk - gedronken) helpt het om de drie vormen altijd samen te oefenen.",
+      "examples": [
+        {
+          "wrong": "I have went to the store.",
+          "right": "I have gone to the store.",
+          "note": "Het voltooid deelwoord van 'go' is 'gone', niet 'went'."
+        },
+        {
+          "wrong": "She drinked the water.",
+          "right": "She drank the water.",
+          "note": "De verleden tijd van 'drink' is 'drank', niet 'drinked'."
+        },
+        {
+          "wrong": "He brang his book.",
+          "right": "He brought his book.",
+          "note": "De verleden tijd van 'bring' is 'brought'; 'brang' bestaat niet."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vul de juiste vorm in: Yesterday, I ____ (go) to the park.",
+          "answer": "went"
+        },
+        {
+          "prompt": "Vul de juiste vorm in: She has ____ (write) a letter.",
+          "answer": "written"
+        },
+        {
+          "prompt": "Vul de juiste vorm in: They have ____ (eat) lunch already.",
+          "answer": "eaten"
+        }
+      ]
+    },
+    {
+      "rule_id": "reported-speech-backshift",
+      "topic": "Reported speech backshift",
+      "title": "Indirecte rede: een tijd terug",
+      "explanation": "Geef je weer wat iemand gezegd heeft, dan schuift de werkwoordstijd in het Engels meestal een stap naar het verleden. De present simple wordt past simple, de present continuous wordt past continuous en 'will' wordt 'would'. In het Nederlands laten we de tijd vaak staan ('Ze zei dat ze moe is'), maar het Engels verlangt bijna altijd die verschuiving.",
+      "examples": [
+        {
+          "wrong": "She said she is tired.",
+          "right": "She said she was tired.",
+          "note": "'Is' schuift naar 'was' omdat 'said' in de verleden tijd staat."
+        },
+        {
+          "wrong": "He told me he will come.",
+          "right": "He told me he would come.",
+          "note": "'Will' wordt 'would' in de indirecte rede."
+        },
+        {
+          "wrong": "They said they are going to the party.",
+          "right": "They said they were going to the party.",
+          "note": "De present continuous 'are going' wordt de past continuous 'were going'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Zet om naar indirecte rede: 'I live in London.' (He said...)",
+          "answer": "He said he lived in London."
+        },
+        {
+          "prompt": "Zet om naar indirecte rede: 'We are watching a movie.' (They told me...)",
+          "answer": "They told me they were watching a movie."
+        },
+        {
+          "prompt": "Zet om naar indirecte rede: 'I will call you.' (She said...)",
+          "answer": "She said she would call me."
+        }
+      ]
+    },
+    {
+      "rule_id": "when-to-use-some-vs-any",
+      "topic": "When to use 'some' vs 'any'",
+      "title": "Some of any: een eenvoudige regel",
+      "explanation": "Gebruik 'some' in bevestigende zinnen en 'any' in ontkennende zinnen en de meeste vragen. Er is een belangrijke uitzondering: bij een aanbod of een beleefd verzoek gebruik je ook in een vraag 'some' ('Would you like some coffee?'). Vergelijk het met ons 'wat': 'Wil je wat koffie?' tegenover 'Ik heb geen koffie'.",
+      "examples": [
+        {
+          "wrong": "I don't have some money.",
+          "right": "I don't have any money.",
+          "note": "In ontkennende zinnen hoort 'any', niet 'some'."
+        },
+        {
+          "wrong": "Would you like any coffee?",
+          "right": "Would you like some coffee?",
+          "note": "Bij een aanbod of beleefd verzoek gebruik je 'some', ook al is het een vraag."
+        },
+        {
+          "wrong": "There is any milk in the fridge.",
+          "right": "There is some milk in the fridge.",
+          "note": "In bevestigende zinnen gebruik je 'some'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vul in: I want ___ water. (bevestigende zin)",
+          "answer": "some"
+        },
+        {
+          "prompt": "Vul in: She doesn't have ___ friends. (ontkenning)",
+          "answer": "any"
+        },
+        {
+          "prompt": "Vul in: Would you like ___ tea? (aanbod)",
+          "answer": "some"
+        }
+      ]
+    },
+    {
+      "rule_id": "definite-vs-zero-article",
+      "topic": "Definite vs zero article",
+      "title": "'The' of helemaal geen lidwoord",
+      "explanation": "Gebruik 'the' als je een specifiek iets bedoelt dat de luisteraar kan aanwijzen. Spreek je algemeen over een meervoud, een niet-telbaar woord of een instelling in zijn gewone functie, dan gebruik je helemaal geen lidwoord. Het Nederlands zet in zulke gevallen juist vaak wel 'de' of 'het': 'de melk is gezond' wordt in het Engels gewoon 'milk is good for you'.",
+      "examples": [
+        {
+          "wrong": "I go to the school every day.",
+          "right": "I go to school every day.",
+          "note": "Bij instellingen (school, hospital, prison) in hun eigenlijke functie gebruik je geen lidwoord."
+        },
+        {
+          "wrong": "She loves the dogs.",
+          "right": "She loves dogs.",
+          "note": "Bij meervouden in algemene zin gebruik je geen lidwoord."
+        },
+        {
+          "wrong": "The milk is good for health.",
+          "right": "Milk is good for health.",
+          "note": "Bij niet-telbare woorden in algemene zin gebruik je geen lidwoord."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vul in: '_____ cats are cute.' (over katten in het algemeen)",
+          "answer": "Cats"
+        },
+        {
+          "prompt": "Vul in: 'I need to go to _____ hospital to visit my friend.' (een specifiek ziekenhuis)",
+          "answer": "the"
+        },
+        {
+          "prompt": "Vul in: '_____ life is beautiful.' (over het leven in het algemeen)",
+          "answer": "Life"
+        }
+      ]
+    },
+    {
+      "rule_id": "clause-linking-conjunctions",
+      "topic": "Clause linking conjunctions",
+      "title": "Zinnen verbinden met voegwoorden",
+      "explanation": "Verbind je twee volledige hoofdzinnen, dan heb je een voegwoord nodig: 'and', 'but', 'or', 'so' of 'because'. Alleen een komma is niet genoeg - dat heet een comma splice en geldt in het Engels als fout. Zet dus altijd een voegwoord tussen de twee delen, of maak er twee losse zinnen van.",
+      "examples": [
+        {
+          "wrong": "I went to the store, I bought milk.",
+          "right": "I went to the store, and I bought milk.",
+          "note": "Gebruik een komma plus een voegwoord als 'and' om twee volledige zinnen te verbinden."
+        },
+        {
+          "wrong": "She is tired she went to bed.",
+          "right": "She is tired, so she went to bed.",
+          "note": "Met 'so' geef je het gevolg aan."
+        },
+        {
+          "wrong": "He likes coffee she prefers tea.",
+          "right": "He likes coffee, but she prefers tea.",
+          "note": "Met 'but' zet je de twee gedachten tegenover elkaar."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Verbeter deze zin: 'I was hungry I ate lunch.'",
+          "answer": "I was hungry, so I ate lunch."
+        },
+        {
+          "prompt": "Verbind deze twee zinnen met 'because': 'I stayed home. I was sick.'",
+          "answer": "I stayed home because I was sick."
+        },
+        {
+          "prompt": "Herstel deze comma splice: 'The sun set, the stars appeared.'",
+          "answer": "The sun set, and the stars appeared."
+        }
+      ]
+    },
+    {
+      "rule_id": "misplaced-modifiers",
+      "topic": "Misplaced modifiers",
+      "title": "Verkeerd geplaatste bepalingen",
+      "explanation": "Een bepaling die te ver van het woord staat waar hij bij hoort, maakt de zin onduidelijk of onbedoeld grappig. Zet zo'n bepaling daarom zo dicht mogelijk bij het woord dat hij beschrijft. Dat geldt zowel voor lange deelwoordconstructies vooraan de zin als voor kleine woordjes als 'almost' en 'only'.",
+      "examples": [
+        {
+          "wrong": "Running to catch the bus, my backpack fell.",
+          "right": "Running to catch the bus, I dropped my backpack.",
+          "note": "De bepaling 'running to catch the bus' hoort bij de persoon die rent (I), niet bij de rugzak."
+        },
+        {
+          "wrong": "She almost drove her kids to school every day.",
+          "right": "She drove her kids to school almost every day.",
+          "note": "Zet 'almost' naast 'every day'; anders staat er dat ze bijna reed maar het niet deed."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Herstel de verkeerd geplaatste bepaling: 'The waiter served a steak to the man with a side of fries.'",
+          "answer": "The waiter served a man a steak with a side of fries."
+        },
+        {
+          "prompt": "Verbeter deze zin: 'He nearly ate the whole pizza himself.' (hij at bijna de hele pizza op)",
+          "answer": "He ate nearly the whole pizza himself."
+        }
+      ]
+    }
+  ]
+}

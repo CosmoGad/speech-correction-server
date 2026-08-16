@@ -1,0 +1,897 @@
+{
+  "learning": "de",
+  "interface": "tr",
+  "generated_at": "2026-08-16T12:01:41+00:00",
+  "model": "claude-opus-4.8-agent",
+  "rules": [
+    {
+      "rule_id": "artikel",
+      "topic": "Artikel",
+      "title": "Almanca Artikeller: der, die, das",
+      "explanation": "Almancada her ismin bir cinsiyeti vardır: eril (der), dişil (die) ya da nötr (das). Bu cinsiyet çoğu zaman mantıkla açıklanamaz, bu yüzden her ismi artikeliyle birlikte ezberlemek gerekir. Türkçede isimlerin cinsiyeti olmadığı için yanlış artikel kullanmak en sık yapılan hatalardan biridir. Yeni bir sözcük öğrenirken onu her zaman artikeliyle birlikte not edin.",
+      "examples": [
+        {
+          "wrong": "der Mädchen",
+          "right": "das Mädchen",
+          "note": "'Mädchen' eril değil nötrdür, çünkü '-chen' ile biten sözcükler daima 'das' alır."
+        },
+        {
+          "wrong": "die Tisch",
+          "right": "der Tisch",
+          "note": "'Tisch' (masa) eril bir isimdir, bu yüzden 'der' ile kullanılır."
+        },
+        {
+          "wrong": "das Sonne",
+          "right": "die Sonne",
+          "note": "'Sonne' (güneş) dişildir; '-e' ile biten sözcükler çoğunlukla dişil olur."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "'Buch' (kitap) sözcüğünün doğru artikeli nedir?",
+          "answer": "das Buch"
+        },
+        {
+          "prompt": "'Mann' (adam) sözcüğünün doğru artikeli nedir?",
+          "answer": "der Mann"
+        },
+        {
+          "prompt": "'Haus' (ev) sözcüğünün doğru artikeli nedir?",
+          "answer": "das Haus"
+        }
+      ]
+    },
+    {
+      "rule_id": "wortstellung",
+      "topic": "Wortstellung",
+      "title": "Almancada Sözcük Sırası: Fiil İkinci Sırada",
+      "explanation": "Almanca ana cümlelerde çekimli fiil her zaman ikinci ögedir; bu, ikinci sözcük olmak zorunda olduğu anlamına gelmez. Birinci öge bir isim, zamir, zarf ya da bütün bir öbek olabilir. Sık yapılan hata, cümlenin başına bir zarf ya da öbek getirdikten sonra fiili üçüncü sıraya bırakmaktır.",
+      "examples": [
+        {
+          "wrong": "Ich heute kaufe Brot.",
+          "right": "Heute kaufe ich Brot.",
+          "note": "'heute' gibi bir zarf öne çıkınca fiil ikinci sıraya geçer, özne ise fiilin arkasına düşer."
+        },
+        {
+          "wrong": "Er gestern ins Kino ging.",
+          "right": "Gestern ging er ins Kino.",
+          "note": "'ging' fiili ikinci sırada olmalıdır; öne alınan zaman zarfı 'gestern' özne ile fiilin yer değiştirmesine yol açar."
+        },
+        {
+          "wrong": "Wir morgen nach Berlin fahren.",
+          "right": "Morgen fahren wir nach Berlin.",
+          "note": "Cümle bir zaman ifadesiyle başladığında özne ile fiil yer değiştirir."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Sözcük sırasını düzeltin: 'Ich morgen habe einen Termin.' (Yarın bir randevum var.)",
+          "answer": "Morgen habe ich einen Termin."
+        },
+        {
+          "prompt": "Yeniden sıralayın: 'Sie heute kocht Suppe.' (Bugün çorba pişiriyor.)",
+          "answer": "Heute kocht sie Suppe."
+        },
+        {
+          "prompt": "Hatayı düzeltin: 'Du immer zu spät kommst.' (Sen hep geç geliyorsun.)",
+          "answer": "Du kommst immer zu spät."
+        }
+      ]
+    },
+    {
+      "rule_id": "kasus",
+      "topic": "Kasus",
+      "title": "Almanca Hâller (Kasus) ve Sık Yapılan Hatalar",
+      "explanation": "Almancada isimler cümledeki görevlerine göre biçim değiştirir: özne (Nominativ), belirtili nesne (Akkusativ), dolaylı nesne (Dativ) ve iyelik (Genitiv). Öğrenciler en çok Akkusativ ile Dativ'i karıştırır, özellikle artikellerde ve zamirlerde. Şunu aklınızda tutun: eril 'den' (Akkusativ) ile 'dem' (Dativ) ayrımı en sık rastlanan hatadır.",
+      "examples": [
+        {
+          "wrong": "Ich gebe der Mann den Buch.",
+          "right": "Ich gebe dem Mann das Buch.",
+          "note": "'der Mann' dolaylı nesnedir (Dativ), bu yüzden 'dem Mann' olur. 'das Buch' ise belirtili nesnedir (Akkusativ) ve nötr olduğu için biçimi değişmez."
+        },
+        {
+          "wrong": "Ich gehe in der Schule.",
+          "right": "Ich gehe in die Schule.",
+          "note": "'in' edatı yön bildirdiğinde (nereye?) Akkusativ ister: 'in die Schule'. Yer bildirdiğinde (nerede?) ise Dativ gelir: 'Ich bin in der Schule.'"
+        },
+        {
+          "wrong": "Ich liebe der Vater.",
+          "right": "Ich liebe den Vater.",
+          "note": "'lieben' fiili Akkusativ ister; eril 'der Vater', belirtili nesne olarak 'den Vater' biçimine girer."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Çevirin: 'Kadına kitabı veriyorum.' ('kadın' için 'die Frau', 'kitap' için 'das Buch' kullanın.)",
+          "answer": "Ich gebe der Frau das Buch."
+        },
+        {
+          "prompt": "Boşluğu doldurun: 'Er kauft ___ (der Apfel) für das Kind.'",
+          "answer": "Er kauft den Apfel für das Kind."
+        },
+        {
+          "prompt": "Cümleyi düzeltin: 'Die Katze gehört der Junge.' (Kedi çocuğa ait.)",
+          "answer": "Die Katze gehört dem Jungen."
+        }
+      ]
+    },
+    {
+      "rule_id": "modalverben",
+      "topic": "Modalverben",
+      "title": "Modal Fiillerle Sözcük Sırası",
+      "explanation": "Almancada modal fiil (können, müssen, wollen gibi) çekimlenir ve cümlenin ikinci sırasına yerleşir; asıl fiil ise mastar hâlinde cümlenin en sonuna gider. En sık yapılan hata, asıl fiili modal fiilin hemen yanına koymak ya da onu tümüyle unutmaktır. Bu iki fiil arasında kalan her şey cümlenin ortasında yer alır.",
+      "examples": [
+        {
+          "wrong": "Ich muss machen meine Hausaufgaben.",
+          "right": "Ich muss meine Hausaufgaben machen.",
+          "note": "Mastar hâlindeki 'machen' cümlenin en sonuna gider, nesne ise araya girer."
+        },
+        {
+          "wrong": "Er kann singen gut.",
+          "right": "Er kann gut singen.",
+          "note": "'gut' zarfı ortada kalır; mastar 'singen' her zaman en sondadır."
+        },
+        {
+          "wrong": "Wir wollen trinken ein Bier.",
+          "right": "Wir wollen ein Bier trinken.",
+          "note": "Modal fiil ikinci sırada, asıl fiil ise mastar olarak cümlenin sonunda bulunur."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Cümleyi doğru sözcük sırasıyla yeniden yazın: 'Ich möchte kaufen ein Geschenk.'",
+          "answer": "Ich möchte ein Geschenk kaufen."
+        },
+        {
+          "prompt": "Eksik mastarı yerleştirin: 'Du musst deine Hausaufgaben ________.' (machen)",
+          "answer": "Du musst deine Hausaufgaben machen."
+        },
+        {
+          "prompt": "Hatayı düzeltin: 'Wir können spielen Fußball.'",
+          "answer": "Wir können Fußball spielen."
+        }
+      ]
+    },
+    {
+      "rule_id": "umlaute",
+      "topic": "Umlaute",
+      "title": "Almanca Umlautlar: ä, ö, ü",
+      "explanation": "Umlautlar ünlünün hem sesini hem de sözcüğün anlamını değiştirir. Sık yapılan hata 'ä' yerine 'a', 'ö' yerine 'o' ya da 'ü' yerine 'u' yazmaktır. Umlautu unutmak 'schon' (çoktan) sözcüğünü 'schön' (güzel) gibi bambaşka bir sözcüğe dönüştürebilir. Türkçedeki ö ve ü sesleri Almancadakine çok yakındır; bu size avantaj sağlar.",
+      "examples": [
+        {
+          "wrong": "schon",
+          "right": "schön",
+          "note": "'schon' 'çoktan', 'schön' ise 'güzel' demektir. Umlaut anlamı tamamen değiştirir."
+        },
+        {
+          "wrong": "Mutter",
+          "right": "Mütter",
+          "note": "'Mutter' tekil 'anne', 'Mütter' ise çoğul 'anneler'dir. Burada çoğulu gösteren şey umlauttur."
+        },
+        {
+          "wrong": "Apfel",
+          "right": "Äpfel",
+          "note": "'Apfel' tekil 'elma', 'Äpfel' ise çoğul 'elmalar'dır. Yine tekil ile çoğulu umlaut ayırır."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "'Sevimli, hoş' anlamına gelen Almanca sıfatı doğru umlautla yazın.",
+          "answer": "hübsch"
+        },
+        {
+          "prompt": "'Üstünde, -in üzerinde' anlamındaki Almanca edatı doğru umlautla yazın.",
+          "answer": "über"
+        },
+        {
+          "prompt": "'der Fuß' (ayak) sözcüğünün çoğulu nedir? Umlautu unutmayın.",
+          "answer": "die Füße"
+        }
+      ]
+    },
+    {
+      "rule_id": "ch-laute",
+      "topic": "ch-Laute",
+      "title": "İki Farklı 'ch' Sesi: ich-Laut ve ach-Laut",
+      "explanation": "Almancada birbirinden ayrı iki 'ch' sesi vardır. İnce ünlülerden (i, e, ä, ö, ü) ve l, n, r ünsüzlerinden sonra yumuşak, damaksıl bir 'ch' gelir. Kalın ünlülerden (a, o, u) sonra ise boğazın gerisinde çıkan sert bir 'ch' duyulur. Yanlış sesi seçmek sözcüğün anlamını bozabilir; dilinizin nereye değdiğine dikkat ederek çalışın.",
+      "examples": [
+        {
+          "wrong": "ich (sert 'ach' sesiyle)",
+          "right": "ich (yumuşak 'ich' sesiyle)",
+          "note": "'ich' sözcüğündeki ch, 'i' ünlüsünden sonra geldiği için yumuşak söylenmelidir."
+        },
+        {
+          "wrong": "Buch (yumuşak ch ile)",
+          "right": "Buch (sert ch ile)",
+          "note": "'Buch' sözcüğünde kalın ünlü 'u' bulunur, bu yüzden sert ch gerekir."
+        },
+        {
+          "wrong": "Milch (sert ch ile)",
+          "right": "Milch (yumuşak ch ile)",
+          "note": "'l' bir ünsüz olmasına rağmen kendisinden sonra gelen ch yumuşak söylenir."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "'sprechen' sözcüğündeki ch sesi yumuşak mı sert mi? Sözcüğü doğru söyleyerek yazın.",
+          "answer": "sprechen"
+        },
+        {
+          "prompt": "'Tochter' sözcüğü hangi ch sesiyle söylenir? Sözcüğü yazın.",
+          "answer": "Tochter"
+        },
+        {
+          "prompt": "'Nacht' sözcüğündeki ch sesi hangisidir (yumuşak / sert)? Sözcüğü yazın.",
+          "answer": "Nacht"
+        }
+      ]
+    },
+    {
+      "rule_id": "betonung-in-zusammengesetzten-wörtern",
+      "topic": "Betonung in zusammengesetzten Wörtern",
+      "title": "Birleşik Sözcüklerde Vurgu",
+      "explanation": "Almanca birleşik sözcüklerde asıl vurgu genellikle ilk ögeye düşer. Birçok öğrenci ikinci ögeyi vurgular, çünkü sözcüğün temel anlamını çoğu zaman o taşır. Kural basittir: birleşik sözcüğün ilk parçası en güçlü vurguyu alır.",
+      "examples": [
+        {
+          "wrong": "FahrRAD",
+          "right": "FAHRrad",
+          "note": "Vurgu '-rad' hecesine değil, ilk parça olan 'Fahr-' hecesine düşer."
+        },
+        {
+          "wrong": "WohnungsTÜR",
+          "right": "WOHNungstür",
+          "note": "'Tür' değil, 'Wohnungs-' vurgulanır."
+        },
+        {
+          "wrong": "HausaufGABE",
+          "right": "HAUSaufgabe",
+          "note": "İlk öge olan 'Haus-' vurgulanmalıdır."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "'Kühlschrank' (buzdolabı) birleşik sözcüğünde vurgu nereye düşer?",
+          "answer": "KÜHLschrank"
+        },
+        {
+          "prompt": "'StraßenBAHN' (tramvay) sözcüğündeki vurgu hatasını düzeltin.",
+          "answer": "STRAßenbahn"
+        },
+        {
+          "prompt": "'Lebensmittel' (gıda ürünleri) sözcüğünde doğru vurgu hangisidir?",
+          "answer": "LEbensmittel"
+        }
+      ]
+    },
+    {
+      "rule_id": "separable-prefix-verbs-usage",
+      "topic": "Separable prefix verbs usage",
+      "title": "Ayrılabilen Ön Ekli Fiiller: Yer Önemlidir",
+      "explanation": "Birçok Almanca fiilin ayrılabilen bir ön eki vardır ('auf', 'an', 'mit' gibi). Ana cümlede bu ön ek fiilden kopar ve cümlenin en sonuna gider; fiil kökü ise ikinci sırada kalır. Yeni başlayanların en sık yaptığı hata, ön eki fiile yapışık bırakmaktır.",
+      "examples": [
+        {
+          "wrong": "Ich aufstehe um 7 Uhr.",
+          "right": "Ich stehe um 7 Uhr auf.",
+          "note": "'auf' ön eki cümlenin sonuna gider."
+        },
+        {
+          "wrong": "Er anruft seine Mutter.",
+          "right": "Er ruft seine Mutter an.",
+          "note": "'an' ön eki fiilden ayrılıp sona geçer."
+        },
+        {
+          "wrong": "Ich ankomme morgen.",
+          "right": "Ich komme morgen an.",
+          "note": "'ankommen' fiilinde de ön ek 'an' ayrılarak cümlenin sonunda yerini alır."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Çevirin: 'Saat 8'de kalkıyor.' (aufstehen fiilini kullanın.)",
+          "answer": "Sie steht um 8 Uhr auf."
+        },
+        {
+          "prompt": "Hatayı düzeltin: 'Ich zuhöre dem Lehrer.'",
+          "answer": "Ich höre dem Lehrer zu."
+        },
+        {
+          "prompt": "Çevirin: 'Yarın geliyor.' (ankommen fiilini kullanın.)",
+          "answer": "Er kommt morgen an."
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-verbs-and-pronoun-placement",
+      "topic": "Reflexive verbs and pronoun placement",
+      "title": "Dönüşlü Fiiller ve Zamirin Yeri",
+      "explanation": "Almancada dönüşlü zamirler (mich, dich, sich...) basit zamanlarda çekimli fiilin hemen arkasında yer alır. Birleşik zamanlarda ya da modal fiillerle kurulan cümlelerde ise zamir, geçmiş zaman ortacından veya mastardan önce gelir. Sık yapılan hata, zamiri cümlenin çok gerisine ya da mastarın arkasına atmaktır.",
+      "examples": [
+        {
+          "wrong": "Ich wasche heute mich.",
+          "right": "Ich wasche mich heute.",
+          "note": "Dönüşlü zamir, diğer ögelerden önce doğrudan çekimli fiili izlemelidir."
+        },
+        {
+          "wrong": "Er hat gewaschen sich.",
+          "right": "Er hat sich gewaschen.",
+          "note": "Perfekt zamanında dönüşlü zamir, geçmiş zaman ortacından önce gelir."
+        },
+        {
+          "wrong": "Wir können anziehen uns.",
+          "right": "Wir können uns anziehen.",
+          "note": "Modal fiillerle birlikte dönüşlü zamir mastardan önce yerleşir."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Sözcük sırasını düzeltin: 'Er hat gewaschen sich.'",
+          "answer": "Er hat sich gewaschen."
+        },
+        {
+          "prompt": "Sözcük sırasını düzeltin: 'Wir müssen anziehen uns.'",
+          "answer": "Wir müssen uns anziehen."
+        },
+        {
+          "prompt": "Sözcük sırasını düzeltin: 'Ich wasche jeden Morgen mich.'",
+          "answer": "Ich wasche mich jeden Morgen."
+        }
+      ]
+    },
+    {
+      "rule_id": "adjective-endings-after-determiners",
+      "topic": "Adjective endings after determiners",
+      "title": "Belirleyicilerden Sonra Sıfat Ekleri",
+      "explanation": "Almancada sıfatlar, niteledikleri ismin cinsiyetine, hâline ve sayısına uyan bir ek alır; bu ek, sıfatın önündeki belirleyiciye göre değişir. Belirli artikellerden sonra (der, die, das) sıfat zayıf ek alır (-e, -en). Belirsiz artikellerden (ein, eine) ve iyelik sıfatlarından (mein, dein) sonra ise güçlü ve zayıf ekleri birleştiren karma ekler kullanılır.",
+      "examples": [
+        {
+          "wrong": "der groß Hund",
+          "right": "der große Hund",
+          "note": "Belirli artikel 'der'den sonra (eril, Nominativ) sıfat -e ekini alır; bu zayıf çekimdir."
+        },
+        {
+          "wrong": "ein nett Frau",
+          "right": "eine nette Frau",
+          "note": "'eine' belirsiz artikelinden sonra (dişil, Nominativ) sıfat -e ekini alır; bu karma çekimdir."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Doğru eki yerleştirin: der klein__ Junge",
+          "answer": "der kleine Junge"
+        },
+        {
+          "prompt": "Hatayı düzeltin: ein rot Auto",
+          "answer": "ein rotes Auto"
+        }
+      ]
+    },
+    {
+      "rule_id": "werden-vs-sein-for-passive",
+      "topic": "werden vs sein for passive",
+      "title": "Edilgen Çatıda werden ile sein Ayrımı",
+      "explanation": "Almancada 'werden' süreç edilgenini (Vorgangspassiv) kurar; yani olmakta olan ya da olmuş bir eylemi anlatır. 'Sein' ise durum edilgenini (Zustandspassiv) kurar ve eylemin ardından ortaya çıkan hâli bildirir. Eylemin kendisini anlatıyorsanız 'werden', ortaya çıkan durumu anlatıyorsanız 'sein' kullanın.",
+      "examples": [
+        {
+          "wrong": "Das Fenster ist geöffnet.",
+          "right": "Das Fenster wird geöffnet.",
+          "note": "Pencere şu anda açılıyorsa, yani eylem sürüyorsa, 'werden' + ortaç kullanılır."
+        },
+        {
+          "wrong": "Die Tür wird geschlossen.",
+          "right": "Die Tür ist geschlossen.",
+          "note": "Kapının kapalı durumda olduğunu, yani şu an kapatılmadığını anlatmak istiyorsanız 'sein' gerekir."
+        },
+        {
+          "wrong": "Das Haus ist letztes Jahr gebaut.",
+          "right": "Das Haus wurde letztes Jahr gebaut.",
+          "note": "Geçmişte gerçekleşen bir eylemi anlatmak için 'werden' fiilinin Präteritum biçimi olan 'wurde' kullanılır."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Çevirin: 'Mektup yazılıyor.' (süreç edilgeni, şimdiki zaman)",
+          "answer": "Der Brief wird geschrieben."
+        },
+        {
+          "prompt": "Çevirin: 'Mektup yazılmış durumda.' (durum edilgeni, şimdiki zaman)",
+          "answer": "Der Brief ist geschrieben."
+        },
+        {
+          "prompt": "Çevirin: 'Ev geçen yıl inşa edildi.' (süreç edilgeni, geçmiş zaman)",
+          "answer": "Das Haus wurde letztes Jahr gebaut."
+        }
+      ]
+    },
+    {
+      "rule_id": "es-gibt-vs-es-istsind",
+      "topic": "es gibt vs es ist/sind",
+      "title": "es gibt ile es ist/sind Arasındaki Fark",
+      "explanation": "Bir şeyin var olduğunu ya da bulunduğunu söylerken 'es gibt' kullanılır; Türkçedeki '... var' yapısının karşılığıdır. 'Es ist' bir şeyi ya da havayı tanımlar, 'es sind' ise çoğul için 'onlar ...dır' anlamını taşır. Sık yapılan hata, '... var' demek için 'es ist/sind' kullanmaktır; bu anlamı yalnızca 'es gibt' verir.",
+      "examples": [
+        {
+          "wrong": "Es ist ein Buch auf dem Tisch.",
+          "right": "Es gibt ein Buch auf dem Tisch.",
+          "note": "'Es gibt' varlık bildirir (masada bir kitap var). 'Es ist' ise 'o bir kitaptır' anlamına gelir, yer bildirmez."
+        },
+        {
+          "wrong": "Es sind viele Menschen in der Stadt.",
+          "right": "Es gibt viele Menschen in der Stadt.",
+          "note": "Çoğulda bile '... var' demek için 'es gibt' kullanılır. 'Es sind' 'onlar ...dır' anlamı taşır."
+        },
+        {
+          "wrong": "Es gibt kalt.",
+          "right": "Es ist kalt.",
+          "note": "Hava durumu ve saat her zaman 'es ist' ile kurulur, asla 'es gibt' ile değil."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Doğru yapıyla tamamlayın: 'Buraya yakın bir restoran var.'",
+          "answer": "Es gibt ein Restaurant in der Nähe."
+        },
+        {
+          "prompt": "Doğru yapıyla tamamlayın: 'Güneşli bir gün.'",
+          "answer": "Es ist ein sonniger Tag."
+        },
+        {
+          "prompt": "Doğru yapıyla tamamlayın: 'Rafta çok kitap var.'",
+          "answer": "Es gibt viele Bücher im Regal."
+        }
+      ]
+    },
+    {
+      "rule_id": "wissen-vs-kennen",
+      "topic": "wissen vs kennen",
+      "title": "wissen ile kennen: Almancada 'bilmek'",
+      "explanation": "'wissen' de 'kennen' de 'bilmek' anlamına gelir ama kullanımları farklıdır. Bir kişiyi, bir yeri ya da bir şeyi tanıyorsanız 'kennen' kullanılır (bir şehri veya bir filmi tanımak gibi). Bilgi, olgu ya da bir işin nasıl yapılacağı söz konusuysa 'wissen' gelir. Pratik bir ipucu: 'tanımak' diyebiliyorsanız 'kennen', 'haberdar olmak, ... olduğunu bilmek' diyebiliyorsanız 'wissen' seçin.",
+      "examples": [
+        {
+          "wrong": "Ich weiß Berlin.",
+          "right": "Ich kenne Berlin.",
+          "note": "Bir yeri, örneğin bir şehri tanımak için 'kennen' kullanılır."
+        },
+        {
+          "wrong": "Ich kenne, dass er heute kommt.",
+          "right": "Ich weiß, dass er heute kommt.",
+          "note": "Bir olguyu ya da bilgiyi ('... olduğunu bilmek') anlatırken 'wissen' gerekir."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Çevirin: 'Cevabı biliyorum.' (bilgi)",
+          "answer": "Ich weiß die Antwort."
+        },
+        {
+          "prompt": "Çevirin: 'Kız kardeşimi tanıyor musun?' (kişi)",
+          "answer": "Kennst du meine Schwester?"
+        }
+      ]
+    },
+    {
+      "rule_id": "als-vs-wie-in-comparisons",
+      "topic": "als vs wie in comparisons",
+      "title": "Karşılaştırmalarda als ile wie",
+      "explanation": "Eşitlik bildirmek için 'wie' (kadar), eşitsizlik bildirmek için 'als' (-den daha) kullanılır. Türkçede her iki durumda da farklı yapılar bulunduğu için bu ayrım kolay öğrenilir, ancak konuşma dilinde 'wie'yi her yerde kullanan Almanları duyabilirsiniz. Yazı dilinde ve sınavlarda bu ayrıma mutlaka uyun.",
+      "examples": [
+        {
+          "wrong": "Er ist größer wie ich.",
+          "right": "Er ist größer als ich.",
+          "note": "Eşitsizlik bildiren karşılaştırmalarda ('größer') 'wie' değil 'als' gelir."
+        },
+        {
+          "wrong": "Sie ist so schnell als er.",
+          "right": "Sie ist so schnell wie er.",
+          "note": "Eşitlik 'so ... wie' kalıbıyla kurulur; 'so ... als' yanlıştır."
+        },
+        {
+          "wrong": "Das Haus ist teurer wie das Auto.",
+          "right": "Das Haus ist teurer als das Auto.",
+          "note": "Karşılaştırma biçimi ('teurer') farkı vurguladığı için 'als' ile kullanılır."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Boşluğu doldurun: 'Mein Hund ist genauso klug ___ deiner.' (... kadar)",
+          "answer": "wie"
+        },
+        {
+          "prompt": "Boşluğu doldurun: 'Dieser Film ist spannender ___ der andere.' (-den daha)",
+          "answer": "als"
+        },
+        {
+          "prompt": "Boşluğu doldurun: 'Sie läuft nicht so schnell ___ ich.' (... kadar, olumsuz)",
+          "answer": "wie"
+        }
+      ]
+    },
+    {
+      "rule_id": "ob-vs-wenn-vs-als-temporal",
+      "topic": "ob vs wenn vs als temporal",
+      "title": "'ob', 'wenn' ve 'als' Ne Zaman Kullanılır?",
+      "explanation": "'ob' yalnızca dolaylı evet/hayır sorularında kullanılır ve '... olup olmadığı' anlamını taşır. 'wenn' şimdiki veya gelecekteki koşullarda ve geçmişte tekrarlanan olaylarda geçer; 'her ... -dığında' ya da 'eğer' anlamı verir. 'als' ise geçmişte yalnızca bir kez yaşanmış bir olay için kullanılır.",
+      "examples": [
+        {
+          "wrong": "Ich weiß nicht, wenn er kommt.",
+          "right": "Ich weiß nicht, ob er kommt.",
+          "note": "Belirsizlik içeren dolaylı sorularda 'ob' gerekir."
+        },
+        {
+          "wrong": "Als ich müde bin, gehe ich schlafen.",
+          "right": "Wenn ich müde bin, gehe ich schlafen.",
+          "note": "Şimdiki zamanda tekrarlanan, alışkanlık bildiren durumlarda 'wenn' kullanılır."
+        },
+        {
+          "wrong": "Wenn ich gestern ankam, regnete es.",
+          "right": "Als ich gestern ankam, regnete es.",
+          "note": "Geçmişte bir kez yaşanmış olaylarda (dün) 'als' gelir."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Boşluğu doldurun: ___ du mich anrufst, bin ich immer zu Hause. (Beni her aradığında...)",
+          "answer": "Wenn"
+        },
+        {
+          "prompt": "Boşluğu doldurun: Ich frage mich, ___ das stimmt. (Bunun doğru olup olmadığını merak ediyorum.)",
+          "answer": "ob"
+        },
+        {
+          "prompt": "Boşluğu doldurun: ___ ich ein Kind war, spielte ich gern im Garten. (Çocukken...)",
+          "answer": "Als"
+        }
+      ]
+    },
+    {
+      "rule_id": "zu-infinitive-vs-dass-clauses",
+      "topic": "zu + infinitive vs dass-clauses",
+      "title": "zu + Mastar ile dass Yan Cümlesi",
+      "explanation": "Almancada hem 'zu + mastar' hem de 'dass' yan cümlesi 'bir şey yapmayı' ya da 'bir şeyin olduğunu' anlatabilir. Temel fark şudur: ana cümle ile yan cümlenin öznesi aynıysa ve hoffen, versuchen gibi belirli fiillerden sonra geliyorsa 'zu + mastar' kullanılır. Özneler farklıysa ya da çekimli fiili olan tam bir cümleye ihtiyaç varsa 'dass' yan cümlesi gerekir.",
+      "examples": [
+        {
+          "wrong": "Ich hoffe, dass ich dich morgen sehen.",
+          "right": "Ich hoffe, dich morgen zu sehen.",
+          "note": "'hoffen' fiilinden sonra özne aynıysa (ich) 'zu + mastar' kullanılır. 'dass' ile kurulsaydı çekimli bir fiil ('sehe') gerekirdi."
+        },
+        {
+          "wrong": "Er versucht, dass er das Fenster öffnet.",
+          "right": "Er versucht, das Fenster zu öffnen.",
+          "note": "'versuchen' fiilinden sonra özne aynıysa (er) 'zu + mastar' gelir; 'dass'lı biçim yapay durur."
+        },
+        {
+          "wrong": "Sie sagt, zu kommen später.",
+          "right": "Sie sagt, dass sie später kommt.",
+          "note": "'sagen' fiilinden sonra yan cümlenin öznesi ana cümleninkinden farklı olduğu için çekimli fiilli 'dass' yan cümlesi gerekir."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Çevirin: 'Seni yarın görmeyi umuyorum.' (zu + mastar, aynı özne)",
+          "answer": "Ich hoffe, dich morgen zu sehen."
+        },
+        {
+          "prompt": "Çevirin: 'Yorgun olduğunu söylüyor.' (dass yan cümlesi, farklı özne)",
+          "answer": "Er sagt, dass er müde ist."
+        },
+        {
+          "prompt": "Çevirin: 'Kapıyı kapatmaya çalışıyor.' (zu + mastar, aynı özne)",
+          "answer": "Sie versucht, die Tür zu schließen."
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciation-uvular-r",
+      "topic": "Pronunciation: uvular R",
+      "title": "Almanca Küçükdil R'sini Öğrenmek",
+      "explanation": "Almancada 'R' harfi dilin ucuyla değil, boğazın gerisinde, küçükdilde çıkarılır. Türkçedeki titrek 'r' sesinden tamamen farklıdır; hafif bir gargara ya da Fransızcadaki 'r' sesine benzer. Dilinizin ucunu titretmeyin, titreşimi boğazınızın derinliğinde oluşturun.",
+      "examples": [
+        {
+          "wrong": "rot (Türkçedeki titrek r ile)",
+          "right": "rot (küçükdil R'si ile)",
+          "note": "Boğazınızı hafifçe temizler gibi yumuşak bir ses çıkarmaya çalışın."
+        },
+        {
+          "wrong": "Brot (dil ucuyla titretilen r ile)",
+          "right": "Brot (küçükdil R'si ile)",
+          "note": "Ünsüzden sonra gelen R'de de ses boğazın gerisinde kalır."
+        },
+        {
+          "wrong": "Vater (Türkçe r ile)",
+          "right": "Vater (sonda ünlüleşen R ile)",
+          "note": "Sözcük sonundaki '-er' özellikle zordur; burada R neredeyse bir ünlü gibi, kısa bir 'a' sesine yakın söylenir."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "'Kırmızı' anlamındaki Almanca sözcüğü doğru küçükdil R'siyle söyleyin.",
+          "answer": "rot"
+        },
+        {
+          "prompt": "'Cadde' anlamındaki Almanca sözcüğü başındaki küçükdil R'sine dikkat ederek söyleyin.",
+          "answer": "Straße"
+        },
+        {
+          "prompt": "'Gitmek, sürmek' anlamındaki Almanca fiili boğaz R'siyle söyleyin.",
+          "answer": "fahren"
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciation-ig-ending-ɪç-vs-ɪk",
+      "topic": "Pronunciation: ig ending [ɪç] vs [ɪk]",
+      "title": "'-ig' Sonekinin Söylenişi: [ɪç], [ɪk] Değil",
+      "explanation": "Standart Almancada sözcük sonundaki '-ig' soneki yumuşak bir 'ch' sesiyle, yani 'ich' sözcüğündeki gibi söylenir. Sık yapılan hata bunu 'ik' biçiminde okumaktır. Sözcük sonunda '-ig' gördüğünüzde her zaman 'ich' sesini kullanın.",
+      "examples": [
+        {
+          "wrong": "fertik",
+          "right": "fertig",
+          "note": "Sondaki 'g' yumuşaktır ve 'ich' gibi söylenir, asla 'ik' gibi değil."
+        },
+        {
+          "wrong": "lustik",
+          "right": "lustig",
+          "note": "Aynı kural geçerlidir: 'lustig' sözcüğü 'ich' sesiyle biter."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "'Hazır' anlamındaki Almanca sözcüğü söyleyin ve '-ig' sonekini doğru telaffuz ettiğinizden emin olun.",
+          "answer": "fertig"
+        },
+        {
+          "prompt": "'-ig' ile biten hangi Almanca sözcük 'komik' anlamına gelir? Sözcüğü yazın.",
+          "answer": "lustig"
+        }
+      ]
+    },
+    {
+      "rule_id": "kein-vs-nicht-negation",
+      "topic": "kein vs nicht negation",
+      "title": "Olumsuzlukta 'kein' ile 'nicht' Kullanımı",
+      "explanation": "Almancada 'kein' isimleri olumsuzlar; 'ein' yerine ya da isim artikelsizken kullanılır. 'Nicht' ise fiilleri, sıfatları, zarfları veya bütün bir cümleyi olumsuzlar. Şunu unutmayın: 'kein' tıpkı 'ein' gibi çekim eki alır, 'nicht' ise hiç değişmez.",
+      "examples": [
+        {
+          "wrong": "Ich habe nicht Hund.",
+          "right": "Ich habe keinen Hund.",
+          "note": "Bir ismi ('Hund') olumsuzlamak için 'keinen' gerekir (eril, Akkusativ)."
+        },
+        {
+          "wrong": "Er ist kein müde.",
+          "right": "Er ist nicht müde.",
+          "note": "'müde' bir sıfattır, bu yüzden 'nicht' kullanılır."
+        },
+        {
+          "wrong": "Ich mag nicht Kaffee.",
+          "right": "Ich mag keinen Kaffee.",
+          "note": "'Kaffee' gibi bir isim nesnesi olumsuzlanırken 'keinen' gelir."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Çevirin: 'Hiç vaktim yok.'",
+          "answer": "Ich habe keine Zeit."
+        },
+        {
+          "prompt": "Olumsuz yapın: 'Sie kommt.' (O gelmiyor.)",
+          "answer": "Sie kommt nicht."
+        },
+        {
+          "prompt": "Tamamlayın: 'Er isst ___ Fleisch.' (Et yemiyor.)",
+          "answer": "kein"
+        }
+      ]
+    },
+    {
+      "rule_id": "time-prepositions-um-am-im",
+      "topic": "Time prepositions: um am im",
+      "title": "Zaman Edatları: um, am, im",
+      "explanation": "Saat bildiren kesin zamanlarda 'um' kullanılır (um 8 Uhr). Haftanın günleri, tarihler ve günün bölümleri (sabah, öğleden sonra, akşam) için 'am' gelir. Aylar, mevsimler ve yıllar için ise 'im' kullanılır. 'in der Nacht' kalıbı bu kuralın dışında kalır.",
+      "examples": [
+        {
+          "wrong": "Ich treffe dich in 8 Uhr.",
+          "right": "Ich treffe dich um 8 Uhr.",
+          "note": "Tam saat bildirirken 'um' kullanılır."
+        },
+        {
+          "wrong": "Wir fahren um Montag weg.",
+          "right": "Wir fahren am Montag weg.",
+          "note": "Haftanın günleriyle 'am' gerekir."
+        },
+        {
+          "wrong": "Ich reise um Sommer.",
+          "right": "Ich reise im Sommer.",
+          "note": "Mevsimlerde 'im' kullanılır."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Tamamlayın: 'Saat üçte randevum var' cümlesinde zaman ifadesi nasıl söylenir?",
+          "answer": "um 3 Uhr"
+        },
+        {
+          "prompt": "Tamamlayın: 'Pazartesi günü çalışıyorum' cümlesinde zaman ifadesi nasıl söylenir?",
+          "answer": "am Montag"
+        },
+        {
+          "prompt": "Tamamlayın: 'Festival temmuzda' cümlesinde zaman ifadesi nasıl söylenir?",
+          "answer": "im Juli"
+        }
+      ]
+    },
+    {
+      "rule_id": "viel-vs-sehr-distinction",
+      "topic": "viel vs sehr distinction",
+      "title": "viel ile sehr: Miktar mı, Yoğunluk mu?",
+      "explanation": "Almancada 'viel' 'çok' anlamına gelir ve miktar bildirir; isimlerle kullanılır. 'Sehr' ise sıfat ve zarfları güçlendiren 'çok, pek' anlamındadır. Sık yapılan hata, 'sehr gut' yerine 'viel gut' demek gibi, 'sehr' gereken yerde 'viel' kullanmaktır.",
+      "examples": [
+        {
+          "wrong": "Das ist viel gut.",
+          "right": "Das ist sehr gut.",
+          "note": "Sıfattan önce 'çok' demek için 'viel' değil 'sehr' kullanılır."
+        },
+        {
+          "wrong": "Ich habe sehr Geld.",
+          "right": "Ich habe viel Geld.",
+          "note": "'Geld' gibi sayılamayan isimlerle miktar bildirmek için 'viel' gerekir."
+        },
+        {
+          "wrong": "Er läuft viel schnell.",
+          "right": "Er läuft sehr schnell.",
+          "note": "'schnell' gibi bir zarfı güçlendirmek için 'sehr' kullanılır."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Boşluğu doldurun: 'Das ist _____ interessant.' (çok ilginç)",
+          "answer": "sehr"
+        },
+        {
+          "prompt": "Boşluğu doldurun: 'Ich habe _____ Freunde.' (çok arkadaş)",
+          "answer": "viele"
+        },
+        {
+          "prompt": "Boşluğu doldurun: 'Sie ist _____ müde.' (çok yorgun)",
+          "answer": "sehr"
+        }
+      ]
+    },
+    {
+      "rule_id": "lernen-vs-studieren",
+      "topic": "lernen vs studieren",
+      "title": "lernen ile studieren Arasındaki Fark",
+      "explanation": "Almancada 'lernen' genel anlamda öğrenmek demektir; bir sınava çalışmak ya da yeni bir beceri edinmek gibi. 'Studieren' ise özellikle üniversitede okumak veya akademik düzeyde derinlemesine araştırma yapmak anlamına gelir. Günlük öğrenmeler için 'lernen', üniversite öğrenimi için 'studieren' kullanın.",
+      "examples": [
+        {
+          "wrong": "Ich studiere Deutsch für die Prüfung.",
+          "right": "Ich lerne Deutsch für die Prüfung.",
+          "note": "Burada dili bir sınav için öğreniyorsunuz, üniversitede bölüm olarak okumuyorsunuz."
+        },
+        {
+          "wrong": "Sie lernt an der Universität.",
+          "right": "Sie studiert an der Universität.",
+          "note": "Üniversiteye kayıtlı olmaktan söz ederken 'studieren' kullanılır."
+        },
+        {
+          "wrong": "Er studiert, wie man kocht.",
+          "right": "Er lernt, wie man kocht.",
+          "note": "Yemek pişirmek gibi pratik bir beceri edinmek 'lernen' ile anlatılır."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Boşluğu 'lernen' ya da 'studieren' fiilinin çekimli biçimiyle doldurun: Ich ___ für den Führerschein.",
+          "answer": "lerne"
+        },
+        {
+          "prompt": "Boşluğu doldurun: Sie ___ Medizin an der Charité.",
+          "answer": "studiert"
+        },
+        {
+          "prompt": "Doğru fiili seçin: Er ___ (lernt/studiert) jeden Abend Vokabeln.",
+          "answer": "lernt"
+        }
+      ]
+    },
+    {
+      "rule_id": "denn-vs-weil-vs-da",
+      "topic": "denn vs weil vs da",
+      "title": "denn, weil ve da: Almancada 'çünkü'",
+      "explanation": "'denn' eşgörevli bir bağlaçtır; sözcük sırasını değiştirmez, yani özne ve fiil ana cümledeki gibi kalır. 'weil' ve 'da' ise yan cümle bağlacıdır ve çekimli fiili cümlenin sonuna gönderir. 'da' genellikle zaten bilinen ya da apaçık nedenler için, 'weil' ise daha yansız biçimde kullanılır. En sık yapılan hata, 'weil' veya 'da' ile ana cümle sözcük sırasını korumaktır.",
+      "examples": [
+        {
+          "wrong": "Ich bleibe zu Hause, weil ich bin krank.",
+          "right": "Ich bleibe zu Hause, weil ich krank bin.",
+          "note": "'weil' fiili yan cümlenin sonuna atar. Karşılaştırın: 'denn ich bin krank' doğrudur, çünkü 'denn' sözcük sırasını değiştirmez."
+        },
+        {
+          "wrong": "Da er hat keine Zeit, kann er nicht kommen.",
+          "right": "Da er keine Zeit hat, kann er nicht kommen.",
+          "note": "'da' da tıpkı 'weil' gibi fiili sona gönderir. Virgülden sonraki ana cümle ise kendi düzenini korur."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Cümleyi tamamlamak için doğru bağlacı seçin (denn ya da weil): 'Ich bleibe zu Hause, ____ ich krank bin.'",
+          "answer": "weil"
+        },
+        {
+          "prompt": "Boşluğu denn ya da weil ile doldurun: 'Sie geht spazieren, ____ das Wetter ist schön.'",
+          "answer": "denn"
+        }
+      ]
+    },
+    {
+      "rule_id": "nach-vs-zu-vs-in-destinations",
+      "topic": "nach vs zu vs in destinations",
+      "title": "Yön Bildirirken nach, zu ve in",
+      "explanation": "Ülke, şehir adları ve artikelsiz yön bildirimleri için 'nach' kullanılır ('nach Berlin'). Kişilere, belirli yerlere ya da etkinliklere giderken 'zu' gelir ('zum Arzt'). Binalar, odalar ve artikel alan yerler için ise içine girmeyi anlatan 'in' kullanılır ('ins Kino').",
+      "examples": [
+        {
+          "wrong": "Ich gehe zu Deutschland.",
+          "right": "Ich gehe nach Deutschland.",
+          "note": "Artikel almayan ülke adlarıyla 'zu' değil 'nach' kullanılır."
+        },
+        {
+          "wrong": "Ich gehe in der Arzt.",
+          "right": "Ich gehe zum Arzt.",
+          "note": "Doktor gibi kişilere gidilirken 'zu' gelir; 'zum' = 'zu dem'."
+        },
+        {
+          "wrong": "Ich gehe nach das Kino.",
+          "right": "Ich gehe ins Kino.",
+          "note": "Sinema gibi bir mekânın içine girerken 'in' + Akkusativ kullanılır; 'ins' = 'in das'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "'Süpermarkete gidiyorum' cümlesi Almancada nasıl söylenir? (Supermarkt, eril)",
+          "answer": "Ich gehe in den Supermarkt."
+        },
+        {
+          "prompt": "'İtalya'ya seyahat ediyor' cümlesi Almancada nasıl söylenir? (Italien, nötr)",
+          "answer": "Sie reist nach Italien."
+        },
+        {
+          "prompt": "'Diş hekimine gidiyoruz' cümlesi Almancada nasıl söylenir? (Zahnarzt, eril)",
+          "answer": "Wir gehen zum Zahnarzt."
+        }
+      ]
+    },
+    {
+      "rule_id": "sich-freuen-auf-vs-über",
+      "topic": "sich freuen auf vs über",
+      "title": "sich freuen auf ile über: Gelecek mi, Şimdi mi?",
+      "explanation": "Gelecekte olacak bir şeyi dört gözle beklediğinizde 'sich freuen auf' (Akkusativ ile) kullanılır. Çoktan gerçekleşmiş ya da şu anda geçerli olan bir şeye seviniyorsanız 'sich freuen über' (yine Akkusativ ile) gelir. Sık yapılan hata, geçmiş olaylar için 'auf', gelecek planlar için 'über' kullanmaktır.",
+      "examples": [
+        {
+          "wrong": "Ich freue mich über den Urlaub nächste Woche.",
+          "right": "Ich freue mich auf den Urlaub nächste Woche.",
+          "note": "Tatil gelecekte olduğu için 'auf' kullanılır."
+        },
+        {
+          "wrong": "Ich freue mich auf das Geschenk, das ich gestern bekommen habe.",
+          "right": "Ich freue mich über das Geschenk, das ich gestern bekommen habe.",
+          "note": "Hediye geçmişte alındığı için 'über' gerekir."
+        },
+        {
+          "wrong": "Wir freuen uns auf deine Hilfe jetzt.",
+          "right": "Wir freuen uns über deine Hilfe jetzt.",
+          "note": "Yardım şu anda gerçekleştiği için 'über' kullanılır."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Doğru edatı yerleştirin (auf ya da über): Er freut sich ___ den Film morgen.",
+          "answer": "auf"
+        },
+        {
+          "prompt": "Doğru edatı yerleştirin: Sie freut sich ___ die guten Noten von letzter Woche.",
+          "answer": "über"
+        },
+        {
+          "prompt": "Doğru sözcüğü seçin: Wir freuen uns (auf / über) das Konzert am Samstag.",
+          "answer": "auf"
+        }
+      ]
+    }
+  ]
+}

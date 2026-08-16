@@ -1,0 +1,897 @@
+{
+  "learning": "de",
+  "interface": "nl",
+  "generated_at": "2026-08-16T12:01:01.623089+00:00",
+  "model": "claude-opus-4.8-agent",
+  "rules": [
+    {
+      "rule_id": "artikel",
+      "topic": "Artikel",
+      "title": "Duitse lidwoorden: der, die en das",
+      "explanation": "Elk Duits zelfstandig naamwoord heeft een geslacht: mannelijk (der), vrouwelijk (die) of onzijdig (das). Het Nederlands kent nog maar twee lidwoorden, de en het, dus je kunt het Duitse geslacht er niet zomaar uit afleiden. Leer het lidwoord daarom altijd samen met het woord aan. Wel een steuntje: veel woorden die bij ons 'het' krijgen zijn in het Duits 'das' (het meisje - das Mädchen), maar vertrouw daar niet blind op.",
+      "examples": [
+        {
+          "wrong": "der Mädchen",
+          "right": "das Mädchen",
+          "note": "Alles wat op -chen eindigt is onzijdig, ook al gaat het over een meisje. Vergelijk ons 'het meisje'."
+        },
+        {
+          "wrong": "die Tisch",
+          "right": "der Tisch",
+          "note": "'Tisch' is mannelijk. Onze 'de tafel' verraadt niets over het Duitse geslacht."
+        },
+        {
+          "wrong": "das Sonne",
+          "right": "die Sonne",
+          "note": "'Sonne' is vrouwelijk; woorden op -e zijn dat vaak. Let op: in het Duits is de zon vrouwelijk en de maan (der Mond) mannelijk - precies omgekeerd aan het Romaanse gevoel."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Welk lidwoord hoort bij 'Buch' (boek)?",
+          "answer": "das Buch"
+        },
+        {
+          "prompt": "Welk lidwoord hoort bij 'Mann' (man)?",
+          "answer": "der Mann"
+        },
+        {
+          "prompt": "Welk lidwoord hoort bij 'Haus' (huis)?",
+          "answer": "das Haus"
+        }
+      ]
+    },
+    {
+      "rule_id": "wortstellung",
+      "topic": "Wortstellung",
+      "title": "Woordvolgorde: de persoonsvorm op plaats twee",
+      "explanation": "In een Duitse hoofdzin staat de persoonsvorm altijd op de tweede plaats in de zin, niet per se als tweede woord. Wat je vooraan zet - een bijwoord, een tijdsbepaling of een hele woordgroep - telt als eerste element, waarna onderwerp en werkwoord omdraaien. Goed nieuws: het Nederlands werkt precies zo. 'Vandaag koop ik brood' is letterlijk 'Heute kaufe ich Brot'; vertrouw hier gerust op je taalgevoel.",
+      "examples": [
+        {
+          "wrong": "Ich heute kaufe Brot.",
+          "right": "Heute kaufe ich Brot.",
+          "note": "Na een bijwoord als 'heute' schuift de persoonsvorm naar plaats twee en volgt het onderwerp - net als in 'Vandaag koop ik brood'."
+        },
+        {
+          "wrong": "Er gestern ins Kino ging.",
+          "right": "Gestern ging er ins Kino.",
+          "note": "De persoonsvorm 'ging' moet op de tweede plaats; door 'gestern' vooraan volgt inversie."
+        },
+        {
+          "wrong": "Wir morgen nach Berlin fahren.",
+          "right": "Morgen fahren wir nach Berlin.",
+          "note": "Begint de zin met een tijdsbepaling, dan wisselen onderwerp en werkwoord van plaats."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Verbeter de woordvolgorde: 'Ich morgen habe einen Termin.' (Ik heb morgen een afspraak.)",
+          "answer": "Morgen habe ich einen Termin."
+        },
+        {
+          "prompt": "Zet in de juiste volgorde: 'Sie heute kocht Suppe.' (Zij kookt vandaag soep.)",
+          "answer": "Heute kocht sie Suppe."
+        },
+        {
+          "prompt": "Verbeter: 'Du immer zu spät kommst.' (Jij komt altijd te laat.)",
+          "answer": "Du kommst immer zu spät."
+        }
+      ]
+    },
+    {
+      "rule_id": "kasus",
+      "topic": "Kasus",
+      "title": "Naamvallen: de valkuil van Nederlandstaligen",
+      "explanation": "Duitse zelfstandige naamwoorden veranderen van vorm naargelang hun rol in de zin: onderwerp (nominatief), lijdend voorwerp (accusatief), meewerkend voorwerp (datief) of bezit (genitief). Het Nederlands heeft dat systeem verloren, dus je moet hier bewust naar leren kijken - je taalgevoel helpt je niet. Onthoud vooral het verschil tussen den (mannelijk accusatief) en dem (mannelijk datief), en dat voorzetsels als in en auf accusatief krijgen bij beweging en datief bij een plaats.",
+      "examples": [
+        {
+          "wrong": "Ich gebe der Mann das Buch.",
+          "right": "Ich gebe dem Mann das Buch.",
+          "note": "'Der Mann' is meewerkend voorwerp en wordt daarom 'dem Mann'; 'das Buch' blijft accusatief."
+        },
+        {
+          "wrong": "Ich gehe in der Schule.",
+          "right": "Ich gehe in die Schule.",
+          "note": "'Gehen' geeft een richting aan (waarheen?), dus accusatief. Bij 'Ich bin in der Schule' gaat het om een plaats (waar?) en volgt datief."
+        },
+        {
+          "wrong": "Ich liebe der Vater.",
+          "right": "Ich liebe den Vater.",
+          "note": "'Lieben' heeft een lijdend voorwerp, dus wordt 'der Vater' in de accusatief 'den Vater'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vertaal: 'Ik geef de vrouw het boek.' (die Frau, das Buch)",
+          "answer": "Ich gebe der Frau das Buch."
+        },
+        {
+          "prompt": "Vul in: 'Er kauft ___ (der Apfel) für das Kind.'",
+          "answer": "Er kauft den Apfel für das Kind."
+        },
+        {
+          "prompt": "Verbeter de zin: 'Die Katze gehört der Junge.' (De kat is van de jongen.)",
+          "answer": "Die Katze gehört dem Jungen."
+        }
+      ]
+    },
+    {
+      "rule_id": "modalverben",
+      "topic": "Modalverben",
+      "title": "Woordvolgorde bij modale werkwoorden",
+      "explanation": "Een modaal werkwoord (können, müssen, wollen, möchten) wordt vervoegd en staat op de tweede plaats, terwijl het hoofdwerkwoord als infinitief helemaal achteraan in de zin komt. Alles wat erbij hoort - lijdend voorwerp, bijwoorden, bepalingen - staat daartussenin. Dit werkt hetzelfde als in het Nederlands ('Ik moet mijn huiswerk maken'), dus laat je niet verleiden tot de Engelse volgorde met de infinitief meteen achter het modale werkwoord.",
+      "examples": [
+        {
+          "wrong": "Ich muss machen meine Hausaufgaben.",
+          "right": "Ich muss meine Hausaufgaben machen.",
+          "note": "De infinitief 'machen' hoort aan het eind, niet direct achter het modale werkwoord."
+        },
+        {
+          "wrong": "Er kann singen gut.",
+          "right": "Er kann gut singen.",
+          "note": "Eerst het bijwoord 'gut', dan pas de infinitief helemaal achteraan."
+        },
+        {
+          "wrong": "Wir wollen trinken ein Bier.",
+          "right": "Wir wollen ein Bier trinken.",
+          "note": "Het lijdend voorwerp 'ein Bier' staat voor de infinitief - precies als in 'Wij willen een biertje drinken'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Herschrijf met de juiste woordvolgorde: 'Ich möchte kaufen ein Geschenk.'",
+          "answer": "Ich möchte ein Geschenk kaufen."
+        },
+        {
+          "prompt": "Vul de ontbrekende infinitief in: 'Du musst deine Hausaufgaben ________.' (machen)",
+          "answer": "Du musst deine Hausaufgaben machen."
+        },
+        {
+          "prompt": "Verbeter de fout: 'Wir können spielen Fußball.'",
+          "answer": "Wir können Fußball spielen."
+        }
+      ]
+    },
+    {
+      "rule_id": "umlaute",
+      "topic": "Umlaute",
+      "title": "De umlauten ä, ö en ü beheersen",
+      "explanation": "Umlauten veranderen zowel de klank als de betekenis van een woord. Schrijf of spreek je a in plaats van ä, o in plaats van ö of u in plaats van ü, dan zeg je iets anders: 'schon' betekent 'al', 'schön' betekent 'mooi'. Let op een verraderlijk verschil met het Nederlands: onze twee puntjes zijn een trema dat alleen aangeeft dat je een nieuwe lettergreep begint (zoals in 'reunie'), terwijl de Duitse puntjes een compleet andere klinker maken.",
+      "examples": [
+        {
+          "wrong": "schon",
+          "right": "schön",
+          "note": "'Schon' betekent 'al', 'schön' betekent 'mooi'. De umlaut verandert de betekenis volledig."
+        },
+        {
+          "wrong": "Mutter",
+          "right": "Mütter",
+          "note": "'Mutter' is 'moeder', 'Mütter' is 'moeders'. Hier markeert de umlaut het meervoud."
+        },
+        {
+          "wrong": "Apfel",
+          "right": "Äpfel",
+          "note": "'Apfel' is 'appel', 'Äpfel' is 'appels'. Ook hier onderscheidt de umlaut enkelvoud en meervoud."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Wat is het meervoud van 'der Fuß' (de voet)? Vergeet de umlaut niet.",
+          "answer": "die Füße"
+        },
+        {
+          "prompt": "Schrijf het Duitse woord voor 'grootte' met de juiste umlaut.",
+          "answer": "Größe"
+        },
+        {
+          "prompt": "Wat is de derde persoon enkelvoud van 'laufen' (lopen)?",
+          "answer": "läuft"
+        }
+      ]
+    },
+    {
+      "rule_id": "ch-laute",
+      "topic": "ch-Laute",
+      "title": "De twee ch-klanken: ich-Laut en ach-Laut",
+      "explanation": "Het Duits kent twee ch-klanken. Na a, o, u en au klinkt ch hard achter in de keel (de ach-Laut in 'Buch'), en dat lijkt sterk op onze ch in 'lachen'. Na i, e, ä, ö, ü en na medeklinkers als l, n en r klinkt ch juist zacht, vooraan tegen het gehemelte (de ich-Laut in 'ich'). Die zachte variant kennen wij niet, dus die moet je apart oefenen: nooit als een Nederlandse harde ch en ook niet als een sj-klank.",
+      "examples": [
+        {
+          "wrong": "ich (met de harde ch van 'lachen')",
+          "right": "ich (met de zachte ich-Laut)",
+          "note": "Na de i hoort de zachte ch, ongeveer als de h in het Engelse 'hue'."
+        },
+        {
+          "wrong": "Buch (met de zachte ich-Laut)",
+          "right": "Buch (met de harde ach-Laut)",
+          "note": "Na de achterklinker u hoort de harde ch - hier mag je gerust je Nederlandse ch gebruiken."
+        },
+        {
+          "wrong": "Milch (met de harde ach-Laut)",
+          "right": "Milch (met de zachte ich-Laut)",
+          "note": "Ook na een medeklinker als l gebruik je de zachte ch."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Welk woord heeft de harde ach-Laut: 'Nacht', 'Milch' of 'ich'?",
+          "answer": "Nacht"
+        },
+        {
+          "prompt": "Welk woord heeft de zachte ich-Laut: 'Buch', 'sprechen' of 'Tochter'?",
+          "answer": "sprechen"
+        },
+        {
+          "prompt": "Vul aan en let op de ch-klank: 'Ich mag ___ (das Buch) sehr.'",
+          "answer": "Ich mag das Buch sehr."
+        }
+      ]
+    },
+    {
+      "rule_id": "betonung-in-zusammengesetzten-wörtern",
+      "topic": "Betonung in zusammengesetzten Wörtern",
+      "title": "Klemtoon in samenstellingen",
+      "explanation": "In Duitse samenstellingen ligt de hoofdklemtoon op het eerste deel, het bepalende woord. Veel leerders leggen de nadruk op het tweede deel, omdat daar de kernbetekenis in zit, maar dat klinkt meteen buitenlands. Het Nederlands doet dit gelukkig hetzelfde: wij zeggen KOELkast en FIETSbel, dus je kunt hier op je gevoel afgaan.",
+      "examples": [
+        {
+          "wrong": "FahrRAD",
+          "right": "FAHRrad",
+          "note": "De klemtoon ligt op 'Fahr-', het eerste deel, niet op '-rad'."
+        },
+        {
+          "wrong": "WohnungsTÜR",
+          "right": "WOHNungstür",
+          "note": "Benadruk 'Wohnungs-', niet 'Tür'."
+        },
+        {
+          "wrong": "HausaufGABE",
+          "right": "HAUSaufgabe",
+          "note": "De nadruk ligt op 'Haus-', het eerste bestanddeel."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Waar ligt de klemtoon in 'Kühlschrank' (koelkast)? Schrijf het woord met de beklemtoonde lettergreep in hoofdletters.",
+          "answer": "KÜHLschrank"
+        },
+        {
+          "prompt": "Verbeter de klemtoon in 'StraßenBAHN' (tram).",
+          "answer": "STRAßenbahn"
+        },
+        {
+          "prompt": "Waar ligt de klemtoon in 'Lebensmittel' (levensmiddelen)?",
+          "answer": "LEbensmittel"
+        }
+      ]
+    },
+    {
+      "rule_id": "separable-prefix-verbs-usage",
+      "topic": "Separable prefix verbs usage",
+      "title": "Scheidbare werkwoorden: het voorvoegsel naar achteren",
+      "explanation": "Veel Duitse werkwoorden hebben een scheidbaar voorvoegsel zoals auf, an of mit. In een hoofdzin laat je dat voorvoegsel los en zet je het helemaal aan het eind van de zin, terwijl de vervoegde stam op de tweede plaats blijft staan. Dit is precies ons systeem van scheidbare werkwoorden: 'Ik sta om zeven uur op' wordt 'Ich stehe um sieben Uhr auf'. Vertrouw hier gerust op je Nederlandse gevoel.",
+      "examples": [
+        {
+          "wrong": "Ich aufstehe um 7 Uhr.",
+          "right": "Ich stehe um 7 Uhr auf.",
+          "note": "Het voorvoegsel 'auf' gaat naar het eind van de zin, net als in 'Ik sta om zeven uur op'."
+        },
+        {
+          "wrong": "Er anruft seine Mutter.",
+          "right": "Er ruft seine Mutter an.",
+          "note": "'An' maakt zich los van het werkwoord en schuift naar achteren."
+        },
+        {
+          "wrong": "Wir mitkommen ins Kino.",
+          "right": "Wir kommen ins Kino mit.",
+          "note": "Ook 'mit' scheidt zich af en komt achteraan te staan."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vertaal: 'Zij staat om acht uur op.'",
+          "answer": "Sie steht um 8 Uhr auf."
+        },
+        {
+          "prompt": "Verbeter de fout: 'Ich zuhöre dem Lehrer.'",
+          "answer": "Ich höre dem Lehrer zu."
+        },
+        {
+          "prompt": "Vertaal: 'Wij gaan mee naar het feest.'",
+          "answer": "Wir kommen zur Party mit."
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-verbs-and-pronoun-placement",
+      "topic": "Reflexive verbs and pronoun placement",
+      "title": "Wederkerende werkwoorden en de plaats van het voornaamwoord",
+      "explanation": "Het wederkerend voornaamwoord (mich, dich, sich, uns, euch) staat in een gewone hoofdzin direct achter de vervoegde persoonsvorm, dus voor alle andere zinsdelen. Bij een voltooide tijd of een modaal werkwoord komt het voor het voltooid deelwoord of de infinitief. Ons 'zich' gedraagt zich vergelijkbaar ('Hij heeft zich gewassen'), maar let op: het Duits gebruikt veel vaker een wederkerend werkwoord dan wij, en de vorm verandert per persoon.",
+      "examples": [
+        {
+          "wrong": "Ich wasche heute mich.",
+          "right": "Ich wasche mich heute.",
+          "note": "Het wederkerend voornaamwoord staat meteen achter de persoonsvorm, voor de tijdsbepaling."
+        },
+        {
+          "wrong": "Er hat gewaschen sich.",
+          "right": "Er hat sich gewaschen.",
+          "note": "In de voltooide tijd komt 'sich' voor het voltooid deelwoord - net als in 'Hij heeft zich gewassen'."
+        },
+        {
+          "wrong": "Wir können anziehen uns.",
+          "right": "Wir können uns anziehen.",
+          "note": "Bij een modaal werkwoord staat het voornaamwoord voor de infinitief."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Verbeter de woordvolgorde: 'Er hat gewaschen sich.'",
+          "answer": "Er hat sich gewaschen."
+        },
+        {
+          "prompt": "Verbeter de woordvolgorde: 'Wir müssen anziehen uns.'",
+          "answer": "Wir müssen uns anziehen."
+        },
+        {
+          "prompt": "Verbeter de woordvolgorde: 'Ich wasche jeden Morgen mich.'",
+          "answer": "Ich wasche mich jeden Morgen."
+        }
+      ]
+    },
+    {
+      "rule_id": "adjective-endings-after-determiners",
+      "topic": "Adjective endings after determiners",
+      "title": "Uitgangen van bijvoeglijke naamwoorden na een lidwoord",
+      "explanation": "Duitse bijvoeglijke naamwoorden krijgen een uitgang die past bij geslacht, naamval en getal van het zelfstandig naamwoord, en die uitgang hangt af van het lidwoord ervoor. Na een bepaald lidwoord (der, die, das) volgen de zwakke uitgangen -e of -en; na ein, eine en de bezittelijke woorden (mein, dein) volgen gemengde uitgangen. Het Nederlands heeft hier maar een miniversie van ('een groot huis' tegenover 'het grote huis'), dus het Duitse systeem vraagt echt oefening.",
+      "examples": [
+        {
+          "wrong": "der groß Hund",
+          "right": "der große Hund",
+          "note": "Na het bepaalde lidwoord 'der' (nominatief mannelijk) krijgt het bijvoeglijk naamwoord de zwakke uitgang -e."
+        },
+        {
+          "wrong": "ein nett Frau",
+          "right": "eine nette Frau",
+          "note": "Na 'eine' (nominatief vrouwelijk) krijgt het bijvoeglijk naamwoord -e; let ook op dat het lidwoord zelf 'eine' moet zijn."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vul de juiste uitgang in: der klein__ Junge",
+          "answer": "der kleine Junge"
+        },
+        {
+          "prompt": "Verbeter de fout: ein rot Auto",
+          "answer": "ein rotes Auto"
+        }
+      ]
+    },
+    {
+      "rule_id": "werden-vs-sein-for-passive",
+      "topic": "werden vs sein for passive",
+      "title": "Lijdende vorm: werden of sein?",
+      "explanation": "Met 'werden' plus voltooid deelwoord beschrijf je een handeling die plaatsvindt (het Vorgangspassiv): 'Das Fenster wird geöffnet' - het raam wordt geopend. Met 'sein' plus voltooid deelwoord beschrijf je de toestand die daarna overblijft (het Zustandspassiv): 'Das Fenster ist geöffnet' - het raam is geopend. Hier helpt het Nederlands je enorm: worden hoort bij de handeling, zijn bij het resultaat, precies zoals in het Duits.",
+      "examples": [
+        {
+          "wrong": "Das Fenster ist geöffnet.",
+          "right": "Das Fenster wird geöffnet.",
+          "note": "Bedoel je dat iemand het raam op dit moment opent, dan gebruik je 'werden' - 'het raam wordt geopend'."
+        },
+        {
+          "wrong": "Die Tür wird geschlossen.",
+          "right": "Die Tür ist geschlossen.",
+          "note": "Bedoel je de toestand (de deur is dicht), dan gebruik je 'sein' - 'de deur is gesloten'."
+        },
+        {
+          "wrong": "Das Haus ist letztes Jahr gebaut.",
+          "right": "Das Haus wurde letztes Jahr gebaut.",
+          "note": "Voor een handeling in het verleden gebruik je 'wurde' + deelwoord, of in de voltooide tijd 'ist gebaut worden'. 'Ist gebaut' alleen is geen correcte zin."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vertaal: 'De brief wordt geschreven.' (handeling, tegenwoordige tijd)",
+          "answer": "Der Brief wird geschrieben."
+        },
+        {
+          "prompt": "Vertaal: 'De brief is geschreven.' (toestand, resultaat)",
+          "answer": "Der Brief ist geschrieben."
+        },
+        {
+          "prompt": "Vertaal: 'Het huis werd vorig jaar gebouwd.' (handeling, verleden tijd)",
+          "answer": "Das Haus wurde letztes Jahr gebaut."
+        }
+      ]
+    },
+    {
+      "rule_id": "es-gibt-vs-es-istsind",
+      "topic": "es gibt vs es ist/sind",
+      "title": "es gibt tegenover es ist/sind",
+      "explanation": "Gebruik 'es gibt' als je zegt dat iets bestaat of aanwezig is - dat is de tegenhanger van ons 'er is' en 'er zijn'. Gebruik 'es ist' en 'es sind' alleen als 'het is' of 'ze zijn', bijvoorbeeld bij het weer, de tijd of een beschrijving. Pas hier goed op: ons 'er is een boek op tafel' verleidt je tot 'es ist', maar het Duits verlangt 'es gibt'. En let op de naamval: na 'es gibt' volgt altijd de accusatief.",
+      "examples": [
+        {
+          "wrong": "Es ist ein Buch auf dem Tisch.",
+          "right": "Es gibt ein Buch auf dem Tisch.",
+          "note": "'Es gibt' drukt bestaan of aanwezigheid uit. 'Es ist' zou betekenen 'het is een boek'."
+        },
+        {
+          "wrong": "Es sind viele Menschen in der Stadt.",
+          "right": "Es gibt viele Menschen in der Stadt.",
+          "note": "Ook bij een meervoud gebruik je 'es gibt' voor 'er zijn'."
+        },
+        {
+          "wrong": "Es gibt kalt.",
+          "right": "Es ist kalt.",
+          "note": "Bij het weer en de tijd gebruik je altijd 'es ist', nooit 'es gibt'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vertaal: 'Er is hier in de buurt een restaurant.'",
+          "answer": "Es gibt ein Restaurant in der Nähe."
+        },
+        {
+          "prompt": "Vertaal: 'Het is een zonnige dag.'",
+          "answer": "Es ist ein sonniger Tag."
+        },
+        {
+          "prompt": "Vertaal: 'Er staan veel boeken in de kast.'",
+          "answer": "Es gibt viele Bücher im Regal."
+        }
+      ]
+    },
+    {
+      "rule_id": "wissen-vs-kennen",
+      "topic": "wissen vs kennen",
+      "title": "wissen tegenover kennen",
+      "explanation": "Gebruik 'kennen' als je vertrouwd bent met een persoon, een plaats of een ding, en 'wissen' voor feiten, informatie en 'weten dat...'. Dit is een van de gemakkelijkste regels voor Nederlandstaligen, want ons weten en kennen worden vrijwel identiek verdeeld: ich kenne Berlin is 'ik ken Berlijn', ich weiß, dass... is 'ik weet dat...'. Vertaal in je hoofd naar het Nederlands en je zit bijna altijd goed.",
+      "examples": [
+        {
+          "wrong": "Ich weiß Berlin.",
+          "right": "Ich kenne Berlin.",
+          "note": "Bij een plaats of stad gebruik je 'kennen' - net als ons 'ik ken Berlijn'."
+        },
+        {
+          "wrong": "Ich kenne, dass er heute kommt.",
+          "right": "Ich weiß, dass er heute kommt.",
+          "note": "Bij een feit of een dass-zin gebruik je 'wissen', precies zoals 'ik weet dat hij vandaag komt'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vertaal: 'Ik weet het antwoord.'",
+          "answer": "Ich weiß die Antwort."
+        },
+        {
+          "prompt": "Vertaal: 'Ken je mijn zus?'",
+          "answer": "Kennst du meine Schwester?"
+        }
+      ]
+    },
+    {
+      "rule_id": "als-vs-wie-in-comparisons",
+      "topic": "als vs wie in comparisons",
+      "title": "als of wie bij vergelijkingen",
+      "explanation": "Bij een verschil gebruik je 'als' (groter dan) en bij gelijkheid 'wie' (zo groot als). Hier zit een echte valstrik voor Nederlandstaligen: ons 'als' in 'zo groot als' wordt in het Duits juist 'wie', en ons 'dan' in 'groter dan' wordt 'als'. De twee woorden lijken op elkaar maar zijn precies andersom verdeeld, dus vertaal 'dan' altijd met 'als' en 'zo ... als' altijd met 'so ... wie'.",
+      "examples": [
+        {
+          "wrong": "Er ist größer wie ich.",
+          "right": "Er ist größer als ich.",
+          "note": "Bij een ongelijkheid (groter dan) hoort 'als', niet 'wie'. Ook veel Duitsers maken deze fout in spreektaal, maar correct is 'als'."
+        },
+        {
+          "wrong": "Sie ist so schnell als er.",
+          "right": "Sie ist so schnell wie er.",
+          "note": "Bij gelijkheid hoort de combinatie 'so ... wie'; 'so ... als' is fout."
+        },
+        {
+          "wrong": "Das Haus ist teurer wie das Auto.",
+          "right": "Das Haus ist teurer als das Auto.",
+          "note": "Na een vergrotende trap (teurer) volgt altijd 'als'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vul in: 'Mein Hund ist genauso klug ___ deiner.' (net zo slim als)",
+          "answer": "wie"
+        },
+        {
+          "prompt": "Vul in: 'Dieser Film ist spannender ___ der andere.' (spannender dan)",
+          "answer": "als"
+        },
+        {
+          "prompt": "Vul in: 'Sie läuft nicht so schnell ___ ich.' (niet zo snel als)",
+          "answer": "wie"
+        }
+      ]
+    },
+    {
+      "rule_id": "ob-vs-wenn-vs-als-temporal",
+      "topic": "ob vs wenn vs als temporal",
+      "title": "ob, wenn en als uit elkaar houden",
+      "explanation": "Gebruik 'ob' alleen bij een indirecte ja/nee-vraag, 'wenn' bij voorwaarden en bij iets wat zich herhaalt, en 'als' bij een eenmalige gebeurtenis in het verleden. Er is een handig ezelsbruggetje voor Nederlandstaligen: ob is ons 'of', wenn is ons 'als' en als is ons 'toen'. Let dus op de valse vriend: het Duitse 'als' betekent nooit ons 'als' in de zin van een voorwaarde.",
+      "examples": [
+        {
+          "wrong": "Ich weiß nicht, wenn er kommt.",
+          "right": "Ich weiß nicht, ob er kommt.",
+          "note": "Bij een indirecte vraag hoort 'ob' - ik weet niet of hij komt."
+        },
+        {
+          "wrong": "Als ich müde bin, gehe ich schlafen.",
+          "right": "Wenn ich müde bin, gehe ich schlafen.",
+          "note": "Bij een terugkerende situatie in het heden hoort 'wenn' - als ik moe ben, ga ik slapen."
+        },
+        {
+          "wrong": "Wenn ich gestern ankam, regnete es.",
+          "right": "Als ich gestern ankam, regnete es.",
+          "note": "Bij een eenmalige gebeurtenis in het verleden hoort 'als' - toen ik gisteren aankwam."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vul in: '___ du mich anrufst, bin ich immer zu Hause.' (Als/telkens wanneer je me belt ...)",
+          "answer": "Wenn"
+        },
+        {
+          "prompt": "Vul in: 'Ich frage mich, ___ das stimmt.' (Ik vraag me af of dat klopt.)",
+          "answer": "ob"
+        },
+        {
+          "prompt": "Vul in: '___ ich ein Kind war, spielte ich gern im Garten.' (Toen ik een kind was ...)",
+          "answer": "Als"
+        }
+      ]
+    },
+    {
+      "rule_id": "zu-infinitive-vs-dass-clauses",
+      "topic": "zu + infinitive vs dass-clauses",
+      "title": "zu + infinitief tegenover een dass-zin",
+      "explanation": "Is het onderwerp van de hoofdzin hetzelfde als dat van de bijzin, dan gebruik je na werkwoorden als hoffen, versuchen en vergessen een constructie met 'zu' + infinitief. Zijn de onderwerpen verschillend, dan heb je een dass-zin met een vervoegd werkwoord nodig. Dit loopt mooi parallel met het Nederlandse verschil tussen 'om te' en 'dat': 'Ik hoop je morgen te zien' tegenover 'Zij zegt dat ze later komt'.",
+      "examples": [
+        {
+          "wrong": "Ich hoffe, dass ich dich morgen sehen.",
+          "right": "Ich hoffe, dich morgen zu sehen.",
+          "note": "Na 'hoffen' met hetzelfde onderwerp gebruik je 'zu' + infinitief - 'ik hoop je morgen te zien'."
+        },
+        {
+          "wrong": "Er versucht, dass er das Fenster öffnet.",
+          "right": "Er versucht, das Fenster zu öffnen.",
+          "note": "Na 'versuchen' met hetzelfde onderwerp is de dass-zin onnatuurlijk; gebruik 'zu' + infinitief."
+        },
+        {
+          "wrong": "Sie sagt, zu kommen später.",
+          "right": "Sie sagt, dass sie später kommt.",
+          "note": "Na 'sagen' verschilt de inhoud van de bijzin; je hebt een dass-zin met vervoegd werkwoord nodig."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vertaal: 'Ik hoop je morgen te zien.' (zu + infinitief, zelfde onderwerp)",
+          "answer": "Ich hoffe, dich morgen zu sehen."
+        },
+        {
+          "prompt": "Vertaal: 'Hij zegt dat hij moe is.' (dass-zin)",
+          "answer": "Er sagt, dass er müde ist."
+        },
+        {
+          "prompt": "Vertaal: 'Zij probeert de deur te sluiten.' (zu + infinitief, zelfde onderwerp)",
+          "answer": "Sie versucht, die Tür zu schließen."
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciation-uvular-r",
+      "topic": "Pronunciation: uvular R",
+      "title": "De Duitse huig-R",
+      "explanation": "De Duitse R wordt achter in de keel gemaakt, met de huig, en niet met de tongpunt. Hij klinkt als een zacht schrapend of gorgelend geluid, ongeveer als de Franse r. Spreek je Nederlands met een zachte Gooise of Amsterdamse huig-r, dan zit je al dicht in de buurt; heb je een rollende tong-r, dan moet je die bewust achterwege laten. Let ook op de -er aan het woordeinde: die klinkt bijna als een korte a.",
+      "examples": [
+        {
+          "wrong": "rot (met een rollende tong-r)",
+          "right": "rot (met een huig-R)",
+          "note": "Maak een zacht keelgeluid, alsof je heel voorzichtig je keel schraapt."
+        },
+        {
+          "wrong": "Farbe (met een tongpunt-r)",
+          "right": "Farbe (met een huig-R)",
+          "note": "Voor een medeklinker wordt de R heel zacht en klinkerachtig; span je tongpunt niet aan."
+        },
+        {
+          "wrong": "Vater (met een duidelijk hoorbare eind-r)",
+          "right": "Vater (met een vocalische -er, bijna 'Fata')",
+          "note": "De uitgang -er wordt geen echte R meer maar een korte, doffe a-klank."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Spreek het Duitse woord voor 'rood' uit met een correcte huig-R.",
+          "answer": "rot"
+        },
+        {
+          "prompt": "Spreek het Duitse woord voor 'straat' uit met een huig-R aan het begin.",
+          "answer": "Straße"
+        },
+        {
+          "prompt": "Spreek het Duitse woord voor 'rijden' uit en let op de R in het midden.",
+          "answer": "fahren"
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciation-ig-ending-ɪç-vs-ɪk",
+      "topic": "Pronunciation: ig ending [ɪç] vs [ɪk]",
+      "title": "De uitgang -ig: [ɪç], niet [ɪk]",
+      "explanation": "In het standaardduits spreek je de uitgang -ig aan het eind van een woord uit met de zachte ch-klank van 'ich', dus niet als 'ik'. Voor Nederlandstaligen is dit herkenbaar: ook wij zeggen 'gelukkig' met een ch-achtige klank aan het eind en niet met een harde k. Alleen als er nog een lettergreep achter komt, zoals in 'billige', klinkt de g weer als een gewone g.",
+      "examples": [
+        {
+          "wrong": "fertik",
+          "right": "fertig",
+          "note": "De slot-g klinkt zacht als in 'ich' - nooit als een k."
+        },
+        {
+          "wrong": "lustik",
+          "right": "lustig",
+          "note": "Dezelfde regel: 'lustig' eindigt op de zachte ich-klank."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Spreek het Duitse woord voor 'klaar' uit en let goed op de uitgang -ig.",
+          "answer": "fertig"
+        },
+        {
+          "prompt": "Welk Duits woord op -ig betekent 'grappig'? Spreek het correct uit.",
+          "answer": "lustig"
+        }
+      ]
+    },
+    {
+      "rule_id": "kein-vs-nicht-negation",
+      "topic": "kein vs nicht negation",
+      "title": "Ontkennen met kein of nicht",
+      "explanation": "'Kein' ontkent een zelfstandig naamwoord en vervangt daarbij 'ein' of het ontbrekende lidwoord; 'nicht' ontkent een werkwoord, een bijvoeglijk naamwoord, een bijwoord of de hele zin. Voor Nederlandstaligen is dit vrijwel gratis: kein is ons 'geen' en nicht is ons 'niet'. Denk er alleen aan dat 'kein' net als 'ein' verbogen wordt: keinen, keine, keinem.",
+      "examples": [
+        {
+          "wrong": "Ich habe nicht Hund.",
+          "right": "Ich habe keinen Hund.",
+          "note": "Je ontkent een zelfstandig naamwoord, dus 'keinen' (accusatief mannelijk) - 'ik heb geen hond'."
+        },
+        {
+          "wrong": "Er ist kein müde.",
+          "right": "Er ist nicht müde.",
+          "note": "'Müde' is een bijvoeglijk naamwoord, dus 'nicht' - 'hij is niet moe'."
+        },
+        {
+          "wrong": "Ich mag nicht Kaffee.",
+          "right": "Ich mag keinen Kaffee.",
+          "note": "Ook hier ontken je een zelfstandig naamwoord zonder lidwoord, dus 'keinen'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vertaal: 'Ik heb geen tijd.'",
+          "answer": "Ich habe keine Zeit."
+        },
+        {
+          "prompt": "Ontken: 'Sie kommt.' (Zij komt niet.)",
+          "answer": "Sie kommt nicht."
+        },
+        {
+          "prompt": "Vul aan: 'Er isst ___ Fleisch.' (Hij eet geen vlees.)",
+          "answer": "kein"
+        }
+      ]
+    },
+    {
+      "rule_id": "time-prepositions-um-am-im",
+      "topic": "Time prepositions: um am im",
+      "title": "Tijdsvoorzetsels: um, am en im",
+      "explanation": "Gebruik 'um' bij een exacte kloktijd, 'am' bij dagen, data en dagdelen, en 'im' bij maanden, jaargetijden en jaartallen. Het Nederlands loopt hier bijna een op een mee: om acht uur wordt um acht Uhr, op maandag wordt am Montag en in juli wordt im Juli. Onthoud alleen de uitzondering 'in der Nacht' - en niet 'am Nacht'.",
+      "examples": [
+        {
+          "wrong": "Ich treffe dich in 8 Uhr.",
+          "right": "Ich treffe dich um 8 Uhr.",
+          "note": "Bij een exacte kloktijd gebruik je 'um', net als ons 'om acht uur'."
+        },
+        {
+          "wrong": "Ich bin an Montag geboren.",
+          "right": "Ich bin am Montag geboren.",
+          "note": "Bij dagen en data gebruik je 'am' (an + dem), zoals ons 'op maandag'."
+        },
+        {
+          "wrong": "Ich reise um Sommer.",
+          "right": "Ich reise im Sommer.",
+          "note": "Bij jaargetijden en maanden gebruik je 'im'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vul aan: 'Ik heb om drie uur een afspraak.' (het tijdsdeel)",
+          "answer": "um 3 Uhr"
+        },
+        {
+          "prompt": "Vul aan: 'Ik werk op maandag.' (het tijdsdeel)",
+          "answer": "am Montag"
+        },
+        {
+          "prompt": "Vul aan: 'Het festival is in juli.' (het tijdsdeel)",
+          "answer": "im Juli"
+        }
+      ]
+    },
+    {
+      "rule_id": "viel-vs-sehr-distinction",
+      "topic": "viel vs sehr distinction",
+      "title": "viel of sehr: hoeveelheid tegenover intensiteit",
+      "explanation": "'Viel' betekent 'veel' en hoort bij een hoeveelheid, dus bij zelfstandige naamwoorden. 'Sehr' betekent 'heel' of 'erg' en versterkt een bijvoeglijk naamwoord of bijwoord. De verdeling is dezelfde als bij ons: je zegt 'veel geld' maar 'heel goed', en dus 'viel Geld' maar 'sehr gut'. Let op dat 'viel' voor een meervoud verbogen wordt tot 'viele'.",
+      "examples": [
+        {
+          "wrong": "Das ist viel gut.",
+          "right": "Das ist sehr gut.",
+          "note": "Voor een bijvoeglijk naamwoord gebruik je 'sehr', net als ons 'heel goed'."
+        },
+        {
+          "wrong": "Ich habe sehr Geld.",
+          "right": "Ich habe viel Geld.",
+          "note": "Voor een zelfstandig naamwoord gebruik je 'viel' - 'veel geld'."
+        },
+        {
+          "wrong": "Er läuft viel schnell.",
+          "right": "Er läuft sehr schnell.",
+          "note": "Ook een bijwoord als 'schnell' wordt versterkt met 'sehr'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vul viel of sehr in: 'Das ist _____ interessant.' (heel interessant)",
+          "answer": "sehr"
+        },
+        {
+          "prompt": "Vul viel of sehr in: 'Ich habe _____ Geld.' (veel geld)",
+          "answer": "viel"
+        },
+        {
+          "prompt": "Vul viel of sehr in: 'Sie ist _____ müde.' (heel moe)",
+          "answer": "sehr"
+        }
+      ]
+    },
+    {
+      "rule_id": "lernen-vs-studieren",
+      "topic": "lernen vs studieren",
+      "title": "lernen tegenover studieren",
+      "explanation": "'Lernen' betekent leren in de brede zin: iets uit je hoofd leren, oefenen voor een toets of een vaardigheid aanleren. 'Studieren' betekent specifiek studeren aan een universiteit of hogeschool. Deze verdeling is precies die van het Nederlandse leren en studeren, maar pas op: waar wij losjes zeggen 'ik zit te studeren voor mijn examen', moet het Duits daar 'ich lerne' gebruiken.",
+      "examples": [
+        {
+          "wrong": "Ich studiere Deutsch für die Prüfung.",
+          "right": "Ich lerne Deutsch für die Prüfung.",
+          "note": "Je leert de taal voor een toets; je volgt geen universitaire studie Duits."
+        },
+        {
+          "wrong": "Sie lernt an der Universität.",
+          "right": "Sie studiert an der Universität.",
+          "note": "Sta je ingeschreven aan een universiteit, dan is het 'studieren'."
+        },
+        {
+          "wrong": "Er studiert, wie man kocht.",
+          "right": "Er lernt, wie man kocht.",
+          "note": "Bij een praktische vaardigheid als koken gebruik je 'lernen'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vul lernen of studieren vervoegd in: 'Ich ___ für den Führerschein.' (Ik leer voor mijn rijbewijs.)",
+          "answer": "lerne"
+        },
+        {
+          "prompt": "Vul in: 'Sie ___ Medizin an der Charité.' (Zij studeert geneeskunde.)",
+          "answer": "studiert"
+        },
+        {
+          "prompt": "Kies het juiste werkwoord: 'Er ___ (lernt/studiert) jeden Abend Vokabeln.'",
+          "answer": "lernt"
+        }
+      ]
+    },
+    {
+      "rule_id": "denn-vs-weil-vs-da",
+      "topic": "denn vs weil vs da",
+      "title": "denn, weil en da: drie keer 'omdat'",
+      "explanation": "'Denn' is nevenschikkend en laat de woordvolgorde ongemoeid, dus de persoonsvorm blijft op de tweede plaats. 'Weil' en 'da' zijn onderschikkend en sturen de persoonsvorm naar het eind van de bijzin; 'da' gebruik je vooral bij een reden die al bekend is, 'weil' is neutraal. Het Nederlands helpt je hier: denn is ons 'want' en weil is ons 'omdat', en ook bij ons gaat het werkwoord na 'omdat' naar achteren.",
+      "examples": [
+        {
+          "wrong": "Ich bleibe zu Hause, weil ich bin krank.",
+          "right": "Ich bleibe zu Hause, weil ich krank bin.",
+          "note": "'Weil' stuurt de persoonsvorm naar het eind - 'omdat ik ziek ben'. Met 'denn' zou het wel 'denn ich bin krank' zijn."
+        },
+        {
+          "wrong": "Da er hat keine Zeit, kann er nicht kommen.",
+          "right": "Da er keine Zeit hat, kann er nicht kommen.",
+          "note": "Ook 'da' zet het werkwoord achteraan; de hoofdzin na de komma houdt zijn gewone volgorde."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Kies denn of weil: 'Ich bleibe zu Hause, ____ ich krank bin.'",
+          "answer": "weil"
+        },
+        {
+          "prompt": "Kies denn of weil: 'Sie geht spazieren, ____ das Wetter ist schön.'",
+          "answer": "denn"
+        }
+      ]
+    },
+    {
+      "rule_id": "nach-vs-zu-vs-in-destinations",
+      "topic": "nach vs zu vs in destinations",
+      "title": "nach, zu of in bij bestemmingen",
+      "explanation": "Gebruik 'nach' bij landen en steden zonder lidwoord en bij richtingen (nach Berlin, nach links). Gebruik 'zu' als je naar een persoon of een specifieke plek gaat (zum Arzt, zur Schule). Gebruik 'in' plus accusatief als je een gebouw of ruimte binnengaat (ins Kino, in den Supermarkt). Ons 'naar' dekt al deze gevallen, dus je moet hier bewust kiezen in plaats van letterlijk vertalen.",
+      "examples": [
+        {
+          "wrong": "Ich gehe zu Deutschland.",
+          "right": "Ich gehe nach Deutschland.",
+          "note": "Bij landen zonder lidwoord gebruik je 'nach', niet 'zu'."
+        },
+        {
+          "wrong": "Ich gehe in der Arzt.",
+          "right": "Ich gehe zum Arzt.",
+          "note": "Bij personen gebruik je 'zu'; 'zum' is de samentrekking van 'zu dem'."
+        },
+        {
+          "wrong": "Ich gehe nach das Kino.",
+          "right": "Ich gehe ins Kino.",
+          "note": "Ga je een gebouw binnen, dan gebruik je 'in' + accusatief; 'ins' is 'in das'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Hoe zeg je 'Ik ga naar de supermarkt'? (der Supermarkt)",
+          "answer": "Ich gehe in den Supermarkt."
+        },
+        {
+          "prompt": "Hoe zeg je 'Zij reist naar Italie'? (Italien)",
+          "answer": "Sie reist nach Italien."
+        },
+        {
+          "prompt": "Hoe zeg je 'Wij gaan naar de tandarts'? (der Zahnarzt)",
+          "answer": "Wir gehen zum Zahnarzt."
+        }
+      ]
+    },
+    {
+      "rule_id": "sich-freuen-auf-vs-über",
+      "topic": "sich freuen auf vs über",
+      "title": "sich freuen auf tegenover sich freuen über",
+      "explanation": "Gebruik 'sich freuen auf' plus accusatief als je uitkijkt naar iets in de toekomst, en 'sich freuen über' plus accusatief als je blij bent met iets wat al gebeurd is of nu speelt. Ons 'zich verheugen op' komt precies overeen met 'sich freuen auf', dus dat deel kun je op gevoel doen; voor het verleden of het heden moet je bewust naar 'über' schakelen.",
+      "examples": [
+        {
+          "wrong": "Ich freue mich über den Urlaub nächste Woche.",
+          "right": "Ich freue mich auf den Urlaub nächste Woche.",
+          "note": "De vakantie ligt in de toekomst, dus 'auf' - 'ik verheug me op de vakantie'."
+        },
+        {
+          "wrong": "Ich freue mich auf das Geschenk, das ich gestern bekommen habe.",
+          "right": "Ich freue mich über das Geschenk, das ich gestern bekommen habe.",
+          "note": "Het cadeau is al ontvangen, dus 'über'."
+        },
+        {
+          "wrong": "Wir freuen uns auf deine Hilfe jetzt.",
+          "right": "Wir freuen uns über deine Hilfe jetzt.",
+          "note": "De hulp speelt op dit moment, dus 'über'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Vul auf of über in: 'Er freut sich ___ den Film morgen.'",
+          "answer": "auf"
+        },
+        {
+          "prompt": "Vul auf of über in: 'Sie freut sich ___ die guten Noten von letzter Woche.'",
+          "answer": "über"
+        },
+        {
+          "prompt": "Kies het juiste voorzetsel: 'Wir freuen uns (auf / über) das Konzert am Samstag.'",
+          "answer": "auf"
+        }
+      ]
+    }
+  ]
+}

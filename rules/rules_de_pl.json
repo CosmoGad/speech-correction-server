@@ -1,0 +1,933 @@
+{
+  "learning": "de",
+  "interface": "pl",
+  "generated_at": "2026-08-16T11:57:22+00:00",
+  "model": "claude-opus-4.8-agent",
+  "rules": [
+    {
+      "rule_id": "artikel",
+      "topic": "Artikel",
+      "title": "Rodzajniki: der, die, das",
+      "explanation": "W polszczyźnie rodzajników nie ma, dlatego najczęstszym błędem jest ich pomijanie albo zgadywanie rodzaju. W niemieckim niemal każdy rzeczownik wymaga rodzajnika, który pokazuje rodzaj (der, die, das) oraz przypadek. Rodzaj gramatyczny często nie pokrywa się z polskim, więc każde nowe słowo zapamiętuj od razu razem z rodzajnikiem.",
+      "examples": [
+        {
+          "wrong": "Ich habe Apfel.",
+          "right": "Ich habe einen Apfel.",
+          "note": "'Apfel' jest rodzaju męskiego, a w bierniku wymaga formy 'einen'."
+        },
+        {
+          "wrong": "Das ist schöne Blume.",
+          "right": "Das ist eine schöne Blume.",
+          "note": "'Blume' jest rodzaju żeńskiego, więc rodzajnik nieokreślony brzmi 'eine'."
+        },
+        {
+          "wrong": "Kinder spielen in Park.",
+          "right": "Kinder spielen im Park.",
+          "note": "Po przyimku 'in' z rzeczownikiem męskim potrzebne jest 'im' (in + dem)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Wstaw właściwy rodzajnik: '___ Hund ist braun.' (Hund — rodzaj męski, określony)",
+          "answer": "Der"
+        },
+        {
+          "prompt": "Wstaw właściwy rodzajnik: 'Sie kauft ___ Tasche.' (Tasche — rodzaj żeński, nieokreślony)",
+          "answer": "eine"
+        },
+        {
+          "prompt": "Wstaw właściwy rodzajnik: '___ Kinder spielen draußen.' (liczba mnoga, określony)",
+          "answer": "Die"
+        }
+      ]
+    },
+    {
+      "rule_id": "wortstellung",
+      "topic": "Wortstellung",
+      "title": "Szyk wyrazów: czasownik na drugim miejscu",
+      "explanation": "W niemieckim zdaniu oznajmującym czasownik w formie osobowej stoi zawsze na drugim miejscu — liczonym w członach, a nie w słowach. Jeśli zdanie zaczyna się od okolicznika czasu albo innego wyrażenia, podmiot przesuwa się za czasownik. Polski szyk jest znacznie swobodniejszy, więc odruchowo stawiamy podmiot na początku i czasownik dopiero po nim.",
+      "examples": [
+        {
+          "wrong": "Ich heute kaufe Brot.",
+          "right": "Heute kaufe ich Brot.",
+          "note": "Po okoliczniku 'heute' czasownik przechodzi na drugie miejsce, a podmiot idzie za nim."
+        },
+        {
+          "wrong": "Ich gestern ins Kino gegangen bin.",
+          "right": "Ich bin gestern ins Kino gegangen.",
+          "note": "Forma osobowa 'bin' musi stać na drugim miejscu, nie na końcu zdania."
+        },
+        {
+          "wrong": "Wir morgen nach Berlin fahren.",
+          "right": "Morgen fahren wir nach Berlin.",
+          "note": "Gdy zdanie otwiera wyrażenie czasu, podmiot i czasownik zamieniają się miejscami."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Popraw szyk wyrazów: 'Ich morgen habe einen Termin.' (Jutro mam spotkanie.)",
+          "answer": "Morgen habe ich einen Termin."
+        },
+        {
+          "prompt": "Ułóż poprawnie: 'Sie heute kocht Suppe.' (Ona dziś gotuje zupę.)",
+          "answer": "Heute kocht sie Suppe."
+        },
+        {
+          "prompt": "Popraw błąd: 'Wir am Sonntag Fußball spielen.'",
+          "answer": "Wir spielen am Sonntag Fußball."
+        }
+      ]
+    },
+    {
+      "rule_id": "kasus",
+      "topic": "Kasus",
+      "title": "Przypadki: biernik czy celownik?",
+      "explanation": "Rzeczownik zmienia formę zależnie od funkcji w zdaniu: mianownik (podmiot), biernik (dopełnienie bliższe), celownik (dopełnienie dalsze) i dopełniacz (przynależność). Polak zna kategorię przypadka, ale niemieckie rekcje bywają inne niż polskie, więc trzeba uczyć się ich razem z czasownikiem. Osobną pułapką są przyimki takie jak 'in' czy 'auf': przy ruchu (dokąd?) łączą się z biernikiem, przy położeniu (gdzie?) z celownikiem.",
+      "examples": [
+        {
+          "wrong": "Ich sehe der Hund.",
+          "right": "Ich sehe den Hund.",
+          "note": "Czasownik 'sehen' wymaga biernika, więc 'der Hund' zmienia się w 'den Hund'."
+        },
+        {
+          "wrong": "Ich gebe der Mann das Buch.",
+          "right": "Ich gebe dem Mann das Buch.",
+          "note": "'Der Mann' to dopełnienie dalsze (komu?), a więc celownik: 'dem Mann'. Książka pozostaje w bierniku."
+        },
+        {
+          "wrong": "Ich bin in die Schule.",
+          "right": "Ich bin in der Schule.",
+          "note": "'Sein' opisuje położenie (gdzie?), więc po 'in' stoi celownik: 'in der Schule'. Przy ruchu byłoby 'in die Schule'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Przetłumacz: 'Daję kobiecie książkę.' (die Frau, das Buch)",
+          "answer": "Ich gebe der Frau das Buch."
+        },
+        {
+          "prompt": "Ułóż zdanie: 'On kładzie książkę na stół.' (dokąd?)",
+          "answer": "Er legt das Buch auf den Tisch."
+        },
+        {
+          "prompt": "Ułóż zdanie: 'Książka leży na stole.' (gdzie?)",
+          "answer": "Das Buch liegt auf dem Tisch."
+        }
+      ]
+    },
+    {
+      "rule_id": "modalverben",
+      "topic": "Modalverben",
+      "title": "Czasowniki modalne i szyk zdania",
+      "explanation": "Czasownik modalny (können, müssen, wollen, möchten) odmienia się i stoi na drugim miejscu, a czasownik główny wędruje na sam koniec zdania w bezokoliczniku. Wszystko, co dopowiadamy — dopełnienie, okolicznik — mieści się między nimi, tworząc tak zwaną klamrę zdaniową. Po polsku bezokolicznik idzie zaraz po czasowniku modalnym, dlatego łatwo o błąd.",
+      "examples": [
+        {
+          "wrong": "Ich muss machen meine Hausaufgaben.",
+          "right": "Ich muss meine Hausaufgaben machen.",
+          "note": "Bezokolicznik 'machen' musi stać na końcu, a nie zaraz po czasowniku modalnym."
+        },
+        {
+          "wrong": "Er kann singen gut.",
+          "right": "Er kann gut singen.",
+          "note": "Najpierw okolicznik 'gut', a bezokolicznik zamyka zdanie."
+        },
+        {
+          "wrong": "Wir wollen trinken ein Bier.",
+          "right": "Wir wollen ein Bier trinken.",
+          "note": "Dopełnienie 'ein Bier' stoi wewnątrz klamry, bezokolicznik 'trinken' na końcu."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Ułóż wyrazy we właściwej kolejności: wollen / wir / heute / ins Kino / gehen",
+          "answer": "Wir wollen heute ins Kino gehen."
+        },
+        {
+          "prompt": "Ułóż wyrazy we właściwej kolejności: müssen / du / die Arbeit / machen",
+          "answer": "Du musst die Arbeit machen."
+        },
+        {
+          "prompt": "Popraw błąd w zdaniu: 'Sie möchte trinken einen Kaffee.'",
+          "answer": "Sie möchte einen Kaffee trinken."
+        }
+      ]
+    },
+    {
+      "rule_id": "umlaute",
+      "topic": "Umlaute",
+      "title": "Przegłosy ä, ö, ü",
+      "explanation": "Przegłosy nie są ozdobnikiem — zmieniają brzmienie i znaczenie wyrazu. Pominięcie dwóch kropek robi ze 'schön' (piękny) słowo 'schon' (już), a z 'Mütter' (matki) 'Mutter' (matka). W polskim takich samogłosek nie ma, więc trzeba świadomie ćwiczyć zarówno ich wymowę, jak i zapis.",
+      "examples": [
+        {
+          "wrong": "schon",
+          "right": "schön",
+          "note": "'Schon' znaczy 'już', a 'schön' — 'piękny'. Przegłos całkowicie zmienia sens."
+        },
+        {
+          "wrong": "Uber",
+          "right": "Über",
+          "note": "'Über' znaczy 'nad, o'; bez przegłosu wyraz jest po prostu błędny."
+        },
+        {
+          "wrong": "Mutter",
+          "right": "Mütter",
+          "note": "'Mutter' to jedna matka, 'Mütter' — matki. Tutaj przegłos tworzy liczbę mnogą."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Napisz poprawnie niemieckie słowo oznaczające 'piękny':",
+          "answer": "schön"
+        },
+        {
+          "prompt": "Napisz poprawnie niemieckie słowo oznaczające 'nad':",
+          "answer": "über"
+        },
+        {
+          "prompt": "Jaka jest liczba mnoga od 'der Fuß' (stopa)? Pamiętaj o przegłosie.",
+          "answer": "die Füße"
+        }
+      ]
+    },
+    {
+      "rule_id": "ch-laute",
+      "topic": "ch-Laute",
+      "title": "Dwa niemieckie dźwięki 'ch'",
+      "explanation": "Połączenie 'ch' ma w niemieckim dwie realizacje. Po a, o, u oraz au brzmi twardo, mniej więcej jak polskie 'ch' w słowie 'chata' (Buch, Nacht). Po i, e, ä, ö, ü oraz po spółgłoskach l, n, r wymawiamy je miękko, podobnie do 'ch' w polskim 'chichot', tylko delikatniej (ich, Milch). Polacy zwykle wszędzie wstawiają twarde 'ch', co od razu słychać.",
+      "examples": [
+        {
+          "wrong": "ich (mit hartem ch wie in 'Buch')",
+          "right": "ich (mit weichem ch)",
+          "note": "Po samogłosce 'i' zawsze wymawiamy miękkie 'ch'."
+        },
+        {
+          "wrong": "Buch (mit weichem ch wie in 'ich')",
+          "right": "Buch (mit hartem ch)",
+          "note": "Po tylnej samogłosce 'u' obowiązuje twarde 'ch'."
+        },
+        {
+          "wrong": "Milch (mit hartem ch)",
+          "right": "Milch (mit weichem ch)",
+          "note": "Także po spółgłosce 'l' używamy wersji miękkiej."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Które 'ch' występuje w słowie 'Nacht' — twarde czy miękkie? Zapisz to słowo po niemiecku.",
+          "answer": "Nacht"
+        },
+        {
+          "prompt": "Wymów na głos słowo oznaczające 'ja' z miękkim 'ch' i zapisz je po niemiecku.",
+          "answer": "ich"
+        },
+        {
+          "prompt": "Uzupełnij zdanie i przeczytaj je na głos: 'Ich mag ___ Buch sehr.' (rodzajnik określony)",
+          "answer": "Ich mag das Buch sehr."
+        }
+      ]
+    },
+    {
+      "rule_id": "betonung-in-zusammengesetzten-wörtern",
+      "topic": "Betonung in zusammengesetzten Wörtern",
+      "title": "Akcent w wyrazach złożonych",
+      "explanation": "W niemieckich rzeczownikach złożonych akcent główny pada na pierwszy człon, czyli na wyraz określający. Uczący się odruchowo akcentują drugą część, bo to ona niesie zasadnicze znaczenie. W polskim akcent pada zwykle na przedostatnią sylabę, więc niemiecki wzorzec trzeba wyćwiczyć osobno.",
+      "examples": [
+        {
+          "wrong": "WohnungsTÜR",
+          "right": "WOHNUNGStür",
+          "note": "Akcent pada na pierwszy człon 'Wohnungs-'."
+        },
+        {
+          "wrong": "HausaufGABE",
+          "right": "HAUSaufgabe",
+          "note": "Podkreślamy 'Haus-', a nie '-aufgabe'."
+        },
+        {
+          "wrong": "KinderZIMMER",
+          "right": "KINDERzimmer",
+          "note": "Akcent na 'Kinder-', czyli na członie określającym."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Zaznacz poprawny akcent w słowie 'Tischlampe' (lampka na biurko) — zapisz akcentowaną część wielkimi literami.",
+          "answer": "TISCHlampe"
+        },
+        {
+          "prompt": "Jak wygląda słowo 'Schreibtisch' (biurko) z zaznaczonym akcentem?",
+          "answer": "SCHREIBtisch"
+        },
+        {
+          "prompt": "Popraw błędny akcent w słowie 'BücherREGAL'.",
+          "answer": "BÜCHERregal"
+        }
+      ]
+    },
+    {
+      "rule_id": "separable-prefix-verbs-usage",
+      "topic": "Separable prefix verbs usage",
+      "title": "Czasowniki z przedrostkiem rozdzielnym",
+      "explanation": "Wiele niemieckich czasowników ma przedrostek rozdzielny (an-, auf-, mit-, zu-). W zdaniu oznajmującym w czasie teraźniejszym i przeszłym prostym przedrostek odrywa się i wędruje na koniec zdania, a odmieniona część czasownika zostaje na drugim miejscu. Typowy błąd to pozostawienie przedrostka przy czasowniku, tak jak w polskim 'wstaję' czy 'dzwonię'.",
+      "examples": [
+        {
+          "wrong": "Ich ankomme morgen.",
+          "right": "Ich komme morgen an.",
+          "note": "Przedrostek 'an' musi stanąć na końcu zdania."
+        },
+        {
+          "wrong": "Er aufsteht früh.",
+          "right": "Er steht früh auf.",
+          "note": "Przedrostek 'auf' odrywa się i przechodzi na koniec."
+        },
+        {
+          "wrong": "Sie anruft ihre Mutter.",
+          "right": "Sie ruft ihre Mutter an.",
+          "note": "Między odmienionym czasownikiem a przedrostkiem mieści się dopełnienie."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Przetłumacz: 'Wstaję o siódmej.' (czasownik aufstehen)",
+          "answer": "Ich stehe um 7 Uhr auf."
+        },
+        {
+          "prompt": "Popraw błąd: 'Ich anrufe dich morgen.'",
+          "answer": "Ich rufe dich morgen an."
+        },
+        {
+          "prompt": "Ułóż zdanie: 'On przyjeżdża jutro.' (czasownik ankommen)",
+          "answer": "Er kommt morgen an."
+        }
+      ]
+    },
+    {
+      "rule_id": "reflexive-verbs-and-pronoun-placement",
+      "topic": "Reflexive verbs and pronoun placement",
+      "title": "Zaimek zwrotny i jego miejsce w zdaniu",
+      "explanation": "Niemiecki zaimek zwrotny (mich, dich, sich, uns, euch) stoi bezpośrednio po odmienionym czasowniku, a nie przed nim. W czasach złożonych i po czasowniku modalnym zajmuje miejsce zaraz po formie osobowej, czyli przed imiesłowem lub bezokolicznikiem. Polskie 'się' jest ruchome i często poprzedza czasownik, dlatego łatwo przenieść ten nawyk na niemiecki.",
+      "examples": [
+        {
+          "wrong": "Ich mich wasche.",
+          "right": "Ich wasche mich.",
+          "note": "W zdaniu prostym zaimek stoi zaraz po odmienionym czasowniku."
+        },
+        {
+          "wrong": "Er hat gewaschen sich.",
+          "right": "Er hat sich gewaschen.",
+          "note": "W czasie Perfekt zaimek idzie po czasowniku posiłkowym, przed imiesłowem."
+        },
+        {
+          "wrong": "Wir können anziehen uns.",
+          "right": "Wir können uns anziehen.",
+          "note": "Po czasowniku modalnym zaimek stoi przed bezokolicznikiem, nie po nim."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Popraw szyk: 'Er hat gewaschen sich.'",
+          "answer": "Er hat sich gewaschen."
+        },
+        {
+          "prompt": "Popraw szyk: 'Wir müssen anziehen uns.'",
+          "answer": "Wir müssen uns anziehen."
+        },
+        {
+          "prompt": "Popraw szyk: 'Ich wasche jeden Morgen mich.'",
+          "answer": "Ich wasche mich jeden Morgen."
+        }
+      ]
+    },
+    {
+      "rule_id": "adjective-endings-after-determiners",
+      "topic": "Adjective endings after determiners",
+      "title": "Końcówki przymiotnika po rodzajniku",
+      "explanation": "Niemiecki przymiotnik stojący przed rzeczownikiem zawsze dostaje końcówkę, a jej kształt zależy od tego, co go poprzedza. Po rodzajniku określonym (der, die, das) obowiązuje odmiana słaba, czyli najczęściej -e lub -en. Po rodzajniku nieokreślonym (ein, eine) i po zaimkach dzierżawczych stosujemy odmianę mieszaną, w której przymiotnik przejmuje informację o rodzaju: 'ein rotes Auto'.",
+      "examples": [
+        {
+          "wrong": "der groß Hund",
+          "right": "der große Hund",
+          "note": "Po 'der' w mianowniku przymiotnik dostaje słabą końcówkę -e."
+        },
+        {
+          "wrong": "die schön Blume",
+          "right": "die schöne Blume",
+          "note": "Po 'die' w rodzaju żeńskim także -e."
+        },
+        {
+          "wrong": "ein nett Frau",
+          "right": "eine nette Frau",
+          "note": "Poprawiamy dwie rzeczy naraz: rodzajnik 'eine' dla rodzaju żeńskiego i końcówkę -e przy przymiotniku."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Uzupełnij końcówkę: der alt__ Mann",
+          "answer": "der alte Mann"
+        },
+        {
+          "prompt": "Uzupełnij końcówkę: die weiß__ Katze",
+          "answer": "die weiße Katze"
+        },
+        {
+          "prompt": "Popraw błąd: ein rot Auto",
+          "answer": "ein rotes Auto"
+        }
+      ]
+    },
+    {
+      "rule_id": "werden-vs-sein-for-passive",
+      "topic": "werden vs sein for passive",
+      "title": "Strona bierna: werden czy sein?",
+      "explanation": "'Werden' z imiesłowem biernym tworzy stronę bierną czynności (Vorgangspassiv) — opisuje to, co się właśnie dzieje albo działo. 'Sein' z imiesłowem tworzy stronę bierną stanu (Zustandspassiv) i mówi o rezultacie, który trwa. Porównaj: 'Das Fenster wird geöffnet' (ktoś właśnie otwiera okno) i 'Das Fenster ist geöffnet' (okno jest otwarte).",
+      "examples": [
+        {
+          "wrong": "Das Fenster ist gerade geöffnet.",
+          "right": "Das Fenster wird gerade geöffnet.",
+          "note": "Słowo 'gerade' wskazuje trwającą czynność, więc potrzebne jest 'werden'."
+        },
+        {
+          "wrong": "Die Tür wird schon seit gestern geschlossen.",
+          "right": "Die Tür ist schon seit gestern geschlossen.",
+          "note": "Mowa o stanie trwającym od wczoraj, a nie o samym zamykaniu — stąd 'sein'."
+        },
+        {
+          "wrong": "Das Haus ist letztes Jahr gebaut.",
+          "right": "Das Haus wurde letztes Jahr gebaut.",
+          "note": "Budowa to czynność zakończona w przeszłości, więc używamy 'wurde', a nie 'ist'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Przetłumacz: 'List jest właśnie pisany.' (strona bierna czynności, czas teraźniejszy)",
+          "answer": "Der Brief wird geschrieben."
+        },
+        {
+          "prompt": "Przetłumacz: 'List jest już napisany.' (strona bierna stanu)",
+          "answer": "Der Brief ist geschrieben."
+        },
+        {
+          "prompt": "Przetłumacz: 'Dom został zbudowany w zeszłym roku.' (strona bierna czynności, czas przeszły)",
+          "answer": "Das Haus wurde letztes Jahr gebaut."
+        }
+      ]
+    },
+    {
+      "rule_id": "es-gibt-vs-es-istsind",
+      "topic": "es gibt vs es ist/sind",
+      "title": "'es gibt' a 'es ist/sind'",
+      "explanation": "Zwrotu 'es gibt' używamy, gdy mówimy, że coś istnieje albo jest dostępne — odpowiada polskiemu 'jest', 'są', 'znajduje się'. Po 'es gibt' rzeczownik stoi zawsze w bierniku. 'Es ist' i 'es sind' służą do opisu ('to jest…') oraz do mówienia o pogodzie i godzinie, a nie do stwierdzania istnienia.",
+      "examples": [
+        {
+          "wrong": "Es ist ein Buch auf dem Tisch.",
+          "right": "Es gibt ein Buch auf dem Tisch.",
+          "note": "Mówimy o tym, że książka gdzieś jest, więc potrzebujemy 'es gibt'."
+        },
+        {
+          "wrong": "Es sind viele Menschen in der Stadt.",
+          "right": "Es gibt viele Menschen in der Stadt.",
+          "note": "Także w liczbie mnogiej istnienie wyrażamy przez 'es gibt'."
+        },
+        {
+          "wrong": "Es gibt kalt.",
+          "right": "Es ist kalt.",
+          "note": "Pogodę i godzinę opisujemy wyłącznie przez 'es ist'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Przetłumacz: 'W mieście jest muzeum.'",
+          "answer": "Es gibt ein Museum in der Stadt."
+        },
+        {
+          "prompt": "Przetłumacz: 'Dziś jest słonecznie.'",
+          "answer": "Es ist heute sonnig."
+        },
+        {
+          "prompt": "Przetłumacz: 'Na półce jest dużo książek.'",
+          "answer": "Es gibt viele Bücher im Regal."
+        }
+      ]
+    },
+    {
+      "rule_id": "wissen-vs-kennen",
+      "topic": "wissen vs kennen",
+      "title": "'wissen' a 'kennen' — dwa sposoby na 'wiedzieć'",
+      "explanation": "Polskie 'znać' i 'wiedzieć' mają w niemieckim wyraźny odpowiednik: 'kennen' oznacza znajomość osoby, miejsca lub rzeczy, a 'wissen' — wiedzę o faktach i informacjach. Prosty test: jeśli po czasowniku możesz wstawić zdanie podrzędne z 'dass' albo pytanie zależne, użyj 'wissen'. Jeśli po czasowniku stoi zwykłe dopełnienie, zwykle właściwe jest 'kennen'.",
+      "examples": [
+        {
+          "wrong": "Ich kenne, dass Berlin die Hauptstadt ist.",
+          "right": "Ich weiß, dass Berlin die Hauptstadt ist.",
+          "note": "Przy faktach i zdaniach z 'dass' używamy 'wissen'."
+        },
+        {
+          "wrong": "Weißt du diesen Mann?",
+          "right": "Kennst du diesen Mann?",
+          "note": "Znajomość osoby wyrażamy przez 'kennen'."
+        },
+        {
+          "wrong": "Ich weiß Berlin.",
+          "right": "Ich kenne Berlin.",
+          "note": "Miasta i miejsca również 'znamy', a nie 'wiemy'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Przetłumacz: 'Wiem, że jutro będzie padać.'",
+          "answer": "Ich weiß, dass es morgen regnen wird."
+        },
+        {
+          "prompt": "Wstaw właściwy czasownik: '___ du das Restaurant neben dem Kino?'",
+          "answer": "Kennst"
+        },
+        {
+          "prompt": "Wybierz poprawną formę: 'Er ___ nicht, wie spät es ist.' (weiß / kennt)",
+          "answer": "weiß"
+        }
+      ]
+    },
+    {
+      "rule_id": "als-vs-wie-in-comparisons",
+      "topic": "als vs wie in comparisons",
+      "title": "Porównania: 'als' czy 'wie'?",
+      "explanation": "Przy porównaniu równości używamy 'wie' (so … wie = tak … jak), a przy porównaniu nierówności — 'als' (niż). Po stopniu wyższym stoi więc zawsze 'als', nigdy 'wie'. Mieszanie tych słów jest częste także wśród samych Niemców w mowie potocznej, ale w poprawnej niemczyźnie rozróżnienie obowiązuje.",
+      "examples": [
+        {
+          "wrong": "Er ist größer wie ich.",
+          "right": "Er ist größer als ich.",
+          "note": "Po stopniu wyższym 'größer' obowiązuje 'als'."
+        },
+        {
+          "wrong": "Sie ist so schnell als er.",
+          "right": "Sie ist so schnell wie er.",
+          "note": "Konstrukcja równości brzmi 'so … wie'; wersja z 'als' jest błędna."
+        },
+        {
+          "wrong": "Das Haus ist teurer wie das Auto.",
+          "right": "Das Haus ist teurer als das Auto.",
+          "note": "Znowu stopień wyższy 'teurer', więc potrzebne jest 'als'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Uzupełnij: 'Mein Hund ist genauso klug ___ deiner.' (tak samo jak)",
+          "answer": "wie"
+        },
+        {
+          "prompt": "Uzupełnij: 'Dieser Film ist spannender ___ der andere.' (niż)",
+          "answer": "als"
+        },
+        {
+          "prompt": "Uzupełnij: 'Sie läuft nicht so schnell ___ ich.' (tak … jak, w przeczeniu)",
+          "answer": "wie"
+        }
+      ]
+    },
+    {
+      "rule_id": "ob-vs-wenn-vs-als-temporal",
+      "topic": "ob vs wenn vs als temporal",
+      "title": "'ob', 'wenn' i 'als' — trzy różne 'kiedy'",
+      "explanation": "'Ob' odpowiada polskiemu 'czy' i wprowadza pytanie zależne, więc z czasem nie ma nic wspólnego. 'Wenn' znaczy 'kiedy' lub 'gdy' w odniesieniu do teraźniejszości, przyszłości oraz czynności powtarzalnych w przeszłości. 'Als' zarezerwowane jest dla pojedynczego zdarzenia w przeszłości.",
+      "examples": [
+        {
+          "wrong": "Ob ich klein war, spielte ich gern.",
+          "right": "Als ich klein war, spielte ich gern.",
+          "note": "'Ob' znaczy 'czy', a nie 'kiedy'. Jednorazowy okres w przeszłości wymaga 'als'."
+        },
+        {
+          "wrong": "Wenn ich gestern kam, war sie schon da.",
+          "right": "Als ich gestern kam, war sie schon da.",
+          "note": "Konkretne zdarzenie z przeszłości to zawsze 'als'."
+        },
+        {
+          "wrong": "Als ich nach Hause komme, rufe ich dich an.",
+          "right": "Wenn ich nach Hause komme, rufe ich dich an.",
+          "note": "Przyszłość i czynności powtarzalne wprowadzamy przez 'wenn'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Wstaw właściwy spójnik: '_____ ich in Berlin war, habe ich das Brandenburger Tor gesehen.' (jednorazowe zdarzenie w przeszłości)",
+          "answer": "Als"
+        },
+        {
+          "prompt": "Wstaw właściwy spójnik: '_____ ich Zeit habe, lese ich ein Buch.' (czynność powtarzalna)",
+          "answer": "Wenn"
+        },
+        {
+          "prompt": "Wstaw właściwy spójnik: 'Ich weiß nicht, _____ er morgen kommt.' (pytanie zależne)",
+          "answer": "ob"
+        }
+      ]
+    },
+    {
+      "rule_id": "zu-infinitive-vs-dass-clauses",
+      "topic": "zu + infinitive vs dass-clauses",
+      "title": "'zu' z bezokolicznikiem czy zdanie z 'dass'?",
+      "explanation": "Gdy podmiot zdania głównego i podrzędnego jest ten sam, po czasownikach takich jak hoffen, versuchen czy vergessen używamy konstrukcji 'zu' z bezokolicznikiem. Gdy podmioty są różne, potrzebne jest pełne zdanie z 'dass' i odmienionym czasownikiem na końcu. Polacy niemal zawsze sięgają po 'dass', bo polskie 'że' pasuje w obu sytuacjach.",
+      "examples": [
+        {
+          "wrong": "Ich hoffe, dass ich dich morgen sehe.",
+          "right": "Ich hoffe, dich morgen zu sehen.",
+          "note": "Podmiot jest ten sam (ich), więc naturalna jest konstrukcja z 'zu'."
+        },
+        {
+          "wrong": "Er versucht, dass er das Fenster öffnet.",
+          "right": "Er versucht, das Fenster zu öffnen.",
+          "note": "Po 'versuchen' przy tym samym podmiocie stosujemy 'zu' z bezokolicznikiem."
+        },
+        {
+          "wrong": "Sie sagt, zu kommen später.",
+          "right": "Sie sagt, dass sie später kommt.",
+          "note": "Po 'sagen' relacjonujemy czyjąś wypowiedź, więc konieczne jest zdanie z 'dass'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Przetłumacz: 'Mam nadzieję, że jutro cię zobaczę.' (ten sam podmiot, użyj 'zu')",
+          "answer": "Ich hoffe, dich morgen zu sehen."
+        },
+        {
+          "prompt": "Przetłumacz: 'On mówi, że jest zmęczony.' (zdanie z 'dass')",
+          "answer": "Er sagt, dass er müde ist."
+        },
+        {
+          "prompt": "Przetłumacz: 'Ona próbuje zamknąć drzwi.' (ten sam podmiot, użyj 'zu')",
+          "answer": "Sie versucht, die Tür zu schließen."
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciation-uvular-r",
+      "topic": "Pronunciation: uvular R",
+      "title": "Niemieckie 'r' języczkowe",
+      "explanation": "Niemieckie 'r' powstaje z tyłu jamy ustnej, przy języczku, a nie na czubku języka jak polskie 'r'. Brzmi jak delikatne pochrząkiwanie, podobnie do francuskiego 'r'. Na końcu wyrazu i w sylabie '-er' zamienia się wręcz w samogłoskę zbliżoną do krótkiego 'a' — w słowie 'Mutter' nie usłyszymy żadnego drżenia.",
+      "examples": [
+        {
+          "wrong": "rot (mit gerolltem Zungenspitzen-R)",
+          "right": "rot (mit Zäpfchen-R)",
+          "note": "Nie wibruj czubkiem języka — dźwięk ma powstawać w gardle."
+        },
+        {
+          "wrong": "Brot (mit gerolltem R)",
+          "right": "Brot (mit Zäpfchen-R)",
+          "note": "Po spółgłosce 'b' dźwięk jest krótki i miękki, prawie szumiący."
+        },
+        {
+          "wrong": "Mutter (mit deutlichem R am Ende)",
+          "right": "Mutter (Endung '-er' klingt fast wie 'a')",
+          "note": "Końcówka '-er' to samogłoska zbliżona do 'a', a nie wyraźne polskie 'r'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Wymów niemieckie słowo oznaczające 'czerwony' z prawidłowym 'r' języczkowym.",
+          "answer": "rot"
+        },
+        {
+          "prompt": "Jak po niemiecku brzmi 'chleb'? Wymów z 'r' gardłowym.",
+          "answer": "Brot"
+        },
+        {
+          "prompt": "Wymów czasownik 'jechać' i zwróć uwagę na 'r' w środku wyrazu.",
+          "answer": "fahren"
+        }
+      ]
+    },
+    {
+      "rule_id": "pronunciation-ig-ending-ɪç-vs-ɪk",
+      "topic": "Pronunciation: ig ending [ɪç] vs [ɪk]",
+      "title": "Końcówka '-ig': [ɪç], nie [ɪk]",
+      "explanation": "W wymowie standardowej końcówka '-ig' na końcu wyrazu brzmi jak miękkie 'ch' w słowie 'ich', czyli [ɪç]. Polacy odczytują ją zwykle jako twarde 'k', bo tak podpowiada zapis. Jeśli po '-ig' następuje jeszcze końcówka, na przykład w 'richtige', 'g' wraca do zwykłej wymowy.",
+      "examples": [
+        {
+          "wrong": "richtik",
+          "right": "richtig",
+          "note": "Nie wymawiaj twardego 'k' — końcówka brzmi jak w 'ich'."
+        },
+        {
+          "wrong": "wichtik",
+          "right": "wichtig",
+          "note": "Ta sama zasada: [ɪç], a nie [ɪk]."
+        },
+        {
+          "wrong": "Könik",
+          "right": "König",
+          "note": "Nawet w rzeczowniku 'król' końcówka pozostaje miękka."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Który zapis odpowiada poprawnej wymowie: 'richtik' czy 'richtig'?",
+          "answer": "richtig"
+        },
+        {
+          "prompt": "Popraw błąd w słowie 'Könik' — napisz poprawną formę.",
+          "answer": "König"
+        },
+        {
+          "prompt": "Jak wymawiamy liczebnik 'dwadzieścia'? Wybierz [ˈt͡svant͡sɪk] albo [ˈt͡svant͡sɪç] i zapisz słowo po niemiecku.",
+          "answer": "zwanzig"
+        }
+      ]
+    },
+    {
+      "rule_id": "kein-vs-nicht-negation",
+      "topic": "kein vs nicht negation",
+      "title": "Przeczenie: 'kein' czy 'nicht'?",
+      "explanation": "'Kein' zaprzecza rzeczownikom — stawiamy je tam, gdzie w zdaniu twierdzącym byłby rodzajnik nieokreślony albo gdzie rodzajnika nie ma wcale. 'Nicht' zaprzecza czasownikom, przymiotnikom, przysłówkom lub całemu zdaniu. 'Kein' odmienia się jak 'ein', natomiast 'nicht' jest nieodmienne.",
+      "examples": [
+        {
+          "wrong": "Ich habe nicht Geld.",
+          "right": "Ich habe kein Geld.",
+          "note": "'Geld' to rzeczownik, więc zaprzeczamy go formą 'kein'."
+        },
+        {
+          "wrong": "Er ist kein groß.",
+          "right": "Er ist nicht groß.",
+          "note": "'Groß' jest przymiotnikiem, dlatego potrzebne jest 'nicht'."
+        },
+        {
+          "wrong": "Ich mag nicht Kaffee.",
+          "right": "Ich mag keinen Kaffee.",
+          "note": "Rzeczownik w bierniku rodzaju męskiego wymaga formy 'keinen'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Przetłumacz: 'Nie mam czasu.'",
+          "answer": "Ich habe keine Zeit."
+        },
+        {
+          "prompt": "Zaprzecz zdaniu: 'Sie kommt.' (Ona nie przychodzi.)",
+          "answer": "Sie kommt nicht."
+        },
+        {
+          "prompt": "Przetłumacz: 'Nie mam brata.'",
+          "answer": "Ich habe keinen Bruder."
+        }
+      ]
+    },
+    {
+      "rule_id": "time-prepositions-um-am-im",
+      "topic": "Time prepositions: um am im",
+      "title": "Przyimki czasu: um, am, im",
+      "explanation": "'Um' stawiamy przed godziną (um 8 Uhr), 'am' przed dniami tygodnia, datami i porami dnia (am Montag, am Abend), a 'im' przed miesiącami, porami roku i latami (im Januar, im Sommer). Po polsku we wszystkich tych wypadkach mówimy 'w', dlatego trzeba te trzy przyimki zapamiętać razem z przykładami. Wyjątkiem wartym zapamiętania jest 'in der Nacht'.",
+      "examples": [
+        {
+          "wrong": "Ich treffe dich im 8 Uhr.",
+          "right": "Ich treffe dich um 8 Uhr.",
+          "note": "Przed godziną zawsze 'um'."
+        },
+        {
+          "wrong": "Wir fahren um Montag weg.",
+          "right": "Wir fahren am Montag weg.",
+          "note": "Przed dniami tygodnia stawiamy 'am'."
+        },
+        {
+          "wrong": "Der Kurs beginnt am Januar.",
+          "right": "Der Kurs beginnt im Januar.",
+          "note": "Przed nazwami miesięcy używamy 'im'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Jak powiedzieć 'o trzeciej'?",
+          "answer": "um drei Uhr"
+        },
+        {
+          "prompt": "Jak powiedzieć 'w środę'?",
+          "answer": "am Mittwoch"
+        },
+        {
+          "prompt": "Jak powiedzieć 'latem'?",
+          "answer": "im Sommer"
+        }
+      ]
+    },
+    {
+      "rule_id": "viel-vs-sehr-distinction",
+      "topic": "viel vs sehr distinction",
+      "title": "'viel' a 'sehr': ilość kontra natężenie",
+      "explanation": "'Viel' znaczy 'dużo, wiele' i odnosi się do ilości — stoi przy rzeczownikach albo po czasownikach. 'Sehr' znaczy 'bardzo' i wzmacnia przymiotniki oraz przysłówki. Polskie 'bardzo dużo' pokazuje, że to dwa różne słowa, ale w praktyce łatwo powiedzieć 'viel gut' zamiast 'sehr gut'.",
+      "examples": [
+        {
+          "wrong": "Ich bin viel müde.",
+          "right": "Ich bin sehr müde.",
+          "note": "Przed przymiotnikiem 'müde' potrzebne jest 'sehr'."
+        },
+        {
+          "wrong": "Ich habe sehr Geld.",
+          "right": "Ich habe viel Geld.",
+          "note": "Przy rzeczowniku 'Geld' mówimy o ilości, więc 'viel'."
+        },
+        {
+          "wrong": "Er läuft viel schnell.",
+          "right": "Er läuft sehr schnell.",
+          "note": "Przysłówek 'schnell' wzmacniamy słowem 'sehr'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Wstaw 'viel' albo 'sehr': 'Das ist _____ interessant.' (bardzo)",
+          "answer": "sehr"
+        },
+        {
+          "prompt": "Wstaw 'viel' albo 'sehr': 'Er hat _____ Arbeit.' (dużo)",
+          "answer": "viel"
+        },
+        {
+          "prompt": "Wstaw 'viel' albo 'sehr': 'Sie singt _____ gut.' (bardzo)",
+          "answer": "sehr"
+        }
+      ]
+    },
+    {
+      "rule_id": "lernen-vs-studieren",
+      "topic": "lernen vs studieren",
+      "title": "'lernen' a 'studieren'",
+      "explanation": "'Lernen' to uczyć się w szerokim sensie: przyswajać wiedzę, opanowywać umiejętność, przygotowywać się do egzaminu. 'Studieren' oznacza studiowanie na uczelni, czyli zdobywanie wykształcenia wyższego w konkretnym kierunku. Polskie 'studiować' bywa używane luźno, dlatego często pojawia się błędne 'Ich studiere Deutsch', gdy chodzi po prostu o naukę języka.",
+      "examples": [
+        {
+          "wrong": "Ich studiere Deutsch für die Prüfung.",
+          "right": "Ich lerne Deutsch für die Prüfung.",
+          "note": "Chodzi o przygotowanie do egzaminu, a nie o kierunek studiów."
+        },
+        {
+          "wrong": "Er lernt an der Universität Berlin.",
+          "right": "Er studiert an der Universität Berlin.",
+          "note": "Kształcenie na uczelni to zawsze 'studieren'."
+        },
+        {
+          "wrong": "Sie studiert Autofahren.",
+          "right": "Sie lernt Autofahren.",
+          "note": "Nauka jazdy to opanowywanie umiejętności, więc 'lernen'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Przetłumacz: 'Studiuję na uniwersytecie.'",
+          "answer": "Ich studiere an der Universität."
+        },
+        {
+          "prompt": "Przetłumacz: 'Ona uczy się słówek na test.'",
+          "answer": "Sie lernt die Vokabeln für den Test."
+        },
+        {
+          "prompt": "Wybierz właściwy czasownik: 'Er ___ (lernt/studiert) jeden Abend Vokabeln.'",
+          "answer": "lernt"
+        }
+      ]
+    },
+    {
+      "rule_id": "denn-vs-weil-vs-da",
+      "topic": "denn vs weil vs da",
+      "title": "'denn', 'weil' i 'da' — trzy sposoby na 'ponieważ'",
+      "explanation": "'Denn' jest spójnikiem współrzędnym i nie zmienia szyku: czasownik zostaje na drugim miejscu. 'Weil' i 'da' są podrzędne i przesuwają odmieniony czasownik na koniec zdania podrzędnego. 'Da' brzmi bardziej formalnie i wprowadza przyczynę znaną już rozmówcy, natomiast 'weil' jest neutralne i najczęstsze.",
+      "examples": [
+        {
+          "wrong": "Ich bleibe zu Hause, weil ich bin krank.",
+          "right": "Ich bleibe zu Hause, weil ich krank bin.",
+          "note": "Po 'weil' czasownik idzie na koniec zdania podrzędnego."
+        },
+        {
+          "wrong": "Da er krank ist, er bleibt im Bett.",
+          "right": "Da er krank ist, bleibt er im Bett.",
+          "note": "Gdy zdanie podrzędne stoi na początku, w zdaniu głównym następuje inwersja."
+        },
+        {
+          "wrong": "Ich lerne Deutsch, denn ich die Sprache mag.",
+          "right": "Ich lerne Deutsch, denn ich mag die Sprache.",
+          "note": "Po 'denn' szyk pozostaje taki jak w zdaniu głównym — czasownik na drugim miejscu."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Przetłumacz, używając 'weil': 'Idę do domu, bo jestem zmęczony.'",
+          "answer": "Ich gehe nach Hause, weil ich müde bin."
+        },
+        {
+          "prompt": "Popraw zdanie: 'Da das Wetter schlecht ist, wir bleiben zu Hause.'",
+          "answer": "Da das Wetter schlecht ist, bleiben wir zu Hause."
+        },
+        {
+          "prompt": "Uzupełnij zdanie spójnikiem (denn/weil/da): 'Er kommt nicht, ___ er keine Zeit hat.' (przyczyna znana rozmówcy)",
+          "answer": "Er kommt nicht, da er keine Zeit hat."
+        }
+      ]
+    },
+    {
+      "rule_id": "nach-vs-zu-vs-in-destinations",
+      "topic": "nach vs zu vs in destinations",
+      "title": "Kierunek: nach, zu czy in?",
+      "explanation": "'Nach' stosujemy przy nazwach krajów i miast używanych bez rodzajnika (nach Deutschland, nach Berlin) oraz w zwrocie 'nach Hause'. 'Zu' prowadzi do osób i instytucji (zum Arzt, zur Schule) i łączy się z celownikiem. 'In' z biernikiem oznacza wejście do wnętrza budynku lub kraju z rodzajnikiem (ins Kino, in die Schweiz).",
+      "examples": [
+        {
+          "wrong": "Ich gehe in Deutschland.",
+          "right": "Ich gehe nach Deutschland.",
+          "note": "Kraje bez rodzajnika wymagają 'nach'."
+        },
+        {
+          "wrong": "Ich gehe zu dem Kino.",
+          "right": "Ich gehe ins Kino.",
+          "note": "Do budynku wchodzimy: 'in' z biernikiem, w skrócie 'ins' (in das)."
+        },
+        {
+          "wrong": "Ich fahre in dem Arzt.",
+          "right": "Ich fahre zum Arzt.",
+          "note": "Do osób i instytucji jedziemy z 'zu' (zum = zu dem)."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Przetłumacz: 'Jadę do Polski.'",
+          "answer": "Ich fahre nach Polen."
+        },
+        {
+          "prompt": "Przetłumacz: 'Idę do lekarza.'",
+          "answer": "Ich gehe zum Arzt."
+        },
+        {
+          "prompt": "Przetłumacz: 'Idę do kina.'",
+          "answer": "Ich gehe ins Kino."
+        }
+      ]
+    },
+    {
+      "rule_id": "sich-freuen-auf-vs-über",
+      "topic": "sich freuen auf vs über",
+      "title": "'sich freuen auf' a 'sich freuen über'",
+      "explanation": "'Sich freuen auf' z biernikiem znaczy 'cieszyć się na coś', czyli wyczekiwać przyszłego wydarzenia. 'Sich freuen über' z biernikiem to radość z czegoś, co już się wydarzyło albo trwa teraz. Polskie 'cieszyć się z' nie rozróżnia tych sytuacji, więc przyimek trzeba dobierać świadomie, patrząc na czas zdarzenia.",
+      "examples": [
+        {
+          "wrong": "Ich freue mich über den Urlaub nächste Woche.",
+          "right": "Ich freue mich auf den Urlaub nächste Woche.",
+          "note": "Urlop jest dopiero przed nami, dlatego 'auf'."
+        },
+        {
+          "wrong": "Ich freue mich auf das Geschenk, das ich gestern bekommen habe.",
+          "right": "Ich freue mich über das Geschenk, das ich gestern bekommen habe.",
+          "note": "Prezent już dostaliśmy, więc właściwe jest 'über'."
+        },
+        {
+          "wrong": "Er freut sich auf die gute Note, die er bekommen hat.",
+          "right": "Er freut sich über die gute Note, die er bekommen hat.",
+          "note": "Ocena została już wystawiona — znowu 'über'."
+        }
+      ],
+      "exercises": [
+        {
+          "prompt": "Wstaw właściwy przyimek (auf albo über): 'Er freut sich ___ den Film morgen.'",
+          "answer": "auf"
+        },
+        {
+          "prompt": "Wstaw właściwy przyimek: 'Sie freut sich ___ die guten Noten von letzter Woche.'",
+          "answer": "über"
+        },
+        {
+          "prompt": "Wybierz właściwą formę: 'Wir freuen uns (auf / über) das Konzert am Samstag.'",
+          "answer": "auf"
+        }
+      ]
+    }
+  ]
+}
