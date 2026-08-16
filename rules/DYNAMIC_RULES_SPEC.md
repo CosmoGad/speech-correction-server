@@ -64,7 +64,7 @@ the static list, i.e. always a valid taxonomy key):
 ```
 1. static file rules_<learning>_<interface>.json has rule_id?  → return it
 2. ResponseCache has (learning, interface, rule_id)?           → return it
-3. generate lesson for that taxonomy key (same prompt as generate_rules.py),
+3. generate lesson for that taxonomy key (prompt in rules_store.build_rule_prompt),
    store in ResponseCache, return it
 ```
 
