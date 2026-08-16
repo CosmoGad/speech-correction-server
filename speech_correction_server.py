@@ -4,6 +4,7 @@ import logging
 import asyncio
 import hashlib
 import sqlite3
+import time
 from datetime import datetime, timedelta
 from functools import lru_cache
 import threading
@@ -38,6 +39,10 @@ APP_VERSION = "2.2.0"
 DEEPSEEK_MAX_TOKENS = 4000
 # Overridable via env so we can A/B a stronger model without a code change.
 DEEPSEEK_MODEL = os.getenv("DEEPSEEK_MODEL", "deepseek-v4-flash")
+# Grammar correction is a focused task. DeepSeek V4 enables its thinking mode
+# by default; disabling it avoids spending most of the request on hidden
+# reasoning before it starts streaming the JSON response to the learner.
+DEEPSEEK_THINKING = {"type": "disabled"}
 
 # Precompile dangerous input patterns once at module load
 _DANGEROUS_PATTERNS = [re.compile(p, re.IGNORECASE) for p in [
@@ -614,6 +619,10 @@ _CORRECTED_TEXT_RE = re.compile(r'"corrected_text"\s*:\s*"((?:[^"\\]|\\.)*)"')
 async def _call_deepseek_stream(client: AsyncOpenAI, prompt: str, user_text: str):
     """Yield the model's content deltas as they arrive (same params as the
     non-streaming call, so output is identical — just incremental)."""
+    started = time.perf_counter()
+    first_content_seconds: Optional[float] = None
+    content_chars = 0
+    usage = None
     stream = await client.chat.completions.create(
         model=DEEPSEEK_MODEL,
         messages=[
@@ -624,16 +633,41 @@ async def _call_deepseek_stream(client: AsyncOpenAI, prompt: str, user_text: str
         max_tokens=DEEPSEEK_MAX_TOKENS,
         response_format={"type": "json_object"},
         stream=True,
+        stream_options={"include_usage": True},
+        extra_body={"thinking": DEEPSEEK_THINKING},
     )
-    async for chunk in stream:
-        if not chunk.choices:
-            continue
-        delta = chunk.choices[0].delta.content
-        if delta:
-            yield delta
+    try:
+        async for chunk in stream:
+            if getattr(chunk, "usage", None):
+                usage = chunk.usage
+            if not chunk.choices:
+                continue
+            delta = chunk.choices[0].delta.content
+            if delta:
+                if first_content_seconds is None:
+                    first_content_seconds = time.perf_counter() - started
+                    logger.info(
+                        "DeepSeek stream first_content_seconds=%.3f model=%s",
+                        first_content_seconds,
+                        DEEPSEEK_MODEL,
+                    )
+                content_chars += len(delta)
+                yield delta
+    finally:
+        logger.info(
+            "DeepSeek stream completed model=%s first_content_seconds=%s "
+            "total_seconds=%.3f content_chars=%s prompt_tokens=%s completion_tokens=%s",
+            DEEPSEEK_MODEL,
+            f"{first_content_seconds:.3f}" if first_content_seconds is not None else "none",
+            time.perf_counter() - started,
+            content_chars,
+            getattr(usage, "prompt_tokens", None),
+            getattr(usage, "completion_tokens", None),
+        )
 
 
 async def _call_deepseek(client: AsyncOpenAI, prompt: str, user_text: str) -> str:
+    started = time.perf_counter()
     response = await client.chat.completions.create(
         model=DEEPSEEK_MODEL,
         messages=[
@@ -646,8 +680,17 @@ async def _call_deepseek(client: AsyncOpenAI, prompt: str, user_text: str) -> st
         temperature=0.3,
         max_tokens=DEEPSEEK_MAX_TOKENS,
         response_format={"type": "json_object"},
+        extra_body={"thinking": DEEPSEEK_THINKING},
     )
     choice = response.choices[0]
+    usage = getattr(response, "usage", None)
+    logger.info(
+        "DeepSeek completion model=%s total_seconds=%.3f prompt_tokens=%s completion_tokens=%s",
+        DEEPSEEK_MODEL,
+        time.perf_counter() - started,
+        getattr(usage, "prompt_tokens", None),
+        getattr(usage, "completion_tokens", None),
+    )
     if choice.finish_reason == "length":
         logger.warning("DeepSeek response truncated at max_tokens=%s", DEEPSEEK_MAX_TOKENS)
     return choice.message.content
