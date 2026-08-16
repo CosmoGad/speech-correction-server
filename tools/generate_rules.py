@@ -10,14 +10,16 @@ not pre-generated.
 The seed topics come from ``language_configs.json`` (``common_errors`` +
 ``pronunciation_focus``), so no corpus of real user errors is needed.
 
-Provider is configurable so you can run this against a *free* endpoint
-(e.g. an OpenModel promo key) to save tokens, while production keeps using
-the paid DeepSeek key:
+By default this uses exactly what the server analyses text with — same endpoint,
+same key, same model — so a rule explains a mistake the way the corrector found
+it. The overrides exist for deliberately running a bulk job elsewhere (e.g. a
+free promo endpoint to save tokens); leave them unset and nothing diverges.
 
     RULES_API_KEY   API key            (falls back to DEEPSEEK_API_KEY)
     RULES_API_BASE  OpenAI-compatible base URL
                                        (default https://api.deepseek.com/v1)
-    RULES_MODEL     model name         (default deepseek-v4-flash)
+    RULES_MODEL     model name         (falls back to DEEPSEEK_MODEL, the model
+                                       the server uses for analysis)
     RULES_API_MODE  "chat" | "responses" | "messages"  (default "chat").
                     "messages" = Anthropic Messages API (/v1/messages) — this is
                     how OpenModel serves DeepSeek (model deepseek-v4-flash).
@@ -346,7 +348,12 @@ def main() -> int:
     if not api_key:
         return _die("Set RULES_API_KEY (or DEEPSEEK_API_KEY) in env/.env")
     base_url = os.getenv("RULES_API_BASE", "https://api.deepseek.com/v1")
-    model = os.getenv("RULES_MODEL", "deepseek-v4-flash")
+    # Default to whatever the server analyses text with, so rules and
+    # corrections cannot silently drift onto different models. A hardcoded
+    # default here meant changing DEEPSEEK_MODEL moved analysis but left rule
+    # generation behind. RULES_MODEL still overrides, for running a bulk job on
+    # a cheaper model on purpose.
+    model = os.getenv("RULES_MODEL") or os.getenv("DEEPSEEK_MODEL", "deepseek-v4-flash")
     mode = os.getenv("RULES_API_MODE", "chat").lower()
 
     configs = json.loads((SERVER_DIR / "language_configs.json").read_text("utf-8"))
