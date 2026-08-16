@@ -54,7 +54,8 @@ and scripts to impersonate the official client. They complement each other.
   authentication key (`.p8`), its Key ID and Apple Team ID to register
   DeviceCheck/App Attest. Do not enable enforcement until iOS is registered,
   the new app builds are live and monitoring shows valid tokens.
-- After 1–2 weeks of monitoring, review Fly logs and App Check metrics. If
+- After 1–2 weeks of monitoring, review Fly request logs (the `app_check=` field)
+  and App Check metrics. If
   legitimate current clients consistently send valid tokens, set
   `APP_CHECK_ENFORCED=true`, deploy, and verify current Android and iOS builds
   before turning it on permanently.

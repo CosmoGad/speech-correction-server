@@ -155,6 +155,7 @@ async def verify_client(request: Request, key: str = Security(_api_key_header)) 
     Firebase signature, audience, issuer and expiry before returning it.
     """
     app_check_status = _verify_app_check(request)
+    request.state.app_check_status = app_check_status
     token = _bearer_token(request)
     if token:
         if not _firebase_ready:
@@ -1110,7 +1111,15 @@ async def log_requests(request: Request, call_next):
     start_time = datetime.now()
     response = await call_next(request)
     process_time = (datetime.now() - start_time).total_seconds()
-    logger.info(f"{request.method} {request.url.path} - {response.status_code}, Process time: {process_time:.4f}s")
+    app_check_status = getattr(request.state, "app_check_status", "not_checked")
+    logger.info(
+        "%s %s - %s, app_check=%s, Process time: %.4fs",
+        request.method,
+        request.url.path,
+        response.status_code,
+        app_check_status,
+        process_time,
+    )
     return response
 
 
